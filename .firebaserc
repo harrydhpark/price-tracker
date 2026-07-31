@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "fx-tracker-4f44c"
+  },
+  "targets": {
+    "fx-tracker-4f44c": {
+      "hosting": {
+        "swiss-price-tracker": [
+          "swiss-price-tracker-lge"
+        ],
+        "eu-price-tracker": [
+          "eu-price-tracker-lge"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

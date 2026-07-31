@@ -1,0 +1,30 @@
+# Environments
+python_env/
+venv/
+.venv/
+env/
+
+# Chrome profiles & scrapers cache
+.chrome_profile*/
+.cache/
+
+# Firebase local data
+.firebase/
+
+# Python compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+*.bak
+.vscode/
+.idea/
+
+# Temporary backups
+EU-price-tracker_backup/
