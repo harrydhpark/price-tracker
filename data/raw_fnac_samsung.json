@@ -1,1183 +1,265 @@
 {
-  "site": "fnac-darty-fr",
-  "brand": "samsung",
-  "count": 168,
+  "count": 52,
   "items": [
     {
-      "name": "Tv Samsung",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/marque__samsung__SAMSU.html#dartyclic=lienseo_list_tv-samsung"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ65Q7F 165 cm 2025",
-      "price": "549.99",
-      "uvp": "799.99",
-      "promo": "Soldes",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq65q7f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ43Q7F 109 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq43q7f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED The Frame TQ55LS03F 138 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq55ls03f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ50Q7F 127 cm 2025",
-      "price": "429.99",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq50q7f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ55Q7F5 140 cm 2025",
-      "price": "479.99",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq55q7f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED TU55M80H 140 cm 2026",
-      "price": "629.99",
-      "uvp": "699.99",
-      "promo": "Bon Plan",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu55m80h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq65ls03fw_pro_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED TU85M80H 216 cm 2026",
-      "price": "1599 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu85m80h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED TU50M72H 127 cm 2026",
-      "price": "499.99",
-      "uvp": "599.99",
-      "promo": "Bon Plan",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu50m72h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ75Q7F 190 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "Bon Plan",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq75q7f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED TQ32Q5FA 81 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq32q5f_2026.html"
-    },
-    {
-      "name": "Tv OLED Samsung",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/marque__samsung__SAMSU.html#dartyclic=lienseo_list_tv-oled-samsung"
-    },
-    {
-      "name": "TV LEDSamsungLED TU43U8005H 109 cm 2026",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu43u8005h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED TU65M80H 165 cm 2026",
-      "price": "849.99",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu65m80h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ75QN74F 190 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq75qn74f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED The Frame TQ50LS03F 125 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq50ls03f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED Neo QLED TQ43QN74H 109 cm 2026",
-      "price": "599.99",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq43qn74h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled The Frame TQ85LS03FW PRO 215 cm 2025",
-      "price": "2999 ",
-      "uvp": "3199 ",
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq85ls03fw_pro_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungQLED The Frame TQ43LS03F 108 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq43ls03f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ55QN74F 140 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq55qn74f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ50QN90F 127 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq50qn90f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ43QN90F 109 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq43qn90f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ65QN74F 165 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq65qn74f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungMini LED Neo QLED TQ55QN74H 140 cm 2026",
-      "price": "799.99",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq55qn74h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungLED TU85U8005H 216 cm 2026",
-      "price": "1199 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu85u8005h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungSmart TV TU32H5005FK 32 pouces LEDLCD",
-      "price": "199 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/ref/MC353043743.html"
-    },
-    {
-      "name": "TV LEDSamsungTV QLED TQ43Q60D 109 cm 4K UHD Smart TV Noir",
-      "price": "339 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/ref/MC120306968.html"
-    },
-    {
-      "name": "TV LEDSamsungMini Led Neo Qled TQ100QN80F 254 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq100qn80f_2025.html"
-    },
-    {
-      "name": "TV LEDSamsungLED TU55U8005H 140 cm 2026",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tu55u8005h_2026.html"
-    },
-    {
-      "name": "TV LEDSamsungTU98DU9005 Crystal UHD Gaming Hub 4K 249cm 2024",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/televiseurs-led/grand_ecran_led/samsung_tq98du9005_2024.html"
-    },
-    {
-      "name": "TV Samsung",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/marque__samsung__SAMSU.html"
-    },
-    {
-      "name": "Smart tv Samsung",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/q/tv-smart-tv-samsung.html#dartyclic=lienseo_list_smart-tv-samsung"
-    },
-    {
-      "name": "TV Samsung 75 pouces",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/q/tv-televiseur-samsung-75-pouces.html#dartyclic=lienseo_list_tv-samsung-75-pouces"
-    },
-    {
-      "name": "TV OLEDSamsungTQ65S95F 165 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq65s95f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ65S90F 165 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq65s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ77S90F 196 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq77s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ55S90F 140 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ55S95F 140 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s95f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ65S85F 165 cm 2025",
-      "price": "1197.97",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq65s85f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ48S90F 122 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq48s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ83S95F 211 cm 2025",
-      "price": "3599 ",
-      "uvp": "3999 ",
-      "promo": "Bon Plan",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s95f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ83S90F 211 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ48S92H 122 cm 2026",
-      "price": "1599 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq48s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ42S90F 106 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq42s90f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ55S95H 140 cm 2026",
-      "price": "2090 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s95hf_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ48S95H 122 cm 2026",
-      "price": "1799 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq48s95h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ65S92H 163 cm 2026",
-      "price": "2599 ",
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq65s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ77S92H 196 cm 2026",
-      "price": "3599 ",
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq77s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ55S92H 140 cm 2026",
-      "price": "1899 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ77S99H 196 cm 2026",
-      "price": "4499 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq77s99h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ42S92H 107 cm 2026",
-      "price": "1399 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq42s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ77S95H 196 cm 2026",
-      "price": "4399 ",
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq77s95hf_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ83S92H 211 cm 2026",
-      "price": "4499 ",
-      "uvp": null,
-      "promo": "remise",
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s92h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ55S99H 140 cm 2026",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s99h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ55S85F 140 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq55s85f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ77S85F 196 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq77s85f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ83S85F 211 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s85f_2025.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ83S90DAEXXC 209 cm 4K UHD",
-      "price": "2865.30",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s90d_2024.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ55S95D OLED Anti reflet 4K AI 138cm 2024",
-      "price": "1999 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_f-tq55s95d-bf.html"
-    },
-    {
-      "name": "TV OLEDSamsungTQ48S90D 120 cm 4K UHD",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq48s90d_2024.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ83S99H 211 cm 2026",
-      "price": "5699 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq83s99haexxc.html"
-    },
-    {
-      "name": "TV OLEDSamsungOLED TQ65S99H 165 cm 2026",
-      "price": "3499 ",
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/hifi_video/tous_ecrans_plats/oled/samsung_tq65s99h_2026.html"
-    },
-    {
-      "name": "TV OLEDSamsungSmart TV QE75Q7FAAU 75 pouces 4K QLEDLCD",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/achat/ref/MC122165510.html"
-    },
-    {
-      "name": "smart TV Samsung",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.darty.com/nav/q/tv-smart-tv-samsung.html"
-    },
-    {
       "name": "TV Samsung QLED TQ65Q7F 165 cm 2025",
-      "price": "549.99",
-      "uvp": "799.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4"
+      "price": 599.99,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4"
     },
     {
       "name": "Voir plus de disponibilités : TV Samsung QLED TQ65Q7F 165 cm 2025",
-      "price": "539 ",
-      "uvp": "539 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung QLED TQ43Q7F 109 cm 2025",
-      "price": "399.99",
-      "uvp": "399.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-QLED-TQ43Q7F-109-cm-2025/a21731827/w-4"
-    },
-    {
-      "name": "TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
-      "price": "689.99",
-      "uvp": "749.99",
-      "promo": "Bon Plan",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN74F-165-cm-4K-UHD-2025/a21545202/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
-      "price": "689.89",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN74F-165-cm-4K-UHD-2025/a21545202/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung QLED TQ32Q5FA 81 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-QLED-TQ32Q5FA-81-cm-2025/a22999918/w-4"
+      "price": 594.29,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4?storepickup"
     },
     {
       "name": "TV Samsung QLED TQ50Q7F 127 cm 2025",
-      "price": "429.99",
-      "uvp": "429.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-QLED-TQ50Q7F-127-cm-2025/a21731829/w-4"
+      "price": 459.99,
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ50Q7F-127-cm-2025/a21731829/w-4"
     },
     {
-      "name": "TV Samsung LED TU43U8005H 109 cm 2026",
-      "price": "449.99",
-      "uvp": "449.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-LED-TU43U8005H-109-cm-2026/a22999905/w-4"
+      "name": "TV Samsung QLED TQ43Q7F 109 cm 2025",
+      "price": 399.99,
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ43Q7F-109-cm-2025/a21731827/w-4"
     },
     {
-      "name": "TV LED Samsung Crystal TU55U8005F 140 cm 2025",
-      "price": "339.99",
-      "uvp": "399.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU55U8005F-140-cm-4K-UHD-2025/a21543262/w-4"
+      "name": "Voir plus de disponibilités : TV Samsung QLED TQ43Q7F 109 cm 2025",
+      "price": 399.99,
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ43Q7F-109-cm-2025/a21731827/w-4?storepickup"
     },
     {
-      "name": "Voir plus de disponibilités : TV LED Samsung Crystal TU55U8005F 140 cm 2025",
-      "price": "438.64",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU55U8005F-140-cm-4K-UHD-2025/a21543262/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ65S93D 165 cm 4K UHD Argent Carbone",
-      "price": "1599 ",
-      "uvp": "1599 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S93D-165-cm-4K-UHD-2024-Argent-Carbone/a20589507/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ65S93D 165 cm 4K UHD Argent Carbone",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S93D-165-cm-4K-UHD-2024-Argent-Carbone/a20589507/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung Mini LED TU55M80H 140 cm 2026",
-      "price": "629.99",
-      "uvp": "699.99",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-LED-TU55M80H-140-cm-2026/a22999922/w-4"
-    },
-    {
-      "name": "TV Samsung QLED TQ75Q7F 190 cm 2025",
-      "price": "1054.65",
-      "uvp": null,
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ75Q7F-190-cm-4K-UHD-2025/a21545200/w-4"
-    },
-    {
-      "name": "TV Samsung Crystal 50CU7025 125 cm 4K UHD Smart TV Noir",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-Crystal-50CU7025-125-cm-4K-UHD-Smart-TV-Noir/a19611855/w-4"
-    },
-    {
-      "name": "TV OLED Samsung TQ65S95F 165 cm 2025",
-      "price": "1799 ",
-      "uvp": "1799 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S95F-165-cm-4K-UHD-2025/a21545204/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ65S95F 165 cm 2025",
-      "price": "2339.99",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S95F-165-cm-4K-UHD-2025/a21545204/w-4?storepickup"
-    },
-    {
-      "name": "TV LED Samsung Mini LED Neo QLED TQ55QN74H 140 cm 2026",
-      "price": "899.99",
-      "uvp": "899.99",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ55QN74H-140-cm-2026/a22999914/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV LED Samsung Mini LED Neo QLED TQ55QN74H 140 cm 2026",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ55QN74H-140-cm-2026/a22999914/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung LED TU55U8005H 140 cm 2026",
-      "price": "579.99",
-      "uvp": "579.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-LED-TU55U8005H-140-cm-2026/a22999879/w-4"
-    },
-    {
-      "name": "TV Samsung Mini LED TU50M72H 127 cm 2026",
-      "price": "499.99",
-      "uvp": "599.99",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-LED-TU50M72H-127-cm-2026/a22999928/w-4"
-    },
-    {
-      "name": "TV Samsung QLED The Frame TQ50LS03F 125 cm 2025",
-      "price": "799.99",
-      "uvp": "899.99",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ50LS03FA-125-cm-4K-UHD-2025/a21517309/w-4"
-    },
-    {
-      "name": "TV LED Samsung Neo QLED TQ55QN82H 140 cm 2026",
-      "price": "1299 ",
-      "uvp": "1299 ",
-      "promo": "remise",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Neo-QLED-TQ55QN82H-140-cm-2026/a22999929/w-4"
-    },
-    {
-      "name": "TV Samsung QLED TQ55Q7F5 140 cm 2025",
-      "price": "479.99",
-      "uvp": "479.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q7F-140-cm-4K-UHD-Smart-TV-2025/a21543271/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV Samsung QLED TQ55Q7F5 140 cm 2025",
-      "price": "472.63",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q7F-140-cm-4K-UHD-Smart-TV-2025/a21543271/w-4?storepickup"
-    },
-    {
-      "name": "TV QLED Samsung TQ43Q60D 109 cm 4K UHD Smart TV Noir",
-      "price": "339 ",
-      "uvp": "339 ",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ43Q60D-109-cm-4K-UHD-Smart-TV-2024-Noir/a20306968/w-4"
-    },
-    {
-      "name": "TV Samsung OLED TQ55S95H 140 cm 2026",
-      "price": "2099 ",
-      "uvp": "2099 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ55S95H-140-cm-2026/a22999902/w-4"
-    },
-    {
-      "name": "TV Samsung Mini LED TU65M80H 165 cm 2026",
-      "price": "899.99",
-      "uvp": "899.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-LED-TU65M80H-165-cm-2026/a22999896/w-4"
-    },
-    {
-      "name": "TV LED Samsung Mini LED Neo QLED TQ43QN74H 109 cm 2026",
-      "price": "649.99",
-      "uvp": "649.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ43QN74H-109-cm-2026/a22999926/w-4"
-    },
-    {
-      "name": "TV LED Samsung TU24F6005F 61 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-TU24F6005F-61-cm-2025/a21731833/w-4"
-    },
-    {
-      "name": "TV LED Samsung QHD The Movingstyle 27LSM7FA 68 cm 2026",
-      "price": "999.99",
-      "uvp": "1099 ",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-LED-Samsung-QHD-The-Movingstyle-27LSM7FA-68-cm-2026/a22470683/w-4"
-    },
-    {
-      "name": "TV Samsung Mini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025",
-      "price": "1199 ",
-      "uvp": "1699 ",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Frame-Pro-TQ65LS03FW-165-cm-4K-UHD-2025/a21517306/w-4"
-    },
-    {
-      "name": "TV OLED Samsung TQ55S90F 140 cm 2025",
-      "price": "999 ",
-      "uvp": "1199 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ55S90F-140-cm-4K-UHD-2025/a21545213/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ55S90F 140 cm 2025",
-      "price": "888 ",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ55S90F-140-cm-4K-UHD-2025/a21545213/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung OLED TQ77S95H 196 cm 2026",
-      "price": "4699 ",
-      "uvp": "4699 ",
-      "promo": "remise",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ77S95H-196-cm-2026/a22999915/w-4"
-    },
-    {
-      "name": "TV OLED Samsung TQ55S95F 140 cm 2025",
-      "price": "1799 ",
-      "uvp": "1799 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ55S95F-140-cm-4K-UHD-2025/a21545203/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ55S95F 140 cm 2025",
-      "price": "1479 ",
-      "uvp": "1479 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ55S95F-140-cm-4K-UHD-2025/a21545203/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ65S90F 165 cm 2025",
-      "price": "1399 ",
-      "uvp": "1599 ",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S90F-165-cm-4K-UHD-2025/a21545215/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ65S90F 165 cm 2025",
-      "price": "1019 ",
-      "uvp": "1019 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ65S90F-165-cm-4K-UHD-2025/a21545215/w-4?storepickup"
-    },
-    {
-      "name": "TV QLED Samsung The Frame TQ43LS03D 108 cm 4K UHD Smart TV Noir",
-      "price": "280 ",
-      "uvp": "699.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ43LS03D-108-cm-4K-UHD-Smart-TV-2024-Noir/a20306970/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV QLED Samsung The Frame TQ43LS03D 108 cm 4K UHD Smart TV Noir",
-      "price": "669 ",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ43LS03D-108-cm-4K-UHD-Smart-TV-2024-Noir/a20306970/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ77S90F 196 cm 2025",
-      "price": "1799 ",
-      "uvp": "1799 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ77S90F-196-cm-4K-UHD-2025/a21545209/w-4"
-    },
-    {
-      "name": "TV Samsung Mini LED TU85M80H 216 cm 2026",
-      "price": "1599 ",
-      "uvp": "1599 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-LED-TU85M80H-216-cm-2026/a22999882/w-4"
-    },
-    {
-      "name": "TV Samsung Mini Led Neo Qled TQ75QN74F 190 cm 2025",
-      "price": "1326.75",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN74F-190-cm-4K-UHD-2025/a21545207/w-4"
-    },
-    {
-      "name": "TV LED Samsung Crystal TU65U8005F 165 cm 2025",
-      "price": "549.99",
-      "uvp": "549.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU65U8005F-165-cm-4K-UHD-2025/a21543255/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV LED Samsung Crystal TU65U8005F 165 cm 2025",
-      "price": "508.30",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU65U8005F-165-cm-4K-UHD-2025/a21543255/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ77S95F 196 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ77S95F-196-cm-4K-UHD-2025/a21545214/w-4"
-    },
-    {
-      "name": "TV QLED Samsung The Serif Lifestyle TQ43LS01DAU 108 cm4K UHD Blanc",
-      "price": "639.99",
-      "uvp": "799.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Serif-Lifestyle-TQ43LS01DAU-108-cm4K-UHD-2024-Blanc/a20653734/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV QLED Samsung The Serif Lifestyle TQ43LS01DAU 108 cm4K UHD Blanc",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Serif-Lifestyle-TQ43LS01DAU-108-cm4K-UHD-2024-Blanc/a20653734/w-4?storepickup"
-    },
-    {
-      "name": "TV QLED Samsung TQ55Q6F 140 cm 2025",
-      "price": "382.49",
-      "uvp": "449.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q6F-140-cm-2025/a22017566/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV QLED Samsung TQ55Q6F 140 cm 2025",
-      "price": "409 ",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q6F-140-cm-2025/a22017566/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ48S90D 120 cm 4K UHD",
-      "price": "400 ",
-      "uvp": "879 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ48S90D-120-cm-4K-UHD-2024/a20589508/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ48S90D 120 cm 4K UHD",
-      "price": "1339 ",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ48S90D-120-cm-4K-UHD-2024/a20589508/w-4?storepickup"
-    },
-    {
-      "name": "TV LED Samsung Crystal TU75U8005F 190 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU75U8005F-190-cm-4K-UHD-2025/a21543256/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV LED Samsung Crystal TU75U8005F 190 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU75U8005F-190-cm-4K-UHD-2025/a21543256/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung Mini Led Neo Qled TQ55QN74F 140 cm 2025",
-      "price": "529.99",
-      "uvp": "599.99",
-      "promo": "Bon Plan",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ55QN74F-140-cm-4K-UHD-Mini-LED-Smart-TV-2025/a21545196/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV Samsung Mini Led Neo Qled TQ55QN74F 140 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ55QN74F-140-cm-4K-UHD-Mini-LED-Smart-TV-2025/a21545196/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ83S90F 211 cm 2025",
-      "price": "2799 ",
-      "uvp": "2799 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ83S90F-211-cm-4K-UHD-2025/a21545199/w-4"
-    },
-    {
-      "name": "TV QLED Samsung TQ98Q80C 249 cm 4K UHD Smart TV Gris",
-      "price": "3499 ",
-      "uvp": "3499 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ98Q80C-247-cm-4K-UHD-Smart-TV-2023-Gris/a18207160/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV QLED Samsung TQ98Q80C 249 cm 4K UHD Smart TV Gris",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ98Q80C-247-cm-4K-UHD-Smart-TV-2023-Gris/a18207160/w-4?storepickup"
-    },
-    {
-      "name": "TV LED Samsung TU43U8005F 109 cm 2025",
-      "price": "319.99",
-      "uvp": "319.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU43U8005F-Gaming-Hub-109-cm-4K-UHD-2025/a21543275/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV LED Samsung TU43U8005F 109 cm 2025",
-      "price": "310.61",
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU43U8005F-Gaming-Hub-109-cm-4K-UHD-2025/a21543275/w-4?storepickup"
-    },
-    {
-      "name": "TV OLED Samsung TQ42S90F 106 cm 2025",
-      "price": "849.99",
-      "uvp": "899 ",
-      "promo": "Bon plan",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ42S90F-106-cm-4K-UHD-2025/a21545211/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV OLED Samsung TQ42S90F 106 cm 2025",
-      "price": "849.99",
-      "uvp": "787.92",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ42S90F-106-cm-4K-UHD-2025/a21545211/w-4?storepickup"
-    },
-    {
-      "name": "TV QLED Samsung The Serif Lifestyle TQ50LS01DBU 125 cm 4K UHD Vert",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Serif-Lifestyle-TQ50LS01DBU-125-cm-4K-UHD-2024-Vert/a20653731/w-4"
-    },
-    {
-      "name": "TV Samsung LED TU50U8005H 127 cm 2026",
-      "price": "549.99",
-      "uvp": "549.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-LED-TU50U8005H-127-cm-2026/a22999917/w-4"
-    },
-    {
-      "name": "TV Samsung Neo QLED TQ98QN990F 249 cm 2025",
-      "price": "28049.15",
-      "uvp": "32999 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-Samsung-Neo-QLED-TQ98QN990F-249-cm-2025/a22038417/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV Samsung Neo QLED TQ98QN990F 249 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-Neo-QLED-TQ98QN990F-249-cm-2025/a22038417/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung OLED TQ65S95H 165 cm 2026",
-      "price": "3669.99",
-      "uvp": "3669.99",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ65S95H-165-cm-2026/a22999888/w-4"
-    },
-    {
-      "name": "TV LED Samsung The Frame TQ32LS03C 80 cm Full HD Smart TV Charcoal Noir",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-The-Frame-TQ32LS03C-80-cm-Full-HD-Smart-TV-2023-Charcoal-Noir/a17818720/w-4"
-    },
-    {
-      "name": "TV Samsung OLED TQ77S99H 196 cm 2026",
-      "price": "4699 ",
-      "uvp": "4699 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ77S99H-196-cm-2026/a22999901/w-4"
-    },
-    {
-      "name": "TV LED Samsung TU27F6005F 69 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-TU27F6005F-69-cm-2025/a21731831/w-4"
-    },
-    {
-      "name": "TV OLED Samsung TQ55S85F 140 cm 2025",
-      "price": "1020.98",
-      "uvp": "1020.98",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ55S85F-140-cm-4K-UHD-2025/a21545216/w-4"
-    },
-    {
-      "name": "TV QLED Samsung TQ50Q60D 127 cm 4K UHD Smart TV Noir",
-      "price": "389 ",
-      "uvp": "389 ",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ50Q60D-127-cm-4K-UHD-Smart-TV-2024-Noir/a20307000/w-4"
-    },
-    {
-      "name": "TV Samsung OLED TQ55S99H 140 cm 2026",
-      "price": "2499 ",
-      "uvp": "2499 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ55S99H-140-cm-2026/a22999913/w-4"
-    },
-    {
-      "name": "TV OLED Samsung TQ48S90F 122 cm 2025",
-      "price": "809 ",
-      "uvp": "809 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-OLED-Samsung-TQ48S90F-122-cm-4K-UHD-Smart-TV-2025/a21545208/w-4"
-    },
-    {
-      "name": "TV QLED Samsung TQ65Q60D 165 cm 4K UHD Smart TV Noir",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q60D-165-cm-4K-UHD-Smart-TV-2024-Noir/a20306980/w-4"
-    },
-    {
-      "name": "TV Samsung MiniLed NeoQled TQ85QN900F 216 cm 2025",
-      "price": "6119.15",
-      "uvp": "7199 ",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ85QN900F-216-cm-8K-UHD-2025/a21543252/w-4"
-    },
-    {
-      "name": "TV Samsung OLED TQ77S92H 196 cm 2026",
-      "price": "3699 ",
-      "uvp": "3699 ",
-      "promo": "remise",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ77S92H-196-cm-2026/a22999921/w-4"
-    },
-    {
-      "name": "TV Samsung Mini Led Neo Qled TQ100QN80F 254 cm 2025",
-      "price": "2499 ",
-      "uvp": "2499 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-Led-Neo-Qled-TQ100QN80F-254-cm-2025/a21759155/w-4"
-    },
-    {
-      "name": "TV QLED Samsung TQ65Q6F 165 cm 2025",
-      "price": "586.47",
-      "uvp": "586.47",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q6F-165-cm-2025/a22017568/w-4"
-    },
-    {
-      "name": "TV QLED Samsung TQ65Q80D 165 cm 4K UHD Argent éclipse",
-      "price": "849.99",
-      "uvp": "849.99",
-      "promo": "Soldes",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q80D-165-cm-4K-UHD-2024-Argent-eclipse/a20934655/w-4"
-    },
-    {
-      "name": "Voir plus de disponibilités : TV QLED Samsung TQ65Q80D 165 cm 4K UHD Argent éclipse",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q80D-165-cm-4K-UHD-2024-Argent-eclipse/a20934655/w-4?storepickup"
-    },
-    {
-      "name": "TV Samsung OLED TQ48S95H 122 cm 2026",
-      "price": "1899 ",
-      "uvp": "1899 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ48S95H-122-cm-2026/a22999881/w-4"
+      "name": "TV Samsung QLED TQ32Q5FA 81 cm 2025",
+      "price": 379.99,
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ32Q5FA-81-cm-2025/a22999918/w-4"
     },
     {
       "name": "TV Samsung Mini Led Neo Qled TQ50QN90F 127 cm 2025",
-      "price": "899.99",
-      "uvp": "899.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ50QN90F-127-cm-4K-UHD-2025/a21543266/w-4"
+      "price": 899.99,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ50QN90F-127-cm-4K-UHD-2025/a21543266/w-4"
     },
     {
-      "name": "TV Samsung Crystal 43CU7025 108 cm 4K UHD Smart TV Noir",
-      "price": "434.99",
-      "uvp": "434.99",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-Crystal-43CU7025-108-cm-4K-UHD-Smart-TV-Noir/a19611857/w-4"
+      "name": "TV Samsung QLED TQ55Q7F5 140 cm 2025",
+      "price": 479.99,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q7F-140-cm-4K-UHD-Smart-TV-2025/a21543271/w-4"
     },
     {
-      "name": "TV Samsung OLED TQ83S99H 211 cm 2026",
-      "price": "6499 ",
-      "uvp": "6499 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ83S99H-211-cm-2026/a22999887/w-4"
+      "name": "Voir plus de disponibilités : TV Samsung QLED TQ55Q7F5 140 cm 2025",
+      "price": 475.79,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q7F-140-cm-4K-UHD-Smart-TV-2025/a21543271/w-4?storepickup"
     },
     {
-      "name": "TV QLED Samsung TQ75Q60D 190 cm 4K UHD Smart TV Noir",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ75Q60D-190-cm-4K-UHD-Smart-TV-2024-Noir/a20306991/w-4"
+      "name": "TV Samsung QLED The Frame TQ55LS03F 138 cm 2025",
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ55LS03FA-138-cm-4K-UHD-2025/a21517307/w-4"
     },
     {
-      "name": "TV Samsung OLED TQ55S92H 140 cm 2026",
-      "price": "1899 ",
-      "uvp": "1899 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ55S92H-140-cm-2026/a22999880/w-4"
+      "name": "TV Samsung QLED TQ75Q7F 190 cm 2025",
+      "price": 899.99,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ75Q7F-190-cm-4K-UHD-2025/a21545200/w-4"
     },
     {
-      "name": "TV Samsung QLED TQ75QEF1 190 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-QLED-TQ75QEF1-190-cm-2025/a22193073/w-4"
+      "name": "Voir plus de disponibilités : TV Samsung QLED TQ75Q7F 190 cm 2025",
+      "price": 768.19,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ75Q7F-190-cm-4K-UHD-2025/a21545200/w-4?storepickup"
     },
     {
-      "name": "TV QLED Samsung TQ55Q80D 140 cm 4K UHD Argent éclipse",
-      "price": null,
-      "uvp": null,
-      "promo": null,
-      "href": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q80D-140-cm-4K-UHD-2024-Argent-eclipse/a20934656/w-4"
+      "name": "TV Samsung Mini Led Neo Qled TQ75QN74F 190 cm 2025",
+      "price": 999.99,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN74F-190-cm-4K-UHD-2025/a21545207/w-4"
     },
     {
-      "name": "TV Samsung QLED TQ98Q7FA 249 cm 2025",
-      "price": "1511.18",
-      "uvp": "1511.18",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-QLED-TQ98Q7FA-249-cm-2025/a22718801/w-4"
+      "name": "TV Samsung Mini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025",
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Frame-Pro-TQ65LS03FW-165-cm-4K-UHD-2025/a21517306/w-4"
     },
     {
-      "name": "TV Samsung OLED TQ65S92H 163 cm 2026",
-      "price": "2699 ",
-      "uvp": "2699 ",
-      "promo": "remise",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ65S92H-163-cm-2026/a22999894/w-4"
+      "name": "TV QLED Samsung TQ55Q6F 140 cm 2025",
+      "price": 382.49,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q6F-140-cm-2025/a22017566/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV QLED Samsung TQ55Q6F 140 cm 2025",
+      "price": 449.47,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q6F-140-cm-2025/a22017566/w-4?storepickup"
+    },
+    {
+      "name": "TV Samsung Mini Led Neo Qled TQ65QN85F 165 cm 2025",
+      "price": 799.0,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN85F-165-cm-4K-UHD-2025-Argent-eclipse/a21543269/w-4"
+    },
+    {
+      "name": "TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
+      "price": 689.99,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN74F-165-cm-4K-UHD-2025/a21545202/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
+      "price": 0.0,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN74F-165-cm-4K-UHD-2025/a21545202/w-4?storepickup"
     },
     {
       "name": "TV Samsung QLED The Frame TQ43LS03F 108 cm 2025",
-      "price": "799.99",
-      "uvp": "799.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ43LS03FA-108-cm-4K-UHD-2025/a21517308/w-4"
+      "price": 799.99,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ43LS03FA-108-cm-4K-UHD-2025/a21517308/w-4"
     },
     {
-      "name": "TV Samsung Mini LED TU75M80H 190 cm 2026",
-      "price": "1399 ",
-      "uvp": "1399 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-Mini-LED-TU75M80H-190-cm-2026/a22999908/w-4"
+      "name": "TV OLED Samsung TQ42S90F 106 cm 2025",
+      "price": 839.99,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ42S90F-106-cm-4K-UHD-2025/a21545211/w-4"
     },
     {
-      "name": "TV Samsung LED TU65U8005H 165 cm 2026",
-      "price": "749.99",
-      "uvp": "749.99",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-LED-TU65U8005H-165-cm-2026/a22999878/w-4"
+      "name": "Voir plus de disponibilités : TV OLED Samsung TQ42S90F 106 cm 2025",
+      "price": 784.41,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ42S90F-106-cm-4K-UHD-2025/a21545211/w-4?storepickup"
     },
     {
-      "name": "TV LED Samsung Crystal TU85U8005F 216 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU85U8005F-216-cm-4K-UHD-2025/a21543276/w-4"
+      "name": "TV Samsung QLED TQ85Q7F 216 cm 2025",
+      "price": 979.0,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ85Q7F-216-cm-4K-UHD-2025/a21545210/w-4"
     },
     {
-      "name": "Voir plus de disponibilités : TV LED Samsung Crystal TU85U8005F 216 cm 2025",
-      "price": null,
-      "uvp": null,
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Crystal-TU85U8005F-216-cm-4K-UHD-2025/a21543276/w-4?storepickup"
+      "name": "TV OLED Samsung TQ55S90F 140 cm 2025",
+      "price": 989.0,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ55S90F-140-cm-4K-UHD-2025/a21545213/w-4"
     },
     {
-      "name": "TV LED Samsung Mini LED Neo QLED TQ65QN74H 165 cm 2026",
-      "price": "1199 ",
-      "uvp": "1199 ",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ65QN74H-165-cm-2026/a22999900/w-4"
+      "name": "Voir plus de disponibilités : TV OLED Samsung TQ55S90F 140 cm 2025",
+      "price": 888.0,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ55S90F-140-cm-4K-UHD-2025/a21545213/w-4?storepickup"
     },
     {
-      "name": "TV Samsung Crystal TU98DU9005 247 cm 4K UHD 2024",
-      "price": "1651.33",
-      "uvp": "1651.33",
-      "promo": null,
-      "href": "https://www.fnac.com/TV-Samsung-Crystal-TU98DU9005-247-cm-4K-UHD-2024/a20584887/w-4"
+      "name": "TV Samsung QLED TQ98Q7FA 249 cm 2025",
+      "price": 1868.42,
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ98Q7FA-249-cm-2025/a22718801/w-4"
+    },
+    {
+      "name": "TV Samsung Mini Led Neo Qled TQ75QN85F 190 cm 2025",
+      "price": 891.65,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN85F-190-cm-4K-UHD-2025-Argent-eclipse/a21543263/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV Samsung Mini Led Neo Qled TQ75QN85F 190 cm 2025",
+      "price": 1099.0,
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN85F-190-cm-4K-UHD-2025-Argent-eclipse/a21543263/w-4?storepickup"
+    },
+    {
+      "name": "TV OLED Samsung TQ65S95F 165 cm 2025",
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ65S95F-165-cm-4K-UHD-2025/a21545204/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV OLED Samsung TQ65S95F 165 cm 2025",
+      "price": 2339.99,
+      "url": "https://www.fnac.com/TV-OLED-Samsung-TQ65S95F-165-cm-4K-UHD-2025/a21545204/w-4?storepickup"
+    },
+    {
+      "name": "TV Samsung Mini LED TU50M72H 127 cm 2026",
+      "price": 599.99,
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU50M72H-127-cm-2026/a22999928/w-4"
+    },
+    {
+      "name": "TV Samsung Mini LED TU55M80H 140 cm 2026",
+      "price": 699.99,
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU55M80H-140-cm-2026/a22999922/w-4"
+    },
+    {
+      "name": "TV Samsung LED TU43U8005H 109 cm 2026",
+      "price": 399.99,
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU43U8005H-109-cm-2026/a22999905/w-4"
+    },
+    {
+      "name": "TV Samsung Mini LED TU65M80H 165 cm 2026",
+      "price": 849.99,
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU65M80H-165-cm-2026/a22999896/w-4"
+    },
+    {
+      "name": "TV LED Samsung QHD The Movingstyle 27LSM7FA 68 cm 2026",
+      "price": 999.99,
+      "url": "https://www.fnac.com/TV-LED-Samsung-QHD-The-Movingstyle-27LSM7FA-68-cm-2026/a22470683/w-4"
+    },
+    {
+      "name": "TV Samsung OLED TQ55S99H 140 cm 2026",
+      "price": 2499.0,
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ55S99H-140-cm-2026/a22999913/w-4"
+    },
+    {
+      "name": "TV Samsung OLED TQ55S95H 140 cm 2026",
+      "price": 2099.0,
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ55S95H-140-cm-2026/a22999902/w-4"
+    },
+    {
+      "name": "TV Samsung Mini LED TU85M80H 216 cm 2026",
+      "price": 1599.0,
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU85M80H-216-cm-2026/a22999882/w-4"
+    },
+    {
+      "name": "TV Samsung LED TU55U8005H 140 cm 2026",
+      "price": 529.99,
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU55U8005H-140-cm-2026/a22999879/w-4"
+    },
+    {
+      "name": "TV Samsung Mini LED TU43M72H 109 cm 2026",
+      "price": 499.99,
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU43M72H-109-cm-2026/a22999889/w-4"
     },
     {
       "name": "TV LED Samsung Mini LED Neo QLED TQ65QN82H 165 cm 2026",
-      "price": "1599 ",
-      "uvp": "1599 ",
-      "promo": "remise",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ65QN82H-165-cm-2026/a22999903/w-4"
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ65QN82H-165-cm-2026/a22999903/w-4"
+    },
+    {
+      "name": "TV Samsung The Frame Pro Mini Led Neo QLED TQ55LS03HW 138 cm 2026",
+      "price": 1499.0,
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-Pro-Mini-Led-Neo-QLED-TQ55LS03HW-138-cm-2026/a22999924/w-4"
+    },
+    {
+      "name": "TV Samsung QLED TQ65Q7F 165 cm 2025",
+      "price": 599.99,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV Samsung QLED TQ65Q7F 165 cm 2025",
+      "price": 594.29,
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4?storepickup"
+    },
+    {
+      "name": "TV Samsung OLED TQ77S95H 196 cm 2026",
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ77S95H-196-cm-2026/a22999915/w-4"
+    },
+    {
+      "name": "TV LED Samsung Neo QLED TQ55QN82H 140 cm 2026",
+      "price": 1199.0,
+      "url": "https://www.fnac.com/TV-LED-Samsung-Neo-QLED-TQ55QN82H-140-cm-2026/a22999929/w-4"
+    },
+    {
+      "name": "TV Samsung The Frame QLED TQ55LS03H 138 cm 2026",
+      "price": 1399.0,
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-QLED-TQ55LS03H-138-cm-2026/a22999923/w-4"
+    },
+    {
+      "name": "TV Samsung OLED TQ65S92H 163 cm 2026",
+      "price": 100.0,
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ65S92H-163-cm-2026/a22999894/w-4"
+    },
+    {
+      "name": "TV LED Samsung Mini LED Neo QLED TQ55QN74H 140 cm 2026",
+      "price": 799.99,
+      "url": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ55QN74H-140-cm-2026/a22999914/w-4"
+    },
+    {
+      "name": "Voir plus de disponibilités : TV LED Samsung Mini LED Neo QLED TQ55QN74H 140 cm 2026",
+      "price": 0.0,
+      "url": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ55QN74H-140-cm-2026/a22999914/w-4?storepickup"
     },
     {
       "name": "TV Samsung OLED TQ65S99H 165 cm 2026",
-      "price": "3690 ",
-      "uvp": "3690 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-Samsung-OLED-TQ65S99H-165-cm-2026/a22999927/w-4"
+      "price": 3499.0,
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ65S99H-165-cm-2026/a22999927/w-4"
     },
     {
-      "name": "TV LED Samsung Mini LED Neo QLED TQ85QN74H 216 cm 2026",
-      "price": "2099 ",
-      "uvp": "2099 ",
-      "promo": "offre",
-      "href": "https://www.fnac.com/TV-LED-Samsung-Mini-LED-Neo-QLED-TQ85QN74H-216-cm-2026/a22999886/w-4"
+      "name": "TV Samsung LED TU50U8005H 127 cm 2026",
+      "price": 479.99,
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU50U8005H-127-cm-2026/a22999917/w-4"
     }
   ]
 }

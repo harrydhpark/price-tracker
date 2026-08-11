@@ -134,15 +134,24 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
             if '/product/' not in href:
                 continue
                 
-            title = link.get_text(strip=True) or link.get('aria-label', '')
-            if not title or len(title) < 10:
-                child_title = link.find(title=True)
-                if child_title:
-                    title = child_title['title'].strip()
-            
-            if not title or len(title) < 10:
+            # Extract real product title from headings or aria-label, avoiding image ALT text
+            title = ""
+            parent_node = link.parent
+            for _ in range(5):
+                if not parent_node:
+                    break
+                h_node = parent_node.find(['h2', 'h3', 'p', 'span'], class_=lambda c: c and any(x in str(c).lower() for x in ['title', 'name', 'heading']))
+                if h_node:
+                    title = h_node.get_text(strip=True)
+                    break
+                parent_node = parent_node.parent
+
+            if not title or len(title) < 10 or 'Das Display zeigt' in title or 'Fernseher zeigt' in title:
+                title = link.get('aria-label', '').strip() or link.get_text(strip=True)
+
+            if not title or len(title) < 10 or 'Das Display zeigt' in title or 'Fernseher zeigt' in title:
                 continue
-                
+
             if title in seen_titles:
                 continue
             seen_titles.add(title)

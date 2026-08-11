@@ -1,57 +1,21 @@
 {
- "count": 110,
+ "count": 108,
  "items": [
   {
-   "name": "TV Neo QLED 65\" - Samsung TQ65QN70HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV,  Full AI, Wifi, Negro",
-   "price": "1099",
+   "name": "TV Mini LED 55\" - Samsung TU55M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV,Full AI, Negro",
+   "price": "629",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV LED 55\" - Samsung TU55U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
-   "price": "559",
+   "name": "TV LED 43\" - Samsung TU43U8075HU, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
+   "price": "429",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV LED 43\" - Samsung TU43U7025FKXXC, UHD 4K, Procesador Crystal 4K, Smart TV, Negro",
-   "price": "529",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 75\" - Samsung TU75U7025FKXXC, UHD 4K, Procesador Crystal 4K, Smart TV, Negro",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 85\" - Samsung TU85U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
-   "price": "1449",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 75\" - Samsung TQ75Q7F5AUXXC, QLED 4K, Q4 AI Processor, Smart TV full AI,  Negro",
-   "price": "1049",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 65\" - Samsung TU65U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
-   "price": "729",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 55\" - Samsung TQ55QN1EFAUXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Fu",
-   "price": "489",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 65\" - Samsung TU65U7025FKXXC, UHD 4K, Procesador Crystal 4K, Smart TV, Negro",
-   "price": "699",
+   "name": "TV Neo QLED 55\" - Samsung TQ55QN70HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Wifi, Negro",
+   "price": "899",
    "uvp": null,
    "promo": null
   },
@@ -68,38 +32,14 @@
    "promo": null
   },
   {
-   "name": "TV OLED 65\" - Samsung TQ65S90FATXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV full AI, Wifi, Ne",
-   "price": "1999",
-   "uvp": null,
-   "promo": null
-  },
-  {
    "name": "TV LED 98\" - Samsung TU98DU9005KXXC, UHD 4K, Procesador Crystal 4K, Smart TV, DVB-T2 (H.265), G",
    "price": "4299",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV Mini LED 65\" - Samsung TU65M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
-   "price": "779",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 65\" - Samsung TQ65S93FATXXC, UHD 4K, NQ4 AI Gen3, Smart TV, DVB-T2 (H.265), Full AI, Ne",
-   "price": "1999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 55\" - Samsung TQ55QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
-   "price": "949",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Mini LED 55\" - Samsung TU55M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV,Full AI, Negro",
-   "price": "629",
+   "name": "TV LED 32\" - Samsung TU32H5005FKXXC, Full-HD, Hyper Real, Smart TV, Negro",
+   "price": "299",
    "uvp": null,
    "promo": null
   },
@@ -110,68 +50,26 @@
    "promo": null
   },
   {
-   "name": "TV QLED 65\" - Samsung TQ65Q7F5AUXXC, QLED 4K, Q4 AI Processor, Smart TV full AI, Negro",
-   "price": "1099",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 85\" - Samsung TQ85QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
+   "name": "TV OLED 65\" - Samsung TQ65S93FATXXC, UHD 4K, NQ4 AI Gen3, Smart TV, DVB-T2 (H.265), Full AI, Ne",
    "price": "1999",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV Mini LED 75\" - Samsung TU75M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
-   "price": "1449",
+   "name": "TV Neo QLED 65\" - Samsung TQ65QN70HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV,  Full AI, Wifi, Negro",
+   "price": "1099",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV Mini LED 55\" - Samsung TU55M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
-   "price": "919",
+   "name": "TV LED 27\" - Samsung TU27F6005FKXSP, Full-HD, Hyper Real, Smart TV, Negro",
+   "price": "249",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV OLED 83\" - Samsung TQ83S95FAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV full AI, Wifi, Ne",
-   "price": "6499",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 55\" - Samsung TQ55Q7F5AUXXC, QLED 4K, Q4 AI Processor, Smart TV, full AI, Negro",
-   "price": "539",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 32\" - Samsung TU32H5005FKXXC, HD, Hyper Real, Smart TV, Negro",
-   "price": "299",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 83\" - Samsung TQ83S93FAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Full AI, Negro g",
-   "price": "4999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 100\" - Samsung TQ100QN80FAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, G",
-   "price": "3999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 75\" - Samsung TQ75QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
-   "price": "1599",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 77\" - Samsung TQ77S93FAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV full AI, Wifi, Ne",
-   "price": "1799",
+   "name": "TV LED 24\" - Samsung TU24F6005FK/FHD, Full-HD, Hyper Real, Smart TV, Negro",
+   "price": "204,90",
    "uvp": null,
    "promo": null
   },
@@ -182,20 +80,44 @@
    "promo": null
   },
   {
-   "name": "TV OLED 42\" - Samsung TQ42S90FAEXXC, OLED 4K, NQ4 AI Gen3, Smart TV, Full AI, Negro",
-   "price": "1549",
+   "name": "TV Neo QLED 75\" - Samsung TQ75QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
+   "price": "1599",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV RGB Micro LED 65\" - Samsung TMR65R85HAUXXC, UHD 4K, Micro RGB AI Engine, Smart TV, Full AI, ",
-   "price": "2199",
+   "name": "TV Mini LED 55\" - Samsung TU55M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
+   "price": "919",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV Neo QLED 75\" - Samsung TQ75QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
-   "price": "2799",
+   "name": "TV Neo QLED 100\" - Samsung TQ100QN80FAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, G",
+   "price": "3999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 55\" - Samsung TQ55QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
+   "price": "949",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Mini LED 85\" - Samsung TU85M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
+   "price": "1699",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Mini LED 75\" - Samsung TU75M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
+   "price": "1699",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 65\" - Samsung The Frame Pro TQ65LS03HWUXXC, QLED 4K, NQ4 AI Gen3 Processor, Smart T",
+   "price": "2559",
    "uvp": null,
    "promo": null
   },
@@ -212,32 +134,50 @@
    "promo": null
   },
   {
+   "name": "TV Mini LED 65\" - Samsung TU65M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
+   "price": "1159",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Mini LED 75\" - Samsung TU75M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
+   "price": "1449",
+   "uvp": null,
+   "promo": null
+  },
+  {
    "name": "TV QLED 32\" - Samsung The Frame TQ32LS03CBUXXC, Full-HD, Hyper Real, Smart TV 2023, DVB-T2 (H.2",
    "price": "499",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV OLED 55\" - Samsung TQ55S90HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "name": "TV OLED 42\" - Samsung TQ42S93HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Full AI, Pantall",
+   "price": "1399",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 83\" - Samsung TQ83S91FAEXXC, UHD 4K, NQ4 AI Gen3, Smart TV, Full AI, Negro",
+   "price": "3499",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 77\" - Samsung TQ77S93HATXXC, OLED 4K, NQ4 AI Gen3, Smart TV, Full AI, Sin Reflejos, Neg",
+   "price": "3599",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 85\" - Samsung TQ85QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
    "price": "1999",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV QLED 98\" - Samsung TQ98Q7FAAUXXC SAMSUNG, QLED 4K, Q4 AI Processor, Smart TV, Negro",
-   "price": "3699",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 43\" - Samsung The Frame TQ43LS03HEUXXC, QLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecno",
-   "price": "1269",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Mini LED 85\" - Samsung TU85M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
-   "price": "1699",
+   "name": "TV LED 32\" - Samsung TU32H5005FKXXC, HD, Hyper Real, Smart TV, Negro",
+   "price": "299",
    "uvp": null,
    "promo": null
   },
@@ -248,55 +188,25 @@
    "promo": null
   },
   {
-   "name": "TV Neo QLED 55\" - Samsung TQ55QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, DVB-T2 (H.265), Negro",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 65\" - Samsung TQ65S95HFTXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
-   "price": "3499",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 65\" - Samsung TQ65QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 65\" - Samsung TQ65S99HATXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
-   "price": "3959",
-   "uvp": null,
-   "promo": "One Connect regalo"
-  },
-  {
-   "name": "TV OLED 77\" - Samsung TQ77S99HATXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
-   "price": "4699",
-   "uvp": null,
-   "promo": "One Connect regalo"
-  },
-  {
-   "name": "TV OLED 42\" - Samsung TQ42S93HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Full AI, Pantall",
-   "price": "1399",
-   "uvp": null,
-   "promo": null
-  },
-  {
    "name": "TV OLED 48\" - Samsung TQ48S93HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Full AI, Pantall",
    "price": "1599",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV Neo QLED 65\" - Samsung The Frame Pro TQ65LS03HWUXXC, QLED 4K, NQ4 AI Gen3 Processor, Smart T",
-   "price": "2559",
+   "name": "TV OLED 83\" - Samsung TQ83S95FAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV full AI, Wifi, Ne",
+   "price": "6499",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV OLED 55\" - Samsung TQ55S95HFTXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "name": "TV OLED 55\" - Samsung TQ55S90HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "price": "1999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 65\" - Samsung TQ65S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
    "price": "2299",
    "uvp": null,
    "promo": null
@@ -308,26 +218,32 @@
    "promo": null
   },
   {
-   "name": "TV OLED 65\" - Samsung TQ65S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
-   "price": "2299",
+   "name": "TV OLED 65\" - Samsung TQ65S95HFTXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "price": "3499",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV OLED 55\" - Samsung TQ55S99HATXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
-   "price": "2719",
+   "name": "TV QLED 98\" - Samsung TQ98Q7FAAUXXC SAMSUNG, QLED 4K, Q4 AI Processor, Smart TV, Negro",
+   "price": "3699",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV RGB Micro LED 75\" - Samsung TMR75R95HATXXC, UHD 4K, Micro RGB AI Engine Pro, Full AI, Negro",
+   "price": "4699",
    "uvp": null,
    "promo": "One Connect regalo"
   },
   {
-   "name": "TV Neo QLED 115\" - Samsung TQ115QN90FTXXC, UHD 4K, NQ8 AI Gen3 Processor, Smart TV, Full AI, Gl",
-   "price": "19999",
+   "name": "TV OLED 48\" - Samsung TQ48S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
+   "price": "1299",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV RGB Micro LED 85\" - Samsung TMR85R85HAUXXC, UHD 4K, Micro RGB AI Engine, Smart TV, Full AI, ",
-   "price": "4599",
+   "name": "TV OLED 55\" - Samsung TQ55S95HFTXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "price": "2299",
    "uvp": null,
    "promo": null
   },
@@ -338,14 +254,74 @@
    "promo": null
   },
   {
-   "name": "TV OLED 48\" - Samsung TQ48S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
-   "price": "1299",
+   "name": "TV RGB Micro LED 85\" - Samsung TMR85R85HAUXXC, UHD 4K, Micro RGB AI Engine, Smart TV, Full AI, ",
+   "price": "4599",
    "uvp": null,
    "promo": null
   },
   {
+   "name": "TV OLED 83\" - Samsung TQ83S93HAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Full AI, Sin Ref",
+   "price": "4799",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 55\" - Samsung TQ55S99HATXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "price": "2499",
+   "uvp": null,
+   "promo": "One Connect regalo"
+  },
+  {
+   "name": "TV LED 27\" - Samsung The Movingstyle UE27LSM7FAXXXE, QHD, Touch Interaction Movable Screen, NQ4",
+   "price": "1499",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV RGB Micro LED 85\" - Samsung TMR85R95HATXXC, UHD 4K, Micro RGB AI Engine Pro, Smart TV, Full ",
+   "price": "6499",
+   "uvp": null,
+   "promo": "One Connect regalo"
+  },
+  {
    "name": "TV QLED 55\" - Samsung The Frame TQ55LS03HAUXXC, QLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecno",
    "price": "1819",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV QLED 43\" - Samsung The Frame TQ43LS03HEUXXC, QLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecno",
+   "price": "1269",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV RGB Micro LED 65\" - Samsung TMR65R95HATXXC, UHD 4K, Micro RGB AI Engine Pro, Smart TV, Full ",
+   "price": "3699",
+   "uvp": null,
+   "promo": "One Connect regalo"
+  },
+  {
+   "name": "TV RGB Micro LED 75\" - Samsung TMR75R85HAUXXC, UHD 4K, Motor Micro RGB AI, Smart TV, Full AI, N",
+   "price": "2699",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV RGB Micro LED 65\" - Samsung TMR65R85HAUXXC, UHD 4K, Micro RGB AI Engine, Smart TV, Full AI, ",
+   "price": "2199",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 77\" - Samsung TQ77S95HFTXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV, Tecnología Sin R",
+   "price": "4299",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Mini LED 85\" - Samsung TU85M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
+   "price": "2139",
    "uvp": null,
    "promo": null
   },
@@ -356,62 +332,20 @@
    "promo": null
   },
   {
-   "name": "TV Mini LED 65\" - Samsung TU65M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
-   "price": "915",
+   "name": "TV QLED 65\" - Samsung The Frame TQ65LS03HAUXXC, QLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecno",
+   "price": "2359",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV LED 32\" - Samsung TU32H5005FKXXC, Full-HD, Hyper Real, Smart TV, Negro",
-   "price": "224",
+   "name": "TV Neo QLED 85\" - Samsung The Frame Pro TQ85LS03HWUXXC, QLED Mini Led 4K, NQ4 AI Gen3 Processor",
+   "price": "5139",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "TV LED 24\" - Samsung TU24F6005FK/FHD, Full-HD, Hyper Real, Smart TV, Negro",
-   "price": "179",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 27\" - Samsung TU27F6005FKXSP, Full-HD, Hyper Real, Smart TV, Negro",
-   "price": "199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 32\" - Samsung TQ32Q5FAAUXSP, Full HD, Hyper Real, S",
-   "price": "279",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV Mini LED 65\" - Samsung TU65M80HAUXXC, UHD 4K, NQ4 AI Gen",
-   "price": "915",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Mini LED 85\" - Samsung TU85M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
-   "price": "1718",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 43\" - Samsung The Serif TQ43LS01DAUXXC , UHD 4K, Quantum Processor 4K, Smart TV, DVB-T2",
-   "price": "891",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 43\" - Samsung TQ43Q7FAAUXXC, QLED 4K, Q4 AI Processor, Smart TV, Negro",
-   "price": "417",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 55\" - Samsung TQ55QN70FAUXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV ful",
-   "price": "913",
+   "name": "TV Neo QLED 65\" - Samsung TQ65QN73FATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Fu",
+   "price": "837",
    "uvp": null,
    "promo": null
   },
@@ -422,200 +356,20 @@
    "promo": null
   },
   {
-   "name": "TV Neo QLED 43\" - Samsung TQ43QN90FATXXC, QLED Mini Led 4K, NQ4 AI Gen3 Processor, Smart TV ful",
-   "price": "913",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 43\" - Samsung The Frame TQ43LS03FAUXXC, QLED 4K, Procesador NQ4 AI Gen2 , Smart TV, Neg",
-   "price": "859",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV LED 27\" - Samsung The Movingstyle UE27LSM7FAXXXE, QHD, Touch Interaction Movable Screen, NQ4",
-   "price": "1075",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "Monitor gaming - Samsung ODYSSEY OLED G8  LS32DG802SUXEN , 32\", 0.03ms, 240Hz, WiFi, Bluetooth,",
+   "name": "TV Neo QLED 55\" - Samsung TQ55QN73FATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Fu",
    "price": "1199",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "REACONDICIONADO Seminuevo Excelente TV LED 75\" - Samsung TU75U7025FKXXC, UHD 4K, Procesador Cry",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Bueno TV Neo QLED 43\" - Samsung TQ43QN90FATXXC, QLED Mini Led 4K, NQ4",
-   "price": "915",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 98\" - Samsung TQ98QN90FATXXC, QLED Mini Led 4K,",
-   "price": "8999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 98\" - Samsung TQ98QN990FTXXC, QLED Mini Led 8K, NQ8 AI Gen3 Processor, Smart TV  fu",
-   "price": "28386,86",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 50\" - Samsung The Frame TQ50LS03FAUXXC, QLED 4K, Procesador NQ4 AI Gen2, Smart TV, Negr",
-   "price": "1019",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Excelente TV Neo QLED 55\" - Samsung TQ55QN1EFAUXXC, QLED Mini Led 4K,",
-   "price": "459",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV RGB Micro LED 75\" - Samsung TMR75R95HATXXC, UHD 4K, Micro RGB AI Engine Pro, Full AI, Negro",
-   "price": "3499",
-   "uvp": null,
-   "promo": "One Connect regalo"
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Excelente TV QLED 75\" - Samsung TQ75Q6FAAUXXC, UHD 4K, Q4 Lite Proces",
-   "price": "746,10",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Mini LED 75\" - Samsung TU75M80HAUXXC, UHD 4K, NQ4 AI Gen2 Processor, Smart TV, Full AI, Negr",
-   "price": "1249",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno Monitor - Samsung Smart M5  LS27CM501EUXEN, 27\", Full-HD, 4",
-   "price": "199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 100\" - Samsung TQ100QN80FAUXXC, UHD 4K, NQ4 AI ",
-   "price": "3999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 75\" - Samsung TQ75QN990FTXXC, QLED Mini Led 8K, NQ8 AI Gen3 Processor, Smart TV ful",
-   "price": "5699",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 65\" - Samsung TQ65S95FATXXC, OLED 4K, NQ4 AI Gen3 P",
-   "price": "1699",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV QLED 65\" - Samsung The Frame TQ65LS03HAUXXC, QLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecno",
-   "price": "1699",
+   "name": "TV Neo QLED 55\" - Samsung TQ55QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, DVB-T2 (H.265), Negro",
+   "price": "1090",
    "uvp": null,
    "promo": null
   },
   {
    "name": "TV Neo QLED 50\" - Samsung TQ50QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
-   "price": "854",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 85\" - Samsung TQ85QN900DTXXC, UHD 8K Mini LED, Procesador NQ8 AI Gen3, Smart TV, DV",
-   "price": "8799,10",
-   "uvp": null,
-   "promo": "Outlet"
-  },
-  {
-   "name": "TV RGB Micro LED 85\" - Samsung TMR85R95HATXXC, UHD 4K, Micro RGB AI Engine Pro, Smart TV, Full ",
-   "price": "4839",
-   "uvp": null,
-   "promo": "One Connect regalo"
-  },
-  {
-   "name": "TV Neo QLED 85\" - Samsung TQ85QN900FTXXC, QLED Mini Led 8K, NQ8 AI Gen2 Processor, Smart TV ful",
-   "price": "5268",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV OLED 77\" - Samsung TQ77S85DAEXXC, UHD 4K, Procesador NQ4 AI Gen2, Smart TV, DVB-T2 (H.265), ",
-   "price": "2279",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 75\" - Samsung TQ75QN900FTXXC, QLED Mini Led 8K, NQ8 AI Gen2 Processor, Smart TV ful",
-   "price": "3546",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 75\" - Samsung TQ75Q8FAAUXXC, QLED 4K, Q4 AI Process",
-   "price": "1398,76",
-   "uvp": null,
-   "promo": "Descuento en carrito"
-  },
-  {
-   "name": "TV Neo QLED 75\" - Samsung TQ75QN900DTXXC, UHD 8K Mini LED, Procesador NQ8 AI Gen3, Smart TV, DV",
-   "price": "6238,80",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 55\" - Samsung TQ55Q8FAAUXXC, QLED 4K, Q4 AI Process",
-   "price": "849,42",
-   "uvp": null,
-   "promo": "Descuento en carrito"
-  },
-  {
-   "name": "TV OLED 83\" - Samsung TQ83S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
-   "price": "3762",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 85\" - Samsung QE85QN90CATXXH, QLED 4K, Neural Q",
-   "price": "3331,80",
-   "uvp": null,
-   "promo": "Descuento en carrito"
-  },
-  {
-   "name": "TV Neo QLED 55\" - Samsung TQ55LST7DATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Ne",
-   "price": "3599",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 83\" - Samsung TQ83S93FAEXXC, OLED 4K, NQ4 AI Gen3 P",
-   "price": "2199",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 65\" - Samsung TQ65QN990FTXXC, QLED Mini Led 8K,",
-   "price": "3999",
-   "uvp": null,
-   "promo": null
-  },
-  {
-   "name": "TV Neo QLED 65\" - Samsung TQ65LST7DATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Ne",
-   "price": "4479",
+   "price": "849",
    "uvp": null,
    "promo": null
   },
@@ -626,8 +380,110 @@
    "promo": null
   },
   {
-   "name": "REACONDICIONADO Seminuevo Muy bueno Monitor - Samsung Smart M5 LS32DM500EUXEN, 32\", Full-HD, 4 ",
-   "price": "239",
+   "name": "REACONDICIONADO Seminuevo Bueno TV QLED 65\" - Samsung TQ65Q7F5AUXXC, QLED 4K, Q4 AI Processor, ",
+   "price": "655",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV LED 75\" - Samsung TU75U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
+   "price": "649",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 43\" - Samsung TQ43QN90FATXXC, QLED Mini Led 4K, NQ4 AI Gen3 Processor, Smart TV ful",
+   "price": "913",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 65\" - Samsung TQ65QN990FTXXC, QLED Mini Led 8K,",
+   "price": "1999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 55\" - Samsung TQ55S93FAEXXC, OLED 4K, NQ4 AI Gen3 P",
+   "price": "1029",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV LED 43\" - Samsung TU43U7025FKXXC, UHD 4K, Procesador Cry",
+   "price": "329",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 55\" - Samsung TQ55S90FAEXXC, OLED 4K, NQ4 AI Gen3 Processor, Smart TV full AI, Wifi, Ne",
+   "price": "1342",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 42\" - Samsung TQ42S90FAEXXC, OLED 4K, NQ4 AI Gen3, Smart TV, Full AI, Negro",
+   "price": "858",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Excelente TV Neo QLED 55\" - Samsung TQ55QN1EFAUXXC, QLED Mini Led 4K,",
+   "price": "469",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 65\" - Samsung TQ65QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
+   "price": "1355",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 85\" - Samsung TQ85QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
+   "price": "2499",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV QLED 50\" - Samsung The Frame TQ50LS03FAUXXC, QLED 4K, Procesador NQ4 AI Gen2, Smart TV, Negr",
+   "price": "1019",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 55\" - Samsung TQ55QN70FAUXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV ful",
+   "price": "821,70",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Excelente TV QLED 75\" - Samsung TQ75Q6FAAUXXC, UHD 4K, Q4 Lite Proces",
+   "price": "752",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV QLED 43\" - Samsung The Frame TQ43LS03FAUXXC, QLED 4K, Procesador NQ4 AI Gen2 , Smart TV, Neg",
+   "price": "859",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 75\" - Samsung TQ75QN990FTXXC, QLED Mini Led 8K, NQ8 AI Gen3 Processor, Smart TV ful",
+   "price": "5697",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 115\" - Samsung TQ115QN90FTXXC, UHD 4K, NQ8 AI Gen3 Processor, Smart TV, Full AI, Gl",
+   "price": "17205",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 77\" - Samsung TQ77S85DAEXXC, UHD 4K, Procesador NQ4 AI Gen2, Smart TV, DVB-T2 (H.265), ",
+   "price": "2279",
    "uvp": null,
    "promo": null
   },
@@ -638,20 +494,152 @@
    "promo": null
   },
   {
+   "name": "TV Neo QLED 85\" - Samsung TQ85QN900DTXXC, UHD 8K Mini LED, Procesador NQ8 AI Gen3, Smart TV, DV",
+   "price": "7919",
+   "uvp": null,
+   "promo": "Outlet"
+  },
+  {
+   "name": "Monitor gaming - Samsung ODYSSEY OLED G8  LS32DG802SUXEN , 32\", 0.03ms, 240Hz, WiFi, Bluetooth,",
+   "price": "1199",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV OLED 83\" - Samsung TQ83S83HAEXXC, OLED 4K, NQ4 AI Gen2 Processor, Smart TV, Tecnología Sin R",
+   "price": "4329",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 75\" - Samsung TQ75Q8FAAUXXC, QLED 4K, Q4 AI Process",
+   "price": "1398,76",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 75\" - Samsung TQ75QN80HAUXXC, UHD 4K, NQ4 AI Gen2, Smart TV, Full AI, Wifi, Negro",
+   "price": "2041",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 85\" - Samsung QE85QN90CATXXH, QLED 4K, Neural Q",
+   "price": "2832,03",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 98\" - Samsung TQ98QN90FATXXC, QLED Mini Led 4K,",
+   "price": "8999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 75\" - Samsung TQ75QN900FTXXC, QLED Mini Led 8K, NQ8 AI Gen2 Processor, Smart TV ful",
+   "price": "3546",
+   "uvp": null,
+   "promo": null
+  },
+  {
    "name": "REACONDICIONADO Seminuevo Muy bueno TV LED 85\" - Samsung TU85U7025FKXXC, UHD 4K, Procesador Cry",
-   "price": "1236",
+   "price": "1099",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 55\" - Samsung TQ55S93FAEXXC, OLED 4K, NQ4 AI Gen3 P",
-   "price": "899",
+   "name": "TV Neo QLED 75\" - Samsung TQ75QN900DTXXC, UHD 8K Mini LED, Procesador NQ8 AI Gen3, Smart TV, DV",
+   "price": "6238,80",
    "uvp": null,
    "promo": null
   },
   {
-   "name": "REACONDICIONADO Seminuevo Excelente TV QLED 55\" - Samsung TQ55Q7FAAUXXC, QLED 4K, Q4 AI Process",
-   "price": "799",
+   "name": "TV Neo QLED 55\" - Samsung TQ55LST7DATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Ne",
+   "price": "3580",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 55\" - Samsung TQ55Q8FAAUXXC, QLED 4K, Q4 AI Process",
+   "price": "849,42",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno Monitor - Samsung Smart M5 LS32DM500EUXEN, 32\", Full-HD, 4 ",
+   "price": "269",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 85\" - Samsung TQ85QN900FTXXC, QLED Mini Led 8K, NQ8 AI Gen2 Processor, Smart TV ful",
+   "price": "5268",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "TV Neo QLED 65\" - Samsung TQ65LST7DATXXC, QLED Mini Led 4K, NQ4 AI Gen2 Processor, Smart TV, Ne",
+   "price": "4479",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 43\" - Samsung TQ43Q7FAAUXXC, QLED 4K, Q4 AI Process",
+   "price": "417",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 77\" - Samsung TQ77S85FAEXXC, OLED 4K, NQ4 AI Gen2 P",
+   "price": "3299",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 75\" - Samsung TQ75QN73FATXXC, QLED Mini Led 4K,",
+   "price": "1399",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 55\" - Samsung TQ55QN73FATXXC, QLED Mini Led 4K,",
+   "price": "1199",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV QLED 75\" - Samsung TQ75Q6FAAUXXC, UHD 4K, Q4 Lite Proces",
+   "price": "752",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV Neo QLED 65\" - Samsung The Frame Pro TQ65LS03FWUXXC, QLE",
+   "price": "2299",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Bueno TV QLED 75\" - Samsung TQ75Q6FAAUXXC, UHD 4K, Q4 Lite Processor,",
+   "price": "1049",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Excelente TV QLED 75\" - Samsung TQ75Q7F5AUXXC, QLED 4K, Q4 AI Process",
+   "price": "999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Muy bueno TV OLED 65\" - Samsung TQ65S93FATXXC, UHD 4K, NQ4 AI Gen3, S",
+   "price": "1999",
+   "uvp": null,
+   "promo": null
+  },
+  {
+   "name": "REACONDICIONADO Seminuevo Excelente TV OLED 77\" - Samsung TQ77S93FAEXXC, OLED 4K, NQ4 AI Gen3 P",
+   "price": "3699",
    "uvp": null,
    "promo": null
   },
