@@ -823,6 +823,15 @@
                                     if (promo && promo !== 'None' && promo !== '') {
                                         extra.push('Promo: ' + promo);
                                     }
+                                    if (context.datasetIndex === 0) {
+                                        const dataIdx = context.dataIndex;
+                                        const lgP = lgPrices[dataIdx];
+                                        const samP = samPrices[dataIdx];
+                                        if (lgP > 0 && samP > 0) {
+                                            const ata = Math.round((lgP / samP) * 100);
+                                            extra.push('ATA: ' + ata);
+                                        }
+                                    }
                                     return extra.join('\n');
                                 }
                             }
