@@ -465,6 +465,27 @@ def main():
     survey_date = datetime.now().strftime("%Y년 %m월 %d일")
     survey_date_dot = datetime.now().strftime("%Y.%m.%d")
     
+    def format_python_date_with_week(date_str, format_type='dot'):
+        # date_str: "2026.08.13" or "2026년 08월 13일"
+        match = re.search(r'2026.*?0?8.*?(\d+)', date_str)
+        if match:
+            day = int(match.group(1))
+            week = ""
+            if 2 <= day <= 8:
+                week = "32W"
+            elif 9 <= day <= 15:
+                week = "33W"
+            
+            if week:
+                if format_type == 'korean':
+                    return f"{date_str} ({week})"
+                else:
+                    return f"{date_str}({week})"
+        return date_str
+
+    survey_date = format_python_date_with_week(survey_date, 'korean')
+    survey_date_dot = format_python_date_with_week(survey_date_dot, 'dot')
+    
     compiled_html = html_content.replace("// {{INSERT_PRICE_DATA}}", injection_block)
     compiled_html = compiled_html.replace("{{SURVEY_DATE}}", survey_date)
     compiled_html = compiled_html.replace("{{SURVEY_DATE_DOT}}", survey_date_dot)

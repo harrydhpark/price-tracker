@@ -975,6 +975,32 @@
             return 0;
         }
 
+        function formatWithWeek(dateStr, linebreak = false) {
+            if (!dateStr) return '';
+            let match = dateStr.match(/^(0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])$/);
+            if (!match) {
+                match = dateStr.match(/(?:20)?26[./-](0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])/);
+            }
+            if (match) {
+                const month = parseInt(match[1], 10);
+                const day = parseInt(match[2], 10);
+                const cleanStr = `2026-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const d = new Date(cleanStr);
+                if (!isNaN(d.getTime())) {
+                    d.setHours(0, 0, 0, 0);
+                    d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+                    const yearStart = new Date(d.getFullYear(), 0, 1);
+                    const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+                    const week = `${weekNo}W`;
+                    if (linebreak) {
+                        return [dateStr, `(${week})`];
+                    }
+                    return `${dateStr}(${week})`;
+                }
+            }
+            return dateStr;
+        }
+
         function formatTablePrice(price) {
             if (!price || price === 0) return `<span class="text-slate-300">-</span>`;
             return `CHF ${price.toLocaleString()}`;
@@ -1009,8 +1035,10 @@
                 <th class="px-6 py-4 font-semibold text-slate-500 uppercase tracking-wider text-xs">모델 / 유통채널</th>
             `;
             dates.forEach(d => {
+                const formatted = formatWithWeek(d);
+                const displayHtml = formatted.includes('(') ? formatted.replace('(', '<br>(') : formatted;
                 headerHtml += `
-                    <th class="px-6 py-4 font-semibold text-slate-500 uppercase tracking-wider text-xs text-center">${d}</th>
+                    <th class="px-6 py-4 font-semibold text-slate-500 uppercase tracking-wider text-xs text-center">${displayHtml}</th>
                 `;
             });
             headerRow.innerHTML = headerHtml;
@@ -1370,7 +1398,7 @@
             historyChartInstance = new Chart(lineCtx, {
                 type: 'line',
                 data: {
-                    labels: allDates,
+                    labels: allDates.map(d => formatWithWeek(d, true)),
                     datasets: [
                         {
                             label: `LG (${lgSeries})`,

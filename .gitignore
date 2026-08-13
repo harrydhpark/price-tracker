@@ -28,3 +28,6 @@ Thumbs.db
 
 # Temporary backups
 EU-price-tracker_backup/
+
+# Excel temporary lock files
+~$*

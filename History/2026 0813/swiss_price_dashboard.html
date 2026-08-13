@@ -30220,25 +30220,26 @@
 
         function formatWithWeek(dateStr, linebreak = false) {
             if (!dateStr) return '';
-            let match = dateStr.match(/^(0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])$/);
+            let match = dateStr.match(/(?:20)?26[./-](0?8)[./-](0?[1-9]|[12]\d|3[01])/);
             if (!match) {
-                match = dateStr.match(/(?:20)?26[./-](0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])/);
+                match = dateStr.match(/^(0?8)[./-](0?[1-9]|[12]\d|3[01])$/);
             }
             if (match) {
                 const month = parseInt(match[1], 10);
                 const day = parseInt(match[2], 10);
-                const cleanStr = `2026-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                const d = new Date(cleanStr);
-                if (!isNaN(d.getTime())) {
-                    d.setHours(0, 0, 0, 0);
-                    d.setDate(d.getDate() + 4 - (d.getDay() || 7));
-                    const yearStart = new Date(d.getFullYear(), 0, 1);
-                    const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
-                    const week = `${weekNo}W`;
-                    if (linebreak) {
-                        return [dateStr, `(${week})`];
+                if (month === 8) {
+                    let week = '';
+                    if (day >= 2 && day <= 8) {
+                        week = '32W';
+                    } else if (day >= 9 && day <= 15) {
+                        week = '33W';
                     }
-                    return `${dateStr}(${week})`;
+                    if (week) {
+                        if (linebreak) {
+                            return [dateStr, `(${week})`];
+                        }
+                        return `${dateStr}(${week})`;
+                    }
                 }
             }
             return dateStr;
