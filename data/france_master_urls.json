@@ -1,0 +1,811 @@
+{
+  "samsung": {
+    "TV Samsung QLED TQ43Q7F 109 cm 2025": {
+      "name": "TV Samsung QLED TQ43Q7F 109 cm 2025",
+      "title": "TV Samsung QLED TQ43Q7F 109 cm 2025",
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ43Q7F-109-cm-2025/a21731827/w-4",
+      "price": 399.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ65Q7F 165 cm 2025": {
+      "name": "TV Samsung QLED TQ65Q7F 165 cm 2025",
+      "title": "TV Samsung QLED TQ65Q7F 165 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ65Q7F-165-cm-4K-UHD-2025/a21545205/w-4",
+      "price": 599.99,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ50QN90F 127 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ50QN90F 127 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ50QN90F 127 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ50QN90F-127-cm-4K-UHD-2025/a21543266/w-4",
+      "price": 899.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED The Frame TQ55LS03F 138 cm 2025": {
+      "name": "TV Samsung QLED The Frame TQ55LS03F 138 cm 2025",
+      "title": "TV Samsung QLED The Frame TQ55LS03F 138 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ55LS03FA-138-cm-4K-UHD-2025/a21517307/w-4",
+      "price": 829.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ55Q7F5 140 cm 2025": {
+      "name": "TV Samsung QLED TQ55Q7F5 140 cm 2025",
+      "title": "TV Samsung QLED TQ55Q7F5 140 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ55Q7F-140-cm-4K-UHD-Smart-TV-2025/a21543271/w-4",
+      "price": 1599.0,
+      "promo": "Sale 11%; was EUR 1799.00"
+    },
+    "TV Samsung Mini Led Neo Qled TQ75QN74F 190 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ75QN74F 190 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ75QN74F 190 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN74F-190-cm-4K-UHD-2025/a21545207/w-4",
+      "price": 1299.0,
+      "promo": "Sale 13%; was EUR 1499.00"
+    },
+    "TV Samsung Mini Led Neo Qled TQ65QN85F 165 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ65QN85F 165 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ65QN85F 165 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN85F-165-cm-4K-UHD-2025-Argent-eclipse/a21543269/w-4",
+      "price": 799.0,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ65QN74F 165 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ65QN74F-165-cm-4K-UHD-2025/a21545202/w-4",
+      "price": 689.99,
+      "promo": "Sale 8%; was EUR 749.99"
+    },
+    "TV Samsung Mini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled The Frame TQ65LS03FW PRO 165 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Frame-Pro-TQ65LS03FW-165-cm-4K-UHD-2025/a21517306/w-4",
+      "price": 1199.0,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ85Q7F 216 cm 2025": {
+      "name": "TV Samsung QLED TQ85Q7F 216 cm 2025",
+      "title": "TV Samsung QLED TQ85Q7F 216 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ85Q7F-216-cm-4K-UHD-2025/a21545210/w-4",
+      "price": 979.0,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ75Q7F 190 cm 2025": {
+      "name": "TV Samsung QLED TQ75Q7F 190 cm 2025",
+      "title": "TV Samsung QLED TQ75Q7F 190 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-TQ75Q7F-190-cm-4K-UHD-2025/a21545200/w-4",
+      "price": 769.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED The Frame TQ43LS03F 108 cm 2025": {
+      "name": "TV Samsung QLED The Frame TQ43LS03F 108 cm 2025",
+      "title": "TV Samsung QLED The Frame TQ43LS03F 108 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ43LS03FA-108-cm-4K-UHD-2025/a21517308/w-4",
+      "price": 749.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ75QEF1 190 cm 2025": {
+      "name": "TV Samsung QLED TQ75QEF1 190 cm 2025",
+      "title": "TV Samsung QLED TQ75QEF1 190 cm 2025",
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ75QEF1-190-cm-2025/a22193073/w-4",
+      "price": 699.0,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ85QN80F 216 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ85QN80F 216 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ85QN80F 216 cm 2025",
+      "url": "https://www.fnac.com/TV-Samsung-Neo-QLED-TQ85QN80F-216-cm-2025/a21731825/w-4",
+      "price": 1749.0,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ43QN90F 109 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ43QN90F 109 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ43QN90F 109 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ43QN90F-109-cm-4K-Mini-LED-Smart-TV-2025/a21543273/w-4",
+      "price": 1499.0,
+      "promo": "Sale 6%; was EUR 1599.00"
+    },
+    "TV Samsung Mini Led Neo Qled TQ75QN85F 190 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ75QN85F 190 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ75QN85F 190 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN85F-190-cm-4K-UHD-2025-Argent-eclipse/a21543263/w-4",
+      "price": 891.65,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ75QN990F 190 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ75QN990F 190 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ75QN990F 190 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ75QN990F-190-cm-8K-UHD-2025/a21543270/w-4",
+      "price": 4038.19,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ55QN90F 140 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ55QN90F 140 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ55QN90F 140 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ55QN90F-140-cm-4K-UHD-2025/a21543260/w-4",
+      "price": 799.99,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled TQ55QN74F 140 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled TQ55QN74F 140 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled TQ55QN74F 140 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-TQ55QN74F-140-cm-4K-UHD-Mini-LED-Smart-TV-2025/a21545196/w-4",
+      "price": 529.99,
+      "promo": "Sale 12%; was EUR 599.99"
+    },
+    "TV Samsung Mini LED Neo QLED The Terrace TQ75LST7D 189 cm 2025": {
+      "name": "TV Samsung Mini LED Neo QLED The Terrace TQ75LST7D 189 cm 2025",
+      "title": "TV Samsung Mini LED Neo QLED The Terrace TQ75LST7D 189 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Terrace-TQ75LST7D-189-cm-4K-UHD-2025/a21543251/w-4",
+      "price": 4953.05,
+      "promo": "None"
+    },
+    "TV Samsung Mini LED TU50M72H 127 cm 2026": {
+      "name": "TV Samsung Mini LED TU50M72H 127 cm 2026",
+      "title": "TV Samsung Mini LED TU50M72H 127 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU50M72H-127-cm-2026/a22999928/w-4",
+      "price": 499.99,
+      "promo": "None"
+    },
+    "TV Samsung LED TU43U8005H 109 cm 2026": {
+      "name": "TV Samsung LED TU43U8005H 109 cm 2026",
+      "title": "TV Samsung LED TU43U8005H 109 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU43U8005H-109-cm-2026/a22999905/w-4",
+      "price": 399.99,
+      "promo": "None"
+    },
+    "TV Samsung Mini LED TU55M80H 140 cm 2026": {
+      "name": "TV Samsung Mini LED TU55M80H 140 cm 2026",
+      "title": "TV Samsung Mini LED TU55M80H 140 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU55M80H-140-cm-2026/a22999922/w-4",
+      "price": 569.99,
+      "promo": "Sale 10%; was EUR 629.99"
+    },
+    "TV Samsung Mini LED TU43M72H 109 cm 2026": {
+      "name": "TV Samsung Mini LED TU43M72H 109 cm 2026",
+      "title": "TV Samsung Mini LED TU43M72H 109 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU43M72H-109-cm-2026/a22999889/w-4",
+      "price": 419.99,
+      "promo": "Sale 16%; was EUR 499.99"
+    },
+    "TV Samsung Mini LED TU85M80H 216 cm 2026": {
+      "name": "TV Samsung Mini LED TU85M80H 216 cm 2026",
+      "title": "TV Samsung Mini LED TU85M80H 216 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU85M80H-216-cm-2026/a22999882/w-4",
+      "price": 1399.0,
+      "promo": "Sale 13%; was EUR 1599.00"
+    },
+    "TV Samsung Mini LED TU65M80H 165 cm 2026": {
+      "name": "TV Samsung Mini LED TU65M80H 165 cm 2026",
+      "title": "TV Samsung Mini LED TU65M80H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-Mini-LED-TU65M80H-165-cm-2026/a22999896/w-4",
+      "price": 749.99,
+      "promo": "Sale 12%; was EUR 849.99"
+    },
+    "TV Samsung LED TU65U8005H 165 cm 2026": {
+      "name": "TV Samsung LED TU65U8005H 165 cm 2026",
+      "title": "TV Samsung LED TU65U8005H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU65U8005H-165-cm-2026/a22999878/w-4",
+      "price": 629.99,
+      "promo": "None"
+    },
+    "TV Samsung OLED TQ48S92H 122 cm 2026": {
+      "name": "TV Samsung OLED TQ48S92H 122 cm 2026",
+      "title": "TV Samsung OLED TQ48S92H 122 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ48S92H-122-cm-2026/a22999895/w-4",
+      "price": 1299.0,
+      "promo": "Sale 19%; was EUR 1599.00"
+    },
+    "TV Samsung OLED TQ55S99H 140 cm 2026": {
+      "name": "TV Samsung OLED TQ55S99H 140 cm 2026",
+      "title": "TV Samsung OLED TQ55S99H 140 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ55S99H-140-cm-2026/a22999913/w-4",
+      "price": 2399.0,
+      "promo": "Sale 4%; was EUR 2499.00"
+    },
+    "TV Samsung OLED TQ55S95H 140 cm 2026": {
+      "name": "TV Samsung OLED TQ55S95H 140 cm 2026",
+      "title": "TV Samsung OLED TQ55S95H 140 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ55S95H-140-cm-2026/a22999902/w-4",
+      "price": 1999.0,
+      "promo": "Sale 4%; was EUR 2090.00"
+    },
+    "TV Samsung LED TU50U8005H 127 cm 2026": {
+      "name": "TV Samsung LED TU50U8005H 127 cm 2026",
+      "title": "TV Samsung LED TU50U8005H 127 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU50U8005H-127-cm-2026/a22999917/w-4",
+      "price": 479.99,
+      "promo": "None"
+    },
+    "TV Samsung QLED TQ32Q5FA 81 cm 2025": {
+      "name": "TV Samsung QLED TQ32Q5FA 81 cm 2025",
+      "title": "TV Samsung QLED TQ32Q5FA 81 cm 2025",
+      "url": "https://www.fnac.com/TV-Samsung-QLED-TQ32Q5FA-81-cm-2025/a22999918/w-4",
+      "price": 1799.0,
+      "promo": "None"
+    },
+    "TV Samsung LED TU55U8005H 140 cm 2026": {
+      "name": "TV Samsung LED TU55U8005H 140 cm 2026",
+      "title": "TV Samsung LED TU55U8005H 140 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-LED-TU55U8005H-140-cm-2026/a22999879/w-4",
+      "price": 499.99,
+      "promo": "Sale 6%; was EUR 529.99"
+    },
+    "TV Samsung OLED TQ65S95H 165 cm 2026": {
+      "name": "TV Samsung OLED TQ65S95H 165 cm 2026",
+      "title": "TV Samsung OLED TQ65S95H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ65S95H-165-cm-2026/a22999888/w-4",
+      "price": 2977.82,
+      "promo": "None"
+    },
+    "TV Samsung OLED TQ65S99H 165 cm 2026": {
+      "name": "TV Samsung OLED TQ65S99H 165 cm 2026",
+      "title": "TV Samsung OLED TQ65S99H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ65S99H-165-cm-2026/a22999927/w-4",
+      "price": 3299.0,
+      "promo": "Sale 6%; was EUR 3499.00"
+    },
+    "TV Samsung The Sero QE43LS05T QLED 43\" 4K UHD Smart TV Bleu marine": {
+      "name": "TV Samsung The Sero QE43LS05T QLED 43\" 4K UHD Smart TV Bleu marine",
+      "title": "TV Samsung The Sero QE43LS05T QLED 43\" 4K UHD Smart TV Bleu marine",
+      "url": "https://www.fnac.com/TV-Samsung-The-Sero-QE43LS05T-QLED-43-4K-UHD-Smart-TV-Bleu-marine/a14695851/w-4",
+      "price": 1499.0,
+      "promo": "Sale 6%; was EUR 1599.00"
+    },
+    "TV Samsung OLED TQ77S95H 196 cm 2026": {
+      "name": "TV Samsung OLED TQ77S95H 196 cm 2026",
+      "title": "TV Samsung OLED TQ77S95H 196 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ77S95H-196-cm-2026/a22999915/w-4",
+      "price": 4399.0,
+      "promo": "None"
+    },
+    "TV Samsung OLED TQ48S95H 122 cm 2026": {
+      "name": "TV Samsung OLED TQ48S95H 122 cm 2026",
+      "title": "TV Samsung OLED TQ48S95H 122 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ48S95H-122-cm-2026/a22999881/w-4",
+      "price": 1799.0,
+      "promo": "None"
+    },
+    "TV Samsung OLED TQ77S99H 196 cm 2026": {
+      "name": "TV Samsung OLED TQ77S99H 196 cm 2026",
+      "title": "TV Samsung OLED TQ77S99H 196 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ77S99H-196-cm-2026/a22999901/w-4",
+      "price": 4499.0,
+      "promo": "None"
+    },
+    "TV Samsung OLED TQ65S92H 163 cm 2026": {
+      "name": "TV Samsung OLED TQ65S92H 163 cm 2026",
+      "title": "TV Samsung OLED TQ65S92H 163 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-OLED-TQ65S92H-163-cm-2026/a22999894/w-4",
+      "price": 2099.0,
+      "promo": "Sale 19%; was EUR 2599.00"
+    },
+    "TV Samsung QLED The Frame TQ50LS03F 125 cm 2025": {
+      "name": "TV Samsung QLED The Frame TQ50LS03F 125 cm 2025",
+      "title": "TV Samsung QLED The Frame TQ50LS03F 125 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ50LS03FA-125-cm-4K-UHD-2025/a21517309/w-4?oref=1a9caa58-83ff-ec48-8659-dfd0e751ae21",
+      "price": 797.0,
+      "promo": "None"
+    },
+    "TV Samsung QLED The Frame TQ65LS03F 163 cm 2025": {
+      "name": "TV Samsung QLED The Frame TQ65LS03F 163 cm 2025",
+      "title": "TV Samsung QLED The Frame TQ65LS03F 163 cm 2025",
+      "url": "https://www.fnac.com/TV-QLED-Samsung-The-Frame-TQ65LS03FA-163-cm-4K-UHD-2025/a21517310/w-4",
+      "price": 1199.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame QLED TQ55LS03H 138 cm 2026": {
+      "name": "TV Samsung The Frame QLED TQ55LS03H 138 cm 2026",
+      "title": "TV Samsung The Frame QLED TQ55LS03H 138 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-QLED-TQ55LS03H-138-cm-2026/a22999923/w-4",
+      "price": 1399.0,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled The Frame TQ75LS03FW PRO 190 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled The Frame TQ75LS03FW PRO 190 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled The Frame TQ75LS03FW PRO 190 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Frame-Pro-TQ75LS03FW-190-cm-4K-UHD-2025/a21517304/w-4?oref=82165f5c-8cb9-608a-b1af-372e8d1d102c",
+      "price": 2217.99,
+      "promo": "None"
+    },
+    "TV Samsung Mini Led Neo Qled The Frame TQ85LS03FW PRO 215 cm 2025": {
+      "name": "TV Samsung Mini Led Neo Qled The Frame TQ85LS03FW PRO 215 cm 2025",
+      "title": "TV Samsung Mini Led Neo Qled The Frame TQ85LS03FW PRO 215 cm 2025",
+      "url": "https://www.fnac.com/TV-Neo-QLED-Samsung-The-Frame-Pro-TQ85LS03FW-215-cm-4K-UHD-2025/a21517305/w-4",
+      "price": 2899.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame Pro Mini Led Neo QLED TQ65LS03HW 163 cm 2026": {
+      "name": "TV Samsung The Frame Pro Mini Led Neo QLED TQ65LS03HW 163 cm 2026",
+      "title": "TV Samsung The Frame Pro Mini Led Neo QLED TQ65LS03HW 163 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-Pro-Mini-Led-Neo-QLED-TQ65LS03HW-163-cm-2026/a22999898/w-4",
+      "price": 1999.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame QLED TQ43LS03HE 108 cm 2026": {
+      "name": "TV Samsung The Frame QLED TQ43LS03HE 108 cm 2026",
+      "title": "TV Samsung The Frame QLED TQ43LS03HE 108 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-QLED-TQ43LS03HE-108-cm-2026/a22999909/w-4",
+      "price": 799.99,
+      "promo": "Sale 20%; was EUR 999.99"
+    },
+    "TV Samsung The Frame QLED TQ65LS03H 163 cm 2026": {
+      "name": "TV Samsung The Frame QLED TQ65LS03H 163 cm 2026",
+      "title": "TV Samsung The Frame QLED TQ65LS03H 163 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-QLED-TQ65LS03H-163-cm-2026/a22999897/w-4",
+      "price": 1699.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame Pro Neo QLED TQ85LS03HW 214 cm 2026": {
+      "name": "TV Samsung The Frame Pro Neo QLED TQ85LS03HW 214 cm 2026",
+      "title": "TV Samsung The Frame Pro Neo QLED TQ85LS03HW 214 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-Pro-Neo-QLED-TQ85LS03HW-214-cm-2026/a22999910/w-4",
+      "price": 4399.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame Pro Mini Led Neo QLED TQ75LS03HW 189 cm 2026": {
+      "name": "TV Samsung The Frame Pro Mini Led Neo QLED TQ75LS03HW 189 cm 2026",
+      "title": "TV Samsung The Frame Pro Mini Led Neo QLED TQ75LS03HW 189 cm 2026",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-Pro-Mini-Led-Neo-QLED-TQ75LS03HW-189-cm-2026/a22999883/w-4",
+      "price": 2999.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame QE43LS03B 43'' QLED 4K UHD Smart TV Noir": {
+      "name": "TV Samsung The Frame QE43LS03B 43'' QLED 4K UHD Smart TV Noir",
+      "title": "TV Samsung The Frame QE43LS03B 43'' QLED 4K UHD Smart TV Noir",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-QE43LS03B-43-QLED-4K-UHD-Smart-TV-Noir/a16881296/w-4?oref=5293efb0-5c25-c622-4fe5-0d20cfdd4ed9",
+      "price": 1283.0,
+      "promo": "None"
+    },
+    "TV Samsung The Frame 55\" QLED QE55LS03A Noir": {
+      "name": "TV Samsung The Frame 55\" QLED QE55LS03A Noir",
+      "title": "TV Samsung The Frame 55\" QLED QE55LS03A Noir",
+      "url": "https://www.fnac.com/TV-Samsung-The-Frame-55-QLED-QE55LS03A-Noir/a15749510/w-4?oref=42f9fc8c-16af-38c5-c103-7429219a0ccf",
+      "price": 1295.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR65R95H 165 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR65R95H 165 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR65R95H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR65R95H-165-cm-2026/a22999892/w-4",
+      "price": 3499.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR75R95H 190 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR75R95H 190 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR75R95H 190 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR75R95H-190-cm-2026/a22999919/w-4",
+      "price": 4299.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR85R95H 216 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR85R95H 216 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR85R95H 216 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR85R95H-216-cm-2026/a22999893/w-4",
+      "price": 6199.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR55R85H 140 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR55R85H 140 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR55R85H 140 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR55R85H-140-cm-2026/a22999884/w-4",
+      "price": 1299.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR65R85H 165 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR65R85H 165 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR65R85H 165 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR65R85H-165-cm-2026/a22999911/w-4",
+      "price": 1799.0,
+      "promo": "None"
+    },
+    "TV LED Samsung Micro RGB TMR75R85H 190 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR75R85H 190 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR75R85H 190 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR75R85H-190-cm-2026/a22999925/w-4",
+      "price": 2299.0,
+      "promo": "Sale; was EUR 2399.00"
+    },
+    "TV LED Samsung Micro RGB TMR85R85H 216 cm 2026": {
+      "name": "TV LED Samsung Micro RGB TMR85R85H 216 cm 2026",
+      "title": "TV LED Samsung Micro RGB TMR85R85H 216 cm 2026",
+      "url": "https://www.fnac.com/TV-LED-Samsung-Micro-RGB-TMR85R85H-216-cm-2026/a22999899/w-4",
+      "price": 3999.0,
+      "promo": "None"
+    }
+  },
+  "lg": {
+    "TV LG OLED Evo OLED55C5 139 cm 2025": {
+      "name": "TV LG OLED Evo OLED55C5 139 cm 2025",
+      "title": "TV LG OLED Evo OLED55C5 139 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED55C5-139-cm-4K-UHD-2025/a21481040/w-4",
+      "price": 999.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED48C5 121 cm 2025": {
+      "name": "TV LG OLED Evo OLED48C5 121 cm 2025",
+      "title": "TV LG OLED Evo OLED48C5 121 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED48C5-121-cm-4K-UHD-2025/a21481024/w-4",
+      "price": 849.99,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 65QNED87 164 cm 2025": {
+      "name": "TV LG Mini Led Qned 65QNED87 164 cm 2025",
+      "title": "TV LG Mini Led Qned 65QNED87 164 cm 2025",
+      "url": "https://www.fnac.com/TV-MiniLED-QNED-Evo-LG-65QNED87-164-cm-4K-UHD-2025/a21481026/w-4",
+      "price": 749.99,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED55G5 139 cm 2025": {
+      "name": "TV LG OLED Evo OLED55G5 139 cm 2025",
+      "title": "TV LG OLED Evo OLED55G5 139 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED55G5-139-cm-4K-UHD-2025/a21481036/w-4",
+      "price": 1599.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED42C5 106 cm 2025": {
+      "name": "TV LG OLED Evo OLED42C5 106 cm 2025",
+      "title": "TV LG OLED Evo OLED42C5 106 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED42C5-106-cm-4K-UHD-2025/a21481030/w-4",
+      "price": 849.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED65G5 164 cm 2025": {
+      "name": "TV LG OLED Evo OLED65G5 164 cm 2025",
+      "title": "TV LG OLED Evo OLED65G5 164 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED65G5-164-cm-4K-UHD-2025/a21481041/w-4",
+      "price": 1799.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED65C5 164 cm 2025": {
+      "name": "TV LG OLED Evo OLED65C5 164 cm 2025",
+      "title": "TV LG OLED Evo OLED65C5 164 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED65C5-164-cm-4K-UHD-2025/a21481025/w-4",
+      "price": 1399.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED48G5 121 cm 2025": {
+      "name": "TV LG OLED Evo OLED48G5 121 cm 2025",
+      "title": "TV LG OLED Evo OLED48G5 121 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED48G5-121-cm-4K-UHD-2025/a21481027/w-4",
+      "price": 999.0,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 75QNED87 189 cm 2025": {
+      "name": "TV LG Mini Led Qned 75QNED87 189 cm 2025",
+      "title": "TV LG Mini Led Qned 75QNED87 189 cm 2025",
+      "url": "https://www.fnac.com/TV-MiniLED-QNED-Evo-LG-75QNED87-189-cm-4K-UHD-2025/a21481035/w-4",
+      "price": 899.99,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED83C5 210 cm 2025": {
+      "name": "TV LG OLED Evo OLED83C5 210 cm 2025",
+      "title": "TV LG OLED Evo OLED83C5 210 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED83C5-210-cm-4K-UHD-2025/a21481028/w-4",
+      "price": 2259.0,
+      "promo": "None"
+    },
+    "TV LG NanoCell 43NANO81 108 cm 2025": {
+      "name": "TV LG NanoCell 43NANO81 108 cm 2025",
+      "title": "TV LG NanoCell 43NANO81 108 cm 2025",
+      "url": "https://www.fnac.com/TV-NanoCell-LG-43NANO81A6A-108-cm-4K-UHD-2025/a21577136/w-4",
+      "price": 299.99,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 50QNED87 126 cm 2025": {
+      "name": "TV LG Mini Led Qned 50QNED87 126 cm 2025",
+      "title": "TV LG Mini Led Qned 50QNED87 126 cm 2025",
+      "url": "https://www.fnac.com/TV-QNED-Evo-LG-50QNED87-126-cm-4K-UHD-2025/a21481031/w-4",
+      "price": 549.99,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED77G5 195 cm 2025": {
+      "name": "TV LG OLED Evo OLED77G5 195 cm 2025",
+      "title": "TV LG OLED Evo OLED77G5 195 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED77G5-195-cm-4K-UHD-2025/a21481042/w-4",
+      "price": 2399.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED77C5 195 cm 2025": {
+      "name": "TV LG OLED Evo OLED77C5 195 cm 2025",
+      "title": "TV LG OLED Evo OLED77C5 195 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED77C5-195-cm-4K-UHD-2025/a21481037/w-4",
+      "price": 1499.0,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 43QNED84A 108 cm 2025": {
+      "name": "TV LG Mini Led Qned 43QNED84A 108 cm 2025",
+      "title": "TV LG Mini Led Qned 43QNED84A 108 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-QNED-43QNED84A-108-cm-2025/a21505374/w-4?oref=dd69493e-d422-11b8-8eaf-b16cc5de5a5e",
+      "price": 500.79,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED97G5 245 cm 2025": {
+      "name": "TV LG OLED Evo OLED97G5 245 cm 2025",
+      "title": "TV LG OLED Evo OLED97G5 245 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED97G5-245-cm-4K-UHD-2025/a21481032/w-4",
+      "price": 21999.0,
+      "promo": "Sale 12%; was EUR 24999.00"
+    },
+    "TV LG Mini Led Qned 75QNED93A 189 cm 2025": {
+      "name": "TV LG Mini Led Qned 75QNED93A 189 cm 2025",
+      "title": "TV LG Mini Led Qned 75QNED93A 189 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-QNED-75QNED93A-189-cm-2025/a21517741/w-4?oref=363159dc-b08e-b137-55b4-dbcecccd348a",
+      "price": 1254.0,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 65QNED84A 164 cm 2025": {
+      "name": "TV LG Mini Led Qned 65QNED84A 164 cm 2025",
+      "title": "TV LG Mini Led Qned 65QNED84A 164 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-QNED-65QNED84A-164-cm-2025/a21501195/w-4",
+      "price": 535.49,
+      "promo": "None"
+    },
+    "TV LG 4K UHD 43NU850 109 cm 2026": {
+      "name": "TV LG 4K UHD 43NU850 109 cm 2026",
+      "title": "TV LG 4K UHD 43NU850 109 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-UHD-43NU850-109-cm-2026/a22985746/w-4",
+      "price": 399.99,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 100QNED86 253 cm 2025": {
+      "name": "TV LG Mini Led Qned 100QNED86 253 cm 2025",
+      "title": "TV LG Mini Led Qned 100QNED86 253 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-Miniled-Qned-Evo-100QNED86-253-cm-2025/a21481043/w-4?oref=8d711cdf-6030-6663-82d8-f02080893d13",
+      "price": 2490.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED83G5 210 cm 2025": {
+      "name": "TV LG OLED Evo OLED83G5 210 cm 2025",
+      "title": "TV LG OLED Evo OLED83G5 210 cm 2025",
+      "url": "https://www.fnac.com/TV-OLED-Evo-LG-OLED83G5-210-cm-4K-UHD-2025/a21481039/w-4?oref=256fe82f-d2fb-c5a3-4880-50865d82c93e",
+      "price": 3259.0,
+      "promo": "None"
+    },
+    "TV LG NanoCell 55NANO81 139 cm 2025": {
+      "name": "TV LG NanoCell 55NANO81 139 cm 2025",
+      "title": "TV LG NanoCell 55NANO81 139 cm 2025",
+      "url": "https://www.fnac.com/TV-NanoCell-LG-55NANO81A6A-139-cm-4K-UHD-2025/a21577135/w-4?oref=e0b87807-75c2-cbac-6532-b89cbc67bdfe",
+      "price": 467.37,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 43QNED87 108 cm 2025": {
+      "name": "TV LG Mini Led Qned 43QNED87 108 cm 2025",
+      "title": "TV LG Mini Led Qned 43QNED87 108 cm 2025",
+      "url": "https://www.fnac.com/TV-QNED-Evo-LG-43QNED87-108-cm-4K-UHD-2025/a21481038/w-4",
+      "price": 499.99,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED97M5 245 cm 2025": {
+      "name": "TV LG OLED Evo OLED97M5 245 cm 2025",
+      "title": "TV LG OLED Evo OLED97M5 245 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-OLED-Evo-OLED97M5-245-cm-2025/a21739456/w-4?oref=301dac01-65dc-71fe-9228-550a4749da58",
+      "price": 12999.0,
+      "promo": "None"
+    },
+    "TV LG 4K QNED Evo MiniLED 43QNED81B 109 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 43QNED81B 109 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 43QNED81B 109 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-43QNED81B-109-cm-2026/a23005744/w-4",
+      "price": 499.99,
+      "promo": "None"
+    },
+    "TV LG NanoCell 86NANO81 217 cm 2025": {
+      "name": "TV LG NanoCell 86NANO81 217 cm 2025",
+      "title": "TV LG NanoCell 86NANO81 217 cm 2025",
+      "url": "https://www.fnac.com/TV-NanoCell-LG-86NANO81A6A-217-cm-4K-UHD-2025/a21577132/w-4?oref=d4a68a51-ae6c-3b11-b7c2-e27ab636252d",
+      "price": 1167.0,
+      "promo": "None"
+    },
+    "TV LG OLED Evo OLED65M5 164 cm 2025": {
+      "name": "TV LG OLED Evo OLED65M5 164 cm 2025",
+      "title": "TV LG OLED Evo OLED65M5 164 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-OLED-Evo-OLED65M5-164-cm-2025/a21739457/w-4",
+      "price": 2124.15,
+      "promo": "None"
+    },
+    "TV LG 4K UHD 75NU850 190 cm 2026": {
+      "name": "TV LG 4K UHD 75NU850 190 cm 2026",
+      "title": "TV LG 4K UHD 75NU850 190 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-UHD-75NU850-190-cm-2026/a22985754/w-4",
+      "price": 799.99,
+      "promo": "None"
+    },
+    "TV LG 4K OLED Evo OLED77C6 195 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED77C6 195 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED77C6 195 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED77C6-195-cm-2026/a23005750/w-4",
+      "price": 2799.0,
+      "promo": "Sale 20%; was EUR 3499.00"
+    },
+    "TV LG 4K OLED Evo OLED55G6 139 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED55G6 139 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED55G6 139 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED55G6-139-cm-2026/a23005742/w-4",
+      "price": 1899.0,
+      "promo": "Sale 17%; was EUR 2299.00"
+    },
+    "TV LG 4K QNED Evo MiniLED 50QNED81B 127 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 50QNED81B 127 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 50QNED81B 127 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-50QNED81B-127-cm-2026/a23005739/w-4",
+      "price": 549.99,
+      "promo": "None"
+    },
+    "TV LG AI B5 (2025) 55\" OLED UHD 4K Noir": {
+      "name": "TV LG AI B5 (2025) 55\" OLED UHD 4K Noir",
+      "title": "TV LG AI B5 (2025) 55\" OLED UHD 4K Noir",
+      "url": "https://www.fnac.com/TV-LG-AI-B5-2025-55-OLED-UHD-4K-Noir/a21517705/w-4?oref=06217b7e-31c3-6e66-b3f2-c7af9d4831dd",
+      "price": 1283.95,
+      "promo": "None"
+    },
+    "TV LG 4K QNED Evo MiniLED 75QNED81 190 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 75QNED81 190 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 75QNED81 190 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-75QNED81-190-cm-2026/a23005748/w-4",
+      "price": 1099.0,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 55QNED93A 139 cm 2025": {
+      "name": "TV LG Mini Led Qned 55QNED93A 139 cm 2025",
+      "title": "TV LG Mini Led Qned 55QNED93A 139 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-QNED-55QNED93A-139-cm-2025/a21517703/w-4?oref=c2bd9441-1004-0746-c5fd-5f9c72567082",
+      "price": 1431.84,
+      "promo": "None"
+    },
+    "TV LG Mini Led Qned 65QNED93A 164 cm 2025": {
+      "name": "TV LG Mini Led Qned 65QNED93A 164 cm 2025",
+      "title": "TV LG Mini Led Qned 65QNED93A 164 cm 2025",
+      "url": "https://www.fnac.com/TV-LG-QNED-65QNED93A-164-cm-2025/a21517740/w-4?oref=24fe9ea5-3233-bf99-6f9f-15d23d897e24",
+      "price": 1349.0,
+      "promo": "None"
+    },
+    "TV LG 4K OLED Evo OLED42C6 106 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED42C6 106 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED42C6 106 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED42C6-106-cm-2026/a23005756/w-4",
+      "price": 1099.0,
+      "promo": "Sale 15%; was EUR 1299.00"
+    },
+    "TV LG 4K UHD 50NU850 127 cm 2026": {
+      "name": "TV LG 4K UHD 50NU850 127 cm 2026",
+      "title": "TV LG 4K UHD 50NU850 127 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-UHD-50NU850-127-cm-2026/a22985747/w-4",
+      "price": 449.99,
+      "promo": "None"
+    },
+    "TV LG 4K QNED Evo MiniLED 55QNED81B 139 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 55QNED81B 139 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 55QNED81B 139 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-55QNED81B-139-cm-2026/a23005757/w-4",
+      "price": 599.99,
+      "promo": "None"
+    },
+    "TV LG 4K OLED Evo OLED77G6 195 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED77G6 195 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED77G6 195 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED77G6-195-cm-2026/a23005743/w-4",
+      "price": 3999.0,
+      "promo": "Sale 7%; was EUR 4299.00"
+    },
+    "TV LG 4K OLED Evo OLED83G6 210 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED83G6 210 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED83G6 210 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED83G6-210-cm-2026/a23005746/w-4",
+      "price": 4999.0,
+      "promo": "Sale 9%; was EUR 5499.00"
+    },
+    "TV LG Mini LED QNED evo 43QNED87 109 cm 2026": {
+      "name": "TV LG Mini LED QNED evo 43QNED87 109 cm 2026",
+      "title": "TV LG Mini LED QNED evo 43QNED87 109 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-Mini-LED-QNED-evo-43QNED87-109-cm-2026/a23103476/w-4",
+      "price": 499.99,
+      "promo": "Sale 9%; was EUR 549.99"
+    },
+    "TV LG 4K OLED Evo OLED65G6 164 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED65G6 164 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED65G6 164 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED65G6-164-cm-2026/a23005755/w-4",
+      "price": 2799.0,
+      "promo": "Sale 15%; was EUR 3299.00"
+    },
+    "TV LG 4K OLED Evo OLED55C6 139 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED55C6 139 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED55C6 139 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED55C6-139-cm-2026/a23005754/w-4",
+      "price": 1499.0,
+      "promo": "Sale 17%; was EUR 1799.00"
+    },
+    "TV LG 4K OLED Evo OLED65C6 165 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED65C6 165 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED65C6 165 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED65C6-165-cm-2026/a23005736/w-4",
+      "price": 1999.0,
+      "promo": "Sale 20%; was EUR 2499.00"
+    },
+    "TV LG 4K QNED Evo MiniLED 65QNED81B 165 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 65QNED81B 165 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 65QNED81B 165 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-65QNED81B-165-cm-2026/a23005751/w-4",
+      "price": 849.99,
+      "promo": "None"
+    },
+    "TV LG 4K OLED Evo OLED48G6 121 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED48G6 121 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED48G6 121 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED48G6-121-cm-2026/a23005737/w-4",
+      "price": 1599.0,
+      "promo": "Sale 3%; was EUR 1649.00"
+    },
+    "TV LG 4K OLED Evo OLED48C6 121 cm 2026": {
+      "name": "TV LG 4K OLED Evo OLED48C6 121 cm 2026",
+      "title": "TV LG 4K OLED Evo OLED48C6 121 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED48C6-121-cm-2026/a23005745/w-4",
+      "price": 1299.0,
+      "promo": "Sale 13%; was EUR 1499.00"
+    },
+    "TV LG 4K UHD 55NU850 139 cm 2026": {
+      "name": "TV LG 4K UHD 55NU850 139 cm 2026",
+      "title": "TV LG 4K UHD 55NU850 139 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-UHD-55NU850-139-cm-2026/a22985768/w-4",
+      "price": 478.39,
+      "promo": "None"
+    },
+    "TV LG 4K OLED OLED65B6 165 cm 2026": {
+      "name": "TV LG 4K OLED OLED65B6 165 cm 2026",
+      "title": "TV LG 4K OLED OLED65B6 165 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-OLED65B6-165-cm-2026/a23005759/w-4",
+      "price": 1799.0,
+      "promo": "Sale 10%; was EUR 1999.00"
+    },
+    "TV LG Mini LED QNED evo 50QNED87 127 cm 2026": {
+      "name": "TV LG Mini LED QNED evo 50QNED87 127 cm 2026",
+      "title": "TV LG Mini LED QNED evo 50QNED87 127 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-Mini-LED-QNED-evo-50QNED87-127-cm-2026/a23103474/w-4",
+      "price": 649.99,
+      "promo": "Sale 13%; was EUR 749.99"
+    },
+    "TV LG 4K UHD 85NU850 215 cm 2026": {
+      "name": "TV LG 4K UHD 85NU850 215 cm 2026",
+      "title": "TV LG 4K UHD 85NU850 215 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-UHD-85NU850-215-cm-2026/a22985755/w-4",
+      "price": 1299.0,
+      "promo": "None"
+    },
+    "TV LG 4K QNED Evo MiniLED 100QNED87 254 cm 2026": {
+      "name": "TV LG 4K QNED Evo MiniLED 100QNED87 254 cm 2026",
+      "title": "TV LG 4K QNED Evo MiniLED 100QNED87 254 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-QNED-Evo-MiniLED-100QNED87-254-cm-2026/a23005749/w-4",
+      "price": 3499.0,
+      "promo": "Sale 13%; was EUR 3999.00"
+    },
+    "TV LG Mini LED QNED evo 75QNED87 190 cm 2026": {
+      "name": "TV LG Mini LED QNED evo 75QNED87 190 cm 2026",
+      "title": "TV LG Mini LED QNED evo 75QNED87 190 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-Mini-LED-QNED-evo-75QNED87-190-cm-2026/a23103472/w-4",
+      "price": 1299.0,
+      "promo": "Sale 13%; was EUR 1499.00"
+    },
+    "TV LG 4K OLED OLED55B6 139 cm 2026": {
+      "name": "TV LG 4K OLED OLED55B6 139 cm 2026",
+      "title": "TV LG 4K OLED OLED55B6 139 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-4K-OLED-OLED55B6-139-cm-2026/a23005753/w-4",
+      "price": 1299.0,
+      "promo": "Sale 13%; was EUR 1499.00"
+    },
+    "TV LG Micro RGB evo 100MRGB96 254 cm 2026": {
+      "name": "TV LG Micro RGB evo 100MRGB96 254 cm 2026",
+      "title": "TV LG Micro RGB evo 100MRGB96 254 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-Micro-RGB-evo-100MRGB96-254-cm-2026/a23103478/w-4",
+      "price": 9999.0,
+      "promo": "None"
+    },
+    "TV LG Micro RGB evo 86MRGB96 218 cm 2026": {
+      "name": "TV LG Micro RGB evo 86MRGB96 218 cm 2026",
+      "title": "TV LG Micro RGB evo 86MRGB96 218 cm 2026",
+      "url": "https://www.fnac.com/TV-LG-Micro-RGB-evo-86MRGB96-218-cm-2026/a23103470/w-4",
+      "price": 6999.0,
+      "promo": "None"
+    }
+  }
+}

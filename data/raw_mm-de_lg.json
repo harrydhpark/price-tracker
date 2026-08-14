@@ -1,486 +1,494 @@
-{
- "h1": "77 Suchergebnisse für lg tv",
- "count": 80,
- "items": [
+[
   {
-   "name": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-   "price": "629",
-   "uvp": "1049",
-   "promo": null
+    "name": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "title": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 629.0,
+    "promo": "Sale 40%; was EUR 1049.00"
   },
   {
-   "name": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-   "price": "429",
-   "uvp": "879",
-   "promo": null
+    "name": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "title": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 429.0,
+    "promo": "Sale 51%; was EUR 879.00"
   },
   {
-   "name": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-   "price": "399",
-   "uvp": "789",
-   "promo": null
+    "name": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "title": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 399.0,
+    "promo": "Sale 49%; was EUR 789.00"
   },
   {
-   "name": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-   "price": "629",
-   "uvp": "1999",
-   "promo": null
+    "name": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "title": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 569.0,
+    "promo": "Sale 68%; was EUR 1999.00"
   },
   {
-   "name": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-   "price": "539",
-   "uvp": "1209",
-   "promo": null
+    "name": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "title": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 539.0,
+    "promo": "Sale 55%; was EUR 1209.00"
   },
   {
-   "name": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "1599",
-   "uvp": "2699",
-   "promo": null
+    "name": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1599.0,
+    "promo": "Sale 40%; was EUR 2699.00"
   },
   {
-   "name": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-   "price": "379",
-   "uvp": "629",
-   "promo": null
+    "name": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "title": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 379.0,
+    "promo": "Sale 39%; was EUR 629.00"
   },
   {
-   "name": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-   "price": "429",
-   "uvp": "699",
-   "promo": null
+    "name": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "title": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 399.0,
+    "promo": "Sale 42%; was EUR 699.00"
   },
   {
-   "name": "LG OLED65G56LS OLED evo TV  (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "1529",
-   "uvp": "3999",
-   "promo": null
+    "name": "LG OLED65G56LS OLED evo TV  (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": "1529",
+    "uvp": "3999",
+    "promo": null
   },
   {
-   "name": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-   "price": "539,99",
-   "uvp": "849",
-   "promo": null
+    "name": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "title": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 539.99,
+    "promo": "Sale 36%; was EUR 849.00"
   },
   {
-   "name": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "1179",
-   "uvp": "3199",
-   "promo": null
+    "name": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1179.0,
+    "promo": "Sale 63%; was EUR 3199.00"
   },
   {
-   "name": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "899,99",
-   "uvp": "2399",
-   "promo": null
+    "name": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 899.0,
+    "promo": "Sale 62%; was EUR 2399.00"
   },
   {
-   "name": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
-   "price": "679",
-   "uvp": "1699",
-   "promo": null
+    "name": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "price": 499.0,
+    "promo": "Sale 60%; was EUR 1699.00"
   },
   {
-   "name": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-   "price": "319",
-   "uvp": "689",
-   "promo": null
+    "name": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "title": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 309.0,
+    "promo": "Sale 53%; was EUR 689.00"
   },
   {
-   "name": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "1759",
-   "uvp": "4599",
-   "promo": null
+    "name": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 1759.0,
+    "promo": "Sale 61%; was EUR 4599.00"
   },
   {
-   "name": "LG OLED55G56LS OLED evo TV  (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "1099",
-   "uvp": "2799",
-   "promo": null
+    "name": "LG OLED55G56LS OLED evo TV  (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": "1099",
+    "uvp": "2799",
+    "promo": null
   },
   {
-   "name": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-   "price": "719",
-   "uvp": "1799",
-   "promo": null
+    "name": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 599.0,
+    "promo": "Sale 60%; was EUR 1799.00"
   },
   {
-   "name": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-   "price": "929",
-   "uvp": "2299",
-   "promo": null
+    "name": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "title": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 719.0,
+    "promo": "Sale 59%; was EUR 2299.00"
   },
   {
-   "name": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-   "price": "2339",
-   "uvp": "7199",
-   "promo": null
+    "name": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 2599.0,
+    "promo": "Sale 67%; was EUR 7199.00"
   },
   {
-   "name": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-   "price": "999",
-   "uvp": "3099",
-   "promo": null
+    "name": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "title": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 200.0,
+    "promo": "200€ Cashback; Sale 67%; was EUR 3099.00"
   },
   {
-   "name": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
-   "price": "1199",
-   "uvp": "2799",
-   "promo": null
+    "name": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "title": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "price": 200.0,
+    "promo": "200€ Cashback; Sale 57%; was EUR 2799.00"
   },
   {
-   "name": "LG OLED77B59LA OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "1419",
-   "uvp": "4299",
-   "promo": null
+    "name": "LG OLED77B59LA OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": "1419",
+    "uvp": "4299",
+    "promo": null
   },
   {
-   "name": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "2499",
-   "uvp": "4899",
-   "promo": "200€ Cashback"
+    "name": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 2499.0,
+    "promo": "Sale 48%; was EUR 4899.00"
   },
   {
-   "name": "LG OLED evo TV OLED48G56LS OLED evo TV  (Flat, 48 Zoll / 121 cm, OLED 4K, SMART ",
-   "price": "799",
-   "uvp": "2099",
-   "promo": null
+    "name": "LG OLED evo TV OLED48G56LS OLED evo TV  (Flat, 48 Zoll / 121 cm, OLED 4K, SMART ",
+    "price": "799",
+    "uvp": "2099",
+    "promo": null
   },
   {
-   "name": "LG OLED83C67LA LG OLED evo TV C6 (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-   "price": "3099",
-   "uvp": "7499",
-   "promo": "300€ Cashback"
+    "name": "LG OLED83C67LA LG OLED evo TV C6 (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": "3099",
+    "uvp": "7499",
+    "promo": "300€ Cashback"
   },
   {
-   "name": "LG 85QNED93B6A LG QNED evo TV (Flat, 85 Zoll / 214,8 cm, UHD 4K, SMART TV)",
-   "price": "1499",
-   "uvp": "1899",
-   "promo": null
+    "name": "LG 85QNED93B6A LG QNED evo TV (Flat, 85 Zoll / 214,8 cm, UHD 4K, SMART TV)",
+    "price": "1499",
+    "uvp": "1899",
+    "promo": null
   },
   {
-   "name": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "1899",
-   "uvp": "3499",
-   "promo": "200€ Cashback"
+    "name": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1849.0,
+    "promo": "Sale 47%; was EUR 3499.00"
   },
   {
-   "name": "LG FHD TV 27LB70006LA LG FHD TV (Flat, 27 Zoll / 68,1 cm, Full-HD, SMART TV)",
-   "price": "229,99",
-   "uvp": null,
-   "promo": null
+    "name": "LG FHD TV 27LB70006LA LG FHD TV (Flat, 27 Zoll / 68,1 cm, Full-HD, SMART TV)",
+    "price": "229,99",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "769,99",
-   "uvp": "1899",
-   "promo": null
+    "name": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 846.99,
+    "promo": "Sale 55%; was EUR 1899.00"
   },
   {
-   "name": "LG 50MRGB86B9A LG Mini RGB evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-   "price": "699",
-   "uvp": "1099",
-   "promo": null
+    "name": "LG 50MRGB86B9A LG Mini RGB evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": "699",
+    "uvp": "1099",
+    "promo": null
   },
   {
-   "name": "LG OLED48B59LA OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-   "price": "579",
-   "uvp": "1699",
-   "promo": null
+    "name": "LG OLED48B59LA OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": "579",
+    "uvp": "1699",
+    "promo": null
   },
   {
-   "name": "LG OLED65B68LA LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "1399",
-   "uvp": "2899",
-   "promo": "150€ Cashback"
+    "name": "LG OLED65B68LA LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": "1399",
+    "uvp": "2899",
+    "promo": "150€ Cashback"
   },
   {
-   "name": "LG 75QNED72B6A LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-   "price": "899",
-   "uvp": "1499",
-   "promo": null
+    "name": "LG 75QNED72B6A LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": "899",
+    "uvp": "1499",
+    "promo": null
   },
   {
-   "name": "LG 43QNED86A6C LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-   "price": "439",
-   "uvp": "999",
-   "promo": null
+    "name": "LG 43QNED86A6C LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": "439",
+    "uvp": "999",
+    "promo": null
   },
   {
-   "name": "LG OLED65B59LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "999",
-   "uvp": "2799",
-   "promo": null
+    "name": "LG OLED65B59LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": "999",
+    "uvp": "2799",
+    "promo": null
   },
   {
-   "name": "LG OLED77G67LW OLED TV (Flat, 77 Zoll / 194,7 cm, OLED 4K, SMART TV)",
-   "price": "3379",
-   "uvp": "5599",
-   "promo": "300€ Cashback"
+    "name": "LG OLED77G67LW OLED TV (Flat, 77 Zoll / 194,7 cm, OLED 4K, SMART TV)",
+    "price": "3379",
+    "uvp": "5599",
+    "promo": "300€ Cashback"
   },
   {
-   "name": "LG 65QNED93B6A LG QNED evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
-   "price": "999",
-   "uvp": "1899",
-   "promo": null
+    "name": "LG 65QNED93B6A LG QNED evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "price": "999",
+    "uvp": "1899",
+    "promo": null
   },
   {
-   "name": "LG OLED42C67LA LG OLED evo TV C6 (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
-   "price": "1099",
-   "uvp": "1999",
-   "promo": "100€ Cashback"
+    "name": "LG OLED42C67LA LG OLED evo TV C6 (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "price": "1099",
+    "uvp": "1999",
+    "promo": "100€ Cashback"
   },
   {
-   "name": "LG OLED65G66LS LG OLED evo TV G6 (Flat, 65 Zoll / 165 cm, QLED 4K, SMART TV)",
-   "price": "2699",
-   "uvp": "4099",
-   "promo": "250€ Cashback"
+    "name": "LG OLED65G66LS LG OLED evo TV G6 (Flat, 65 Zoll / 165 cm, QLED 4K, SMART TV)",
+    "price": "2699",
+    "uvp": "4099",
+    "promo": "250€ Cashback"
   },
   {
-   "name": "LG 75QNED7EA6B LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-   "price": "739",
-   "uvp": "1699",
-   "promo": null
+    "name": "LG 75QNED7EA6B LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": "739",
+    "uvp": "1699",
+    "promo": null
   },
   {
-   "name": "LG OLED55G57LW OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "1079",
-   "uvp": "2799",
-   "promo": null
+    "name": "LG OLED55G57LW OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": "1079",
+    "uvp": "2799",
+    "promo": null
   },
   {
-   "name": "LG OLED65G57LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-   "price": "1479",
-   "uvp": "3999",
-   "promo": null
+    "name": "LG OLED65G57LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": "1479",
+    "uvp": "3999",
+    "promo": null
   },
   {
-   "name": "LG OLED55B68LA LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "1099",
-   "uvp": "1999",
-   "promo": null
+    "name": "LG OLED55B68LA LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": "1099",
+    "uvp": "1999",
+    "promo": null
   },
   {
-   "name": "LG QNED86B TV LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-   "price": "539,99",
-   "uvp": "899",
-   "promo": null
+    "name": "LG QNED86B TV LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": "539,99",
+    "uvp": "899",
+    "promo": null
   },
   {
-   "name": "LG 50QNED86A6C QNED evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-   "price": "499",
-   "uvp": "1199",
-   "promo": null
+    "name": "LG 50QNED86A6C QNED evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": "499",
+    "uvp": "1199",
+    "promo": null
   },
   {
-   "name": "LG OLED55G66LS LG OLED evo TV G6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "2169",
-   "uvp": "2899",
-   "promo": "200€ Cashback"
+    "name": "LG OLED55G66LS LG OLED evo TV G6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": "2169",
+    "uvp": "2899",
+    "promo": "200€ Cashback"
   },
   {
-   "name": "LG OLED48C67LA LG OLED evo TV C6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-   "price": "1199",
-   "uvp": "2099",
-   "promo": "100€ Cashback"
+    "name": "LG OLED48C67LA LG OLED evo TV C6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": "1199",
+    "uvp": "2099",
+    "promo": "100€ Cashback"
   },
   {
-   "name": "LG NanoCell TV 75NANO80A6B LG NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART",
-   "price": "849",
-   "uvp": "1699",
-   "promo": "OUTLET%"
+    "name": "LG NanoCell TV 75NANO80A6B LG NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART",
+    "price": "849",
+    "uvp": "1699",
+    "promo": "OUTLET%"
   },
   {
-   "name": "LG 65MRGB86B9A LG Mini RGB evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
-   "price": "1089",
-   "uvp": "1499",
-   "promo": null
+    "name": "LG 65MRGB86B9A LG Mini RGB evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "price": "1089",
+    "uvp": "1499",
+    "promo": null
   },
   {
-   "name": "LG 55QNED93B6A LG QNED evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
-   "price": "869,99",
-   "uvp": "1499",
-   "promo": null
+    "name": "LG 55QNED93B6A LG QNED evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "price": "869,99",
+    "uvp": "1499",
+    "promo": null
   },
   {
-   "name": "LG OLED48G66LS LG OLED evo TV G6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-   "price": "1499",
-   "uvp": "2299",
-   "promo": "100€ Cashback"
+    "name": "LG OLED48G66LS LG OLED evo TV G6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": "1499",
+    "uvp": "2299",
+    "promo": "100€ Cashback"
   },
   {
-   "name": "LG OLED77W69LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "4699",
-   "uvp": "6499",
-   "promo": "500€ Cashback"
+    "name": "LG OLED77W69LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": "4699",
+    "uvp": "6499",
+    "promo": "500€ Cashback"
   },
   {
-   "name": "LG SIGNATURE OLED77M59LA True Wireless LG OLED TV (Flat, 77 Zoll / 195 cm, OLED ",
-   "price": "3789",
-   "uvp": "5999",
-   "promo": null
+    "name": "LG SIGNATURE OLED77M59LA True Wireless LG OLED TV (Flat, 77 Zoll / 195 cm, OLED ",
+    "price": "3789",
+    "uvp": "5999",
+    "promo": null
   },
   {
-   "name": "LG OLED48B68LA LG OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-   "price": "999,99",
-   "uvp": "1799",
-   "promo": "100€ Cashback"
+    "name": "LG OLED48B68LA LG OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": "999,99",
+    "uvp": "1799",
+    "promo": "100€ Cashback"
   },
   {
-   "name": "LG Lifestyle TV 55LX7B6LA LG Lifestyle TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
-   "price": "1329",
-   "uvp": "1749",
-   "promo": null
+    "name": "LG Lifestyle TV 55LX7B6LA LG Lifestyle TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
+    "price": "1329",
+    "uvp": "1749",
+    "promo": null
   },
   {
-   "name": "LG Lifestyle TV 65LX7B6LA LG Lifestyle TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART",
-   "price": "1529",
-   "uvp": "2299",
-   "promo": null
+    "name": "LG Lifestyle TV 65LX7B6LA LG Lifestyle TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART",
+    "price": "1529",
+    "uvp": "2299",
+    "promo": null
   },
   {
-   "name": "LG OLED83G67LW OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-   "price": "4349",
-   "uvp": "8699",
-   "promo": "400€ Cashback"
+    "name": "LG OLED83G67LW OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": "4349",
+    "uvp": "8699",
+    "promo": "400€ Cashback"
   },
   {
-   "name": "LG OLED77G57LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "2519",
-   "uvp": "5499",
-   "promo": null
+    "name": "LG OLED77G57LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": "2519",
+    "uvp": "5499",
+    "promo": null
   },
   {
-   "name": "LG 27TQ615S Smart TV (Flat, 27 Zoll / 68,6 cm, Full-HD, SMART TV)",
-   "price": "187,99",
-   "uvp": "229",
-   "promo": null
+    "name": "LG 27TQ615S Smart TV (Flat, 27 Zoll / 68,6 cm, Full-HD, SMART TV)",
+    "price": "187,99",
+    "uvp": "229",
+    "promo": null
   },
   {
-   "name": "LG StanbyME 2 27LX6TDGA.AEU Lifestyle TV (Flat, 27 Zoll / 68 cm, QHD, SMART TV)",
-   "price": "1039",
-   "uvp": "1349",
-   "promo": null
+    "name": "LG StanbyME 2 27LX6TDGA.AEU Lifestyle TV (Flat, 27 Zoll / 68 cm, QHD, SMART TV)",
+    "price": "1039",
+    "uvp": "1349",
+    "promo": null
   },
   {
-   "name": "LG OLED97G57LW OLED evo TV (Flat, 97 Zoll / 246 cm, OLED 4K, SMART TV)",
-   "price": "20699",
-   "uvp": "29999",
-   "promo": null
+    "name": "LG OLED97G57LW OLED evo TV (Flat, 97 Zoll / 246 cm, OLED 4K, SMART TV)",
+    "price": "20699",
+    "uvp": "29999",
+    "promo": null
   },
   {
-   "name": "LG OLED55G59LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-   "price": "1499",
-   "uvp": "2799",
-   "promo": null
+    "name": "LG OLED55G59LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": "1499",
+    "uvp": "2799",
+    "promo": null
   },
   {
-   "name": "LG 85QNED93A6A QNED evo TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
-   "price": "1439",
-   "uvp": "4299",
-   "promo": null
+    "name": "LG 85QNED93A6A QNED evo TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
+    "price": "1439",
+    "uvp": "4299",
+    "promo": null
   },
   {
-   "name": "LG 100QNED86A6 QNED evo TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
-   "price": "3469",
-   "uvp": "7499",
-   "promo": null
+    "name": "LG 100QNED86A6 QNED evo TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "price": "3469",
+    "uvp": "7499",
+    "promo": null
   },
   {
-   "name": "LG 75QNED8MB6A LG QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-   "price": "1599",
-   "uvp": null,
-   "promo": null
+    "name": "LG 75QNED8MB6A LG QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": "1599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG NanoCell TV 55NANO80A6B LG NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
-   "price": "477",
-   "uvp": "899",
-   "promo": "OUTLET%"
+    "name": "LG NanoCell TV 55NANO80A6B LG NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
+    "price": "477",
+    "uvp": "899",
+    "promo": "OUTLET%"
   },
   {
-   "name": "LG OLED77B68LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-   "price": "2499",
-   "uvp": "4399",
-   "promo": "200€ Cashback"
+    "name": "LG OLED77B68LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": "2499",
+    "uvp": "4399",
+    "promo": "200€ Cashback"
   },
   {
-   "name": "LG 86QNED7EA6B LG QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV)",
-   "price": "1469",
-   "uvp": "2299",
-   "promo": null
+    "name": "LG 86QNED7EA6B LG QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV)",
+    "price": "1469",
+    "uvp": "2299",
+    "promo": null
   },
   {
-   "name": "LG 55MRGB86B9A LG Mini RGB evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
-   "price": "869,99",
-   "uvp": "1399",
-   "promo": null
+    "name": "LG 55MRGB86B9A LG Mini RGB evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "price": "869,99",
+    "uvp": "1399",
+    "promo": null
   },
   {
-   "name": "LG 75MRGB86B9A LG Mini RGB evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
-   "price": "1299",
-   "uvp": "2399",
-   "promo": null
+    "name": "LG 75MRGB86B9A LG Mini RGB evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "price": "1299",
+    "uvp": "2399",
+    "promo": null
   },
   {
-   "name": "LG OLED83B68LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-   "price": "3089",
-   "uvp": "6099",
-   "promo": "300€ Cashback"
+    "name": "LG OLED83B68LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": "3089",
+    "uvp": "6099",
+    "promo": "300€ Cashback"
   },
   {
-   "name": "LG OLED83W69LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-   "price": "5999",
-   "uvp": "8999",
-   "promo": "500€ Cashback"
+    "name": "LG OLED83W69LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": "5999",
+    "uvp": "8999",
+    "promo": "500€ Cashback"
   },
   {
-   "name": "LG 100MRGB96B9 LG Micro RGB evo TV (Flat, 100 Zoll / 252,8 cm, UHD 4K, SMART TV)",
-   "price": "8999",
-   "uvp": "9999",
-   "promo": null
+    "name": "LG 100MRGB96B9 LG Micro RGB evo TV (Flat, 100 Zoll / 252,8 cm, UHD 4K, SMART TV)",
+    "price": "8999",
+    "uvp": "9999",
+    "promo": null
   },
   {
-   "name": "LG NanoCell TV 50NANO80A6B LG NanoCell TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART",
-   "price": "499,99",
-   "uvp": "749",
-   "promo": null
+    "name": "LG NanoCell TV 50NANO80A6B LG NanoCell TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART",
+    "price": "499,99",
+    "uvp": "749",
+    "promo": null
   },
   {
-   "name": "LG NanoCell TV 43NANO80A6B LG NanoCell TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART",
-   "price": "459,99",
-   "uvp": "649",
-   "promo": null
+    "name": "LG NanoCell TV 43NANO80A6B LG NanoCell TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART",
+    "price": "459,99",
+    "uvp": "649",
+    "promo": null
   },
   {
-   "name": "LG OLED97G67LW OLED TV (Flat, 97 Zoll / 246,38 cm, OLED 4K, SMART TV)",
-   "price": "22399",
-   "uvp": "29999",
-   "promo": "2.000€ Cashback"
+    "name": "LG OLED97G67LW OLED TV (Flat, 97 Zoll / 246,38 cm, OLED 4K, SMART TV)",
+    "price": "22399",
+    "uvp": "29999",
+    "promo": "2.000€ Cashback"
   },
   {
-   "name": "LG 55QNED86A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-   "price": "1049",
-   "uvp": "1299",
-   "promo": null
+    "name": "LG 55QNED86A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": "1049",
+    "uvp": "1299",
+    "promo": null
   },
   {
-   "name": "SEGWAY Ninebot E3 Pro D E-Scooter (10 Zoll, Schwarz / Silber / Rot)",
-   "price": "399",
-   "uvp": "449",
-   "promo": null
+    "name": "SEGWAY Ninebot E3 Pro D E-Scooter (10 Zoll, Schwarz / Silber / Rot)",
+    "price": "399",
+    "uvp": "449",
+    "promo": null
   },
   {
-   "name": "APPLE iPad Wi-Fi (11th generation), Tablet, 256 GB, 11 Zoll, Silber",
-   "price": "499",
-   "uvp": "629",
-   "promo": null
+    "name": "APPLE iPad Wi-Fi (11th generation), Tablet, 256 GB, 11 Zoll, Silber",
+    "price": "499",
+    "uvp": "629",
+    "promo": null
   },
   {
-   "name": "LENOVO Idea Tab, inkl. Lenovo Tab Pen, Tablet, 128 GB, 11 Zoll, Luna Grey",
-   "price": "169",
-   "uvp": "279",
-   "promo": null
+    "name": "LENOVO Idea Tab, inkl. Lenovo Tab Pen, Tablet, 128 GB, 11 Zoll, Luna Grey",
+    "price": "169",
+    "uvp": "279",
+    "promo": null
+  },
+  {
+    "name": "LG OLED65G56LS OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED65G56LS OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1399.0,
+    "promo": "Sale 61%; was EUR 3999.00"
+  },
+  {
+    "name": "LG OLED55G56LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED55G56LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 969.0,
+    "promo": "Sale 60%; was EUR 2799.00"
   }
- ]
-}
+]

@@ -1,510 +1,542 @@
-{
- "count": 101,
- "items": [
+[
   {
-   "name": "SAMSUNG S90F 55\" OLED 4K Vision AI Smart TV 2025 - QE55S90F",
-   "price": 999.97,
-   "promo": "was GBP 1,099.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90F 55\" OLED 4K Vision AI Smart TV 2025 - QE55S90F",
+    "title": "SAMSUNG S90F 55\" OLED 4K Vision AI Smart TV 2025 - QE55S90F",
+    "price": 999.97,
+    "promo": "Save GBP 99.03; was GBP 1,099.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000F 43\" Crystal UHD 4K HDR Smart TV 2025 - UE43U8000F",
-   "price": 229.0,
-   "promo": "was GBP 259.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
+    "title": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
+    "price": 599.99,
+    "promo": "Save GBP 149.01; was GBP 749.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
-   "price": 599.99,
-   "promo": "was GBP 749.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
+    "title": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
+    "price": 649.0,
+    "promo": "Save GBP 150.00; was GBP 799.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
-   "price": 649.0,
-   "promo": "was GBP 799.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Frame (2025) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03FA",
+    "title": "SAMSUNG The Frame (2025) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03FA",
+    "price": 549.0,
+    "promo": "Save GBP 30.00; was GBP 579.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
-   "price": 499.0,
-   "promo": "was GBP 649.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
+    "title": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
+    "price": 499.0,
+    "promo": "Save GBP 150.00; was GBP 649.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame (2025) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43L",
-   "price": 549.0,
-   "promo": "was GBP 579.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG Q7F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q7F",
+    "title": "SAMSUNG Q7F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q7F",
+    "price": 549.0,
+    "promo": "Save GBP 130.00; was GBP 679.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
-   "price": 349.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
+    "title": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
+    "price": 349.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG Q7F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q7F",
-   "price": 549.0,
-   "promo": "was GBP 679.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
+    "title": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
+    "price": 899.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
-   "price": 899.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90F 42\" OLED 4K Vision AI Smart TV 2025 - QE42S90F",
+    "title": "SAMSUNG S90F 42\" OLED 4K Vision AI Smart TV 2025 - QE42S90F",
+    "price": 749.0,
+    "promo": "Save GBP 150.00; was GBP 899.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
-   "price": 849.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
+    "title": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
+    "price": 849.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
-   "price": 999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
+    "title": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
+    "price": 999.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2026) 55\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 1599.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Frame Pro (2026) 55\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
+    "title": "SAMSUNG The Frame Pro (2026) 55\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
+    "price": 1599.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
-   "price": 749.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
+    "title": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
+    "price": 749.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
-   "price": 1199.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03H",
+    "title": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03H",
+    "price": 899.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
-   "price": 149.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
+    "title": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
+    "price": 1199.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
-   "price": 199.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG Q7F 43\" QLED 4K Vision AI Smart TV 2025 - QE43Q7F",
+    "title": "SAMSUNG Q7F 43\" QLED 4K Vision AI Smart TV 2025 - QE43Q7F",
+    "price": 239.0,
+    "promo": "Save GBP 85.99; was GBP 324.99; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
-   "price": 279.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
+    "title": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
+    "price": 149.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
-   "price": 329.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
+    "title": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
+    "price": 329.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
-   "price": 379.97,
-   "promo": "was GBP 429.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
+    "title": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
+    "price": 199.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
-   "price": 349.0,
-   "promo": "was GBP 429.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
+    "title": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
+    "price": 279.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
-   "price": 399.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
+    "title": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
+    "price": 399.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
-   "price": 1099.97,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
+    "title": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
+    "price": 1099.97,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
-   "price": 179.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
+    "title": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
+    "price": 349.0,
+    "promo": "Save GBP 80.00; was GBP 429.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
-   "price": 529.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
+    "title": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
+    "price": 379.97,
+    "promo": "Save GBP 49.03; was GBP 429.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
-   "price": 549.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
+    "title": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
+    "price": 529.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
-   "price": 699.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
+    "title": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
+    "price": 179.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG Q7F 43\" QLED 4K Vision AI Smart TV 2025 - QE43Q7F",
-   "price": 239.0,
-   "promo": "was GBP 324.99; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
+    "title": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
+    "price": 699.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
-   "price": 449.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
+    "title": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
+    "price": 549.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
-   "price": 749.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
+    "title": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
+    "price": 449.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S95H 65\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE65S95H",
-   "price": 2899.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
+    "title": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
+    "price": 1699.0,
+    "promo": "None"
   },
   {
-   "name": "SAMSUNG U8000H 85\" Crystal UHD 4K HDR Smart TV 2026 - UE85U8000H",
-   "price": 1099.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
+    "title": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
+    "price": 1599.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S90F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S90F",
-   "price": 2799.0,
-   "promo": "was GBP 3,799.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S90F",
+    "title": "SAMSUNG S90F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S90F",
+    "price": 2799.0,
+    "promo": "Save GBP 1,000.00; was GBP 3,799.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
-   "price": 1599.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
+    "title": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
+    "price": 1299.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S95H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S95H",
-   "price": 2199.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
+    "title": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
+    "price": 749.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2025) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 1699.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
+    "title": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
+    "price": 1399.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
-   "price": 1399.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
+    "title": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
+    "price": 1199.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
-   "price": 1299.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG Q7F 85\" QLED 4K Vision AI Smart TV 2025 - QE85Q7F",
+    "title": "SAMSUNG Q7F 85\" QLED 4K Vision AI Smart TV 2025 - QE85Q7F",
+    "price": 1099.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43L",
-   "price": 899.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
+    "title": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
+    "price": 799.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
-   "price": 1099.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Frame Pro (2025) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03FW",
+    "title": "SAMSUNG The Frame Pro (2025) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03FW",
+    "price": 1699.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
-   "price": 799.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
+    "title": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
+    "price": 1299.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG M80H 55\" Mini LED 4K Vision AI Smart TV 2026 - UE55M80H",
-   "price": 649.0,
-   "promo": "was GBP 699.00; Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
+    "title": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
+    "price": 1999.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
-   "price": 999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
+    "title": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
+    "price": 2299.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S90H 65\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE65S90H",
-   "price": 2299.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
+    "title": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
+    "price": 999.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
-   "price": 1699.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
+    "title": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
+    "price": 1799.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
-   "price": 1199.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
+    "title": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
+    "price": 849.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
-   "price": 1299.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
+    "title": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
+    "price": 1099.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
-   "price": 2299.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN80F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN80F",
+    "title": "SAMSUNG QN80F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN80F",
+    "price": 1399.0,
+    "promo": "Save GBP 100.00; was GBP 1,499.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2026) 65\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 1999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
+    "title": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
+    "price": 1399.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
-   "price": 1999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
+    "title": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
+    "price": 3299.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
-   "price": 849.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03H",
+    "title": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03H",
+    "price": 1799.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG MR95F 115\" Micro RGB 4K Smart AI TV - MRE115MR95F",
-   "price": 24999.0,
-   "promo": null
+    "name": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
+    "title": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
+    "price": 3099.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
-   "price": 1299.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
+    "title": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
+    "price": 999.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
-   "price": 1799.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
+    "title": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
+    "price": 1799.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
-   "price": 1799.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
+    "title": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
+    "price": 1699.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
-   "price": 999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
+    "title": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
+    "price": 3999.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG R85H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R85H",
-   "price": 1999.0,
-   "promo": null
+    "name": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
+    "title": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
+    "price": 3999.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
-   "price": 1699.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
+    "title": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
+    "price": 1299.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55L",
-   "price": 1399.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
+    "title": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
+    "price": 5299.0,
+    "promo": "Save GBP 500.00; was GBP 5,799.00"
   },
   {
-   "name": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
-   "price": 7999.0,
-   "promo": null
+    "name": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
+    "title": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
+    "price": 3999.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
-   "price": 5299.0,
-   "promo": "was GBP 5,799.00"
+    "name": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
+    "title": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
+    "price": 2499.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
-   "price": 3099.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
+    "title": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
+    "price": 1399.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
-   "price": 3999.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG The Frame Pro QE75LS03FW 75\" Neo QLED 4K Smart TV & The Frame QE32LS03CBUXXU 32\" Smart Full HD HDR QLED TV Bundle",
+    "title": "SAMSUNG The Frame Pro QE75LS03FW 75\" Neo QLED 4K Smart TV & The Frame QE32LS03CBUXXU 32\" Smart Full HD HDR QLED TV Bundle",
+    "price": 1799.0,
+    "promo": "None"
   },
   {
-   "name": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
-   "price": 2499.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
+    "title": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
+    "price": 2798.97,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65L",
-   "price": 1799.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Serif LS01D 55\" QLED 4K HDR Smart TV in Cloud White 2024 - QE55LS01DA",
+    "title": "SAMSUNG The Serif LS01D 55\" QLED 4K HDR Smart TV in Cloud White 2024 - QE55LS01DA",
+    "price": 999.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
-   "price": 3299.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
+    "title": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
+    "price": 7999.0,
+    "promo": "None"
   },
   {
-   "name": "SAMSUNG The Frame Pro QE75LS03FW 75\" Neo QLED 4K Smart TV & The Frame QE32LS03CBUXXU 32\" S",
-   "price": 1799.0,
-   "promo": null
+    "name": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
+    "title": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
+    "price": 3099.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
-   "price": 2799.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
+    "title": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
+    "price": 5499.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Serif LS01D 55\" QLED 4K HDR Smart TV in Cloud White 2024 - QE55LS01DA",
-   "price": 999.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
+    "title": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
+    "price": 2699.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
-   "price": 3099.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
+    "title": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
+    "price": 1199.0,
+    "promo": "Direct Cut 10% (Code: TV10)"
   },
   {
-   "name": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
-   "price": 3999.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
+    "title": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
+    "price": 2499.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
-   "price": 3999.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
+    "title": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
+    "price": 3999.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
-   "price": 2699.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
+    "title": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
+    "price": 1599.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
-   "price": 5499.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
+    "title": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
+    "price": 4099.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
-   "price": 1399.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
+    "title": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
+    "price": 2399.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN85F 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE85QN85F",
-   "price": 2499.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE85LS03H",
+    "title": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE85LS03H",
+    "price": 3799.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
-   "price": 1199.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
+    "title": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
+    "price": 5899.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
-   "price": 1599.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
+    "title": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
+    "price": 4499.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
-   "price": 3999.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
+    "title": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
+    "price": 4799.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
-   "price": 4799.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
+    "title": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
+    "price": 3499.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 3799.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
+    "title": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
+    "price": 2099.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
-   "price": 4099.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
+    "title": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
+    "price": 3099.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
-   "price": 5899.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03H",
+    "title": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03H",
+    "price": 2799.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2025) 65\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 1169.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
+    "name": "SAMSUNG R95H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R95H",
+    "title": "SAMSUNG R95H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R95H",
+    "price": 5799.0,
+    "promo": "Direct Cut 15% (Code: TV15)"
   },
   {
-   "name": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
-   "price": 3499.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG U8000F 75\" Crystal UHD 4K HDR Smart TV 2025 - UE75U8000F",
+    "title": "SAMSUNG U8000F 75\" Crystal UHD 4K HDR Smart TV 2025 - UE75U8000F",
+    "price": 619.99,
+    "promo": "Save GBP 29.01; was GBP 649.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
-   "price": 2099.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG Q7F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q7F",
+    "title": "SAMSUNG Q7F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q7F",
+    "price": 809.0,
+    "promo": "Save GBP 90.00; was GBP 899.00; Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
-   "price": 4499.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG QN85F 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE85QN85F",
+    "title": "SAMSUNG QN85F 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE85QN85F",
+    "price": 2499.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
-   "price": 2499.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
+    "title": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
+    "price": 3999.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG R95H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R95H",
-   "price": 5799.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
+    "title": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
+    "price": 1699.0,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount",
-   "price": 2799.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
+    "name": "SAMSUNG QN85D 85\" Neo QLED 4K Mini LED Smart AI TV 2024 - QE85QN85D",
+    "title": "SAMSUNG QN85D 85\" Neo QLED 4K Mini LED Smart AI TV 2024 - QE85QN85D",
+    "price": 1979.97,
+    "promo": "Up to 50% Off Soundbar w/ TV"
   },
   {
-   "name": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
-   "price": 3099.0,
-   "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-   "name": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
-   "price": 2999.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-   "name": "SAMSUNG S90F 42\" OLED 4K Vision AI Smart TV 2025 - QE42S90F",
-   "price": 749.0,
-   "promo": "was GBP 899.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG U8000F 75\" Crystal UHD 4K HDR Smart TV 2025 - UE75U8000F",
-   "price": 619.99,
-   "promo": "was GBP 649.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG Q7F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q7F",
-   "price": 809.0,
-   "promo": "was GBP 899.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG QN990F 65\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE65QN990FT",
-   "price": 2999.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG DU9000 98\" Crystal UHD 4K HDR Smart TV 2024 - UE98DU9000",
-   "price": 1298.97,
-   "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG QN80F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN80F",
-   "price": 1399.0,
-   "promo": "was GBP 1,499.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
-   "price": 3999.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
-   "price": 2399.0,
-   "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-   "name": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
-   "price": 1699.0,
-   "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-   "name": "SAMSUNG QN85D 85\" Neo QLED 4K Mini LED Smart AI TV 2024 - QE85QN85D",
-   "price": 1979.97,
-   "promo": "Up to 50% Off Soundbar w/ TV"
+    "name": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
+    "title": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
+    "price": 2999.0,
+    "promo": "Direct Cut 30% (Code: SAVE30TVACCS)"
   }
- ]
-}
+]

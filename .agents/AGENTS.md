@@ -46,23 +46,65 @@
 * **Usercentrics CMP Cookie Banner Piercing (Critical)**: MediaMarkt/MediaWorld privacy banners (`Wir respektieren Ihre Privatsphäre`, `Aceptar todo`, `Accetta tutto`) are encapsulated inside `#usercentrics-root.shadowRoot`. Scrapers must query `shadowRoot.querySelector('#uc-btn-accept-banner')` or `button[data-testid="uc-accept-all"]` to click the accept button and prevent page blockages.
 * **MediaWorld IT & MediaMarkt DE Multi-Page Pagination & Attribute Matching**:
   * **Attribute Matching**: MediaWorld IT product cards format product type as `Tipo di dispositivo` (instead of `Tipo di producto`). Parsers must include `Tipo di dispositivo` along with `OLED`, `QNED`, `Hz`, `pollici`, `Classe` in `PRODUCT_MARKER`.
-  * **Fnac + Darty France Firecrawl Stealth Pipeline (Mandatory DataDome Bypass)**: France TV tracking combines Darty France (`darty.com`) and Fnac France (`fnac.com`, `https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+{brand}+{year}&PageIndex=N`). Because DataDome deploys IP reputation blocking (`HTTP 403 Forbidden`) on Fnac/Darty for local scrapers, France price collection **MUST ALWAYS BE EXECUTED VIA FIRECRAWL STEALTH SCRAPER (`firecrawl_scrape`)** or Firecrawl proxy API. Multi-page search scraping across pages 1 to 5 yields 300+ raw extracted cards and 137 active 2025/2026 TV rows in Excel, matching DE, NL, ES, IT volume standards.
+  * **Fnac + Darty France Firecrawl Stealth Pipeline (Mandatory DataDome Bypass & Master URL Registry)**:
+    - **DataDome Bypass**: France TV tracking combines Darty France (`darty.com`) and Fnac France (`fnac.com`). Because DataDome deploys IP reputation blocking (`HTTP 403 Forbidden`) on Fnac/Darty for local scrapers, France price collection **MUST ALWAYS BE EXECUTED VIA FIRECRAWL STEALTH SCRAPER (`firecrawl_scrape`)** or Firecrawl proxy API.
+    - **Never Use Restrictive Year Filters**: Do NOT use restrictive queries like `Search=tv+samsung+2025` or `Search=tv+lg+2025`. Because French retailers omit release years from product titles for 50%+ of SKUs (e.g. `TQ55Q80F`, `TQ65QN90F`, `TQ77S95H`), searching with year keywords causes severe sample drops (e.g. dropping from 150+ to 67). Scrapers MUST traverse broad & series-specific queries: `tv samsung`, `tv samsung oled`, `tv samsung the frame`, `tv lg`, `tv lg oled`, `tv lg qned` across pages 1 to 4.
+    - **France Master URL Registry (`data/france_master_urls.json`)**: Maintain a permanent Master URL Registry database containing all historical model codes and URLs. Each survey run MUST merge newly scraped search results with the Master Registry to guarantee zero model drops and continuous historical tracking across surveys.
+    - **French Narrow No-Break Space (`\u202f`: U+202F) & Unicode Normalization (Critical)**: French prices format thousands using Narrow No-Break Space (e.g. `1 999 €`, `1 299 €`, `1 799 €`). Scrapers and parsers MUST normalize `\u202f`, `\u00a0`, `\u2009`, `\u200b` to standard spaces before regex matching; otherwise numbers will split into `1` and `999` and fall back to incorrect monthly/accessory numbers.
+    - **Installment & Discount Text Stripping**: Monthly installment text (`Dès ... € / mois`), credit charges (`TAEG`, `Montant total dû`), and discount mentions (`Bon Plan -X €`, `100€ de remise`, `50€ de reduction`) MUST be pre-stripped from the card chunk before matching prices to prevent credit/discount values from overwriting real TV selling prices.
+    - **France Pairs Standard (`PAIRS_CONFIG_2026_FR` & `PAIRS_CONFIG_2025_FR`)**:
+      - 2026 OLED: `G6 vs S95H/S99H`, `C6 vs S90H/S92H`, `B6 vs S85H`
+      - 2026 QNED/QLED: `QNED81B vs QN74H` (43"~86"), `QNED81B vs M80H`, `QNED87 vs QN80H`, `QNED70B vs M70H`
+      - 2025 QNED/QLED: `QNED87 vs QN74F`, `QNED87 vs QN80F`, `QNED84A vs Q7F`
   * **Discount Mention Filtering (`100€ de remise` Guard)**: On retailer cards (e.g. Darty, Fnac, MediaMarkt), discount badge mentions (e.g. `100€ de remise` or `50€ de reduction`) must be stripped before matching selling prices, preventing discount values from overwriting real TV selling prices.
   * **Raw Extracted vs Excel Reflected Model Count Gap (4-Stage Cleansing)**: Understand that raw extracted counts will always be higher than final Excel reflected counts due to strict data processing: (1) 2025/2026 model year filtering (excluding 2024/legacy clearance models), (2) non-TV purging (excluding Odyssey/UltraGear monitors, soundbars, accessories, refurbished items), (3) size threshold exclusion (<22 inches), and (4) lowest-price model code deduplication (collapsing duplicate member/promo URLs into 1 unique lowest-price row per model).
   * **Pagination Loop**: MediaMarkt/MediaWorld/Darty/Fnac sites cap initial page loads to 12-24 items. Scrapers must traverse pages 1 to 5 for MediaWorld IT & Darty/Fnac FR (`&page=1` through `&page=5` / `PageIndex=1..5`, 300+ items) or click "weitere Produkte anzeigen" up to 10-12 times for MediaMarkt DE/NL/ES/AT/CH (190+ items) to collect full product catalogs.
   * **Austria (MediaMarkt AT) & Switzerland (MediaMarkt CH) EU Pipeline & Pair Standards**:
     * **Austria MediaMarkt (`mm-at`)**: Scraped using standard MediaMarkt DACH engine. Titles format short series codes (`S92H`, `QN82H`, `M72H`, `M82H`, `R86H`, `U8070H`). `sync_eu_retailers.py` uses smart model code reconstruction (`size` + `series` $ightarrow$ `QE55S92H`, `UE50M72H`).
     * **Switzerland MediaMarkt (`mm-ch`)**: `sync_eu_retailers.py` directly loads pre-parsed clean items from `price tracker_swiss_2026 {MMDD}_v1.xlsx` sheets (`MediaMarkt_Samsung_Full` & `MediaMarkt_LG_Full`) to guarantee 100% data consistency (70 Samsung + 56 LG = 126 total models) with the Swiss price survey.
-    * **Retailer Toolbar Ordering**: Retailer buttons in `eu_price_dashboard_template.html` and `generate_eu_dashboard.py` MUST be ordered as: `UK (Currys) ➔ DE (MediaMarkt) ➔ FR (Fnac Darty) ➔ ES (MediaMarkt) ➔ IT (MediaWorld) ➔ NL (MediaMarkt) ➔ AT (MediaMarkt) ➔ CH (MediaMarkt)`.
-    * **Austria Pairs (`PAIRS_CONFIG_2026_AT`)**:
-      - OLED: `B6 vs S82H/S85H` (Matches Samsung `QE83S85H`, `QE77S82H`, `QE65S82H`, `QE55S82H`, `QE48S82H`)
-      - QNED/QLED: `QNED93 vs QN80H`, `QNED86B vs QN70H`, `QNED72B vs M82H`, `QNED72B vs M72H`
-      - MRGB: `MRGB95 vs R95H`, `MRGB87B vs R86H`
+    * **Greece Pairs (`PAIRS_CONFIG_2026_GR`)**:
+      - OLED: `G6 vs S95H/S99H`, `C6 vs S90H`, `B6 vs S85H`
+      - MRGB: `MRGB87B vs R85H` (86"-55"), `MRGB96B vs R95H` (100")
+      - QNED/QLED: `QNED87B vs QN80H`, `QNED81B vs QN70H`, `QNED81B vs M80H`, `QNED72B vs M70H`
       - UHD 4K: `NU85 vs U8070H`
-    * **Switzerland Pairs (`PAIRS_CONFIG_2026_CH`)**:
-      - QNED/QLED: `QNED86B vs QN80H`, `QNED70B vs M70H` (Matches `QNED70B` and `QNED71B`)
-      - UHD 4K: `NU85 vs U8070H`
+    * **Retailer Toolbar Ordering**: Retailer buttons in `eu_price_dashboard_template.html` and `generate_eu_dashboard.py` MUST be ordered as: `UK (Currys) ➔ DE (MediaMarkt) ➔ FR (Fnac Darty) ➔ ES (MediaMarkt) ➔ IT (MediaWorld) ➔ NL (MediaMarkt) ➔ AT (MediaMarkt) ➔ CH (MediaMarkt) ➔ CZ (Alza) ➔ GR (Public)`.
     * **History Folder Auto-Mirroring**: `sync_eu_retailers.py` MUST automatically mirror/copy the updated `price tracker_EU_2026 {MMDD}_v1.xlsx` workbook (containing all 16 country sheets) into `History_EU/{YYYY MMDD}/price tracker_EU_{YYYY MMDD}_v1.xlsx`.
+  * **Greece (Public.gr) Multi-Query Expanded Pipeline**:
+    - **Multi-Query Targeted Sampling Strategy**: Public.gr search queries cap results at 36 products per page. Scrapers MUST traverse 59 multi-query targeted configurations (22 for Samsung including `samsung tv`, `samsung oled`, `samsung qled`, `samsung neo qled`, `samsung tv 55..85`, `the frame`, etc., and 37 for LG including `lg tv`, `lg oled`, `lg qned`, `lg oled c6/g6/b6/c5/g5`, `lg qned 93/87/86/80/72`, `lg nano`, `lg mrgb`, `lg tv 55..83`, etc.) to achieve full catalog coverage (149+ unique models: 92 Samsung, 57 LG).
+    - **Digit-Aware Pattern Matching**: LG series codes must use digit-aware matchers (`G6[0-9]`, `C6[0-9]`, `B6[0-9]`, `G5[0-9]`, `C5[0-9]`, `B5[0-9]`) and aliases (`QNED83B` $\rightarrow$ `QNED81B`, `QNED82A` $\rightarrow$ `QNED80A`, `QNED71B` $\rightarrow$ `QNED70B`) to prevent word-boundary mismatches on Greek title formats.
+    - **Screen Size Price Guard**: Discount badge false positives (e.g. `600,00 €` badge on 83" C6) MUST be rejected by enforcing minimum selling price thresholds based on screen size (70"+ $\ge$ €700, 55"+ $\ge$ €350, 48"+ $\ge$ €250).
+    - **Script Location**: Maintain primary scraper logic in `scripts/scrape_public_gr.py`.
+  * **Czech Republic (Alza.cz) Full-Catalog Multi-Page Pipeline**:
+    - **Pagination & Multi-URL Coverage**: Alza.cz caps items per page to 24. Scrapers MUST traverse 12 full pages (`range(1, 13)`) per brand (`televize-samsung/18862344-p1.htm` .. `-p12.htm` & `televize-lg/18862345-p1.htm` .. `-p12.htm`) AND include direct base category URLs (`18862344.htm` / `18862345.htm`) and search query URLs (`search.htm?exps=samsung+tv`) to bypass 307/302 redirect losses on page 1 and achieve 100%+ sample coverage (~126 Samsung models, 185+ LG models, 314+ total).
+    - **Condition Filtering (Nové)**: Filter strictly for `Condition = NEW` (`Nové`), discarding unboxed (`Rozbaleno`), refurbished (`Zánovní`), or used (`Použité`) items.
+    - **Currency & Unit Formatting**: Selling and original prices must be written in CZK (`#,##0` format).
+    - **DOM Element Precision Price Extraction (Critical)**: NEVER use broad regex matching (`re.findall`) on full container text for Alza product cards. Promotional descriptions (e.g. `<span class="coupon-block__label--description">` containing `"cashbackem až 100 000 Kč"`) appear before the price tags in DOM order and cause `100,000` to overwrite the real TV selling price. Selling prices MUST be extracted strictly from DOM elements `.js-price-box__primary-price__value`, `.ads-pb__price-value`, or `.price-box__primary-price`. Cashback net prices MUST be extracted strictly from `.coupon-block--cashback .coupon-block__price`, and cashback amount calculated as `selling_price - cashback_net_price`.
+    - **Script Location**: Maintain primary scraper logic in `scripts/scrape_alza.py`.
+  * **Hungary (MediaMarkt HU) Deep Scraping & Master Pair Pipeline**:
+    - **Apollo State Serialization & Cloudflare Bypass**: `mediamarkt.hu` protects listing pages with Cloudflare Turnstile. Scrapers MUST use `scrapling.fetchers.StealthyFetcher` (with `wait=2500` and `timeout=35000`) to solve Turnstile and extract the serialized GraphQL state from `window.__PRELOADED_STATE__` (`apolloState`, `GraphqlProduct`, `CofrPriceFeature`). This extracts 100% of marketplace/direct items, selling prices, and strike-through prices across 240+ models.
+    - **Samsung Country Suffix `XXH` Guard & Year Classification**: Samsung Hungarian/Eastern European model codes end in country suffix `XXH` (e.g. `QE85QN80FAUXXH`, `QE98Q7FAAUXXH`, `UE85U8072FUXXH`). Parsers MUST strip `XXH`/`XXC` before testing year letters, and match series-adjacent letters: `H` $\rightarrow$ `2026`, `F` $\rightarrow$ `2025`, `D`/`E` $\rightarrow$ `2024` to prevent 2025 models from being falsely classified as 2026.
+    - **Samsung Micro RGB (`MRE`) & LG `MRGB` Parsing**:
+      - Samsung Micro RGB series use `MRE` model prefixes (e.g. `MRE85R95HATXXH`, `MRE85R85HAUXXH`, `MRE75...`, `MRE65...`, `MRE55...`). Parsers must map `MRE` to brand `SAMSUNG`, series `Micro RGB {R95H/R85H/R86H}`, category `MRGB`, and year `2026`.
+      - LG MRGB models (e.g. `86MRGB87B3B`, `55MRGB87B3B`) must extract leading digits (`86`, `55`) as screen size (inch) rather than treating the series number `87` as screen size.
+    - **Hungary Pairs Standard (`PAIRS_CONFIG_2026_HU`)**:
+      - OLED: `G6 vs S99H`, `G6 vs S95H`, `C6 vs S90H`, `B6 vs S85H`
+      - MRGB: `MRGB95B vs R95H`, `MRGB87B vs R85H`
+      - QNED/QLED: `QNED93B/92B vs QN80H`, `QNED87B vs QN80H`, `QNED80B vs M80H`, `QNED70B vs M74H`
+      - UHD 4K: `NU8E vs U8000H/U8072H`
+    - **Currency Formatting**: Prices written in Hungarian Forint (`HUF`, `Ft ` format).
+    - **Script Location**: Maintain primary logic in `scripts/scrape_and_sync_hungary.py`.
+
+  * **Pan-European Master Product URL Registry (`data/master_product_urls.json`) Standard (Critical)**:
+    - **Master Registry Persistence**: To prevent sample count degradation and URL dropouts caused by search engine pagination shifts or temporary out-of-stock delisting on retailer sites, maintain a consolidated Master URL Registry at `data/master_product_urls.json`.
+    - **Registry Schema**: Store each model entry as:
+      `{ "KEY": { "country": "HU", "retailer": "MediaMarkt", "brand": "SAMSUNG", "model_code": "MRE85R95HATXXH", "year": 2026, "size": 85, "title": "...", "url": "https://...", "last_updated": "YYYY-MM-DD" } }`.
+    - **Merge & Probe Enforcement on Every Survey**: Every price collection run across all 12 European countries (UK, DE, FR, ES, IT, NL, AT, CH, CZ, GR, SE, HU) MUST automatically:
+      1. Run search query traversals to collect active/promoted product cards.
+      2. Cross-reference results with `data/master_product_urls.json` to identify any previously tracked models missing from the search results.
+      3. Probe missing model URLs directly (Direct PDP Fetch) to extract live prices and update the database, guaranteeing 100% sample retention across consecutive survey rounds.
+      4. Auto-register any newly launched models into `data/master_product_urls.json`.
+    - **Builder Script**: Maintain registry sync in `scripts/build_master_url_registry.py`.
+
 * **DOM-Climbing Parser**: Avoid relying solely on unstable CSS class names. Locate key text nodes (like brand names or product links) and programmatically climb up parent nodes (`parentElement` in JS or `.parent` in BeautifulSoup) to extract prices, promotions, and shipping details.
 * **Aria-Label Attribute Extraction (Interdiscount & Digitec)**: Both Interdiscount and Digitec product titles are kept inside the `aria-label` attribute of the product anchor (`a[href*="/product/"]`), leaving the inner text empty. Programmers must extract titles via `link.getAttribute('aria-label')`.
 * **Translation-Tolerant Matchers**: Since local agent environments may trigger browser-level Korean machine translation (e.g., converting "CHF" to "스위스 프랑", "Cashback" to "캐시백", "Discount" to "할인/혜택"), use flexible regex for decimal parsing (`/(\d[\d\s’\x27\x60,.]*[,.]\d{2})/`) and allow both German/English and Korean translation terms.

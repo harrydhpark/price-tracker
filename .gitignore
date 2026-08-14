@@ -31,3 +31,11 @@ EU-price-tracker_backup/
 
 # Excel temporary lock files
 ~$*
+
+# Temporary dumps & tests
+*.tmp
+*.log
+alza_*.html
+public_gr_*.html
+scripts/*.html
+scripts/*_preloaded*.json

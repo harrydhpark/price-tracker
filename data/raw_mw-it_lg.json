@@ -1,432 +1,500 @@
-{
- "h1": "66 Risultati della ricerca per tv lg\nCerca invece per\nlg tv",
- "count": 71,
- "items": [
+[
   {
-   "name": "LG webOS 43LR60006LA TV LED, SMART TV, 43 \", LED, Full-HD, Processore a5 Gen6 co",
-   "price": "349",
-   "uvp": null,
-   "promo": null
+    "name": "LG webOS 43LR60006LA TV LED, SMART TV, 43 \", LED, Full-HD, Processore a5 Gen6 co",
+    "price": "349",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 32LQ63006LA SMART FHD  TV LED, SMART TV, 32 \", LED, Full-HD, Processore a5 Ge",
-   "price": "299",
-   "uvp": null,
-   "promo": null
+    "name": "LG 32LQ63006LA SMART FHD  TV LED, SMART TV, 32 \", LED, Full-HD, Processore a5 Ge",
+    "price": "299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo C5 OLED42C55LA TV OLED, SMART TV, 42 \", OLED, Processore a9 Gen8 4K ",
-   "price": "1299",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG OLED evo C5 OLED42C55LA TV OLED, SMART TV, 42 \", OLED, Processore a9 Gen8 4K ",
+    "price": "1299",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG QNED MiniLED 55QNED70B6C TV MINI LED, SMART TV, 55 \", Mini LED, Processore a7",
-   "price": "799",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG QNED MiniLED 55QNED70B6C TV MINI LED, SMART TV, 55 \", Mini LED, Processore a7",
+    "price": "799",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 43NU850B6LA TV LED, SMART TV, 43 \", LED, Processore a7 AI",
-   "price": "459",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 43NU850B6LA TV LED, SMART TV, 43 \", LED, Processore a7 AI",
+    "price": "459",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 43QNED87B6A TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7",
-   "price": "799",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 43QNED87B6A TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7",
+    "price": "799",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 65QNED70B6C TV MINI LED, SMART TV, 65 \", Mini LED, Processore a7",
-   "price": "899",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 65QNED70B6C TV MINI LED, SMART TV, 65 \", Mini LED, Processore a7",
+    "price": "899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 27TQ615S Monitor TV Smart TV LCD, SMART TV, 27 \", LCD, Full-HD, Processore Al",
-   "price": "279",
-   "uvp": null,
-   "promo": null
+    "name": "LG 27TQ615S Monitor TV Smart TV LCD, SMART TV, 27 \", LCD, Full-HD, Processore Al",
+    "price": "279",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 24TQ510S Monitor TV smart MONITOR, SMART TV, 23,6 \", LED, HD, Processore Alph",
-   "price": "229",
-   "uvp": null,
-   "promo": null
+    "name": "LG 24TQ510S Monitor TV smart MONITOR, SMART TV, 23,6 \", LED, HD, Processore Alph",
+    "price": "229",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo G5S OLED65G56LS TV OLED Evo, SMART TV, 65 \", OLED, Processore a11 Ge",
-   "price": "3299",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG OLED evo G5S OLED65G56LS TV OLED Evo, SMART TV, 65 \", OLED, Processore a11 Ge",
+    "price": "3299",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG OLED evo AI G6S OLED48G66 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K",
-   "price": "1799",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG OLED evo AI G6S OLED48G66 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K",
+    "price": "1799",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG OLED evo AI C6 OLED77C65 TV OLED, SMART TV, 77 \", OLED, Processore a11 AI 4K ",
-   "price": "3599",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED77C65 TV OLED, SMART TV, 77 \", OLED, Processore a11 AI 4K ",
+    "price": "3599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG NanoCell AI  65NANO81A6A TV LED, SMART TV, 65 \", LED, Processore a7 Gen8 4K c",
-   "price": "899",
-   "uvp": null,
-   "promo": "OUTLET"
+    "name": "LG NanoCell AI  65NANO81A6A TV LED, SMART TV, 65 \", LED, Processore a7 Gen8 4K c",
+    "price": "899",
+    "uvp": null,
+    "promo": "OUTLET"
   },
   {
-   "name": "LG QNED MiniLED 43QNED70B6C TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7",
-   "price": "599",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 43QNED70B6C TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7",
+    "price": "599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI C6 OLED42C65 TV OLED, SMART TV, 42 \", OLED, Processore a11 AI 4K ",
-   "price": "1399",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED42C65 TV OLED, SMART TV, 42 \", OLED, Processore a11 AI 4K ",
+    "price": "1399",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6E OLED83B6ELB TV OLED, SMART TV, 83 \", OLED, Processore a8 AI 4K Ge",
-   "price": "3999",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6E OLED83B6ELB TV OLED, SMART TV, 83 \", OLED, Processore a8 AI 4K Ge",
+    "price": "3999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B5 OLED55B56LA TV OLED, SMART TV, 55 \", OLED, Processore a8 Gen2 4K c",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B5 OLED55B56LA TV OLED, SMART TV, 55 \", OLED, Processore a8 Gen2 4K c",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI C5 OLED65C54LA TV OLED, SMART TV, 65 \", OLED, Processore a9 Gen8 ",
-   "price": "2699",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C5 OLED65C54LA TV OLED, SMART TV, 65 \", OLED, Processore a9 Gen8 ",
+    "price": "2699",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI C6 OLED48C65 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K ",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED48C65 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K ",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo G5S OLED55G56LS TV OLED, SMART TV, 55 \", OLED, Processore a11 Gen2 c",
-   "price": "2299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo G5S OLED55G56LS TV OLED, SMART TV, 55 \", OLED, Processore a11 Gen2 c",
+    "price": "2299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED evo AI  55QNED93A6A TV MINI LED, SMART TV, 55 \", QNED, Processore a8 Gen",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED evo AI  55QNED93A6A TV MINI LED, SMART TV, 55 \", QNED, Processore a8 Gen",
+    "price": "1199",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 50QNED70B6C TV MINI LED, SMART TV, 50 \", QLED, Processore a7 AI ",
-   "price": "699",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 50QNED70B6C TV MINI LED, SMART TV, 50 \", QLED, Processore a7 AI ",
+    "price": "699",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6E OLED55B6ELC TV OLED, SMART TV, 55 \", OLED, Processore a8 AI 4K Ge",
-   "price": "1499",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG OLED AI B6E OLED55B6ELC TV OLED, SMART TV, 55 \", OLED, Processore a8 AI 4K Ge",
+    "price": "1499",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 65NU850B6LA TV LED, SMART TV, 65 \", LED, Processore a7 AI",
-   "price": "779",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 65NU850B6LA TV LED, SMART TV, 65 \", LED, Processore a7 AI",
+    "price": "779",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG StanbyME 2 27LX6TDGA TV LED, SMART TV, 27 \", LED, QHD, Processore Alpha 8 AI,",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG StanbyME 2 27LX6TDGA TV LED, SMART TV, 27 \", LED, QHD, Processore Alpha 8 AI,",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 85NU850B6LA TV LED, SMART TV, 85 \", LED, Processore a7 AI",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 85NU850B6LA TV LED, SMART TV, 85 \", LED, Processore a7 AI",
+    "price": "1199",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG LG 32LQ630B6LA HD Ready SMART TV 2022 TV LED, SMART TV, 32 \", LED, WXGA, Proc",
-   "price": "191,49",
-   "uvp": null,
-   "promo": null
+    "name": "LG LG 32LQ630B6LA HD Ready SMART TV 2022 TV LED, SMART TV, 32 \", LED, WXGA, Proc",
+    "price": "191,49",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 24TQ510S Monitor TV smart MONITOR LED, SMART TV, 23,6 \", LED, HD, Processore ",
-   "price": "229",
-   "uvp": null,
-   "promo": null
+    "name": "LG 24TQ510S Monitor TV smart MONITOR LED, SMART TV, 23,6 \", LED, HD, Processore ",
+    "price": "229",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI C6 OLED65C65 TV OLED, SMART TV, 65 \", OLED, Processore a11 AI 4K ",
-   "price": "2599",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED65C65 TV OLED, SMART TV, 65 \", OLED, Processore a11 AI 4K ",
+    "price": "2599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 55QNED87B6A TV MINI LED, SMART TV, 55 \", Mini LED, Processore a8",
-   "price": "999",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 55QNED87B6A TV MINI LED, SMART TV, 55 \", Mini LED, Processore a8",
+    "price": "999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 75QNED70B6A TV MINI LED, SMART TV, 75 \", QLED, Processore a7 AI ",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 75QNED70B6A TV MINI LED, SMART TV, 75 \", QLED, Processore a7 AI ",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 50QNED87B6A TV MINI LED, SMART TV, 50 \", Mini LED, Processore a8",
-   "price": "899",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 50QNED87B6A TV MINI LED, SMART TV, 50 \", Mini LED, Processore a8",
+    "price": "899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 65QNED87B6A TV MINI LED, SMART TV, 65 \", Mini LED, Processore a8",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 65QNED87B6A TV MINI LED, SMART TV, 65 \", Mini LED, Processore a8",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 100QNED87B6 TV MINI LED, SMART TV, 100 \", QLED, Processore a8 AI",
-   "price": "3299",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 100QNED87B6 TV MINI LED, SMART TV, 100 \", QLED, Processore a8 AI",
+    "price": "3299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 86QNED87B6A TV MINI LED, SMART TV, 86 \", Mini LED, Processore a8",
-   "price": "2399",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 86QNED87B6A TV MINI LED, SMART TV, 86 \", Mini LED, Processore a8",
+    "price": "2399",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Wallpaper TV W6 OLED83W69 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K",
-   "price": "6999",
-   "uvp": null,
-   "promo": null
+    "name": "LG Wallpaper TV W6 OLED83W69 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K",
+    "price": "6999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6 OLED55B65LA TV OLED, SMART TV, 55 \", OLED, Processore a8 AI 4K Gen",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6 OLED55B65LA TV OLED, SMART TV, 55 \", OLED, Processore a8 AI 4K Gen",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6 OLED65B65LA TV OLED, SMART TV, 65 \", OLED, Processore a8 AI 4K Gen",
-   "price": "2299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6 OLED65B65LA TV OLED, SMART TV, 65 \", OLED, Processore a8 AI 4K Gen",
+    "price": "2299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 55NU850B6LA TV LED, SMART TV, 55 \", LED, Processore a7 AI",
-   "price": "559",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 55NU850B6LA TV LED, SMART TV, 55 \", LED, Processore a7 AI",
+    "price": "559",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI G6 OLED55G64 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K ",
-   "price": "1856,49",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI G6 OLED55G64 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K ",
+    "price": "1856,49",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI C6 OLED55C65 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K ",
-   "price": "1899",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED55C65 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K ",
+    "price": "1899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI G6S OLED55G66 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K",
-   "price": "2499",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI G6S OLED55G66 TV OLED, SMART TV, 55 \", OLED, Processore a11 AI 4K",
+    "price": "2499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED AI 75QNED80A6A TV QNED, SMART TV, 75 \", QNED, Processore a7 Gen8 4K con ",
-   "price": "1599",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED AI 75QNED80A6A TV QNED, SMART TV, 75 \", QNED, Processore a7 Gen8 4K con ",
+    "price": "1599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Mini RGB 87 55MRGB87B6B TV MINI LED, SMART TV, 55 \", RGB-MiniLED, Processore ",
-   "price": "1399",
-   "uvp": null,
-   "promo": null
+    "name": "LG Mini RGB 87 55MRGB87B6B TV MINI LED, SMART TV, 55 \", RGB-MiniLED, Processore ",
+    "price": "1399",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI G6S OLED65G66 TV OLED, SMART TV, 65 \", OLED, Processore a11 AI 4K",
-   "price": "3599",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI G6S OLED65G66 TV OLED, SMART TV, 65 \", OLED, Processore a11 AI 4K",
+    "price": "3599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo G5 OLED65G54LW TV OLED, SMART TV, 65 \", OLED, Processore a11 Gen2 co",
-   "price": "1899,49",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo G5 OLED65G54LW TV OLED, SMART TV, 65 \", OLED, Processore a11 Gen2 co",
+    "price": "1899,49",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo G5 OLED97G54LW TV OLED, SMART TV, 97 \", OLED, Processore a11 Gen2 co",
-   "price": "24999",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo G5 OLED97G54LW TV OLED, SMART TV, 97 \", OLED, Processore a11 Gen2 co",
+    "price": "24999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo G4 OLED83G45LW TV OLED Evo, SMART TV, 83 \", OLED, Processore a11 4K ",
-   "price": "4211,49",
-   "uvp": null,
-   "promo": "OUTLET"
+    "name": "LG OLED evo G4 OLED83G45LW TV OLED Evo, SMART TV, 83 \", OLED, Processore a11 4K ",
+    "price": "4211,49",
+    "uvp": null,
+    "promo": "OUTLET"
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 50NU850B6LA TV LED, SMART TV, 50 \", LED, Processore a7 AI",
-   "price": "489",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 50NU850B6LA TV LED, SMART TV, 50 \", LED, Processore a7 AI",
+    "price": "489",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6 OLED48B65LA TV OLED, SMART TV, 48 \", OLED, Processore a8 AI 4K Gen",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6 OLED48B65LA TV OLED, SMART TV, 48 \", OLED, Processore a8 AI 4K Gen",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Mini RGB 87 65MRGB87B6B TV Mini LED, SMART TV, 65 \", RGB-MiniLED, Processore ",
-   "price": "2199",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG Mini RGB 87 65MRGB87B6B TV Mini LED, SMART TV, 65 \", RGB-MiniLED, Processore ",
+    "price": "2199",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG Mini RGB 87 75MRGB87B6B TV Mini LED, SMART TV, 75 \", RGB-MiniLED, Processore ",
-   "price": "2899",
-   "uvp": null,
-   "promo": null
+    "name": "LG Mini RGB 87 75MRGB87B6B TV Mini LED, SMART TV, 75 \", RGB-MiniLED, Processore ",
+    "price": "2899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Mini RGB 87 50MRGB87B6B TV MINI LED, SMART TV, 50 \", RGB-MiniLED, Processore ",
-   "price": "1199",
-   "uvp": null,
-   "promo": "Sconto MW CLUB disponibile"
+    "name": "LG Mini RGB 87 50MRGB87B6B TV MINI LED, SMART TV, 50 \", RGB-MiniLED, Processore ",
+    "price": "1199",
+    "uvp": null,
+    "promo": "Sconto MW CLUB disponibile"
   },
   {
-   "name": "LG OLED evo AI C6 OLED83C66 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K ",
-   "price": "5099",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI C6 OLED83C66 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K ",
+    "price": "5099",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo C5 OLED83C54LA TV OLED, SMART TV, 83 \", OLED, Processore a9 Gen8 4K ",
-   "price": "4999",
-   "uvp": null,
-   "promo": "OUTLET"
+    "name": "LG OLED evo C5 OLED83C54LA TV OLED, SMART TV, 83 \", OLED, Processore a9 Gen8 4K ",
+    "price": "4999",
+    "uvp": null,
+    "promo": "OUTLET"
   },
   {
-   "name": "LG NANO 4K UHD AI NU85 75NU850B6LA TV LED, SMART TV, 75 \", LED, Processore a7 AI",
-   "price": "999",
-   "uvp": null,
-   "promo": null
+    "name": "LG NANO 4K UHD AI NU85 75NU850B6LA TV LED, SMART TV, 75 \", LED, Processore a7 AI",
+    "price": "999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Mini RGB 87 86MRGB87B6B TV Mini LED, SMART TV, 86 \", RGB-MiniLED, Processore ",
-   "price": "3799",
-   "uvp": null,
-   "promo": null
+    "name": "LG Mini RGB 87 86MRGB87B6B TV Mini LED, SMART TV, 86 \", RGB-MiniLED, Processore ",
+    "price": "3799",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6 OLED83B65LA TV OLED, SMART TV, 83 \", OLED, Processore a8 AI 4K Gen",
-   "price": "3999",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6 OLED83B65LA TV OLED, SMART TV, 83 \", OLED, Processore a8 AI 4K Gen",
+    "price": "3999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED evo AI  50QNED87A6D TV QNED, SMART TV, 50 \", QNED, Processore a7 Gen8 co",
-   "price": "899",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED evo AI  50QNED87A6D TV QNED, SMART TV, 50 \", QNED, Processore a7 Gen8 co",
+    "price": "899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG UHD AI 50UA75006LA TV LED, SMART TV, 50 \", LED, Processore a7 Gen8 4K con AI,",
-   "price": "599",
-   "uvp": null,
-   "promo": null
+    "name": "LG UHD AI 50UA75006LA TV LED, SMART TV, 50 \", LED, Processore a7 Gen8 4K con AI,",
+    "price": "599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Wallpaper TV W6 OLED77W69 TV OLED, SMART TV, 77 \", OLED, Processore a11 AI 4K",
-   "price": "5499",
-   "uvp": null,
-   "promo": null
+    "name": "LG Wallpaper TV W6 OLED77W69 TV OLED, SMART TV, 77 \", OLED, Processore a11 AI 4K",
+    "price": "5499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6 OLED77B65LA TV OLED, SMART TV, 77 \", OLED, Processore a8 AI 4K Gen",
-   "price": "2999",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6 OLED77B65LA TV OLED, SMART TV, 77 \", OLED, Processore a8 AI 4K Gen",
+    "price": "2999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI G6 OLED83G64 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K ",
-   "price": "6099",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI G6 OLED83G64 TV OLED, SMART TV, 83 \", OLED, Processore a11 AI 4K ",
+    "price": "6099",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED AI B6E OLED48B6ELC TV OLED, SMART TV, 48 \", OLED, Processore a8 AI 4K Ge",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED AI B6E OLED48B6ELC TV OLED, SMART TV, 48 \", OLED, Processore a8 AI 4K Ge",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED MiniLED 75QNED87B6A TV MiniLED, SMART TV, 75 \", Mini LED, Processore a8 ",
-   "price": "1999",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED MiniLED 75QNED87B6A TV MiniLED, SMART TV, 75 \", Mini LED, Processore a8 ",
+    "price": "1999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG UHD AI 75UA75006LA TV LED, SMART TV, 75 \", LED, Processore a7 Gen8 4K con AI,",
-   "price": "1099",
-   "uvp": null,
-   "promo": null
+    "name": "LG UHD AI 75UA75006LA TV LED, SMART TV, 75 \", LED, Processore a7 Gen8 4K con AI,",
+    "price": "1099",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "APPLE iPhone 17 256GB Nero",
-   "price": "979",
-   "uvp": null,
-   "promo": null
+    "name": "APPLE iPhone 17 256GB Nero",
+    "price": "979",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "PEAQ 32GH-5025C TV LED, SMART TV, 32 \", LED, WXGA, Black, Classe E",
-   "price": "148,59",
-   "uvp": null,
-   "promo": null
+    "name": "PEAQ 32GH-5025C TV LED, SMART TV, 32 \", LED, WXGA, Black, Classe E",
+    "price": "148,59",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "HOOVER HW 28AMC7/1-S LAVATRICE, Caricamento frontale, 8 kg, 16 programmi, Profon",
-   "price": "329",
-   "uvp": null,
-   "promo": null
+    "name": "HOOVER HW 28AMC7/1-S LAVATRICE, Caricamento frontale, 8 kg, 16 programmi, Profon",
+    "price": "329",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "PEAQ 24GH-5025C  TV LED, SMART TV, 24 \", LED, WXGA, Classe D",
-   "price": "129,82",
-   "uvp": null,
-   "promo": null
+    "name": "PEAQ 24GH-5025C  TV LED, SMART TV, 24 \", LED, WXGA, Classe D",
+    "price": "129,82",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "XIAOMI Redmi Note 15 Pro 5G 8+512, 512 GB, BLACK",
-   "price": "429,90",
-   "uvp": null,
-   "promo": null
+    "name": "XIAOMI Redmi Note 15 Pro 5G 8+512, 512 GB, BLACK",
+    "price": "429,90",
+    "uvp": null,
+    "promo": null
+  },
+  {
+    "name": "LG webOS 43LR60006LA TV LED, SMART TV, 43 \", LED, Full-HD, Processore a5 Gen6 con AI, Nero, Classe F",
+    "title": "LG webOS 43LR60006LA TV LED, SMART TV, 43 \", LED, Full-HD, Processore a5 Gen6 con AI, Nero, Classe F",
+    "price": 261.6,
+    "promo": "Sale 15%; was EUR 349.00"
+  },
+  {
+    "name": "LG OLED evo C5 OLED42C55LA TV OLED, SMART TV, 42 \", OLED, Processore a9 Gen8 4K con AI, Charcoal Black, Classe G",
+    "title": "LG OLED evo C5 OLED42C55LA TV OLED, SMART TV, 42 \", OLED, Processore a9 Gen8 4K con AI, Charcoal Black, Classe G",
+    "price": 868.8,
+    "promo": "Sale 15%; was EUR 1299.00"
+  },
+  {
+    "name": "LG 32LQ63006LA SMART FHD TV LED, SMART TV, 32 \", LED, Full-HD, Processore a5 Gen 5 con AI , Ceramic Black, Classe F",
+    "title": "LG 32LQ63006LA SMART FHD TV LED, SMART TV, 32 \", LED, Full-HD, Processore a5 Gen 5 con AI , Ceramic Black, Classe F",
+    "price": 237.6,
+    "promo": "None"
+  },
+  {
+    "name": "LG QNED MiniLED 43QNED70B6C TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe F",
+    "title": "LG QNED MiniLED 43QNED70B6C TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe F",
+    "price": 396.0,
+    "promo": "Sale 15%; was EUR 599.00"
+  },
+  {
+    "name": "LG QNED MiniLED 55QNED70B6C TV MINI LED, SMART TV, 55 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe E",
+    "title": "LG QNED MiniLED 55QNED70B6C TV MINI LED, SMART TV, 55 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe E",
+    "price": 199.75,
+    "promo": "Sale 15%; was EUR 799.00"
+  },
+  {
+    "name": "LG 27TQ615S Monitor TV Smart TV LCD, SMART TV, 27 \", LCD, Full-HD, Processore Alpha 5, Bianco, Classe E",
+    "title": "LG 27TQ615S Monitor TV Smart TV LCD, SMART TV, 27 \", LCD, Full-HD, Processore Alpha 5, Bianco, Classe E",
+    "price": 232.8,
+    "promo": "Sale 15%; was EUR 279.00"
+  },
+  {
+    "name": "LG QNED MiniLED 43QNED87B6A TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe F",
+    "title": "LG QNED MiniLED 43QNED87B6A TV MINI LED, SMART TV, 43 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe F",
+    "price": 640.8,
+    "promo": "Sale 15%; was EUR 799.00"
+  },
+  {
+    "name": "LG NANO 4K UHD AI NU85 43NU850B6LA TV LED, SMART TV, 43 \", LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe G",
+    "title": "LG NANO 4K UHD AI NU85 43NU850B6LA TV LED, SMART TV, 43 \", LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe G",
+    "price": 348.0,
+    "promo": "Sale 15%; was EUR 459.00"
+  },
+  {
+    "name": "LG LG 32LQ630B6LA HD Ready SMART TV 2022 TV LED, SMART TV, 32 \", LED, WXGA, Processore a5 Gen5 AI, Ceramic Black, Classe E",
+    "title": "LG LG 32LQ630B6LA HD Ready SMART TV 2022 TV LED, SMART TV, 32 \", LED, WXGA, Processore a5 Gen5 AI, Ceramic Black, Classe E",
+    "price": 179.49,
+    "promo": "Sale 15%; was EUR 229.00"
+  },
+  {
+    "name": "LG QNED MiniLED 65QNED70B6C TV MINI LED, SMART TV, 65 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe E",
+    "title": "LG QNED MiniLED 65QNED70B6C TV MINI LED, SMART TV, 65 \", Mini LED, Processore a7 AI 4K Gen9, Charcoal Black, Classe E",
+    "price": 679.2,
+    "promo": "Sale 15%; was EUR 899.00"
+  },
+  {
+    "name": "LG OLED evo G5S OLED65G56LS TV OLED Evo, SMART TV, 65 \", OLED, Processore a11 Gen2 con AI, Rocky Black , Classe E",
+    "title": "LG OLED evo G5S OLED65G56LS TV OLED Evo, SMART TV, 65 \", OLED, Processore a11 Gen2 con AI, Rocky Black , Classe E",
+    "price": 199.9,
+    "promo": "None"
+  },
+  {
+    "name": "LG OLED evo AI G6S OLED48G66 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K Gen3, Dark Satin Silver, Classe E",
+    "title": "LG OLED evo AI G6S OLED48G66 TV OLED, SMART TV, 48 \", OLED, Processore a11 AI 4K Gen3, Dark Satin Silver, Classe E",
+    "price": 1485.6,
+    "promo": "None"
   }
- ]
-}
+]

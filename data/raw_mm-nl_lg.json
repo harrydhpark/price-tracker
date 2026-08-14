@@ -1,498 +1,506 @@
-{
- "h1": "82 Zoekresultaten voor lg tv",
- "count": 82,
- "items": [
+[
   {
-   "name": "LG OLED65B56LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-   "price": "1399",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED65B56LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
+    "price": "1399",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 55QNED70A - Ultra HD 4K - Led-tv - 55 inch - 2025",
-   "price": "799",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG 55QNED70A - Ultra HD 4K - Led-tv - 55 inch - 2025",
+    "title": "LG 55QNED70A - Ultra HD 4K - Led-tv - 55 inch - 2025",
+    "price": 799.0,
+    "promo": "None"
   },
   {
-   "name": "LG OLED evo AI 48C55 Smart - OLED 4K - OLED-tv - 48 inch - 2026",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED evo AI 48C55 Smart - OLED 4K - OLED-tv - 48 inch - 2026",
+    "title": "LG OLED evo AI 48C55 Smart - OLED 4K - OLED-tv - 48 inch - 2026",
+    "price": 1199.0,
+    "promo": "None"
   },
   {
-   "name": "LG 27LB70 - Full HD - Led-tv - 27 inch - 2026",
-   "price": "279",
-   "uvp": null,
-   "promo": null
+    "name": "LG 27LB70 - Full HD - Led-tv - 27 inch - 2026",
+    "title": "LG 27LB70 - Full HD - Led-tv - 27 inch - 2026",
+    "price": 239.0,
+    "promo": "None"
   },
   {
-   "name": "LG OLED65C54LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-   "price": "1459",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED65C54LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
+    "title": "LG OLED65C54LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
+    "price": 1429.0,
+    "promo": "None"
   },
   {
-   "name": "LG 43LB65006LA - Full HD - Led-tv - 43 inch - 2026",
-   "price": "299",
-   "uvp": "379",
-   "promo": null
+    "name": "LG 43LB65006LA - Full HD - Led-tv - 43 inch - 2026",
+    "title": "LG 43LB65006LA - Full HD - Led-tv - 43 inch - 2026",
+    "price": 299.0,
+    "promo": "None"
   },
   {
-   "name": "LG 75NU850B6LA - Ultra HD 4K - Led-tv - 75 inch - 2026",
-   "price": "899",
-   "uvp": "949",
-   "promo": null
+    "name": "LG 75NU850B6LA - Ultra HD 4K - Led-tv - 75 inch - 2026",
+    "title": "LG 75NU850B6LA - Ultra HD 4K - Led-tv - 75 inch - 2026",
+    "price": 899.0,
+    "promo": "None"
   },
   {
-   "name": "LG 24LB70 - Full HD - Led-tv - 24 inch - 2026",
-   "price": "249",
-   "uvp": null,
-   "promo": null
+    "name": "LG 24LB70 - Full HD - Led-tv - 24 inch - 2026",
+    "title": "LG 24LB70 - Full HD - Led-tv - 24 inch - 2026",
+    "price": 229.0,
+    "promo": "None"
   },
   {
-   "name": "LG AI 43QNED70B6C - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
-   "price": "499",
-   "uvp": "599",
-   "promo": null
+    "name": "LG AI 43QNED70B6C - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
+    "price": "499",
+    "uvp": "599",
+    "promo": null
   },
   {
-   "name": "LG 55NU850B6LA.AEU - Ultra HD 4K - Led-tv - 55 inch - 2026",
-   "price": "549",
-   "uvp": null,
-   "promo": null
+    "name": "LG 55NU850B6LA.AEU - Ultra HD 4K - Led-tv - 55 inch - 2026",
+    "title": "LG 55NU850B6LA.AEU - Ultra HD 4K - Led-tv - 55 inch - 2026",
+    "price": 549.0,
+    "promo": "None"
   },
   {
-   "name": "LG Evo AI 65QNED82B6B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 65QNED82B6B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED55C54LA - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED55C54LA - Ultra HD 4K - OLED-tv - 55 inch - 2025",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED65G56LS - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-   "price": "1899",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED65G56LS - Ultra HD 4K - OLED-tv - 65 inch - 2025",
+    "price": "1899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 55QNED86A - Ultra HD 4K - QLED-tv - 55 inch - 2025",
-   "price": "649",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG 55QNED86A - Ultra HD 4K - QLED-tv - 55 inch - 2025",
+    "price": "649",
+    "uvp": null,
+    "promo": "Korting van Essent"
   },
   {
-   "name": "LG 43NU850B6LA - Ultra HD 4K - Led-tv - 43 inch - 2026",
-   "price": "449",
-   "uvp": null,
-   "promo": null
+    "name": "LG 43NU850B6LA - Ultra HD 4K - Led-tv - 43 inch - 2026",
+    "price": "449",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 55QNED70B6C - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "649",
-   "uvp": "799",
-   "promo": null
+    "name": "LG AI 55QNED70B6C - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "649",
+    "uvp": "799",
+    "promo": null
   },
   {
-   "name": "LG 27LX6TDGA.AEU - Full HD - Led-tv - 27 inch - 2025",
-   "price": "1299",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG 27LX6TDGA.AEU - Full HD - Led-tv - 27 inch - 2025",
+    "title": "LG 27LX6TDGA.AEU - Full HD - Led-tv - 27 inch - 2025",
+    "price": 999.0,
+    "promo": "None"
   },
   {
-   "name": "LG AI 50QNED70B6C - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
-   "price": "599",
-   "uvp": "699",
-   "promo": null
+    "name": "LG AI 50QNED70B6C - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
+    "price": "599",
+    "uvp": "699",
+    "promo": null
   },
   {
-   "name": "LG Evo AI 43QNED86B6B - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
-   "price": "749",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 43QNED86B6B - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
+    "price": "749",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED55G56LS - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED55G56LS - Ultra HD 4K - OLED-tv - 55 inch - 2025",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 65NU850B6LA - Ultra HD 4K - Led-tv - 65 inch - 2026",
-   "price": "699",
-   "uvp": null,
-   "promo": null
+    "name": "LG 65NU850B6LA - Ultra HD 4K - Led-tv - 65 inch - 2026",
+    "price": "699",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 50NU850B6LA - Ultra HD 4K - Led-tv - 50 inch - 2026",
-   "price": "499",
-   "uvp": null,
-   "promo": null
+    "name": "LG 50NU850B6LA - Ultra HD 4K - Led-tv - 50 inch - 2026",
+    "price": "499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 65QNED70B6C - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "849",
-   "uvp": "999",
-   "promo": null
+    "name": "LG AI 65QNED70B6C - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "849",
+    "uvp": "999",
+    "promo": null
   },
   {
-   "name": "LG OLED48B56LA - Ultra HD 4K - OLED-tv - 48 inch - 2025",
-   "price": "788",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED48B56LA - Ultra HD 4K - OLED-tv - 48 inch - 2025",
+    "price": "788",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 75QNED70B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "1099",
-   "uvp": null,
-   "promo": null
+    "name": "LG AI 75QNED70B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "1099",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 65G69LS - Ultra HD 4K - OLED-tv - 65 inch - 2026",
-   "price": "2999",
-   "uvp": null,
-   "promo": "€150,- cashback; Kalibratie cadeau"
+    "name": "LG Evo AI 65G69LS - Ultra HD 4K - OLED-tv - 65 inch - 2026",
+    "price": "2999",
+    "uvp": null,
+    "promo": "€150,- cashback; Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 50QNED86B6B - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
-   "price": "899",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 50QNED86B6B - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
+    "price": "899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 85NU850B6LA - Ultra HD 4K - Led-tv - 85 inch - 2026",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG 85NU850B6LA - Ultra HD 4K - Led-tv - 85 inch - 2026",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 65QNED86B6B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1399",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG Evo AI 65QNED86B6B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1399",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 75QNED82B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "1799",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 75QNED82B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "1799",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 48C67LA - Ultra HD 4K - OLED-tv - 48 inch - 2026",
-   "price": "1499",
-   "uvp": null,
-   "promo": "€75,- cashback"
+    "name": "LG Evo AI 48C67LA - Ultra HD 4K - OLED-tv - 48 inch - 2026",
+    "price": "1499",
+    "uvp": null,
+    "promo": "€75,- cashback"
   },
   {
-   "name": "LG Evo AI 100QNED87B6 - Ultra HD 4K - Mini-led-tv - 100 inch - 2026",
-   "price": "3799",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 100QNED87B6 - Ultra HD 4K - Mini-led-tv - 100 inch - 2026",
+    "price": "3799",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG HD 32LB650B6LA - HD - Led-tv - 32 inch - 2026",
-   "price": "279",
-   "uvp": null,
-   "promo": null
+    "name": "LG HD 32LB650B6LA - HD - Led-tv - 32 inch - 2026",
+    "price": "279",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 65QNED93B6A - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 65QNED93B6A - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 55C67LA - Ultra HD 4K - OLED-tv - 55 inch - 2026",
-   "price": "1899",
-   "uvp": null,
-   "promo": "€100,- cashback"
+    "name": "LG Evo AI 55C67LA - Ultra HD 4K - OLED-tv - 55 inch - 2026",
+    "price": "1899",
+    "uvp": null,
+    "promo": "€100,- cashback"
   },
   {
-   "name": "LG Evo AI 77G67LW - Ultra HD 4K - OLED-tv - 77 inch - 2026",
-   "price": "4499",
-   "uvp": null,
-   "promo": "€250,- cashback"
+    "name": "LG Evo AI 77G67LW - Ultra HD 4K - OLED-tv - 77 inch - 2026",
+    "price": "4499",
+    "uvp": null,
+    "promo": "€250,- cashback"
   },
   {
-   "name": "LG Evo AI 55QNED86B6B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "1099",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG Evo AI 55QNED86B6B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "1099",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG OLED83B56LA - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-   "price": "3299",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG OLED83B56LA - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "price": "3299",
+    "uvp": null,
+    "promo": "Korting van Essent"
   },
   {
-   "name": "LG Evo AI 55G69LS - Ultra HD 4K - OLED-tv - 55 inch - 2026",
-   "price": "2499",
-   "uvp": null,
-   "promo": "€150,- cashback"
+    "name": "LG Evo AI 55G69LS - Ultra HD 4K - OLED-tv - 55 inch - 2026",
+    "price": "2499",
+    "uvp": null,
+    "promo": "€150,- cashback"
   },
   {
-   "name": "LG OLED83C54LA - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-   "price": "3199",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED83C54LA - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "price": "3199",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 85QNED70B6A - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG AI 85QNED70B6A - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 65C67LA - Ultra HD 4K - OLED-tv - 65 inch - 2026",
-   "price": "2499",
-   "uvp": null,
-   "promo": "€100,- cashback; Kalibratie cadeau"
+    "name": "LG Evo AI 65C67LA - Ultra HD 4K - OLED-tv - 65 inch - 2026",
+    "price": "2499",
+    "uvp": null,
+    "promo": "€100,- cashback; Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 42C67LA - Ultra HD 4K - OLED-tv - 42 inch - 2026",
-   "price": "1399",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG Evo AI 42C67LA - Ultra HD 4K - OLED-tv - 42 inch - 2026",
+    "price": "1399",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 77C67LA - Ultra HD 4K - OLED-tv - 77 inch - 2026",
-   "price": "3499",
-   "uvp": null,
-   "promo": "€250,- cashback"
+    "name": "LG Evo AI 77C67LA - Ultra HD 4K - OLED-tv - 77 inch - 2026",
+    "price": "3499",
+    "uvp": null,
+    "promo": "€250,- cashback"
   },
   {
-   "name": "LG OLED83G55LW - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-   "price": "4139",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG OLED83G55LW - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "price": "4139",
+    "uvp": null,
+    "promo": "Korting van Essent"
   },
   {
-   "name": "LG AI 77B68LA - Ultra HD 4K - OLED-tv - 77 inch - 2026",
-   "price": "2999",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 77B68LA - Ultra HD 4K - OLED-tv - 77 inch - 2026",
+    "price": "2999",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG AI 65B68LA - Ultra HD 4K - OLED-tv - 65 inch - 2026",
-   "price": "1999",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 65B68LA - Ultra HD 4K - OLED-tv - 65 inch - 2026",
+    "price": "1999",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 75QNED86B6B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "1899",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG Evo AI 75QNED86B6B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "1899",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 83G67LW - Ultra HD 4K - OLED-tv - 83 inch - 2026",
-   "price": "5499",
-   "uvp": null,
-   "promo": "€250,- cashback; Kalibratie cadeau"
+    "name": "LG Evo AI 83G67LW - Ultra HD 4K - OLED-tv - 83 inch - 2026",
+    "price": "5499",
+    "uvp": null,
+    "promo": "€250,- cashback; Kalibratie cadeau"
   },
   {
-   "name": "LG AI 65MRGB87B9B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1699",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 65MRGB87B9B - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1699",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG AI 50MRGB87B9B - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
-   "price": "999",
-   "uvp": null,
-   "promo": null
+    "name": "LG AI 50MRGB87B9B - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
+    "price": "999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 55QNED82B6B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "999",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 55QNED82B6B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 55MRGB87B9B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "1299",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 55MRGB87B9B - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "1299",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG AI 55B68LA - Ultra HD 4K - OLED-tv - 55 inch - 2026",
-   "price": "1399",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 55B68LA - Ultra HD 4K - OLED-tv - 55 inch - 2026",
+    "price": "1399",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 48G69LS - Ultra HD 4K - OLED-tv - 48 inch - 2026",
-   "price": "1699",
-   "uvp": null,
-   "promo": "€75,- cashback"
+    "name": "LG Evo AI 48G69LS - Ultra HD 4K - OLED-tv - 48 inch - 2026",
+    "price": "1699",
+    "uvp": null,
+    "promo": "€75,- cashback"
   },
   {
-   "name": "LG AI 86MRGB87B9B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
-   "price": "2999",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 86MRGB87B9B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
+    "price": "2999",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG 55LX7B6LA Gallery - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
+    "name": "LG 55LX7B6LA Gallery - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "1199",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 48B68LA - Ultra HD 4K - OLED-tv - 48 inch - 2026",
-   "price": "1199",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 48B68LA - Ultra HD 4K - OLED-tv - 48 inch - 2026",
+    "price": "1199",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 86QNED86B6B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
-   "price": "2699",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG Evo AI 86QNED86B6B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
+    "price": "2699",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG OLED65M59LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-   "price": "3799",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED65M59LA - Ultra HD 4K - OLED-tv - 65 inch - 2025",
+    "price": "3799",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG AI 83B68LA - Ultra HD 4K - OLED-tv - 83 inch - 2026",
-   "price": "3999",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 83B68LA - Ultra HD 4K - OLED-tv - 83 inch - 2026",
+    "price": "3999",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 75MRGB96B9B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "5499",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 75MRGB96B9B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "5499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 65LX7B6LA Gallery - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1499",
-   "uvp": null,
-   "promo": null
+    "name": "LG 65LX7B6LA Gallery - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1499",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 98NU900B6LB - Ultra HD 4K - Led-tv - 98 inch - 2026",
-   "price": "2299",
-   "uvp": null,
-   "promo": null
+    "name": "LG 98NU900B6LB - Ultra HD 4K - Led-tv - 98 inch - 2026",
+    "price": "2299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED evo AI 65C6ELA Smart - OLED 4K - OLED-tv - 65 inch - 2026",
-   "price": "1699",
-   "uvp": "2499",
-   "promo": null
+    "name": "LG OLED evo AI 65C6ELA Smart - OLED 4K - OLED-tv - 65 inch - 2026",
+    "price": "1699",
+    "uvp": "2499",
+    "promo": null
   },
   {
-   "name": "LG Evo AI 75QNED93B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "1899",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 75QNED93B6A - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "1899",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 86MRGB96B9B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
-   "price": "6999",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 86MRGB96B9B - Ultra HD 4K - Mini-led-tv - 86 inch - 2026",
+    "price": "6999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 55QNED93B6A - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-   "price": "1199",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 55QNED93B6A - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
+    "price": "1199",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED77C54LA - Ultra HD 4K - OLED-tv - 77 inch - 2025",
-   "price": "2699",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG OLED77C54LA - Ultra HD 4K - OLED-tv - 77 inch - 2025",
+    "price": "2699",
+    "uvp": null,
+    "promo": "Korting van Essent"
   },
   {
-   "name": "LG OLED77B56LA - Ultra HD 4K - OLED-tv - 77 inch - 2025",
-   "price": "2209",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED77B56LA - Ultra HD 4K - OLED-tv - 77 inch - 2025",
+    "price": "2209",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG 75QNED86A - Ultra HD 4K - QLED-tv - 75 inch - 2025",
-   "price": "1299",
-   "uvp": null,
-   "promo": "Korting van Essent"
+    "name": "LG 75QNED86A - Ultra HD 4K - QLED-tv - 75 inch - 2025",
+    "price": "1299",
+    "uvp": null,
+    "promo": "Korting van Essent"
   },
   {
-   "name": "LG 65UA75006 - Ultra HD 4K - Led-tv - 65 inch - 2025",
-   "price": "627",
-   "uvp": null,
-   "promo": null
+    "name": "LG 65UA75006 - Ultra HD 4K - Led-tv - 65 inch - 2025",
+    "price": "627",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG OLED97G54LW - Ultra HD 4K - OLED-tv - 97 inch - 2025",
-   "price": "24999",
-   "uvp": null,
-   "promo": null
+    "name": "LG OLED97G54LW - Ultra HD 4K - OLED-tv - 97 inch - 2025",
+    "price": "24999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 97G67LW - Ultra HD 4K - OLED-tv - 97 inch - 2026",
-   "price": "24999",
-   "uvp": null,
-   "promo": "€500,- cashback"
+    "name": "LG Evo AI 97G67LW - Ultra HD 4K - OLED-tv - 97 inch - 2026",
+    "price": "24999",
+    "uvp": null,
+    "promo": "€500,- cashback"
   },
   {
-   "name": "LG AI 75MRGB87B9B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-   "price": "2199",
-   "uvp": null,
-   "promo": "Kalibratie cadeau"
+    "name": "LG AI 75MRGB87B9B - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
+    "price": "2199",
+    "uvp": null,
+    "promo": "Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 83C67LA - Ultra HD 4K - OLED-tv - 83 inch - 2026",
-   "price": "4899",
-   "uvp": null,
-   "promo": "€250,- cashback; Kalibratie cadeau"
+    "name": "LG Evo AI 83C67LA - Ultra HD 4K - OLED-tv - 83 inch - 2026",
+    "price": "4899",
+    "uvp": null,
+    "promo": "€250,- cashback; Kalibratie cadeau"
   },
   {
-   "name": "LG Evo AI 100MRGB96B9 - Ultra HD 4K - Mini-led-tv - 100 inch - 2026",
-   "price": "9999",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 100MRGB96B9 - Ultra HD 4K - Mini-led-tv - 100 inch - 2026",
+    "price": "9999",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG Evo AI 85QNED93B6A - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
-   "price": "2599",
-   "uvp": null,
-   "promo": null
+    "name": "LG Evo AI 85QNED93B6A - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
+    "price": "2599",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LG QNED evo AI 65QNED8M Smart - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-   "price": "1299",
-   "uvp": null,
-   "promo": null
+    "name": "LG QNED evo AI 65QNED8M Smart - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
+    "price": "1299",
+    "uvp": null,
+    "promo": null
   },
   {
-   "name": "LENOVO IdeaPad Slim 5 OLED 15ARP10 - 15.1 inch - Ryzen™ 7 7735HS - 32 GB - 512 G",
-   "price": "699",
-   "uvp": "999",
-   "promo": null
+    "name": "LENOVO IdeaPad Slim 5 OLED 15ARP10 - 15.1 inch - Ryzen™ 7 7735HS - 32 GB - 512 G",
+    "price": "699",
+    "uvp": "999",
+    "promo": null
   },
   {
-   "name": "LENOVO IdeaPad Slim 3 OLED 14IRH10 - 14 inch - Core™ i5-13420H - 16 GB - 512 GB ",
-   "price": "569",
-   "uvp": "779",
-   "promo": null
+    "name": "LENOVO IdeaPad Slim 3 OLED 14IRH10 - 14 inch - Core™ i5-13420H - 16 GB - 512 GB ",
+    "price": "569",
+    "uvp": "779",
+    "promo": null
   },
   {
-   "name": "HP Laptop 15-fc0872nd - 15.6 inch - Full HD - AMD Ryzen 7 7730U - 16 GB - 512 GB",
-   "price": "519",
-   "uvp": "679",
-   "promo": null
+    "name": "HP Laptop 15-fc0872nd - 15.6 inch - Full HD - AMD Ryzen 7 7730U - 16 GB - 512 GB",
+    "price": "519",
+    "uvp": "679",
+    "promo": null
+  },
+  {
+    "name": "LG 65QNED70A - Ultra HD 4K - Led-tv - 65 inch - 2025",
+    "title": "LG 65QNED70A - Ultra HD 4K - Led-tv - 65 inch - 2025",
+    "price": 999.0,
+    "promo": "None"
+  },
+  {
+    "name": "LG 32LR6000LA - Full HD - Led-tv - 32 inch - 2026",
+    "title": "LG 32LR6000LA - Full HD - Led-tv - 32 inch - 2026",
+    "price": 249.0,
+    "promo": "None"
   }
- ]
-}
+]

@@ -286,3 +286,70 @@ Once verified, the script automatically proceeds with:
 * Deploying the new dashboard live to Firebase Hosting.
 * Copying the final HTML dashboard to the date-specific `History/` folder.
 
+---
+
+## Part H: Czech Republic Alza (alza.cz) Collection & Deployment Procedure
+
+### Step H1: Execution & Multi-Page Coverage
+1. Execute the dedicated Alza collector script: `python scripts/scrape_alza.py`.
+2. **Multi-Page Loop (12 Pages)**: Alza.cz caps items per page to 24. The script iterates through pages 1 to 12 (`range(1, 13)`) per brand (`televize-samsung/18862344-p1.htm` .. `-p12.htm` & `televize-lg/18862345-p1.htm` .. `-p12.htm`) and includes direct base category URLs (`18862344.htm` / `18862345.htm`) and search query URLs (`search.htm?exps=samsung+tv`) to bypass 307/302 redirect losses on page 1.
+3. **Filtering Rules**:
+   - `Condition`: NEW (`Nové`) only (exclude `Rozbaleno`, `Zánovní`, `Použité`).
+   - `Screen Size`: Screen size $\ge 22$ inches (purging gaming monitors, UltraGear, Odyssey, MyView, StandbyME, soundbars, accessories).
+   - `Target Years`: 2025 and 2026 model years.
+   - `Currency`: CZK (`#,##0` format).
+
+### Step H2: DOM Precision Price Extraction & Series Classification
+1. **DOM Element Precision Price Extraction (Critical)**:
+   - Primary selling price MUST be extracted strictly from DOM elements `.js-price-box__primary-price__value`, `.ads-pb__price-value`, or `.price-box__primary-price`.
+   - Cashback net price MUST be extracted strictly from `.coupon-block--cashback .coupon-block__price` and net cashback amount calculated as `selling_price - cashback_net_price`.
+   - NEVER scan full card text with broad regex (`re.findall`), to prevent promotional banner descriptions (e.g. `<span class="coupon-block__label--description">` containing `"cashbackem až 100 000 Kč"`) from overwriting selling prices with campaign numbers (`100,000`).
+2. **Series Code Classifier Priority**:
+   - For LG 2026 models: QNED series patterns (`QNED93B`, `QNED87B`, `QNED86B`, `QNED85B`, `QNED80B`, `QNED70B`, `QNED7EB`) MUST be evaluated BEFORE loose OLED `G6`/`C6`/`B6` matchers, preventing model code suffixes like `85QNED93B6A` from being misclassified as `OLED B6`.
+   - For Samsung 2026 models: Eastern European model codes ending in `H` (e.g. `U8072H`, `U8092H`, `U8070H`) MUST be recognized as Model Year **`2026`** and mapped to `U8000H` series.
+
+### Step H3: Output & Excel Workbook Sync
+* Raw JSON outputs are saved to `data/raw_alza_lg.json` and `data/raw_alza_samsung.json`.
+* Results are appended/updated into `Alza_CZ_Samsung` and `Alza_CZ_LG` sheets of `price tracker_EU_2026 {MMDD}_v1.xlsx`.
+* Automatically mirrored to `History_EU/{YYYY MMDD}/price tracker_EU_2026 {MMDD}_v1.xlsx`.
+
+### Step H4: EU Dashboard Compilation, 1:1 Pairing & Firebase Deployment
+1. **Czech Republic Pairs (`PAIRS_CONFIG_2026_CZ`)**:
+   - OLED: `G6 vs S99H/S95H`, `C6 vs S90H`, `B6 vs S85H`
+   - QNED/QLED: `QNED93B vs QN80H`, `QNED86B vs QN80H`, `QNED85B vs QN70H`, `QNED80B vs M80H`, `QNED70B vs M70H`
+   - UHD 4K: `NU85 vs U8070H` (matches `U8072H`, `U8070H`, `U8092H`, `U8000H`)
+2. **Currency Formatting**: Czech Republic MUST render prices in Koruna (`Kč ` / `CZK`).
+3. **HTML Compilation & Firebase Deployment**:
+   - Execute builder script: `python scripts/generate_eu_dashboard.py`.
+   - Deploy live via Firebase CLI / MCP: `npx firebase-tools deploy --only hosting:eu-price-tracker`.
+   - Endpoint: **`https://eu-price-tracker-lge.web.app`**.
+
+---
+
+## Part I: Greece (Public.gr) Multi-Query Expanded TV Price Survey Pipeline
+
+### Step I1: Multi-Query Targeted Sampling Configuration
+Public.gr search queries cap results at 36 products per page. Scrapers MUST traverse 59 multi-query targeted configurations to achieve full catalog coverage:
+- **Samsung (22 queries)**: `samsung tv`, `samsung oled`, `samsung qled`, `samsung neo qled`, `samsung 4k`, `samsung tv 2026`, `samsung tv 2025`, `samsung tv oled/qled/4k`, `samsung tv 55/65/75/77/83/85`, `samsung mini led`, `samsung micro`, `samsung the frame`, `tileoraseis samsung`, `samsung smart tv`, `cat/tileoraseis/tileoraseis/`.
+- **LG (37 queries)**: `lg tv`, `lg oled`, `lg qned`, `lg 4k`, `lg oled c6/g6/b6/c5`, `lg c5/g5/b5/b6/c6/g6`, `lg qned 93/87/86/80/72`, `lg nano`, `lg nu85`, `lg mrgb`, `lg micro`, `lg ua`, `lg tv 2026/2025`, `lg tv oled/qned/4k`, `lg tv 55/65/75/77/83`, `tileoraseis lg`, `lg smart tv`, `cat/tileoraseis/tileoraseis/`.
+- **Deduplication**: Python in-memory deduplication via unique product URL paths.
+
+### Step I2: Digit-Aware Pattern Matching & Guard Rules
+1. **Digit-Aware Series Matching**: LG series codes must use digit-aware matchers (`G6[0-9]`, `C6[0-9]`, `B6[0-9]`, `G5[0-9]`, `C5[0-9]`, `B5[0-9]`) and sub-model aliases (`QNED83B` $\rightarrow$ `QNED81B`, `QNED82A` $\rightarrow$ `QNED80A`, `QNED71B` $\rightarrow$ `QNED70B`) to prevent word-boundary mismatches.
+2. **Screen Size Price Threshold Guard**: Enforce minimum price thresholds per screen size (70"+ $\ge$ €700, 55"+ $\ge$ €350, 48"+ $\ge$ €250) to reject discount badge false positives (e.g. `600,00 €` badge).
+
+### Step I3: Output & Excel Workbook Sync
+- Raw JSON saved to `data/raw_public_gr_samsung.json` (92 items) and `data/raw_public_gr_lg.json` (57 items).
+- Appended/updated to `Public_GR_Samsung` and `Public_GR_LG` sheets in `data/price tracker_EU_2026 {MMDD}_v1.xlsx` in standard EU column format.
+
+### Step I4: 1:1 Pairing & Dashboard Deployment
+1. **Greece Pairs (`PAIRS_CONFIG_2026_GR`)**:
+   - OLED: `G6 vs S95H/S99H`, `C6 vs S90H`, `B6 vs S85H`
+   - MRGB: `MRGB87B vs R85H` (86"-55"), `MRGB96B vs R95H` (100")
+   - QNED/QLED: `QNED87B vs QN80H`, `QNED81B vs QN70H`, `QNED81B vs M80H`, `QNED72B vs M70H`
+   - UHD 4K: `NU85 vs U8070H` (matches `75NU8E0B3LA`, `65NU850B6LA`, `UE65U8072H`, `UE55U8072H`, `50U8072F`, `UE43U8072H`)
+2. **Currency**: Euro (`€` / `EUR`).
+3. **Build & Deploy**: `python scripts/generate_eu_dashboard.py` $\rightarrow$ `firebase deploy --only hosting:eu-price-tracker`.
+
+
+
