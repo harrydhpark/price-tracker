@@ -1,0 +1,19 @@
+{
+  "survey_date": "2026-09-11",
+  "total_records_audited": 1,
+  "total_anomalies": 1,
+  "critical_count": 1,
+  "warn_count": 0,
+  "anomalies": [
+    {
+      "rule": "R4",
+      "severity": "CRITICAL",
+      "country": "DE",
+      "retailer": "MediaMarkt",
+      "model_code": "OLED55C54LA",
+      "observed": 100.0,
+      "expected_range": ">= 650.0 EUR (OLED floor: EUR 650)",
+      "message": "55\" OLED price (100.0 EUR = 100.0 EUR) violates minimum floor of EUR 650"
+    }
+  ]
+}

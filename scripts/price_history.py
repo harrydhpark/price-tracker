@@ -352,9 +352,17 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
                     try:
                         m_size = re.search(r'\d+', str(raw_size))
                         if m_size:
-                            size_val = int(m_size.group(0))
+                            s = int(m_size.group(0))
+                            if 20 <= s <= 120:
+                                size_val = s
                     except Exception:
                         pass
+                if size_val == 0 and model_code:
+                    m_mc = re.search(r'(?:OLED|QE|UE|TQ|QA|MR|MRE|LG)?(\d{2,3})', model_code.upper())
+                    if m_mc:
+                        s = int(m_mc.group(1))
+                        if 20 <= s <= 120:
+                            size_val = s
 
                 panel_type = get_val(row, "display type", "display", "category", "panel") or ""
                 promo = get_val(row, "promo", "promotion", "general promotions") or ""

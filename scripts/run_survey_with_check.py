@@ -415,6 +415,10 @@ def main():
     registry_path = os.path.join(ROOT_DIR, "scripts", "build_master_url_registry.py")
     run_pipeline_step("Master URL Registry Update", [sys.executable, registry_path])
     
+    # 4.2 Quality Gates & Anomaly Audit
+    gate_path = os.path.join(ROOT_DIR, "scripts", "quality_gates.py")
+    run_pipeline_step("Data Quality Gates & Price Anomaly Audit", [sys.executable, gate_path])
+    
     # Resolve MMDD date string for files
     today_mmdd = datetime.now().strftime("%m%d")
     today_folder_name = datetime.now().strftime("%Y %m%d") # "2026 0710"
