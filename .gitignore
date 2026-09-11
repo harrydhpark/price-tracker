@@ -39,3 +39,5 @@ alza_*.html
 public_gr_*.html
 scripts/*.html
 scripts/*_preloaded*.json
+data/anomaly_report_*.json
+

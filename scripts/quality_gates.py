@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import re
 import argparse
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -51,7 +52,7 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         mc = r.get("model_code", "").strip()
         p = float(r.get("selling_price") or 0.0)
         curr = str(r.get("currency", "EUR")).upper()
-        if mc and p > 0:
+        if mc and mc.upper() not in ["UNKNOWN", "UNKNOWN SAMSUNG", "UNKNOWN LG"] and p > 0:
             by_model.setdefault(mc, []).append((r, to_eur(p, curr)))
 
     # Evaluate R2 (Cross-Country Outlier: >= 2x median across >= 2 countries)
@@ -85,13 +86,26 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         model_code = str(r.get("model_code", "")).strip()
         price = float(r.get("selling_price") or 0.0)
         currency = str(r.get("currency", "EUR")).upper()
-        size = int(r.get("display_size_inch") or 0)
-        if (size > 120 or size < 20) and model_code:
-            m_mc = re.search(r'(?:OLED|QE|UE|TQ|QA|MR|MRE|LG)?(\d{2,3})', model_code.upper())
-            if m_mc:
-                s = int(m_mc.group(1))
-                if 20 <= s <= 120:
-                    size = s
+        # Authoritative screen size resolution
+        STANDARD_SIZES = {24, 27, 32, 40, 42, 43, 48, 50, 55, 65, 70, 75, 77, 83, 85, 86, 97, 98, 100}
+        raw_size = int(r.get("display_size_inch") or 0)
+        size = 0
+        
+        # 1. Authoritative model code prefix check: e.g. TQ32..., QE55..., OLED65..., UE24..., 55QNED...
+        mc_up = model_code.upper()
+        m_mc = re.search(r'^(?:OLED|QE|UE|TQ|QA|GQ|TU|NU|UA|UT|MRE|TMR)(\d{2})[A-Z0-9]', mc_up)
+        if not m_mc:
+            m_mc = re.search(r'^(\d{2})[A-Z]{2,}', mc_up)
+        if m_mc:
+            s_cand = int(m_mc.group(1))
+            if s_cand in STANDARD_SIZES:
+                size = s_cand
+                
+        # 2. Fallback to recorded size if valid
+        if size == 0 and raw_size in STANDARD_SIZES:
+            size = raw_size
+        elif size == 0:
+            size = raw_size if 20 <= raw_size <= 100 else 55
         curr_promo = str(r.get("promo_text") or "")
         eur_price = to_eur(price, currency)
 
