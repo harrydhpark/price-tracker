@@ -19,11 +19,11 @@ def clean_fr_price(text):
     # Pre-strip monthly
     t = re.sub(r'dès\s*[\d\s,.]+\s*€\s*\/\s*mois', '', t, flags=re.IGNORECASE)
     
-    # Match 1 299 € or 999 €
-    m = re.findall(r'(\d[\d\s]*\d|\d+)\s*€', t)
+    # Match 1 299 € or 999 € or 2 199,00 €
+    m = re.findall(r'([\d\s]+(?:[.,]\d{2})?)\s*€', t)
     vals = []
     for raw in m:
-        cleaned = raw.replace(' ', '').replace(',', '.')
+        cleaned = raw.strip().replace(' ', '').replace(',', '.')
         try:
             v = float(cleaned)
             if v >= 100.0:

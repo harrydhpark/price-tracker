@@ -189,7 +189,7 @@ def load_json_result(filepath):
 def main():
     samsung_path = r"C:\Users\harry.park\.gemini\antigravity\brain\518a5474-5d4f-493a-979e-846df933cf38\.system_generated\steps\780\output.txt"
     lg_path = r"C:\Users\harry.park\.gemini\antigravity\brain\518a5474-5d4f-493a-979e-846df933cf38\.system_generated\steps\784\output.txt"
-    data_dir = r"d:\TV 유럽영업\15. AX Task\2026 AX 실행과제\Price Tracker\data"
+    data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     
     # Samsung
     samsung_items = load_json_result(samsung_path)

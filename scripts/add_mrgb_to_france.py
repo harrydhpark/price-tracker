@@ -3,8 +3,8 @@ import json, os, sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# 1. Update france_master_urls.json with Micro RGB items
-master_file = 'data/france_master_urls.json'
+# 1. Update master_product_urls.json with Micro RGB items
+master_file = 'data/master_product_urls.json'
 with open(master_file, 'r', encoding='utf-8') as f:
     master_data = json.load(f)
 
@@ -78,18 +78,35 @@ lg_mrgb = [
 ]
 
 for item in samsung_mrgb:
-    master_data["samsung"][item["name"]] = item
+    key = f"FR_FNAC_{item['name']}"
+    master_data[key] = {
+        "country": "FR",
+        "retailer": "Fnac",
+        "brand": "SAMSUNG",
+        "model_code": item['name'],
+        "year": 2026,
+        "size": 0,
+        "title": item['title'],
+        "url": item['url'],
+        "last_updated": "2026-08-15"
+    }
 
 for item in lg_mrgb:
-    master_data["lg"][item["name"]] = item
+    key = f"FR_FNAC_{item['name']}"
+    master_data[key] = {
+        "country": "FR",
+        "retailer": "Fnac",
+        "brand": "LG",
+        "model_code": item['name'],
+        "year": 2026,
+        "size": 0,
+        "title": item['title'],
+        "url": item['url'],
+        "last_updated": "2026-08-15"
+    }
 
 with open(master_file, 'w', encoding='utf-8') as f:
     json.dump(master_data, f, ensure_ascii=False, indent=2)
 
-with open('data/raw_fnac_samsung.json', 'w', encoding='utf-8') as f:
-    json.dump(list(master_data["samsung"].values()), f, ensure_ascii=False, indent=2)
+print(f"Master URL Registry updated with MRGB models. Total items: {len(master_data)}")
 
-with open('data/raw_fnac_lg.json', 'w', encoding='utf-8') as f:
-    json.dump(list(master_data["lg"].values()), f, ensure_ascii=False, indent=2)
-
-print(f"Master URL Registry updated: Samsung={len(master_data['samsung'])}, LG={len(master_data['lg'])}")

@@ -226,21 +226,7 @@ for fname, country, ret, b in ch_raw_map:
         except Exception as e:
             print(f"  [WARN] Error loading {fname}: {e}")
 
-print("[MASTER REGISTRY] 3. Scanning France Master URLs & Raw JSONs...")
-fr_master = os.path.join(data_dir, "france_master_urls.json")
-if os.path.exists(fr_master):
-    try:
-        with open(fr_master, "r", encoding="utf-8") as f:
-            fr_data = json.load(f)
-        for t, it in fr_data.items():
-            if isinstance(it, dict):
-                u = it.get("url")
-                m_match = re.search(r'(?:TQ\d{2}[A-Z0-9]+|OLED\d{2}[A-Z0-9]+|\d{2}QNED[A-Z0-9]+|TU\d{2}[A-Z0-9]+|TMR\d{2}[A-Z0-9]+)', str(t))
-                m_code = m_match.group(0) if m_match else t
-                b = "SAMSUNG" if "SAMSUNG" in t.upper() else "LG"
-                add_to_registry("FR", "Fnac", b, m_code, 2025, 0, t, u)
-    except Exception as e:
-        print(f"  [WARN] Error loading france_master_urls: {e}")
+print("[MASTER REGISTRY] 3. Scanning France Raw JSONs...")
 
 for fn in ["raw_fnac_samsung.json", "raw_fnac_lg.json"]:
     fp = os.path.join(data_dir, fn)

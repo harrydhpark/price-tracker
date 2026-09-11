@@ -234,7 +234,7 @@ def parse_markdown_content(markdown, brand, fixed_year=None):
 
 def parse_all_pages():
     scratch_dir = r"C:\Users\harry.park\.gemini\antigravity\brain\518a5474-5d4f-493a-979e-846df933cf38\scratch"
-    data_dir = r"d:\TV 유럽영업\15. AX Task\2026 AX 실행과제\Price Tracker\data"
+    data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     
     samsungs = []
     lgs = []

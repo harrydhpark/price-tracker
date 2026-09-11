@@ -1,0 +1,14 @@
+﻿# Price Tracker & Promo Analyzer - Pinned Dependencies
+# Python >= 3.10 recommended (Windows environment: .\python_env\python.exe)
+
+playwright==1.61.0
+scrapling==0.4.10
+pandas==3.0.3
+openpyxl==3.1.5
+beautifulsoup4==4.15.0
+curl_cffi==0.15.0
+patchright==1.61.2
+lxml==6.1.1
+tabulate==0.10.0
+xlsxwriter==3.2.9
+colorama==0.4.6

@@ -9,7 +9,8 @@ sys.stdout.reconfigure(encoding='utf-8')
 import glob
 from datetime import datetime, timedelta
 
-data_dir = r"d:\TV 유럽영업\15. AX Task\2026 AX 실행과제\Price Tracker\data"
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+data_dir = os.path.join(ROOT_DIR, "data")
 today_mmdd = datetime.now().strftime("%m%d")
 files = glob.glob(os.path.join(data_dir, f"Swiss_ATA_Comparison_2026_{today_mmdd}*.xlsx"))
 files = [f for f in files if not os.path.basename(f).startswith("~$")]

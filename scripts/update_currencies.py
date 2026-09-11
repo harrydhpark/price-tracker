@@ -1,6 +1,7 @@
 import os
 
-path = r"d:\TV 유럽영업\15. AX Task\2026 AX 실행과제\04. Price Tracker\data\eu_price_dashboard_template.html"
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+path = os.path.join(ROOT_DIR, "data", "eu_price_dashboard_template.html")
 
 with open(path, "r", encoding="utf-8") as f:
     content = f.read()

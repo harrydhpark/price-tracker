@@ -1,8 +1,9 @@
-﻿import json
+import json
 import os
 import re
 
-DATA_DIR = r"D:\TV 유럽영업\15. AX Task\2026 AX 실행과제\04. Price Tracker\data"
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DATA_DIR = os.path.join(ROOT_DIR, "data")
 
 def sync_mediamarkt_2026():
     # 1. Load extracted Samsung 2026 from step 821
