@@ -19,6 +19,7 @@ from scrapling.fetchers import StealthySession
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
@@ -31,10 +32,10 @@ def extract_model_code_and_info(title_upper, brand, size_val):
 
     if brand.lower() == "samsung":
         patterns_2026 = [
-            (r'S95H', 'S95H', 2026), (r'S90H', 'S90H', 2026), (r'S85H', 'S85H', 2026),
+            (r'S99H', 'S99H', 2026), (r'S95H', 'S95H', 2026), (r'S90H', 'S90H', 2026), (r'S85H', 'S85H', 2026),
             (r'QN95H', 'QN95H', 2026), (r'QN90H', 'QN90H', 2026), (r'QN85H', 'QN85H', 2026),
             (r'QN80H', 'QN80H', 2026), (r'QN70H', 'QN70H', 2026), (r'M80H', 'M80H', 2026),
-            (r'M70H', 'M70H', 2026), (r'R95H', 'R95H', 2026), (r'R86H', 'R86H', 2026),
+            (r'M70H', 'M70H', 2026), (r'R95H', 'R95H', 2026), (r'R85H', 'R85H', 2026), (r'R86H', 'R86H', 2026),
             (r'U8072H', 'U8000H', 2026), (r'U8070H', 'U8000H', 2026), (r'U8092H', 'U8000H', 2026),
             (r'U8072', 'U8000H', 2026), (r'U8092', 'U8000H', 2026),
             (r'U8000H', 'U8000H', 2026), (r'F6000H', 'F6000H', 2026)
@@ -87,7 +88,7 @@ def extract_model_code_and_info(title_upper, brand, size_val):
             (r'MRGB96B', 'MRGB96B', 2026),
             (r'MRGB87B', 'MRGB87B', 2026),
             (r'MRGB86B', 'MRGB85B', 2026),
-            (r'LX7B', 'LX7B', 2026),
+            (r'LX7B', 'LX7B', 2026), (r'27LX6', '27LX6', 2026), (r'STANBYME', 'STANBYME', 2026),
             (r'OLED\d{2}G6', 'OLED G6', 2026), (r'OLED.*G6', 'OLED G6', 2026),
             (r'OLED\d{2}C6', 'OLED C6', 2026), (r'OLED.*C6', 'OLED C6', 2026),
             (r'OLED\d{2}B6', 'OLED B6', 2026), (r'OLED.*B6', 'OLED B6', 2026),
@@ -344,16 +345,17 @@ def save_raw_json(data, brand):
     print(f"[SAVE] Raw JSON saved: {filepath} ({len(data)} items)")
 
 def update_eu_excel_tracker(lg_items, samsung_items):
-    print("\n[EXCEL] Updating EU Price Tracker workbook with Alza Czech Republic sheets...")
-    
     today_mmdd = datetime.now().strftime("%m%d")
     target_wb_path = os.path.join(DATA_DIR, f"price tracker_EU_2026 {today_mmdd}_v1.xlsx")
     
     if not os.path.exists(target_wb_path):
         existing = glob.glob(os.path.join(DATA_DIR, "price tracker_EU_2026 *.xlsx"))
+        existing = [f for f in existing if not os.path.basename(f).startswith("~$")]
         if existing:
             existing.sort()
-            target_wb_path = existing[-1]
+            import shutil
+            shutil.copy2(existing[-1], target_wb_path)
+            print(f"[CLONE] Created today's workbook from {existing[-1]} -> {target_wb_path}")
         else:
             print("[ERROR] No EU price tracker template found!")
             return

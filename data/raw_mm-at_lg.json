@@ -2,8 +2,9 @@
   {
     "name": "LG ELECTRONICS 65NANO80A6B (2025) 65 Zoll 4K NanoCell Smart TV",
     "title": "LG ELECTRONICS 65NANO80A6B (2025) 65 Zoll 4K NanoCell Smart TV",
-    "price": 529.0,
-    "promo": "None"
+    "price": 627.0,
+    "promo": "None",
+    "original_price": 699.0
   },
   {
     "name": "LG ELECTRONICS 55NANO80A6B (2025) 55 Zoll 4K NanoCell Smart TV",
@@ -14,8 +15,9 @@
   {
     "name": "LG ELECTRONICS OLED65B6ELC (2026) 65 Zoll 4K OLED AI Smart TV",
     "title": "LG ELECTRONICS OLED65B6ELC (2026) 65 Zoll 4K OLED AI Smart TV",
-    "price": 1279.0,
-    "promo": "None"
+    "price": 1499.0,
+    "promo": "None",
+    "original_price": 1699.0
   },
   {
     "name": "LG ELECTRONICS OLED65C57LA (2025) 65 Zoll LG OLED evo AI C5 4K Smart TV",
@@ -26,8 +28,9 @@
   {
     "name": "LG ELECTRONICS 50NANO80A6B (2025) 50 Zoll 4K NanoCell Smart TV",
     "title": "LG ELECTRONICS 50NANO80A6B (2025) 50 Zoll 4K NanoCell Smart TV",
-    "price": 477.0,
-    "promo": "None"
+    "price": 447.0,
+    "promo": "None",
+    "original_price": 549.0
   },
   {
     "name": "LG ELECTRONICS 43NANO80A6B (2025) 43 Zoll 4K NanoCell Smart TV",
@@ -133,15 +136,17 @@
   },
   {
     "name": "LG ELECTRONICS OLED55B6ELC (2026) 55 Zoll 4K OLED AI Smart TV",
-    "price": "1069",
+    "price": 1099.0,
     "uvp": "1299",
-    "promo": null
+    "promo": null,
+    "original_price": 1299.0
   },
   {
     "name": "LG ELECTRONICS OLED55C57LA (2025) 55 Zoll LG OLED evo AI C5 4K Smart TV",
-    "price": "889",
+    "price": 1157.0,
     "uvp": "1599",
-    "promo": null
+    "promo": null,
+    "original_price": 1599.0
   },
   {
     "name": "LG ELECTRONICS OLED65G59LS (2025) 65 Zoll 4K OLED evo Smart TV",

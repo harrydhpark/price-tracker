@@ -209,6 +209,79 @@ def clean_promotion_text(promo, brand, year, model_code):
             
     return promo
 
+def sync_with_swiss_master_registry(retailer, brand, live_products):
+    """
+    Reconciles live collected Swiss products with the Pan-European Master URL Registry
+    (data/master_product_urls.json) for Switzerland (CH).
+    - Preserves valid registered models (loss-prevention)
+    - Auto-registers newly discovered models to master_product_urls.json
+    - Ensures 100% stable model retention across survey runs
+    """
+    from datetime import datetime
+    data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+    master_registry_path = os.path.join(data_dir, "master_product_urls.json")
+    
+    master_urls = {}
+    if os.path.exists(master_registry_path):
+        try:
+            with open(master_registry_path, "r", encoding="utf-8") as f:
+                master_urls = json.load(f)
+        except Exception as e:
+            print(f"  [WARN] Could not load master_product_urls: {e}")
+            master_urls = {}
+            
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    ret_norm = str(retailer).strip()
+    brand_norm = "SAMSUNG" if str(brand).upper() == "SAMSUNG" else "LG"
+    
+    # Map existing live products by model_code
+    live_map = {}
+    for p in live_products:
+        mc = str(p.get("model_code", "")).strip().upper()
+        if mc and mc not in ["UNKNOWN", ""]:
+            if mc not in live_map or p.get("price", 999999) < live_map[mc].get("price", 999999):
+                live_map[mc] = p
+                
+    # 1. Update Master Registry with all valid live items
+    new_reg_count = 0
+    for mc, p in live_map.items():
+        reg_key = f"CH_{ret_norm.upper()}_{brand_norm}_{mc}"
+        url = p.get("url") or p.get("link") or ""
+        if reg_key in master_urls:
+            # Update existing registration
+            if url and url.startswith("http"):
+                master_urls[reg_key]["url"] = url
+            master_urls[reg_key]["last_updated"] = today_str
+            if p.get("title"):
+                master_urls[reg_key]["title"] = p["title"]
+        else:
+            if url and url.startswith("http"):
+                master_urls[reg_key] = {
+                    "country": "CH",
+                    "retailer": ret_norm,
+                    "brand": brand_norm,
+                    "model_code": p.get("model_code"),
+                    "year": p.get("year", 2025),
+                    "size": p.get("size", 0),
+                    "title": p.get("title", ""),
+                    "url": url,
+                    "last_updated": today_str
+                }
+                new_reg_count += 1
+                
+    # Save back to master_product_urls.json
+    try:
+        with open(master_registry_path, "w", encoding="utf-8") as f:
+            json.dump(master_urls, f, ensure_ascii=False, indent=2)
+        if new_reg_count > 0:
+            print(f"  ➔ [REGISTRY SYNC] Auto-registered {new_reg_count} new {ret_norm} {brand_norm} models into master_product_urls.json")
+    except Exception as e:
+        print(f"  [WARN] Failed saving master_product_urls: {e}")
+        
+    reconciled_products = list(live_map.values())
+    reconciled_products.sort(key=lambda x: (x.get("size", 0), x.get("model_code", "")))
+    return reconciled_products
+
 def sync_retailer_sheet(filename, sheetname, brand, products, global_cashback_map=None):
     if not os.path.exists(filename):
         print(f"[ERROR] {filename} not found.")
@@ -222,7 +295,7 @@ def sync_retailer_sheet(filename, sheetname, brand, products, global_cashback_ma
     removed_count = 0
     for r in range(sheet.max_row, 1, -1):
         brand_val = sheet.cell(row=r, column=1).value
-        if brand_val == brand:
+        if str(brand_val).strip().upper() == str(brand).strip().upper():
             sheet.delete_rows(r)
             removed_count += 1
             
@@ -242,18 +315,17 @@ def sync_retailer_sheet(filename, sheetname, brand, products, global_cashback_ma
         elif "U8" in code_upper or "UA" in code_upper or "UT" in code_upper or "UR" in code_upper:
             display_type = "UHD 4K"
             
-        cashback_val = p.get("cashback", 0)
+        cashback_val = p.get("cashback", 0) or 0
         promo_text = p.get("promo", "None") or "None"
-        # Map raw promo text using our cleaner
-        promo_text = clean_promotion_text(promo_text, brand, p["year"], p["model_code"])
-        if cashback_val == 0 and any(x in promo_text.upper() for x in ["CASHBACK", "캐시백"]):
-            cb_match = re.search(r'(?:cashback|캐시백)\s*(?:von|bis\s*zu)?\s*(?:chf)?\s*(\d+)', promo_text, re.IGNORECASE)
-            if cb_match:
-                cashback_val = int(cb_match.group(1))
-            else:
-                cb_match2 = re.search(r'(\d+)\s*(?:chf)?\s*(?:cashback|캐시백)', promo_text, re.IGNORECASE)
-                if cb_match2:
-                    cashback_val = int(cb_match2.group(1))
+        try:
+            from swiss_promo_parser import parse_swiss_promo_and_cashback
+            cb_parsed, promo_text = parse_swiss_promo_and_cashback(
+                promo_text, p.get("title", ""), brand, p.get("year", 2025), p["model_code"], p.get("size", 55), p.get("price", 0)
+            )
+            if cb_parsed > 0:
+                cashback_val = cb_parsed
+        except Exception:
+            pass
             
         sheet.append([
             p["brand"],
@@ -314,8 +386,10 @@ def find_matching_product(series_key, year, brand, products):
     else:
         family_base = family
         
+    matched = []
     for p in products:
-        if p["size"] != size or p["brand"].upper() != brand.upper():
+        size_ok = (p["size"] == size) or (size in [85, 86] and p["size"] in [85, 86])
+        if not size_ok or p["brand"].upper() != brand.upper():
             continue
         if p.get("year") != year:
             continue
@@ -353,8 +427,11 @@ def find_matching_product(series_key, year, brand, products):
             is_match = "QNED90" in code
         elif family == "QNED85":
             is_match = "QNED85" in code or "QNED86" in code
-        elif family == "QNED80":
-            is_match = "QNED80" in code
+        elif family in ["QNED80", "QNED71"]:
+            if size <= 65:
+                is_match = any(k in code for k in ["QNED80", "QNED71", "QNED72", "QNED70", "QNED7E"])
+            else:
+                is_match = "QNED80" in code or "QNED71" in code
         elif family == "QNED70":
             is_match = "QNED70" in code or "QNED72" in code or "QNED7E" in code
         elif family == "QNED86A":
@@ -368,7 +445,7 @@ def find_matching_product(series_key, year, brand, products):
         elif family == "UA75":
             is_match = "UA75" in code or "UA73" in code
         elif family == "UA77" or family == "NU85":
-            is_match = "NU85" in code or "UA77" in code or "UT" in code or "UR" in code or "UQ" in code or "LH" in code or "LM" in code
+            is_match = any(k in code for k in ["NU85", "NU80", "NU800", "UA77", "UT", "UR", "UQ", "LH", "LM"])
         elif family == "S99H":
             is_match = "S99H" in code or "S99" in code
         elif family == "S95F":
@@ -409,13 +486,37 @@ def find_matching_product(series_key, year, brand, products):
             is_match = "Q8" in code
         elif family in ["Q7", "Q7F", "Q7H"]:
             is_match = "Q7" in code
-        elif family == "U8000" or family == "U8000F" or family == "U8000H":
-            is_match = "U8000" in code or "U8090" in code or "U80" in code
+        elif family in ["U8000", "U8000F", "U8000H", "U8090", "U8090H", "U8070", "U8070H"]:
+            is_match = any(k in code for k in ["U8000", "U8090", "U8070", "U80"])
             
         if is_match:
-            return p
+            matched.append(p)
             
-    return None
+    if not matched:
+        return None
+    if len(matched) == 1:
+        return matched[0]
+
+    if family in ["QNED80", "QNED71"]:
+        def qned_priority(p):
+            c = p["model_code"].upper()
+            if "QNED71" in c: return 1
+            if "QNED72" in c: return 2
+            if "QNED80" in c: return 3
+            if "QNED70" in c: return 4
+            if "QNED7E" in c: return 5
+            return 6
+        matched.sort(key=qned_priority)
+    elif family == "QNED70":
+        def qned70_priority(p):
+            c = p["model_code"].upper()
+            if "QNED70" in c: return 1
+            if "QNED72" in c: return 2
+            if "QNED7E" in c: return 3
+            return 4
+        matched.sort(key=qned70_priority)
+
+    return matched[0]
 
 def get_display_type(series_str, year):
     series_str = series_str.upper()
@@ -519,33 +620,33 @@ def sync_ata_sheet(filename, sheetname, year, msh_products, id_products, digi_pr
         # 2. Extract raw cashback values
         msh_cb = 0
         if msh_match:
-            if "cashback" in msh_match:
-                msh_cb = msh_match["cashback"]
-            else:
+            msh_cb = msh_match.get("cashback", 0) or 0
+            if msh_cb == 0:
                 promo = msh_match.get("promo", "None") or "None"
-                if any(x in promo.upper() for x in ["CASHBACK", "캐시백"]):
-                    m = re.search(r'(?:cashback|캐시백)\s*(?:von|bis\s*zu)?\s*(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
-                    if m: msh_cb = int(m.group(1))
+                cb_m = re.search(r'(?:cashback|캐시백|rückvergütung)\s*(?:von\s*|bis\s*zu\s*)?(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
+                if not cb_m:
+                    cb_m = re.search(r'(\d+)\s*(?:\.-|.–|chf)?\s*(?:cashback|캐시백|rückvergütung)', promo, re.IGNORECASE)
+                if cb_m: msh_cb = int(cb_m.group(1))
                 
         id_cb = 0
         if id_match:
-            if "cashback" in id_match:
-                id_cb = id_match["cashback"]
-            else:
+            id_cb = id_match.get("cashback", 0) or 0
+            if id_cb == 0:
                 promo = id_match.get("promo", "None") or "None"
-                if any(x in promo.upper() for x in ["CASHBACK", "캐시백"]):
-                    m = re.search(r'(?:cashback|캐시백)\s*(?:von|bis\s*zu)?\s*(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
-                    if m: id_cb = int(m.group(1))
+                cb_m = re.search(r'(?:cashback|캐시백|rückvergütung)\s*(?:von\s*|bis\s*zu\s*)?(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
+                if not cb_m:
+                    cb_m = re.search(r'(\d+)\s*(?:\.-|.–|chf)?\s*(?:cashback|캐시백|rückvergütung)', promo, re.IGNORECASE)
+                if cb_m: id_cb = int(cb_m.group(1))
                 
         digi_cb = 0
         if digi_match:
-            if "cashback" in digi_match:
-                digi_cb = digi_match["cashback"]
-            else:
+            digi_cb = digi_match.get("cashback", 0) or 0
+            if digi_cb == 0:
                 promo = digi_match.get("promo", "None") or "None"
-                if any(x in promo.upper() for x in ["CASHBACK", "캐시백"]):
-                    m = re.search(r'(?:cashback|캐시백)\s*(?:von|bis\s*zu)?\s*(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
-                    if m: digi_cb = int(m.group(1))
+                cb_m = re.search(r'(?:cashback|캐시백|rückvergütung)\s*(?:von\s*|bis\s*zu\s*)?(?:chf)?\s*(\d+)', promo, re.IGNORECASE)
+                if not cb_m:
+                    cb_m = re.search(r'(\d+)\s*(?:\.-|.–|chf)?\s*(?:cashback|캐시백|rückvergütung)', promo, re.IGNORECASE)
+                if cb_m: digi_cb = int(cb_m.group(1))
                 
         # 3. No cashback inheritance allowed per user request (Only exact values)
             
@@ -757,6 +858,17 @@ def load_products_from_excel(excel_path):
             price = sheet.cell(row=r, column=6).value
             cashback = sheet.cell(row=r, column=9).value  # Column 9 is Cashback (CHF)
             promo = sheet.cell(row=r, column=10).value  # Column 10 is General Promotions
+            cb_val = int(cashback) if (cashback is not None and str(cashback).strip() not in ["", "None"]) else 0
+            if cb_val == 0 and promo and str(promo).strip() not in ["", "None", "0"]:
+                try:
+                    from swiss_promo_parser import parse_swiss_promo_and_cashback
+                    cb_p, _ = parse_swiss_promo_and_cashback(
+                        str(promo), "", brand_val or brand, int(year) if year else 2025, str(code), int(size) if size else 55, float(price)
+                    )
+                    if cb_p > 0:
+                        cb_val = cb_p
+                except Exception:
+                    pass
             if code and price:
                 products.append({
                     "brand": brand_val or brand,
@@ -765,7 +877,7 @@ def load_products_from_excel(excel_path):
                     "size": int(size) if size else 55,
                     "model_code": str(code),
                     "price": float(price),
-                    "cashback": int(cashback) if cashback is not None else 0,
+                    "cashback": cb_val,
                     "promo": str(promo or "None")
                 })
         return products
@@ -799,6 +911,33 @@ def main():
         print(f"[EXCEL SOURCE MODE] Loading data directly from: {args.excel_source}")
         msh_s, msh_l, id_s, id_l, digi_s, digi_l = load_products_from_excel(args.excel_source)
     else:
+        # Mandatory Pre-flight Live Assertion Gate for Swiss Retailers
+        print("=" * 65)
+        print(" 🛡️ MANDATORY PRE-FLIGHT LIVE ASSERTION GATE (Swiss 3 Retailers)")
+        print("=" * 65)
+        from datetime import datetime
+        today_date_str = datetime.now().strftime("%Y-%m-%d")
+        swiss_raws = [
+            "raw_digitec_samsung.json", "raw_digitec_lg.json",
+            "raw_interdiscount_samsung.json", "raw_interdiscount_lg.json",
+            "raw_mediamarkt_samsung.json", "raw_mediamarkt_lg.json"
+        ]
+        stale_files = []
+        for rf in swiss_raws:
+            p = os.path.join(data_dir, rf)
+            if os.path.exists(p):
+                mtime = datetime.fromtimestamp(os.path.getmtime(p)).strftime("%Y-%m-%d")
+                if mtime != today_date_str:
+                    stale_files.append((rf, mtime))
+            else:
+                stale_files.append((rf, "MISSING"))
+        if stale_files:
+            print(f"❌ [ASSERTION FAILURE] Found {len(stale_files)} stale or missing Swiss raw datasets:")
+            for fname, f_date in stale_files:
+                print(f"   • {fname}: Last modified {f_date} (Expected today: {today_date_str})")
+            raise RuntimeError(f"PRE-FLIGHT ASSERTION FAILED: {len(stale_files)} Swiss files require real-time live scraping for today ({today_date_str}).")
+        print(f"✅ All {len(swiss_raws)} Swiss raw datasets verified fresh for today ({today_date_str})!\n")
+
         digi_s, digi_l = load_digitec_live()
         id_s, id_l = load_interdiscount_live()
         msh_s, msh_l = load_mediamarkt_live()
@@ -861,6 +1000,15 @@ def main():
         
     # Build global cashback mapping - disabled per user request
     global_cashback_map = {}
+
+    # Reconcile with Swiss Master URL Registry (Loss-Prevention & Auto-Registration)
+    print("\n[MASTER REGISTRY RECONCILIATION & AUTO-REGISTRATION]")
+    msh_s = sync_with_swiss_master_registry("MediaMarkt", "Samsung", msh_s)
+    msh_l = sync_with_swiss_master_registry("MediaMarkt", "LG", msh_l)
+    id_s = sync_with_swiss_master_registry("Interdiscount", "Samsung", id_s)
+    id_l = sync_with_swiss_master_registry("Interdiscount", "LG", id_l)
+    digi_s = sync_with_swiss_master_registry("Digitec", "Samsung", digi_s)
+    digi_l = sync_with_swiss_master_registry("Digitec", "LG", digi_l)
 
     # 1. Update Price Tracker
     if os.path.exists(today_pt):

@@ -14,8 +14,9 @@
   {
     "name": "TV Neo QLED 55\" - Samsung TQ55QN70HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Wifi, Negro",
     "title": "TV Neo QLED 55\" - Samsung TQ55QN70HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Wifi, Negro",
-    "price": 649.0,
-    "promo": "None"
+    "price": 599.0,
+    "promo": "None",
+    "original_price": 899.0
   },
   {
     "name": "TV LED 50\" - Samsung TU50U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
@@ -25,9 +26,10 @@
   },
   {
     "name": "TV Mini LED 43\" - Samsung TU43M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
-    "price": "479",
+    "price": 399.0,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 479.0
   },
   {
     "name": "TV LED 98\" - Samsung TU98DU9005KXXC, UHD 4K, Procesador Crystal 4K, Smart TV, DVB-T2 (H.265), G",
@@ -43,9 +45,10 @@
   },
   {
     "name": "TV Mini LED 50\" - Samsung TU50M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negr",
-    "price": "579",
+    "price": 449.0,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 579.0
   },
   {
     "name": "TV OLED 65\" - Samsung TQ65S93FATXXC, UHD 4K, NQ4 AI Gen3, Smart TV, DVB-T2 (H.265), Full AI, Ne",
@@ -163,9 +166,10 @@
   },
   {
     "name": "TV OLED 77\" - Samsung TQ77S93HATXXC, OLED 4K, NQ4 AI Gen3, Smart TV, Full AI, Sin Reflejos, Neg",
-    "price": "3599",
+    "price": 2499.0,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 3599.0
   },
   {
     "name": "TV Neo QLED 85\" - Samsung TQ85QN73HAUXXC, UHD 4K, NQ4 AI Gen1, Smart TV, Full AI, Negro",
@@ -385,9 +389,10 @@
   },
   {
     "name": "TV LED 75\" - Samsung TU75U8075HUXXC, UHD 4K, Crystal Processor 4K, Smart TV, Wifi, Negro",
-    "price": "649",
+    "price": 649.0,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 949.0
   },
   {
     "name": "TV Neo QLED 43\" - Samsung TQ43QN90FATXXC, QLED Mini Led 4K, NQ4 AI Gen3 Processor, Smart TV ful",
@@ -686,13 +691,15 @@
   {
     "name": "TV Mini LED 65\" - Samsung TU65M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negro",
     "title": "TV Mini LED 65\" - Samsung TU65M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negro",
-    "price": 599.0,
-    "promo": "None"
+    "price": 569.0,
+    "promo": "None",
+    "original_price": 779.0
   },
   {
     "name": "TV Mini LED 50\" - Samsung TU50M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negro",
     "title": "TV Mini LED 50\" - Samsung TU50M73HAUXXC, UHD 4K, Mini LED Processor 4K, Smart TV, Full AI, Negro",
-    "price": 429.0,
-    "promo": "None"
+    "price": 449.0,
+    "promo": "None",
+    "original_price": 579.0
   }
 ]

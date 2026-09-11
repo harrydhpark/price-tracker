@@ -10,6 +10,9 @@
         ],
         "eu-price-tracker": [
           "eu-price-tracker-lge"
+        ],
+        "au-price-tracker": [
+          "au-price-tracker-lge"
         ]
       }
     }

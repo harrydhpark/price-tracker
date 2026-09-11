@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html class="light" lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Executive Portal | Australia TV Price & Promo Tracker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#051c2c",
+                        "on-primary": "#ffffff",
+                        "secondary": "#a50034",
+                        "surface": "#f6faff",
+                        "surface-variant": "#ebf5ff",
+                        "outline": "#73777d",
+                        "outline-variant": "#c3c7cc",
+                        "error": "#ba1a1a",
+                        "background": "#ffffff",
+                        "lg-red": "#a50034",
+                        "sam-blue": "#002060"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["\"Source Serif 4\"", "serif"],
+                        "body": ["Inter", "Noto Sans KR", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', 'Noto Sans KR', sans-serif; background-color: #f6faff; color: #051c2c; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Source Serif 4', serif; }
+        .sidebar-item.active { background-color: rgba(255, 255, 255, 0.1); border-right: 4px solid #a50034; }
+        .tab-btn.active { background-color: #051c2c; color: #ffffff; border-color: #051c2c; }
+        .year-btn.active { background-color: #a50034; color: #ffffff; border-color: #a50034; }
+        .price-type-btn.active { background-color: #051c2c; color: #ffffff; border-color: #051c2c; }
+        
+        /* History Accordion Table Styles */
+        .history-row-main {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .history-row-main:hover {
+            background-color: rgba(59, 130, 246, 0.03) !important;
+        }
+        .history-row-child {
+            background-color: #f8fafc;
+            transition: all 0.2s ease;
+        }
+        .history-row-child.hidden {
+            display: none;
+        }
+        .expand-chevron {
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .expand-chevron.rotate {
+            transform: rotate(90deg);
+        }
+
+        /* Sticky Table Styles for History View */
+        .sticky-table-container {
+            max-height: 680px;
+            overflow-x: auto;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            background-color: #ffffff;
+        }
+        .sticky-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        .sticky-table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background-color: #f8fafc;
+            border-bottom: 2px solid #cbd5e1;
+            white-space: nowrap;
+        }
+        .sticky-table thead th.sticky-col,
+        .sticky-table thead th:first-child {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 40;
+            background-color: #f8fafc;
+            border-right: 2px solid #cbd5e1;
+            border-bottom: 2px solid #cbd5e1;
+            min-width: 290px;
+            max-width: 290px;
+            width: 290px;
+        }
+        .sticky-table tbody td.sticky-col,
+        .sticky-table tbody tr.history-row-main td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background-color: #ffffff;
+            border-right: 2px solid #e2e8f0;
+            border-bottom: 1px solid #f1f5f9;
+            min-width: 290px;
+            max-width: 290px;
+            width: 290px;
+        }
+        .sticky-table tbody tr.history-row-main:hover td:first-child {
+            background-color: #f8fafc;
+        }
+        .sticky-table tbody tr.history-row-child td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background-color: #f8fafc;
+            border-right: 2px solid #e2e8f0;
+            border-bottom: 1px solid #f1f5f9;
+            min-width: 290px;
+            max-width: 290px;
+            width: 290px;
+        }
+        .sticky-table tbody tr.history-row-child:hover td:first-child {
+            background-color: #f1f5f9;
+        }
+        .sticky-table tbody td {
+            border-bottom: 1px solid #f1f5f9;
+            white-space: nowrap;
+        }
+
+        /* Top Scrollbar */
+        .top-scrollbar-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 12px;
+            border-radius: 6px;
+            background: #f1f5f9;
+        }
+        .top-scrollbar-wrapper::-webkit-scrollbar {
+            height: 10px;
+        }
+        .top-scrollbar-wrapper::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 5px;
+        }
+        .top-scrollbar-wrapper::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+        .top-scrollbar-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        .sticky-table-container::-webkit-scrollbar {
+            height: 10px;
+            width: 10px;
+        }
+        .sticky-table-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 5px;
+        }
+        .sticky-table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 5px;
+        }
+        .sticky-table-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+    <!-- Sidebar Navigation -->
+    <aside class="w-72 bg-primary text-white fixed h-screen flex flex-col z-50 shadow-lg">
+        <div class="p-8 border-b border-white/10 flex-shrink-0">
+            <div class="flex items-center gap-2.5 mb-2">
+                <svg class="w-6 h-6 text-white/80 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <h1 class="text-xl font-bold tracking-tight">Price Portal</h1>
+            </div>
+            <p class="text-[10px] text-white/50 uppercase tracking-[0.2em] font-medium">LGE SWISS MARKET PRICE TRACKING</p>
+        </div>
+        
+        <nav class="flex-1 py-8 px-4 space-y-2 overflow-y-auto" id="sidebar-nav">
+            <button class="sidebar-item active w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_retailer" onclick="switchMenu('retailer')">
+                <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-2 9H5L3 3zm0 9v7a2 2 0 002 2h14a2 2 0 002-2v-7M9 21V12m6 9V12"/>
+                </svg>
+                <span class="font-medium text-sm">유통별 가격비교</span>
+            </button>
+            <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_display" onclick="switchMenu('display')">
+                <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                </svg>
+                <span class="font-medium text-sm">제품군별 가격비교</span>
+            </button>
+            <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_history" onclick="switchMenu('history')">
+                <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                <span class="font-medium text-sm">일자별 가격비교</span>
+            </button>
+            <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_weekly_change" onclick="switchMenu('weekly_change')">
+                <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                <span class="font-medium text-sm">주간 가격/프로모션 변동 사항</span>
+            </button>
+        </nav>
+        
+        <div class="p-8 border-t border-white/10 bg-black/10 flex flex-col gap-1 text-[10px] text-white/40 font-sans tracking-tight leading-relaxed">
+            <p class="font-bold text-white/50 text-[11px] mb-1">System Admin</p>
+            <p class="text-white/60">Harry Park</p>
+            <p><a href="mailto:harry.park@lge.com" class="hover:text-secondary text-white/50 underline decoration-white/20 transition-all">harry.park@lge.com</a></p>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ml-72 flex-1 flex flex-col min-h-screen">
+        <!-- Top Header -->
+        <header class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-12 sticky top-0 z-40">
+            <div class="flex items-center gap-6">
+                <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Swiss Price Analysis</span>
+                <div class="h-4 w-px bg-slate-200"></div>
+                <p class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">조사일: {{SURVEY_DATE}}</p>
+                <div class="h-4 w-px bg-slate-200"></div>
+                <p class="text-sm font-semibold text-slate-700" id="current-menu-title">유통별 가격비교</p>
+            </div>
+            
+            <!-- Year & Price Type Slicers -->
+            <div class="flex items-center gap-8" id="header_controls">
+                <!-- Price Type Slicer -->
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Price Type</span>
+                    <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all active" id="price_type_raw" onclick="switchPriceType('raw')">판매가</button>
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all" id="price_type_net" onclick="switchPriceType('net')">실질가 (캐시백반영)</button>
+                    </div>
+                </div>
+                <!-- Year Slicer -->
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Model Year</span>
+                    <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
+                        <button type="button" class="year-btn px-4 py-1.5 text-xs font-bold rounded transition-all active" id="year_2026" onclick="switchYear(2026)">2026년형</button>
+                        <button type="button" class="year-btn px-4 py-1.5 text-xs font-bold rounded transition-all" id="year_2025" onclick="switchYear(2025)">2025년형</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Container -->
+        <div class="p-12 max-w-7xl mx-auto w-full flex-1">
+            <!-- Page Header -->
+            <div class="mb-8 border-b border-slate-200 pb-6 flex items-center justify-between">
+                <div>
+                    <h2 class="text-3xl font-headline font-bold text-primary mb-2" id="page-headline-title">유통 채널별 TV 가격 비교</h2>
+                    <p class="text-sm text-slate-500">실시간 스크래핑 데이터 기반 엘지와 삼성의 동일 포지셔닝 대응 라인업 가격 분석</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold block mb-1">Last Update Basis</span>
+                    <span class="text-sm font-semibold bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full border border-emerald-200">Live Scraped Data ({{SURVEY_DATE_DOT}})</span>
+                </div>
+            </div>
+
+            <!-- View 1: Retailer Analysis -->
+            <div id="view_retailer" class="dashboard-view block">
+                <!-- Retailer Slices -->
+                <div class="bg-white p-4 border border-slate-200 rounded-xl flex items-center justify-between mb-8 shadow-sm">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button class="tab-btn px-6 py-2.5 text-xs font-bold border border-slate-200 rounded transition-all active" id="btn_ret_msh" onclick="selectRetailer('JB Hi-Fi')">JB Hi-Fi</button>
+                        <button class="tab-btn px-6 py-2.5 text-xs font-bold border border-slate-200 rounded transition-all" id="btn_ret_id" onclick="selectRetailer('The Good Guys')">The Good Guys</button>
+                        <button class="tab-btn px-6 py-2.5 text-xs font-bold border border-slate-200 rounded transition-all" id="btn_ret_digi" onclick="selectRetailer('Harvey Norman')">Harvey Norman</button>
+                    </div>
+                    <div class="text-xs text-slate-400 font-semibold" id="ret_indicator_label">Current Retailer: MediaMarkt</div>
+                </div>
+
+                <!-- Charts Container for Retailer View -->
+                <div class="space-y-8" id="retailer_charts_box">
+                    <!-- Dynamic charts will be injected here -->
+                </div>
+            </div>
+
+            <!-- View 2: Display Type Analysis -->
+            <div id="view_display" class="dashboard-view hidden">
+                <!-- Display Slices -->
+                <div class="bg-white p-4 border border-slate-200 rounded-xl flex items-center justify-between mb-8 shadow-sm">
+                    <div class="flex flex-wrap items-center gap-2" id="display-tab-buttons-container">
+                        <!-- Buttons dynamically generated -->
+                    </div>
+                    <div class="text-xs text-slate-400 font-semibold" id="disp_indicator_label">Current Display: OLED</div>
+                </div>
+
+                <!-- Charts Container for Display View -->
+                <div class="space-y-8" id="display_charts_box">
+                    <!-- Dynamic charts will be injected here -->
+                </div>
+            </div>
+
+            <!-- View 3: Historical Trend Analysis (Refactored to Table-Only Accordion Layout) -->
+            <div id="view_history" class="dashboard-view hidden">
+                <!-- Info Header -->
+                <div class="bg-white p-6 border border-slate-200 rounded-xl flex flex-col mb-8 shadow-sm gap-4">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-800">일자별 가격 비교 테이블 (Historical Price Table)</h2>
+                            <p class="text-xs text-slate-400 mt-1">조사 일자별 모델 및 유통채널의 가격 변동 내역입니다. 모델 행을 클릭하면 상세 유통채널(Interdiscount, Digitec) 가격이 확장됩니다.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg transition-all" onclick="toggleAllHistory(true)">모두 펼치기</button>
+                            <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg transition-all" onclick="toggleAllHistory(false)">모두 접기</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filters Grid -->
+                    <div class="flex flex-col gap-3.5 border-t border-slate-100 pt-4 w-full">
+                        <!-- 2026 Category Tabs -->
+                        <div class="flex flex-wrap items-center gap-4">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider w-20">2026년형 제품군</span>
+                            <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
+                                <button type="button" class="hist-cat-btn-2026 px-4 py-1 text-xs font-bold rounded transition-all active bg-primary text-white" id="btn_hist_cat_2026_oled" onclick="switchHistoryCategory('2026', 'OLED')">OLED 제품군</button>
+                                <button type="button" class="hist-cat-btn-2026 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="btn_hist_cat_2026_mrgb" onclick="switchHistoryCategory('2026', 'MRGB')">MRGB 제품군</button>
+                                <button type="button" class="hist-cat-btn-2026 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="btn_hist_cat_2026_qned" onclick="switchHistoryCategory('2026', 'QNED/QLED')">QNED/QLED 제품군</button>
+                                <button type="button" class="hist-cat-btn-2026 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="btn_hist_cat_2026_uhd" onclick="switchHistoryCategory('2026', 'UHD 4K')">UHD 4K 제품군</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 2025 Category Tabs -->
+                        <div class="flex flex-wrap items-center gap-4 mt-1">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider w-20">2025년형 제품군</span>
+                            <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
+                                <button type="button" class="hist-cat-btn-2025 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 bg-white hover:bg-slate-200/50" id="btn_hist_cat_2025_oled" onclick="switchHistoryCategory('2025', 'OLED')">OLED 제품군</button>
+                                <button type="button" class="hist-cat-btn-2025 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="btn_hist_cat_2025_qned" onclick="switchHistoryCategory('2025', 'QNED/QLED')">QNED/QLED 제품군</button>
+                                <button type="button" class="hist-cat-btn-2025 px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="btn_hist_cat_2025_uhd" onclick="switchHistoryCategory('2025', 'UHD 4K')">UHD 4K 제품군</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Brand Selector -->
+                        <div class="flex items-center gap-4 border-t border-slate-100 pt-3.5 mt-1">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider w-20">브랜드 필터</span>
+                            <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
+                                <button type="button" class="brand-filter-btn px-4 py-1 text-xs font-bold rounded transition-all active bg-primary text-white" id="brand_all" onclick="switchHistoryBrand('all')">전체 (All)</button>
+                                <button type="button" class="brand-filter-btn px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-slate-200/50" id="brand_lg" onclick="switchHistoryBrand('lg')">LG</button>
+                                <button type="button" class="brand-filter-btn px-4 py-1 text-xs font-bold rounded transition-all text-slate-600 hover:bg-sam-blue hover:text-white" id="brand_sam" onclick="switchHistoryBrand('sam')">삼성 (Samsung)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 Models Card -->
+                <div id="card_history_2026" class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 mb-8 hover:shadow-md transition-all">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                        <h3 class="text-lg font-bold font-headline text-primary flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-[#002060] rounded-full"></span>
+                            2026년 모델 가격 변동 (2026 Models)
+                        </h3>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">주차별 최초 조사일 기준 (Earliest Date/Week)</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-100 px-2.5 py-1 rounded">2026 Generation</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Synchronized Scrollbar -->
+                    <div id="top_scroll_2026" class="top-scrollbar-wrapper overflow-x-auto overflow-y-hidden mb-2 hidden">
+                        <div id="top_scroll_inner_2026" class="h-2"></div>
+                    </div>
+                    
+                    <!-- Sticky Table Container -->
+                    <div id="table_container_2026" class="sticky-table-container overflow-x-auto max-h-[680px] overflow-y-auto border border-slate-200 rounded-lg shadow-inner">
+                        <table id="table_history_2026" class="sticky-table w-full text-left border-collapse">
+                            <thead>
+                                <tr id="history_header_2026">
+                                    <th class="sticky-col px-6 py-4 font-semibold text-slate-600 uppercase tracking-wider text-xs bg-slate-50">모델 / 유통채널</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history_body_2026" class="divide-y divide-slate-100">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 2025 Models Card -->
+                <div id="card_history_2025" class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 mb-8 hover:shadow-md transition-all hidden">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                        <h3 class="text-lg font-bold font-headline text-primary flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-slate-400 rounded-full"></span>
+                            2025년 모델 가격 변동 (2025 Models)
+                        </h3>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">주차별 최초 조사일 기준 (Earliest Date/Week)</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-100 px-2.5 py-1 rounded">2025 Generation</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Synchronized Scrollbar -->
+                    <div id="top_scroll_2025" class="top-scrollbar-wrapper overflow-x-auto overflow-y-hidden mb-2 hidden">
+                        <div id="top_scroll_inner_2025" class="h-2"></div>
+                    </div>
+                    
+                    <!-- Sticky Table Container -->
+                    <div id="table_container_2025" class="sticky-table-container overflow-x-auto max-h-[680px] overflow-y-auto border border-slate-200 rounded-lg shadow-inner">
+                        <table id="table_history_2025" class="sticky-table w-full text-left border-collapse">
+                            <thead>
+                                <tr id="history_header_2025">
+                                    <th class="sticky-col px-6 py-4 font-semibold text-slate-600 uppercase tracking-wider text-xs bg-slate-50">모델 / 유통채널</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history_body_2025" class="divide-y divide-slate-100">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Price & Promotion Changes View -->
+            <div id="view_weekly_change" class="dashboard-view hidden space-y-8">
+                <!-- Page Subtitle & Description Banner -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                            </span>
+                            <h2 class="text-xl font-bold font-headline text-primary">주간 가격 및 프로모션 변동 분석</h2>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">호주 3대 유통 채널(MediaMarkt, Interdiscount, Digitec)의 판매가, 실구매가(Net), 캐시백 및 프로모션 문구 변동 내역을 전주 대비 전수 비교하여 요약 분석합니다.</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">비교 주차 선택:</span>
+                        <div class="inline-flex rounded-lg shadow-sm bg-slate-100 p-1" role="group" id="weekly_change_week_tabs">
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all active bg-primary text-white" id="btn_week_w37" onclick="switchWeeklyChangeWeek('W37')">W37(09.07)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w36" onclick="switchWeeklyChangeWeek('W36')">W36(09.03)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w35" onclick="switchWeeklyChangeWeek('W35')">W35(08.28)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w34" onclick="switchWeeklyChangeWeek('W34')">W34(08.17)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w33" onclick="switchWeeklyChangeWeek('W33')">W33(08.14)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w32" onclick="switchWeeklyChangeWeek('W32')">W32(08.06)</button>
+                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w31" onclick="switchWeeklyChangeWeek('W31')">W31(07.28)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Retailer Breakdown Summary Badges -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-primary"></span> 호주 3대 유통 주간 변동 요약('26년 모델 Only)
+                        </h4>
+                        <span class="text-[11px] text-slate-400" id="weekly_retailer_summary_note">클릭하여 해당 유통 필터링</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="weekly_retailer_pills_container">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+
+                <!-- Filter Toolbar & Detailed Table Container -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-all">
+                    <!-- Filters Section -->
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <!-- Retailer Filter -->
+                            <div class="flex items-center gap-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">유통채널:</label>
+                                <select id="weekly_retailer_select" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" onchange="switchWeeklyRetailer(this.value)">
+                                    <option value="ALL">전체 유통 (3개 유통)</option>
+                                    <option value="JB Hi-Fi">JB Hi-Fi</option>
+                                    <option value="The Good Guys">The Good Guys</option>
+                                    <option value="Harvey Norman">Harvey Norman</option>
+                                </select>
+                            </div>
+
+                            <!-- Brand Filter -->
+                            <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md active bg-white text-primary shadow-sm" id="btn_weekly_brand_all" onclick="switchWeeklyBrand('ALL')">전체</button>
+                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_lg" onclick="switchWeeklyBrand('LG')">LG</button>
+                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_sam" onclick="switchWeeklyBrand('SAMSUNG')">Samsung</button>
+                            </div>
+
+                            <!-- Change Type Filter -->
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all active bg-primary text-white" id="btn_weekly_type_all" onclick="switchWeeklyType('ALL')">전체 변동</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700" id="btn_weekly_type_drop" onclick="switchWeeklyType('PRICE_DROP')">📉 가격 인하만</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-rose-50 hover:text-rose-700" id="btn_weekly_type_hike" onclick="switchWeeklyType('PRICE_HIKE')">📈 가격 인상만</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-purple-50 hover:text-purple-700" id="btn_weekly_type_promo" onclick="switchWeeklyType('PROMO')">🎁 프로모션 변동</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-700" id="btn_weekly_type_new" onclick="switchWeeklyType('NEW_MODEL')">🆕 신규 모델</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-amber-50 hover:text-amber-700" id="btn_weekly_type_bm" onclick="switchWeeklyType('BENCHMARK')">⭐ 전략 페어만</button>
+                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" id="btn_weekly_type_delisted" onclick="switchWeeklyType('DELISTED')">❌ 품절/단종만</button>
+                            </div>
+                        </div>
+
+                        <!-- Search Input -->
+                        <div class="relative w-full lg:w-64">
+                            <svg class="absolute inset-y-0 left-0 pl-3 w-7 h-7 my-auto text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <input type="text" id="weekly_search_input" placeholder="모델명, 시리즈 검색..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" oninput="onWeeklySearch(this.value)">
+                        </div>
+                    </div>
+
+                    <!-- Items Count & Results Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-sm font-bold text-primary flex items-center gap-2">
+                            <span class="w-2 h-4 bg-secondary rounded-full"></span>
+                            변동 상세 내역 (<span id="weekly_filtered_count">0</span>건)
+                        </h3>
+                        <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded" id="weekly_period_badge">W33(08.14) vs W32(08.06)</span>
+                    </div>
+
+                    <!-- Comparison Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-200 bg-slate-50/60 text-slate-500 font-semibold text-xs tracking-wider">
+                                    <th class="px-4 py-3.5 text-center">유통채널</th>
+                                    <th class="px-4 py-3.5 text-center">브랜드/연도</th>
+                                    <th class="px-4 py-3.5">제품군 / 인치</th>
+                                    <th class="px-4 py-3.5">모델코드 / 제품명</th>
+                                    <th class="px-4 py-3.5 text-right">전주 판매가 ➔ 금주 판매가</th>
+                                    <th class="px-4 py-3.5 text-right">실구매가 (Net)</th>
+                                    <th class="px-4 py-3.5">프로모션 변동 내역 (전주 ➔ 금주)</th>
+                                    <th class="px-4 py-3.5 text-center">구분</th>
+                                </tr>
+                            </thead>
+                            <tbody id="weekly_table_body" class="divide-y divide-slate-100 text-xs">
+                                <!-- Filled dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Embedded Data Object -->
+    <script>
+        // Data injected by python builder
+        // {{INSERT_PRICE_DATA}}
+        
+        // Active selections
+        let currentMenu = 'retailer'; // 'retailer', 'display' or 'history'
+        let currentYear = 2026;
+        let currentPriceType = 'raw'; // 'raw' or 'net'
+        let selectedRetailer = 'JB Hi-Fi';
+        let selectedDisplayType = 'OLED';
+        let activeHistoryBrand = 'all'; // 'all', 'lg', or 'sam'
+        let activeCategory2026 = 'OLED';
+        let activeCategory2025 = null;
+        
+        // Track rendered chart objects to destroy properly on updates
+        let chartInstances = [];
+
+        function switchMenu(menu) {
+            currentMenu = menu;
+            document.querySelectorAll('.sidebar-item').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.dashboard-view').forEach(view => view.classList.add('hidden'));
+            
+            const headerControls = document.getElementById('header_controls');
+            if (menu === 'weekly_change') {
+                if (headerControls) headerControls.classList.add('hidden');
+                document.getElementById('menu_weekly_change').classList.add('active');
+                document.getElementById('view_weekly_change').classList.remove('hidden');
+                document.getElementById('current-menu-title').innerText = '주간 가격/프로모션 변동 사항';
+                document.getElementById('page-headline-title').innerText = '주간 가격 및 프로모션 변동 분석';
+                renderWeeklyChangeView();
+            } else {
+                if (headerControls) headerControls.classList.remove('hidden');
+                if (menu === 'retailer') {
+                    document.getElementById('menu_retailer').classList.add('active');
+                    document.getElementById('view_retailer').classList.remove('hidden');
+                    document.getElementById('current-menu-title').innerText = '유통별 가격비교';
+                    document.getElementById('page-headline-title').innerText = '유통 채널별 TV 가격 비교';
+                    renderRetailerView();
+                } else if (menu === 'display') {
+                    document.getElementById('menu_display').classList.add('active');
+                    document.getElementById('view_display').classList.remove('hidden');
+                    document.getElementById('current-menu-title').innerText = '제품군별 가격비교';
+                    document.getElementById('page-headline-title').innerText = '제품군별 TV 가격 비교';
+                    renderDisplayView();
+                } else if (menu === 'history') {
+                    document.getElementById('menu_history').classList.add('active');
+                    document.getElementById('view_history').classList.remove('hidden');
+                    document.getElementById('current-menu-title').innerText = '일자별 가격비교';
+                    document.getElementById('page-headline-title').innerText = '일자별 모델 가격 추이 비교';
+                    updateHistoryModelSelect();
+                    renderHistoryView();
+                }
+            }
+        }
+
+        function switchPriceType(type) {
+            currentPriceType = type;
+            document.querySelectorAll('.price-type-btn').forEach(btn => btn.classList.remove('active'));
+            if (type === 'raw') document.getElementById('price_type_raw').classList.add('active');
+            else document.getElementById('price_type_net').classList.add('active');
+            
+            // Re-render active view
+            if (currentMenu === 'retailer') {
+                renderRetailerView();
+            } else if (currentMenu === 'display') {
+                renderDisplayView();
+            } else if (currentMenu === 'history') {
+                renderHistoryView();
+            } else if (currentMenu === 'weekly_change') {
+                renderWeeklyChangeView();
+            }
+        }
+
+        // ==========================================
+        // Swiss Weekly Price & Promotion Changes Logic
+        // ==========================================
+        let currentWeeklyChangeWeek = 'W37';
+        let selectedWeeklyRetailer = 'ALL';
+        let selectedWeeklyBrand = 'ALL';
+        let selectedWeeklyType = 'ALL';
+        let weeklySearchQuery = '';
+
+        function switchWeeklyChangeWeek(weekKey) {
+            currentWeeklyChangeWeek = weekKey;
+            document.querySelectorAll('.weekly-week-tab').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('text-slate-600');
+            });
+            const activeBtn = document.getElementById('btn_week_' + weekKey.toLowerCase());
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-primary', 'text-white');
+                activeBtn.classList.remove('text-slate-600');
+            }
+            renderWeeklyChangeView();
+        }
+
+        function switchWeeklyRetailer(ret) {
+            selectedWeeklyRetailer = ret;
+            const selectEl = document.getElementById('weekly_retailer_select');
+            if (selectEl) selectEl.value = ret;
+            renderWeeklyChangeView();
+        }
+
+        function switchWeeklyBrand(brand) {
+            selectedWeeklyBrand = brand;
+            document.querySelectorAll('.weekly-brand-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm');
+                btn.classList.add('text-slate-600');
+            });
+            const activeBtn = document.getElementById('btn_weekly_brand_' + brand.toLowerCase());
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
+                activeBtn.classList.remove('text-slate-600');
+            }
+            renderWeeklyChangeView();
+        }
+
+        function switchWeeklyType(type) {
+            selectedWeeklyType = type;
+            document.querySelectorAll('.weekly-type-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+            
+            let btnId = 'btn_weekly_type_all';
+            if (type === 'PRICE_DROP') btnId = 'btn_weekly_type_drop';
+            else if (type === 'PRICE_HIKE') btnId = 'btn_weekly_type_hike';
+            else if (type === 'PROMO') btnId = 'btn_weekly_type_promo';
+            else if (type === 'NEW_MODEL') btnId = 'btn_weekly_type_new';
+            else if (type === 'BENCHMARK') btnId = 'btn_weekly_type_bm';
+            else if (type === 'DELISTED') btnId = 'btn_weekly_type_delisted';
+            
+            const activeBtn = document.getElementById(btnId);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-primary', 'text-white');
+                activeBtn.classList.remove('bg-slate-100', 'text-slate-600');
+            }
+            renderWeeklyChangeView();
+        }
+
+        function onWeeklySearch(query) {
+            weeklySearchQuery = (query || '').toLowerCase().trim();
+            renderWeeklyChangeView();
+        }
+
+        function renderWeeklyChangeView() {
+            const weeklyData = (priceData && priceData.weekly_changes) ? priceData.weekly_changes[currentWeeklyChangeWeek] : null;
+            if (!weeklyData) {
+                const tbody = document.getElementById('weekly_table_body');
+                if (tbody) tbody.innerHTML = '<tr><td colspan="8" class="text-center py-8 text-slate-400">해당 주차의 변동 데이터가 없습니다.</td></tr>';
+                return;
+            }
+
+            // Update Period Badge
+            const periodBadge = document.getElementById('weekly_period_badge');
+            if (periodBadge) periodBadge.innerText = weeklyData.period || currentWeeklyChangeWeek;
+
+            // Retailer Breakdown Pills
+            const pillsContainer = document.getElementById('weekly_retailer_pills_container');
+            if (pillsContainer) {
+                const retList = ['JB Hi-Fi', 'The Good Guys', 'Harvey Norman'];
+                let pillsHtml = '';
+                retList.forEach(r => {
+                    const rStat = (weeklyData.retailer_stats && weeklyData.retailer_stats[r]) ? weeklyData.retailer_stats[r] : { drops: 0, hikes: 0, promos: 0, news: 0, delisted: 0 };
+                    const isSelected = selectedWeeklyRetailer === r;
+                    
+                    let retBadgeClass = 'bg-rose-50 text-rose-700 border-rose-200';
+                    let retIcon = 'storefront';
+                    if (r === 'JB Hi-Fi') {
+                        retBadgeClass = 'bg-rose-50 text-rose-700 border-rose-200';
+                    } else if (r === 'The Good Guys') {
+                        retBadgeClass = 'bg-blue-50 text-blue-700 border-blue-200';
+                    } else if (r === 'Harvey Norman') {
+                        retBadgeClass = 'bg-teal-50 text-teal-700 border-teal-200';
+                    }
+
+                    pillsHtml += `
+                        <div onclick="switchWeeklyRetailer('${r === selectedWeeklyRetailer ? 'ALL' : r}')" 
+                             class="cursor-pointer border rounded-xl p-4 transition-all duration-200 ${isSelected ? 'border-primary bg-primary/5 ring-2 ring-primary/20 shadow-sm' : 'border-slate-200/80 bg-white hover:border-slate-300 hover:shadow-sm'}">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-bold text-sm text-slate-800 flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-lg ${retBadgeClass} flex items-center justify-center border flex-shrink-0">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-2 9H5L3 3zm0 9v7a2 2 0 002 2h14a2 2 0 002-2v-7M9 21V12m6 9V12"/>
+                                        </svg>
+                                    </span>
+                                    ${r}
+                                </span>
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${isSelected ? 'bg-primary text-white' : 'bg-slate-100 text-slate-600'}">
+                                    ${isSelected ? '선택됨' : '전체보기'}
+                                </span>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2 text-center pt-2 border-t border-slate-100">
+                                <div class="bg-emerald-50/70 rounded-lg py-1.5 px-1 border border-emerald-100">
+                                    <span class="block text-[10px] text-emerald-600 font-semibold mb-0.5">인하</span>
+                                    <span class="text-xs font-bold text-emerald-700">${rStat.drops}</span>
+                                </div>
+                                <div class="bg-rose-50/70 rounded-lg py-1.5 px-1 border border-rose-100">
+                                    <span class="block text-[10px] text-rose-600 font-semibold mb-0.5">인상</span>
+                                    <span class="text-xs font-bold text-rose-700">${rStat.hikes}</span>
+                                </div>
+                                <div class="bg-purple-50/70 rounded-lg py-1.5 px-1 border border-purple-100">
+                                    <span class="block text-[10px] text-purple-600 font-semibold mb-0.5">프로모</span>
+                                    <span class="text-xs font-bold text-purple-700">${rStat.promos}</span>
+                                </div>
+                                <div class="bg-blue-50/70 rounded-lg py-1.5 px-1 border border-blue-100">
+                                    <span class="block text-[10px] text-blue-600 font-semibold mb-0.5">신규</span>
+                                    <span class="text-xs font-bold text-blue-700">${rStat.news}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                pillsContainer.innerHTML = pillsHtml;
+            }
+
+            // Filter items
+            const allItems = weeklyData.items || [];
+            const filteredItems = allItems.filter(item => {
+                // Retailer filter
+                if (selectedWeeklyRetailer !== 'ALL' && item.retailer !== selectedWeeklyRetailer) return false;
+                
+                // Brand filter
+                if (selectedWeeklyBrand !== 'ALL' && item.brand.toUpperCase() !== selectedWeeklyBrand.toUpperCase()) return false;
+                
+                // Change type filter
+                if (selectedWeeklyType === 'ALL' && item.tags.includes('DELISTED')) return false;
+                if (selectedWeeklyType === 'PRICE_DROP' && !item.tags.includes('PRICE_DROP')) return false;
+                if (selectedWeeklyType === 'PRICE_HIKE' && !item.tags.includes('PRICE_HIKE')) return false;
+                if (selectedWeeklyType === 'PROMO' && !item.tags.some(t => t.startsWith('PROMO') || t === 'CASHBACK_CHANGED')) return false;
+                if (selectedWeeklyType === 'NEW_MODEL' && !item.tags.includes('NEW_MODEL')) return false;
+                if (selectedWeeklyType === 'BENCHMARK' && !item.is_benchmark_pair) return false;
+                if (selectedWeeklyType === 'DELISTED' && !item.tags.includes('DELISTED')) return false;
+                
+                // Search query
+                if (weeklySearchQuery) {
+                    const text = `${item.model_code} ${item.title} ${item.display} ${item.retailer} ${item.brand}`.toLowerCase();
+                    if (!text.includes(weeklySearchQuery)) return false;
+                }
+                
+                return true;
+            });
+
+            // Update count
+            const countEl = document.getElementById('weekly_filtered_count');
+            if (countEl) countEl.innerText = filteredItems.length.toLocaleString();
+
+            // Render Table Rows
+            const tbody = document.getElementById('weekly_table_body');
+            if (!tbody) return;
+
+            if (filteredItems.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" class="text-center py-12 text-slate-400 font-medium">선택한 조건에 해당하는 주간 변동 내역이 없습니다.</td></tr>';
+                return;
+            }
+
+            let rowsHtml = '';
+            filteredItems.forEach(item => {
+                const isLG = item.brand.toUpperCase() === 'LG';
+                const brandBadge = isLG 
+                    ? '<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#a50034]/10 text-[#a50034] border border-[#a50034]/20">LG</span>'
+                    : '<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#002060]/10 text-[#002060] border border-[#002060]/20">Samsung</span>';
+
+                const bmBadge = item.is_benchmark_pair 
+                    ? '<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-50 text-amber-700 border border-amber-200">⭐ 전략페어</span>'
+                    : '';
+
+                // Retailer Badge
+                let retClass = 'bg-slate-100 text-slate-700 border-slate-200';
+                if (item.retailer === 'JB Hi-Fi') retClass = 'bg-rose-50 text-rose-700 border-rose-200';
+                else if (item.retailer === 'The Good Guys') retClass = 'bg-blue-50 text-blue-700 border-blue-200';
+                else if (item.retailer === 'Harvey Norman') retClass = 'bg-teal-50 text-teal-700 border-teal-200';
+                
+                const retBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold border ${retClass}">${item.retailer}</span>`;
+
+                // Price display & Diff
+                let priceHtml = '';
+                if (item.tags.includes('NEW_MODEL')) {
+                    priceHtml = `<span class="font-bold text-slate-800">${formatA$(item.curr_price)}</span> <span class="text-[10px] text-blue-600 font-bold bg-blue-50 px-1.5 py-0.5 rounded">신규출시</span>`;
+                } else if (item.tags.includes('DELISTED')) {
+                    priceHtml = `<span class="text-slate-400 line-through">${formatA$(item.prev_price)}</span> <span class="text-[10px] text-slate-500 font-medium bg-slate-100 px-1.5 py-0.5 rounded">품절/단종</span>`;
+                } else {
+                    const isDrop = item.price_diff < 0;
+                    const isHike = item.price_diff > 0;
+                    
+                    let diffBadge = '';
+                    if (isDrop) {
+                        diffBadge = `<span class="inline-flex items-center font-bold text-emerald-600 text-[11px]"><svg class="w-3.5 h-3.5 mr-0.5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>-${formatA$(Math.abs(item.price_diff))} (${item.price_diff_pct}%)</span>`;
+                    } else if (isHike) {
+                        diffBadge = `<span class="inline-flex items-center font-bold text-rose-600 text-[11px]"><svg class="w-3.5 h-3.5 mr-0.5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>+${formatA$(item.price_diff)} (+${item.price_diff_pct}%)</span>`;
+                    } else {
+                        diffBadge = `<span class="text-slate-400 text-[10px]">변동없음</span>`;
+                    }
+
+                    priceHtml = `
+                        <div class="flex flex-col items-end gap-0.5">
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-slate-400 text-[11px] ${isDrop || isHike ? 'line-through' : ''}">${formatA$(item.prev_price)}</span>
+                                <span class="text-slate-300 text-[10px]">➔</span>
+                                <span class="font-bold text-slate-900 ${isDrop ? 'text-emerald-700' : (isHike ? 'text-rose-700' : '')}">${formatA$(item.curr_price)}</span>
+                            </div>
+                            <div>${diffBadge}</div>
+                        </div>
+                    `;
+                }
+
+                // Net Price display
+                let netHtml = '';
+                if (item.curr_net > 0) {
+                    const hasCb = item.curr_cb > 0;
+                    netHtml = `
+                        <div class="flex flex-col items-end">
+                            <span class="font-bold text-slate-800">${formatA$(item.curr_net)}</span>
+                            ${hasCb ? `<span class="text-[9px] text-purple-600 font-semibold bg-purple-50 px-1 py-0.2 rounded mt-0.5">CB -${formatA$(item.curr_cb)}</span>` : ''}
+                        </div>
+                    `;
+                } else if (item.prev_net > 0 && item.tags.includes('DELISTED')) {
+                    netHtml = `<span class="text-slate-400 text-[11px] line-through">${formatA$(item.prev_net)}</span>`;
+                } else {
+                    netHtml = '<span class="text-slate-300">-</span>';
+                }
+
+                // Promotion Details
+                let promoHtml = '';
+                if (item.tags.includes('PROMO_NEW')) {
+                    promoHtml = `<div class="flex items-start gap-1"><span class="text-emerald-600 font-bold text-[10px] bg-emerald-50 px-1.5 py-0.5 rounded flex-shrink-0">신규적용</span> <span class="text-slate-700 text-xs">${item.curr_promo}</span></div>`;
+                } else if (item.tags.includes('PROMO_ENDED')) {
+                    promoHtml = `<div class="flex items-start gap-1"><span class="text-rose-600 font-bold text-[10px] bg-rose-50 px-1.5 py-0.5 rounded flex-shrink-0">종료</span> <span class="text-slate-400 line-through text-xs">${item.prev_promo}</span></div>`;
+                } else if (item.tags.includes('PROMO_CHANGED') || item.tags.includes('CASHBACK_CHANGED')) {
+                    promoHtml = `
+                        <div class="space-y-0.5">
+                            <div class="text-slate-400 text-[11px] line-through">이전: ${item.prev_promo || '없음'}</div>
+                            <div class="text-purple-700 font-medium text-xs flex items-center gap-1"><span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-1 rounded">변경</span> ${item.curr_promo || '없음'}</div>
+                        </div>
+                    `;
+                } else if (item.curr_promo && item.curr_promo !== 'None' && item.curr_promo !== '-') {
+                    promoHtml = `<span class="text-slate-600 text-xs">${item.curr_promo}</span>`;
+                } else {
+                    promoHtml = '<span class="text-slate-300">-</span>';
+                }
+
+                // Type Tags
+                let tagBadges = '';
+                item.tags.forEach(t => {
+                    if (t === 'PRICE_DROP') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-100 text-emerald-800">📉 가격인하</span> ';
+                    else if (t === 'PRICE_HIKE') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-rose-100 text-rose-800">📈 가격인상</span> ';
+                    else if (t === 'PROMO_NEW') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-purple-100 text-purple-800">🎁 신규혜택</span> ';
+                    else if (t === 'PROMO_ENDED') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-100 text-slate-600">혜택종료</span> ';
+                    else if (t === 'PROMO_CHANGED') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-purple-50 text-purple-700">프로모변경</span> ';
+                    else if (t === 'CASHBACK_CHANGED') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-indigo-100 text-indigo-800">캐시백변동</span> ';
+                    else if (t === 'NEW_MODEL') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-blue-100 text-blue-800">🆕 신규</span> ';
+                    else if (t === 'DELISTED') tagBadges += '<span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-100 text-slate-500">품절</span> ';
+                });
+
+                rowsHtml += `
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                        <td class="px-4 py-3 text-center whitespace-nowrap">${retBadge}</td>
+                        <td class="px-4 py-3 text-center whitespace-nowrap">
+                            <div class="flex items-center justify-center gap-1">
+                                ${brandBadge}
+                                <span class="text-[10px] font-semibold text-slate-400">'26</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3 whitespace-nowrap">
+                            <div class="font-bold text-slate-800">${item.size}" <span class="font-normal text-slate-500 text-[11px]">(${item.display})</span></div>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <span class="font-bold text-slate-900 font-mono text-xs">${item.model_code}</span>
+                                ${bmBadge}
+                            </div>
+                            <div class="text-[11px] text-slate-500 truncate max-w-xs mt-0.5" title="${item.title}">${item.title}</div>
+                        </td>
+                        <td class="px-4 py-3 text-right whitespace-nowrap">${priceHtml}</td>
+                        <td class="px-4 py-3 text-right whitespace-nowrap">${netHtml}</td>
+                        <td class="px-4 py-3 max-w-sm">${promoHtml}</td>
+                        <td class="px-4 py-3 text-center whitespace-nowrap">${tagBadges}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = rowsHtml;
+        }
+
+        function formatA$(num) {
+            if (num === null || num === undefined || isNaN(num)) return '-';
+            return 'A$ ' + Math.round(num).toLocaleString();
+        }
+
+        function updateDisplayTabButtons() {
+            const container = document.getElementById('display-tab-buttons-container');
+            if (!container) return;
+            
+            let categories = [];
+            if (currentYear === 2026) {
+                categories = [
+                    { id: 'OLED', label: 'OLED 제품군' },
+                    { id: 'MRGB', label: 'MRGB 제품군' },
+                    { id: 'QNED/QLED', label: 'QNED/QLED 제품군' },
+                    { id: 'UHD 4K', label: 'UHD 4K 제품군' }
+                ];
+            } else {
+                categories = [
+                    { id: 'OLED', label: 'OLED 제품군' },
+                    { id: 'QNED/QLED', label: 'QNED/QLED 제품군' },
+                    { id: 'UHD 4K', label: 'UHD 4K 제품군' }
+                ];
+            }
+            
+            container.innerHTML = categories.map(cat => {
+                const activeClass = selectedDisplayType === cat.id ? 'active' : '';
+                return `<button class="tab-btn px-6 py-2.5 text-xs font-bold border border-slate-200 rounded transition-all ${activeClass}" id="btn_disp_${cat.id.replace('/', '_')}" onclick="selectDisplayType('${cat.id}')">${cat.label}</button>`;
+            }).join('');
+            
+            document.getElementById('disp_indicator_label').innerText = 'Current Display: ' + selectedDisplayType;
+        }
+
+        function switchYear(year) {
+            currentYear = year;
+            document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('year_' + year).classList.add('active');
+            
+            if (currentYear === 2025 && selectedDisplayType === 'MRGB') {
+                selectedDisplayType = 'OLED';
+            }
+            
+            updateDisplayTabButtons();
+            
+            if (currentMenu === 'retailer') {
+                renderRetailerView();
+            } else if (currentMenu === 'display') {
+                renderDisplayView();
+            } else if (currentMenu === 'history') {
+                updateHistoryModelSelect();
+                renderHistoryView();
+            }
+        }
+
+        function selectRetailer(ret) {
+            selectedRetailer = ret;
+            document.querySelectorAll('#view_retailer .tab-btn').forEach(btn => btn.classList.remove('active'));
+            if (ret === 'Harvey Norman') document.getElementById('btn_ret_digi').classList.add('active');
+            else if (ret === 'The Good Guys') document.getElementById('btn_ret_id').classList.add('active');
+            else if (ret === 'JB Hi-Fi') document.getElementById('btn_ret_msh').classList.add('active');
+            
+            document.getElementById('ret_indicator_label').innerText = 'Current Retailer: ' + ret;
+            renderRetailerView();
+        }
+
+        function selectDisplayType(disp) {
+            selectedDisplayType = disp;
+            document.querySelectorAll('#display-tab-buttons-container .tab-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn_disp_' + disp.replace('/', '_'));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            document.getElementById('disp_indicator_label').innerText = 'Current Display: ' + disp;
+            renderDisplayView();
+        }
+
+        // Clean up previously created charts
+        function destroyCharts() {
+            chartInstances.forEach(c => c.destroy());
+            chartInstances = [];
+        }
+
+        // Helper to format currency
+        function formatA$(val) {
+            if (val === null || val === undefined || val === 0 || isNaN(val)) return 'N/A';
+            return 'A$ ' + val.toLocaleString();
+        }
+
+        // Render Retailer View (Retailer is selected -> Split by display types)
+        function renderRetailerView() {
+            destroyCharts();
+            const container = document.getElementById('retailer_charts_box');
+            container.innerHTML = '';
+            
+            const yearData = priceData[currentYear.toString()] || {};
+            const categories = currentYear === 2026 ? ['OLED', 'MRGB', 'QNED/QLED', 'UHD 4K'] : ['OLED', 'QNED/QLED', 'UHD 4K'];
+            
+            categories.forEach(cat => {
+                const pairs = yearData[cat] || [];
+                if (pairs.length === 0) return;
+                
+                // Check if there is any price data for the selected retailer in these pairs
+                const fieldPrefix = currentPriceType === 'raw' ? 'price_' : 'net_';
+                const lgCol = 'lg_' + fieldPrefix + selectedRetailer.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                const samCol = 'sam_' + fieldPrefix + selectedRetailer.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                
+                const hasData = pairs.some(p => {
+                    return (p[lgCol] && p[lgCol] > 0) || (p[samCol] && p[samCol] > 0);
+                });
+                
+                if (!hasData) {
+                    container.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 text-center text-slate-400">
+                            <h3 class="text-lg font-bold font-headline text-slate-700 text-left mb-2">${cat} 제품군</h3>
+                            <p class="py-10 text-sm">해당 유통 채널(${selectedRetailer})에 실시간 매칭된 ${cat} 모델 가격 실적이 현재 부재합니다.</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Build layout card
+                let subGroups = [];
+                if (cat === 'QNED/QLED' && currentYear === 2025) {
+                    subGroups = [
+                        {
+                            suffix: 'qned86a',
+                            title: 'QNED 프리미엄 비교 (QNED86A vs. QN80F / QN70F)',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED86A'))
+                        },
+                        {
+                            suffix: 'qned80a',
+                            title: 'QNED 표준/보급 비교 (QNED80A vs. Q8F / Q7F)',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED80A'))
+                        }
+                    ];
+                } else {
+                    subGroups = [
+                        {
+                            suffix: '',
+                            title: `${cat} 제품군 비교`,
+                            pairs: pairs
+                        }
+                    ];
+                }
+                
+                subGroups.forEach(group => {
+                    const retKey = selectedRetailer.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                    const fieldPrefix = currentPriceType === 'raw' ? 'price_' : 'net_';
+                    const lgCol = 'lg_' + fieldPrefix + retKey;
+                    const samCol = 'sam_' + fieldPrefix + retKey;
+                    const hasData = group.pairs.some(p => (p[lgCol] && p[lgCol] > 0) || (p[samCol] && p[samCol] > 0));
+                    if (!hasData) return;
+                    
+                    const cardId = 'chart_ret_' + cat.replace(' ', '_').replace('/', '_') + (group.suffix ? '_' + group.suffix : '');
+                    container.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 mb-8 hover:shadow-md transition-all">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                                <h3 class="text-xl font-bold font-headline text-primary flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-secondary rounded-full"></span>
+                                    ${group.title}
+                                </h3>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-100 px-2.5 py-1 rounded">${selectedRetailer} Live</span>
+                            </div>
+                            <div class="relative w-full h-[360px]">
+                                <canvas id="${cardId}"></canvas>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+            
+            // Build charts after elements are appended
+            categories.forEach(cat => {
+                const pairs = yearData[cat] || [];
+                if (pairs.length === 0) return;
+                
+                let subGroups = [];
+                if (cat === 'QNED/QLED' && currentYear === 2025) {
+                    subGroups = [
+                        {
+                            suffix: 'qned86a',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED86A'))
+                        },
+                        {
+                            suffix: 'qned80a',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED80A'))
+                        }
+                    ];
+                } else {
+                    subGroups = [
+                        {
+                            suffix: '',
+                            pairs: pairs
+                        }
+                    ];
+                }
+                
+                subGroups.forEach(group => {
+                    const cardId = 'chart_ret_' + cat.replace(' ', '_').replace('/', '_') + (group.suffix ? '_' + group.suffix : '');
+                    const canvas = document.getElementById(cardId);
+                    if (!canvas) return;
+                    
+                    const retKey = selectedRetailer.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                    const fieldPrefix = currentPriceType === 'raw' ? 'price_' : 'net_';
+                    const lgCol = 'lg_' + fieldPrefix + retKey;
+                    const samCol = 'sam_' + fieldPrefix + retKey;
+                    
+                    const validPairs = group.pairs.filter(p => {
+                        const lgP = p[lgCol] || 0;
+                        const samP = p[samCol] || 0;
+                        return (lgP > 0 || samP > 0);
+                    });
+                    if (validPairs.length === 0) return;
+                    
+                    const labels = [];
+                    const lgData = [];
+                    const samData = [];
+                    const lgPromos = [];
+                    const samPromos = [];
+                    const lgModels = [];
+                    const samModels = [];
+                    
+                    validPairs.forEach(p => {
+                        const label = [p.lg_series, 'vs. ' + p.sam_series];
+                        labels.push(label);
+                        lgData.push(p[lgCol] || null);
+                        samData.push(p[samCol] || null);
+                        lgPromos.push(p['lg_promo_' + retKey] || '');
+                        samPromos.push(p['sam_promo_' + retKey] || '');
+                        lgModels.push(p['lg_model_' + retKey] || '');
+                        samModels.push(p['sam_model_' + retKey] || '');
+                    });
+                    
+                    createBarChart(canvas, labels, lgData, samData, lgPromos, samPromos, lgModels, samModels);
+                });
+            });
+        }
+
+        // Render Display View (Display Type is selected -> 3 Retailer charts stacked vertically)
+        function renderDisplayView() {
+            destroyCharts();
+            const container = document.getElementById('display_charts_box');
+            container.innerHTML = '';
+            
+            const yearData = priceData[currentYear.toString()] || {};
+            const pairs = yearData[selectedDisplayType] || [];
+            
+            if (pairs.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-12 text-center text-slate-400">
+                        <p class="py-12 text-sm">${currentYear}년형 ${selectedDisplayType} 제품군 가격 비교 데이터가 없습니다.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const retailers = ['JB Hi-Fi', 'The Good Guys', 'Harvey Norman'];
+            
+            retailers.forEach(ret => {
+                let subGroups = [];
+                if (selectedDisplayType === 'QNED/QLED' && currentYear === 2025) {
+                    subGroups = [
+                        {
+                            suffix: 'qned86a',
+                            title: `${ret} 유통 분석 - Premium QNED (QNED86A vs. QN80F / QN70F)`,
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED86A'))
+                        },
+                        {
+                            suffix: 'qned80a',
+                            title: `${ret} 유통 분석 - Standard QNED (QNED80A vs. Q8F / Q7F)`,
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED80A'))
+                        }
+                    ];
+                } else {
+                    subGroups = [
+                        {
+                            suffix: '',
+                            title: `${ret} 유통 분석 (${selectedDisplayType})`,
+                            pairs: pairs
+                        }
+                    ];
+                }
+                
+                let retHasAnyData = false;
+                const retKey = ret.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                const fieldPrefix = currentPriceType === 'raw' ? 'price_' : 'net_';
+                const lgCol = 'lg_' + fieldPrefix + retKey;
+                const samCol = 'sam_' + fieldPrefix + retKey;
+                
+                subGroups.forEach(group => {
+                    if (group.pairs.some(p => (p[lgCol] && p[lgCol] > 0) || (p[samCol] && p[samCol] > 0))) {
+                        retHasAnyData = true;
+                    }
+                });
+                
+                if (!retHasAnyData) {
+                    container.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 text-center text-slate-400">
+                            <h3 class="text-lg font-bold font-headline text-slate-700 text-left mb-2">${ret} 실적</h3>
+                            <p class="py-10 text-sm">해당 유통 채널(${ret})에 실시간 매칭된 ${selectedDisplayType} 모델 가격 실적이 현재 부재합니다.</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                subGroups.forEach(group => {
+                    if (group.pairs.length === 0) return;
+                    
+                    // Check if this subgroup has data
+                    const grpHasData = group.pairs.some(p => (p[lgCol] && p[lgCol] > 0) || (p[samCol] && p[samCol] > 0));
+                    if (!grpHasData) return; // Skip subgroups with zero records to keep screen clean
+                    
+                    const cardId = 'chart_disp_' + ret.toLowerCase() + (group.suffix ? '_' + group.suffix : '');
+                    
+                    container.innerHTML += `
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 mb-8 hover:shadow-md transition-all">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+                                <h3 class="text-xl font-bold font-headline text-primary flex items-center gap-2">
+                                    <span class="w-1.5 h-6 bg-lg-red rounded-full"></span>
+                                    ${group.title}
+                                </h3>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 border border-slate-100 px-2.5 py-1 rounded">Live Data</span>
+                            </div>
+                            <div class="relative w-full h-[360px]">
+                                <canvas id="${cardId}"></canvas>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+            
+            // Build charts
+            retailers.forEach(ret => {
+                let subGroups = [];
+                if (selectedDisplayType === 'QNED/QLED' && currentYear === 2025) {
+                    subGroups = [
+                        {
+                            suffix: 'qned86a',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED86A'))
+                        },
+                        {
+                            suffix: 'qned80a',
+                            pairs: pairs.filter(p => p.lg_series.includes('QNED80A'))
+                        }
+                    ];
+                } else {
+                    subGroups = [
+                        {
+                            suffix: '',
+                            pairs: pairs
+                        }
+                    ];
+                }
+                
+                subGroups.forEach(group => {
+                    if (group.pairs.length === 0) return;
+                    
+                    const cardId = 'chart_disp_' + ret.toLowerCase() + (group.suffix ? '_' + group.suffix : '');
+                    const canvas = document.getElementById(cardId);
+                    if (!canvas) return;
+                    
+                    const labels = [];
+                    const lgData = [];
+                    const samData = [];
+                    const lgPromos = [];
+                    const samPromos = [];
+                    
+                    const retKey = ret.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                    const fieldPrefix = currentPriceType === 'raw' ? 'price_' : 'net_';
+                    const lgCol = 'lg_' + fieldPrefix + retKey;
+                    const samCol = 'sam_' + fieldPrefix + retKey;
+                    
+                    const lgModels = [];
+                    const samModels = [];
+                    
+                    group.pairs.forEach(p => {
+                        const label = [p.lg_series, 'vs. ' + p.sam_series];
+                        labels.push(label);
+                        lgData.push(p[lgCol] || null);
+                        samData.push(p[samCol] || null);
+                        lgPromos.push(p['lg_promo_' + retKey] || '');
+                        samPromos.push(p['sam_promo_' + retKey] || '');
+                        lgModels.push(p['lg_model_' + retKey] || '');
+                        samModels.push(p['sam_model_' + retKey] || '');
+                    });
+                    
+                    createBarChart(canvas, labels, lgData, samData, lgPromos, samPromos, lgModels, samModels);
+                });
+            });
+        }
+
+        // Shared function to render a 1:1 grouped bar chart in Chart.js
+        function createBarChart(canvasElement, labels, lgPrices, samPrices, lgPromos = [], samPromos = [], lgModels = [], samModels = []) {
+            const ctx = canvasElement.getContext('2d');
+            const c = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'LG (엘지)',
+                            data: lgPrices,
+                            backgroundColor: '#a50034', // LG Wine Red
+                            borderColor: '#a50034',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.85,
+                            categoryPercentage: 0.7
+                        },
+                        {
+                            label: 'Samsung (삼성)',
+                            data: samPrices,
+                            backgroundColor: '#002060', // Samsung Dark Blue
+                            borderColor: '#002060',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.85,
+                            categoryPercentage: 0.7
+                        }
+                    ]
+                },
+                plugins: [ChartDataLabels],
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: function(event, elements) {
+                        const points = this.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+                        let index = -1;
+                        if (points.length > 0) {
+                            index = points[0].index;
+                        } else {
+                            const activeScale = this.scales.x;
+                            const xValue = event.x;
+                            const count = this.data.labels.length;
+                            const chartWidth = activeScale.width;
+                            const left = activeScale.left;
+                            const right = activeScale.right;
+                            if (xValue >= left && xValue <= right) {
+                                const relativeX = xValue - left;
+                                index = Math.floor((relativeX / chartWidth) * count);
+                            }
+                        }
+                        if (index >= 0 && index < this.data.labels.length) {
+                            const labelPair = this.data.labels[index];
+                            if (labelPair && labelPair.length >= 2) {
+                                const lgModel = labelPair[0];
+                                const samModel = labelPair[1].replace('vs. ', '').trim();
+                                
+                                let rKey = '';
+                                if (canvasElement.id.startsWith('chart_disp_')) {
+                                    rKey = canvasElement.id.split('_')[2].toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                                } else {
+                                    rKey = selectedRetailer.toLowerCase().replace('jb hi-fi', 'msh').replace('the good guys', 'id').replace('harvey norman', 'digi').replace('jbhifi', 'msh').replace('goodguys', 'id').replace('harveynorman', 'digi').replace('mediamarkt', 'msh').replace('interdiscount', 'id').replace('digitec', 'digi');
+                                }
+                                
+                                openPriceHistoryModal(lgModel, samModel, rKey);
+                            }
+                        }
+                    },
+                    onHover: function(event, chartElement) {
+                        event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(115, 119, 125, 0.1)'
+                            },
+                            ticks: {
+                                font: {
+                                    family: 'Inter',
+                                    size: 11
+                                },
+                                color: '#73777d',
+                                callback: function(value) {
+                                    return 'A$ ' + value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 0,
+                                font: {
+                                    family: 'Inter',
+                                    size: 8,
+                                    weight: 'bold'
+                                },
+                                color: '#051c2c'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                boxWidth: 12,
+                                usePointStyle: true,
+                                pointStyle: 'rectRounded',
+                                font: {
+                                    family: 'Inter',
+                                    size: 11,
+                                    weight: 'bold'
+                                },
+                                color: '#051c2c'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) label += ': ';
+                                    if (context.raw !== null) {
+                                        label += formatA$(context.raw);
+                                    }
+                                    return label;
+                                },
+                                afterLabel: function(context) {
+                                    const dataIdx = context.dataIndex;
+                                    const model = context.datasetIndex === 0 ? lgModels[dataIdx] : samModels[dataIdx];
+                                    const promo = context.datasetIndex === 0 ? lgPromos[dataIdx] : samPromos[dataIdx];
+                                    let extra = [];
+                                    if (model && model !== '') {
+                                        extra.push('Model: ' + model);
+                                    }
+                                    if (promo && promo !== 'None' && promo !== '') {
+                                        extra.push('Promo: ' + promo);
+                                    }
+                                    if (context.datasetIndex === 0) {
+                                        const dataIdx = context.dataIndex;
+                                        const lgP = lgPrices[dataIdx];
+                                        const samP = samPrices[dataIdx];
+                                        if (lgP > 0 && samP > 0) {
+                                            const ata = Math.round((lgP / samP) * 100);
+                                            extra.push('ATA: ' + ata);
+                                        }
+                                    }
+                                    return extra.join('\n');
+                                }
+                            }
+                        },
+                        datalabels: {
+                            anchor: 'end',
+                            align: function(context) {
+                                // LG (datasetIndex 0) shifts up-left (240 deg), Samsung (datasetIndex 1) shifts up-right (300 deg) to stagger text
+                                return context.datasetIndex === 0 ? 240 : 300;
+                            },
+                            formatter: function(value) {
+                                if (value === null || value === 0) return '';
+                                return value.toLocaleString();
+                            },
+                            font: {
+                                family: 'Inter',
+                                size: 9,
+                                weight: 'bold'
+                            },
+                            color: '#051c2c', // Shared navy color for readable display in open canvas
+                            offset: 4 // Reduced vertical offset to position labels closer to the bars
+                        }
+                    }
+                }
+            });
+            chartInstances.push(c);
+        }
+
+        function updateHistoryModelSelect() {
+            // Refactored: Dropdown select removed, all models rendered at once.
+        }
+
+        function getIsoWeekFromDateStr(dateStr) {
+            if (!dateStr) return { year: 2026, week: 0, cleanStr: '', timestamp: 0 };
+            let match = dateStr.match(/^(0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])$/);
+            let year = 2026, month = 1, day = 1;
+            if (match) {
+                month = parseInt(match[1], 10);
+                day = parseInt(match[2], 10);
+            } else {
+                match = dateStr.match(/(?:20)?(2[56])[./-](0?[1-9]|1[0-2])[./-](0?[1-9]|[12]\d|3[01])/);
+                if (match) {
+                    year = parseInt(match[1].length === 2 ? '20' + match[1] : match[1], 10);
+                    month = parseInt(match[2], 10);
+                    day = parseInt(match[3], 10);
+                }
+            }
+            const cleanStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const d = new Date(cleanStr);
+            if (!isNaN(d.getTime())) {
+                d.setHours(0, 0, 0, 0);
+                d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+                const yearStart = new Date(d.getFullYear(), 0, 1);
+                const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+                return { year: d.getFullYear(), week: weekNo, cleanStr, timestamp: new Date(cleanStr).getTime() };
+            }
+            return { year, week: 0, cleanStr: dateStr, timestamp: 0 };
+        }
+
+        function getUniqueHistoryDates(historyData) {
+            const allDates = new Set();
+            ["2025", "2026"].forEach(yr => {
+                const yearData = historyData[yr] || {};
+                Object.values(yearData).forEach(modelData => {
+                    (modelData.history || []).forEach(h => {
+                        if (h.date) allDates.add(h.date);
+                    });
+                });
+            });
+
+            // Sort all dates chronologically
+            const sortedDates = Array.from(allDates).sort((a, b) => {
+                const infoA = getIsoWeekFromDateStr(a);
+                const infoB = getIsoWeekFromDateStr(b);
+                return infoA.timestamp - infoB.timestamp || a.localeCompare(b);
+            });
+
+            // Deduplicate by ISO week: retain only the earliest survey date per week
+            const seenWeeks = new Set();
+            const deduplicatedDates = [];
+            sortedDates.forEach(dateStr => {
+                const info = getIsoWeekFromDateStr(dateStr);
+                const weekKey = `${info.year}-W${info.week}`;
+                if (!seenWeeks.has(weekKey)) {
+                    seenWeeks.add(weekKey);
+                    deduplicatedDates.push(dateStr);
+                }
+            });
+
+            return deduplicatedDates;
+        }
+
+        function formatWithWeek(dateStr, linebreak = false) {
+            if (!dateStr) return '';
+            const info = getIsoWeekFromDateStr(dateStr);
+            if (info.week > 0) {
+                const week = `W${info.week}`;
+                if (linebreak) {
+                    return [dateStr, `(${week})`];
+                }
+                return `${dateStr} (${week})`;
+            }
+            return dateStr;
+        }
+
+        function syncTableScroll(year) {
+            const topScroll = document.getElementById(`top_scroll_${year}`);
+            const topInner = document.getElementById(`top_scroll_inner_${year}`);
+            const tableContainer = document.getElementById(`table_container_${year}`);
+            const table = document.getElementById(`table_history_${year}`);
+            
+            if (!topScroll || !topInner || !tableContainer || !table) return;
+            
+            const scrollWidth = table.scrollWidth;
+            const clientWidth = tableContainer.clientWidth;
+            topInner.style.width = scrollWidth + 'px';
+            
+            if (scrollWidth > clientWidth + 10) {
+                topScroll.classList.remove('hidden');
+            } else {
+                topScroll.classList.add('hidden');
+            }
+            
+            let isSyncingTop = false;
+            let isSyncingTable = false;
+            
+            topScroll.onscroll = function() {
+                if (isSyncingTop) { isSyncingTop = false; return; }
+                isSyncingTable = true;
+                tableContainer.scrollLeft = topScroll.scrollLeft;
+            };
+            
+            tableContainer.onscroll = function() {
+                if (isSyncingTable) { isSyncingTable = false; return; }
+                isSyncingTop = true;
+                topScroll.scrollLeft = tableContainer.scrollLeft;
+            };
+        }
+
+        function formatTablePrice(price) {
+            if (!price || price === 0) return `<span class="text-slate-300">-</span>`;
+            return `A$ ${price.toLocaleString()}`;
+        }
+
+        function getModelSize(key) {
+            const match = key.match(/^(\d+)/);
+            return match ? parseInt(match[1], 10) : 0;
+        }
+
+        function getSeriesScore(key) {
+            // Strip size from start
+            const series = key.replace(/^\d+/, "").trim();
+            
+            // 1. OLED matching (LG W -> G -> C -> B)
+            if (series.startsWith("W")) return 1000;
+            if (series.startsWith("G")) return 900;
+            if (series.startsWith("C")) return 800;
+            if (series.startsWith("B")) return 700;
+            
+            // Samsung OLED S-series (S95 -> S99 -> S90 -> S85)
+            if (series.startsWith("S")) {
+                if (series.includes("95")) return 950;
+                if (series.includes("99")) return 920;
+                if (series.includes("90")) return 850;
+                if (series.includes("85")) return 750;
+                return 700; // default S
+            }
+            
+            // 2. MRGB matching
+            if (series.includes("MRGB")) {
+                const numMatch = series.match(/\d+/);
+                const num = numMatch ? parseInt(numMatch[0], 10) : 0;
+                return 600 + num; // e.g. MRGB95 -> 695, MRGB85 -> 685
+            }
+            if (series.startsWith("R") || series.startsWith("M")) {
+                // Samsung MicroLED / MRGB alternative (R95, R85)
+                const numMatch = series.match(/\d+/);
+                const num = numMatch ? parseInt(numMatch[0], 10) : 0;
+                return 500 + num; // e.g. R95 -> 595, R85 -> 585
+            }
+            
+            // 3. QNED / QLED (highest number first, e.g. QNED93 -> QNED88 -> QNED86 -> QNED80)
+            if (series.includes("QNED")) {
+                const numMatch = series.match(/\d+/);
+                const num = numMatch ? parseInt(numMatch[0], 10) : 0;
+                return 400 + num; // e.g. QNED93 -> 493, QNED88 -> 488, QNED86 -> 486
+            }
+            if (series.startsWith("QN") || series.startsWith("Q")) {
+                // Samsung Neo QLED / QLED (QN80, QN70 -> 380, 370; Q8, Q7 -> 308, 307)
+                const numMatch = series.match(/\d+/);
+                const num = numMatch ? parseInt(numMatch[0], 10) : 0;
+                return 300 + num;
+            }
+            
+            // 4. UHD (NU85 -> 285)
+            if (series.startsWith("NU") || series.startsWith("UA") || series.startsWith("U")) {
+                const numMatch = series.match(/\d+/);
+                const num = numMatch ? parseInt(numMatch[0], 10) : 0;
+                if (num > 1000) return 100 + (num / 100); // e.g. U8000 -> 180
+                return 200 + num;
+            }
+            
+            return 0;
+        }
+
+        function renderHistoryView() {
+            destroyCharts();
+            
+            const historyData = priceData.history || {};
+            const dates = getUniqueHistoryDates(historyData);
+            
+            renderHistoryTable("2026", dates, historyData["2026"] || {});
+            renderHistoryTable("2025", dates, historyData["2025"] || {});
+            
+            // Run filter initially to apply active checkboxes/brand selections
+            filterHistoryRows();
+        }
+
+        function renderHistoryTable(year, dates, yearData) {
+            const headerRow = document.getElementById(`history_header_${year}`);
+            const bodyContainer = document.getElementById(`history_body_${year}`);
+            if (!headerRow || !bodyContainer) return;
+            
+            if (dates.length === 0 || Object.keys(yearData).length === 0) {
+                headerRow.innerHTML = '<th class="sticky-col px-6 py-3 bg-slate-50">모델 / 유통</th>';
+                bodyContainer.innerHTML = '<tr><td colspan="10" class="px-6 py-8 text-center text-slate-400 font-medium">조사 이력 데이터가 없습니다.</td></tr>';
+                return;
+            }
+            
+            // Build table header columns
+            let headerHtml = `
+                <th class="sticky-col px-6 py-4 font-semibold text-slate-600 uppercase tracking-wider text-xs bg-slate-50">모델 / 유통채널</th>
+            `;
+            dates.forEach(d => {
+                const formatted = formatWithWeek(d);
+                const displayHtml = formatted.includes('(') ? formatted.replace('(', '<br>(') : formatted;
+                headerHtml += `
+                    <th class="px-6 py-4 font-semibold text-slate-600 uppercase tracking-wider text-xs text-center bg-slate-50">${displayHtml}</th>
+                `;
+            });
+            headerRow.innerHTML = headerHtml;
+            
+            // Sort models by screen size descending, then by custom series score descending
+            const sortedKeys = Object.keys(yearData).sort((a, b) => {
+                const sizeA = getModelSize(a);
+                const sizeB = getModelSize(b);
+                if (sizeB !== sizeA) {
+                    return sizeB - sizeA;
+                }
+                return getSeriesScore(b) - getSeriesScore(a);
+            });
+            
+            let bodyHtml = "";
+            sortedKeys.forEach((modelKey, index) => {
+                const modelData = yearData[modelKey];
+                const history = modelData.history || [];
+                const display = modelData.display || "";
+                
+                const historyMap = {};
+                history.forEach(h => {
+                    historyMap[h.date] = h;
+                });
+                
+                const collapseId = `history_collapse_${year}_${index}`;
+                
+                const isSamsung = modelKey.includes("S90") || modelKey.includes("S95") || modelKey.includes("S85") || modelKey.includes("S99") || (modelKey.includes("QN") && !modelKey.includes("QNED")) || modelKey.includes("Q7") || modelKey.includes("Q8") || modelKey.includes("U8") || modelKey.includes("R95") || modelKey.includes("R85") || modelKey.includes("M70") || modelKey.includes("M80") || modelKey.includes("M90") || /^[0-9]+S[0-9]/.test(modelKey);
+                const brandColorClass = isSamsung ? "text-sam-blue" : "text-primary";
+                
+                // MediaMarkt (Representative)
+                let mshCellsHtml = "";
+                dates.forEach(d => {
+                    const h = historyMap[d];
+                    const val = h ? (currentPriceType === 'raw' ? h.msh_price : h.msh_net) : 0;
+                    mshCellsHtml += `<td class="px-6 py-4 text-center text-xs font-semibold">${formatTablePrice(val)}</td>`;
+                });
+                
+                // Interdiscount
+                let idCellsHtml = "";
+                dates.forEach(d => {
+                    const h = historyMap[d];
+                    const val = h ? (currentPriceType === 'raw' ? h.id_price : h.id_net) : 0;
+                    idCellsHtml += `<td class="px-6 py-4 text-center text-xs font-semibold">${formatTablePrice(val)}</td>`;
+                });
+                
+                // Digitec
+                let digiCellsHtml = "";
+                dates.forEach(d => {
+                    const h = historyMap[d];
+                    const val = h ? (currentPriceType === 'raw' ? h.digi_price : h.digi_net) : 0;
+                    digiCellsHtml += `<td class="px-6 py-4 text-center text-xs font-semibold">${formatTablePrice(val)}</td>`;
+                });
+                
+                bodyHtml += `
+                    <tr class="history-row-main bg-white hover:bg-slate-50 transition-colors border-t border-slate-100 cursor-pointer" data-category="${display}" data-brand="${isSamsung ? 'sam' : 'lg'}" data-collapse-id="${collapseId}" onclick="toggleHistoryRow('${collapseId}')">
+                        <td class="sticky-col px-6 py-4 flex items-center gap-3">
+                            <svg class="expand-chevron w-3.5 h-3.5 text-slate-400 flex-shrink-0" id="chevron_${collapseId}" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm ${brandColorClass}">${modelKey}</span>
+                                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">${display} | MediaMarkt</span>
+                            </div>
+                        </td>
+                        ${mshCellsHtml}
+                    </tr>
+                    <tr class="history-row-child hidden bg-slate-50/70 border-t border-slate-100" name="${collapseId}">
+                        <td class="sticky-col px-6 py-3 pl-12 bg-slate-50/70">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                                <span class="text-xs font-semibold text-slate-500">The Good Guys</span>
+                            </div>
+                        </td>
+                        ${idCellsHtml}
+                    </tr>
+                    <tr class="history-row-child hidden bg-slate-50/70 border-t border-slate-100" name="${collapseId}">
+                        <td class="sticky-col px-6 py-3 pl-12 bg-slate-50/70">
+                            <div class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-teal-500 rounded-full"></span>
+                                <span class="text-xs font-semibold text-slate-500">Harvey Norman</span>
+                            </div>
+                        </td>
+                        ${digiCellsHtml}
+                    </tr>
+                `;
+            });
+            bodyContainer.innerHTML = bodyHtml;
+            setTimeout(() => syncTableScroll(year), 50);
+        }
+
+        function toggleHistoryRow(collapseId) {
+            const chevron = document.getElementById(`chevron_${collapseId}`);
+            if (!chevron) return;
+            
+            const isExpanded = chevron.classList.contains('rotate');
+            if (isExpanded) {
+                chevron.classList.remove('rotate');
+            } else {
+                chevron.classList.add('rotate');
+            }
+            filterHistoryRows();
+        }
+
+        function toggleAllHistory(expand) {
+            const chevrons = document.querySelectorAll('.expand-chevron');
+            chevrons.forEach(c => {
+                const parentRow = c.closest('.history-row-main');
+                if (parentRow && !parentRow.classList.contains('hidden')) {
+                    if (expand) {
+                        c.classList.add('rotate');
+                    } else {
+                        c.classList.remove('rotate');
+                    }
+                }
+            });
+            filterHistoryRows();
+        }
+
+        function switchHistoryCategory(year, category) {
+            if (year === '2026') {
+                activeCategory2026 = category;
+                activeCategory2025 = null;
+                
+                // Update 2026 buttons
+                document.querySelectorAll('.hist-cat-btn-2026').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('text-slate-600', 'bg-white');
+                });
+                const btnMap26 = {
+                    'OLED': 'btn_hist_cat_2026_oled',
+                    'MRGB': 'btn_hist_cat_2026_mrgb',
+                    'QNED/QLED': 'btn_hist_cat_2026_qned',
+                    'UHD 4K': 'btn_hist_cat_2026_uhd'
+                };
+                const activeBtn = document.getElementById(btnMap26[category]);
+                if (activeBtn) {
+                    activeBtn.classList.add('active', 'bg-primary', 'text-white');
+                    activeBtn.classList.remove('text-slate-600', 'bg-white');
+                }
+                
+                // Clear 2025 buttons
+                document.querySelectorAll('.hist-cat-btn-2025').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('text-slate-600', 'bg-white');
+                });
+            } else if (year === '2025') {
+                activeCategory2025 = category;
+                activeCategory2026 = null;
+                
+                // Update 2025 buttons
+                document.querySelectorAll('.hist-cat-btn-2025').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('text-slate-600', 'bg-white');
+                });
+                const btnMap25 = {
+                    'OLED': 'btn_hist_cat_2025_oled',
+                    'QNED/QLED': 'btn_hist_cat_2025_qned',
+                    'UHD 4K': 'btn_hist_cat_2025_uhd'
+                };
+                const activeBtn = document.getElementById(btnMap25[category]);
+                if (activeBtn) {
+                    activeBtn.classList.add('active', 'bg-primary', 'text-white');
+                    activeBtn.classList.remove('text-slate-600', 'bg-white');
+                }
+                
+                // Clear 2026 buttons
+                document.querySelectorAll('.hist-cat-btn-2026').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('text-slate-600', 'bg-white');
+                });
+            }
+            filterHistoryRows();
+        }
+
+        function switchHistoryBrand(brand) {
+            activeHistoryBrand = brand;
+            document.querySelectorAll('.brand-filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white', 'bg-sam-blue');
+                btn.classList.add('text-slate-600');
+            });
+            
+            const btnAll = document.getElementById('brand_all');
+            const btnLg = document.getElementById('brand_lg');
+            const btnSam = document.getElementById('brand_sam');
+            
+            if (brand === 'all') {
+                btnAll.classList.add('active', 'bg-primary', 'text-white');
+                btnAll.classList.remove('text-slate-600');
+            } else if (brand === 'lg') {
+                btnLg.classList.add('active', 'bg-primary', 'text-white');
+                btnLg.classList.remove('text-slate-600');
+            } else if (brand === 'sam') {
+                btnSam.classList.add('active', 'bg-sam-blue', 'text-white');
+                btnSam.classList.remove('text-slate-600');
+            }
+            
+            filterHistoryRows();
+        }
+
+        function filterHistoryRows() {
+            // Show/hide cards based on active category year
+            const card2026 = document.getElementById('card_history_2026');
+            const card2025 = document.getElementById('card_history_2025');
+            if (card2026) {
+                if (activeCategory2026) card2026.classList.remove('hidden');
+                else card2026.classList.add('hidden');
+            }
+            if (card2025) {
+                if (activeCategory2025) card2025.classList.remove('hidden');
+                else card2025.classList.add('hidden');
+            }
+
+            const filters = {
+                "2026": activeCategory2026,
+                "2025": activeCategory2025
+            };
+            
+            ["2026", "2025"].forEach(year => {
+                const activeFilterCat = filters[year];
+                if (!activeFilterCat) return; // Skip filtering if no category is active for this year
+                
+                const body = document.getElementById(`history_body_${year}`);
+                if (!body) return;
+                
+                const mainRows = body.querySelectorAll('.history-row-main');
+                let visibleCount = 0;
+                
+                mainRows.forEach(mainRow => {
+                    const category = mainRow.getAttribute('data-category');
+                    const brand = mainRow.getAttribute('data-brand');
+                    const collapseId = mainRow.getAttribute('data-collapse-id');
+                    
+                    let categoryMatch = false;
+                    const activeFilterCat = filters[year];
+                    if (activeFilterCat === 'QNED/QLED') {
+                        categoryMatch = (category === 'QNED' || category === 'QLED');
+                    } else {
+                        categoryMatch = (category === activeFilterCat);
+                    }
+                    const brandMatch = (activeHistoryBrand === 'all') || (activeHistoryBrand === brand);
+                    
+                    const isVisible = categoryMatch && brandMatch;
+                    
+                    const childRows = body.querySelectorAll(`.history-row-child[name="${collapseId}"]`);
+                    const chevron = document.getElementById(`chevron_${collapseId}`);
+                    const isExpanded = chevron ? chevron.classList.contains('rotate') : false;
+                    
+                    if (isVisible) {
+                        mainRow.classList.remove('hidden');
+                        visibleCount++;
+                        childRows.forEach(child => {
+                            if (isExpanded) {
+                                child.classList.remove('hidden');
+                            } else {
+                                child.classList.add('hidden');
+                            }
+                        });
+                    } else {
+                        mainRow.classList.add('hidden');
+                        childRows.forEach(child => {
+                            child.classList.add('hidden');
+                        });
+                    }
+                });
+                
+                let emptyRow = document.getElementById(`history_empty_${year}`);
+                if (visibleCount === 0) {
+                    if (!emptyRow) {
+                        emptyRow = document.createElement('tr');
+                        emptyRow.id = `history_empty_${year}`;
+                        emptyRow.innerHTML = `
+                            <td colspan="10" class="px-6 py-8 text-center text-slate-400 font-medium">
+                                필터 조건에 부합하는 모델이 없습니다.
+                            </td>
+                        `;
+                        body.appendChild(emptyRow);
+                    } else {
+                        emptyRow.classList.remove('hidden');
+                    }
+                } else if (emptyRow) {
+                    emptyRow.classList.add('hidden');
+                }
+                
+                setTimeout(() => syncTableScroll(year), 50);
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateDisplayTabButtons();
+            switchMenu('retailer');
+            
+            // Close modal on clicking outside the modal content
+            const modalEl = document.getElementById('priceHistoryModal');
+            if (modalEl) {
+                modalEl.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closePriceHistoryModal();
+                    }
+                });
+            }
+        });
+
+        let historyChartInstance = null;
+
+        function openPriceHistoryModal(lgSeries, samSeries, retKey) {
+            let lgHistory = null;
+            let samHistory = null;
+            let matchedYear = "2026";
+            
+            if (priceData.history["2026"] && priceData.history["2026"][lgSeries]) {
+                lgHistory = priceData.history["2026"][lgSeries].history;
+                matchedYear = "2026";
+            } else if (priceData.history["2025"] && priceData.history["2025"][lgSeries]) {
+                lgHistory = priceData.history["2025"][lgSeries].history;
+                matchedYear = "2025";
+            }
+            
+            if (priceData.history[matchedYear] && priceData.history[matchedYear][samSeries]) {
+                samHistory = priceData.history[matchedYear][samSeries].history;
+            }
+            
+            const dateSet = new Set();
+            if (lgHistory) lgHistory.forEach(h => dateSet.add(h.date));
+            if (samHistory) samHistory.forEach(h => dateSet.add(h.date));
+            const allDates = Array.from(dateSet).sort();
+            
+            const field = retKey + '_' + (currentPriceType === 'raw' ? 'price' : 'net');
+            
+            const lgPrices = allDates.map(date => {
+                const record = lgHistory ? lgHistory.find(h => h.date === date) : null;
+                return record && record[field] > 0 ? record[field] : null;
+            });
+            
+            const samPrices = allDates.map(date => {
+                const record = samHistory ? samHistory.find(h => h.date === date) : null;
+                return record && record[field] > 0 ? record[field] : null;
+            });
+            
+            const modal = document.getElementById('priceHistoryModal');
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            
+            document.getElementById('modalTitle').innerText = `${lgSeries} vs. ${samSeries} 가격 변화 추이`;
+            
+            const retNames = {
+                'msh': 'JB Hi-Fi',
+                'id': 'The Good Guys',
+                'digi': 'Harvey Norman'
+            };
+            const retName = retNames[retKey] || 'Selected Retailer';
+            const priceTypeStr = currentPriceType === 'raw' ? '소비자가(Raw)' : '실구매가(Net)';
+            document.getElementById('modalSubtitle').innerText = `${retName} 유통 채널 기준 (${priceTypeStr} 추이)`;
+            
+            const lineCtx = document.getElementById('historyLineChart').getContext('2d');
+            
+            if (historyChartInstance) {
+                historyChartInstance.destroy();
+            }
+            
+            historyChartInstance = new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: allDates.map(d => formatWithWeek(d, true)),
+                    datasets: [
+                        {
+                            label: `LG (${lgSeries})`,
+                            data: lgPrices,
+                            borderColor: '#a50034',
+                            backgroundColor: 'rgba(165, 0, 52, 0.1)',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#a50034',
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            tension: 0.1,
+                            spanGaps: true
+                        },
+                        {
+                            label: `Samsung (${samSeries})`,
+                            data: samPrices,
+                            borderColor: '#002060',
+                            backgroundColor: 'rgba(0, 32, 96, 0.1)',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#002060',
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            tension: 0.1,
+                            spanGaps: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: 'rgba(115, 119, 125, 0.1)'
+                            },
+                            ticks: {
+                                color: '#73777d',
+                                callback: function(value) {
+                                    return formatA$(value);
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#051c2c',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) label += ': ';
+                                    if (context.raw !== null) {
+                                        label += formatA$(context.raw);
+                                    }
+                                    return label;
+                                },
+                                afterLabel: function(context) {
+                                    if (context.datasetIndex === 0) { // LG dataset index
+                                        const dataIdx = context.dataIndex;
+                                        const lgP = context.raw;
+                                        // Fetch the corresponding Samsung price from the second dataset (index 1)
+                                        const samP = context.chart.data.datasets[1].data[dataIdx];
+                                        if (lgP > 0 && samP > 0) {
+                                            const ata = Math.round((lgP / samP) * 100);
+                                            return `ATA: ${ata}`;
+                                        }
+                                    }
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            const lgLatest = lgPrices[lgPrices.length - 1];
+            const samLatest = samPrices[samPrices.length - 1];
+            const legendBox = document.getElementById('modalLegend');
+            
+            let diffHtml = '';
+            if (lgLatest && samLatest) {
+                const diff = lgLatest - samLatest;
+                const absDiff = Math.abs(diff);
+                const sign = diff >= 0 ? '엘지 고가' : '삼성 고가';
+                const formattedDiff = formatA$(absDiff);
+                diffHtml = `<span class="bg-slate-100 px-2 py-1 rounded text-slate-700 font-bold border border-slate-200">GAP: ${formattedDiff} (${sign})</span>`;
+            }
+            
+            const formatVal = (val) => val ? formatA$(val) : '-';
+            
+            legendBox.innerHTML = `
+                <div class="flex items-center gap-2">
+                    <span class="inline-block w-3 h-3 bg-[#a50034] rounded"></span>
+                    <span>LG 최근가: <strong class="text-primary">${formatVal(lgLatest)}</strong></span>
+                </div>
+                <div class="flex items-center gap-2 border-l border-slate-200 pl-4">
+                    <span class="inline-block w-3 h-3 bg-[#002060] rounded"></span>
+                    <span>Samsung 최근가: <strong class="text-primary">${formatVal(samLatest)}</strong></span>
+                </div>
+                ${diffHtml ? `<div class="border-l border-slate-200 pl-4">${diffHtml}</div>` : ''}
+            `;
+        }
+
+        function closePriceHistoryModal() {
+            const modal = document.getElementById('priceHistoryModal');
+            if (modal) modal.classList.add('hidden');
+            if (historyChartInstance) {
+                historyChartInstance.destroy();
+                historyChartInstance = null;
+            }
+        }
+    </script>
+
+    <!-- Price History Modal -->
+    <div id="priceHistoryModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-3xl w-full p-6 flex flex-col relative transition-all transform scale-95 duration-300">
+            <!-- Header -->
+            <div class="flex justify-between items-center pb-4 border-b border-slate-200">
+                <div>
+                    <h3 class="text-lg font-bold text-primary font-headline" id="modalTitle">모델별 가격 추이 비교</h3>
+                    <p class="text-xs text-slate-400 mt-1" id="modalSubtitle">조사 일자별 가격 변동 추이</p>
+                </div>
+                <button onclick="closePriceHistoryModal()" class="text-slate-400 hover:text-slate-600 transition-colors p-1.5 hover:bg-slate-100 rounded-lg focus:outline-none">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Content / Chart Area -->
+            <div class="py-6 flex-1 flex flex-col">
+                <div class="w-full h-80 relative">
+                    <canvas id="historyLineChart"></canvas>
+                </div>
+                <div class="mt-6 flex gap-6 text-xs font-semibold text-slate-500 justify-center" id="modalLegend">
+                    <!-- Custom Legend with latest prices -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

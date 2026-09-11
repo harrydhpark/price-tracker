@@ -5,6 +5,7 @@ import re
 import os
 import sys
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 # --- TIMEOUT MONKEY PATCH ---
@@ -51,17 +52,17 @@ def classify_samsung_year(model_code, title_upper):
             elif "D" in sub or "E" in sub:
                 return 2024
             
-    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "LS03H", "U8000H", "U8090H"]):
+    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "LS03H", "U8000H", "U8090H", "M70H", "R85H", "R95H"]):
         return 2026
-    if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "QN70F", "LS03F", "U8000F", "U8090F"]):
+    if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "QN70F", "LS03F", "U8000F", "U8090F", "M70F", "R85F", "Q7F", "Q8F"]):
         return 2025
-    if any(x in title_upper for x in ["S90D", "S95D", "S85D", "QN900D", "QN800D", "QN95D", "QN90D", "QN85D", "QN80D", "QN70D", "LS03D", "U8000D", "U8090D"]):
+    if any(x in title_upper for x in ["S90D", "S95D", "S85D", "QN900D", "QN800D", "QN95D", "QN90D", "QN85D", "QN80D", "QN70D", "LS03D", "U8000D", "U8090D", "M70D"]):
         return 2024
     return None
 
 def classify_lg_year(model_code, title_upper):
     if model_code != "Unknown":
-        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "QLED7EB", "MRGB96B"]):
+        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "27LX6TDGA", "QLED7EB", "MRGB96B"]):
             return 2026
         elif any(x in model_code for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO80A", "QNED93A"]):
             return 2025
@@ -70,11 +71,11 @@ def classify_lg_year(model_code, title_upper):
                 return 2025
             return 2024
             
-    if "C6" in title_upper or "G6" in title_upper or "B6" in title_upper or "QNED86B" in title_upper or "QNED80B" in title_upper or "QNED7EB" in title_upper or "MRGB87B" in title_upper or "LX7B" in title_upper or "LX6" in title_upper or "MRGB96B" in title_upper:
+    if any(x in title_upper for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "MRGB87B", "LX7B", "LX6", "27LX6", "STANBYME 2", "MRGB96B"]):
         return 2026
-    if "C5" in title_upper or "G5" in title_upper or "B5" in title_upper or "QNED86A" in title_upper or "QNED80A" in title_upper or "QNED7EA" in title_upper or "MRGB87A" in title_upper or "LX7A" in title_upper or "LX5" in title_upper or "QNED70" in title_upper or "NANO81" in title_upper or "NANO80" in title_upper or "QNED93" in title_upper:
+    if any(x in title_upper for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED7EA", "QNED72A", "MRGB87A", "LX7A", "LX5", "QNED70", "NANO81", "NANO80", "QNED93"]):
         return 2025
-    if "C4" in title_upper or "G4" in title_upper or "B4" in title_upper:
+    if any(x in title_upper for x in ["C4", "G4", "B4"]):
         return 2024
     return None
 
@@ -292,6 +293,12 @@ async def scrape_digitec_brand(brand):
             elif "QLED" in title_upper:
                 display_type = "QLED"
                 
+            try:
+                from swiss_promo_parser import parse_swiss_promo_and_cashback
+                cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+            except Exception:
+                cashback_amt = 0
+                
             products.append({
                 "brand": brand,
                 "year": year_val,
@@ -301,7 +308,7 @@ async def scrape_digitec_brand(brand):
                 "price": price_val,
                 "shipping": "Free",
                 "installment": "",
-                "cashback": 0,
+                "cashback": cashback_amt,
                 "promo": promo_desc,
                 "title": title,
                 "link": "https://www.digitec.ch" + href if href.startswith("/") else href

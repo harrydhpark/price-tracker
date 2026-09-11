@@ -8,6 +8,7 @@ import json
 import glob
 import shutil
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Source configurations
@@ -19,9 +20,7 @@ EU_SOURCES = {
     'mm-nl': {'retailer': 'MediaMarkt', 'cc': 'NL', 'currency': 'EUR'},
     'currys': {'retailer': 'Currys', 'cc': 'UK', 'currency': 'GBP'},
     'fnac': {'retailer': 'Fnac', 'cc': 'FR', 'currency': 'EUR'},
-    'elgiganten': {'retailer': 'Elgiganten', 'cc': 'SE', 'currency': 'SEK'},
     'mw-it': {'retailer': 'MediaWorld', 'cc': 'IT', 'currency': 'EUR'},
-    'unieuro': {'retailer': 'Unieuro', 'cc': 'IT', 'currency': 'EUR'},
 }
 
 def save_workbook_with_retry(wb, filename):
@@ -66,7 +65,7 @@ def classify_year(brand, model_code, title_upper):
         
         # Fallback to title keywords
         if year_val is None:
-            if any(x in title_upper for x in ["S90H", "S92H", "S95H", "S85H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "QN72H", "QN82H", "M70H", "M72H", "M80H", "M82H", "R95H", "LS03H", "U8000H", "U8070H", "U8079H", "U8075H", "U8090H", "2026"]):
+            if any(x in title_upper for x in ["S90H", "S92H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "QN72H", "QN82H", "M70H", "M72H", "M80H", "M82H", "R95H", "R85H", "R86H", "LS03H", "U8000H", "U8070H", "U8079H", "U8075H", "U8090H", "2026"]):
                 year_val = 2026
             elif any(x in title_upper for x in ["S90F", "S92F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "QN70F", "QN72F", "QN82F", "M70F", "M72F", "M80F", "M82F", "R95F", "LS03F", "U8000F", "U8070F", "U8079F", "U8075F", "U8090F", "2025"]):
                 year_val = 2025
@@ -78,7 +77,7 @@ def classify_year(brand, model_code, title_upper):
         # Check model code first
         if model_code != "Unknown":
             # 2026 Codes
-            if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED81B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "MRGB87", "LX7B", "LX6", "QLED7EB", "MRGB96B", "NU850", "LB700"]):
+            if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED81B", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "UA77", "MRGB87B", "MRGB87", "MRGB86B", "MRGB86", "LX7B", "LX6", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "QLED7EB", "MRGB96B", "NU850", "NU800", "NU80", "NU8", "LB700"]):
                 year_val = 2026
             # 2025 Codes
             elif any(x in model_code for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED87A", "QNED87", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO81", "NANO80A", "QNED93A"]):
@@ -89,9 +88,9 @@ def classify_year(brand, model_code, title_upper):
         
         # Fallback to title keywords
         if year_val is None:
-            if any(x in title_upper for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED72B", "QNED7EB", "UA77", "2026"]):
+            if any(x in title_upper for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED81B", "QNED80B", "QNED87B", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "UA77", "MRGB87B", "MRGB86B", "MRGB96B", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "NU800", "NU80", "2026"]):
                 year_val = 2026
-            elif any(x in title_upper for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED7EA", "UA75", "2025"]):
+            elif any(x in title_upper for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED70A", "QNED7EA", "UA75", "NANO81A", "NANO80A", "QNED93A", "2025"]):
                 year_val = 2025
             elif any(x in title_upper for x in ["C4", "G4", "B4", "M4", "2024"]):
                 year_val = 2024
@@ -143,6 +142,27 @@ def parse_product_name(title, brand):
                     if any(char.isdigit() for char in clean_w) and len(clean_w) >= 5:
                         model_code = clean_w
                         break
+        # Smart fallback for LG series when model_code is Unknown or generic
+        if model_code == "Unknown" or not any(x in model_code for x in ["QNED", "OLED", "MRGB", "NANO", "LX", "NU", "UA", "UT", "UR", "UQ", "LB", "QLED"]):
+            if "27LX6" in title_upper or "STANBYME 2" in title_upper or "STANBYME" in title_upper:
+                model_code = "27LX6TDGA"
+                size_val = 27
+            elif "QNED86B" in title_upper or "QNED86" in title_upper:
+                model_code = f"{size_val}QNED86B"
+            elif "QNED81B" in title_upper or "QNED81" in title_upper:
+                model_code = f"{size_val}QNED81B"
+            elif "QNED80B" in title_upper or "QNED80" in title_upper:
+                model_code = f"{size_val}QNED80B"
+            elif "QNED72B" in title_upper or "QNED72" in title_upper:
+                model_code = f"{size_val}QNED72B"
+            elif "QNED71B" in title_upper or "QNED71" in title_upper:
+                model_code = f"{size_val}QNED71B"
+            elif "QNED70B" in title_upper or "QNED70" in title_upper:
+                model_code = f"{size_val}QNED70B"
+            elif "MRGB87B" in title_upper or "MRGB87" in title_upper:
+                model_code = f"{size_val}MRGB87B"
+            elif "MRGB96B" in title_upper or "MRGB96" in title_upper:
+                model_code = f"{size_val}MRGB96B"
     else: # SAMSUNG or others
         words = title_upper.split()
         for w in words:
@@ -201,6 +221,8 @@ def parse_product_name(title, brand):
             display_type = "Micro RGB"
         elif "QN" in code_upper:
             display_type = "Neo QLED"
+        elif any(x in code_upper for x in ["M70", "M72", "M74", "M80", "M82", "M84"]) or "MINI LED" in title_upper:
+            display_type = "Mini LED"
         elif "Q" in code_upper or "LS" in code_upper:
             display_type = "QLED"
         elif any(x in code_upper for x in ["U8", "UA", "UT", "UR", "UQ", "UX"]):
@@ -361,22 +383,27 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
     # Append new rows
     added_count = 0
     for p in products:
-        # Determine cashback amount if explicitly containing "Cashback"
+        # Determine cashback amount if explicitly provided or parse from promo
         cashback_val = 0
+        if p.get("cashback") and isinstance(p["cashback"], (int, float)) and p["cashback"] > 0:
+            cashback_val = int(round(p["cashback"]))
+            
         promo_text = p.get("promo", "None") or "None"
         
         # Standardize promo text
         promo_text = clean_promotion_text(promo_text, brand, p["year"], p["model_code"], currency)
         
-        if any(x in promo_text.upper() for x in ["CASHBACK", "캐시백", "REEMBOLSO", "RIMBORSO"]):
-            cb_match = re.search(r'(?:cashback|캐시백|reembolso|rimborso)\s*(?:von|bis\s*zu)?\s*(?:chf|eur|gbp|sek|€|£)?\s*(\d+)', promo_text, re.IGNORECASE)
-            if cb_match:
-                cashback_val = int(cb_match.group(1))
+        if cashback_val == 0 and any(x in promo_text.upper() for x in ["CASHBACK", "캐시백", "REEMBOLSO", "RIMBORSO", "RÜCKVERGÜTUNG", "RUCKVERGUTUNG", "REMISE", "ODR"]):
+            # Match amount before keyword: e.g. "€100,- cashback", "100€ cashback", "150 EUR cashback"
+            cb_match_before = re.search(r'(?:chf|eur|gbp|sek|€|£)?\s*(\d+)\s*(?:chf|eur|gbp|sek|€|£|[,-]+)?\s*(?:cashback|캐시백|reembolso|rimborso|rückvergütung|ruckvergutung|remise|odr)', promo_text, re.IGNORECASE)
+            if cb_match_before:
+                cashback_val = int(cb_match_before.group(1))
             else:
-                cb_match2 = re.search(r'(?:chf|eur|gbp|sek|€|£)?\s*(\d+)\s*(?:chf|eur|gbp|sek|€|£)?\s*(?:cashback|캐시백|reembolso|rimborso)', promo_text, re.IGNORECASE)
-                if cb_match2:
-                    cashback_val = int(cb_match2.group(1))
-            if cashback_val < 10: # Ignore single-digit false positives (e.g. 2% or 2 years)
+                # Match amount after keyword: e.g. "Cashback 100 €", "Cashback CHF 200", "Cashback sichern 150€"
+                cb_match_after = re.search(r'(?:cashback|캐시백|reembolso|rimborso|rückvergütung|ruckvergutung|remise|odr)\s*(?:von|bis\s*zu|sichern|immédiate|différée)?\s*(?:chf|eur|gbp|sek|€|£)?\s*(\d+)', promo_text, re.IGNORECASE)
+                if cb_match_after:
+                    cashback_val = int(cb_match_after.group(1))
+            if cashback_val < 10: # Ignore single-digit false positives
                 cashback_val = 0
                     
         final_price = clean_numeric_price(p["price"])
@@ -407,7 +434,15 @@ def main():
         
     # Resolve MMDD date
     from datetime import datetime
-    today_mmdd = datetime.now().strftime("%m%d") # "0708"
+    target_date = None
+    if len(sys.argv) > 1 and not sys.argv[1].startswith("-"):
+        target_date = sys.argv[1]
+    elif "--date" in sys.argv:
+        idx = sys.argv.index("--date")
+        if idx + 1 < len(sys.argv):
+            target_date = sys.argv[idx + 1]
+            
+    today_mmdd = target_date if target_date else datetime.now().strftime("%m%d")
     
     excel_filename = os.path.join(data_dir, f"price tracker_EU_2026 {today_mmdd}_v1.xlsx")
     
@@ -427,8 +462,40 @@ def main():
             prev_file = prev_files[-1]
             print(f"[SYNC] Cloning latest workbook: {prev_file} -> {excel_filename}")
             shutil.copyfile(prev_file, excel_filename)
-        else:
-            print(f"[SYNC] Creating new workbook: {excel_filename}")
+    # Mandatory Pre-flight Live Assertion Gate
+    print("=" * 65)
+    print(f" 🛡️ MANDATORY PRE-FLIGHT LIVE ASSERTION GATE (Survey Date: {today_mmdd})")
+    print("=" * 65)
+    today_date_str = datetime.now().strftime("%Y-%m-%d")
+    stale_files = []
+    checked_count = 0
+    for s_key in EU_SOURCES:
+        if s_key == 'mm-ch':
+            continue
+        for b in ["samsung", "lg"]:
+            r_path = os.path.join(data_dir, f"raw_{s_key}_{b}.json")
+            if not os.path.exists(r_path):
+                g_cands = glob.glob(os.path.join(data_dir, f"raw_{s_key}_{b}*.json"))
+                if g_cands:
+                    r_path = g_cands[0]
+            if os.path.exists(r_path):
+                mtime = datetime.fromtimestamp(os.path.getmtime(r_path)).strftime("%Y-%m-%d")
+                fsize = os.path.getsize(r_path)
+                checked_count += 1
+                if target_date:
+                    if fsize < 100:
+                        stale_files.append((os.path.basename(r_path), "EMPTY FILE (<100B)"))
+                elif mtime != today_date_str:
+                    stale_files.append((os.path.basename(r_path), mtime))
+            else:
+                stale_files.append((f"raw_{s_key}_{b}.json", "MISSING"))
+                
+    if stale_files:
+        print(f"❌ [ASSERTION FAILURE] Found {len(stale_files)} invalid or missing raw datasets:")
+        for fname, f_date in stale_files:
+            print(f"   • {fname}: Status {f_date}")
+        raise RuntimeError(f"PRE-FLIGHT ASSERTION FAILED: {len(stale_files)} files require valid live datasets.")
+    print(f"✅ All {checked_count} raw EU datasets verified fresh for today ({today_date_str})!\n")
 
     # Iterate over all EU sources and brands
     for src_key, cfg in EU_SOURCES.items():
@@ -496,22 +563,34 @@ def main():
                     
                 seen_codes = {}
                 for item in scraped_items:
-                    name = item.get("name") or item.get("title") or ""
-                    raw_price = item.get("price")
-                    promo = item.get("promo") or "None"
-                    if not name or len(name) < 10:
+                    if not isinstance(item, dict):
                         continue
-                    name_upper = name.upper()
-                    if any(x in name_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "ZUBEHÖR", "HALTERUNG", "WALLMOUNT", "CORNICE", "GALAXY BUDS"]):
-                        continue
-                    if any(x in name_upper for x in ["RETURNED", "REFURBISHED", "USED", "GEBRAUCHT", "REACONDICIONADO", "RICONDIZIONATO"]):
-                        continue
-                    model_code, size, year, display_type = parse_product_name(name, brand)
-                    if size < 22 or year not in [2025, 2026]:
-                        continue
-                    price = clean_numeric_price(raw_price)
+                    if item.get("model_code") and item.get("year") in [2025, 2026] and item.get("size", 0) >= 22:
+                        model_code = item["model_code"]
+                        year = item["year"]
+                        size = item["size"]
+                        display_type = item.get("display") or item.get("display_type") or "LED"
+                        price = clean_numeric_price(item.get("price"))
+                        promo = item.get("promo") or "None"
+                    else:
+                        name = item.get("name") or item.get("title") or ""
+                        raw_price = item.get("price")
+                        promo = item.get("promo") or "None"
+                        if not name:
+                            continue
+                        name_upper = name.upper()
+                        if any(x in name_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "ZUBEHÖR", "HALTERUNG", "WALLMOUNT", "CORNICE", "GALAXY BUDS"]):
+                            continue
+                        if any(x in name_upper for x in ["RETURNED", "REFURBISHED", "USED", "GEBRAUCHT", "REACONDICIONADO", "RICONDIZIONATO"]):
+                            continue
+                        model_code, size, year, display_type = parse_product_name(name, brand)
+                        if size < 22 or year not in [2025, 2026]:
+                            continue
+                        price = clean_numeric_price(raw_price)
+                        
                     if price <= 0.0:
                         continue
+                    cashback = clean_numeric_price(item.get("cashback", 0))
                     p_rec = {
                         "brand": brand.upper() if brand.lower() == "samsung" else "LG",
                         "year": year,
@@ -519,11 +598,16 @@ def main():
                         "size": size,
                         "model_code": model_code,
                         "price": price,
-                        "promo": promo
+                        "promo": promo,
+                        "cashback": cashback
                     }
                     if model_code in seen_codes:
                         if price < seen_codes[model_code]["price"]:
                             seen_codes[model_code] = p_rec
+                        elif seen_codes[model_code].get("cashback", 0) == 0 and cashback > 0:
+                            seen_codes[model_code]["cashback"] = cashback
+                            if seen_codes[model_code].get("promo") in ["None", ""]:
+                                seen_codes[model_code]["promo"] = promo
                     else:
                         seen_codes[model_code] = p_rec
                 products_list = list(seen_codes.values())

@@ -13,20 +13,31 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
 
 ### Step A1: Navigating with Multiple Targeted Query Configurations and Scrapling StealthySession
 1. **Never scrape a single generic query URL** (which often misses clearance or 이월 models like S90F due to search ranking limits and year-filter metadata mapping issues).
-2. **Multiple Query Configuration Rule (Critical)**: Loop through a list of targeted query configurations (both general and specific series queries) for each brand, and merge/deduplicate results in Python:
+2. **Multiple Query Configuration Rule (Critical)**: Loop through a list of targeted query configurations (both general and specific series queries) for each brand to guarantee 100% model coverage (recovering clearance models and newly launched series like QN80H, M70H, R85H, QNED86B, QNED71B, QNED70B, MRGB87B omitted by basic filters), and merge/deduplicate results in Python:
    * **Samsung queries**:
      - General TV: `https://www.mediamarkt.ch/de/search.html?query=samsung%20TV&brand=SAMSUNG&marketplace=MediaMarkt&modelyear=2025%20OR%202026` (Max 10 pages)
+     - 2026 Lineup: `https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt` (Max 5 pages)
      - OLED TV: `https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt` (Max 3 pages)
      - S90 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - S95 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - S99 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - Neo QLED QN80: `https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - Mini LED M70: `https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - Micro RGB R85: `https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - Crystal UHD U8090: `https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - The Frame: `https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
    * **LG queries**:
      - General TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026` (Max 10 pages)
+     - 2026 Lineup: `https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt` (Max 5 pages)
      - OLED TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt` (Max 3 pages)
      - C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+     - B6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - C5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - G5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+     - QNED Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt` (Max 3 pages - QNED86B, QNED71B, QNED70B)
+     - Micro RGB MRGB: `https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt` (Max 2 pages - MRGB87B)
+     - StanbyME: `https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt` (Max 2 pages - StanbyME 2 27LX6TDGA)
 3. Use Scrapling's `StealthySession` context manager in Python (`with StealthySession(headless=True) as session:`) to fetch pages. This solves the Cloudflare captcha automatically on the first page, and reuses cookies to bypass Cloudflare completely on subsequent pages.
 4. **Omit `network_idle=True`**: Do **not** use the `network_idle=True` parameter in Scrapling's `session.fetch()` call. Commercial sites continuously run analytics, ads, and telemetry scripts, preventing network idle and causing 60-second timeouts. Instead, rely on default DOM load events combined with `wait=3000 * TIMEOUT_MULTIPLIER`.
 5. **Block Detection**: If validation is needed, only check for `"Verification Required" in html` or non-200 HTTP statuses. Do **not** search for the generic string `"blocked"`, as it matches normal elements in legitimate search results.
@@ -47,8 +58,8 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
 ### Step A4: Parsing & Card Filtering
 * Locate product card anchors matching `a[href*="/de/product/"]`.
 * Programmatically climb up the parent nodes to find the price and promotion details container.
-* **Exclude Non-TV Cards**: Exclude any cards that do not contain the text `Produkttyp` (this filters out recommendation carousels, mobile phones, and accessories that get mixed into the search results).
-* **Smart Regex Code Restoration (Samsung)**: If the parsed model code is `"Unknown"`, apply a regex-based smart extractor (`extract_model_code_from_title` using pattern lists like `QN\d{2,3}[FH]`, `S\d{2}[FH]`, `U\d{4}[FH]`, `M\d{2}[FH]`, `R\d{2}[FH]`, `LS03[A-Z]{1,2}`, `F\d{4}`, `MR\d{2}[FH]`) to reconstruct standard codes (e.g. `S95F` -> `QE{size}S95F`, `QN90F` -> `QE{size}QN90F`, `QN80F` -> `QE{size}QN80F`, `S85F` -> `QE{size}S85F`, `Frame Pro 2025` -> `QE{size}LS03FW`) before checking hardcoded fallbacks.
+* **Exclude Non-TV Cards & Galaxy Smartphone Guard**: Exclude any cards that do not contain the text `Produkttyp` (this filters out recommendation carousels, mobile phones, and accessories that get mixed into the search results). When querying `samsung 2026`, explicitly filter out Samsung Galaxy smartphones (`Galaxy S26 Ultra`, `Galaxy S26+`, `Galaxy S26`, `Smartphone`, `Handy`, `Mobile`) and enforce `size >= 22` inches.
+* **Smart Regex Code Restoration (Samsung)**: If the parsed model code is `"Unknown"`, apply a regex-based smart extractor (`extract_model_code_from_title` using pattern lists like `QN\d{2,3}[FH]`, `S\d{2}[FH]`, `U\d{4}[FH]`, `M\d{2}[FH]`, `R\d{2}[FH]`, `LS03[A-Z]{1,2}`, `F\d{4}`, `MR\d{2}[FH]`) to reconstruct standard codes (e.g. `S95F` -> `QE{size}S95F`, `QN90F` -> `QE{size}QN90F`, `QN80H` -> `QE{size}QN80H`, `M70H` -> `UE{size}M70H`, `R85H` -> `MRE{size}R85H`, `U8090H` -> `UE{size}U8090H`, `S85F` -> `QE{size}S85F`, `Frame Pro 2025` -> `QE{size}LS03FW`) before checking hardcoded fallbacks.
 * **Model Code Derivation**:
   * For 2025 models, extract the exact code from the URL slug (e.g., `_samsung-qe55q8faau-...` $\rightarrow$ `QE55Q8FAAU`).
   * For 2026 models, derive codes from the title size and family name:
@@ -58,6 +69,9 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
     * `S90H` / `S99H` $\rightarrow$ `QE{size}S9xH`
     * `R85H` $\rightarrow$ `MRE{size}R85H`
     * `LS03HE` $\rightarrow$ `QE{size}LS03HE`
+    * `QNED86B` / `QNED71B` / `QNED70B` $\rightarrow$ `{size}QNEDxxB`
+    * `MRGB87B` $\rightarrow$ `{size}MRGB87B`
+    * `27LX6TDGA` $\rightarrow$ `27LX6TDGA` (StanbyME 2)
 
 ---
 
@@ -107,7 +121,15 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
      return results;
    }
    ```
-3. Save the returned JSON dump output, then run the local synchronization/parsing helper script (`python scripts/fast_interdiscount_sync.py <output_txt_path>`) to automatically filter out washers/monitors/used items, parse and normalize prices/model codes/release years, and export cleanly into `data/raw_interdiscount_samsung.json` and `data/raw_interdiscount_lg.json`.
+3. Save the returned JSON dump output, then run the local synchronization/parsing helper script (`python scripts/fast_interdiscount_sync.py <output_txt_path>`).
+4. **1:1 Card-Specific Price Extraction & OLED Screen-Size Price Guard (Critical)**:
+   - **Preceding Price Matching**: When parsing card text, extract the price located immediately preceding the product title (`(\d[\d’\']*(?:\.\d{2}|.–|\.95))\s*(?:CHF)?\s*\n+\s* + title`) rather than taking `min(nums)` across the container, preventing promo cashback values (e.g. `600 CHF Cashback`) or cheaper accessories from overwriting TV selling prices.
+   - **OLED Screen-Size Price Guard**: Enforce minimum price thresholds for OLED screens to automatically reject false-positive discount badges or small LCD prices:
+     - `83"+ OLED`: $\ge$ 2,000 CHF
+     - `77"+ OLED`: $\ge$ 1,500 CHF
+     - `65"+ OLED`: $\ge$ 1,000 CHF
+     - `55"+ OLED`: $\ge$ 800 CHF
+     - `42"/48" OLED`: $\ge$ 650 CHF
 
 ---
 
@@ -136,7 +158,7 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
 ### Step D1: Release Year Classification
 * **Samsung**: `F` corresponds to 2025, `H` to 2026 (e.g. `QE65S90F` $\rightarrow$ 2025, `QE65S90H` $\rightarrow$ 2026).
 * **LG**:
-  * **2026 Models**: `C6`, `G6`, `B6`, `QNED86B`, `QNED80B`, `QNED87B`, `QNED72B`, `QNED7EB`, `UA77`, `MRGB87B`, `LX7B`, `LX6`, `QLED7EB`, `MRGB96B`.
+  * **2026 Models**: `C6`, `G6`, `B6`, `QNED86B`, `QNED80B`, `QNED87B`, `QNED71B`, `QNED70B`, `QNED72B`, `QNED7EB`, `UA77`, `MRGB87B`, `LX7B`, `LX6`, `27LX6TDGA`, `QLED7EB`, `MRGB96B`.
   * **2025 Models**: `C5`, `G5`, `B5`, `QNED86A`, `QNED80A`, `QNED87A`, `QNED72A`, `QNED7EA`, `UA75`, `MRGB87A`, `LX7A`, `LX5`, `QNED70A`, `NANO81A`, `NANO80A`, `QNED93A`.
   * **대시보드 UI/정렬/표기 표준 규칙**:
     * **유통 메뉴 순서 및 뱃지 표기 표준**: `allRetailersList` 순서는 `UK` (Currys) $\rightarrow$ `DE` (MediaMarkt) $\rightarrow$ `FR` (Fnac) $\rightarrow$ `ES` (MediaMarkt) $\rightarrow$ `IT` (MediaWorld) $\rightarrow$ `NL` (MediaMarkt) 로 고정하며, 각 버튼은 약어 뱃지(`UK`, `DG`, `FS`, `ES`, `IS`, `BN`)와 라벨(`Currys (UK)`, `MediaMarkt (DG)`, `Fnac Darty (FS)`, `MediaMarkt (ES)`, `MediaWorld (IS)`, `MediaMarkt (NL)`)을 표기함. 대시보드 진입 시 **초기 활성화 국가**: `UK` (Currys).
@@ -267,15 +289,17 @@ Once price trackers and comparison sheets are processed:
 
 ## Part G: Automated Survey Verification & Rerun Procedure (July 10th Revision)
 
-### Step G1: Automatic Validation Run
-1. Run the unified orchestration runner: `python scripts/run_survey_with_check.py`.
-2. The script dynamically extracts row counts from the previous survey's price tracker file inside `History/`.
-3. It maps each sheet (e.g. `MediaMarkt_Samsung_Full`) and compares the item count with the corresponding today's raw json file under `data/`.
+### Step G1: Automatic Validation Run & Mandatory Pre-flight Assertion Gate
+1. **Zero Historical Price Injection Prohibition (CRITICAL)**: Never copy, backfill, or inject prices from older survey workbooks into today's raw JSON datasets. Every model and price MUST be captured from real-time live search queries or validated via live PDP URL probes.
+2. **Mandatory Pre-flight Assertion Gate**: `sync_all_retailers.py` and `sync_eu_retailers.py` must verify that each `raw_{retailer}_{brand}.json` was created or updated on the survey execution date (`YYYY-MM-DD`). If any file is stale, missing, or was not scraped today, the script MUST raise `RuntimeError` and halt immediately.
+3. Run the unified orchestration runner: `python scripts/run_survey_with_check.py`.
+4. The script dynamically extracts row counts from the previous survey's price tracker file inside `History/`.
+5. It maps each sheet (e.g. `MediaMarkt_Samsung_Full`) and compares the item count with the corresponding today's raw json file under `data/`.
 
 ### Step G2: 10% Discrepancy Action, Cause Investigation & Retries
 1. If the difference in product counts for any retailer's specific brand is **10% or more (> 10%)**, the script immediately flags a discrepancy alert.
 2. **Cause Diagnosis**: The pipeline automatically inspects scraper execution logs to diagnose root causes (e.g. Captcha challenge block, backend search indexing omissions, missing clearance models, or DOM selector changes).
-3. **Targeted Retry Execution**: The rerun sets `TIMEOUT_MULTIPLIER=1.5` ~ `2.0` and executes targeted series-specific search queries (S90/S95/C6/G6) to ensure 100% model coverage.
+3. **Targeted Retry Execution**: The rerun sets `TIMEOUT_MULTIPLIER=1.5` ~ `2.0` and executes targeted series-specific search queries (S90/S95/C6/G6) or Playwright MCP sessions to ensure 100% model coverage.
 4. The process retries up to **3 times** until counts are aligned within the acceptable threshold.
 
 ### Step G3: Final Synchronization & Deployment
@@ -350,6 +374,56 @@ Public.gr search queries cap results at 36 products per page. Scrapers MUST trav
    - UHD 4K: `NU85 vs U8070H` (matches `75NU8E0B3LA`, `65NU850B6LA`, `UE65U8072H`, `UE55U8072H`, `50U8072F`, `UE43U8072H`)
 2. **Currency**: Euro (`€` / `EUR`).
 3. **Build & Deploy**: `python scripts/generate_eu_dashboard.py` $\rightarrow$ `firebase deploy --only hosting:eu-price-tracker`.
+
+---
+
+## Part J: Swiss Master URL Registry Loss-Prevention & Auto-Registration Engine
+
+### Step J1: Master Registry Integration (`data/master_product_urls.json`)
+1. **Swiss Scope (`country == 'CH'`)**:
+   - Permanent registry contains **911+ verified Swiss model URLs** across MediaMarkt, Interdiscount, and Digitec.
+   - Automatically scanned from all historical subdirectories (`History/*/price tracker_swiss_*.xlsx`) via `scripts/build_master_url_registry.py`.
+2. **On Every Survey Execution (`sync_all_retailers.py`)**:
+   - Executes `sync_with_swiss_master_registry()` for all 6 retailer/brand groups (`MediaMarkt`, `Interdiscount`, `Digitec` $\times$ `Samsung`, `LG`).
+   - Cross-references live search results with `data/master_product_urls.json`.
+   - Auto-registers newly launched models into `data/master_product_urls.json` with verified PDP URLs and timestamps.
+   - Prevents sample dropouts from pagination boundaries or temporary ranking shifts.
+3. **Automated Pipeline Trigger**:
+   - `scripts/run_survey_with_check.py` invokes `build_master_url_registry.py` immediately after Excel sheet synchronization.
+
+---
+
+## Part K: Weekly Price & Promotion Variation Analysis Standards ('26년 모델 Only)
+
+### Step K1: Weekly Transition & Dynamic ISO Week Calculation
+1. **Scope**: Strictly limited to **2026 Model Year (`year == 2026`)**.
+2. **Week Transitions**:
+   - **W34**: `W34(08.17) vs W33(08.14)`
+   - **W33**: `W33(08.14) vs W32(08.06)`
+   - **W32**: `W32(08.06) vs W31(07.28)`
+   - **W31**: `W31(07.28) vs W30(07.25)`
+   - On future survey rounds (e.g. W35, W36), append the new transition and set it as the default active tab.
+3. **ISO Calendar Week Formatting**:
+   - Python date injection uses `now_dt.isocalendar()[1]` to generate `2026년 08월 17일 (W34)` and `2026.08.17(W34)`.
+   - UI displays clean retailer breakdown pills (MediaMarkt / Interdiscount / Digitec) and filterable change tables.
+
+---
+
+## Part L: Price Guard Integrity & Anomaly Disambiguation Standards
+
+### 1) Zero Fabricated / Zero Historical Price Injection Standard (CRITICAL)
+- Price guards and cleansing scripts must **NEVER fabricate or overwrite prices with arbitrary hardcoded benchmark values** (e.g. 1,799 €, 1,299 €, 3,499 €).
+- Outliers or anomalies (such as prices lower than normal thresholds or promo vouchers) must trigger live PDP URL re-probing or be discarded/flagged. Never insert artificial numbers into datasets or workbooks.
+
+### 2) 2026 LG Model Code (`B6`/`6LA`) OLED Disambiguation
+- In LG's 2026 naming scheme, **all non-OLED models (UHD 4K NanoCell, QNED) feature `B6` or `6LA` in their model codes** (e.g. `65NU850B6LA`, `55QNED81B6C`).
+- Loose substring checks like `"B6" in title` or `"C6" in title` are strictly forbidden for OLED classification.
+- Always require `display_type == "OLED"` or use strict word-bounded regex `\bOLED\w*[BCG][456]\b`.
+
+### 3) European Thousand Separator (`.`) & Decimal (`,`) Parsing Standard
+- In European and Greek formats (`1.199,00 €`, `559 ,00€`), parsers must normalize thousand periods and decimal commas (`replace('.', '').replace(',', '.')`) before float conversion to avoid truncating thousands (e.g. `1.199,00 €` -> `1.19`).
+
+
 
 
 

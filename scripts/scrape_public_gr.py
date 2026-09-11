@@ -2,12 +2,14 @@ import os
 import sys
 import re
 import json
+import glob
 import time
 from datetime import datetime
 from bs4 import BeautifulSoup
 from scrapling.fetchers import StealthySession
 import openpyxl
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
@@ -103,7 +105,7 @@ def extract_model_code_and_info(title_upper, brand, href):
             (r'MRGB96B', 'MRGB96B', 2026), (r'MRGB88B', 'MRGB88B', 2026),
             (r'MRGB87B', 'MRGB87B', 2026), (r'MRGB86B', 'MRGB86B', 2026), (r'MRGB85B', 'MRGB85B', 2026),
             # Lifestyle
-            (r'LX7B', 'LX7B', 2026), (r'LX6', 'LX6', 2026),
+            (r'LX7B', 'LX7B', 2026), (r'LX6', 'LX6', 2026), (r'27LX6', '27LX6', 2026), (r'STANBYME', 'STANBYME', 2026),
             # OLED series (digit-aware patterns to match G64, C64, B66 etc.)
             (r'OLED\d{2}G6', 'OLED G6', 2026), (r'G6[0-9]L', 'OLED G6', 2026), (r'G6[0-9]', 'OLED G6', 2026),
             (r'OLED\d{2}C6', 'OLED C6', 2026), (r'C6[0-9]L', 'OLED C6', 2026), (r'C6[0-9]', 'OLED C6', 2026),
@@ -381,11 +383,21 @@ def scrape_public_gr(brand):
     return items
 
 def update_excel_workbook(samsung_items, lg_items):
-    excel_path = os.path.join(DATA_DIR, "price tracker_EU_2026 0813_v1.xlsx")
+    today_mmdd = datetime.now().strftime("%m%d")
+    excel_path = os.path.join(DATA_DIR, f"price tracker_EU_2026 {today_mmdd}_v1.xlsx")
     if not os.path.exists(excel_path):
-        print(f"[ERROR] Target Excel path not found: {excel_path}")
-        return
+        eu_files = glob.glob(os.path.join(DATA_DIR, "price tracker_EU_2026 *.xlsx"))
+        eu_files = [f for f in eu_files if not os.path.basename(f).startswith("~$")]
+        if eu_files:
+            eu_files.sort()
+            import shutil
+            shutil.copy2(eu_files[-1], excel_path)
+            print(f"[CLONE] Created today's workbook from {eu_files[-1]} -> {excel_path}")
+        else:
+            print(f"[ERROR] Target Excel path not found: {excel_path}")
+            return
 
+    print(f"[EXCEL] Updating EU workbook: {excel_path}")
     wb = openpyxl.load_workbook(excel_path)
     
     sheets_config = [
@@ -414,6 +426,17 @@ def update_excel_workbook(samsung_items, lg_items):
             
     wb.save(excel_path)
     print(f"[EXCEL] Successfully updated workbook: {excel_path} with Public_GR sheets!")
+    
+    try:
+        import shutil
+        today_folder = datetime.now().strftime("%Y %m%d")
+        hist_folder_path = os.path.join(HISTORY_DIR, today_folder)
+        os.makedirs(hist_folder_path, exist_ok=True)
+        hist_wb_path = os.path.join(hist_folder_path, os.path.basename(excel_path))
+        shutil.copy2(excel_path, hist_wb_path)
+        print(f"[MIRROR] Saved backup to History_EU: {hist_wb_path}")
+    except Exception as e:
+        print(f"[WARN] Failed to mirror history workbook: {e}")
 
 if __name__ == "__main__":
     print("=" * 60)

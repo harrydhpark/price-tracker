@@ -7,9 +7,10 @@
   },
   {
     "name": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur C",
-    "price": "249",
+    "price": 179.49,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 249.0
   },
   {
     "name": "SAMSUNG Q7F5AUXZT4, Smart TV QLED 55'', 4K, Processore Q4 AI, 4K Upscaling, Colo",
@@ -19,27 +20,31 @@
   },
   {
     "name": "SAMSUNG UE24F6000FUXZT, Smart TV FULL HD 24'', Hyper Real Processor, HDR & Pur C",
-    "price": "209",
+    "price": 171.49,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 209.0
   },
   {
     "name": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur C",
-    "price": "329",
+    "price": 219.49,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 329.0
   },
   {
     "name": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HD",
-    "price": "649",
+    "price": 399.0,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 649.0
   },
   {
     "name": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Cont",
-    "price": "329",
+    "price": 299.99,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 329.0
   },
   {
     "name": "SAMSUNG QE55S90FAEXZT, Smart TV OLED 55'',  Vision AI, 4K, Processore NQ4 AI Gen",
@@ -73,15 +78,17 @@
   },
   {
     "name": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HD",
-    "price": "599",
+    "price": 345.49,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 599.0
   },
   {
     "name": "SAMSUNG UE43U7000FUXZT, Smart TV Crystal UHD 43'', 4K, Processore Crystal 4K, HD",
-    "price": "399",
+    "price": 310.99,
     "uvp": null,
-    "promo": null
+    "promo": null,
+    "original_price": 399.0
   },
   {
     "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 85'', Vision AI Smart, 4K, Processore Q4 AI, 4K",
@@ -614,8 +621,9 @@
   {
     "name": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
     "title": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "price": 249.6,
-    "promo": "Sale 15%; was EUR 329.00"
+    "price": 219.49,
+    "promo": "Sale 15%; was EUR 329.00",
+    "original_price": 329.0
   },
   {
     "name": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
@@ -638,8 +646,9 @@
   {
     "name": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Contrast Enhancer, OTS Lite, Q-Symphony, Slim Look Design,  2025",
     "title": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Contrast Enhancer, OTS Lite, Q-Symphony, Slim Look Design,  2025",
-    "price": 328.8,
-    "promo": "Sale 15%; was EUR 329.00"
+    "price": 299.99,
+    "promo": "Sale 15%; was EUR 329.00",
+    "original_price": 329.0
   },
   {
     "name": "SAMSUNG QE65QN70FAUXZT, Smart TV Neo QLED 65'', Vision AI, 4K Mini LED, Processore NQ4 AI Gen2, 4K AI Upscaling, Motion Xcelerator 144Hz, Neo Quantum HDR, OTS Lite, AirSlim Design",
@@ -656,8 +665,9 @@
   {
     "name": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
     "title": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "price": 451.2,
-    "promo": "None"
+    "price": 399.0,
+    "promo": "None",
+    "original_price": 649.0
   },
   {
     "name": "SAMSUNG QE65S85FAEXZT, Smart TV OLED 65'', Vision AI, 4K, Processore NQ4 AI Gen2, 4K AI Upscaling, Schermo antiriflesso, OLED HDR, Dolby Atmos & OTS Lite, Contour Design",
@@ -668,8 +678,9 @@
   {
     "name": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
     "title": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "price": 376.8,
-    "promo": "Sale 15%; was EUR 599.00"
+    "price": 345.49,
+    "promo": "Sale 15%; was EUR 599.00",
+    "original_price": 599.0
   },
   {
     "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 85'', Vision AI Smart, 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Slim Look Design",

@@ -1,830 +1,1289 @@
 [
   {
-    "name": "SAMSUNG GQ65Q7F QLED TV Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMAR",
-    "price": "549",
-    "uvp": "1099",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GU50U8079F Crystal UHD 4K Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMAR",
-    "price": "329",
-    "uvp": "679",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ75Q7F QLED TV Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMAR",
-    "price": "699",
-    "uvp": "1699",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GU43U8079F Crystal UHD 4K Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMAR",
-    "price": "299,99",
-    "uvp": "599",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU55U8079F Crystal UHD 4K Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMAR",
-    "price": "399,99",
-    "uvp": "799",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED GQ65S90F 4K Vision AI Smart OLED TV (Flat, 65 Zoll / 163 cm, UHD 4K",
-    "price": "1229",
-    "uvp": "3199",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ55Q7F QLED TV Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMAR",
-    "price": "449",
-    "uvp": "899",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED GQ55S90F 4K Vision AI Smart OLED TV (Flat, 55 Zoll / 138 cm, UHD 4K",
-    "price": "919,99",
-    "uvp": "2399",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ43Q7F QLED TV Vision AI Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMAR",
-    "price": "369,99",
-    "uvp": "649",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GQ50Q7F QLED TV Vision AI Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMAR",
-    "price": "429",
-    "uvp": "749",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GU65U8079F Crystal UHD 4K Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMAR",
-    "price": "524,99",
-    "uvp": "999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED GQ77S90F 4K Vision AI Smart OLED TV (Flat, 77 Zoll / 195 cm, UHD 4K",
-    "price": "1719",
-    "uvp": "4599",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ85Q7F QLED TV Vision AI Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMAR",
-    "price": "999",
-    "uvp": "2299",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU75M80H Mini LED M80H 4K Samsung Vision AI Smart TV (Flat, 75 Zoll / 18",
-    "price": "999",
-    "uvp": "1599",
-    "promo": "150€ Cashback; 100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU75U8079F Crystal UHD 4K Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMAR",
-    "price": "689,99",
-    "uvp": "1399",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65S90H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD",
-    "price": "2599",
-    "uvp": "3199",
-    "promo": "250€ Cashback; 225€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65QN70F Mini LED / Neo QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ65QN70F Mini LED / Neo QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 999.0,
-    "promo": "Sale 43%; was EUR 1499.00"
-  },
-  {
-    "name": "SAMSUNG OLED GQ48S90F 4K Vision AI Smart OLED TV (Flat, 48 Zoll / 121 cm, UHD 4K",
-    "price": "949",
-    "uvp": "1799",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU85U8079F Crystal UHD 4K Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMAR",
-    "price": "1049",
-    "uvp": "1999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ55QN70F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ55QN70F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": 449.0,
-    "promo": "Sale 46%; was EUR 1299.00"
-  },
-  {
-    "name": "SAMSUNG GQ98Q7F QLED TV Vision AI 120Hz Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K",
-    "price": "2099",
-    "uvp": "3399",
-    "promo": "250€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65LS03F The Frame 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ65LS03F The Frame 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 749.0,
-    "promo": "Sale 57%; was EUR 2199.00"
-  },
-  {
-    "name": "SAMSUNG OLEDGQ55S95F OLED 4K Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K,",
-    "price": "1359",
-    "uvp": "2899",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ75QN70F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ75QN70F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": 1099.0,
-    "promo": "Sale 50%; was EUR 2399.00"
-  },
-  {
-    "name": "SAMSUNG OLED GQ83S90F 4K Vision AI Smart OLED TV (Flat, 83 Zoll / 210 cm, UHD 4K",
-    "price": "2399",
-    "uvp": "7199",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65S95H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD",
-    "price": "2555",
-    "uvp": "4099",
-    "promo": "275€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU55M70H Vision AI M70H Mini LED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMA",
-    "price": "549",
-    "uvp": "849",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ77S95H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, S",
-    "price": "3999",
-    "uvp": "5599",
-    "promo": "350€ Cashback; 400€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ50QN90F Mini LED / Neo QLED 4K TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
-    "price": "789,99",
-    "uvp": "1599",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GU43M70H Vision AI M70H Mini LED TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMA",
-    "price": "499",
-    "uvp": "629",
-    "promo": "50€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65S99H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, S",
-    "price": "2699",
-    "uvp": "4299",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU65M70H Vision AI M70H Mini LED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMA",
-    "price": "799",
-    "uvp": "1049",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55S95H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD",
-    "price": "2599",
-    "uvp": "2899",
-    "promo": "250€ Cashback; 225€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55S99H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, S",
-    "price": "2169",
-    "uvp": "3099",
-    "promo": "250€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ48S95H OLED 4K Samsung Vision AI Smart TV (Flat, 48 Zoll / 121 cm, UHD",
-    "price": "1599",
-    "uvp": "2299",
-    "promo": "200€ Cashback; 175€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55QN90F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": "999",
-    "uvp": "2199",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65LS03FW The Frame Pro Lifestyle QLED 4K TV (65 Zoll / 163 cm, UHD 4K,",
-    "price": "1279",
-    "uvp": "2399",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU43U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (43 Zoll / 1",
-    "price": "499",
-    "uvp": "599",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ43LS03F The Frame 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "price": "599,99",
-    "uvp": "1299",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU55M80H Mini LED M80H 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, ",
-    "price": "679,99",
-    "uvp": "899",
-    "promo": "100€ Cashback; 50€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ42S90H OLED 4K Samsung Vision AI Smart TV (42 Zoll / 106 cm, UHD 4K, S",
-    "price": "1599",
-    "uvp": "1699",
-    "promo": "150€ Cashback; 125€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65QN80H Neo QLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD ",
-    "price": "1299",
-    "uvp": "1899",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU85M80H Mini LED M80H 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, ",
-    "price": "1639",
-    "uvp": "2199",
-    "promo": "200€ Cashback; 150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55QN80H Neo QLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD ",
-    "price": "999",
-    "uvp": "1499",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85QN70F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
-    "price": "1619",
-    "uvp": "2899",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ55LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (55 Zoll / ",
-    "price": "1599",
-    "uvp": "1899",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ48S85H OLED 4K Samsung Vision AI Smart TV (48 Zoll / 121 cm, UHD 4K, S",
-    "price": "1179",
-    "uvp": "1799",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU50U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (50 Zoll / 1",
-    "price": "579",
-    "uvp": "679",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (65 Zoll / ",
-    "price": "1969",
-    "uvp": "2399",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ75LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (75 Zoll / ",
-    "price": "2899",
-    "uvp": "3599",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU65M80H Mini LED M80H 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, ",
-    "price": "839,99",
-    "uvp": "1149",
-    "promo": "100€ Cashback; 75€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ50QN80H Neo QLED 4K Samsung Vision AI Smart TV (50 Zoll / 125 cm, UHD ",
-    "price": "899",
-    "uvp": "1199",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (55 Zoll / 138 ",
-    "price": "1129",
-    "uvp": "1699",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ75QN80H Neo QLED 4K Samsung Vision AI Smart TV (75 Zoll / 189 cm, UHD ",
-    "price": "1899",
-    "uvp": "2799",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ43QN90F Mini LED / Neo QLED 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "price": "759,99",
-    "uvp": "1499",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ75LS03FW The Frame Pro Lifestyle QLED 4K TV (75 Zoll / 189 cm, UHD 4K,",
-    "price": "1719",
-    "uvp": "3599",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU50M70H Vision AI M70H Mini LED TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMA",
-    "price": "599",
-    "uvp": "699",
-    "promo": "50€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU65U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (65 Zoll / 1",
-    "price": "699",
-    "uvp": "999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ83S85H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, S",
-    "price": "3199",
-    "uvp": "6099",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55S90H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD",
-    "price": "1999",
-    "uvp": "2399",
-    "promo": "200€ Cashback; 175€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU55U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (55 Zoll / 1",
-    "price": "599",
-    "uvp": "799",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ77S90H OLED 4K Samsung Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD",
-    "price": "3569",
-    "uvp": "4599",
-    "promo": "350€ Cashback; 325€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ55S85H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, S",
-    "price": "1499",
-    "uvp": "1999",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65S85H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, S",
-    "price": "1999",
-    "uvp": "2899",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (85 Zoll / ",
-    "price": "3599",
-    "uvp": "4899",
-    "promo": "400€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ83S90H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, S",
-    "price": "5199",
-    "uvp": "7199",
-    "promo": "500€ Cashback; 475€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU75U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (75 Zoll / 1",
-    "price": "999",
-    "uvp": "1399",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU85U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (85 Zoll / 2",
-    "price": "1399",
-    "uvp": "1999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ77S85H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, S",
-    "price": "2699",
-    "uvp": "4399",
-    "promo": "250€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ43LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (Flat, 43 Zoll ",
-    "price": "979,99",
-    "uvp": "1299",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85QN80H Neo QLED 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD ",
-    "price": "2699",
-    "uvp": "3699",
-    "promo": "250€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65QN90F Mini LED / Neo QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": "1399",
-    "uvp": "2999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ100QN80F Neo QLED 4K Vision AI Smart TV (100 Zoll / 254 cm, UHD 4K, SM",
-    "price": "2799",
-    "uvp": "5999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GMR55R85H Vision AI R85H Micro RGB TV (Flat, 55 Zoll / 138 cm, UHD 4K, S",
-    "price": "1399",
-    "uvp": "1899",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ43QN70H Neo QLED QN70H 4K Vision AI Smart TV (43 Zoll / 108 cm, UHD 4K",
-    "price": "699",
-    "uvp": "899",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85LS03FW The Frame Pro Lifestyle QLED 4K TV (85 Zoll / 214 cm, UHD 4K,",
-    "price": "2799",
-    "uvp": "4899",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GMR65R85H Vision AI R85H Micro RGB TV (Flat, 65 Zoll / 163 cm, UHD 4K, S",
-    "price": "1799",
-    "uvp": "2799",
-    "promo": "175€ Cashback; 200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG OLEDGQ83S95F OLED 4K Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART",
-    "price": "3499",
-    "uvp": "8799",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU75M70H Vision AI M70H Mini LED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMA",
-    "price": "1199",
-    "uvp": "1499",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GMR75R85H Vision AI R85H Micro RGB TV (Flat, 75 Zoll / 189 cm, UHD 4K, S",
-    "price": "2299",
-    "uvp": "4299",
-    "promo": "250€ Cashback; 225€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85QN990F Mini LED / Neo QLED 8K TV (85 Zoll / 214 cm, UHD 8K, SMART TV",
-    "price": "5999",
-    "uvp": "10999",
-    "promo": "1000€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ50QN70H Neo QLED QN70H 4K Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K",
-    "price": "779,99",
-    "uvp": "999",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG OLEDGQ77S95F OLED 4K Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD 4K,",
-    "price": "3039",
-    "uvp": "5599",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ55LS03F The Frame 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": "829,99",
-    "uvp": "1699",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLEDGQ55S85F 4K Vision AI Smart OLED TV (55 Zoll / 138 cm, UHD 4K, SMART",
-    "price": "849,99",
-    "uvp": "1999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65QN900F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, QLED 8K, SMART T",
-    "price": "1777",
-    "uvp": "4099",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "SAMSUNG GQ75QN90F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": "1799",
-    "uvp": "4399",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ75QN990F Mini LED / Neo QLED 8K TV (75 Zoll / 189 cm, UHD 8K, SMART TV",
-    "price": "3599",
-    "uvp": "7999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GMR65R95H Micro RGB R95H Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, S",
-    "price": "3299",
-    "uvp": "4399",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GMR85R85H Vision AI R85H Micro RGB TV (Flat, 85 Zoll / 214 cm, UHD 4K, S",
-    "price": "2999",
-    "uvp": "5999",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ98QN90F Mini LED / Neo QLED 4K TV (98 Zoll / 249 cm, UHD 4K, SMART TV)",
-    "price": "4699",
-    "uvp": "9949",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65QN990F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, UHD 8K, SMART TV",
-    "price": "3639",
-    "uvp": "5999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ75Q7F2 QLED TV Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": "799",
-    "uvp": "1699",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ55QN70H Neo QLED QN70H 4K Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K",
-    "price": "899",
-    "uvp": "1299",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ65QN70H Neo QLED QN70H 4K Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K",
-    "price": "1199",
-    "uvp": "1399",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85QN70H Neo QLED QN70H 4K Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K",
-    "price": "1999",
-    "uvp": "2599",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ75QN70H Neo QLED QN70H 4K Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K",
-    "price": "1599",
-    "uvp": "2099",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ85QN90F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
-    "price": "2299",
-    "uvp": "6999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GU100M90H Mini LED M90H 4K Samsung Vision AI Smart TV (Flat, 100 Zoll / ",
-    "price": "2999",
-    "uvp": null,
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "SAMSUNG Galaxy S26 Ultra 512 GB Cobalt Violet Dual SIM",
-    "price": "1179",
-    "uvp": "1649",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy S26 Ultra 256 GB Cobalt Violet Dual SIM",
-    "price": "979",
-    "uvp": "1449",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ77S99H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, S",
-    "price": "3949",
-    "uvp": "5799",
-    "promo": "375€ Cashback; 400€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ83S99H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, S",
-    "price": "5999",
-    "uvp": "8799",
-    "promo": "600€ Cashback; 575€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU98U9079H Crystal UHD U9079H 4K Samsung Vision AI Smart TV (Flat, 98 Zo",
-    "price": "2199",
-    "uvp": "2499",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GQ100QN80H Neo QLED 4K Samsung Vision AI Smart TV (100 Zoll / 252 cm, UH",
-    "price": "3699",
-    "uvp": "5999",
-    "promo": "350€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GU85M70H Vision AI M70H Mini LED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMA",
-    "price": "1699",
-    "uvp": "2099",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "SAMSUNG OLED GQ42S90F 4K Vision AI Smart OLED TV (42 Zoll / 106 cm, UHD 4K, SMAR",
-    "price": "899,99",
-    "uvp": "1699",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GMR100R85H Vision AI R85H Micro RGB TV (Flat, 100 Zoll / 254 cm, UHD 4K,",
-    "price": "8999",
-    "uvp": "12999",
-    "promo": "1300€ Cashback; 900€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GMR85R95H Micro RGB R95H Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, S",
-    "price": "6299",
-    "uvp": "8899",
-    "promo": "600€ Cashback; 575€ Cashback"
-  },
-  {
-    "name": "SAMSUNG GMR75R95H Micro RGB R95H Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, S",
-    "price": "4299",
-    "uvp": "5899",
-    "promo": "400€ Cashback"
-  },
-  {
-    "name": "SAMSUNG Galaxy S26+ 256 GB Cobalt Violet Dual SIM",
-    "price": "839",
-    "uvp": "1249",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy S26 256 GB Cobalt Violet Dual SIM",
-    "price": "819",
-    "uvp": "999",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy A37 128 GB Awesome Lavender Dual SIM",
-    "price": "289",
-    "uvp": "429",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy S26 512 GB Cobalt Violet Dual SIM",
-    "price": "999",
-    "uvp": "1199",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy S26+ 512 GB Cobalt Violet Dual SIM",
-    "price": "1029",
-    "uvp": "1449",
-    "promo": null
-  },
-  {
-    "name": "SEGWAY Ninebot E3 Pro D E-Scooter (10 Zoll, Schwarz / Silber / Rot)",
-    "price": "399",
-    "uvp": "449",
-    "promo": null
-  },
-  {
-    "name": "APPLE iPad Wi-Fi (11th generation), Tablet, 256 GB, 11 Zoll, Silber",
-    "price": "499",
-    "uvp": "629",
-    "promo": null
-  },
-  {
-    "name": "LENOVO Idea Tab, inkl. Lenovo Tab Pen, Tablet, 128 GB, 11 Zoll, Luna Grey",
-    "price": "169",
-    "uvp": "279",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG GQ65Q7F QLED TV Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
     "title": "SAMSUNG GQ65Q7F QLED TV Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 549.0,
-    "promo": "Sale 50%; was EUR 1099.00"
+    "name": "SAMSUNG GQ65Q7F QLED TV Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 539.99,
+    "uvp": "1099",
+    "original_price": 1099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65q7f-qled-tv-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-tizen-2988693.html"
   },
   {
-    "name": "SAMSUNG GU50U8079F Crystal UHD 4K Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GU50U8079F Crystal UHD 4K Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
-    "price": 389.0,
-    "promo": "Sale 51%; was EUR 679.00"
-  },
-  {
-    "name": "SAMSUNG GQ75Q7F QLED TV Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ75Q7F QLED TV Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": 599.0,
-    "promo": "Club Coupon -69,90€; Sale 58%; was EUR 1699.00"
-  },
-  {
-    "name": "SAMSUNG GU43U8079F Crystal UHD 4K Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GU43U8079F Crystal UHD 4K Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "price": 299.99,
-    "promo": "Sale 49%; was EUR 599.00"
-  },
-  {
-    "name": "SAMSUNG GU55U8079F Crystal UHD 4K Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GU55U8079F Crystal UHD 4K Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": 389.99,
-    "promo": "Sale 51%; was EUR 799.00"
-  },
-  {
-    "name": "SAMSUNG OLED GQ65S90F 4K Vision AI Smart OLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG OLED GQ65S90F 4K Vision AI Smart OLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 139.9,
-    "promo": "Club Coupon -139,90€; Sale 56%; was EUR 3199.00"
-  },
-  {
-    "name": "SAMSUNG GQ55Q7F QLED TV Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ55Q7F QLED TV Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": 449.99,
-    "promo": "Sale 49%; was EUR 899.00"
-  },
-  {
-    "name": "SAMSUNG OLED GQ55S90F 4K Vision AI Smart OLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG OLED GQ55S90F 4K Vision AI Smart OLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
-    "price": 104.9,
-    "promo": "Club Coupon -104,90€; Sale 56%; was EUR 2399.00"
-  },
-  {
-    "name": "SAMSUNG GQ43Q7F QLED TV Vision AI Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ43Q7F QLED TV Vision AI Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
-    "price": 369.99,
-    "promo": "Sale 42%; was EUR 649.00"
-  },
-  {
-    "name": "SAMSUNG GQ50Q7F QLED TV Vision AI Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ50Q7F QLED TV Vision AI Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
-    "price": 469.0,
-    "promo": "Sale 42%; was EUR 749.00"
-  },
-  {
-    "name": "SAMSUNG GU65U8079F Crystal UHD 4K Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
     "title": "SAMSUNG GU65U8079F Crystal UHD 4K Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 100.0,
-    "promo": "150€ Cashback; Club Coupon -57,90€; Sale 42%; was EUR 999.00"
+    "name": "SAMSUNG GU65U8079F Crystal UHD 4K Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 499.99,
+    "uvp": "999",
+    "original_price": 999,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu65u8079f-crystal-uhd-4k-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-tizen-2988686.html"
   },
   {
-    "name": "SAMSUNG GU75M80H Mini LED M80H 4K Samsung Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GU75M80H Mini LED M80H 4K Samsung Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": 999.0,
-    "promo": "Sale 37%; was EUR 1599.00"
+    "title": "SAMSUNG GU50U8079F Crystal UHD 4K Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU50U8079F Crystal UHD 4K Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 359.99,
+    "uvp": "679",
+    "original_price": 679,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu50u8079f-crystal-uhd-4k-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-tizen-2988684.html"
   },
   {
-    "name": "SAMSUNG OLED GQ77S90F 4K Vision AI Smart OLED TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG OLED GQ77S90F 4K Vision AI Smart OLED TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
-    "price": 1499.0,
-    "promo": "Club Coupon -189,90€; Sale 58%; was EUR 4599.00"
+    "title": "SAMSUNG GQ75Q7F QLED TV Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75Q7F QLED TV Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 799,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75q7f-qled-tv-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2988695.html"
   },
   {
-    "name": "SAMSUNG GQ85Q7F QLED TV Vision AI Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "title": "SAMSUNG GU55U8079F Crystal UHD 4K Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU55U8079F Crystal UHD 4K Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 399.99,
+    "uvp": "799",
+    "original_price": 799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu55u8079f-crystal-uhd-4k-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-tizen-2988685.html"
+  },
+  {
     "title": "SAMSUNG GQ85Q7F QLED TV Vision AI Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
-    "price": 250.0,
-    "promo": "225€ Cashback; Sale 56%; was EUR 2299.00"
+    "name": "SAMSUNG GQ85Q7F QLED TV Vision AI Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 999,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85q7f-qled-tv-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-tizen-2988697.html"
   },
   {
-    "name": "SAMSUNG GQ65S90H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GQ65S90H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
-    "price": 2599.0,
-    "promo": "Sale 18%; was EUR 3199.00"
+    "title": "SAMSUNG GU98DU9079U LED TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GU98DU9079U LED TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1399,
+    "uvp": "4299",
+    "original_price": 4299,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu98du9079u-led-tv-flat-98-zoll-249-cm-uhd-4k-smart-tv-tizen-2924386.html"
   },
   {
-    "name": "SAMSUNG GU75U8079F Crystal UHD 4K Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "title": "SAMSUNG OLED GQ55S90F 4K Vision AI Smart OLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ55S90F 4K Vision AI Smart OLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 999.99,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq55-s90f-4k-vision-ai-smart-oled-tv-flat-55-zoll-138-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988738.html"
+  },
+  {
+    "title": "SAMSUNG GQ65S95H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65S95H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 2349,
+    "uvp": "4099",
+    "original_price": 4099,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s95h-oled-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047334.html"
+  },
+  {
+    "title": "SAMSUNG OLED GQ65S90F 4K Vision AI Smart OLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ65S90F 4K Vision AI Smart OLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1399,
+    "uvp": "3199",
+    "original_price": 3199,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq65-s90-f-4k-vision-ai-smart-oled-tv-flat-65-zoll-163-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988742.html"
+  },
+  {
+    "title": "SAMSUNG GQ50Q7F QLED TV Vision AI Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ50Q7F QLED TV Vision AI Smart TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 439,
+    "uvp": "749",
+    "original_price": 749,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq50q7f-qled-tv-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-tizen-2988689.html"
+  },
+  {
+    "title": "SAMSUNG GQ55Q7F QLED TV Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55Q7F QLED TV Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 439.99,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55q7f-qled-tv-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-tizen-2988691.html"
+  },
+  {
+    "title": "SAMSUNG GU55M70H Vision AI M70H Mini LED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU55M70H Vision AI M70H Mini LED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 529,
+    "uvp": "849",
+    "original_price": 849,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu55m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047279.html"
+  },
+  {
+    "title": "SAMSUNG GU65M70H Vision AI M70H Mini LED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU65M70H Vision AI M70H Mini LED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 666,
+    "uvp": "1049",
+    "original_price": 1049,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu65m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047280.html"
+  },
+  {
     "title": "SAMSUNG GU75U8079F Crystal UHD 4K Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
-    "price": 699.0,
-    "promo": "Club Coupon -69,90€; Sale 50%; was EUR 1399.00"
+    "name": "SAMSUNG GU75U8079F Crystal UHD 4K Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 699.99,
+    "uvp": "1399",
+    "original_price": 1399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu75u8079f-crystal-uhd-4k-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2988683.html"
   },
   {
-    "name": "SAMSUNG OLED GQ48S90F 4K Vision AI Smart OLED TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG OLED GQ48S90F 4K Vision AI Smart OLED TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
-    "price": 889.0,
-    "promo": "Club Coupon -94,90€; Sale 47%; was EUR 1799.00"
+    "title": "SAMSUNG GU32F6009F LED TV (32 Zoll / 80 cm, Full-HD, SMART TV)",
+    "name": "SAMSUNG GU32F6009F LED TV (32 Zoll / 80 cm, Full-HD, SMART TV)",
+    "price": 279.99,
+    "uvp": "349",
+    "original_price": 349,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu32f6009f-led-tv-32-zoll-80-cm-full-hd-smart-tv-2988662.html"
   },
   {
-    "name": "SAMSUNG GU85U8079F Crystal UHD 4K Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
-    "title": "SAMSUNG GU85U8079F Crystal UHD 4K Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
-    "price": 250.0,
-    "promo": "250€ Cashback; Sale 47%; was EUR 1999.00"
+    "title": "SAMSUNG GU75M80H Mini LED M80H 4K Samsung Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU75M80H Mini LED M80H 4K Samsung Vision AI Smart TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 999,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu75m80h-mini-led-m80h-4k-samsung-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047289.html"
   },
   {
-    "name": "SAMSUNG GQ98Q7F QLED TV Vision AI 120Hz Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K, SMART TV)",
+    "title": "SAMSUNG OLED GQ77S90F 4K Vision AI Smart OLED TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ77S90F 4K Vision AI Smart OLED TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 1799,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq77-s-90f-4k-vision-ai-smart-oled-tv-flat-77-zoll-195-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988739.html"
+  },
+  {
+    "title": "SAMSUNG GQ55S95H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55S95H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 2059,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s95h-oled-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047333.html"
+  },
+  {
+    "title": "SAMSUNG GMR65R85H Vision AI R85H Micro RGB TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR65R85H Vision AI R85H Micro RGB TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1599,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr65r85h-micro-rgb-r85h-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047326.html"
+  },
+  {
     "title": "SAMSUNG GQ98Q7F QLED TV Vision AI 120Hz Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K, SMART TV)",
-    "price": 209.9,
-    "promo": "Club Coupon -209,90€; Sale 38%; was EUR 3399.00"
+    "name": "SAMSUNG GQ98Q7F QLED TV Vision AI 120Hz Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K, SMART TV)",
+    "price": 2111,
+    "uvp": "3399",
+    "original_price": 3399,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq98q7f-qled-tv-vision-ai-smart-tv-98-zoll-247-cm-uhd-4k-smart-tv-3022040.html"
   },
   {
-    "name": "SAMSUNG OLED GQ83S90F 4K Vision AI Smart OLED TV (Flat, 83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "title": "SAMSUNG GU85U8079F Crystal UHD 4K Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU85U8079F Crystal UHD 4K Smart TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1049,
+    "uvp": "1999",
+    "original_price": 1999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu85u8079f-crystal-uhd-4k-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-tizen-2988687.html"
+  },
+  {
+    "title": "SAMSUNG GQ50QN70H Neo QLED QN70H 4K Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ50QN70H Neo QLED QN70H 4K Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 699,
+    "uvp": "999",
+    "original_price": 999,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq50qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-3047316.html"
+  },
+  {
+    "title": "SAMSUNG GQ50QN90F Mini LED / Neo QLED 4K TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ50QN90F Mini LED / Neo QLED 4K TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 699.99,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-50qn90f-4k-vision-ai-smart-neo-qled-tv-flat-50-zoll-125-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988674.html"
+  },
+  {
+    "title": "SAMSUNG GMR55R85H Vision AI R85H Micro RGB TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR55R85H Vision AI R85H Micro RGB TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1333,
+    "uvp": "1899",
+    "original_price": 1899,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr55r85h-micro-rgb-r85h-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047325.html"
+  },
+  {
+    "title": "SAMSUNG GMR75R85H Vision AI R85H Micro RGB TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR75R85H Vision AI R85H Micro RGB TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 2222,
+    "uvp": "4299",
+    "original_price": 4299,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr75r85h-micro-rgb-r85h-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047327.html"
+  },
+  {
+    "title": "SAMSUNG GQ43QN70H Neo QLED QN70H 4K Vision AI Smart TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ43QN70H Neo QLED QN70H 4K Vision AI Smart TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 599,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq43qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-43-zoll-108-cm-uhd-4k-smart-tv-3047317.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN70F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55QN70F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 699.99,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn70f-neo-qled-4k-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-tizen-2988664.html"
+  },
+  {
+    "title": "SAMSUNG GU43M70H Vision AI M70H Mini LED TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU43M70H Vision AI M70H Mini LED TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 449.99,
+    "uvp": "629",
+    "original_price": 629,
+    "promo": "Cashback 50 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu43m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-43-zoll-108-cm-uhd-4k-smart-tv-3047277.html"
+  },
+  {
+    "title": "SAMSUNG GQ65LS03F The Frame 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65LS03F The Frame 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 879.99,
+    "uvp": "2199",
+    "original_price": 2199,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65ls03f-the-frame-4k-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-tizen-2988699.html"
+  },
+  {
+    "title": "SAMSUNG GQ43Q7F QLED TV Vision AI Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ43Q7F QLED TV Vision AI Smart TV (Flat, 43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 349.99,
+    "uvp": "649",
+    "original_price": 649,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq43q7f-qled-tv-vision-ai-smart-tv-43-zoll-108-cm-uhd-4k-smart-tv-tizen-2988688.html"
+  },
+  {
+    "title": "SAMSUNG OLED GQ48S90F 4K Vision AI Smart OLED TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ48S90F 4K Vision AI Smart OLED TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "price": 899.99,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq48-s90-f-4k-vision-ai-smart-oled-tv-flat-48-zoll-121-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988740.html"
+  },
+  {
+    "title": "SAMSUNG GU24F6009F LED TV (24 Zoll / 60,96 cm, Full-HD, SMART TV)",
+    "name": "SAMSUNG GU24F6009F LED TV (24 Zoll / 60,96 cm, Full-HD, SMART TV)",
+    "price": 182.99,
+    "uvp": "209",
+    "original_price": 209,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu24f6009f-led-tv-24-zoll-6096-cm-full-hd-smart-tv-2989647.html"
+  },
+  {
+    "title": "SAMSUNG GU65M80H Mini LED M80H 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU65M80H Mini LED M80H 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 799.99,
+    "uvp": "1149",
+    "original_price": 1149,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu65m80h-mini-led-m80h-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047288.html"
+  },
+  {
+    "title": "SAMSUNG GQ48S95H OLED 4K Samsung Vision AI Smart TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ48S95H OLED 4K Samsung Vision AI Smart TV (Flat, 48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "price": 1539,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq48s95h-oled-4k-samsung-vision-ai-smart-tv-48-zoll-121-cm-uhd-4k-smart-tv-3047300.html"
+  },
+  {
+    "title": "SAMSUNG GQ32LS03CBU The Frame QLED TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ32LS03CBU The Frame QLED TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, Tizen)",
+    "price": 379.99,
+    "uvp": "699",
+    "original_price": 699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq32ls03cbu-the-frame-qled-tv-flat-32-zoll-80-cm-uhd-4k-smart-tv-tizen-2863111.html"
+  },
+  {
+    "title": "SAMSUNG GQ43LS03F The Frame 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ43LS03F The Frame 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 599.99,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": "Cashback 50 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq43ls03f-the-frame-4k-vision-ai-smart-tv-43-zoll-108-cm-uhd-4k-smart-tv-tizen-2988736.html"
+  },
+  {
+    "title": "SAMSUNG GQ50LS03F The Frame 4K TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ50LS03F The Frame 4K TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 679.99,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": "Cashback 75 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq50ls03f-the-frame-4k-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-tizen-2988737.html"
+  },
+  {
+    "title": "SAMSUNG GQ77S95H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ77S95H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 3519,
+    "uvp": "5599",
+    "original_price": 5599,
+    "promo": "Cashback 400 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s95h-oled-4k-samsung-vision-ai-smart-tv-77-zoll-195-cm-uhd-4k-smart-tv-3047335.html"
+  },
+  {
+    "title": "SAMSUNG GU55M80H Mini LED M80H 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU55M80H Mini LED M80H 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 659.99,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu55m80h-mini-led-m80h-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047287.html"
+  },
+  {
+    "title": "SAMSUNG GQ55LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1549,
+    "uvp": "1899",
+    "original_price": 1899,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55ls03h-the-frame-pro-ls03hw-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047291.html"
+  },
+  {
+    "title": "SAMSUNG GU43U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU43U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 499.99,
+    "uvp": "599",
+    "original_price": 599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu43u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-43-zoll-108-cm-uhd-4k-smart-tv-3047306.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN80H Neo QLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55QN80H Neo QLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 999,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047296.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN90F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55QN90F Mini LED / Neo QLED 4K TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 979.99,
+    "uvp": "2199",
+    "original_price": 2199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-55qn90f-4k-vision-ai-smart-neo-qled-tv-flat-55-zoll-138-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988672.html"
+  },
+  {
+    "title": "SAMSUNG GQ65LS03FW The Frame Pro Lifestyle QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65LS03FW The Frame Pro Lifestyle QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1279,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": "Cashback 125 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65ls03fw-the-frame-pro-lifestyle-qled-4k-tv-65-zoll-163-cm-uhd-4k-smart-tv-2988756.html"
+  },
+  {
+    "title": "SAMSUNG GQ55S90H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55S90H OLED 4K Samsung Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1789,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s90h-oled-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047303.html"
+  },
+  {
+    "title": "SAMSUNG GQ42S90H OLED 4K Samsung Vision AI Smart TV (42 Zoll / 106 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ42S90H OLED 4K Samsung Vision AI Smart TV (42 Zoll / 106 cm, UHD 4K, SMART TV)",
+    "price": 1599,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq42s90h-oled-4k-samsung-vision-ai-smart-tv-42-zoll-106-cm-uhd-4k-smart-tv-3047301.html"
+  },
+  {
     "title": "SAMSUNG OLED GQ83S90F 4K Vision AI Smart OLED TV (Flat, 83 Zoll / 210 cm, UHD 4K, SMART TV)",
-    "price": 2359.0,
-    "promo": "Sale 67%; was EUR 7199.00"
+    "name": "SAMSUNG OLED GQ83S90F 4K Vision AI Smart OLED TV (Flat, 83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "price": 2399,
+    "uvp": "7199",
+    "original_price": 7199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq83-s90f-4k-vision-ai-smart-oled-tv-flat-83-zoll-210-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988744.html"
+  },
+  {
+    "title": "SAMSUNG GQ65S90H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65S90H OLED 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 2229,
+    "uvp": "3199",
+    "original_price": 3199,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s90h-oled-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047276.html"
+  },
+  {
+    "title": "SAMSUNG GQ48S85H OLED 4K Samsung Vision AI Smart TV (48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ48S85H OLED 4K Samsung Vision AI Smart TV (48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "price": 1199,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq48s85h-oled-4k-samsung-vision-ai-smart-tv-48-zoll-121-cm-uhd-4k-smart-tv-3047313.html"
+  },
+  {
+    "title": "SAMSUNG GQ83S85H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ83S85H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "price": 3199,
+    "uvp": "6099",
+    "original_price": 6099,
+    "promo": "Cashback 300 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq83s85h-oled-4k-samsung-vision-ai-smart-tv-83-zoll-210-cm-uhd-4k-smart-tv-3047312.html"
+  },
+  {
+    "title": "SAMSUNG GQ65LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 165,1 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (Flat, 65 Zoll / 165,1 cm, UHD 4K, SMART TV)",
+    "price": 1649,
+    "uvp": "2199",
+    "original_price": 2199,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65ls03h-qled-tv-flat-65-zoll-1651-cm-uhd-4k-smart-tv-3047190.html"
+  },
+  {
+    "title": "SAMSUNG GU55U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU55U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 599,
+    "uvp": "799",
+    "original_price": 799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu55u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047307.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ55S95F OLED 4K Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLEDGQ55S95F OLED 4K Vision AI Smart TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1439,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s95f-oled-4k-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988747.html"
+  },
+  {
+    "title": "SAMSUNG GQ43QN90F Mini LED / Neo QLED 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ43QN90F Mini LED / Neo QLED 4K TV (43 Zoll / 108 cm, UHD 4K, SMART TV)",
+    "price": 759.99,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-43qn90f-4k-vision-ai-smart-neo-qled-tv-flat-43-zoll-108-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988673.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN70F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75QN70F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1189,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn70f-neo-qled-4k-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2988666.html"
+  },
+  {
+    "title": "SAMSUNG GU50M70H Vision AI M70H Mini LED TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU50M70H Vision AI M70H Mini LED TV (Flat, 50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 539.99,
+    "uvp": "699",
+    "original_price": 699,
+    "promo": "Cashback 50 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu50m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-3047278.html"
+  },
+  {
+    "title": "SAMSUNG GQ55S99H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55S99H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1999,
+    "uvp": "3099",
+    "original_price": 3099,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s99h-oled-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047328.html"
+  },
+  {
+    "title": "SAMSUNG GU85M80H Mini LED M80H 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU85M80H Mini LED M80H 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1679,
+    "uvp": "2199",
+    "original_price": 2199,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu85m80h-mini-led-m80h-4k-samsung-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047290.html"
+  },
+  {
+    "title": "SAMSUNG GQ85LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ85LS03H The Frame Pro LS03HW 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 3539,
+    "uvp": "4899",
+    "original_price": 4899,
+    "promo": "Cashback 350 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85ls03h-the-frame-pro-ls03hw-4k-samsung-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047314.html"
+  },
+  {
+    "title": "SAMSUNG GU65U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU65U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 699,
+    "uvp": "999",
+    "original_price": 999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu65u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047308.html"
+  },
+  {
+    "title": "SAMSUNG GQ55S85H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55S85H OLED 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1499,
+    "uvp": "1999",
+    "original_price": 1999,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s85h-oled-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047274.html"
+  },
+  {
+    "title": "SAMSUNG GU50U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU50U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 579,
+    "uvp": "679",
+    "original_price": 679,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu50u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-3047305.html"
+  },
+  {
+    "title": "SAMSUNG GQ65S85H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65S85H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1999,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s85h-oled-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047275.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ65S95F OLED 4K Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLEDGQ65S95F OLED 4K Vision AI Smart TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1749,
+    "uvp": "4099",
+    "original_price": 4099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s95f-oled-4k-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988749.html"
+  },
+  {
+    "title": "SAMSUNG GQ75LS03FW The Frame Pro Lifestyle QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75LS03FW The Frame Pro Lifestyle QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1839,
+    "uvp": "3599",
+    "original_price": 3599,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75ls03fw-the-frame-pro-lifestyle-qled-4k-tv-75-zoll-189-cm-uhd-4k-smart-tv-2988757.html"
+  },
+  {
+    "title": "SAMSUNG The Movingstyle UE27LSM7FAXXXE The Movingstyle QHD AI Smart TV mit Touchscreen (27 Zoll / 68 cm, QHD, SMART TV)",
+    "name": "SAMSUNG The Movingstyle UE27LSM7FAXXXE The Movingstyle QHD AI Smart TV mit Touchscreen (27 Zoll / 68 cm, QHD, SMART TV)",
+    "price": 1229,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-the-movingstyle-ue27lsm7faxxxe-the-movingstyle-qhd-ai-smart-tv-mit-touchscreen-27-zoll-68-cm-qhd-smart-tv-3026728.html"
+  },
+  {
+    "title": "SAMSUNG GQ65S99H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65S99H OLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 2589,
+    "uvp": "4299",
+    "original_price": 4299,
+    "promo": "Cashback 300 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s99h-oled-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047329.html"
+  },
+  {
+    "title": "SAMSUNG GQ83S90H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ83S90H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "price": 4799,
+    "uvp": "7199",
+    "original_price": 7199,
+    "promo": "Cashback 500 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq83s90h-oled-4k-samsung-vision-ai-smart-tv-83-zoll-210-cm-uhd-4k-smart-tv-3047304.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN80H Neo QLED 4K Samsung Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75QN80H Neo QLED 4K Samsung Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1899,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047297.html"
+  },
+  {
+    "title": "SAMSUNG GQ77S90H OLED 4K Samsung Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ77S90H OLED 4K Samsung Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 3159,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": "Cashback 350 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s90h-oled-4k-samsung-vision-ai-smart-tv-77-zoll-195-cm-uhd-4k-smart-tv-3047286.html"
+  },
+  {
+    "title": "SAMSUNG GQ55LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 1049,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55ls03h-the-frame-ls03ha-4k-samsung-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047322.html"
+  },
+  {
+    "title": "SAMSUNG GQ50QN80H Neo QLED 4K Samsung Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ50QN80H Neo QLED 4K Samsung Vision AI Smart TV (50 Zoll / 125 cm, UHD 4K, SMART TV)",
+    "price": 899,
+    "uvp": "1199",
+    "original_price": 1199,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq50qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-50-zoll-125-cm-uhd-4k-smart-tv-3047295.html"
+  },
+  {
+    "title": "SAMSUNG GU75U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU75U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 999,
+    "uvp": "1399",
+    "original_price": 1399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu75u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047310.html"
+  },
+  {
+    "title": "SAMSUNG GQ77S85H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ77S85H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 2699,
+    "uvp": "4399",
+    "original_price": 4399,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s85h-oled-4k-samsung-vision-ai-smart-tv-77-zoll-195-cm-uhd-4k-smart-tv-3047311.html"
+  },
+  {
+    "title": "SAMSUNG GQ43LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (Flat, 43 Zoll / 109,22 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ43LS03H The Frame LS03HA 4K Samsung Vision AI Smart TV (Flat, 43 Zoll / 109,22 cm, UHD 4K, SMART TV)",
+    "price": 889.99,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq43ls03h-the-frame-ls03ha-4k-samsung-vision-ai-smart-tv-flat-43-zoll-10922-cm-uhd-4k-smart-tv-3047323.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN80H Neo QLED 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ85QN80H Neo QLED 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 2699,
+    "uvp": "3699",
+    "original_price": 3699,
+    "promo": "Cashback 250 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047298.html"
+  },
+  {
+    "title": "SAMSUNG GU85U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU85U8079H Crystal UHD U8079H 4K Samsung Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1399,
+    "uvp": "1999",
+    "original_price": 1999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu85u8079h-crystal-uhd-u8079h-4k-samsung-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047309.html"
+  },
+  {
+    "title": "SAMSUNG GU98U9079H Crystal UHD U9079H 4K Samsung Vision AI Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU98U9079H Crystal UHD U9079H 4K Samsung Vision AI Smart TV (Flat, 98 Zoll / 247 cm, UHD 4K, SMART TV)",
+    "price": 2149,
+    "uvp": "2499",
+    "original_price": 2499,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu98u9079h-crystal-uhd-u9079h-4k-samsung-vision-ai-smart-tv-98-zoll-247-cm-uhd-4k-smart-tv-3047336.html"
+  },
+  {
+    "title": "SAMSUNG GU100M90H Mini LED M90H 4K Samsung Vision AI Smart TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU100M90H Mini LED M90H 4K Samsung Vision AI Smart TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "price": 2999,
+    "uvp": null,
+    "original_price": 2999,
+    "promo": "Cashback 300 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu100m90h-mini-led-m90h-4k-samsung-vision-ai-smart-tv-flat-100-zoll-254-cm-uhd-4k-smart-tv-3047332.html"
+  },
+  {
+    "title": "SAMSUNG GQ100QN80H Neo QLED 4K Samsung Vision AI Smart TV (100 Zoll / 252 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ100QN80H Neo QLED 4K Samsung Vision AI Smart TV (100 Zoll / 252 cm, UHD 4K, SMART TV)",
+    "price": 3699,
+    "uvp": "5999",
+    "original_price": 5999,
+    "promo": "Cashback 350 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq100qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-100-zoll-252-cm-uhd-4k-smart-tv-3047294.html"
+  },
+  {
+    "title": "SAMSUNG GQ100QN80F Neo QLED 4K Vision AI Smart TV (100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ100QN80F Neo QLED 4K Vision AI Smart TV (100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "price": 2999,
+    "uvp": "5999",
+    "original_price": 5999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq100qn80f-neo-qled-4k-vision-ai-smart-tv-100-zoll-254-cm-uhd-4k-smart-tv-2988668.html"
+  },
+  {
+    "title": "SAMSUNG GMR65R95H Micro RGB R95H Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR65R95H Micro RGB R95H Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 3249,
+    "uvp": "4399",
+    "original_price": 4399,
+    "promo": "Cashback 300 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr65r95h-micro-rgb-r95h-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047283.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN90F Mini LED / Neo QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65QN90F Mini LED / Neo QLED 4K TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1399,
+    "uvp": "2999",
+    "original_price": 2999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-65qn90f-4k-vision-ai-smart-neo-qled-tv-flat-65-zoll-163-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988669.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN90F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75QN90F Mini LED / Neo QLED 4K TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1799,
+    "uvp": "4399",
+    "original_price": 4399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-75qn90f-4k-vision-ai-smart-neo-qled-tv-flat-75-zoll-189-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988670.html"
+  },
+  {
+    "title": "SAMSUNG GMR85R85H Vision AI R85H Micro RGB TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR85R85H Vision AI R85H Micro RGB TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 2999,
+    "uvp": "5999",
+    "original_price": 5999,
+    "promo": "Cashback 300 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr85r85h-micro-rgb-r85h-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047324.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN90F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ85QN90F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 2299,
+    "uvp": "6999",
+    "original_price": 6999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-85qn90f-4k-vision-ai-smart-neo-qled-tv-flat-85-zoll-214-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988671.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN70F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ85QN70F Mini LED / Neo QLED 4K TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1629,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn70f-neo-qled-4k-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-tizen-2988667.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN70H Neo QLED QN70H 4K Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65QN70H Neo QLED QN70H 4K Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1199,
+    "uvp": "1399",
+    "original_price": 1399,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047319.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN800D Mini LED / Neo QLED AI TV (Flat, 85 Zoll / 214 cm, UHD 8K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ85QN800D Mini LED / Neo QLED AI TV (Flat, 85 Zoll / 214 cm, UHD 8K, SMART TV, Tizen)",
+    "price": 5009,
+    "uvp": "6999",
+    "original_price": 6999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn800d-qled-tv-flat-85-zoll-214-cm-uhd-8k-mini-led-smart-tv-tizen-2924375.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ77S95F OLED 4K Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLEDGQ77S95F OLED 4K Vision AI Smart TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 2899,
+    "uvp": "5599",
+    "original_price": 5599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s95f-oled-4k-vision-ai-smart-tv-77-zoll-195-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988750.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ83S95F OLED 4K Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLEDGQ83S95F OLED 4K Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "price": 3589,
+    "uvp": "8799",
+    "original_price": 8799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oledgq83s95f-oled-4k-vision-ai-smart-tv-83-zoll-210-cm-uhd-4k-smart-tv-2988753.html"
+  },
+  {
+    "title": "SAMSUNG GU75M70H Vision AI M70H Mini LED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU75M70H Vision AI M70H Mini LED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1139,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu75m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047281.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN900F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, QLED 8K, SMART TV)",
+    "name": "SAMSUNG GQ65QN900F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, QLED 8K, SMART TV)",
+    "price": 2419,
+    "uvp": "4099",
+    "original_price": 4099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-qled-gq65qn900f-8k-vision-ai-smart-qled-tv-65-zoll-163-cm-qled-8k-smart-tv-tizentm-smart-tv-2988681.html"
+  },
+  {
+    "title": "SAMSUNG GU85M70H Vision AI M70H Mini LED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GU85M70H Vision AI M70H Mini LED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1629,
+    "uvp": "2099",
+    "original_price": 2099,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu85m70h-mini-led-m70h-4k-samsung-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047282.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN990F Mini LED / Neo QLED 8K TV (85 Zoll / 214 cm, UHD 8K, SMART TV)",
+    "name": "SAMSUNG GQ85QN990F Mini LED / Neo QLED 8K TV (85 Zoll / 214 cm, UHD 8K, SMART TV)",
+    "price": 5709,
+    "uvp": "10999",
+    "original_price": 10999,
+    "promo": "Cashback 1000 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn990f-neo-qled-4k-vision-ai-smart-tv-85-zoll-214-cm-uhd-8k-smart-tv-2988735.html"
+  },
+  {
+    "title": "SAMSUNG GU65DU7170U LED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GU65DU7170U LED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 689.99,
+    "uvp": "999",
+    "original_price": 999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu65du7170-led-tv-flat-65-zoll-163-cm-uhd-4k-smart-tv-tizen-2924383.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN990F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, UHD 8K, SMART TV)",
+    "name": "SAMSUNG GQ65QN990F Mini LED / Neo QLED 8K TV (65 Zoll / 163 cm, UHD 8K, SMART TV)",
+    "price": 3649,
+    "uvp": "5999",
+    "original_price": 5999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65qn990f-neo-qled-4k-vision-ai-smart-tv-65-zoll-163-cm-uhd-8k-smart-tv-2988734.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN85D Mini LED / Neo QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ55QN85D Mini LED / Neo QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1039,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn85d-qled-tv-flat-55-zoll-138-cm-uhd-4k-mini-led-smart-tv-tizen-2924365.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN70H Neo QLED QN70H 4K Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ75QN70H Neo QLED QN70H 4K Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 1589,
+    "uvp": "2099",
+    "original_price": 2099,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047320.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ48S90D OLED TV (Flat, 48 Zoll / 122 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ48S90D OLED TV (Flat, 48 Zoll / 122 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 949.99,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq48s90d-oled-tv-flat-48-zoll-122-cm-oled-4k-smart-tv-tizen-2924358.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ65S90CAT OLED TV (Flat, 65 Zoll / 163 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ65S90CAT OLED TV (Flat, 65 Zoll / 163 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 2079,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s90cat-oled-tv-flat-65-zoll-163-cm-oled-4k-smart-tv-tizen-2863125.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ65S85D OLED TV (Flat, 65 Zoll / 163 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ65S85D OLED TV (Flat, 65 Zoll / 163 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 1549,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65s85d-oled-tv-flat-65-zoll-163-cm-oled-4k-smart-tv-tizen-2924392.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN85D Mini LED / Neo QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ75QN85D Mini LED / Neo QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1299,
+    "uvp": "2699",
+    "original_price": 2699,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn85d-qled-tv-flat-75-zoll-189-cm-uhd-4k-mini-led-smart-tv-tizen-2924398.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN90D Mini LED / Neo QLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ65QN90D Mini LED / Neo QLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1699,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65qn90d-qled-tv-flat-65-zoll-163-cm-uhd-4k-mini-led-smart-tv-tizen-2924391.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN90D Mini LED / Neo QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ55QN90D Mini LED / Neo QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1279,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn90d-qled-tv-flat-55-zoll-138-cm-uhd-4k-mini-led-smart-tv-tizen-2924366.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN70H Neo QLED QN70H 4K Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ85QN70H Neo QLED QN70H 4K Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 1999,
+    "uvp": "2599",
+    "original_price": 2599,
+    "promo": "Cashback 200 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047321.html"
+  },
+  {
+    "title": "SAMSUNG 85\" Frame (2021/2022) TV Rahmen",
+    "name": "SAMSUNG 85\" Frame (2021/2022) TV Rahmen",
+    "price": 119,
+    "uvp": "119",
+    "original_price": 119,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-85-frame-2021-tv-rahmen-2756304.html"
+  },
+  {
+    "title": "SAMSUNG GQ75LS03 The Frame Lifestyle QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ75LS03 The Frame Lifestyle QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 2109,
+    "uvp": "3399",
+    "original_price": 3399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75ls03-qled-tv-flat-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2924394.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN85D Mini LED / Neo QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ85QN85D Mini LED / Neo QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 2769,
+    "uvp": "3799",
+    "original_price": 3799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn85d-qled-tv-flat-85-zoll-214-cm-uhd-4k-mini-led-smart-tv-tizen-2924376.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN85CAT QLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ65QN85CAT QLED TV (Flat, 65 Zoll / 163 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1417.1,
+    "uvp": "2599",
+    "original_price": 2599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65qn85c-neo-qled-tv-flat-65-zoll-163-cm-uhd-4k-smart-tv-tizen-2863120.html"
+  },
+  {
+    "title": "SAMSUNG GQ85Q60D QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ85Q60D QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1387.78,
+    "uvp": "2199",
+    "original_price": 2199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85q60d-qled-tv-flat-85-zoll-214-cm-uhd-4k-smart-tv-tizen-2924404.html"
+  },
+  {
+    "title": "SAMSUNG GQ75Q60D QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ75Q60D QLED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 1029,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75q60d-qled-tv-flat-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2924395.html"
+  },
+  {
+    "title": "SAMSUNG 85\" Frame (2021/2022) TV Rahmen",
+    "name": "SAMSUNG 85\" Frame (2021/2022) TV Rahmen",
+    "price": 119,
+    "uvp": "119",
+    "original_price": 119,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-85-frame-2021-tv-rahmen-2756307.html"
+  },
+  {
+    "title": "SAMSUNG GU75DU7179U LED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GU75DU7179U LED TV (Flat, 75 Zoll / 189 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 699,
+    "uvp": "1399",
+    "original_price": 1399,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu75du7179-led-tv-flat-75-zoll-189-cm-uhd-4k-smart-tv-tizen-2924384.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN85C NEO QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ55QN85C NEO QLED TV (Flat, 55 Zoll / 138 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 989.99,
+    "uvp": "1929",
+    "original_price": 1929,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn85c-neo-qled-tv-flat-55-zoll-138-cm-uhd-4k-smart-tv-tizen-2863131.html"
+  },
+  {
+    "title": "SAMSUNG GQ77S99H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ77S99H OLED 4K Samsung Vision AI Smart TV (77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 3799,
+    "uvp": "5799",
+    "original_price": 5799,
+    "promo": "Cashback 400 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s99h-oled-4k-samsung-vision-ai-smart-tv-77-zoll-195-cm-uhd-4k-smart-tv-3047330.html"
+  },
+  {
+    "title": "SAMSUNG Flip Pro WM75B Display, White Gray",
+    "name": "SAMSUNG Flip Pro WM75B Display, White Gray",
+    "price": 2199,
+    "uvp": null,
+    "original_price": 2199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-lh75wmbwlgcxen-led-75-4k-3840x2160pixel-169-2835616.html"
+  },
+  {
+    "title": "SAMSUNG Flip Pro WM85B Display, White Gray",
+    "name": "SAMSUNG Flip Pro WM85B Display, White Gray",
+    "price": 5299,
+    "uvp": null,
+    "original_price": 5299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-lh85wmbwlgcxen-2827344.html"
+  },
+  {
+    "title": "SAMSUNG GQ65QN80H Neo QLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ65QN80H Neo QLED 4K Samsung Vision AI Smart TV (65 Zoll / 163 cm, UHD 4K, SMART TV)",
+    "price": 1299,
+    "uvp": "1899",
+    "original_price": 1899,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq65qn80h-neo-qled-4k-samsung-vision-ai-smart-tv-65-zoll-163-cm-uhd-4k-smart-tv-3047299.html"
+  },
+  {
+    "title": "SAMSUNG GQ83S99H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ83S99H OLED 4K Samsung Vision AI Smart TV (83 Zoll / 210 cm, UHD 4K, SMART TV)",
+    "price": 4949,
+    "uvp": "8799",
+    "original_price": 8799,
+    "promo": "Cashback 600 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq83s99h-oled-4k-samsung-vision-ai-smart-tv-83-zoll-210-cm-uhd-4k-smart-tv-3047331.html"
+  },
+  {
+    "title": "SAMSUNG GQ48S90H OLED 4K Samsung Vision AI Smart TV (48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ48S90H OLED 4K Samsung Vision AI Smart TV (48 Zoll / 121 cm, UHD 4K, SMART TV)",
+    "price": 1509,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": "Cashback 150 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq48s90h-oled-4k-samsung-vision-ai-smart-tv-48-zoll-121-cm-uhd-4k-smart-tv-3047302.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ77S90D OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ77S90D OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 1399,
+    "uvp": "3599",
+    "original_price": 3599,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s90d-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-tizen-2924400.html"
+  },
+  {
+    "title": "SAMSUNG GU32T5379CD LED TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, Tizen™)",
+    "name": "SAMSUNG GU32T5379CD LED TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, Tizen™)",
+    "price": 294.99,
+    "uvp": "349",
+    "original_price": 349,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gu32t5379cd-led-tv-flat-32-zoll-80-cm-full-hd-smart-tv-tizentm-2863147.html"
+  },
+  {
+    "title": "SAMSUNG OLED GQ42S90F 4K Vision AI Smart OLED TV (42 Zoll / 106 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ42S90F 4K Vision AI Smart OLED TV (42 Zoll / 106 cm, UHD 4K, SMART TV)",
+    "price": 819.99,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq42s90f-4k-vision-ai-smart-oled-tv-42-zoll-106-cm-uhd-4k-smart-tv-3026564.html"
+  },
+  {
+    "title": "SAMSUNG GMR100R85H Vision AI R85H Micro RGB TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR100R85H Vision AI R85H Micro RGB TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "price": 8999,
+    "uvp": "12999",
+    "original_price": 12999,
+    "promo": "Cashback 900 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr100r85h-micro-rgb-r85h-vision-ai-smart-tv-100-zoll-254-cm-uhd-4k-smart-tv-3047315.html"
+  },
+  {
+    "title": "SAMSUNG GMR85R95H Micro RGB R95H Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR85R95H Micro RGB R95H Vision AI Smart TV (85 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 5599,
+    "uvp": "8899",
+    "original_price": 8899,
+    "promo": "Cashback 600 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr85r95h-micro-rgb-r95h-vision-ai-smart-tv-85-zoll-214-cm-uhd-4k-smart-tv-3047285.html"
+  },
+  {
+    "title": "SAMSUNG GMR75R95H Micro RGB R95H Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GMR75R95H Micro RGB R95H Vision AI Smart TV (75 Zoll / 189 cm, UHD 4K, SMART TV)",
+    "price": 4299,
+    "uvp": "5899",
+    "original_price": 5899,
+    "promo": "Cashback 400 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gmr75r95h-micro-rgb-r95h-vision-ai-smart-tv-75-zoll-189-cm-uhd-4k-smart-tv-3047284.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN990F Mini LED / Neo QLED 8K TV (75 Zoll / 189 cm, UHD 8K, SMART TV)",
+    "name": "SAMSUNG GQ75QN990F Mini LED / Neo QLED 8K TV (75 Zoll / 189 cm, UHD 8K, SMART TV)",
+    "price": 3599,
+    "uvp": "7999",
+    "original_price": 7999,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn990f-neo-qled-4k-vision-ai-smart-tv-75-zoll-189-cm-uhd-8k-smart-tv-2988680.html"
+  },
+  {
+    "title": "SAMSUNG GQ115QN90F Mini LED / Neo QLED 4K TV (115 Zoll / 292 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ115QN90F Mini LED / Neo QLED 4K TV (115 Zoll / 292 cm, UHD 4K, SMART TV)",
+    "price": 7999,
+    "uvp": "19999",
+    "original_price": 19999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq115qn90f-mini-led-neo-qled-4k-tv-115-zoll-292-cm-uhd-4k-smart-tv-2988698.html"
+  },
+  {
+    "title": "SAMSUNG OLED GQ83S85F 4K Vision AI Smart OLED TV (83 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG OLED GQ83S85F 4K Vision AI Smart OLED TV (83 Zoll / 214 cm, UHD 4K, SMART TV)",
+    "price": 2111,
+    "uvp": "6099",
+    "original_price": 6099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-oled-gq83-s-85f-4k-vision-ai-smart-oled-tv-flat-83-zoll-214-cm-uhd-4k-smart-tv-tizentm-smart-tv-2988679.html"
+  },
+  {
+    "title": "SAMSUNG GQ55QN70H Neo QLED QN70H 4K Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "name": "SAMSUNG GQ55QN70H Neo QLED QN70H 4K Vision AI Smart TV (55 Zoll / 138 cm, UHD 4K, SMART TV)",
+    "price": 899,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": "Cashback 100 €",
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55qn70h-neo-qled-qn70h-4k-vision-ai-smart-tv-55-zoll-138-cm-uhd-4k-smart-tv-3047318.html"
+  },
+  {
+    "title": "SAMSUNG GQ75QN800D Mini LED / Neo QLED AI TV (Flat, 75 Zoll / 189 cm, UHD 8K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ75QN800D Mini LED / Neo QLED AI TV (Flat, 75 Zoll / 189 cm, UHD 8K, SMART TV, Tizen)",
+    "price": 3657.13,
+    "uvp": "4999",
+    "original_price": 4999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq75qn800d-qled-tv-flat-75-zoll-189-cm-uhd-8k-mini-led-smart-tv-tizen-2924397.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ77S85D OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ77S85D OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 2044.2,
+    "uvp": "3199",
+    "original_price": 3199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s85d-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-tizen-2928379.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ55S95CAT OLED TV (Flat, 55 Zoll / 138 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ55S95CAT OLED TV (Flat, 55 Zoll / 138 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 1798.1,
+    "uvp": "2599",
+    "original_price": 2599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq55s95cat-oled-tv-flat-55-zoll-138-cm-oled-4k-smart-tv-tizen-2863130.html"
+  },
+  {
+    "title": "SAMSUNG GQ85QN90D Mini LED / Neo QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG GQ85QN90D Mini LED / Neo QLED TV (Flat, 85 Zoll / 214 cm, UHD 4K, SMART TV, Tizen)",
+    "price": 3213.62,
+    "uvp": "4899",
+    "original_price": 4899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq85qn90d-qled-tv-flat-80-zoll-214-cm-uhd-4k-mini-led-smart-tv-tizen-2924377.html"
+  },
+  {
+    "title": "SAMSUNG OLEDGQ77S95CAT OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "name": "SAMSUNG OLEDGQ77S95CAT OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, Tizen)",
+    "price": 3892.81,
+    "uvp": "5499",
+    "original_price": 5499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-gq77s95cat-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-tizen-2863127.html"
+  },
+  {
+    "title": "SAMSUNG FLIP PRO WM55B Display, White Gray",
+    "name": "SAMSUNG FLIP PRO WM55B Display, White Gray",
+    "price": 899,
+    "uvp": null,
+    "original_price": 899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-flip-pro-55-wm55b-2832091.html"
+  },
+  {
+    "title": "SAMSUNG LH55WMHPTWC/EN Flip Flipchart , Hellgrau",
+    "name": "SAMSUNG LH55WMHPTWC/EN Flip Flipchart , Hellgrau",
+    "price": 2349,
+    "uvp": null,
+    "original_price": 2349,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-lh55wmhptwc-en-flip-2411524.html"
+  },
+  {
+    "title": "SAMSUNG The Frame 32\" Modern Fernseher Rahmen",
+    "name": "SAMSUNG The Frame 32\" Modern Fernseher Rahmen",
+    "price": 99,
+    "uvp": "99",
+    "original_price": 99,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-the-frame-32-modern-fernseher-rahmen-2863166.html"
+  },
+  {
+    "title": "SAMSUNG The Frame 50\" Abgeschrägter Fernseher Rahmen",
+    "name": "SAMSUNG The Frame 50\" Abgeschrägter Fernseher Rahmen",
+    "price": 149,
+    "uvp": "149",
+    "original_price": 149,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-the-frame-50-abgeschragter-fernseher-rahmen-2863152.html"
+  },
+  {
+    "title": "SAMSUNG Auto-Rotation Studio Stand (43\"-55\") Halterung",
+    "name": "SAMSUNG Auto-Rotation Studio Stand (43\"-55\") Halterung",
+    "price": 399,
+    "uvp": null,
+    "original_price": 399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-auto-rotation-studio-stand-43-55-halterung-2793449.html"
+  },
+  {
+    "title": "SAMSUNG WMN-R30EA/XC Fernsehalterung, Schwarz",
+    "name": "SAMSUNG WMN-R30EA/XC Fernsehalterung, Schwarz",
+    "price": 199,
+    "uvp": null,
+    "original_price": 199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_samsung-wmn-r30ea-xc-2659320.html"
   }
 ]

@@ -7,6 +7,9 @@ import os
 import sys
 import math
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.stdout.reconfigure(encoding='utf-8')
+
 # --- TIMEOUT MONKEY PATCH ---
 from playwright.async_api import Page
 TIMEOUT_MULTIPLIER = float(os.environ.get("TIMEOUT_MULTIPLIER", "1.0"))
@@ -55,7 +58,7 @@ def classify_samsung_year(model_code, title_upper):
         elif "A" in model_code[2:]:
             return 2021
             
-    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "LS03H", "U8000H", "U8090H", "M70H", "R85H"]):
+    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "LS03H", "U8000H", "U8090H", "M70H", "R85H", "R95H"]):
         return 2026
     if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "QN70F", "LS03F", "U8000F", "U8090F", "M70F", "R85F"]):
         return 2025
@@ -67,7 +70,7 @@ def classify_samsung_year(model_code, title_upper):
 
 def classify_lg_year(model_code, title_upper):
     if model_code != "Unknown":
-        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "QLED7EB", "MRGB96B"]):
+        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "27LX6TDGA", "QLED7EB", "MRGB96B"]):
             return 2026
         elif any(x in model_code for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO80A", "QNED93A"]):
             return 2025
@@ -76,17 +79,17 @@ def classify_lg_year(model_code, title_upper):
                 return 2025
             return 2024
             
-    if "C6" in title_upper or "G6" in title_upper or "B6" in title_upper or "QNED86B" in title_upper or "QNED80B" in title_upper or "QNED7EB" in title_upper or "MRGB87B" in title_upper or "LX7B" in title_upper or "LX6" in title_upper or "MRGB96B" in title_upper:
+    if any(x in title_upper for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "MRGB87B", "LX7B", "LX6", "27LX6", "STANBYME 2", "MRGB96B"]):
         return 2026
-    if "C5" in title_upper or "G5" in title_upper or "B5" in title_upper or "QNED86A" in title_upper or "QNED80A" in title_upper or "QNED7EA" in title_upper or "MRGB87A" in title_upper or "LX7A" in title_upper or "LX5" in title_upper or "QNED70" in title_upper or "NANO81" in title_upper or "NANO80" in title_upper or "QNED93" in title_upper:
+    if any(x in title_upper for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED7EA", "QNED72A", "MRGB87A", "LX7A", "LX5", "QNED70", "NANO81", "NANO80", "QNED93"]):
         return 2025
-    if "C4" in title_upper or "G4" in title_upper or "B4" in title_upper:
+    if any(x in title_upper for x in ["C4", "G4", "B4"]):
         return 2024
     return None
 
 
 async def check_and_wait_for_captcha(page):
-    for i in range(45): # Max 90 seconds
+    for i in range(60): # Max 120 seconds
         content = await page.content()
         title = await page.title()
         
@@ -96,36 +99,43 @@ async def check_and_wait_for_captcha(page):
                       
         if is_captcha:
             if i % 5 == 0:
-                print("\n[CAPTCHA ALERT] Cloudflare 보안 캡차가 감지되었습니다!")
-                print("➔ Attempting automated Turnstile bypass...")
+                print(f"\n[CAPTCHA ALERT] Cloudflare 보안 캡차가 감지되었습니다 (확인 {i+1}/60)...")
+                print("➔ Attempting automated Turnstile bypass click...")
             
             # Find Turnstile Frame
-            cf_frames = [f for f in page.frames if "challenges.cloudflare.com" in f.url]
+            cf_frames = [f for f in page.frames if "challenges.cloudflare.com" in f.url or "turnstile" in f.url]
             if cf_frames:
-                cf_frame = cf_frames[0]
-                try:
-                    await asyncio.sleep(5) # Wait for Turnstile widget to load completely
-                    iframe_element = await cf_frame.frame_element()
-                    if iframe_element:
-                        rect = await iframe_element.bounding_box()
-                        if rect:
-                            click_x = rect['x'] + 30
-                            click_y = rect['y'] + 32
-                            print(f"➔ Found Turnstile iframe, clicking coordinate: ({click_x}, {click_y})")
-                            await page.mouse.move(click_x, click_y)
-                            await page.mouse.down()
-                            await asyncio.sleep(0.1)
-                            await page.mouse.up()
-                            await asyncio.sleep(5) # Wait for page reaction
-                except Exception as e:
-                    print(f"➔ Automated bypass attempt failed: {e}")
+                for cf_frame in cf_frames:
+                    try:
+                        await asyncio.sleep(2)
+                        iframe_element = await cf_frame.frame_element()
+                        if iframe_element:
+                            rect = await iframe_element.bounding_box()
+                            if rect and rect['width'] > 0 and rect['height'] > 0:
+                                click_x = rect['x'] + min(35, rect['width'] / 2)
+                                click_y = rect['y'] + min(35, rect['height'] / 2)
+                                print(f"➔ Found Turnstile widget at ({rect['x']}, {rect['y']}), clicking: ({click_x:.1f}, {click_y:.1f})")
+                                await page.mouse.move(click_x, click_y)
+                                await page.mouse.down()
+                                await asyncio.sleep(0.1)
+                                await page.mouse.up()
+                                await asyncio.sleep(4)
+                                break
+                    except Exception as e:
+                        pass
             else:
                 await asyncio.sleep(2)
         else:
             if i > 0:
                 print("➔ [SUCCESS] 캡차가 성공적으로 해결되었습니다. 스크래핑을 계속합니다.")
             return True
-    print("\n[ERROR] 캡차 해결 대기 시간이 초과되어 스크래핑을 일시 중단합니다.")
+            
+    print("\n" + "!" * 70)
+    print("[CRITICAL ALERT] Cloudflare Turnstile bypass timed out (120s)!")
+    print("➔ Manual intervention or Playwright MCP High-Speed Bypass required:")
+    print("   1. Open Playwright MCP session with browser_run_code_unsafe to extract listings")
+    print("   2. Run local sync helper: python scripts/fast_interdiscount_sync.py <output_txt_path>")
+    print("!" * 70 + "\n")
     return False
 
 async def scrape_brand_tv(brand):
@@ -281,14 +291,36 @@ async def scrape_brand_tv(brand):
                 if year_val not in [2025, 2026]:
                     continue
                     
-                # C6 같은 특수 모델코드 처리
-                if model_code == "Unknown" and brand_upper == "LG":
-                    if "C6" in title_upper:
-                        model_code = f"OLED{size_val}C6"
-                    elif "G6" in title_upper:
-                        model_code = f"OLED{size_val}G6"
-                    elif "B6" in title_upper:
-                        model_code = f"OLED{size_val}B6"
+                # 특수 모델코드 처리 (모델명 누락 시 복원)
+                if model_code == "Unknown":
+                    if brand_upper == "LG":
+                        if "C6" in title_upper:
+                            model_code = f"OLED{size_val}C6"
+                        elif "G6" in title_upper:
+                            model_code = f"OLED{size_val}G6"
+                        elif "B6" in title_upper:
+                            model_code = f"OLED{size_val}B6"
+                        elif "QNED72B" in title_upper or "QNED72" in title_upper:
+                            model_code = f"{size_val}QNED72B"
+                        elif "QNED71B" in title_upper or "QNED71" in title_upper:
+                            model_code = f"{size_val}QNED71B"
+                        elif "QNED70B" in title_upper or "QNED70" in title_upper:
+                            model_code = f"{size_val}QNED70B"
+                        elif "QNED80B" in title_upper or "QNED80" in title_upper:
+                            model_code = f"{size_val}QNED80B"
+                    elif brand_upper == "SAMSUNG":
+                        if "U8090H" in title_upper or "U8090" in title_upper:
+                            model_code = f"UE{size_val}U8090H"
+                        elif "U8000H" in title_upper or "U8000" in title_upper:
+                            model_code = f"UE{size_val}U8000H"
+                        elif "M70H" in title_upper or "M70" in title_upper:
+                            model_code = f"UE{size_val}M70H"
+                        elif "R85H" in title_upper or "R85" in title_upper:
+                            model_code = f"MRE{size_val}R85H"
+                        elif "QN80H" in title_upper:
+                            model_code = f"QE{size_val}QN80H"
+                        elif "S90H" in title_upper:
+                            model_code = f"QE{size_val}S90H"
                     
                 # Display Type 분석
                 display_type = "LED"
@@ -303,6 +335,12 @@ async def scrape_brand_tv(brand):
                 elif "CRYSTAL" in title_upper:
                     display_type = "Crystal UHD"
                     
+                try:
+                    from swiss_promo_parser import parse_swiss_promo_and_cashback
+                    cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+                except Exception:
+                    cashback_amt = 0
+                    
                 products.append({
                     "brand": brand,
                     "year": year_val,
@@ -312,7 +350,7 @@ async def scrape_brand_tv(brand):
                     "price": price_val,
                     "shipping": "Free",
                     "installment": "",
-                    "cashback": 0,
+                    "cashback": cashback_amt,
                     "promo": promo_desc,
                     "title": title,
                     "link": "https://www.interdiscount.ch" + href if href.startswith("/") else href

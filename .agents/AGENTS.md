@@ -2,32 +2,53 @@
 
 ## 1. Data Collection Filters (MediaMarkt, Interdiscount & Digitec Exclusivity)
 * **Direct Seller Only & Server Filters**:
-  * For MediaMarkt Switzerland, **never scrape a single generic query URL**. Since the retailer's search engine limits page results and has backend metadata indexing issues (often omitting clearance or 이월 models like S90F from broad queries and year filters), you must loop through a list of targeted query configurations (both general and specific series queries) to guarantee 100% model coverage, and then deduplicate results in Python:
+  * For MediaMarkt Switzerland, **never scrape a single generic query URL**. Since the retailer's search engine limits page results and has backend metadata indexing issues (often omitting clearance or 이월 models like S90F and newly launched series like QN80H, M70H, R85H, QNED86B, QNED71B, QNED70B, MRGB87B from broad queries and year filters), you must loop through a list of targeted query configurations (both general and specific series queries) to guarantee 100% model coverage, and then deduplicate results in Python:
     * Samsung search configs:
       1. General TV: `https://www.mediamarkt.ch/de/search.html?query=samsung%20TV&brand=SAMSUNG&marketplace=MediaMarkt&modelyear=2025%20OR%202026` (Max 10 pages)
-      2. OLED TV: `https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt` (Max 3 pages)
-      3. S90 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      4. S95 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      5. S99 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      2. 2026 Lineup: `https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt` (Max 5 pages)
+      3. OLED TV: `https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt` (Max 3 pages)
+      4. S90 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      5. S95 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      6. S99 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      7. Neo QLED QN80: `https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      8. Mini LED M70: `https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      9. Micro RGB R85: `https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      10. Crystal UHD U8090: `https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      11. The Frame: `https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
     * LG search configs:
       1. General TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026` (Max 10 pages)
-      2. OLED TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt` (Max 3 pages)
-      3. C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-      4. G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-      5. C5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-      6. G5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      2. 2026 Lineup: `https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt` (Max 5 pages)
+      3. OLED TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt` (Max 3 pages)
+      4. C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      5. G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      6. B6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      7. C5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      8. G5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      9. QNED Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt` (Max 3 pages - QNED86B, QNED71B, QNED70B)
+      10. Micro RGB MRGB: `https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt` (Max 2 pages - MRGB87B)
+      11. StanbyME: `https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt` (Max 2 pages - StanbyME 2 27LX6TDGA)
   * For Interdiscount Switzerland, navigate directly to category-based TV lists instead of search queries: `/de/fernseher--c111000?brand=SAMSUNG&page=N` and `/de/fernseher--c111000?brand=LG&page=N`. Only collect listings sold directly by Interdiscount.
   * For Digitec Switzerland, filter only products that are sold directly and are currently in stock (Lager / In Stock). Always append `&take=150` to load all items on a single page, and handle the `"Mehr anzeigen"` (Show more) click to retrieve subsequent listings.
-* **Category Purging**: Exclude non-TV display products. Filter out gaming monitors (e.g., Odyssey series, UltraGear series, MyView series) and prioritize pure TV/Lifestyle TV screens.
+* **Category Purging & Smartphone Exclusion Guard**: Exclude non-TV display products. Filter out gaming monitors (e.g., Odyssey series, UltraGear series, MyView series) and Samsung Galaxy smartphones (e.g., Galaxy S26 Ultra, Galaxy S26+, Galaxy S26, Smartphone, Handy, Mobile) that appear when querying "samsung 2026", prioritizing pure TV/Lifestyle TV screens.
 * **Target Release Years (Strict Filtering)**: Limit search/collection scopes strictly to Model Years `2025` and `2026`. Skip older generations (e.g., Samsung D-series like S90D/QN90D, LG 4-series like C4/G4/B4).
   * **Default Value**: Always default `year_val = None` (not 2025) before matching to ensure any unclassified or older model is automatically excluded.
-  * **Model Year Letters (Samsung)**: `D` corresponds to 2024, `F` to 2025, and `H` to 2026. Search for these letters after index 2 of the model code (e.g. `QE65S90F`) to avoid matching prefix characters (like `F6000`). If the model code is `"Unknown"`, apply a regex-based smart extractor (`extract_model_code_from_title` using pattern lists like `QN\d{2,3}[FH]`, `S\d{2}[FH]`, `U\d{4}[FH]`, `M\d{2}[FH]`, `R\d{2}[FH]`, `LS03[A-Z]{1,2}`, `F\d{4}`, `MR\d{2}[FH]`) to reconstruct standard codes (e.g. `S95F` -> `QE{size}S95F`, `QN90F` -> `QE{size}QN90F`) before falling back to manual matching. If still unknown, fall back to matching year codes in the product title (e.g., `"S90H"` -> 2026, `"QN90F"` -> 2025).
-  * **Model Year Codes (LG)**: `4`/`A` corresponds to 2024, `5`/`A`/`7` to 2025, and `6`/`B` to 2026. Check both the model code and title fallback.
-    * **2026 Codes**: `C6`, `G6`, `B6`, `QNED86B`, `QNED80B`, `QNED87B`, `QNED72B`, `QNED7EB`, `UA77`, `MRGB87B`, `LX7B`, `LX6`, `QLED7EB`, `MRGB96B`.
+  * **Model Year Letters (Samsung)**: `D` corresponds to 2024, `F` to 2025, and `H` to 2026. Search for these letters after index 2 of the model code (e.g. `QE65S90F`) to avoid matching prefix characters (like `F6000`). If the model code is `"Unknown"`, apply a regex-based smart extractor (`extract_model_code_from_title` using pattern lists like `QN\d{2,3}[FH]`, `S\d{2}[FH]`, `U\d{4}[FH]`, `M\d{2}[FH]`, `R\d{2}[FH]`, `LS03[A-Z]{1,2}`, `F\d{4}`, `MR\d{2}[FH]`) to reconstruct standard codes (e.g. `S95F` -> `QE{size}S95F`, `QN90F` -> `QE{size}QN90F`, `QN80H` -> `QE{size}QN80H`, `M70H` -> `UE{size}M70H`, `R85H` -> `MRE{size}R85H`, `U8090H` -> `UE{size}U8090H`) before falling back to manual matching. If still unknown, fall back to matching year codes in the product title (e.g., `"S90H"` -> 2026, `"QN90F"` -> 2025).
+  * **Model Year Codes (LG)**: `4` corresponds to 2024, `5`/`A` to 2025, and `6`/`B` to 2026. Check both the model code and title fallback.
+    * **2026 Codes**: `C6`, `G6`, `B6`, `QNED86B`, `QNED80B`, `QNED87B`, `QNED71B`, `QNED70B`, `QNED72B`, `QNED7EB`, `UA77`, `MRGB87B`, `LX7B`, `LX6`, `27LX6TDGA`, `QLED7EB`, `MRGB96B`.
     * **2025 Codes**: `C5`, `G5`, `B5`, `QNED86A`, `QNED80A`, `QNED87A`, `QNED72A`, `QNED7EA`, `UA75`, `MRGB87A`, `LX7A`, `LX5`, `QNED70A`, `NANO81A`, `NANO80A`, `QNED93A`.
     * **Budget Fallback**: If a model code matches a 2024 budget code suffix (e.g. `UA73`) but the title explicitly contains `"2025"`, classify it as 2025.
   * **Size Threshold**: Exclude any models with screen size **`< 22` inches** (this ensures small lifestyle screens like the 27" LG StanbyME TV are captured, while excluding monitors/accessories).
-* **Exclude Non-visible / Out-of-Stock Models (Critical)**: When compiling the Excel sheet, exclude any models that are currently out-of-stock or not visible/searchable in the live search results on the respective retailer's website (MediaMarkt, Interdiscount, Digitec). Only active, direct-sell, and in-stock models matching the query should be included in the final Excel output. Do not preserve legacy or obsolete models that are no longer listed, to avoid database bloat.
+* **Swiss Master URL Registry Loss-Prevention Standard (`data/master_product_urls.json`)**:
+  * For Switzerland (MediaMarkt, Interdiscount, Digitec), all verified model codes and PDP URLs (including the 69 Samsung and 57 LG MediaMarkt CH models) are permanently registered in the Pan-European Master URL Registry (`country: 'CH'`).
+  * On every survey execution (`sync_all_retailers.py` & `run_survey_with_check.py`), the pipeline reconciles live search results with `data/master_product_urls.json` to prevent sample loss from pagination boundaries or temporary indexing shifts, auto-registers newly launched models, and maintains full 100% historical continuity.
+* **Zero Historical Price Injection Policy & Prohibition of Historical Backfill (CRITICAL)**: Never insert or backfill historical prices from previous survey workbooks into today's survey data without an active live web fetch. Any mechanism or script that copies prices directly from older workbooks (e.g. `hist_db` historical model copy) without issuing a live HTTP/DOM probe to verify current price and availability is strictly forbidden. Every single price written to Excel or dashboards must be validated via real-time search extraction or live PDP URL probing from today's live HTTP/DOM response.
+* **Master URL Direct PDP Probe Requirement**: When supplementing missing models from `data/master_product_urls.json`, each model URL must be fetched live to retrieve today's real selling price and availability. Discontinued, deleted, or out-of-stock models must be automatically discarded to ensure 100% database freshness and accuracy.
+* **Mandatory Pre-flight Assertion Gate (Hard Halt)**: All `raw_*.json` datasets must be freshly created on the survey execution date. Sync engines (`sync_eu_retailers.py` and `sync_all_retailers.py`) MUST assert that all source files reflect today's date and were modified within the current survey run window before generating workbooks. If any raw file is outdated or missing live scraping timestamps, the engine must immediately raise `RuntimeError` and halt execution.
+* **Exclude Non-visible / Out-of-Stock Models (Critical)**: When compiling the Excel sheet, exclude any models that are currently out-of-stock or not visible/searchable in the live search results on the respective retailer's website. Only active, direct-sell, and in-stock models matching the query should be included in the final Excel output. Do not preserve legacy or obsolete models that are no longer listed, to avoid database bloat.
+* **Prohibition of Hardcoded / Fabricated Price Overwrites (CRITICAL)**: Price guards and anomaly detectors must NEVER overwrite scraped prices with arbitrary hardcoded benchmark values (e.g., 1,799 €, 1,299 €, 3,499 €). Fabricating or injecting synthetic prices is strictly forbidden under the Zero Fabricated / Zero Historical Price Injection Policy. When an abnormal price outlier is identified (such as a selling price exceeding original price or low price due to promo voucher/accessory mis-scraping), the system MUST either trigger an immediate live PDP URL re-probe (`StealthySession` or live fetch) to verify the genuine price, or discard/flag the anomalous row. Never write artificial prices into datasets or workbooks.
+* **Strict 2026 LG Model Code & OLED Disambiguation Standard (`B6` Guard)**: Never use loose substring matchers like `"B6" in title` or `"B6" in model_code` or `"C6" in title` to classify OLED models. In LG's 2026 TV naming scheme, ALL non-OLED models (UHD 4K NanoCell, QNED) feature `B6` or `6LA` suffixes in their model codes (e.g., `65NU850B6LA`, `55QNED81B6C`, `65QNED72B6B`, `85QNED72B6A`). Scrapers and guard engines MUST verify `display_type == "OLED"` or use strict word-bounded regular expressions (such as `\bOLED\w*[BCG][456]\b`) to avoid catastrophic misclassification of budget UHD/QNED models as OLED flagships.
+* **European Thousand Period (`.`) & Decimal Comma (`,`) Parsing Standard**: European and Greek retailers (e.g. Public.gr, MediaMarkt DACH, Alza) format prices with periods for thousands and commas for decimals (e.g., `1.199,00 €`, `559 ,00€`). Regular expression extractors must never truncate at the thousand separator (which causes `1.199,00 €` to be misparsed as `1.19`). Parsers must strip extraneous whitespace and currency symbols, extract the full numeric string, normalize thousand periods and decimal commas (`replace('.', '').replace(',', '.')`), and then cast to float.
+
 
 
 
@@ -49,9 +70,14 @@
   * **Fnac + Darty France Firecrawl Stealth Pipeline (Mandatory DataDome Bypass & Master URL Registry)**:
     - **DataDome Bypass**: France TV tracking combines Darty France (`darty.com`) and Fnac France (`fnac.com`). Because DataDome deploys IP reputation blocking (`HTTP 403 Forbidden`) on Fnac/Darty for local scrapers, France price collection **MUST ALWAYS BE EXECUTED VIA FIRECRAWL STEALTH SCRAPER (`firecrawl_scrape`)** or Firecrawl proxy API.
     - **Never Use Restrictive Year Filters**: Do NOT use restrictive queries like `Search=tv+samsung+2025` or `Search=tv+lg+2025`. Because French retailers omit release years from product titles for 50%+ of SKUs (e.g. `TQ55Q80F`, `TQ65QN90F`, `TQ77S95H`), searching with year keywords causes severe sample drops (e.g. dropping from 150+ to 67). Scrapers MUST traverse broad & series-specific queries: `tv samsung`, `tv samsung oled`, `tv samsung the frame`, `tv lg`, `tv lg oled`, `tv lg qned` across pages 1 to 4.
-    - **France Master URL Registry (`data/france_master_urls.json`)**: Maintain a permanent Master URL Registry database containing all historical model codes and URLs. Each survey run MUST merge newly scraped search results with the Master Registry to guarantee zero model drops and continuous historical tracking across surveys.
+    - **France Master URL Registry (Unified into `data/master_product_urls.json`, `country: "FR"`)**: France model URLs are stored in the Pan-European Master URL Registry (`data/master_product_urls.json`) with `country: "FR"`. Each survey run MUST merge newly scraped search results with the unified Master Registry to guarantee zero model drops and continuous historical tracking across surveys. The legacy `data/france_master_urls.json` file is deprecated and should not be used.
     - **French Narrow No-Break Space (`\u202f`: U+202F) & Unicode Normalization (Critical)**: French prices format thousands using Narrow No-Break Space (e.g. `1 999 €`, `1 299 €`, `1 799 €`). Scrapers and parsers MUST normalize `\u202f`, `\u00a0`, `\u2009`, `\u200b` to standard spaces before regex matching; otherwise numbers will split into `1` and `999` and fall back to incorrect monthly/accessory numbers.
-    - **Installment & Discount Text Stripping**: Monthly installment text (`Dès ... € / mois`), credit charges (`TAEG`, `Montant total dû`), and discount mentions (`Bon Plan -X €`, `100€ de remise`, `50€ de reduction`) MUST be pre-stripped from the card chunk before matching prices to prevent credit/discount values from overwriting real TV selling prices.
+    - **Installment & Discount Text Stripping**: Monthly installment text (`Dès ... € / mois`, `From £... a month`), credit charges (`TAEG`, `Montant total dû`), and discount mentions (`Bon Plan -X €`, `100€ de remise`, `50€ de reduction`, `300€ Cashback`, `200€ Reembolso`, `500€ Sconto`) MUST be pre-stripped from the card chunk before matching prices to prevent credit/discount values from overwriting real TV selling prices.
+    - **Pan-European Screen-Size & Category Price Guard (Critical)**:
+      - **OLED (B/C/G/M, S90/S95/S99/S85)**: 42"/48" $\ge$ 650 EUR/CHF (£650, 16,000 CZK, 260,000 HUF), 55" $\ge$ 800 EUR/CHF (£800, 20,000 CZK, 320,000 HUF), 65" $\ge$ 1,100 EUR/CHF (£1,100, 27,000 CZK, 440,000 HUF), 77"+ $\ge$ 1,600 EUR/CHF (£1,600, 40,000 CZK, 650,000 HUF), 83"+ $\ge$ 2,400 EUR/CHF (£2,400, 60,000 CZK, 950,000 HUF).
+      - **Micro RGB (LG MRGB, Samsung R85/R95)**: 50"/55"/65" $\ge$ 850 EUR/CHF (£850), 75"/86"+ $\ge$ 2,000 EUR/CHF (£2,000), 100" $\ge$ 10,000 EUR/CHF (£10,000).
+      - **QNED / QLED / Neo QLED**: 43" $\ge$ 250 EUR/CHF (£250), 50"/55" $\ge$ 350 EUR/CHF (£350), 65"+ $\ge$ 550 EUR/CHF (£550), 75"+ $\ge$ 900 EUR/CHF (£900).
+      - **UHD 4K**: 43" $\ge$ 150 EUR/CHF, 55"+ $\ge$ 200 EUR/CHF.
     - **France Pairs Standard (`PAIRS_CONFIG_2026_FR` & `PAIRS_CONFIG_2025_FR`)**:
       - 2026 OLED: `G6 vs S95H/S99H`, `C6 vs S90H/S92H`, `B6 vs S85H`
       - 2026 QNED/QLED: `QNED81B vs QN74H` (43"~86"), `QNED81B vs M80H`, `QNED87 vs QN80H`, `QNED70B vs M70H`
@@ -67,7 +93,7 @@
       - MRGB: `MRGB87B vs R85H` (86"-55"), `MRGB96B vs R95H` (100")
       - QNED/QLED: `QNED87B vs QN80H`, `QNED81B vs QN70H`, `QNED81B vs M80H`, `QNED72B vs M70H`
       - UHD 4K: `NU85 vs U8070H`
-    * **Retailer Toolbar Ordering**: Retailer buttons in `eu_price_dashboard_template.html` and `generate_eu_dashboard.py` MUST be ordered as: `UK (Currys) ➔ DE (MediaMarkt) ➔ FR (Fnac Darty) ➔ ES (MediaMarkt) ➔ IT (MediaWorld) ➔ NL (MediaMarkt) ➔ AT (MediaMarkt) ➔ CH (MediaMarkt) ➔ CZ (Alza) ➔ GR (Public)`.
+    * **Retailer Toolbar Ordering**: Retailer buttons in `eu_price_dashboard_template.html` and `generate_eu_dashboard.py` MUST be ordered as: `UK (Currys) ➔ DE (MediaMarkt) ➔ FR (Fnac Darty) ➔ ES (MediaMarkt) ➔ IT (MediaWorld) ➔ NL (MediaMarkt) ➔ AT (MediaMarkt) ➔ CH (MediaMarkt) ➔ CZ (Alza) ➔ GR (Public) ➔ HU (MediaMarkt)`.
     * **History Folder Auto-Mirroring**: `sync_eu_retailers.py` MUST automatically mirror/copy the updated `price tracker_EU_2026 {MMDD}_v1.xlsx` workbook (containing all 16 country sheets) into `History_EU/{YYYY MMDD}/price tracker_EU_{YYYY MMDD}_v1.xlsx`.
   * **Greece (Public.gr) Multi-Query Expanded Pipeline**:
     - **Multi-Query Targeted Sampling Strategy**: Public.gr search queries cap results at 36 products per page. Scrapers MUST traverse 59 multi-query targeted configurations (22 for Samsung including `samsung tv`, `samsung oled`, `samsung qled`, `samsung neo qled`, `samsung tv 55..85`, `the frame`, etc., and 37 for LG including `lg tv`, `lg oled`, `lg qned`, `lg oled c6/g6/b6/c5/g5`, `lg qned 93/87/86/80/72`, `lg nano`, `lg mrgb`, `lg tv 55..83`, etc.) to achieve full catalog coverage (149+ unique models: 92 Samsung, 57 LG).
@@ -92,13 +118,32 @@
       - QNED/QLED: `QNED93B/92B vs QN80H`, `QNED87B vs QN80H`, `QNED80B vs M80H`, `QNED70B vs M74H`
       - UHD 4K: `NU8E vs U8000H/U8072H`
     - **Currency Formatting**: Prices written in Hungarian Forint (`HUF`, `Ft ` format).
-    - **Script Location**: Maintain primary logic in `scripts/scrape_and_sync_hungary.py`.
+  * **UK (Currys UK) Deep Scraping & 1:1 Matching Pipeline**:
+    - **DOM-Based Precision Price Extraction (Critical)**:
+      - Currys TV cards render selling prices and installment text across separate DOM child nodes with line breaks (e.g. `'£3,699.00\nFrom\n£149.91\nper month'`). Never rely solely on text lookahead regexes.
+      - Selling prices MUST be extracted strictly from `.price-info .sales .value, .sales .value` (via `content` attribute or text), direct savings from `.primary-save-price`, and previous regular prices from `.price-date` (`Was £...`).
+      - All monthly financing mentions (`From £... a month`, `per month`) and promotional credit mentions (`Buy now pay within 12 months`) MUST be excluded from selling price matching.
+    - **LG G-Series Mounting Type Protection & Accessory Filter Standard**:
+      - Currys UK lists LG G-series OLED TVs (48"~97") with bracket/mount descriptors: `(Wall Mount Version)` and `(Stand Version)` (e.g. `LG G6 65" OLED AI 4K HDR Smart TV 2026 (Wall Mount Version) - OLED65G64LW`, `... (Stand Version) - OLED55G66LS`).
+      - Scrapers MUST NOT exclude `"WALL MOUNT"` or `"STAND"` if the product title contains `"VERSION"`, `"SMART TV"`, or display terms (`"OLED"`, `"QNED"`, `"QLED"`).
+      - Strictly isolate and filter out only pure accessories (`WALL BRACKET`, `FLOOR STAND`, standalone `WALL MOUNT`/`STAND` without `VERSION`/`SMART TV`) and combo soundbar packages (`& ... Sound Bar Bundle`, `BUNDLE`).
+    - **Samsung Micro RGB Screen Size (`85`) Regex Overmatching Guard**:
+      - Samsung Micro RGB model codes follow `MRE` + `size(85/75/65/55)` + `series(R95H/R85H/R86H)`.
+      - Loose regexes like `MRE.*85` MUST NEVER be used for R85 series, because the `85` matches the screen size of `MRE85R95H`, falsely matching R95 models (£4,999) as R85 (£3,299)!
+      - Matchers MUST strictly require the letter `R` before series numbers: `re.search(r'(?:R95|MR95)', code)` for R95, and `re.search(r'(?:R86|R85)', code) and not re.search(r'(?:R95|MR95)', code)` for R85/R86.
+    - **UK Pairs Standard (`PAIRS_CONFIG_2026_UK`)**:
+      - OLED: `G6 vs S99H`, `G6 vs S95H`, `C6 vs S90H`, `B6 vs S85H`
+      - MRGB: `86MRGB96 vs 85R95H` (LG £5,799 vs Samsung £4,999), `86MRGB88 vs 85R85H` (LG £2,699 vs Samsung £3,299), `75MRGB88 vs 75R85H` (LG £1,999 vs Samsung £2,499), `65MRGB88 vs 65R85H` (LG £1,399 vs Samsung £1,899), `55MRGB88 vs 55R85H` (LG £1,099 vs Samsung £1,199), `50MRGB88 vs 50R85H` (LG £899), `100MRGB96 vs 100R95H` (LG £12,999).
+      - QNED/QLED: `QNED86B vs QN80H`, `QNED86B vs QN70H`, `QNED72B vs M70H`
+      - UHD 4K: `NU85 vs U8000H`
+    - **Screen Size Labeling Standard**: For 85"/86" pairs, render exact panel sizes on comparison labels: LG `86"` and Samsung `85"` (`86"MRGB88 vs. 85"R85H`).
+    - **Script Location**: Maintain primary logic in `scripts/scrape_currys_live.py`.
 
   * **Pan-European Master Product URL Registry (`data/master_product_urls.json`) Standard (Critical)**:
     - **Master Registry Persistence**: To prevent sample count degradation and URL dropouts caused by search engine pagination shifts or temporary out-of-stock delisting on retailer sites, maintain a consolidated Master URL Registry at `data/master_product_urls.json`.
     - **Registry Schema**: Store each model entry as:
       `{ "KEY": { "country": "HU", "retailer": "MediaMarkt", "brand": "SAMSUNG", "model_code": "MRE85R95HATXXH", "year": 2026, "size": 85, "title": "...", "url": "https://...", "last_updated": "YYYY-MM-DD" } }`.
-    - **Merge & Probe Enforcement on Every Survey**: Every price collection run across all 12 European countries (UK, DE, FR, ES, IT, NL, AT, CH, CZ, GR, SE, HU) MUST automatically:
+    - **Merge & Probe Enforcement on Every Survey**: Every price collection run across the 11 active European countries (UK, DE, FR, ES, IT, NL, AT, CH, CZ, GR, HU) MUST automatically:
       1. Run search query traversals to collect active/promoted product cards.
       2. Cross-reference results with `data/master_product_urls.json` to identify any previously tracked models missing from the search results.
       3. Probe missing model URLs directly (Direct PDP Fetch) to extract live prices and update the database, guaranteeing 100% sample retention across consecutive survey rounds.
@@ -172,7 +217,7 @@
       * `Q8F`: Match `Q80F`/`Q8F`/`Q80`.
       * `Q7F`: Match `Q70F`/`Q7F`/`Q70`.
   * **UHD 4K Model Variant Matching Rules (2025 & 2026)**:
-    * **Samsung UHD 4K**: `U8000F` and `U8000H` series matchers MUST support all country and retailer suffix variants (`U8000`, `U8005`, `U8010`, `U8070`, `U8075`, `U8079`, `U8080`, `U8090`, `U7000`, `DU8000`, `CU8000`, `M70`, `M73`, `M80`, `U80`) to ensure 100% coverage across Germany MediaMarkt (`GU43U8079H`, `GU50U8079H`, `GU55U8079H`, `GU65U8079H`, `GU75U8079H`, `GU85U8079H`), France Fnac (`TU43U8005F`, `TU55U8005F`, `TU65U8005F`, `TU43U8005H`, `TU50U8005H`, `TU55U8005H`, `TU65U8005H`, `TU85U8005H`), MediaMarkt ES (`U8075`), and MediaWorld IT (`U7000`, `M70`, `M80`).
+    * **Samsung UHD 4K**: `U8000F` and `U8000H` series matchers MUST support all country and retailer suffix variants (`U8000`, `U8005`, `U8010`, `U8070`, `U8075`, `U8079`, `U8080`, `U8090`, `DU8000`) to ensure 100% coverage across Germany MediaMarkt (`GU43U8079H`, `GU50U8079H`, `GU55U8079H`, `GU65U8079H`, `GU75U8079H`, `GU85U8079H`), France Fnac (`TU43U8005F`, `TU55U8005F`, `TU65U8005F`, `TU43U8005H`, `TU50U8005H`, `TU55U8005H`, `TU65U8005H`, `TU85U8005H`), and MediaMarkt ES (`U8075`). **CRITICAL**: U8000 matchers MUST NEVER include `U7000`, `M70`, `M73`, `M80`, or `U80` keywords — these belong to separate LED/budget series and will cause cross-series price contamination (see §5 Strict Series Matcher Boundaries).
     * **LG UHD 4K**: `UA75` (2025) and `NU85` (2026) series matchers MUST support all country variants (`UA75`, `UA73`, `UA77`, `NU85`, `NU80`, `NU75`, `NU90`, `UT`, `UR`, `UQ`).
   * **Dynamic Empty Slot Hiding Rule (Dashboard)**:
     * Any size pair slot where at least one brand has a valid price (`lgP > 0 || samP > 0`) MUST be rendered on the chart so that single-brand offerings (e.g. LG OLED G6/C6/B6 lineup when competitor 2026 models are not yet listed) remain 100% visible. Only empty slots where BOTH brands have 0 (`lgP === 0 && samP === 0`) are filtered out to keep charts clean.
@@ -259,7 +304,7 @@
     * **Chart Title Safe String Guard (`undefined` Prevention)**: Chart title generators MUST safely handle missing `flag` properties (e.g. `flag = item.flag ? (item.flag + ' ') : ''`) to prevent raw `undefined` strings from being injected into chart headers (e.g. `Currys (UK) 유통 분석`).
 
 ## 6. Automated Survey Verification, 10% Discrepancy Investigation & Rerun Policy
-* **Survey Count Discrepancy Verification**: Immediately after scraping is completed across European major retailers (UK, DE, FR, ES, IT, NL, SE) and Swiss retailers (MediaMarkt CH, Interdiscount, Digitec), the automation pipeline MUST compare today's extracted model counts per country/brand against baseline counts from the previous survey cycle.
+* **Survey Count Discrepancy Verification**: Immediately after scraping is completed across European major retailers (UK, DE, FR, ES, IT, NL, AT, HU, CZ, GR) and Swiss retailers (MediaMarkt CH, Interdiscount, Digitec), the automation pipeline MUST compare today's extracted model counts per country/brand against baseline counts from the previous survey cycle.
 * **Strict 10% Discrepancy Threshold & Cause Investigation**:
   * If the extracted model count for any country or brand (e.g. MediaMarkt DE Samsung, Fnac FR LG, Digitec Samsung) differs or drops by **10% or more (> 10%)** compared to the baseline, the pipeline MUST immediately flag the discrepancy.
   * **Cause Diagnosis**: Automatically inspect logs to diagnose the exact root cause: (1) Cloudflare Turnstile / Captcha block or timeout, (2) Retailer backend search indexing omissions (e.g. omitted clearance models like S90F), (3) Pagination truncation, or (4) DOM selector changes.
@@ -268,4 +313,94 @@
   * **Query Splitting**: If generic brand query URL missed models, loop through targeted series-specific search configurations (e.g. S90/S95/C6/G6 individual queries) to guarantee 100% model coverage.
   * **Retry Limit**: Execute up to **3 retries (Max Retries = 3)** until the model count gap is brought under 10%.
 * **Unified Pipeline Orchestration**: Use master orchestration scripts (`python scripts/run_survey_with_check.py`, `python EU-price-tracker/scripts/run_eu_survey.py`) to automate this complete sequence (scrape validation -> 10% gap diagnosis -> targeted additional survey -> excel sync -> history archive -> dashboard compile -> Firebase deploy).
+
+## 7. Weekly Price/Promotion Variation Analysis & ISO Week Standards
+* **Weekly Variation Analysis Scope ('26년 모델 Only)**:
+  * The **주간 가격/프로모션 변동 사항** (Weekly Price & Promotion Changes) tab in both the Swiss and Pan-European dashboards MUST strictly scope analysis to **2026 Model Year generation (`yr == 2026`)** to focus executive review on current-generation line-up dynamics.
+  * Tab sub-title and badges MUST explicitly state: `'26년 모델 Only` (e.g., `스위스 3대 유통 주간 변동 요약('26년 모델 Only)`, `11개국 주간 변동 요약('26년 모델 Only)`).
+* **Week-over-Week Transition Comparison Rule**:
+  * The analysis compares the current survey date against the previous week's latest survey date:
+    - **W34**: `W34(08.17) vs W33(08.14)` (comparing today's survey against previous week's survey).
+    - **W33**: `W33(08.14) vs W32(08.06)`
+    - **W32**: `W32(08.06) vs W31(07.28)`
+    - **W31**: `W31(07.28) vs W30(07.25/07.26)`
+  * On every new survey execution (e.g. W35, W36), the latest week transition MUST be appended and set as the default active tab.
+* **5 Standardized Change Types**:
+  1. **`PRICE_DROP` (가격 인하)**: Selling price decreased ($P_{curr} < P_{prev}$).
+  2. **`PRICE_HIKE` (가격 인상)**: Selling price increased ($P_{curr} > P_{prev}$).
+  3. **`PROMO` (프로모션 변동)**: Promotional text/badge or cashback value changed while base price remained unchanged.
+  4. **`NEW_MODEL` (신규 진입)**: Model was not present in the previous survey week but is newly listed in the current week.
+  5. **`BENCHMARK` (1:1 매칭 모델)**: Models that belong to official 1:1 competitor lineup comparison pairs.
+* **ISO Calendar Week Formatting**:
+  * Survey dates and dashboard badges MUST be calculated using standard ISO calendar week: `week_no = dt.isocalendar()[1]` (e.g., `2026년 08월 17일 (W34)`, `Live Scraped Data (2026.08.17(W34))`, `W34(08.17)`). Never use hardcoded day-range conditions that break on future survey weeks.
+* **UI Cleanliness Standard**:
+  * The Weekly Variation view MUST NOT include redundant filters (such as `price type` or `model year`) or generic total sum cards. It MUST feature direct country/retailer summary pills and filterable change tables with delta indicators (`-CHF 100 (-5.0%)`, `+€50 (+2.5%)`).
+
+## 8. Escalation Procedure After Retry Exhaustion
+* **3-Strike Escalation Rule**: If the 3-retry limit (§6) is exhausted and a country/brand's model count gap still exceeds 10%, apply the following escalation procedure:
+  1. **Partial Data Continuation**: Proceed with Excel sync and dashboard compilation using all successfully collected countries. For the failed country, retain the previous survey cycle's data and label it with a `[이전주 데이터]` badge in the dashboard.
+  2. **User Notification**: Log a structured summary in the agent conversation output specifying: (a) failed country/brand, (b) root cause diagnosis, (c) number of retries attempted, (d) recommended manual action.
+  3. **WAF/DOM Change Detection Protocol**:
+     - **CSS Selector Failure**: If product card selectors return zero results but the page HTML loads successfully, automatically attempt DOM-Climbing fallback parser and log the selector mismatch.
+     - **WAF Engine Switch**: If Cloudflare Turnstile solve fails 3 consecutive times, flag for potential WAF engine change (e.g. Cloudflare → DataDome, Akamai) and recommend switching scraper engine (StealthySession → Firecrawl, or vice versa).
+     - **48-Hour Resolution Window**: If a scraper remains broken for 48+ hours across 2 survey cycles, flag the script as `NEEDS_MANUAL_FIX` and disable automatic retries for that country until the script is updated.
+
+## 9. Scraping Execution Logging Standard
+* **Structured JSON Output (Mandatory)**: All scraping and sync scripts (`scrape_mediamarkt.py`, `scrape_alza.py`, `scrape_public_gr.py`, `scrape_and_sync_hungary.py`, `sync_eu_retailers.py`, `sync_all_retailers.py`) MUST output a structured JSON summary at script termination:
+  ```json
+  {
+    "country": "HU",
+    "retailer": "MediaMarkt",
+    "brand": "SAMSUNG",
+    "total_extracted": 145,
+    "after_year_filter": 98,
+    "after_category_filter": 92,
+    "final_deduplicated": 87,
+    "waf_blocks": 0,
+    "parse_errors": 2,
+    "execution_time_sec": 42.5,
+    "timestamp": "2026-09-01T17:30:00+09:00"
+  }
+  ```
+* **Log Persistence**: Summary JSON logs SHOULD be appended to `data/scraping_logs.jsonl` (one line per execution) to enable historical performance tracking and automated regression detection.
+* **Console Progress Indicators**: Long-running scripts (>30 seconds) MUST print progress indicators showing page N/M completion and current model count accumulation.
+
+## 10. Price Anomaly Detection & Data Quality Gates
+* **`price_history.db` Schema & Purpose**: The SQLite database at `data/price_history.db` serves as the persistent time-series price store. It MUST be documented with table schemas, indexed by `(country, retailer, brand, model_code, survey_date)`.
+* **Automated Anomaly Detection Rules (Post-Sync Validation)**:
+  1. **±30% Price Spike/Drop Guard**: If any model's selling price changes by ±30% or more compared to the previous survey, flag it as a potential parsing error and log it for manual review before dashboard publication. Exception: models transitioning from/to promotional pricing are exempt if accompanied by a promo text change.
+  2. **Cross-Country Outlier Detection**: If the same model code (e.g. `QE65S90H`) shows a price in one country that is 2× or more the median price across all countries (after currency conversion), flag it as a potential currency parsing or unit conversion error.
+  3. **Consecutive Zero-Price Alert**: If the same model has a `0` or `null` price in 2 consecutive survey rounds, trigger a URL validity re-check against the Master Registry and attempt a Direct PDP Probe.
+  4. **Minimum Price Floor Enforcement (by Screen Size)**:
+     - 70"+ TVs: price ≥ €700 (or local currency equivalent)
+     - 55"+ TVs: price ≥ €250
+     - Any TV: price ≥ €50
+     - Violations are flagged as discount badge false positives or parsing errors.
+
+## 12. Australia (AU) TV Price Tracker & Big 3 Retailers Standard
+* **Scope & Retailers**:
+  - **JB Hi-Fi** (`jbhifi.com.au`): Australia's #1 consumer electronics retailer.
+  - **The Good Guys** (`thegoodguys.com.au`): Major home appliance and TV retailer (Shopify Plus / Next.js).
+  - **Harvey Norman** (`harveynorman.com.au`): Leading department / electronics superstore franchise.
+* **Currency & Pricing Standards**:
+  - Currency: **AUD (Australian Dollar, A$, symbol `$`)**.
+  - Discount Stripping Guard: Must pre-strip promotional discount badges (e.g. `SAVE $1001`, `$1000OFF^`) before regex price matching to ensure the real selling price is never overwritten by discount values.
+* **Model Code Naming Standards for Australia**:
+  - **Samsung**: Uses prefix `QA` (e.g. `QA65S90FAWXXY`, `QA65R85H`, `QA55M70H`, `QA77S95H`) and suffix `XXY`.
+  - **LG**: Uses suffix `PSA`, `PSB`, `AU`, `AN`, `TSA` (e.g. `OLED65C6PSA`, `OLED55G6PSB`, `OLED55B6PSA`, `55QNED70BPSA`, `65QNED86TSA`).
+* **Targeted Multi-Category Collection Architecture (Credit-Optimized)**:
+  - Never scrape single generic landing pages. Scrapers MUST traverse brand-specific TV collection categories across all 3 retailers:
+    1. **JB Hi-Fi**: `/collections/tvs/samsung-tvs` (Samsung) and `/collections/tvs/lg-tvs` (LG).
+    2. **The Good Guys**: `/samsung/televisions` (Samsung) and `/lg/televisions` (LG).
+    3. **Harvey Norman**: `/tv-blu-ray-home-theatre/tvs-by-brand/samsung-tvs` (Samsung) and `/tv-blu-ray-home-theatre/tvs-by-brand/lg-tvs` (LG).
+  - This 6-URL targeted collection yields 200~300+ unique TV models across all screen sizes and display categories while minimizing third-party crawling credits.
+* **Australian Master Product URL Registry (`data/master_product_urls_au.json`)**:
+  - All verified AU models and PDP URLs are permanently registered in `data/master_product_urls_au.json` (separated from European registry).
+  - Newly discovered models on each survey run are auto-registered, preventing sample drop and ensuring continuous historical continuity.
+* **Storage & Deliverable Paths**:
+  - Raw JSON datasets: `data/raw_jbhifi_{samsung|lg}.json`, `data/raw_goodguys_{samsung|lg}.json`, `data/raw_harveynorman_{samsung|lg}.json`.
+  - Excel workbook: `data/price tracker_AU_2026 {MMDD}_v1.xlsx` (8 sheets: `Summary_2026`, `Summary_2025`, and 6 retailer sheets).
+  - History directory: `History_AU/{YYYY MMDD}/price tracker_AU_{YYYY MMDD}_v1.xlsx`.
+  - Dashboard & Hosting: `data/au_price_dashboard.html`, `public_au/index.html`, and Firebase Hosting URL: `https://au-price-tracker-lge.web.app`.
+
 

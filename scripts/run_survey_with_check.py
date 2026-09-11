@@ -103,13 +103,33 @@ def get_today_json_counts():
                 
     return counts
 
+def get_stale_raw_targets():
+    """Checks which retailer raw datasets are missing or not updated today."""
+    today_date_str = datetime.now().strftime("%Y-%m-%d")
+    mapping = {
+        "mediamarkt": ["raw_mediamarkt_samsung.json", "raw_mediamarkt_lg.json"],
+        "interdiscount": ["raw_interdiscount_samsung.json", "raw_interdiscount_lg.json"],
+        "digitec": ["raw_digitec_samsung.json", "raw_digitec_lg.json"]
+    }
+    stale = {"mediamarkt": False, "interdiscount": False, "digitec": False}
+    for ret, files in mapping.items():
+        for fname in files:
+            p = os.path.join(DATA_DIR, fname)
+            if not os.path.exists(p):
+                stale[ret] = True
+            else:
+                mtime = datetime.fromtimestamp(os.path.getmtime(p)).strftime("%Y-%m-%d")
+                if mtime != today_date_str:
+                    stale[ret] = True
+    return stale
+
 def run_scraper(script_name):
     """Runs a single scraper script with a timeout multiplier."""
     env = os.environ.copy()
     env["TIMEOUT_MULTIPLIER"] = "1.5"
     
     script_path = os.path.join(ROOT_DIR, "scripts", script_name)
-    print(f"\n[RERUN] Launching scraper with TIMEOUT_MULTIPLIER=1.5: {script_name}...")
+    print(f"\n[LAUNCH] Launching scraper with TIMEOUT_MULTIPLIER=1.5: {script_name}...")
     
     try:
         res = subprocess.run(
@@ -135,6 +155,23 @@ def main():
     print(" AUTOMATED SURVEY VERIFICATION & RERUN wrapper")
     print("="*60)
     
+    # 0. Check for stale/missing datasets and run initial live scrape if needed
+    stale_targets = get_stale_raw_targets()
+    stale_any = any(stale_targets.values())
+    if stale_any:
+        print("\n[INITIAL LIVE SCRAPE] Found stale or missing raw datasets for today.")
+        print("➔ Initiating live web scraping pass before count verification...")
+        if stale_targets["mediamarkt"]:
+            print("  • MediaMarkt: Launching scrape_mediamarkt.py...")
+            run_scraper("scrape_mediamarkt.py")
+        if stale_targets["interdiscount"]:
+            print("  • Interdiscount: Launching scrape_interdiscount.py...")
+            run_scraper("scrape_interdiscount.py")
+        if stale_targets["digitec"]:
+            print("  • Digitec: Launching scrape_digitec.py...")
+            run_scraper("scrape_digitec.py")
+        print("\n[INITIAL LIVE SCRAPE DONE] Proceeding to baseline comparison...\n")
+    
     # 1. Get yesterday's info and counts
     yesterday_mmdd, yesterday_pt = get_yesterday_info()
     print(f"[BASELINE] Resolved baseline survey date: 2026 {yesterday_mmdd}")
@@ -143,14 +180,14 @@ def main():
     yesterday_counts = get_yesterday_sheet_counts(yesterday_pt)
     print(f"[BASELINE COUNTS] {yesterday_counts}")
     
-    # Fallback default baseline if yesterday_pt is missing
+    # Fallback default baseline if yesterday_pt is missing (updated to current golden counts)
     default_baseline = {
-        "MediaMarkt_Samsung_Full": 73,
-        "MediaMarkt_LG_Full": 45,
-        "Interdiscount_Samsung_Full": 83,
-        "Interdiscount_LG_Full": 50,
-        "Digitec_Samsung_Full": 74,
-        "Digitec_LG_Full": 111
+        "MediaMarkt_Samsung_Full": 69,
+        "MediaMarkt_LG_Full": 57,
+        "Interdiscount_Samsung_Full": 73,
+        "Interdiscount_LG_Full": 38,
+        "Digitec_Samsung_Full": 98,
+        "Digitec_LG_Full": 123
     }
     
     for k, v in default_baseline.items():
@@ -268,12 +305,19 @@ def main():
             else:
                 print(f"\n[WARN] Discrepancies still exist after attempt {attempt}. Retrying...")
                 
-    # 4. Proceed to final pipeline execution (Sync, History Archiving, Dashboard, Deploy)
+    # 4. Proceed to final pipeline execution (Sync, Registry Update, History Archiving, Dashboard, Deploy)
     print("\n" + "="*50)
     print(" RUNNING FINAL SYNC & EXCEL COMPILATION")
     print("="*50)
     sync_path = os.path.join(ROOT_DIR, "scripts", "sync_all_retailers.py")
     subprocess.run([sys.executable, sync_path], cwd=ROOT_DIR)
+    
+    # 4.1 Update Master URL Registry
+    print("\n" + "="*50)
+    print(" UPDATING MASTER URL REGISTRY")
+    print("="*50)
+    registry_path = os.path.join(ROOT_DIR, "scripts", "build_master_url_registry.py")
+    subprocess.run([sys.executable, registry_path], cwd=ROOT_DIR)
     
     # Resolve MMDD date string for files
     today_mmdd = datetime.now().strftime("%m%d")

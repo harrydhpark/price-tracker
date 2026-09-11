@@ -1,542 +1,1206 @@
 [
   {
-    "name": "SAMSUNG S90F 55\" OLED 4K Vision AI Smart TV 2025 - QE55S90F",
-    "title": "SAMSUNG S90F 55\" OLED 4K Vision AI Smart TV 2025 - QE55S90F",
-    "price": 999.97,
-    "promo": "Save GBP 99.03; was GBP 1,099.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
-    "title": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
-    "price": 599.99,
-    "promo": "Save GBP 149.01; was GBP 749.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
-    "title": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
-    "price": 649.0,
-    "promo": "Save GBP 150.00; was GBP 799.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Frame (2025) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03FA",
-    "title": "SAMSUNG The Frame (2025) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03FA",
-    "price": 549.0,
-    "promo": "Save GBP 30.00; was GBP 579.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
-    "title": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
-    "price": 499.0,
-    "promo": "Save GBP 150.00; was GBP 649.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG Q7F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q7F",
-    "title": "SAMSUNG Q7F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q7F",
-    "price": 549.0,
-    "promo": "Save GBP 130.00; was GBP 679.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
-    "title": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
-    "price": 349.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
-    "title": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
-    "price": 899.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG S90F 42\" OLED 4K Vision AI Smart TV 2025 - QE42S90F",
-    "title": "SAMSUNG S90F 42\" OLED 4K Vision AI Smart TV 2025 - QE42S90F",
-    "price": 749.0,
-    "promo": "Save GBP 150.00; was GBP 899.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
-    "title": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
-    "price": 849.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
-    "title": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
-    "price": 999.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro (2026) 55\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
-    "title": "SAMSUNG The Frame Pro (2026) 55\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
-    "price": 1599.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
-    "title": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
-    "price": 749.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03H",
-    "title": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03H",
-    "price": 899.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
-    "title": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
-    "price": 1199.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG Q7F 43\" QLED 4K Vision AI Smart TV 2025 - QE43Q7F",
-    "title": "SAMSUNG Q7F 43\" QLED 4K Vision AI Smart TV 2025 - QE43Q7F",
-    "price": 239.0,
-    "promo": "Save GBP 85.99; was GBP 324.99; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
-    "title": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
-    "price": 149.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
-    "title": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
-    "price": 329.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
-    "title": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
-    "price": 199.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
-    "title": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
-    "price": 279.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
-    "title": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
-    "price": 399.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
-    "title": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
-    "price": 1099.97,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
-    "title": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
-    "price": 349.0,
-    "promo": "Save GBP 80.00; was GBP 429.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
-    "title": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
-    "price": 379.97,
-    "promo": "Save GBP 49.03; was GBP 429.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
-    "title": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
-    "price": 529.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
-    "title": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
-    "price": 179.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
-    "title": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
-    "price": 699.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
-    "title": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
-    "price": 549.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
-    "title": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
-    "price": 449.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
-    "title": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
-    "price": 1699.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
-    "title": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
-    "price": 1599.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S90F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S90F",
-    "title": "SAMSUNG S90F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S90F",
-    "price": 2799.0,
-    "promo": "Save GBP 1,000.00; was GBP 3,799.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
-    "title": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
-    "price": 1299.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
-    "title": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
-    "price": 749.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
-    "title": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
-    "price": 1399.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
-    "title": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
-    "price": 1199.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG Q7F 85\" QLED 4K Vision AI Smart TV 2025 - QE85Q7F",
-    "title": "SAMSUNG Q7F 85\" QLED 4K Vision AI Smart TV 2025 - QE85Q7F",
-    "price": 1099.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
-    "title": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
-    "price": 799.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro (2025) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03FW",
-    "title": "SAMSUNG The Frame Pro (2025) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03FW",
-    "price": 1699.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
-    "title": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
-    "price": 1299.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
-    "title": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
-    "price": 1999.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
-    "title": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
-    "price": 2299.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
-    "title": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
-    "price": 999.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
-    "title": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
-    "price": 1799.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
-    "title": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
-    "price": 849.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
-    "title": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
-    "price": 1099.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN80F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN80F",
-    "title": "SAMSUNG QN80F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN80F",
-    "price": 1399.0,
-    "promo": "Save GBP 100.00; was GBP 1,499.00; Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
-    "title": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
-    "price": 1399.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
-    "title": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
-    "price": 3299.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03H",
-    "title": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03H",
-    "price": 1799.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
-    "title": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
-    "price": 3099.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
-    "title": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
-    "price": 999.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
-    "title": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
-    "price": 1799.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
-    "title": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
-    "price": 1699.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
-    "title": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
-    "price": 3999.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
-    "title": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
-    "price": 3999.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
-    "title": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
-    "price": 1299.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
-    "title": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
-    "price": 5299.0,
-    "promo": "Save GBP 500.00; was GBP 5,799.00"
-  },
-  {
-    "name": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
-    "title": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
-    "price": 3999.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
-    "title": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
-    "price": 2499.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
-    "title": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
-    "price": 1399.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro QE75LS03FW 75\" Neo QLED 4K Smart TV & The Frame QE32LS03CBUXXU 32\" Smart Full HD HDR QLED TV Bundle",
-    "title": "SAMSUNG The Frame Pro QE75LS03FW 75\" Neo QLED 4K Smart TV & The Frame QE32LS03CBUXXU 32\" Smart Full HD HDR QLED TV Bundle",
-    "price": 1799.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
-    "title": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
-    "price": 2798.97,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Serif LS01D 55\" QLED 4K HDR Smart TV in Cloud White 2024 - QE55LS01DA",
-    "title": "SAMSUNG The Serif LS01D 55\" QLED 4K HDR Smart TV in Cloud White 2024 - QE55LS01DA",
-    "price": 999.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
-    "title": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
-    "price": 7999.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
-    "title": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
-    "price": 3099.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
-    "title": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
-    "price": 5499.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
-    "title": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
-    "price": 2699.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
-    "title": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
-    "price": 1199.0,
-    "promo": "Direct Cut 10% (Code: TV10)"
-  },
-  {
-    "name": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
-    "title": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
-    "price": 2499.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
-    "title": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
-    "price": 3999.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
-    "title": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
-    "price": 1599.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
-    "title": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
-    "price": 4099.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
-    "title": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
-    "price": 2399.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE85LS03H",
-    "title": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE85LS03H",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 100,
+    "model_code": "QE100QN80H",
     "price": 3799.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
+    "orig_price": 4499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 700.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG QN80H 100\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE100QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-100-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe100qn80h-10303338.html"
   },
   {
-    "name": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
-    "title": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
-    "price": 5899.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 100,
+    "model_code": "UE100M90H",
+    "price": 1999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG M90H 100\" 4K Mini LED Vision AI Smart TV 2026 - UE100M90H",
+    "link": "https://www.currys.co.uk/products/samsung-m90h-100-4k-mini-led-vision-ai-smart-tv-2026-ue100m90h-10306575.html"
   },
   {
-    "name": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
-    "title": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
-    "price": 4499.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 98,
+    "model_code": "UE98U9000H",
+    "price": 1599.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 150 off",
+    "title": "SAMSUNG U9000H 98\" Crystal UHD 4K HDR Smart TV 2026 - UE98U9000H",
+    "link": "https://www.currys.co.uk/products/samsung-u9000h-98-crystal-uhd-4k-hdr-smart-tv-2026-ue98u9000h-10306571.html"
   },
   {
-    "name": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
-    "title": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
-    "price": 4799.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
-    "title": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
-    "price": 3499.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
-    "title": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
-    "price": 2099.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
-    "title": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
-    "price": 3099.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03H",
-    "title": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03H",
-    "price": 2799.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
-  },
-  {
-    "name": "SAMSUNG R95H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R95H",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 85,
+    "model_code": "MRE85R95H",
+    "price": 4999.0,
+    "orig_price": 5999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 1000.00; Trade-in GBP 300 off",
     "title": "SAMSUNG R95H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R95H",
-    "price": 5799.0,
-    "promo": "Direct Cut 15% (Code: TV15)"
+    "link": "https://www.currys.co.uk/products/samsung-r95h-85-micro-rgb-4k-smart-ai-tv-2026-mre85r95h-10303284.html"
   },
   {
-    "name": "SAMSUNG U8000F 75\" Crystal UHD 4K HDR Smart TV 2025 - UE75U8000F",
-    "title": "SAMSUNG U8000F 75\" Crystal UHD 4K HDR Smart TV 2025 - UE75U8000F",
-    "price": 619.99,
-    "promo": "Save GBP 29.01; was GBP 649.00; Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 85,
+    "model_code": "QE85LS03H",
+    "price": 3599.0,
+    "orig_price": 3999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 400.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG The Frame Pro (2026) 85\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE85LS03H",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-pro-2026-85-neo-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe85ls03h-10303407.html"
   },
   {
-    "name": "SAMSUNG Q7F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q7F",
-    "title": "SAMSUNG Q7F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q7F",
-    "price": 809.0,
-    "promo": "Save GBP 90.00; was GBP 899.00; Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 85,
+    "model_code": "MRE85R85H",
+    "price": 3299.0,
+    "orig_price": 3499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 300 off",
+    "title": "SAMSUNG R85H 85\" Micro RGB 4K Smart AI TV 2026 - MRE85R85H",
+    "link": "https://www.currys.co.uk/products/samsung-r85h-85-micro-rgb-4k-smart-ai-tv-2026-mre85r85h-10303241.html"
   },
   {
-    "name": "SAMSUNG QN85F 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE85QN85F",
-    "title": "SAMSUNG QN85F 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE85QN85F",
-    "price": 2499.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 85,
+    "model_code": "QE85QN80H",
+    "price": 2299.0,
+    "orig_price": 2999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 700.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG QN80H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-85-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe85qn80h-10303341.html"
   },
   {
-    "name": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
-    "title": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
-    "price": 3999.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 85,
+    "model_code": "QE85QN70H",
+    "price": 1999.0,
+    "orig_price": 2099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG QN70H 85\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE85QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-85-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe85qn70h-10303321.html"
   },
   {
-    "name": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
-    "title": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 85,
+    "model_code": "UE85M80H",
     "price": 1699.0,
-    "promo": "Up to 50% Off Soundbar w/ TV"
+    "orig_price": 1799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG M80H 85\" Mini LED 4K Vision AI Smart TV 2026 - UE85M80H",
+    "link": "https://www.currys.co.uk/products/samsung-m80h-85-mini-led-4k-vision-ai-smart-tv-2026-ue85m80h-10303340.html"
   },
   {
-    "name": "SAMSUNG QN85D 85\" Neo QLED 4K Mini LED Smart AI TV 2024 - QE85QN85D",
-    "title": "SAMSUNG QN85D 85\" Neo QLED 4K Mini LED Smart AI TV 2024 - QE85QN85D",
-    "price": 1979.97,
-    "promo": "Up to 50% Off Soundbar w/ TV"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 85,
+    "model_code": "UE85M70H",
+    "price": 1349.0,
+    "orig_price": 1399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG M70H 85\" 4K Mini LED Vision AI Smart TV 2026 - UE85M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-85-4k-mini-led-vision-ai-smart-tv-2026-ue85m70h-10303351.html"
   },
   {
-    "name": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
-    "title": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 85,
+    "model_code": "UE85U8000H",
+    "price": 999.0,
+    "orig_price": 1099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG U8000H 85\" Crystal UHD 4K HDR Smart TV 2026 - UE85U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-85-crystal-uhd-4k-hdr-smart-tv-2026-ue85u8000h-10303430.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S99H",
+    "price": 5799.0,
+    "orig_price": 5899.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S99H 83\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE83S99H",
+    "link": "https://www.currys.co.uk/products/samsung-s99h-83-oled-glare-free-and-art-mode-4k-vision-ai-smart-tv-2026-qe83s99h-10303226.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S90H",
+    "price": 3999.0,
+    "orig_price": 4799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 800.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S90H 83\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE83S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-83-oled-glare-free-4k-vision-ai-smart-tv-2026-qe83s90h-10303248.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S85H",
+    "price": 3099.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S85H 83\" OLED 4K Vision AI Smart TV 2026 - QE83S85H",
+    "link": "https://www.currys.co.uk/products/samsung-s85h-83-oled-4k-vision-ai-smart-tv-2026-qe83s85h-10303352.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S99H",
+    "price": 3899.0,
+    "orig_price": 4099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S99H 77\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE77S99H",
+    "link": "https://www.currys.co.uk/products/samsung-s99h-77-oled-glare-free-and-art-mode-4k-vision-ai-smart-tv-2026-qe77s99h-10303287.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S95H",
+    "price": 3699.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S95H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S95H",
+    "link": "https://www.currys.co.uk/products/samsung-s95h-77-oled-glare-free-4k-vision-ai-smart-tv-2026-qe77s95h-10303267.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S90H",
+    "price": 3099.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S90H 77\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE77S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-77-oled-glare-free-4k-vision-ai-smart-tv-2026-qe77s90h-10303266.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S85H",
+    "price": 2699.0,
+    "orig_price": 2999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 300.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S85H 77\" OLED 4K Vision AI Smart TV 2026 - QE77S85H",
+    "link": "https://www.currys.co.uk/products/samsung-s85h-77-oled-4k-vision-ai-smart-tv-2026-qe77s85h-10303260.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 75,
+    "model_code": "MRE75R95H",
+    "price": 3799.0,
+    "orig_price": 3999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 300 off",
+    "title": "SAMSUNG R95H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R95H",
+    "link": "https://www.currys.co.uk/products/samsung-r95h-75-micro-rgb-4k-smart-ai-tv-2026-mre75r95h-10303229.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75LS03H",
+    "price": 2599.0,
+    "orig_price": 2999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 400.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG The Frame Pro (2026) 75\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE75LS03H",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-pro-2026-75-neo-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe75ls03h-10303235.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 75,
+    "model_code": "MRE75R85H",
+    "price": 2499.0,
+    "orig_price": 3099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 600.00; Trade-in GBP 300 off",
+    "title": "SAMSUNG R85H 75\" Micro RGB 4K Smart AI TV 2026 - MRE75R85H",
+    "link": "https://www.currys.co.uk/products/samsung-r85h-75-micro-rgb-4k-smart-ai-tv-2026-mre75r85h-10303277.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75QN80H",
+    "price": 1799.0,
+    "orig_price": 1999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG QN80H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-75-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe75qn80h-10303343.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75QN70H",
+    "price": 1499.0,
+    "orig_price": 1699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG QN70H 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE75QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-75-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe75qn70h-10303249.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 75,
+    "model_code": "UE75M80H",
+    "price": 1199.0,
+    "orig_price": 1299.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG M80H 75\" Mini LED 4K Vision AI Smart TV 2026 - UE75M80H",
+    "link": "https://www.currys.co.uk/products/samsung-m80h-75-mini-led-4k-vision-ai-smart-tv-2026-ue75m80h-10303332.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 75,
+    "model_code": "UE75M70H",
+    "price": 849.0,
+    "orig_price": 899.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG M70H 75\" 4K Mini LED Vision AI Smart TV 2026 - UE75M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-75-4k-mini-led-vision-ai-smart-tv-2026-ue75m70h-10303426.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 75,
+    "model_code": "UE75U8000H",
+    "price": 679.0,
+    "orig_price": 699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 20.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG U8000H 75\" Crystal UHD 4K HDR Smart TV 2026 - UE75U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-75-crystal-uhd-4k-hdr-smart-tv-2026-ue75u8000h-10303410.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 65,
+    "model_code": "MRE65R95H",
+    "price": 2899.0,
+    "orig_price": 3099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 300 off",
+    "title": "SAMSUNG R95H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R95H",
+    "link": "https://www.currys.co.uk/products/samsung-r95h-65-micro-rgb-4k-smart-ai-tv-2026-mre65r95h-10303268.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "QE65S99H",
+    "price": 2899.0,
+    "orig_price": 3099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S99H 65\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE65S99H",
+    "link": "https://www.currys.co.uk/products/samsung-s99h-65-oled-glare-free-and-art-mode-4k-vision-ai-smart-tv-2026-qe65s99h-10303288.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "QE65S95H",
+    "price": 2699.0,
+    "orig_price": 2899.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S95H 65\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE65S95H",
+    "link": "https://www.currys.co.uk/products/samsung-s95h-65-oled-glare-free-4k-vision-ai-smart-tv-2026-qe65s95h-10303237.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "QE65S90H",
+    "price": 2099.0,
+    "orig_price": 2299.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S90H 65\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE65S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-65-oled-glare-free-4k-vision-ai-smart-tv-2026-qe65s90h-10304096.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "QE65S85H",
+    "price": 1999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S85H 65\" OLED 4K Vision AI Smart TV 2026 - QE65S85H",
+    "link": "https://www.currys.co.uk/products/samsung-s85h-65-oled-4k-vision-ai-smart-tv-2026-qe65s85h-10303290.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 65,
+    "model_code": "MRE65R85H",
+    "price": 1899.0,
+    "orig_price": 1999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 200 off",
+    "title": "SAMSUNG R85H 65\" Micro RGB 4K Smart AI TV 2026 - MRE65R85H",
+    "link": "https://www.currys.co.uk/products/samsung-r85h-65-micro-rgb-4k-smart-ai-tv-2026-mre65r85h-10303278.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65LS03H",
+    "price": 1599.0,
+    "orig_price": 1899.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 300.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG The Frame (2026) 65\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03H",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-2026-65-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe65ls03h-10304080.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65QN80H",
+    "price": 1199.0,
+    "orig_price": 1599.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 400.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG QN80H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-65-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe65qn80h-10303353.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65QN70H",
+    "price": 949.0,
+    "orig_price": 999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG QN70H 65\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE65QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-65-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe65qn70h-10303402.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "UE65M80H",
+    "price": 849.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 50 off",
+    "title": "SAMSUNG M80H 65\" Mini LED 4K Vision AI Smart TV 2026 - UE65M80H",
+    "link": "https://www.currys.co.uk/products/samsung-m80h-65-mini-led-4k-vision-ai-smart-tv-2026-ue65m80h-10303347.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "UE65M70H",
+    "price": 619.0,
+    "orig_price": 799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 180.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG M70H 65\" 4K Mini LED Vision AI Smart TV 2026 - UE65M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-65-4k-mini-led-vision-ai-smart-tv-2026-ue65m70h-10303419.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "UE65U8000H",
+    "price": 499.0,
+    "orig_price": 529.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 30.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000H 65\" Crystal UHD 4K HDR Smart TV 2026 - UE65U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-65-crystal-uhd-4k-hdr-smart-tv-2026-ue65u8000h-10303404.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "UE65U8000F",
+    "price": 379.97,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000F 65\" Crystal UHD 4K HDR Smart TV 2025 - UE65U8000F",
+    "link": "https://www.currys.co.uk/products/samsung-u8000f-65-crystal-uhd-4k-hdr-smart-tv-2025-ue65u8000f-10282803.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "QE55S99H",
+    "price": 2299.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S99H 55\" OLED Glare Free & Art Mode 4K Vision AI Smart TV 2026 - QE55S99H",
+    "link": "https://www.currys.co.uk/products/samsung-s99h-55-oled-glare-free-and-art-mode-4k-vision-ai-smart-tv-2026-qe55s99h-10303261.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "QE55S95H",
+    "price": 2099.0,
+    "orig_price": 2199.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG S95H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S95H",
+    "link": "https://www.currys.co.uk/products/samsung-s95h-55-oled-glare-free-4k-vision-ai-smart-tv-2026-qe55s95h-10303294.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "QE55S90H",
+    "price": 1499.0,
+    "orig_price": 1599.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG S90H 55\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE55S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-55-oled-glare-free-4k-vision-ai-smart-tv-2026-qe55s90h-10303255.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55LS03H",
+    "price": 1299.0,
+    "orig_price": 1499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG The Frame (2026) 55\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE55LS03H",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-2026-55-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe55ls03h-10303433.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "QE55S85H",
+    "price": 1299.0,
+    "orig_price": 1399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG S85H 55\" OLED 4K Vision AI Smart TV 2026 - QE55S85H",
+    "link": "https://www.currys.co.uk/products/samsung-s85h-55-oled-4k-vision-ai-smart-tv-2026-qe55s85h-10303228.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "MICRO RGB",
+    "size": 55,
+    "model_code": "MRE55R85H",
+    "price": 1199.0,
+    "orig_price": 1599.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 400.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG R85H 55\" Micro RGB 4K Smart AI TV 2026 - MRE55R85H",
+    "link": "https://www.currys.co.uk/products/samsung-r85h-55-micro-rgb-4k-smart-ai-tv-2026-mre55r85h-10303250.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN80H",
+    "price": 899.0,
+    "orig_price": 999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG QN80H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-55-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe55qn80h-10303335.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN70H",
+    "price": 799.0,
+    "orig_price": 849.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG QN70H 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE55QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-55-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe55qn70h-10303293.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55M80H",
+    "price": 649.0,
+    "orig_price": 699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG M80H 55\" Mini LED 4K Vision AI Smart TV 2026 - UE55M80H",
+    "link": "https://www.currys.co.uk/products/samsung-m80h-55-mini-led-4k-vision-ai-smart-tv-2026-ue55m80h-10303339.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55M70H",
+    "price": 432.0,
+    "orig_price": 499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 67.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG M70H 55\" 4K Mini LED Vision AI Smart TV 2026 - UE55M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-55-4k-mini-led-vision-ai-smart-tv-2026-ue55m70h-10303429.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55U8000H",
+    "price": 379.0,
+    "orig_price": 399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 20.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000H 55\" Crystal UHD 4K HDR Smart TV 2026 - UE55U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-55-crystal-uhd-4k-hdr-smart-tv-2026-ue55u8000h-10303413.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 50,
+    "model_code": "QE50QN80H",
+    "price": 749.0,
+    "orig_price": 999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 250.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG QN80H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN80H",
+    "link": "https://www.currys.co.uk/products/samsung-qn80h-50-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe50qn80h-10303328.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 50,
+    "model_code": "QE50QN70H",
+    "price": 699.0,
+    "orig_price": 799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG QN70H 50\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE50QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-50-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe50qn70h-10303264.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 50,
+    "model_code": "UE50M70H",
+    "price": 429.0,
+    "orig_price": 449.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 20.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG M70H 50\" 4K Mini LED Vision AI Smart TV 2026 - UE50M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-50-4k-mini-led-vision-ai-smart-tv-2026-ue50m70h-10304109.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 50,
+    "model_code": "UE50U8000H",
+    "price": 309.0,
+    "orig_price": 329.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 20.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000H 50\" Crystal UHD 4K HDR Smart TV 2026 - UE50U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-50-crystal-uhd-4k-hdr-smart-tv-2026-ue50u8000h-10303412.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "QE48S95H",
+    "price": 1499.0,
+    "orig_price": 1699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 150 off",
+    "title": "SAMSUNG S95H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S95H",
+    "link": "https://www.currys.co.uk/products/samsung-s95h-48-oled-glare-free-4k-vision-ai-smart-tv-2026-qe48s95h-10303279.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "QE48S90H",
+    "price": 1199.0,
+    "orig_price": 1299.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG S90H 48\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE48S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-48-oled-glare-free-4k-vision-ai-smart-tv-2026-qe48s90h-10303411.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "QE48S85H",
+    "price": 1099.0,
+    "orig_price": 1199.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG S85H 48\" OLED 4K Vision AI Smart TV 2026 - QE48S85H",
+    "link": "https://www.currys.co.uk/products/samsung-s85h-48-oled-4k-vision-ai-smart-tv-2026-qe48s85h-10303286.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 43,
+    "model_code": "QE43LS03H",
+    "price": 849.0,
+    "orig_price": 899.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Trade-in GBP 50 off",
+    "title": "SAMSUNG The Frame (2026) 43\" QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE43LS03H",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-2026-43-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe43ls03h-10303432.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 43,
+    "model_code": "QE43LS01DA",
+    "price": 598.97,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG The Serif LS01D 43\" QLED 4K HDR Smart TV in Cloud White 2024 - QE43LS01DA",
+    "link": "https://www.currys.co.uk/products/samsung-the-serif-qe43ls01dauxxu-43-smart-4k-ultra-hd-hdr-qled-tv-with-bixby-and-amazon-alexa-cloud-white-10264157.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 43,
+    "model_code": "QE43QN70H",
+    "price": 499.0,
+    "orig_price": 549.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 50.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG QN70H 43\" Neo QLED 4K Mini LED Vision AI Smart TV 2026 - QE43QN70H",
+    "link": "https://www.currys.co.uk/products/samsung-qn70h-43-neo-qled-4k-mini-led-vision-ai-smart-tv-2026-qe43qn70h-10303271.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43M70H",
+    "price": 349.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG M70H 43\" 4K Mini LED Vision AI Smart TV 2026 - UE43M70H",
+    "link": "https://www.currys.co.uk/products/samsung-m70h-43-4k-mini-led-vision-ai-smart-tv-2026-ue43m70h-10303424.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43U8000H",
+    "price": 259.0,
+    "orig_price": 279.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 20.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000H 43\" Crystal UHD 4K HDR Smart TV 2026 - UE43U8000H",
+    "link": "https://www.currys.co.uk/products/samsung-u8000h-43-crystal-uhd-4k-hdr-smart-tv-2026-ue43u8000h-10303406.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43U8000F",
+    "price": 229.0,
+    "orig_price": 259.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 30.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG U8000F 43\" Crystal UHD 4K HDR Smart TV 2025 - UE43U8000F",
+    "link": "https://www.currys.co.uk/products/samsung-u8000f-43-crystal-uhd-4k-hdr-smart-tv-2025-ue43u8000f-10282666.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 42,
+    "model_code": "QE42S90H",
+    "price": 1099.0,
+    "orig_price": 1299.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 200.00; Trade-in GBP 100 off",
+    "title": "SAMSUNG S90H 42\" OLED Glare Free 4K Vision AI Smart TV 2026 - QE42S90H",
+    "link": "https://www.currys.co.uk/products/samsung-s90h-42-oled-glare-free-4k-vision-ai-smart-tv-2026-qe42s90h-10303262.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 32,
+    "model_code": "QE32LS03CB",
+    "price": 349.0,
+    "orig_price": 429.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 80.00",
+    "title": "SAMSUNG The Frame LS03C 32\" QLED Full HD Art Mode Smart TV 2023 - QE32LS03CB",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-art-mode-qe32ls03cbuxxu-32-smart-full-hd-hdr-qled-tv-with-bixby-and-alexa-10248839.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "UE32F6000FKXXU",
+    "price": 199.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG UE32F6000FKXXU 32\" Smart Full HD HDR LED TV",
+    "link": "https://www.currys.co.uk/products/samsung-ue32f6000fkxxu-32-smart-full-hd-hdr-led-tv-10286717.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "UE32H5000FKXXU",
+    "price": 179.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG UE32H5000FKXXU 32\" Smart HD Ready HDR LED TV",
+    "link": "https://www.currys.co.uk/products/samsung-ue32h5000fkxxu-32-smart-hd-ready-hdr-led-tv-10286718.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 27,
+    "model_code": "UE27LSM7FAXXXU",
+    "price": 999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 100 off",
+    "title": "SAMSUNG The Movingstyle UE27LSM7FAXXXU 27\" Smart Quad HD HDR LED TV - White",
+    "link": "https://www.currys.co.uk/products/samsung-the-movingstyle-ue27lsm7faxxxu-27-smart-quad-hd-hdr-led-tv-white-10296272.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 24,
+    "model_code": "UE24F6000FKXXU",
+    "price": 149.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG UE24F6000FKXXU 24\" Smart Full HD HDR LED TV",
+    "link": "https://www.currys.co.uk/products/samsung-ue24f6000fkxxu-24-smart-full-hd-hdr-led-tv-10286602.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "MICRO RGB",
+    "size": 115,
+    "model_code": "MRE115MR95F",
+    "price": 24999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 300 off",
+    "title": "SAMSUNG MR95F 115\" Micro RGB 4K Smart AI TV - MRE115MR95F",
+    "link": "https://www.currys.co.uk/products/samsung-mr95f-115-micro-rgb-4k-smart-ai-tv-mre115mr95f-10296821.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 115,
+    "model_code": "QE115QN90F",
+    "price": 7999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG QN90F 115\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE115QN90F",
+    "link": "https://www.currys.co.uk/products/samsung-qn90f-115-neo-qled-4k-mini-led-vision-ai-smart-tv-2025-qe115qn90f-10291882.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 98,
+    "model_code": "QE98QN90F",
+    "price": 5299.0,
+    "orig_price": 5799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 500.00; Trade-in GBP 250 off",
+    "title": "SAMSUNG QN90F 98\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE98QN90F",
+    "link": "https://www.currys.co.uk/products/samsung-qn90f-98-neo-qled-4k-mini-led-vision-ai-smart-tv-2025-qe98qn90f-10282643.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 98,
+    "model_code": "QE98Q7F",
+    "price": 1699.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 150 off",
+    "title": "SAMSUNG Q7F 98\" QLED 4K Vision AI Smart TV 2025 - QE98Q7F",
+    "link": "https://www.currys.co.uk/products/samsung-q7f-98-qled-4k-vision-ai-smart-tv-2025-qe98q7f-10299336.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 85,
+    "model_code": "QE85QN990F",
+    "price": 5499.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG QN990F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN990F",
+    "link": "https://www.currys.co.uk/products/samsung-qn990f-85-neo-qled-8k-mini-led-vision-ai-smart-tv-2025-qe85qn990f-10282700.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 85,
+    "model_code": "QE85QN900F",
+    "price": 4499.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG QN900F 85\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE85QN900F",
+    "link": "https://www.currys.co.uk/products/samsung-qn900f-85-neo-qled-8k-mini-led-vision-ai-smart-tv-2025-qe85qn900f-10283609.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S85F",
+    "price": 2798.97,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG S85F 83\" OLED 4K Vision AI Smart TV 2025 - QE83S85F",
+    "link": "https://www.currys.co.uk/products/samsung-s85f-83-oled-4k-vision-ai-smart-tv-2025-qe83s85f-10282656.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75LST7DA",
+    "price": 3999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG The Terrace 75\" Neo QLED 4K Outdoor Smart TV – QE75LST7DA",
+    "link": "https://www.currys.co.uk/products/samsung-the-terrace-75-neo-qled-4k-outdoor-smart-tv-qe75lst7da-10297577.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75QN990FT",
+    "price": 3999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG QN990F 75\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE75QN990FT",
+    "link": "https://www.currys.co.uk/products/samsung-qn990f-75-neo-qled-8k-mini-led-vision-ai-smart-tv-2025-qe75qn990ft-10282680.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75QN70F",
+    "price": 1099.97,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 100 off",
+    "title": "SAMSUNG QN70F 75\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE75QN70F",
+    "link": "https://www.currys.co.uk/products/samsung-qn70f-75-neo-qled-4k-mini-led-vision-ai-smart-tv-2025-qe75qn70f-10282627.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 75,
+    "model_code": "QE75Q8F",
+    "price": 1099.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 100 off",
+    "title": "SAMSUNG Q8F 75\" QLED 4K Vision AI Smart TV 2025 - QE75Q8F",
+    "link": "https://www.currys.co.uk/products/samsung-q8f-75-qled-4k-vision-ai-smart-tv-2025-qe75q8f-10282621.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65QN990FT",
     "price": 2999.0,
-    "promo": "Direct Cut 30% (Code: SAVE30TVACCS)"
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG QN990F 65\" Neo QLED 8K Mini LED Vision AI Smart TV 2025 - QE65QN990FT",
+    "link": "https://www.currys.co.uk/products/samsung-qn990f-65-neo-qled-8k-mini-led-vision-ai-smart-tv-2025-qe65qn990ft-10282694.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65LST7DA",
+    "price": 2999.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG The Terrace 65\" Neo QLED 4K Outdoor Smart TV – QE65LST7DA",
+    "link": "https://www.currys.co.uk/products/samsung-the-terrace-65-neo-qled-4k-outdoor-smart-tv-qe65lst7da-10297582.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65LS03FW",
+    "price": 1168.97,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 100 off",
+    "title": "SAMSUNG The Frame Pro (2025) 65\" Neo QLED 4K Art Mode Smart AI TV with Slim Fit Wall Mount - QE65LS03FW",
+    "link": "https://www.currys.co.uk/products/samsung-the-frame-pro-2025-65-neo-qled-4k-art-mode-smart-ai-tv-with-slim-fit-wall-mount-qe65ls03fw-10284855.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65Q8F",
+    "price": 749.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 50 off",
+    "title": "SAMSUNG Q8F 65\" QLED 4K Vision AI Smart TV 2025 - QE65Q8F",
+    "link": "https://www.currys.co.uk/products/samsung-q8f-65-qled-4k-vision-ai-smart-tv-2025-qe65q8f-10282622.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55LST7DA",
+    "price": 2399.0,
+    "orig_price": null,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Trade-in GBP 250 off",
+    "title": "SAMSUNG The Terrace 55\" Neo QLED 4K Outdoor Smart TV - QE55LST7DA",
+    "link": "https://www.currys.co.uk/products/samsung-the-terrace-55-neo-qled-4k-outdoor-smart-tv-qe55lst7da-10297585.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN70F",
+    "price": 599.0,
+    "orig_price": 699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Save GBP 100.00; Get 30% off selected soundbars when bought with any Samsung TV",
+    "title": "SAMSUNG QN70F 55\" Neo QLED 4K Mini LED Vision AI Smart TV 2025 - QE55QN70F",
+    "link": "https://www.currys.co.uk/products/samsung-qn70f-55-neo-qled-4k-mini-led-vision-ai-smart-tv-2025-qe55qn70f-10282625.html"
   }
 ]

@@ -1,494 +1,1076 @@
 [
   {
-    "name": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "title": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "price": 629.0,
-    "promo": "Sale 40%; was EUR 1049.00"
-  },
-  {
-    "name": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "title": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "price": 429.0,
-    "promo": "Sale 51%; was EUR 879.00"
-  },
-  {
-    "name": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "title": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "price": 399.0,
-    "promo": "Sale 49%; was EUR 789.00"
-  },
-  {
-    "name": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "title": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "price": 569.0,
-    "promo": "Sale 68%; was EUR 1999.00"
-  },
-  {
-    "name": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "title": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "price": 539.0,
-    "promo": "Sale 55%; was EUR 1209.00"
-  },
-  {
-    "name": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": 1599.0,
-    "promo": "Sale 40%; was EUR 2699.00"
-  },
-  {
-    "name": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "title": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "price": 379.0,
-    "promo": "Sale 39%; was EUR 629.00"
-  },
-  {
-    "name": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "title": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "price": 399.0,
-    "promo": "Sale 42%; was EUR 699.00"
-  },
-  {
-    "name": "LG OLED65G56LS OLED evo TV  (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": "1529",
-    "uvp": "3999",
-    "promo": null
-  },
-  {
-    "name": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "title": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "price": 539.99,
-    "promo": "Sale 36%; was EUR 849.00"
-  },
-  {
-    "name": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": 1179.0,
-    "promo": "Sale 63%; was EUR 3199.00"
-  },
-  {
-    "name": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": 899.0,
-    "promo": "Sale 62%; was EUR 2399.00"
-  },
-  {
-    "name": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
-    "price": 499.0,
-    "promo": "Sale 60%; was EUR 1699.00"
-  },
-  {
-    "name": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "title": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "price": 309.0,
-    "promo": "Sale 53%; was EUR 689.00"
-  },
-  {
-    "name": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": 1759.0,
-    "promo": "Sale 61%; was EUR 4599.00"
-  },
-  {
-    "name": "LG OLED55G56LS OLED evo TV  (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": "1099",
-    "uvp": "2799",
-    "promo": null
-  },
-  {
-    "name": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "price": 599.0,
-    "promo": "Sale 60%; was EUR 1799.00"
-  },
-  {
-    "name": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "title": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
-    "price": 719.0,
-    "promo": "Sale 59%; was EUR 2299.00"
-  },
-  {
-    "name": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "price": 2599.0,
-    "promo": "Sale 67%; was EUR 7199.00"
-  },
-  {
-    "name": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-    "title": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-    "price": 200.0,
-    "promo": "200€ Cashback; Sale 67%; was EUR 3099.00"
-  },
-  {
-    "name": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
-    "title": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
-    "price": 200.0,
-    "promo": "200€ Cashback; Sale 57%; was EUR 2799.00"
-  },
-  {
-    "name": "LG OLED77B59LA OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": "1419",
-    "uvp": "4299",
-    "promo": null
-  },
-  {
-    "name": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": 2499.0,
-    "promo": "Sale 48%; was EUR 4899.00"
-  },
-  {
-    "name": "LG OLED evo TV OLED48G56LS OLED evo TV  (Flat, 48 Zoll / 121 cm, OLED 4K, SMART ",
-    "price": "799",
-    "uvp": "2099",
-    "promo": null
-  },
-  {
-    "name": "LG OLED83C67LA LG OLED evo TV C6 (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "price": "3099",
-    "uvp": "7499",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "LG 85QNED93B6A LG QNED evo TV (Flat, 85 Zoll / 214,8 cm, UHD 4K, SMART TV)",
-    "price": "1499",
-    "uvp": "1899",
-    "promo": null
-  },
-  {
-    "name": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
     "title": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": 1849.0,
-    "promo": "Sale 47%; was EUR 3499.00"
+    "name": "LG OLED65C67LA LG OLED evo TV C6 (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1699,
+    "uvp": "3499",
+    "original_price": 3499,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65c67la-lg-oled-evo-tv-c6-flat-65-zoll-165-cm-oled-4k-smart-tv-3038883.html"
   },
   {
-    "name": "LG FHD TV 27LB70006LA LG FHD TV (Flat, 27 Zoll / 68,1 cm, Full-HD, SMART TV)",
-    "price": "229,99",
+    "title": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "name": "LG 65QNED72B6B LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 1049,
     "uvp": null,
-    "promo": null
+    "original_price": 1049,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned72b6b-lg-qned-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-3038860.html"
   },
   {
-    "name": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "title": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": 846.99,
-    "promo": "Sale 55%; was EUR 1899.00"
+    "title": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG 55QNED72B6B LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 539.99,
+    "uvp": "849",
+    "original_price": 849,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned72b6b-lg-qned-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-3038876.html"
   },
   {
-    "name": "LG 50MRGB86B9A LG Mini RGB evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "price": "699",
-    "uvp": "1099",
-    "promo": null
+    "title": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "name": "LG 50QNED72B6B LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 469.99,
+    "uvp": "699",
+    "original_price": 699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50qned72b6b-lg-qned-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-3038873.html"
   },
   {
-    "name": "LG OLED48B59LA OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "price": "579",
-    "uvp": "1699",
-    "promo": null
-  },
-  {
-    "name": "LG OLED65B68LA LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": "1399",
-    "uvp": "2899",
-    "promo": "150€ Cashback"
-  },
-  {
-    "name": "LG 75QNED72B6A LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-    "price": "899",
-    "uvp": "1499",
-    "promo": null
-  },
-  {
-    "name": "LG 43QNED86A6C LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "price": "439",
-    "uvp": "999",
-    "promo": null
-  },
-  {
-    "name": "LG OLED65B59LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": "999",
-    "uvp": "2799",
-    "promo": null
-  },
-  {
-    "name": "LG OLED77G67LW OLED TV (Flat, 77 Zoll / 194,7 cm, OLED 4K, SMART TV)",
-    "price": "3379",
-    "uvp": "5599",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "LG 65QNED93B6A LG QNED evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
-    "price": "999",
-    "uvp": "1899",
-    "promo": null
-  },
-  {
-    "name": "LG OLED42C67LA LG OLED evo TV C6 (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
-    "price": "1099",
-    "uvp": "1999",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "LG OLED65G66LS LG OLED evo TV G6 (Flat, 65 Zoll / 165 cm, QLED 4K, SMART TV)",
-    "price": "2699",
-    "uvp": "4099",
-    "promo": "250€ Cashback"
-  },
-  {
-    "name": "LG 75QNED7EA6B LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-    "price": "739",
-    "uvp": "1699",
-    "promo": null
-  },
-  {
-    "name": "LG OLED55G57LW OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": "1079",
-    "uvp": "2799",
-    "promo": null
-  },
-  {
-    "name": "LG OLED65G57LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": "1479",
-    "uvp": "3999",
-    "promo": null
-  },
-  {
-    "name": "LG OLED55B68LA LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": "1099",
-    "uvp": "1999",
-    "promo": null
-  },
-  {
-    "name": "LG QNED86B TV LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
-    "price": "539,99",
-    "uvp": "899",
-    "promo": null
-  },
-  {
-    "name": "LG 50QNED86A6C QNED evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
-    "price": "499",
-    "uvp": "1199",
-    "promo": null
-  },
-  {
-    "name": "LG OLED55G66LS LG OLED evo TV G6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": "2169",
-    "uvp": "2899",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "LG OLED48C67LA LG OLED evo TV C6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "price": "1199",
-    "uvp": "2099",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "LG NanoCell TV 75NANO80A6B LG NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART",
-    "price": "849",
-    "uvp": "1699",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "LG 65MRGB86B9A LG Mini RGB evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
-    "price": "1089",
-    "uvp": "1499",
-    "promo": null
-  },
-  {
-    "name": "LG 55QNED93B6A LG QNED evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
-    "price": "869,99",
-    "uvp": "1499",
-    "promo": null
-  },
-  {
-    "name": "LG OLED48G66LS LG OLED evo TV G6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "price": "1499",
-    "uvp": "2299",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "LG OLED77W69LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": "4699",
-    "uvp": "6499",
-    "promo": "500€ Cashback"
-  },
-  {
-    "name": "LG SIGNATURE OLED77M59LA True Wireless LG OLED TV (Flat, 77 Zoll / 195 cm, OLED ",
-    "price": "3789",
-    "uvp": "5999",
-    "promo": null
-  },
-  {
-    "name": "LG OLED48B68LA LG OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
-    "price": "999,99",
-    "uvp": "1799",
-    "promo": "100€ Cashback"
-  },
-  {
-    "name": "LG Lifestyle TV 55LX7B6LA LG Lifestyle TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
-    "price": "1329",
-    "uvp": "1749",
-    "promo": null
-  },
-  {
-    "name": "LG Lifestyle TV 65LX7B6LA LG Lifestyle TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART",
-    "price": "1529",
-    "uvp": "2299",
-    "promo": null
-  },
-  {
-    "name": "LG OLED83G67LW OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "price": "4349",
-    "uvp": "8699",
-    "promo": "400€ Cashback"
-  },
-  {
-    "name": "LG OLED77G57LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": "2519",
-    "uvp": "5499",
-    "promo": null
-  },
-  {
-    "name": "LG 27TQ615S Smart TV (Flat, 27 Zoll / 68,6 cm, Full-HD, SMART TV)",
-    "price": "187,99",
-    "uvp": "229",
-    "promo": null
-  },
-  {
-    "name": "LG StanbyME 2 27LX6TDGA.AEU Lifestyle TV (Flat, 27 Zoll / 68 cm, QHD, SMART TV)",
-    "price": "1039",
-    "uvp": "1349",
-    "promo": null
-  },
-  {
-    "name": "LG OLED97G57LW OLED evo TV (Flat, 97 Zoll / 246 cm, OLED 4K, SMART TV)",
-    "price": "20699",
-    "uvp": "29999",
-    "promo": null
-  },
-  {
-    "name": "LG OLED55G59LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": "1499",
-    "uvp": "2799",
-    "promo": null
-  },
-  {
-    "name": "LG 85QNED93A6A QNED evo TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
-    "price": "1439",
-    "uvp": "4299",
-    "promo": null
-  },
-  {
-    "name": "LG 100QNED86A6 QNED evo TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
-    "price": "3469",
-    "uvp": "7499",
-    "promo": null
-  },
-  {
-    "name": "LG 75QNED8MB6A LG QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
-    "price": "1599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG NanoCell TV 55NANO80A6B LG NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART",
-    "price": "477",
-    "uvp": "899",
-    "promo": "OUTLET%"
-  },
-  {
-    "name": "LG OLED77B68LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
-    "price": "2499",
-    "uvp": "4399",
-    "promo": "200€ Cashback"
-  },
-  {
-    "name": "LG 86QNED7EA6B LG QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV)",
-    "price": "1469",
-    "uvp": "2299",
-    "promo": null
-  },
-  {
-    "name": "LG 55MRGB86B9A LG Mini RGB evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
-    "price": "869,99",
-    "uvp": "1399",
-    "promo": null
-  },
-  {
-    "name": "LG 75MRGB86B9A LG Mini RGB evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
-    "price": "1299",
-    "uvp": "2399",
-    "promo": null
-  },
-  {
-    "name": "LG OLED83B68LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "price": "3089",
-    "uvp": "6099",
-    "promo": "300€ Cashback"
-  },
-  {
-    "name": "LG OLED83W69LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
-    "price": "5999",
-    "uvp": "8999",
-    "promo": "500€ Cashback"
-  },
-  {
-    "name": "LG 100MRGB96B9 LG Micro RGB evo TV (Flat, 100 Zoll / 252,8 cm, UHD 4K, SMART TV)",
-    "price": "8999",
-    "uvp": "9999",
-    "promo": null
-  },
-  {
-    "name": "LG NanoCell TV 50NANO80A6B LG NanoCell TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART",
-    "price": "499,99",
-    "uvp": "749",
-    "promo": null
-  },
-  {
-    "name": "LG NanoCell TV 43NANO80A6B LG NanoCell TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART",
-    "price": "459,99",
-    "uvp": "649",
-    "promo": null
-  },
-  {
-    "name": "LG OLED97G67LW OLED TV (Flat, 97 Zoll / 246,38 cm, OLED 4K, SMART TV)",
-    "price": "22399",
-    "uvp": "29999",
-    "promo": "2.000€ Cashback"
-  },
-  {
-    "name": "LG 55QNED86A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
-    "price": "1049",
-    "uvp": "1299",
-    "promo": null
-  },
-  {
-    "name": "SEGWAY Ninebot E3 Pro D E-Scooter (10 Zoll, Schwarz / Silber / Rot)",
-    "price": "399",
-    "uvp": "449",
-    "promo": null
-  },
-  {
-    "name": "APPLE iPad Wi-Fi (11th generation), Tablet, 256 GB, 11 Zoll, Silber",
-    "price": "499",
+    "title": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "name": "LG 43QNED72B6B LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 419.99,
     "uvp": "629",
-    "promo": null
+    "original_price": 629,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-43qned72b6b-lg-qned-tv-flat-43-zoll-109-cm-uhd-4k-smart-tv-3038881.html"
   },
   {
-    "name": "LENOVO Idea Tab, inkl. Lenovo Tab Pen, Tablet, 128 GB, 11 Zoll, Luna Grey",
-    "price": "169",
-    "uvp": "279",
-    "promo": null
+    "title": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55C57LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 899,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55c57la-lg-oled-evo-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-2982818.html"
   },
   {
-    "name": "LG OLED65G56LS OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "title": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG 55QNED70A6A LG QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 469,
+    "uvp": "879",
+    "original_price": 879,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned70a6a-lg-qned-tv-55-zoll-139-cm-uhd-4k-smart-tv-2994323.html"
+  },
+  {
+    "title": "LG 55QNED93B6A LG QNED evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "name": "LG 55QNED93B6A LG QNED evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "price": 799,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned93b6a-lg-qned-evo-tv-flat-55-zoll-1388-cm-uhd-4k-smart-tv-3038874.html"
+  },
+  {
+    "title": "LG OLED55B68LA LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55B68LA LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 979,
+    "uvp": "2099",
+    "original_price": 2099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55b68la-lg-oled-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-3038871.html"
+  },
+  {
+    "title": "LG 75QNED8MB6A LG QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG 75QNED8MB6A LG QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 899,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned8mb6a-lg-qned-evo-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-3062532.html"
+  },
+  {
+    "title": "LG OLED77W69LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77W69LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 3999,
+    "uvp": "6499",
+    "original_price": 6499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77w69la-lg-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-3038872.html"
+  },
+  {
+    "title": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55C67LA LG OLED evo TV C6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1299,
+    "uvp": "2699",
+    "original_price": 2699,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55c67la-lg-oled-evo-tv-c6-flat-55-zoll-139-cm-oled-4k-smart-tv-3038857.html"
+  },
+  {
+    "title": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED42C57LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "price": 719.99,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled42c57la-oled-evo-tv-flat-42-zoll-106-cm-oled-4k-smart-tv-2982817.html"
+  },
+  {
+    "title": "LG 75QNED72B6A LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG 75QNED72B6A LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 979.99,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned72b6a-lg-qned-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-3038886.html"
+  },
+  {
     "title": "LG OLED65G56LS OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
-    "price": 1399.0,
-    "promo": "Sale 61%; was EUR 3999.00"
+    "name": "LG OLED65G56LS OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1699,
+    "uvp": "3999",
+    "original_price": 3999,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65g56ls-oled-evo-tv-flat-65-zoll-165-cm-qled-4k-smart-tv-3005564.html"
   },
   {
-    "name": "LG OLED55G56LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "title": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED65C57LA OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1249,
+    "uvp": "3199",
+    "original_price": 3199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65c57la-oled-evo-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-2982809.html"
+  },
+  {
+    "title": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED48C57LA OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 769.99,
+    "uvp": "1799",
+    "original_price": 1799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled48c57la-lg-oled-evo-tv-flat-48-zoll-121-cm-oled-4k-smart-tv-2982828.html"
+  },
+  {
+    "title": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "name": "LG 43QNED70A6A QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 349,
+    "uvp": "689",
+    "original_price": 689,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-43qned70a6a-qned-tv-43-zoll-109-cm-uhd-4k-smart-tv-2994314.html"
+  },
+  {
+    "title": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG 55QNED93A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 649,
+    "uvp": "1999",
+    "original_price": 1999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned93a6a-qned-evo-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-2994311.html"
+  },
+  {
+    "title": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77C67LA LG OLED evo TV C6 (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 2199,
+    "uvp": "4899",
+    "original_price": 4899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77c67la-lg-oled-evo-tv-c6-flat-77-zoll-195-cm-oled-4k-smart-tv-3038859.html"
+  },
+  {
+    "title": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "name": "LG 50QNED70A6A LG QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 419,
+    "uvp": "789",
+    "original_price": 789,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50qned70a6a-lg-qned-tv-50-zoll-127-cm-uhd-4k-smart-tv-2994320.html"
+  },
+  {
+    "title": "LG OLED65G66LS LG OLED evo TV G6 (Flat, 65 Zoll / 165 cm, QLED 4K, SMART TV)",
+    "name": "LG OLED65G66LS LG OLED evo TV G6 (Flat, 65 Zoll / 165 cm, QLED 4K, SMART TV)",
+    "price": 2099,
+    "uvp": "4099",
+    "original_price": 4099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65g66ls-lg-oled-evo-tv-g6-flat-65-zoll-165-cm-qled-4k-smart-tv-3038884.html"
+  },
+  {
+    "title": "LG OLED77B59LA OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77B59LA OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 1599,
+    "uvp": "4299",
+    "original_price": 4299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77b59la-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-2982802.html"
+  },
+  {
+    "title": "LG OLED83C67LA LG OLED evo TV C6 (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED83C67LA LG OLED evo TV C6 (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 2799,
+    "uvp": "7499",
+    "original_price": 7499,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled83c67la-lg-oled-evo-tv-c6-flat-83-zoll-210-cm-oled-4k-smart-tv-3038880.html"
+  },
+  {
+    "title": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "name": "LG 65QNED70A6A LG QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 599,
+    "uvp": "1209",
+    "original_price": 1209,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned70a6a-lg-qned-tv-65-zoll-165-cm-uhd-4k-smart-tv-2994316.html"
+  },
+  {
+    "title": "LG OLED65B68LA LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED65B68LA LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1419,
+    "uvp": "3049",
+    "original_price": 3049,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65b68la-lg-oled-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-3038856.html"
+  },
+  {
+    "title": "LG OLED48G66LS LG OLED evo TV G6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED48G66LS LG OLED evo TV G6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 1199,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled48g66ls-lg-oled-evo-tv-g6-flat-48-zoll-121-cm-oled-4k-smart-tv-3039333.html"
+  },
+  {
+    "title": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55B59LA OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 819,
+    "uvp": "1899",
+    "original_price": 1899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55b59la-oled-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-2982845.html"
+  },
+  {
+    "title": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "name": "LG 75QNED93B6A LG QNED evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "price": 1299,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned93b6a-lg-qned-evo-tv-flat-75-zoll-1893-cm-uhd-4k-smart-tv-3038888.html"
+  },
+  {
+    "title": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG 75QNED93A6A QNED evo TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 1099,
+    "uvp": "3099",
+    "original_price": 3099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned93a6a-qned-evo-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-2994309.html"
+  },
+  {
+    "title": "LG OLED55G66LS LG OLED evo TV G6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55G66LS LG OLED evo TV G6 (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1699,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g66ls-lg-oled-evo-tv-g6-flat-55-zoll-139-cm-oled-4k-smart-tv-3038878.html"
+  },
+  {
+    "title": "LG OLED48C67LA LG OLED evo TV C6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED48C67LA LG OLED evo TV C6 (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 1049,
+    "uvp": "2099",
+    "original_price": 2099,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled48c67la-lg-oled-evo-tv-c6-flat-48-zoll-121-cm-oled-4k-smart-tv-3038877.html"
+  },
+  {
+    "title": "LG 43QNED86A6C LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "name": "LG 43QNED86A6C LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 439.99,
+    "uvp": "999",
+    "original_price": 999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-qned4386a6c-lg-qned-tv-flat-43-zoll-109-cm-uhd-4k-smart-tv-3007516.html"
+  },
+  {
+    "title": "LG 65QNED93B6A LG QNED evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "name": "LG 65QNED93B6A LG QNED evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "price": 1089,
+    "uvp": "1899",
+    "original_price": 1899,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned93b6a-lg-qned-evo-tv-flat-65-zoll-1639-cm-uhd-4k-smart-tv-3038887.html"
+  },
+  {
+    "title": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77C57LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 1949,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77c57la-oled-evo-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-2982803.html"
+  },
+  {
+    "title": "LG QNED86B TV LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "name": "LG QNED86B TV LG QNED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 539.99,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-qned86b-tv-lg-qned-tv-flat-43-zoll-109-cm-uhd-4k-smart-tv-3038882.html"
+  },
+  {
+    "title": "LG 32LR60006LA LED TV (Flat, 32 Zoll / 81 cm, Full-HD, SMART TV)",
+    "name": "LG 32LR60006LA LED TV (Flat, 32 Zoll / 81 cm, Full-HD, SMART TV)",
+    "price": 279,
+    "uvp": "399",
+    "original_price": 399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-32lr60006la-led-tv-flat-32-zoll-81-cm-full-hd-smart-tv-2975636.html"
+  },
+  {
+    "title": "LG OLED48B68LA LG OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED48B68LA LG OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 859.99,
+    "uvp": "1849",
+    "original_price": 1849,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled48b68la-lg-oled-tv-flat-48-zoll-121-cm-oled-4k-smart-tv-3038875.html"
+  },
+  {
+    "title": "LG OLED77G67LW OLED TV (Flat, 77 Zoll / 194,7 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77G67LW OLED TV (Flat, 77 Zoll / 194,7 cm, OLED 4K, SMART TV)",
+    "price": 2919,
+    "uvp": "5599",
+    "original_price": 5599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77g67lw-oled-tv-flat-77-zoll-1947-cm-oled-4k-smart-tv-3038879.html"
+  },
+  {
+    "title": "LG 85QNED93B6A LG QNED evo TV (Flat, 85 Zoll / 214,8 cm, UHD 4K, SMART TV)",
+    "name": "LG 85QNED93B6A LG QNED evo TV (Flat, 85 Zoll / 214,8 cm, UHD 4K, SMART TV)",
+    "price": 1629,
+    "uvp": "3699",
+    "original_price": 3699,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-85qned93b6a-lg-qned-evo-tv-flat-85-zoll-2148-cm-uhd-4k-smart-tv-3038885.html"
+  },
+  {
+    "title": "LG OLED55G57LW OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55G57LW OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1079,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g57lw-lg-oled-evo-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-2982829.html"
+  },
+  {
+    "title": "LG OLED83G67LW OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED83G67LW OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 3989,
+    "uvp": "8699",
+    "original_price": 8699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled83g67lw-oled-tv-flat-83-zoll-210-cm-oled-4k-smart-tv-3039352.html"
+  },
+  {
+    "title": "LG 50MRGB86B9A LG Mini RGB evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "name": "LG 50MRGB86B9A LG Mini RGB evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 759.99,
+    "uvp": "1099",
+    "original_price": 1099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50mrgb86b9a-lg-mini-rgb-evo-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-3038889.html"
+  },
+  {
+    "title": "LG 75QNED7EA6B LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG 75QNED7EA6B LG QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 819,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned7ea6b-lg-qned-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-3005562.html"
+  },
+  {
+    "title": "LG 65MRGB86B9A LG Mini RGB evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "name": "LG 65MRGB86B9A LG Mini RGB evo TV (Flat, 65 Zoll / 163,9 cm, UHD 4K, SMART TV)",
+    "price": 1089,
+    "uvp": "1499",
+    "original_price": 1499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65mrgb86b9a-lg-mini-rgb-evo-tv-flat-65-zoll-1639-cm-uhd-4k-smart-tv-3039887.html"
+  },
+  {
+    "title": "LG OLED48B59LA OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED48B59LA OLED TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 619.99,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled48b59la-oled-tv-flat-48-zoll-121-cm-oled-4k-smart-tv-2982801.html"
+  },
+  {
+    "title": "LG OLED65B59LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED65B59LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1099,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65b57la-oled-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-2982846.html"
+  },
+  {
+    "title": "LG OLED65G57LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED65G57LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 1649,
+    "uvp": "3999",
+    "original_price": 3999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65g57lw-oled-evo-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-2982843.html"
+  },
+  {
+    "title": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "name": "LG 65QNED93A6A QNED evo TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 899,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned93a6a-qned-evo-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-2994318.html"
+  },
+  {
+    "title": "LG OLED42C67LA LG OLED evo TV C6 (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED42C67LA LG OLED evo TV C6 (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV)",
+    "price": 999,
+    "uvp": "1999",
+    "original_price": 1999,
+    "promo": "Gaming Deal",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled42c67la-lg-oled-evo-tv-c6-flat-42-zoll-106-cm-oled-4k-smart-tv-3038890.html"
+  },
+  {
+    "title": "LG NanoCell TV 75NANO80A6B LG NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG NanoCell TV 75NANO80A6B LG NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 849,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_lg-75nano80a6b-lg-nanocell-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-2982811.html"
+  },
+  {
+    "title": "LG OLED evo TV OLED48G56LS OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED evo TV OLED48G56LS OLED evo TV (Flat, 48 Zoll / 121 cm, OLED 4K, SMART TV)",
+    "price": 879.99,
+    "uvp": "2099",
+    "original_price": 2099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled-evo-tv-oled48g56ls-oled-evo-tv-flat-48-zoll-121-cm-qled-4k-smart-tv-3005566.html"
+  },
+  {
     "title": "LG OLED55G56LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
-    "price": 969.0,
-    "promo": "Sale 60%; was EUR 2799.00"
+    "name": "LG OLED55G56LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1099,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g56ls-oled-evo-tv-flat-55-zoll-139-cm-qled-4k-smart-tv-3005561.html"
+  },
+  {
+    "title": "LG SIGNATURE OLED77M59LA True Wireless LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG SIGNATURE OLED77M59LA True Wireless LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 3789,
+    "uvp": "5999",
+    "original_price": 5999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-signature-oled77m59la-true-wireless-lg-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-3013518.html"
+  },
+  {
+    "title": "LG Lifestyle TV 55LX7B6LA LG Lifestyle TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG Lifestyle TV 55LX7B6LA LG Lifestyle TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 1309,
+    "uvp": "1749",
+    "original_price": 1749,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-lifestyle-tv-55lx7b6la-lg-lifestyle-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-3039884.html"
+  },
+  {
+    "title": "LG StanbyME 2 27LX6TDGA.AEU Lifestyle TV (Flat, 27 Zoll / 68 cm, QHD, SMART TV)",
+    "name": "LG StanbyME 2 27LX6TDGA.AEU Lifestyle TV (Flat, 27 Zoll / 68 cm, QHD, SMART TV)",
+    "price": 1039,
+    "uvp": "1349",
+    "original_price": 1349,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-stanbyme-2-27lx6tdgaaeu-lifestyle-tv-flat-27-zoll-68-cm-qhd-smart-tv-3005563.html"
+  },
+  {
+    "title": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED83C57LA OLED evo TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 2599,
+    "uvp": "7199",
+    "original_price": 7199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled83c57la-oled-evo-tv-flat-83-zoll-210-cm-oled-4k-smart-tv-2982806.html"
+  },
+  {
+    "title": "LG OLED77G57LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77G57LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 2799,
+    "uvp": "5499",
+    "original_price": 5499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77g57lw-oled-evo-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-2982813.html"
+  },
+  {
+    "title": "LG 43NANO756QC NanoCell TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV, webOS22)",
+    "name": "LG 43NANO756QC NanoCell TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV, webOS22)",
+    "price": 421.06,
+    "uvp": "649",
+    "original_price": 649,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-43nano756qc-nanocell-tv-flat-43-zoll-109-cm-uhd-4k-smart-tv-webos22-2890975.html"
+  },
+  {
+    "title": "LG OLED55G59LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55G59LS OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1499,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g59ls-oled-evo-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-2982850.html"
+  },
+  {
+    "title": "LG 85QNED93A6A QNED evo TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
+    "name": "LG 85QNED93A6A QNED evo TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
+    "price": 1499,
+    "uvp": "4299",
+    "original_price": 4299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-85qned93a6a-qned-evo-tv-flat-85-zoll-215-cm-uhd-4k-smart-tv-2994312.html"
+  },
+  {
+    "title": "LG 50QNED86A6C QNED evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "name": "LG 50QNED86A6C QNED evo TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 549,
+    "uvp": "1199",
+    "original_price": 1199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50qned86a6c-qned-evo-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-2982836.html"
+  },
+  {
+    "title": "LG SIGNATURE OLED97M39LA True Wireless OLED TV (Flat, 97 Zoll / 246 cm, UHD 4K, SMART TV, webOS 23)",
+    "name": "LG SIGNATURE OLED97M39LA True Wireless OLED TV (Flat, 97 Zoll / 246 cm, UHD 4K, SMART TV, webOS 23)",
+    "price": 27641.51,
+    "uvp": "34999",
+    "original_price": 34999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled97m39la-oled-tv-flat-97-zoll-246-cm-uhd-4k-smart-tv-webos-23-2888971.html"
+  },
+  {
+    "title": "LG OLED77C43LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77C43LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 1799,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77c43la-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-2948993.html"
+  },
+  {
+    "title": "LG OLED65G48LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG OLED65G48LW OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 2489,
+    "uvp": "3999",
+    "original_price": 3999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65g48lw-oled-evo-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-webos-24-mit-lg-thinq-2925334.html"
+  },
+  {
+    "title": "LG OLED42C47LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG OLED42C47LA OLED evo TV (Flat, 42 Zoll / 106 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 1199,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-42c47la-oled-evo-tv-flat-42-zoll-106-cm-oled-4k-smart-tv-webos-24-mit-lg-thinq-2925332.html"
+  },
+  {
+    "title": "LG 100QNED86A6 QNED evo TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "name": "LG 100QNED86A6 QNED evo TV (Flat, 100 Zoll / 254 cm, UHD 4K, SMART TV)",
+    "price": 3739,
+    "uvp": "7499",
+    "original_price": 7499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-100qned86a6-qned-evo-tv-flat-100-zoll-254-cm-uhd-4k-smart-tv-2982834.html"
+  },
+  {
+    "title": "LG 75QNED86T6A QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 75QNED86T6A QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 1859,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned86t6a-qned-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925350.html"
+  },
+  {
+    "title": "LG OLED77G48LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG OLED77G48LW OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 3289,
+    "uvp": "5499",
+    "original_price": 5499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-77g48lw-oled-evo-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-webos-24-mit-lg-thinq-2925345.html"
+  },
+  {
+    "title": "LG 65QNED86T6A QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 65QNED86T6A QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 1219,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned86t6a-qned-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925327.html"
+  },
+  {
+    "title": "LG OLED55G39LA OLED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG OLED55G39LA OLED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 1780.66,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-lg-oled55g39la-oled-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2863596.html"
+  },
+  {
+    "title": "LG 75NANO81T6A NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 75NANO81T6A NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 999,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_lg-75nano81t6a-nanocell-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925331.html"
+  },
+  {
+    "title": "LG OLED55G29LA OLED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 22 mit LG ThinQ)",
+    "name": "LG OLED55G29LA OLED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 22 mit LG ThinQ)",
+    "price": 1687.1,
+    "uvp": "2499",
+    "original_price": 2499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g29la-oled-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-22-mit-lg-thinq-2788181.html"
+  },
+  {
+    "title": "LG SIGNATURE OLED77M39LA True Wireless OLED evo TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "name": "LG SIGNATURE OLED77M39LA True Wireless OLED evo TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV)",
+    "price": 4219.04,
+    "uvp": "7299",
+    "original_price": 7299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled-77-m-39-laaeum-2912983.html"
+  },
+  {
+    "title": "LG 55QNED816RE QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG 55QNED816RE QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 919.99,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned816re-qned-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2865958.html"
+  },
+  {
+    "title": "LG 86QNED86T6A QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 86QNED86T6A QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 2259,
+    "uvp": "3499",
+    "original_price": 3499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-86qned86t6a-qned-tv-flat-86-zoll-218-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925335.html"
+  },
+  {
+    "title": "LG 32LQ63006LA FHD TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, webOS 22 mit LG ThinQ)",
+    "name": "LG 32LQ63006LA FHD TV (Flat, 32 Zoll / 80 cm, Full-HD, SMART TV, webOS 22 mit LG ThinQ)",
+    "price": 280.39,
+    "uvp": "399",
+    "original_price": 399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-32lq63006la-led-tv-flat-32-zoll-80-cm-full-hd-smart-tv-webos-22-mit-lg-thinq-2788211.html"
+  },
+  {
+    "title": "LG 65QNED816RE QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG 65QNED816RE QNED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 1139,
+    "uvp": "1599",
+    "original_price": 1599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65qned816re-qned-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2865928.html"
+  },
+  {
+    "title": "LG 55NANO756QC NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 22 mit LG ThinQ)",
+    "name": "LG 55NANO756QC NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 22 mit LG ThinQ)",
+    "price": 599.99,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55nano756qc-nanocell-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-22-mit-lg-thinq-2890973.html"
+  },
+  {
+    "title": "LG OLED55C43LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55C43LA OLED evo TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1409,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55c43la-oled-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-2948991.html"
+  },
+  {
+    "title": "LG 75NANO756QA NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS22)",
+    "name": "LG 75NANO756QA NanoCell TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS22)",
+    "price": 1199,
+    "uvp": "1699",
+    "original_price": 1699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75nano756qa-nanocell-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-webos22-2890974.html"
+  },
+  {
+    "title": "LG FHD TV 27LB70006LA LG FHD TV (Flat, 27 Zoll / 68,1 cm, Full-HD, SMART TV)",
+    "name": "LG FHD TV 27LB70006LA LG FHD TV (Flat, 27 Zoll / 68,1 cm, Full-HD, SMART TV)",
+    "price": 209.99,
+    "uvp": "249",
+    "original_price": 249,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-fhd-tv-27lb70006la-lg-fhd-tv-flat-27-zoll-681-cm-full-hd-smart-tv-3039883.html"
+  },
+  {
+    "title": "LG OLED65G67LW LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED65G67LW LG OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 2099,
+    "uvp": "4099",
+    "original_price": 4099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65g67lw-lg-oled-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-3064088.html"
+  },
+  {
+    "title": "LG OLED55G67LW LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED55G67LW LG OLED TV (Flat, 55 Zoll / 139 cm, OLED 4K, SMART TV)",
+    "price": 1699,
+    "uvp": "2899",
+    "original_price": 2899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled55g67lw-lg-oled-tv-flat-55-zoll-139-cm-oled-4k-smart-tv-3064087.html"
+  },
+  {
+    "title": "LG OLED77B68LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED77B68LA LG OLED TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV)",
+    "price": 1799,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77b68la-lg-oled-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-3039335.html"
+  },
+  {
+    "title": "LG OLED83B68LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED83B68LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 3089,
+    "uvp": "6349",
+    "original_price": 6349,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled83b68la-lg-oled-tv-flat-83-zoll-210-cm-oled-4k-smart-tv-3039334.html"
+  },
+  {
+    "title": "LG OLED83W69LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED83W69LA LG OLED TV (Flat, 83 Zoll / 210 cm, OLED 4K, SMART TV)",
+    "price": 5379,
+    "uvp": "8999",
+    "original_price": 8999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled83w69la-lg-oled-tv-flat-83-zoll-210-cm-oled-4k-smart-tv-3039353.html"
+  },
+  {
+    "title": "LG 75MRGB86B9A LG Mini RGB evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "name": "LG 75MRGB86B9A LG Mini RGB evo TV (Flat, 75 Zoll / 189,3 cm, UHD 4K, SMART TV)",
+    "price": 1299,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75mrgb86b9a-lg-mini-rgb-evo-tv-flat-75-zoll-1893-cm-uhd-4k-smart-tv-3039885.html"
+  },
+  {
+    "title": "LG 55MRGB86B9A LG Mini RGB evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "name": "LG 55MRGB86B9A LG Mini RGB evo TV (Flat, 55 Zoll / 138,8 cm, UHD 4K, SMART TV)",
+    "price": 869.99,
+    "uvp": "1399",
+    "original_price": 1399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55mrgb86b9a-lg-mini-rgb-evo-tv-flat-55-zoll-1388-cm-uhd-4k-smart-tv-3039880.html"
+  },
+  {
+    "title": "LG 86QNED7EA6B LG QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV)",
+    "name": "LG 86QNED7EA6B LG QNED TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV)",
+    "price": 1469,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-86qned7ea6b-lg-qned-tv-flat-86-zoll-218-cm-uhd-4k-smart-tv-3005565.html"
+  },
+  {
+    "title": "LG 100MRGB96B9 LG Micro RGB evo TV (Flat, 100 Zoll / 252,8 cm, UHD 4K, SMART TV)",
+    "name": "LG 100MRGB96B9 LG Micro RGB evo TV (Flat, 100 Zoll / 252,8 cm, UHD 4K, SMART TV)",
+    "price": 11699,
+    "uvp": "12999",
+    "original_price": 12999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-100mrgb96b9-lg-micro-rgb-evo-tv-flat-100-zoll-2528-cm-uhd-4k-smart-tv-3039881.html"
+  },
+  {
+    "title": "LG NanoCell TV 50NANO80A6B LG NanoCell TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "name": "LG NanoCell TV 50NANO80A6B LG NanoCell TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV)",
+    "price": 499.99,
+    "uvp": "749",
+    "original_price": 749,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50nano80a6b-nanocell-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-2982837.html"
+  },
+  {
+    "title": "LG Lifestyle TV 65LX7B6LA LG Lifestyle TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "name": "LG Lifestyle TV 65LX7B6LA LG Lifestyle TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 1529,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-lifestyle-tv-65lx7b6la-lg-lifestyle-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-3039882.html"
+  },
+  {
+    "title": "LG OLED97G67LW OLED TV (Flat, 97 Zoll / 246,38 cm, OLED 4K, SMART TV)",
+    "name": "LG OLED97G67LW OLED TV (Flat, 97 Zoll / 246,38 cm, OLED 4K, SMART TV)",
+    "price": 29999,
+    "uvp": null,
+    "original_price": 29999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled97g67lw-oled-tv-flat-97-zoll-24638-cm-oled-4k-smart-tv-3039351.html"
+  },
+  {
+    "title": "LG OLED65B49LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG OLED65B49LA OLED TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 999,
+    "uvp": "2799",
+    "original_price": 2799,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-65b49la-oled-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-webos-24-mit-lg-thinq-2925348.html"
+  },
+  {
+    "title": "LG SIGNATURE OLED97M49LA True Wireless OLED evo TV (Flat, 97 Zoll / 246 cm, OLED 4K, SMART TV)",
+    "name": "LG SIGNATURE OLED97M49LA True Wireless OLED evo TV (Flat, 97 Zoll / 246 cm, OLED 4K, SMART TV)",
+    "price": 25499,
+    "uvp": "30499",
+    "original_price": 30499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled97m49la-oled-evo-tv-flat-97-zoll-246-cm-qled-4k-smart-tv-2948995.html"
+  },
+  {
+    "title": "LG 55NANO81T6A NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 55NANO81T6A NanoCell TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 579.99,
+    "uvp": "899",
+    "original_price": 899,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55nano81t6a-nanocell-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2927415.html"
+  },
+  {
+    "title": "LG 55QNED86T6A QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 55QNED86T6A QNED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 877,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": "OUTLET%",
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned86t6a-qned-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925341.html"
+  },
+  {
+    "title": "LG SIGNATURE OLED65M49LA True Wireless OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "name": "LG SIGNATURE OLED65M49LA True Wireless OLED evo TV (Flat, 65 Zoll / 165 cm, OLED 4K, SMART TV)",
+    "price": 3029,
+    "uvp": "4499",
+    "original_price": 4499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled65m49la-lg-oled-tv-flat-65-zoll-165-cm-oled-4k-smart-tv-2949804.html"
+  },
+  {
+    "title": "LG 55QNED86A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG 55QNED86A6A QNED evo TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 1049,
+    "uvp": "1299",
+    "original_price": 1299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55qned86a6a-qned-evo-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-2982815.html"
+  },
+  {
+    "title": "LG OLED77C47LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG OLED77C47LA OLED evo TV (Flat, 77 Zoll / 195 cm, OLED 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 2530.84,
+    "uvp": "4599",
+    "original_price": 4599,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-77c47la-oled-evo-tv-flat-77-zoll-195-cm-oled-4k-smart-tv-webos-24-mit-lg-thinq-2925326.html"
+  },
+  {
+    "title": "LG 50QNED86T6A QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 50QNED86T6A QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 844.99,
+    "uvp": "1199",
+    "original_price": 1199,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50qned86t6a-qned-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925330.html"
+  },
+  {
+    "title": "LG 86NANO81T6A NanoCell TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "name": "LG 86NANO81T6A NanoCell TV (Flat, 86 Zoll / 218 cm, UHD 4K, SMART TV, webOS 24 mit LG ThinQ)",
+    "price": 1469,
+    "uvp": "2699",
+    "original_price": 2699,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-86nano81t6a-nanocell-tv-flat-86-zoll-218-cm-uhd-4k-smart-tv-webos-24-mit-lg-thinq-2925349.html"
+  },
+  {
+    "title": "LG OLED77C37LA OLED evo TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG OLED77C37LA OLED evo TV (Flat, 77 Zoll / 195 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 2718.54,
+    "uvp": "5299",
+    "original_price": 5299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-oled77c37la-oled-evo-tv-flat-77-zoll-195-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2865920.html"
+  },
+  {
+    "title": "LG UHD TV 98UT91006LA UHD TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV)",
+    "name": "LG UHD TV 98UT91006LA UHD TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV)",
+    "price": 2169,
+    "uvp": "2999",
+    "original_price": 2999,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-uhd-tv-98ut91006la-uhd-tv-flat-98-zoll-249-cm-uhd-4k-smart-tv-2982826.html"
+  },
+  {
+    "title": "LG 75QNED816RE QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG 75QNED816RE QNED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 1405.68,
+    "uvp": "2299",
+    "original_price": 2299,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-75qned816re-qned-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2865965.html"
+  },
+  {
+    "title": "LG 55LX1T6LA Objet Collection OLED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG 55LX1T6LA Objet Collection OLED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 2209,
+    "uvp": "2399",
+    "original_price": 2399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-55lx1t6la-oled-tv-objet-collection-oled-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-2948992.html"
+  },
+  {
+    "title": "LG 50QNED816RE QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "name": "LG 50QNED816RE QNED TV (Flat, 50 Zoll / 127 cm, UHD 4K, SMART TV, webOS 23 mit LG ThinQ)",
+    "price": 919.99,
+    "uvp": "1099",
+    "original_price": 1099,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-50qned816re-qned-tv-flat-50-zoll-127-cm-uhd-4k-smart-tv-webos-23-mit-lg-thinq-2865962.html"
+  },
+  {
+    "title": "LG 98QNED89T6A QNED TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV)",
+    "name": "LG 98QNED89T6A QNED TV (Flat, 98 Zoll / 249 cm, UHD 4K, SMART TV)",
+    "price": 4329,
+    "uvp": "7499",
+    "original_price": 7499,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-98qned89t6a-qned-tv-flat-98-zoll-249-cm-uhd-4k-smart-tv-2934059.html"
+  },
+  {
+    "title": "LG 27TQ615S Smart TV (Flat, 27 Zoll / 68,6 cm, Full-HD, SMART TV)",
+    "name": "LG 27TQ615S Smart TV (Flat, 27 Zoll / 68,6 cm, Full-HD, SMART TV)",
+    "price": 192.99,
+    "uvp": "229",
+    "original_price": 229,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-27tq615s-smart-tv-flat-27-zoll-686-cm-full-hd-smart-tv-3020256.html"
+  },
+  {
+    "title": "LG WOWCAST WTP3 Wireless Audio Transmitter",
+    "name": "LG WOWCAST WTP3 Wireless Audio Transmitter",
+    "price": 129,
+    "uvp": "129",
+    "original_price": 129,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-wowcast-wtp3-wireless-audio-transmitter-2783597.html"
+  },
+  {
+    "title": "LG SR-G3WU65 TV-Standfuß",
+    "name": "LG SR-G3WU65 TV-Standfuß",
+    "price": 194.99,
+    "uvp": null,
+    "original_price": 194.99,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-sr-g3wu65-tv-standfuss-max-65-zoll-schwenkbar-grau-2887584.html"
+  },
+  {
+    "title": "LG Sound Suite FS-M51 Bodenstandfuß, Schwarz",
+    "name": "LG Sound Suite FS-M51 Bodenstandfuß, Schwarz",
+    "price": 149,
+    "uvp": null,
+    "original_price": 149,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-sound-suite-fs-m51-bodenstandfuss-schwarz-3045003.html"
+  },
+  {
+    "title": "LG FS 21 Standfuß, max. 65 Zoll, Silber",
+    "name": "LG FS 21 Standfuß, max. 65 Zoll, Silber",
+    "price": 399,
+    "uvp": null,
+    "original_price": 399,
+    "promo": null,
+    "link": "https://www.mediamarkt.de/de/product/_lg-fs-21-standfuss-max-65-zoll-silber-2732357.html"
+  },
+  {
+    "title": "LG ELECTRONICS 43NU800B6LC.AEEQ LED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 43NU800B6LC.AEEQ LED TV (Flat, 43 Zoll / 109 cm, UHD 4K, SMART TV)",
+    "price": 389.87,
+    "original_price": 397.67,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-43nu800b6lcaeeq-led-tv-flat-43-zoll-109-cm-uhd-4k-smart-tv-178334166.html"
+  },
+  {
+    "title": "LG ELECTRONICS 50NU800B6LC.AEEQ LED TV (Flat, 50 Zoll / 126 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 50NU800B6LC.AEEQ LED TV (Flat, 50 Zoll / 126 cm, UHD 4K, SMART TV)",
+    "price": 437.62,
+    "original_price": 455.12,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-50nu800b6lcaeeq-led-tv-flat-50-zoll-126-cm-uhd-4k-smart-tv-178335939.html"
+  },
+  {
+    "title": "LG ELECTRONICS 55NU800B6LA.AEEQ LED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 55NU800B6LA.AEEQ LED TV (Flat, 55 Zoll / 139 cm, UHD 4K, SMART TV)",
+    "price": 548.0,
+    "original_price": 548.0,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-55nu800b6laaeeq-led-tv-flat-55-zoll-139-cm-uhd-4k-smart-tv-178335929.html"
+  },
+  {
+    "title": "LG ELECTRONICS 65NU800B6LA.AEEQ LED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 65NU800B6LA.AEEQ LED TV (Flat, 65 Zoll / 165 cm, UHD 4K, SMART TV)",
+    "price": 643.61,
+    "original_price": 643.61,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-65nu800b6laaeeq-led-tv-flat-65-zoll-165-cm-uhd-4k-smart-tv-178335742.html"
+  },
+  {
+    "title": "LG ELECTRONICS 75NU800B6LA.AEEQ LED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 75NU800B6LA.AEEQ LED TV (Flat, 75 Zoll / 190 cm, UHD 4K, SMART TV)",
+    "price": 833.19,
+    "original_price": 833.19,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-75nu800b6laaeeq-led-tv-flat-75-zoll-190-cm-uhd-4k-smart-tv-178334022.html"
+  },
+  {
+    "title": "LG ELECTRONICS 85NU800B6LA.AEEQ LED TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
+    "name": "LG ELECTRONICS 85NU800B6LA.AEEQ LED TV (Flat, 85 Zoll / 215 cm, UHD 4K, SMART TV)",
+    "price": 1244.09,
+    "original_price": 1244.09,
+    "promo": "None",
+    "link": "https://www.mediamarkt.de/de/product/_lg-electronics-85nu800b6laaeeq-led-tv-flat-85-zoll-215-cm-uhd-4k-smart-tv-178336476.html"
   }
 ]

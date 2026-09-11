@@ -5,12 +5,13 @@ import re
 import os
 import sys
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.stdout.reconfigure(encoding='utf-8')
+
 # Get TIMEOUT_MULTIPLIER
 TIMEOUT_MULTIPLIER = float(os.environ.get("TIMEOUT_MULTIPLIER", "1.0"))
 if TIMEOUT_MULTIPLIER != 1.0:
     print(f"[TIMEOUT MULTIPLIER] Applying multiplier: {TIMEOUT_MULTIPLIER}")
-
-sys.stdout.reconfigure(encoding='utf-8')
 
 # Regex pattern for pricing
 price_regex = re.compile(r'(\d[\d\s’\x27\x60,.]*[,.]\d{2})')
@@ -73,7 +74,7 @@ def classify_samsung_year(model_code, title_upper):
 
 def classify_lg_year(model_code, title_upper):
     if model_code != "Unknown":
-        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "QLED7EB", "MRGB96B"]):
+        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "27LX6TDGA", "QLED7EB", "MRGB96B"]):
             return 2026
         elif any(x in model_code for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO80A", "QNED93A"]):
             return 2025
@@ -82,11 +83,11 @@ def classify_lg_year(model_code, title_upper):
                 return 2025
             return 2024
             
-    if "C6" in title_upper or "G6" in title_upper or "B6" in title_upper or "QNED86B" in title_upper or "QNED80B" in title_upper or "QNED7EB" in title_upper or "MRGB87B" in title_upper or "LX7B" in title_upper or "LX6" in title_upper or "MRGB96B" in title_upper:
+    if any(x in title_upper for x in ["C6", "G6", "B6", "QNED86B", "QNED71B", "QNED70B", "QNED72B", "QNED80B", "QNED87B", "QNED7EB", "MRGB87B", "LX7B", "LX6", "27LX6", "STANBYME 2", "MRGB96B"]):
         return 2026
-    if "C5" in title_upper or "G5" in title_upper or "B5" in title_upper or "QNED86A" in title_upper or "QNED80A" in title_upper or "QNED7EA" in title_upper or "MRGB87A" in title_upper or "LX7A" in title_upper or "LX5" in title_upper or "QNED70" in title_upper or "NANO81" in title_upper or "NANO80" in title_upper or "QNED93" in title_upper:
+    if any(x in title_upper for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED7EA", "QNED72A", "MRGB87A", "LX7A", "LX5", "QNED70", "NANO81", "NANO80", "QNED93"]):
         return 2025
-    if "C4" in title_upper or "G4" in title_upper or "B4" in title_upper:
+    if any(x in title_upper for x in ["C4", "G4", "B4"]):
         return 2024
     return None
 
@@ -164,22 +165,50 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
             for depth in range(8):
                 if not parent:
                     break
-                text = parent.get_text()
                 
-                price_match = re.search(r'CHF\s*([\d\s’\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}))', text)
-                if price_match and price == "N/A":
-                    p_val = re.sub(r'[.–\s’\x27\x60]', '', price_match.group(1)).strip()
-                    if len(p_val) > 1 and p_val not in ["2025", "2026"]:
-                        price = price_match.group(0).strip()
+                # Check promo badge first
+                if promo == "None":
+                    badge_cand = parent.find(lambda el: el.name in ['span', 'div', 'p'] and any(kw in el.get_text().lower() for kw in ["cashback", "soundbar", "geschenk", "gratis", "rabatt", "aktion", "gutschein", "coupon"]))
+                    if badge_cand:
+                        cand_text = badge_cand.get_text(strip=True)
+                        if len(cand_text) < 80 and not any(junk in cand_text.lower() for junk in ["warenkorb", "lieferung", "abholen", "mediamarkt"]):
+                            promo = cand_text
+                
+                # 1. First priority: Dedicated price DOM elements
+                price_el = parent.find(attrs={"data-test": re.compile(r"branded-price|product-price|price-box", re.I)})
+                if not price_el:
+                    price_el = parent.find(class_=lambda x: x and any(c in str(x).lower() for c in ["mms-branded-price", "brandedprice", "productprice"]))
+                
+                if price_el and price == "N/A":
+                    p_txt = price_el.get_text(strip=True)
+                    m = re.search(r'([\d\s’\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}))', p_txt)
+                    if m:
+                        clean_num = re.sub(r'[.–\s’\x27\x60]', '', m.group(1)).strip()
+                        if len(clean_num) > 1 and clean_num not in ["2025", "2026"]:
+                            price = m.group(0).strip()
+                
+                # 2. Fallback: Search in parent text with promo badge text pre-stripped
+                if price == "N/A":
+                    text = parent.get_text()
+                    # Capture promo mention before stripping if not yet set
+                    if promo == "None":
+                        cb_found = re.findall(r'(?:CHF\s*\d+[\d\s’\x27\x60,.]*\s*(?:Cashback|Rabatt|Gutschein|Coupon|Zusatzrabatt|Ersparnis|Geschenk|Sparen)|(?:Cashback|Rabatt|Gutschein|Coupon|Zusatzrabatt|Ersparnis|Geschenk|Sparen)\s*(?:von|bis\s*zu)?\s*CHF\s*[\d\s’\x27\x60,.]+)', text, flags=re.I)
+                        if cb_found:
+                            promo = cb_found[0].strip()
+                            
+                    # Strip discount and cashback mentions
+                    clean_text = re.sub(r'CHF\s*\d+[\d\s’\x27\x60,.]*\s*(?:Cashback|Rabatt|Gutschein|Coupon|Zusatzrabatt|Ersparnis|Geschenk|Sparen)', '', text, flags=re.I)
+                    clean_text = re.sub(r'(?:Cashback|Rabatt|Gutschein|Coupon|Zusatzrabatt|Ersparnis|Geschenk|Sparen)\s*(?:von|bis\s*zu)?\s*CHF\s*[\d\s’\x27\x60,.]+', '', clean_text, flags=re.I)
+                    
+                    price_match = re.search(r'CHF\s*([\d\s’\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}))', clean_text)
+                    if price_match:
+                        p_val = re.sub(r'[.–\s’\x27\x60]', '', price_match.group(1)).strip()
+                        if len(p_val) > 1 and p_val not in ["2025", "2026"]:
+                            price = price_match.group(0).strip()
                         
-                seller_match = re.search(r'(?:Verkauft durch|Sold by)\s+([^\n\r.]+)', text, re.IGNORECASE)
+                seller_match = re.search(r'(?:Verkauft durch|Sold by)\s+([^\n\r.]+)', parent.get_text(), re.IGNORECASE)
                 if seller_match:
                     seller = seller_match.group(1).strip()
-                    
-                if any(kw in text for kw in ["Cashback", "Rabatt", "Geschenk", "Aktion"]):
-                    promo_el = parent.find(class_=lambda x: x and any(kw in x for kw in ["badge", "promo", "Aktion", "benefit"]))
-                    if promo_el and promo == "None":
-                        promo = promo_el.get_text(strip=True)
                         
                 parent = parent.parent
                 
@@ -213,6 +242,9 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
                 
             seller_upper = seller.upper()
             if "MEDIAMARKT" not in seller_upper or "PARTNER" in seller_upper:
+                continue
+                
+            if any(x in title_upper for x in ["GALAXY S26", "SMARTPHONE", "HANDY", "MOBILE", "TAB S"]):
                 continue
                 
             price_val = 0.0
@@ -343,6 +375,27 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
             elif any(x in title_upper or x in model_code.upper() for x in ["MRGB", "R85", "R95", "MICRO RGB", "MICRRGB"]):
                 display_type = "MRGB"
                 
+            # Screen size & OLED price threshold guard (reject promo voucher / discount false positives)
+            if display_type == "OLED":
+                if size_val >= 77 and price_val < 1500.0:
+                    continue
+                elif size_val >= 65 and price_val < 1000.0:
+                    continue
+                elif size_val >= 48 and price_val < 600.0:
+                    continue
+                elif size_val >= 42 and price_val < 500.0:
+                    continue
+            elif size_val >= 75 and price_val < 400.0:
+                continue
+            elif price_val < 150.0:
+                continue
+                
+            try:
+                from swiss_promo_parser import parse_swiss_promo_and_cashback
+                cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+            except Exception:
+                cashback_amt = 0
+                
             products.append({
                 "brand": brand,
                 "year": year_val,
@@ -352,7 +405,7 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
                 "price": price_val,
                 "shipping": "Free",
                 "installment": "",
-                "cashback": 0,
+                "cashback": cashback_amt,
                 "promo": promo_desc,
                 "title": title,
                 "link": "https://www.mediamarkt.ch" + href if href.startswith("/") else href
@@ -369,19 +422,30 @@ def scrape_mediamarkt_brand(brand):
     if brand.upper() == "SAMSUNG":
         search_configs = [
             ("https://www.mediamarkt.ch/de/search.html?query=samsung%20TV&brand=SAMSUNG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt", 5),
             ("https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt", 3),
             ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt", 2),
             ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt", 2)
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt", 2)
         ]
     elif brand.upper() == "LG":
         search_configs = [
             ("https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt", 5),
             ("https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt", 3),
             ("https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt", 2),
             ("https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt", 2),
             ("https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt", 2)
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt", 3),
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt", 2),
+            ("https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt", 2)
         ]
     else:
         search_configs = [
@@ -390,7 +454,7 @@ def scrape_mediamarkt_brand(brand):
         
     products = []
     
-    with StealthySession(headless=True) as session:
+    with StealthySession(headless=False) as session:
         for base_url, max_pages in search_configs:
             print(f"\n➔ [SEARCH QUERY] Executing: {base_url} (Max pages: {max_pages})")
             products.extend(scrape_mediamarkt_query(session, base_url, max_pages, brand))

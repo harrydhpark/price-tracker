@@ -17,6 +17,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Exchange Rate: 1 EUR = 398 HUF
@@ -181,8 +182,8 @@ def classify_year(brand, model_code, title_upper):
         
     if brand_upper == "LG":
         if any(x in model_code for x in [
-            "C6", "G6", "B6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED7EB", "QNED72B",
-            "NU8E", "MRGB87B", "MRGB96B", "UA77", "LX7B", "LX6", "QLED7EB"
+            "C6", "G6", "B6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED81B", "QNED7EB", "QNED72B", "QNED71B", "QNED70B",
+            "NU8E", "MRGB87B", "MRGB96B", "UA77", "LX7B", "LX6", "27LX6", "STANBYME", "QLED7EB"
         ]):
             return 2026
             
@@ -235,7 +236,7 @@ def classify_year(brand, model_code, title_upper):
             if letter == 'F': return 2025
             if letter == 'D': return 2024
             
-        if any(x in title_upper for x in ["S90H", "S95H", "S85H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "LS03H", "U8000H", "U8090H", "2026"]):
+        if any(x in title_upper for x in ["S90H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "M80H", "M70H", "R95H", "R85H", "LS03H", "U8000H", "U8090H", "2026"]):
             return 2026
         if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "LS03F", "U8000F", "U8072F", "Q7F", "Q8F", "Q6F", "2025"]):
             return 2025
@@ -410,7 +411,11 @@ def clean_and_standardize(raw_items, brand):
             
         model_code, series, category = extract_model_and_series(brand, title_upper)
         inch = extract_size_from_title(title_upper) or extract_size(title_upper, model_code) or 0
-        year = classify_year(brand, model_code, title_upper) or 2025
+        year = classify_year(brand, model_code, title_upper)
+        
+        # Strict Model Year filter: Only 2025 and 2026 models are allowed
+        if year not in [2025, 2026]:
+            continue
         
         price_eur = round(price_huf / HUF_TO_EUR_RATE, 2)
         
@@ -545,25 +550,13 @@ def main():
     os.makedirs(data_dir, exist_ok=True)
     raw_cache_file = os.path.join(data_dir, "raw_mediamarkt_hu_deep.json")
     
-    # Check if raw cache exists from previous fetch
-    raw_sec, raw_lg = [], []
-    if os.path.exists(raw_cache_file):
-        try:
-            with open(raw_cache_file, "r", encoding="utf-8") as f:
-                cached = json.load(f)
-                raw_sec = cached.get("samsung", [])
-                raw_lg = cached.get("lg", [])
-                print(f"📦 Loaded {len(raw_sec)} Samsung & {len(raw_lg)} LG items from raw cache.")
-        except Exception as e:
-            print("Cache load error:", e)
-            
-    if not raw_sec or not raw_lg:
-        with StealthySession(headless=True) as session:
-            raw_sec = run_deep_scrape_for_brand(session, "Samsung")
-            raw_lg = run_deep_scrape_for_brand(session, "LG")
-            
-        with open(raw_cache_file, "w", encoding="utf-8") as f:
-            json.dump({"samsung": raw_sec, "lg": raw_lg}, f, ensure_ascii=False, indent=2)
+    print("🌐 [LIVE SCRAPE] Starting live scrape for MediaMarkt Hungary...")
+    with StealthySession(headless=True) as session:
+        raw_sec = run_deep_scrape_for_brand(session, "Samsung")
+        raw_lg = run_deep_scrape_for_brand(session, "LG")
+        
+    with open(raw_cache_file, "w", encoding="utf-8") as f:
+        json.dump({"samsung": raw_sec, "lg": raw_lg}, f, ensure_ascii=False, indent=2)
             
     clean_sec = clean_and_standardize(raw_sec, "Samsung")
     clean_lg = clean_and_standardize(raw_lg, "LG")

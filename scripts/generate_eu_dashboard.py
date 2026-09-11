@@ -7,6 +7,7 @@ import sys
 import glob
 from datetime import datetime
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Paths
@@ -18,24 +19,32 @@ template_path = os.path.join(data_dir, "eu_price_dashboard_template.html")
 workspace_dashboard_path = os.path.join(data_dir, "eu_price_dashboard.html")
 firebase_public_path = os.path.join(root_dir, "public_eu", "index.html")
 
-artifact_dir = r"C:\Users\harry.park\.gemini\antigravity\brain\02947bc7-1209-42f6-ac10-ab9b6ba3e82a"
-artifact_dashboard_path = os.path.join(artifact_dir, "eu_price_dashboard.html")
+# Dynamic artifact directory if provided by environment
+artifact_dir = os.environ.get("ANTIGRAVITY_ARTIFACT_DIR")
+artifact_dashboard_path = os.path.join(artifact_dir, "eu_price_dashboard.html") if artifact_dir else None
 
-EU_COUNTRIES = ["UK", "DE", "FR", "ES", "IT", "NL", "AT", "CH", "CZ", "GR", "SE", "HU"]
+EU_COUNTRIES = ["UK", "DE", "FR", "ES", "IT", "NL", "AT", "CH", "CZ", "GR", "HU"]
 
 COUNTRY_RETAILERS = {
+    "UK": ["Currys"],
     "DE": ["MediaMarkt"],
+    "FR": ["Fnac"],
+    "ES": ["MediaMarkt"],
+    "IT": ["MediaWorld"],
+    "NL": ["MediaMarkt"],
     "AT": ["MediaMarkt"],
     "CH": ["MediaMarkt"],
-    "ES": ["MediaMarkt"],
-    "NL": ["MediaMarkt"],
-    "UK": ["Currys"],
-    "FR": ["Fnac"],
     "CZ": ["Alza"],
     "GR": ["Public"],
-    "SE": ["Elgiganten"],
-    "IT": ["MediaWorld", "Unieuro"],
     "HU": ["MediaMarkt"]
+}
+
+COUNTRY_CURRENCIES = {
+    "UK": "GBP", "DE": "EUR", "FR": "EUR", "ES": "EUR", "IT": "EUR", "NL": "EUR", "AT": "EUR", "CH": "CHF", "CZ": "CZK", "GR": "EUR", "HU": "HUF"
+}
+
+CURRENCY_SYMBOLS = {
+    "EUR": "€", "GBP": "£", "CHF": "CHF ", "CZK": "Kč ", "HUF": "Ft "
 }
 
 PAIRS_CONFIG_2025 = {
@@ -90,7 +99,10 @@ PAIRS_CONFIG_2026_IT = {
 
 PAIRS_CONFIG_2026_UK = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "MRGB": [
+        {"lg": "MRGB96", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
+        {"lg": "MRGB88", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
+    ],
     "QNED/QLED": [
         {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
         {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
@@ -182,14 +194,19 @@ PAIRS_CONFIG_2026_ES = {
 
 PAIRS_CONFIG_2026_DE = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "MRGB": [
+        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
+        {"lg": "MRGB86B", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
+    ],
     "QNED/QLED": [
         {"lg": "QNED93", "sam": "QN80H", "sizes": ["85", "75", "65", "55"]},
         {"lg": "QNED86B", "sam": "QN70H", "sizes": ["85", "75", "65", "55", "50", "43"]},
         {"lg": "QNED72B", "sam": "M80H", "sizes": ["85", "75", "65", "55", "50", "43"]},
         {"lg": "QNED72B", "sam": "M70H", "sizes": ["85", "75", "65", "55", "50", "43"]}
     ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+    "UHD 4K": [
+        {"lg": "NU800", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    ]
 }
 
 PAIRS_CONFIG_2026_AT = {
@@ -208,14 +225,42 @@ PAIRS_CONFIG_2026_AT = {
 }
 
 PAIRS_CONFIG_2026_CH = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": PAIRS_CONFIG_2026["MRGB"],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["85", "75", "65", "55", "50"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    "OLED": [
+        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55", "48"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
+        {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
     ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+    "MRGB": [
+        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
+    ],
+    "QNED/QLED": [
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED71B", "sam": "M70H", "sizes": ["65", "55", "50", "43"]},
+        {"lg": "QNED70B", "sam": "M70H", "sizes": ["85", "75"]}
+    ],
+    "UHD 4K": [
+        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    ]
 }
+
+PAIRS_CONFIG_2025_CH = {
+    "OLED": [
+        {"lg": "G5", "sam": "S95F", "sizes": ["83", "77", "65", "55"]},
+        {"lg": "C5", "sam": "S90F", "sizes": ["83", "77", "65", "55", "48", "42"]},
+        {"lg": "B5", "sam": "S85F", "sizes": ["83", "77", "65", "55"]}
+    ],
+    "QNED/QLED": [
+        {"lg": "QNED86A", "sam": "QN80F", "sizes": ["85", "75", "65", "55"]},
+        {"lg": "QNED86A", "sam": "QN70F", "sizes": ["75"]},
+        {"lg": "QNED80A", "sam": "Q8F", "sizes": ["85", "75", "65", "55"]},
+        {"lg": "QNED80A", "sam": "Q7F", "sizes": ["85"]}
+    ],
+    "UHD 4K": [
+        {"lg": "UA75", "sam": "U8000F", "sizes": ["75", "65", "55", "43"]}
+    ]
+}
+
 
 PAIRS_CONFIG_2026_FR = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
@@ -346,23 +391,68 @@ def parse_direct_cut(promo, price):
 
 def extract_products_from_sheet(sheet):
     products = []
-    if sheet is None:
+    if sheet is None or sheet.max_row < 2:
         return products
         
+    # Dynamic header detection
+    headers = {}
+    for c in range(1, min(sheet.max_column + 1, 20)):
+        val = sheet.cell(row=1, column=c).value
+        if val:
+            headers[str(val).strip().lower()] = c
+
+    def get_col(candidates, default_col):
+        for cand in candidates:
+            for h_text, col_idx in headers.items():
+                if cand == h_text or cand in h_text:
+                    return col_idx
+        return default_col
+
+    c_brand = get_col(["brand", "marca", "marque"], 1)
+    c_year = get_col(["model year", "modelyear", "year"], 2)
+    c_disp = get_col(["display type", "display", "series"], 3)
+    c_size = get_col(["size (inch)", "size", "inch"], 4)
+    c_code = get_col(["model code", "code", "model"], 5)
+    
+    # Selling price column
+    c_price = 6
+    for h_text, col_idx in headers.items():
+        if ("selling price" in h_text or "price" in h_text) and not any(x in h_text for x in ["was", "original", "discount", "link"]):
+            c_price = col_idx
+            break
+            
+    # Cashback column
+    c_cashback = None
+    for h_text, col_idx in headers.items():
+        if "cashback" in h_text:
+            c_cashback = col_idx
+            break
+    if c_cashback is None:
+        c_cashback = 9
+        
+    # Promotion column
+    c_promo = None
+    for h_text, col_idx in headers.items():
+        if any(x in h_text for x in ["promotion", "promo"]) and "cashback" not in h_text:
+            c_promo = col_idx
+            break
+    if c_promo is None:
+        c_promo = 10
+        
     for r in range(2, sheet.max_row + 1):
-        brand = sheet.cell(row=r, column=1).value
+        brand = sheet.cell(row=r, column=c_brand).value
         if not brand or str(brand).strip().lower() in ["brand", "marca", "marque"]:
             continue
             
-        year = sheet.cell(row=r, column=2).value
+        year = sheet.cell(row=r, column=c_year).value
         if str(year).strip().lower() in ["model year", "year", "modelyear"]:
             continue
-        disp = sheet.cell(row=r, column=3).value
-        size = sheet.cell(row=r, column=4).value
-        code = sheet.cell(row=r, column=5).value
-        price = clean_price(sheet.cell(row=r, column=6).value)
-        promo = str(sheet.cell(row=r, column=10).value or "").strip()
-        cashback = clean_price(sheet.cell(row=r, column=9).value)
+        disp = sheet.cell(row=r, column=c_disp).value
+        size = sheet.cell(row=r, column=c_size).value
+        code = sheet.cell(row=r, column=c_code).value
+        price = clean_price(sheet.cell(row=r, column=c_price).value)
+        promo = str(sheet.cell(row=r, column=c_promo).value or "").strip()
+        cashback = clean_price(sheet.cell(row=r, column=c_cashback).value)
         direct_cut = parse_direct_cut(promo, price)
         total_discount = cashback + direct_cut
         net = max(0, price - total_discount) if price > 0 else 0
@@ -416,10 +506,10 @@ def find_product(products, brand, size, series, year):
             match = "QNED86" in code or (p_size in [98, 99, 100] and "QNED87" in code)
         elif series_upper in ["QNED87B", "QNED87"]:
             match = any(x in code for x in ["QNED87", "QNED86"])
-        elif series_upper in ["QNED82B", "QNED82"]:
-            match = "QNED82" in code
-        elif series_upper in ["QNED70A", "QNED70B", "QNED70", "QNED71B", "QNED71"]:
-            match = any(x in code for x in ["QNED70", "QNED71", "QNED72", "QNED7E"])
+        elif series_upper in ["QNED71B", "QNED71"]:
+            match = "QNED71" in code
+        elif series_upper in ["QNED70A", "QNED70B", "QNED70"]:
+            match = any(x in code for x in ["QNED70", "QNED72", "QNED7E"])
         elif series_upper in ["QNED86A", "QNED86", "QNED85B", "QNED85A", "QNED85"]:
             match = "QNED86" in code or "QNED85" in code or "QNED87" in code
         elif series_upper in ["QNED84A", "QNED84"]:
@@ -450,8 +540,8 @@ def find_product(products, brand, size, series, year):
                 match = bool(re.search(r'(?:^|[A-Z]{2}\d{2})(Q70|Q71|Q72|Q73|Q74|Q75|Q7F|Q7A|Q7D|Q7)(?:[^0-9]|$)', code))
         elif series_upper in ["QNED7EB", "QNED7EA", "QNED7E"]:
             match = any(x in code for x in ["QNED7E", "QNED70", "QNED71", "QNED72"])
-        elif series_upper in ["NU8E", "NU85"]:
-            match = any(x in code for x in ["NU8E", "NU85", "NU80", "NU75", "UA77", "UT", "UR", "UQ"])
+        elif series_upper in ["NU800", "NU800B", "NU80", "NU8E", "NU85"]:
+            match = any(x in code for x in ["NU800", "NU80", "NU8E", "NU85", "NU75", "UA77", "UT", "UR", "UQ"])
         elif series_upper in ["UA75", "UA73"]:
             match = any(x in code for x in ["UA75", "UA73", "UA77", "UT", "UR", "UQ"])
         elif series_upper in ["U8072F", "U8072"]:
@@ -464,10 +554,10 @@ def find_product(products, brand, size, series, year):
         elif series_upper in ["S95H", "S95F", "S95"]: match = "S95" in code
         elif series_upper in ["S90H", "S90F", "S90"]: match = any(x in code for x in ["S90", "S91", "S92", "S93", "S94"])
         elif series_upper in ["S85H", "S85F", "S85"]: match = any(x in code for x in ["S85", "S84", "S86", "S83", "S82", "S81", "S80"])
-        elif series_upper in ["MRGB95B", "MRGB96B", "MRGB96", "MRGB95", "MRGB9"]: match = any(x in code for x in ["MRGB95", "MRGB96", "MRGB9", "MR95", "MR96"])
-        elif series_upper in ["MRGB87B", "MRGB87", "MRGB85", "MRGB8"]: match = any(x in code for x in ["MRGB87", "MRGB85", "MRGB86", "MRGB8", "MR85"])
-        elif series_upper in ["R95H", "R95"]: match = bool(re.search(r'(?:R95|MRE.*95|GMR.*95|TMR.*95)', code))
-        elif series_upper in ["R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R86|R85|MRE.*86|MRE.*85|GMR.*86|GMR.*85|TMR.*85)', code))
+        elif series_upper in ["MRGB95B", "MRGB96B", "MRGB96", "MRGB95", "MRGB9"]: match = any(x in code for x in ["MRGB96", "MRGB95", "MRGB9", "MR95", "MR96"])
+        elif series_upper in ["MRGB87B", "MRGB87", "MRGB88B", "MRGB88", "MRGB86B", "MRGB86", "MRGB85", "MRGB8"]: match = any(x in code for x in ["MRGB88", "MRGB87", "MRGB86", "MRGB85", "MRGB8", "MR85"])
+        elif series_upper in ["R95H", "R95"]: match = bool(re.search(r'(?:R95|MR95)', code))
+        elif series_upper in ["R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R86|R85)', code)) and not bool(re.search(r'(?:R95|MR95)', code))
         
         if match:
             matched_candidates.append(p)
@@ -518,12 +608,15 @@ def build_paired_data(wb, country, year, config):
             sam_series = pair["sam"]
             
             for size in pair["sizes"]:
-                pair_label_str = f"{size}\"{lg_series} vs. {size}\"{sam_series}"
+                sam_sz_lbl = "85" if str(size) in ["86", "85"] and any(x in sam_series for x in ["R85", "R86", "R95", "QN", "Q", "M7", "M8", "U8"]) else str(size)
+                lg_sz_lbl = "86" if str(size) in ["86", "85"] and ("MRGB" in lg_series or "QNED" in lg_series) else str(size)
+
+                pair_label_str = f"{lg_sz_lbl}\"{lg_series} vs. {sam_sz_lbl}\"{sam_series}"
                 if "U8000" in sam_series:
-                    pair_label_str = f"{size}\"{lg_series} vs. {size}\"U8070H"
+                    pair_label_str = f"{lg_sz_lbl}\"{lg_series} vs. {sam_sz_lbl}\"U8070H"
                 if ("MRGB96" in lg_series or "MRGB95" in lg_series) and str(size) in ["86", "85"]:
                     pair_label_str = f'86"{lg_series} vs. 85"R95H'
-                elif ("MRGB87" in lg_series or "MRGB85" in lg_series) and str(size) in ["86", "85"]:
+                elif ("MRGB88" in lg_series or "MRGB87" in lg_series or "MRGB86" in lg_series or "MRGB85" in lg_series) and str(size) in ["86", "85"]:
                     pair_label_str = f'86"{lg_series} vs. 85"{sam_series}'
                 elif "QNED93" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED93B/92B vs. 85"QN80H'
@@ -556,8 +649,8 @@ def build_paired_data(wb, country, year, config):
                     
                 entry = {
                     "size": int(size),
-                    "lg_series": f"{size}{lg_series}",
-                    "sam_series": f"{size}{sam_series}",
+                    "lg_series": f"{lg_sz_lbl}{lg_series}",
+                    "sam_series": f"{sam_sz_lbl}{sam_series}",
                     "pair_label": pair_label_str
                 }
                 
@@ -580,6 +673,30 @@ def build_paired_data(wb, country, year, config):
                     
                 paired[cat].append(entry)
     return paired
+
+def get_country_pair_configs(country):
+    if country == "IT": cfg_2026 = PAIRS_CONFIG_2026_IT
+    elif country == "UK": cfg_2026 = PAIRS_CONFIG_2026_UK
+    elif country == "NL": cfg_2026 = PAIRS_CONFIG_2026_NL
+    elif country == "ES": cfg_2026 = PAIRS_CONFIG_2026_ES
+    elif country == "DE": cfg_2026 = PAIRS_CONFIG_2026_DE
+    elif country == "AT": cfg_2026 = PAIRS_CONFIG_2026_AT
+    elif country == "CH": cfg_2026 = PAIRS_CONFIG_2026_CH
+    elif country == "CZ": cfg_2026 = PAIRS_CONFIG_2026_CZ
+    elif country == "GR": cfg_2026 = PAIRS_CONFIG_2026_GR
+    elif country == "FR": cfg_2026 = PAIRS_CONFIG_2026_FR
+    elif country == "HU": cfg_2026 = PAIRS_CONFIG_2026_HU
+    else: cfg_2026 = PAIRS_CONFIG_2026
+
+    if country == "NL": cfg_2025 = PAIRS_CONFIG_2025_NL
+    elif country == "ES": cfg_2025 = PAIRS_CONFIG_2025_ES
+    elif country == "DE": cfg_2025 = PAIRS_CONFIG_2025_DE
+    elif country == "FR": cfg_2025 = PAIRS_CONFIG_2025_FR
+    elif country == "HU": cfg_2025 = PAIRS_CONFIG_2025_HU
+    elif country == "CH": cfg_2025 = PAIRS_CONFIG_2025_CH
+    else: cfg_2025 = PAIRS_CONFIG_2025
+
+    return cfg_2025, cfg_2026
 
 def scan_history_data():
     historical_data = {}
@@ -615,8 +732,9 @@ def scan_history_data():
             for country in EU_COUNTRIES:
                 if country not in historical_data:
                     historical_data[country] = {"2025": {}, "2026": {}}
-                    
-                for year, config in [("2025", PAIRS_CONFIG_2025), ("2026", PAIRS_CONFIG_2026)]:
+                
+                cfg_2025, cfg_2026 = get_country_pair_configs(country)
+                for year, config in [("2025", cfg_2025), ("2026", cfg_2026)]:
                     paired_data = build_paired_data(wb, country, int(year), config)
                     
                     for cat, pairs in paired_data.items():
@@ -644,7 +762,406 @@ def scan_history_data():
         except Exception as e:
             print(f"  ➔ [WARN] Failed to load/parse historical file {best_file}: {e}")
             
-    return historical_data
+    # Prune series that have no recorded prices across all dates to optimize dashboard size
+    pruned_data = {}
+    for country, c_data in historical_data.items():
+        pruned_data[country] = {}
+        for yr, yr_data in c_data.items():
+            pruned_data[country][yr] = {}
+            for s_key, s_entry in yr_data.items():
+                has_nonzero = False
+                for h in s_entry.get("history", []):
+                    for k, v in h.items():
+                        if k != "date" and isinstance(v, (int, float)) and v > 0:
+                            has_nonzero = True
+                            break
+                    if has_nonzero:
+                        break
+                if has_nonzero:
+                    pruned_data[country][yr][s_key] = s_entry
+                    
+    return pruned_data
+
+def check_is_benchmark(country, brand, year, size, model_code, title):
+    cfg_2025, cfg_2026 = get_country_pair_configs(country)
+    cfg = cfg_2026 if year == 2026 else cfg_2025
+    b_up = str(brand).upper()
+    mc_up = str(model_code).upper()
+    t_up = str(title).upper()
+    
+    for cat, pair_list in cfg.items():
+        for pair in pair_list:
+            if str(size) in [str(s) for s in pair.get("sizes", [])]:
+                target_series = pair["lg"] if b_up == "LG" else pair["sam"]
+                if target_series.upper() in mc_up or target_series.upper() in t_up:
+                    return True
+    return False
+
+def load_workbook_catalog(wb_path):
+    if not os.path.exists(wb_path):
+        return {}
+    wb = openpyxl.load_workbook(wb_path, data_only=True)
+    catalog = {}
+    for sheet_name in wb.sheetnames:
+        ws = wb[sheet_name]
+        
+        country = 'DE'
+        retailer = 'MediaMarkt'
+        brand = 'SAMSUNG' if 'SAMSUNG' in sheet_name.upper() else ('LG' if 'LG' in sheet_name.upper() else 'TV')
+        
+        if 'HU' in sheet_name: country = 'HU'; retailer = 'MediaMarkt'
+        elif 'CZ' in sheet_name: country = 'CZ'; retailer = 'Alza'
+        elif 'GR' in sheet_name: country = 'GR'; retailer = 'Public'
+        elif 'DE' in sheet_name: country = 'DE'; retailer = 'MediaMarkt'
+        elif 'AT' in sheet_name: country = 'AT'; retailer = 'MediaMarkt'
+        elif 'CH' in sheet_name: country = 'CH'; retailer = 'MediaMarkt'
+        elif 'ES' in sheet_name: country = 'ES'; retailer = 'MediaMarkt'
+        elif 'NL' in sheet_name: country = 'NL'; retailer = 'MediaMarkt'
+        elif 'UK' in sheet_name: country = 'UK'; retailer = 'Currys'
+        elif 'FR' in sheet_name: country = 'FR'; retailer = 'Fnac'
+        elif 'IT' in sheet_name: country = 'IT'; retailer = 'MediaWorld'
+        
+        if country not in EU_COUNTRIES:
+            continue
+            
+        headers = [str(ws.cell(row=1, column=c).value or '').lower() for c in range(1, ws.max_column + 1)]
+        
+        code_col, year_col, size_col, price_col, cb_col, promo_col, title_col, disp_col = 5, 2, 4, 6, 9, 10, 13, 3
+        for idx, h in enumerate(headers):
+            if any(x in h for x in ['model code', 'code', 'modell']) and not ('was' in h or 'strike' in h):
+                code_col = idx + 1
+            elif any(x in h for x in ['year', 'jahr', 'ev']): year_col = idx + 1
+            elif any(x in h for x in ['display', 'panel', 'type', 'kijelzo']): disp_col = idx + 1
+            elif any(x in h for x in ['size', 'zoll', 'inch']): size_col = idx + 1
+            elif any(x in h for x in ['selling price', 'price']) and not ('was' in h or 'strike' in h or 'original' in h or 'eur' in h and 'huf' in ''.join(headers)):
+                price_col = idx + 1
+            elif any(x in h for x in ['cashback', 'cb']): cb_col = idx + 1
+            elif any(x in h for x in ['promotion', 'promo', 'general']): promo_col = idx + 1
+            elif any(x in h for x in ['title', 'name', 'product', 'termek']): title_col = idx + 1
+            
+        for r in range(2, ws.max_row + 1):
+            c_code = ws.cell(row=r, column=code_col).value
+            if not c_code or str(c_code).strip() in ['', 'Unknown']:
+                continue
+            c_code = str(c_code).strip()
+            
+            c_brand = ws.cell(row=r, column=1).value or brand
+            c_year = ws.cell(row=r, column=year_col).value
+            c_disp = ws.cell(row=r, column=disp_col).value if disp_col <= ws.max_column else 'LED'
+            c_size = ws.cell(row=r, column=size_col).value
+            c_price = ws.cell(row=r, column=price_col).value
+            c_cb = ws.cell(row=r, column=cb_col).value or 0
+            c_promo = ws.cell(row=r, column=promo_col).value or 'None'
+            c_title = ws.cell(row=r, column=title_col).value if title_col <= ws.max_column else ''
+            
+            try: price_val = float(str(c_price).replace(',', '').replace(' ', '')) if c_price is not None else 0.0
+            except: price_val = 0.0
+            try: cb_val = float(str(c_cb).replace(',', '').replace(' ', '')) if c_cb is not None else 0.0
+            except: cb_val = 0.0
+            
+            if price_val <= 0:
+                continue
+                
+            curr = COUNTRY_CURRENCIES.get(country, 'EUR')
+            sym = CURRENCY_SYMBOLS.get(curr, '€')
+            
+            key = f'{country}_{retailer}_{c_brand}_{c_code}'.upper()
+            catalog[key] = {
+                'country': country,
+                'retailer': retailer,
+                'brand': 'LG' if 'LG' in str(c_brand).upper() else 'SAMSUNG',
+                'year': int(c_year) if c_year and str(c_year).isdigit() else 2025,
+                'display': str(c_disp or 'LED').strip(),
+                'size': int(c_size) if c_size and str(c_size).isdigit() else 55,
+                'model_code': c_code,
+                'currency': curr,
+                'currency_sym': sym,
+                'price': price_val,
+                'cashback': cb_val,
+                'net_price': max(0.0, price_val - cb_val),
+                'promo': str(c_promo).strip(),
+                'title': str(c_title or c_code).strip()
+            }
+    wb.close()
+    return catalog
+
+def compute_weekly_changes():
+    print("[PARSING WEEKLY CHANGES] Analyzing week-over-week changes (W31, W32, W33, W34)...")
+    w30_path = os.path.join(history_dir, "2026 0726", "price tracker_EU_2026 0726_v1.xlsx")
+    w31_path = os.path.join(history_dir, "2026 0728", "price tracker_EU_2026 0728_v1.xlsx")
+    w32_path = os.path.join(history_dir, "2026 0806", "price tracker_EU_2026 0806_v1.xlsx")
+    
+    w33_path = os.path.join(history_dir, "2026 0814", "price tracker_EU_2026 0814_v1_temp.xlsx")
+    if not os.path.exists(w33_path):
+        w33_path = os.path.join(history_dir, "2026 0814", "price tracker_EU_2026 0814_v1.xlsx")
+    if not os.path.exists(w33_path):
+        w33_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0814*.xlsx")))
+        if w33_cands: w33_path = w33_cands[-1]
+
+    w34_path = os.path.join(history_dir, "2026 0817", "price tracker_EU_2026 0817_v1.xlsx")
+    if not os.path.exists(w34_path):
+        w34_path = os.path.join(data_dir, "price tracker_EU_2026 0817_v1.xlsx")
+    if not os.path.exists(w34_path):
+        w34_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0817*.xlsx")))
+        if w34_cands: w34_path = w34_cands[-1]
+
+    w35_path = os.path.join(history_dir, "2026 0828", "price tracker_EU_2026 0828_v1.xlsx")
+    if not os.path.exists(w35_path):
+        w35_path = os.path.join(data_dir, "price tracker_EU_2026 0828_v1.xlsx")
+    if not os.path.exists(w35_path):
+        w35_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0828*.xlsx")))
+        if w35_cands: w35_path = w35_cands[-1]
+
+    w36_path = os.path.join(history_dir, "2026 0903", "price tracker_EU_2026 0903_v1.xlsx")
+    if not os.path.exists(w36_path):
+        w36_path = os.path.join(history_dir, "2026 0901", "price tracker_EU_2026 0901_v1.xlsx")
+    if not os.path.exists(w36_path):
+        w36_path = os.path.join(data_dir, "price tracker_EU_2026 0903_v1.xlsx")
+    if not os.path.exists(w36_path):
+        w36_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0903*.xlsx")))
+        if w36_cands: w36_path = w36_cands[-1]
+
+    w37_path = os.path.join(history_dir, "2026 0907", "price tracker_EU_2026 0907_v1.xlsx")
+    if not os.path.exists(w37_path):
+        w37_path = os.path.join(data_dir, "price tracker_EU_2026 0907_v1.xlsx")
+    if not os.path.exists(w37_path):
+        w37_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0907*.xlsx")))
+        if w37_cands: w37_path = w37_cands[-1]
+    
+    cat_w30 = load_workbook_catalog(w30_path)
+    cat_w31 = load_workbook_catalog(w31_path)
+    cat_w32 = load_workbook_catalog(w32_path)
+    cat_w33 = load_workbook_catalog(w33_path)
+    cat_w34 = load_workbook_catalog(w34_path)
+    cat_w35 = load_workbook_catalog(w35_path)
+    cat_w36 = load_workbook_catalog(w36_path)
+    cat_w37 = load_workbook_catalog(w37_path)
+    
+    transitions = [
+        ("W37", "W37(09.07) vs W36(09.03)", "2026.09.07", "2026.09.03", cat_w36, cat_w37),
+        ("W36", "W36(09.03) vs W35(08.28)", "2026.09.03", "2026.08.28", cat_w35, cat_w36),
+        ("W35", "W35(08.28) vs W34(08.17)", "2026.08.28", "2026.08.17", cat_w34, cat_w35),
+        ("W34", "W34(08.17) vs W33(08.14)", "2026.08.17", "2026.08.14", cat_w33, cat_w34),
+        ("W33", "W33(08.14) vs W32(08.06)", "2026.08.14", "2026.08.06", cat_w32, cat_w33),
+        ("W32", "W32(08.06) vs W31(07.28)", "2026.08.06", "2026.07.28", cat_w31, cat_w32),
+        ("W31", "W31(07.28) vs W30(07.26)", "2026.07.28", "2026.07.26", cat_w30, cat_w31)
+    ]
+    
+    weekly_changes_data = {}
+    
+    for week_key, period_label, curr_d, prev_d, prev_cat, curr_cat in transitions:
+        items = []
+        price_drops = 0
+        price_hikes = 0
+        promo_changes = 0
+        new_models = 0
+        delisted_models = 0
+        
+        drop_pcts = []
+        hike_pcts = []
+        
+        country_stats = {c: {"drops": 0, "hikes": 0, "promos": 0, "news": 0, "delisted": 0} for c in EU_COUNTRIES}
+        
+        for key, curr_item in curr_cat.items():
+            if curr_item.get("year") != 2026:
+                continue
+                
+            country = curr_item["country"]
+            brand = curr_item["brand"]
+            retailer = curr_item["retailer"]
+            year = curr_item["year"]
+            size = curr_item["size"]
+            model_code = curr_item["model_code"]
+            display = curr_item["display"]
+            title = curr_item["title"]
+            currency = curr_item["currency"]
+            currency_sym = curr_item["currency_sym"]
+            
+            is_bm = check_is_benchmark(country, brand, year, size, model_code, title)
+            
+            if key in prev_cat:
+                prev_item = prev_cat[key]
+                p_prev = prev_item["price"]
+                p_curr = curr_item["price"]
+                cb_prev = prev_item["cashback"]
+                cb_curr = curr_item["cashback"]
+                net_prev = prev_item["net_price"]
+                net_curr = curr_item["net_price"]
+                promo_prev = prev_item["promo"]
+                promo_curr = curr_item["promo"]
+                
+                p_diff = round(p_curr - p_prev, 2)
+                p_diff_pct = round((p_diff / p_prev) * 100, 1) if p_prev > 0 else 0.0
+                net_diff = round(net_curr - net_prev, 2)
+                
+                tags = []
+                
+                if p_diff < -0.5:
+                    tags.append("PRICE_DROP")
+                    price_drops += 1
+                    drop_pcts.append(abs(p_diff_pct))
+                    if country in country_stats: country_stats[country]["drops"] += 1
+                elif p_diff > 0.5:
+                    tags.append("PRICE_HIKE")
+                    price_hikes += 1
+                    hike_pcts.append(abs(p_diff_pct))
+                    if country in country_stats: country_stats[country]["hikes"] += 1
+                    
+                promo_changed = False
+                if promo_curr != promo_prev:
+                    promo_changed = True
+                    if promo_prev in ["None", "", "-"] and promo_curr not in ["None", "", "-"]:
+                        tags.append("PROMO_NEW")
+                    elif promo_prev not in ["None", "", "-"] and promo_curr in ["None", "", "-"]:
+                        tags.append("PROMO_ENDED")
+                    else:
+                        tags.append("PROMO_CHANGED")
+                        
+                if cb_curr != cb_prev:
+                    promo_changed = True
+                    tags.append("CASHBACK_CHANGED")
+                    
+                if promo_changed:
+                    promo_changes += 1
+                    if country in country_stats: country_stats[country]["promos"] += 1
+                    
+                if tags:
+                    items.append({
+                        "key": key,
+                        "country": country,
+                        "retailer": retailer,
+                        "brand": brand,
+                        "year": year,
+                        "display": display,
+                        "size": size,
+                        "model_code": model_code,
+                        "title": title,
+                        "currency": currency,
+                        "currency_sym": currency_sym,
+                        "prev_price": p_prev,
+                        "curr_price": p_curr,
+                        "price_diff": p_diff,
+                        "price_diff_pct": p_diff_pct,
+                        "prev_cb": cb_prev,
+                        "curr_cb": cb_curr,
+                        "prev_net": net_prev,
+                        "curr_net": net_curr,
+                        "net_diff": net_diff,
+                        "prev_promo": promo_prev,
+                        "curr_promo": promo_curr,
+                        "tags": tags,
+                        "is_benchmark_pair": is_bm
+                    })
+            else:
+                new_models += 1
+                if country in country_stats: country_stats[country]["news"] += 1
+                items.append({
+                    "key": key,
+                    "country": country,
+                    "retailer": retailer,
+                    "brand": brand,
+                    "year": year,
+                    "display": display,
+                    "size": size,
+                    "model_code": model_code,
+                    "title": title,
+                    "currency": currency,
+                    "currency_sym": currency_sym,
+                    "prev_price": 0,
+                    "curr_price": curr_item["price"],
+                    "price_diff": 0,
+                    "price_diff_pct": 0,
+                    "prev_cb": 0,
+                    "curr_cb": curr_item["cashback"],
+                    "prev_net": 0,
+                    "curr_net": curr_item["net_price"],
+                    "net_diff": 0,
+                    "prev_promo": "-",
+                    "curr_promo": curr_item["promo"],
+                    "tags": ["NEW_MODEL"],
+                    "is_benchmark_pair": is_bm
+                })
+                
+        for key, prev_item in prev_cat.items():
+            if prev_item.get("year") != 2026:
+                continue
+            if key not in curr_cat:
+                country = prev_item["country"]
+                brand = prev_item["brand"]
+                retailer = prev_item["retailer"]
+                year = prev_item["year"]
+                size = prev_item["size"]
+                model_code = prev_item["model_code"]
+                display = prev_item["display"]
+                title = prev_item["title"]
+                currency = prev_item["currency"]
+                currency_sym = prev_item["currency_sym"]
+                
+                is_bm = check_is_benchmark(country, brand, year, size, model_code, title)
+                
+                delisted_models += 1
+                if country in country_stats: country_stats[country]["delisted"] += 1
+                items.append({
+                    "key": key,
+                    "country": country,
+                    "retailer": retailer,
+                    "brand": brand,
+                    "year": year,
+                    "display": display,
+                    "size": size,
+                    "model_code": model_code,
+                    "title": title,
+                    "currency": currency,
+                    "currency_sym": currency_sym,
+                    "prev_price": prev_item["price"],
+                    "curr_price": 0,
+                    "price_diff": 0,
+                    "price_diff_pct": 0,
+                    "prev_cb": prev_item["cashback"],
+                    "curr_cb": 0,
+                    "prev_net": prev_item["net_price"],
+                    "curr_net": 0,
+                    "net_diff": 0,
+                    "prev_promo": prev_item["promo"],
+                    "curr_promo": "Delisted / Out of Stock",
+                    "tags": ["DELISTED"],
+                    "is_benchmark_pair": is_bm
+                })
+                
+        def sort_priority(it):
+            bm_score = 0 if it["is_benchmark_pair"] else 1
+            if "PRICE_DROP" in it["tags"]: tag_score = 1
+            elif "PRICE_HIKE" in it["tags"]: tag_score = 2
+            elif "PROMO_NEW" in it["tags"] or "PROMO_CHANGED" in it["tags"] or "CASHBACK_CHANGED" in it["tags"]: tag_score = 3
+            elif "NEW_MODEL" in it["tags"]: tag_score = 4
+            else: tag_score = 5
+            return (bm_score, tag_score, it["price_diff"], -it["size"])
+            
+        items.sort(key=sort_priority)
+        
+        avg_drop = round(sum(drop_pcts) / len(drop_pcts), 1) if drop_pcts else 0.0
+        avg_hike = round(sum(hike_pcts) / len(hike_pcts), 1) if hike_pcts else 0.0
+        
+        weekly_changes_data[week_key] = {
+            "period": period_label,
+            "curr_date": curr_d,
+            "prev_date": prev_d,
+            "summary": {
+                "total_changes": len(items),
+                "price_drops": price_drops,
+                "price_hikes": price_hikes,
+                "promo_changes": promo_changes,
+                "new_models": new_models,
+                "delisted_models": delisted_models,
+                "avg_drop_pct": avg_drop,
+                "avg_hike_pct": avg_hike
+            },
+            "country_stats": country_stats,
+            "items": items
+        }
+        print(f"  ➔ [WEEKLY CHANGES] {week_key}: {len(items)} change items (Drops: {price_drops}, Hikes: {price_hikes}, Promos: {promo_changes}, New: {new_models})")
+        
+    return weekly_changes_data
 
 def main():
     excel_files = glob.glob(os.path.join(data_dir, "price tracker_EU_*.xlsx"))
@@ -677,44 +1194,7 @@ def main():
     price_data = {}
     
     for country in EU_COUNTRIES:
-        if country == "IT":
-            cfg_2026 = PAIRS_CONFIG_2026_IT
-        elif country == "UK":
-            cfg_2026 = PAIRS_CONFIG_2026_UK
-        elif country == "NL":
-            cfg_2026 = PAIRS_CONFIG_2026_NL
-        elif country == "ES":
-            cfg_2026 = PAIRS_CONFIG_2026_ES
-        elif country == "DE":
-            cfg_2026 = PAIRS_CONFIG_2026_DE
-        elif country == "AT":
-            cfg_2026 = PAIRS_CONFIG_2026_AT
-        elif country == "CH":
-            cfg_2026 = PAIRS_CONFIG_2026_CH
-        elif country == "CZ":
-            cfg_2026 = PAIRS_CONFIG_2026_CZ
-        elif country == "GR":
-            cfg_2026 = PAIRS_CONFIG_2026_GR
-        elif country == "FR":
-            cfg_2026 = PAIRS_CONFIG_2026_FR
-        elif country == "HU":
-            cfg_2026 = PAIRS_CONFIG_2026_HU
-        else:
-            cfg_2026 = PAIRS_CONFIG_2026
-            
-        if country == "NL":
-            cfg_2025 = PAIRS_CONFIG_2025_NL
-        elif country == "ES":
-            cfg_2025 = PAIRS_CONFIG_2025_ES
-        elif country == "DE":
-            cfg_2025 = PAIRS_CONFIG_2025_DE
-        elif country == "FR":
-            cfg_2025 = PAIRS_CONFIG_2025_FR
-        elif country == "HU":
-            cfg_2025 = PAIRS_CONFIG_2025_HU
-        else:
-            cfg_2025 = PAIRS_CONFIG_2025
-            
+        cfg_2025, cfg_2026 = get_country_pair_configs(country)
         price_data[country] = {
             "2025": build_paired_data(wb, country, 2025, cfg_2025),
             "2026": build_paired_data(wb, country, 2026, cfg_2026)
@@ -725,6 +1205,9 @@ def main():
     history_data = scan_history_data()
     price_data["history"] = history_data
     
+    weekly_changes_data = compute_weekly_changes()
+    price_data["weekly_changes"] = weekly_changes_data
+    
     if not os.path.exists(template_path):
         print(f"[ERROR] HTML base template not found: {template_path}")
         return
@@ -733,11 +1216,13 @@ def main():
     with open(template_path, "r", encoding="utf-8") as f:
         html_content = f.read()
         
-    json_str = json.dumps(price_data, indent=2)
+    json_str = json.dumps(price_data, separators=(',', ':'), ensure_ascii=False)
     injection_block = f"const priceData = {json_str};"
     
-    survey_date = datetime.now().strftime("%Y년 %m월 %d일")
-    survey_date_dot = datetime.now().strftime("%Y.%m.%d")
+    now_dt = datetime.now()
+    week_no = now_dt.isocalendar()[1]
+    survey_date = now_dt.strftime(f"%Y년 %m월 %d일 (W{week_no})")
+    survey_date_dot = now_dt.strftime(f"%Y.%m.%d(W{week_no})")
     
     compiled_html = html_content.replace("// {{INSERT_PRICE_DATA}}", injection_block)
     compiled_html = compiled_html.replace("{{SURVEY_DATE}}", survey_date)
@@ -747,10 +1232,14 @@ def main():
         f.write(compiled_html)
     print(f"  ➔ [SAVED] Compiled HTML saved to Workspace: {workspace_dashboard_path}")
     
-    os.makedirs(artifact_dir, exist_ok=True)
-    with open(artifact_dashboard_path, "w", encoding="utf-8") as f:
-        f.write(compiled_html)
-    print(f"  ➔ [SAVED] Compiled HTML saved to Artifact: {artifact_dashboard_path}")
+    if artifact_dashboard_path:
+        try:
+            os.makedirs(os.path.dirname(artifact_dashboard_path), exist_ok=True)
+            with open(artifact_dashboard_path, "w", encoding="utf-8") as f:
+                f.write(compiled_html)
+            print(f"  ➔ [SAVED] Compiled HTML saved to Artifact: {artifact_dashboard_path}")
+        except Exception as e_art:
+            print(f"  ➔ [WARN] Could not write to artifact: {e_art}")
     
     os.makedirs(os.path.dirname(firebase_public_path), exist_ok=True)
     with open(firebase_public_path, "w", encoding="utf-8") as f:
