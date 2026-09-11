@@ -1052,5 +1052,26 @@ def main():
         
     print("\n[ALL SYNCS DONE SUCCESSFULLY]")
 
+    # 4. Record daily prices to price_history.db and emit structured log
+    try:
+        from price_history import record_survey_from_excel
+        record_survey_from_excel(today_pt, country="CH")
+    except Exception as e_db:
+        print(f"[WARN] Failed recording Swiss survey to price_history.db: {e_db}")
+
+    try:
+        from scrape_logger import emit_summary
+        total_items = len(msh_s + msh_l + id_s + id_l + digi_s + digi_l)
+        emit_summary(
+            country="CH",
+            retailer="Swiss_3_Retailers",
+            brand="ALL",
+            total_extracted=total_items,
+            final_deduplicated=total_items,
+            execution_time_sec=0.0
+        )
+    except Exception:
+        pass
+
 if __name__ == "__main__":
     main()

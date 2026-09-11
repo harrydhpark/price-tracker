@@ -638,5 +638,25 @@ def main():
     except Exception as e_h:
         print(f"[WARN] Failed mirroring to History_EU: {e_h}")
 
+    # Record daily prices to price_history.db and emit structured log
+    try:
+        from price_history import record_survey_from_excel
+        record_survey_from_excel(excel_filename)
+    except Exception as e_db:
+        print(f"[WARN] Failed recording EU survey to price_history.db: {e_db}")
+
+    try:
+        from scrape_logger import emit_summary
+        emit_summary(
+            country="EU",
+            retailer="Pan_EU_Retailers",
+            brand="ALL",
+            total_extracted=0,
+            final_deduplicated=0,
+            execution_time_sec=0.0
+        )
+    except Exception:
+        pass
+
 if __name__ == "__main__":
     main()
