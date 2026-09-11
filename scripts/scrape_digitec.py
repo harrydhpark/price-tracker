@@ -327,6 +327,8 @@ async def scrape_digitec_brand(brand):
     return unique_products
 
 async def main():
+    import time
+    start_time = time.time()
     samsungs = await scrape_digitec_brand("Samsung")
     lgs = await scrape_digitec_brand("LG")
     
@@ -339,6 +341,14 @@ async def main():
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
     print(f"\n[DIGITEC DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")
+    
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="CH", retailer="Digitec", brand="SAMSUNG", total_extracted=len(samsungs), final_deduplicated=len(samsungs), execution_time_sec=elapsed)
+        emit_summary(country="CH", retailer="Digitec", brand="LG", total_extracted=len(lgs), final_deduplicated=len(lgs), execution_time_sec=elapsed)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     asyncio.run(main())

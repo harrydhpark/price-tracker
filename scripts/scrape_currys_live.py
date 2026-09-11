@@ -259,6 +259,8 @@ def scrape_brand_live(brand):
     return seen
 
 def main():
+    import time
+    start_time = time.time()
     print("=" * 65)
     print(" 🇬🇧 CURRYS UK LIVE PRICE SURVEY & PIPELINE SYNCHRONIZER ")
     print("=" * 65)
@@ -351,6 +353,14 @@ def main():
         print(f"✅ Mirrored to {hist_file}")
         
     print("\n[CURRYS LIVE SURVEY COMPLETED SUCCESSFULLY]")
+    
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="UK", retailer="Currys", brand="SAMSUNG", total_extracted=len(live_samsung), final_deduplicated=len(live_samsung), execution_time_sec=elapsed)
+        emit_summary(country="UK", retailer="Currys", brand="LG", total_extracted=len(live_lg), final_deduplicated=len(live_lg), execution_time_sec=elapsed)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     main()

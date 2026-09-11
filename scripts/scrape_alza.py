@@ -458,6 +458,8 @@ def update_eu_excel_tracker(lg_items, samsung_items):
         print(f"[WARN] Failed to mirror history workbook: {e}")
 
 def main():
+    import time
+    start_time = time.time()
     print("=" * 60)
     print(" CZECH REPUBLIC ALZA (alza.cz) TV PRICE SURVEY COLLECTOR ")
     print(" Target Brands: LG & Samsung | Target Model Years: 2025 & 2026")
@@ -472,6 +474,14 @@ def main():
     update_eu_excel_tracker(lg_products, samsung_products)
 
     print("\n[COMPLETE] Alza Czech Republic price collection finished cleanly!")
+
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="CZ", retailer="Alza", brand="LG", total_extracted=len(lg_products), final_deduplicated=len(lg_products), execution_time_sec=elapsed)
+        emit_summary(country="CZ", retailer="Alza", brand="SAMSUNG", total_extracted=len(samsung_products), final_deduplicated=len(samsung_products), execution_time_sec=elapsed)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     main()

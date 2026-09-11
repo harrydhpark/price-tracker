@@ -1,0 +1,2 @@
+{"country": "CH", "retailer": "MediaMarkt", "brand": "SAMSUNG", "total_extracted": 70, "after_year_filter": 70, "after_category_filter": 70, "final_deduplicated": 69, "waf_blocks": 0, "parse_errors": 0, "execution_time_sec": 12.3, "timestamp": "2026-09-12T00:38:07.246095+09:00"}
+{"country": "CH", "retailer": "MediaMarkt", "brand": "SAMSUNG", "total_extracted": 100, "after_year_filter": 90, "after_category_filter": 85, "final_deduplicated": 80, "waf_blocks": 0, "parse_errors": 0, "execution_time_sec": 15.2, "timestamp": "2026-09-12T00:41:25.662406+09:00"}

@@ -439,6 +439,8 @@ def update_excel_workbook(samsung_items, lg_items):
         print(f"[WARN] Failed to mirror history workbook: {e}")
 
 if __name__ == "__main__":
+    import time
+    start_time = time.time()
     print("=" * 60)
     print(" GREECE PUBLIC (public.gr) MULTI-QUERY EXPANDED TV SURVEY ")
     print(" Target Brands: LG & Samsung | Target Model Years: 2025 & 2026")
@@ -449,3 +451,11 @@ if __name__ == "__main__":
     
     update_excel_workbook(samsung_data, lg_data)
     print("\n[COMPLETE] Multi-Query Public Greece price collection finished cleanly!")
+    
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="GR", retailer="Public", brand="SAMSUNG", total_extracted=len(samsung_data), final_deduplicated=len(samsung_data), execution_time_sec=elapsed)
+        emit_summary(country="GR", retailer="Public", brand="LG", total_extracted=len(lg_data), final_deduplicated=len(lg_data), execution_time_sec=elapsed)
+    except Exception:
+        pass

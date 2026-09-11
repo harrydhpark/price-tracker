@@ -470,6 +470,8 @@ def scrape_mediamarkt_brand(brand):
     return unique_products
 
 def main():
+    import time
+    start_time = time.time()
     samsungs = scrape_mediamarkt_brand("Samsung")
     lgs = scrape_mediamarkt_brand("LG")
     
@@ -482,6 +484,14 @@ def main():
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
     print(f"\n[MEDIAMARKT DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")
+    
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="CH", retailer="MediaMarkt", brand="SAMSUNG", total_extracted=len(samsungs), final_deduplicated=len(samsungs), execution_time_sec=elapsed)
+        emit_summary(country="CH", retailer="MediaMarkt", brand="LG", total_extracted=len(lgs), final_deduplicated=len(lgs), execution_time_sec=elapsed)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     main()

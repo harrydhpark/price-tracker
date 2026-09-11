@@ -546,6 +546,8 @@ def write_standard_sheet(ws, products, sheet_title):
     ws.auto_filter.ref = ws.dimensions
 
 def main():
+    import time
+    start_time = time.time()
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
     raw_cache_file = os.path.join(data_dir, "raw_mediamarkt_hu_deep.json")
@@ -619,6 +621,14 @@ def main():
     with open(os.path.join(data_dir, "mediamarkt_hu_full.json"), "w", encoding="utf-8") as f:
         json.dump(all_json, f, ensure_ascii=False, indent=2)
     print(f"💾 [SAVED] Full JSON DB saved ({len(all_json)} total records).")
+
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="HU", retailer="MediaMarkt", brand="SAMSUNG", total_extracted=len(clean_sec), final_deduplicated=len(clean_sec), execution_time_sec=elapsed)
+        emit_summary(country="HU", retailer="MediaMarkt", brand="LG", total_extracted=len(clean_lg), final_deduplicated=len(clean_lg), execution_time_sec=elapsed)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     main()
