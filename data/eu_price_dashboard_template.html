@@ -195,8 +195,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
                 <div class="flex items-center justify-between w-full">
-                    <span class="font-bold text-sm">AI 경영 브리핑</span>
-                    <span class="bg-secondary text-[9px] font-bold px-1.5 py-0.5 rounded text-white tracking-wider">AI INSIGHT</span>
+                    <span class="font-bold text-sm">가격/프로모션 추이 분석</span>
+                    <span class="bg-secondary text-[9px] font-bold px-1.5 py-0.5 rounded text-white tracking-wider">TREND & PROMO</span>
                 </div>
             </button>
             <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_retailer" onclick="switchMenu('retailer')">
@@ -216,12 +216,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                 </svg>
                 <span class="font-medium text-sm">일자별 가격비교</span>
-            </button>
-            <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_weekly_change" onclick="switchMenu('weekly_change')">
-                <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                </svg>
-                <span class="font-medium text-sm">주간 가격/프로모션 변동 사항</span>
             </button>
             <div class="pt-4 mt-2 border-t border-white/10">
                 <p class="text-[10px] text-white/40 uppercase tracking-widest font-bold px-6 mb-2">GUIDE & DOCS</p>
@@ -250,7 +244,7 @@
                 <div class="h-4 w-px bg-slate-200"></div>
                 <p class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded">조사일: {{SURVEY_DATE}}</p>
                 <div class="h-4 w-px bg-slate-200"></div>
-                <p class="text-sm font-semibold text-slate-700" id="current-menu-title">유통별 가격비교</p>
+                <p class="text-sm font-semibold text-slate-700" id="current-menu-title">가격/프로모션 추이 분석</p>
             </div>
             
             <!-- Year & Price Type Slicers -->
@@ -279,8 +273,8 @@
             <!-- Page Header -->
             <div class="mb-8 border-b border-slate-200 pb-6 flex items-center justify-between">
                 <div>
-                    <h2 class="text-3xl font-headline font-bold text-primary mb-2" id="page-headline-title">유통 채널별 TV 가격 비교</h2>
-                    <p class="text-sm text-slate-500">실시간 스크래핑 데이터 기반 엘지와 삼성의 동일 포지셔닝 대응 라인업 가격 분석</p>
+                    <h2 class="text-3xl font-headline font-bold text-primary mb-2" id="page-headline-title">유럽 11개국 TV 가격/프로모션 추이 분석</h2>
+                    <p class="text-sm text-slate-500">실시간 스크래핑 데이터 기반 엘지와 삼성의 포지셔닝 적정성, 캐시백 프로모션 및 최근 4주간 가격 변동 추이</p>
                 </div>
                 <div class="text-right">
                     <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold block mb-1">Last Update Basis</span>
@@ -288,7 +282,7 @@
                 </div>
             </div>
 
-            <!-- View 0: AI Executive Summary & Briefing -->
+            <!-- View 0: 가격/프로모션 추이 분석 (Trends & Promos) -->
             <div id="view_executive" class="dashboard-view block space-y-8">
                 <!-- Top Strategic Banner -->
                 <div class="bg-gradient-to-r from-primary via-[#0a2c47] to-[#0f3456] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
@@ -298,9 +292,9 @@
                                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                                 <span>AI Autonomous Data Intelligence Engine</span>
                             </div>
-                            <h2 class="text-2xl md:text-3xl font-bold font-headline mb-2">유럽 11개국 TV 시장 경영 브리핑</h2>
+                            <h2 class="text-2xl md:text-3xl font-bold font-headline mb-2">유럽 11개국 TV 시장 가격/프로모션 추이 분석</h2>
                             <p class="text-white/70 text-xs md:text-sm max-w-2xl leading-relaxed">
-                                11개국 주요 유통 채널(MediaMarkt, Currys, Fnac, Alza, Public 등)의 실시간 판매가 및 1:1 라인업 경쟁 구도를 심층 분석한 종합 인텔리전스 리포트입니다.
+                                11개국 주요 유통 채널(MediaMarkt, Currys, Fnac, Alza, Public 등)의 실시간 판매가, 경쟁사 대비 가격 포지셔닝 적정성, 캐시백·번들 프로모션 및 최근 4주간 주간 변동을 통합 분석한 종합 인텔리전스입니다.
                             </p>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3">
@@ -317,6 +311,53 @@
                     <!-- Dynamic KPI Cards -->
                 </div>
 
+                <!-- Section 3-A: Positioning Adequacy Grid (경쟁사 대비 자사 가격 포지셔닝 적정성) -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-5">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+                                <h3 class="text-lg font-bold font-headline text-primary">경쟁사 대비 자사 가격 포지셔닝 적정성 분석</h3>
+                                <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">정성적 평가</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">유럽 11개국 동일 세그먼트 1:1 매칭 모델 기반 자사(LG) vs 경쟁사(SEC) EUR 환산 판가 인덱스 및 프리미엄/동등 수준 판정</p>
+                        </div>
+                        <div id="exec_positioning_summary_badge" class="text-xs font-medium text-slate-600 bg-slate-50 px-3.5 py-2 rounded-lg border border-slate-200 max-w-xl leading-relaxed">
+                            <!-- Overall Summary Note -->
+                        </div>
+                    </div>
+                    <!-- Segment Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="exec_positioning_container">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+
+                <!-- Section 3-B: Promotional Warfare Deep-Dive Box (캐시백 및 프로모션 공세 심층 비교) -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-5">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                            <h3 class="text-lg font-bold font-headline text-primary">캐시백 및 프로모션 공세 심층 비교 (Promotional Warfare)</h3>
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">자사 vs 경쟁사 전략 대조</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5" id="exec_promo_deepdive_container">
+                        <!-- Samsung Strategy vs LG Strategy Comparison Cards -->
+                    </div>
+                    <!-- Tactical Assessment Callout Box -->
+                    <div class="p-4 rounded-xl bg-gradient-to-r from-slate-50 to-indigo-50/40 border border-indigo-100/80 flex items-start gap-3.5" id="exec_tactical_assessment_box">
+                        <span class="p-2 bg-indigo-600 text-white rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </span>
+                        <div>
+                            <h4 class="text-xs font-bold text-indigo-900 mb-1">AI 전략 평가 총평 (Tactical Assessment)</h4>
+                            <p class="text-xs text-slate-700 leading-relaxed" id="exec_tactical_assessment_text">
+                                <!-- Dynamic text -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Strategic Highlights / AI Bulletins -->
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
                     <h3 class="text-base font-bold font-headline text-primary mb-4 flex items-center gap-2">
@@ -328,7 +369,45 @@
                     </div>
                 </div>
 
-                <!-- 1:1 Strategic Lineup Price Gap Matrix -->
+                <!-- Section 4-A: Top Price Movers & Weekly Volatility (직전 조사 대비 주요 인하 모델 및 프로모션 유형) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            직전 조사 대비 주요 가격 인하 모델 (Top Price Drops)
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-4">직전 조사일 대비 유통사 가격 인하 폭이 가장 큰 상위 모델</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="text-slate-400 border-b border-slate-100">
+                                        <th class="pb-2 font-semibold">국가/브랜드</th>
+                                        <th class="pb-2 font-semibold">모델명</th>
+                                        <th class="pb-2 font-semibold text-right">기존가</th>
+                                        <th class="pb-2 font-semibold text-right">신규가</th>
+                                        <th class="pb-2 font-semibold text-right">변동률</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="exec_top_drops_body" class="divide-y divide-slate-50">
+                                    <!-- Injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            프로모션 유형별 적용 비중 (Promo Warfare)
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-4">캐시백, 번들, 즉시할인 바우처 등 11개국 프로모션 태그 집계</p>
+                        <div id="exec_promo_breakdown_box">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4-B: 1:1 Strategic Lineup Price Gap Matrix -->
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-6">
                         <div>
@@ -387,40 +466,127 @@
                     </div>
                 </div>
 
-                <!-- Top Price Movers & Weekly Volatility -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            주요 가격 인하 모델 (Top Price Drops)
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-4">전주 대비 유통사 가격 인하 폭이 가장 큰 상위 모델</p>
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left text-xs">
-                                <thead>
-                                    <tr class="text-slate-400 border-b border-slate-100">
-                                        <th class="pb-2 font-semibold">국가/브랜드</th>
-                                        <th class="pb-2 font-semibold">모델명</th>
-                                        <th class="pb-2 font-semibold text-right">기존가</th>
-                                        <th class="pb-2 font-semibold text-right">신규가</th>
-                                        <th class="pb-2 font-semibold text-right">변동률</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="exec_top_drops_body" class="divide-y divide-slate-50">
-                                    <!-- Injected via JS -->
-                                </tbody>
-                            </table>
+                <!-- Section 5: 최근 4주간 가격 및 프로모션 변동 추이 (Weekly Transitions) -->
+                <div class="space-y-6 pt-6 border-t-2 border-slate-200/80">
+                    <!-- Section Subtitle & Week Selector Banner -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                    </svg>
+                                </span>
+                                <div>
+                                    <h3 class="text-xl font-bold font-headline text-primary">최근 4주간 가격 및 프로모션 변동 추이 (WoW Transitions)</h3>
+                                    <p class="text-xs text-slate-500 mt-1">유럽 11개국 유통 채널의 판매가, 실구매가(Net), 캐시백 및 프로모션 문구 변동 내역을 주차별(W37~W34)로 전수 비교하여 요약 분석합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">비교 주차:</span>
+                            <div class="inline-flex rounded-lg shadow-sm bg-slate-100 p-1" role="group" id="weekly_change_week_tabs">
+                                <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all active bg-primary text-white" id="btn_week_w37" onclick="switchWeeklyChangeWeek('W37')">W37(09.12)</button>
+                                <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w36" onclick="switchWeeklyChangeWeek('W36')">W36(09.03)</button>
+                                <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w35" onclick="switchWeeklyChangeWeek('W35')">W35(08.28)</button>
+                                <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w34" onclick="switchWeeklyChangeWeek('W34')">W34(08.17)</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                            브랜드별 프로모션 공세 강도 (Promo Warfare)
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-4">캐시백, 번들, 회원 쿠폰 등 프로모션 적용 비중</p>
-                        <div id="exec_promo_breakdown_box">
-                            <!-- Injected via JS -->
+                    <!-- Country Breakdown Summary Badges -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-primary"></span> 11개국 주간 변동 요약('26년 모델 Only)
+                            </h4>
+                            <span class="text-[11px] text-slate-400" id="weekly_country_summary_note">클릭하여 해당 국가 필터링</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5" id="weekly_country_pills_container">
+                            <!-- Filled dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Filter Toolbar & Detailed Table Container -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-all">
+                        <!-- Filters Section -->
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <!-- Country Filter -->
+                                <div class="flex items-center gap-2">
+                                    <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">국가:</label>
+                                    <select id="weekly_country_select" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" onchange="switchWeeklyCountry(this.value)">
+                                        <option value="ALL">전체 국가 (11개국)</option>
+                                        <option value="UK">🇬🇧 UK (Currys)</option>
+                                        <option value="DE">🇩🇪 Germany (MediaMarkt)</option>
+                                        <option value="FR">🇫🇷 France (Fnac)</option>
+                                        <option value="ES">🇪🇸 Spain (MediaMarkt)</option>
+                                        <option value="IT">🇮🇹 Italy (MediaWorld)</option>
+                                        <option value="NL">🇳🇱 Netherlands (MediaMarkt)</option>
+                                        <option value="AT">🇦🇹 Austria (MediaMarkt)</option>
+                                        <option value="CH">🇨🇭 Switzerland (MediaMarkt)</option>
+                                        <option value="CZ">🇨🇿 Czech Republic (Alza)</option>
+                                        <option value="GR">🇬🇷 Greece (Public)</option>
+                                        <option value="HU">🇭🇺 Hungary (MediaMarkt)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Brand Filter -->
+                                <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+                                    <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md active bg-white text-primary shadow-sm" id="btn_weekly_brand_all" onclick="switchWeeklyBrand('ALL')">전체</button>
+                                    <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_lg" onclick="switchWeeklyBrand('LG')">LG</button>
+                                    <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_sam" onclick="switchWeeklyBrand('SAMSUNG')">Samsung</button>
+                                </div>
+
+                                <!-- Change Type Filter -->
+                                <div class="flex flex-wrap items-center gap-1.5">
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all active bg-primary text-white" id="btn_weekly_type_all" onclick="switchWeeklyType('ALL')">전체 변동</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700" id="btn_weekly_type_drop" onclick="switchWeeklyType('PRICE_DROP')">📉 가격 인하만</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-rose-50 hover:text-rose-700" id="btn_weekly_type_hike" onclick="switchWeeklyType('PRICE_HIKE')">📈 가격 인상만</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-purple-50 hover:text-purple-700" id="btn_weekly_type_promo" onclick="switchWeeklyType('PROMO')">🎁 프로모션 변동</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-700" id="btn_weekly_type_new" onclick="switchWeeklyType('NEW_MODEL')">🆕 신규 모델</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-amber-50 hover:text-amber-700" id="btn_weekly_type_bm" onclick="switchWeeklyType('BENCHMARK')">⭐ 전략 페어만</button>
+                                    <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" id="btn_weekly_type_delisted" onclick="switchWeeklyType('DELISTED')">❌ 품절/단종만</button>
+                                </div>
+                            </div>
+
+                            <!-- Search Input -->
+                            <div class="relative w-full lg:w-64">
+                                <svg class="absolute inset-y-0 left-0 pl-3 w-7 h-7 my-auto text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                                <input type="text" id="weekly_search_input" placeholder="모델명, 시리즈 검색..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" oninput="onWeeklySearch(this.value)">
+                            </div>
+                        </div>
+
+                        <!-- Items Count & Results Header -->
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-sm font-bold text-primary flex items-center gap-2">
+                                <span class="w-2 h-4 bg-secondary rounded-full"></span>
+                                주간 변동 상세 내역 (<span id="weekly_filtered_count">0</span>건)
+                            </h4>
+                            <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded" id="weekly_period_badge">W37 (2026.09.12 vs 2026.09.07)</span>
+                        </div>
+
+                        <!-- Comparison Table -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-slate-200 bg-slate-50/60 text-slate-500 font-semibold text-xs tracking-wider">
+                                        <th class="px-4 py-3.5 text-center">국가/유통</th>
+                                        <th class="px-4 py-3.5 text-center">브랜드/연도</th>
+                                        <th class="px-4 py-3.5">제품군 / 인치</th>
+                                        <th class="px-4 py-3.5">모델코드 / 제품명</th>
+                                        <th class="px-4 py-3.5 text-right">이전 판매가 ➔ 현재 판매가</th>
+                                        <th class="px-4 py-3.5 text-right">실구매가 (Net)</th>
+                                        <th class="px-4 py-3.5">프로모션 변동 내역</th>
+                                        <th class="px-4 py-3.5 text-center">구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="weekly_table_body" class="divide-y divide-slate-100 text-xs">
+                                    <!-- Filled dynamically -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -566,132 +732,6 @@
                                 </tr>
                             </thead>
                             <tbody id="history_body_2025" class="divide-y divide-slate-100">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Weekly Price & Promotion Changes View -->
-            <div id="view_weekly_change" class="dashboard-view hidden space-y-8">
-                <!-- Page Subtitle & Description Banner -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <div class="flex items-center gap-3">
-                            <span class="p-2 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                                </svg>
-                            </span>
-                            <h2 class="text-xl font-bold font-headline text-primary">주간 가격 및 프로모션 변동 분석</h2>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-1">유럽 11개국 유통 채널의 판매가, 실구매가(Net), 캐시백 및 프로모션 문구 변동 내역을 전주 대비 전수 비교하여 요약 분석합니다.</p>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">비교 주차 선택:</span>
-                        <div class="inline-flex rounded-lg shadow-sm bg-slate-100 p-1" role="group" id="weekly_change_week_tabs">
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all active bg-primary text-white" id="btn_week_w37" onclick="switchWeeklyChangeWeek('W37')">W37(09.07)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w36" onclick="switchWeeklyChangeWeek('W36')">W36(09.03)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w35" onclick="switchWeeklyChangeWeek('W35')">W35(08.28)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w34" onclick="switchWeeklyChangeWeek('W34')">W34(08.17)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w33" onclick="switchWeeklyChangeWeek('W33')">W33(08.14)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w32" onclick="switchWeeklyChangeWeek('W32')">W32(08.06)</button>
-                            <button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_w31" onclick="switchWeeklyChangeWeek('W31')">W31(07.28)</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Country Breakdown Summary Badges -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-5">
-                    <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-primary"></span> 11개국 주간 변동 요약('26년 모델 Only)
-                        </h4>
-                        <span class="text-[11px] text-slate-400" id="weekly_country_summary_note">클릭하여 해당 국가 필터링</span>
-                    </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5" id="weekly_country_pills_container">
-                        <!-- Filled dynamically -->
-                    </div>
-                </div>
-
-                <!-- Filter Toolbar & Detailed Table Container -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-all">
-                    <!-- Filters Section -->
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-5 mb-6">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <!-- Country Filter -->
-                            <div class="flex items-center gap-2">
-                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider">국가:</label>
-                                <select id="weekly_country_select" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs font-bold text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" onchange="switchWeeklyCountry(this.value)">
-                                    <option value="ALL">전체 국가 (11개국)</option>
-                                    <option value="UK">🇬🇧 UK (Currys)</option>
-                                    <option value="DE">🇩🇪 Germany (MediaMarkt)</option>
-                                    <option value="FR">🇫🇷 France (Fnac)</option>
-                                    <option value="ES">🇪🇸 Spain (MediaMarkt)</option>
-                                    <option value="IT">🇮🇹 Italy (MediaWorld)</option>
-                                    <option value="NL">🇳🇱 Netherlands (MediaMarkt)</option>
-                                    <option value="AT">🇦🇹 Austria (MediaMarkt)</option>
-                                    <option value="CH">🇨🇭 Switzerland (MediaMarkt)</option>
-                                    <option value="CZ">🇨🇿 Czech Republic (Alza)</option>
-                                    <option value="GR">🇬🇷 Greece (Public)</option>
-                                    <option value="HU">🇭🇺 Hungary (MediaMarkt)</option>
-                                </select>
-                            </div>
-
-                            <!-- Brand Filter -->
-                            <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
-                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md active bg-white text-primary shadow-sm" id="btn_weekly_brand_all" onclick="switchWeeklyBrand('ALL')">전체</button>
-                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_lg" onclick="switchWeeklyBrand('LG')">LG</button>
-                                <button type="button" class="weekly-brand-btn px-3 py-1 text-xs font-bold rounded-md text-slate-600 hover:text-primary" id="btn_weekly_brand_sam" onclick="switchWeeklyBrand('SAMSUNG')">Samsung</button>
-                            </div>
-
-                            <!-- Change Type Filter -->
-                            <div class="flex flex-wrap items-center gap-1.5">
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all active bg-primary text-white" id="btn_weekly_type_all" onclick="switchWeeklyType('ALL')">전체 변동</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700" id="btn_weekly_type_drop" onclick="switchWeeklyType('PRICE_DROP')">📉 가격 인하만</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-rose-50 hover:text-rose-700" id="btn_weekly_type_hike" onclick="switchWeeklyType('PRICE_HIKE')">📈 가격 인상만</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-purple-50 hover:text-purple-700" id="btn_weekly_type_promo" onclick="switchWeeklyType('PROMO')">🎁 프로모션 변동</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-blue-50 hover:text-blue-700" id="btn_weekly_type_new" onclick="switchWeeklyType('NEW_MODEL')">🆕 신규 모델</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-amber-50 hover:text-amber-700" id="btn_weekly_type_bm" onclick="switchWeeklyType('BENCHMARK')">⭐ 전략 페어만</button>
-                                <button type="button" class="weekly-type-btn px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-100 text-slate-600 hover:bg-slate-200" id="btn_weekly_type_delisted" onclick="switchWeeklyType('DELISTED')">❌ 품절/단종만</button>
-                            </div>
-                        </div>
-
-                        <!-- Search Input -->
-                        <div class="relative w-full lg:w-64">
-                            <svg class="absolute inset-y-0 left-0 pl-3 w-7 h-7 my-auto text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                            </svg>
-                            <input type="text" id="weekly_search_input" placeholder="모델명, 시리즈 검색..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 focus:outline-none focus:ring-1 focus:ring-secondary" oninput="onWeeklySearch(this.value)">
-                        </div>
-                    </div>
-
-                    <!-- Items Count & Results Header -->
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-sm font-bold text-primary flex items-center gap-2">
-                            <span class="w-2 h-4 bg-secondary rounded-full"></span>
-                            변동 상세 내역 (<span id="weekly_filtered_count">0</span>건)
-                        </h3>
-                        <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded" id="weekly_period_badge">W33 (2026.08.14 vs 2026.08.06)</span>
-                    </div>
-
-                    <!-- Comparison Table -->
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead>
-                                <tr class="border-b border-slate-200 bg-slate-50/60 text-slate-500 font-semibold text-xs tracking-wider">
-                                    <th class="px-4 py-3.5 text-center">국가/유통</th>
-                                    <th class="px-4 py-3.5 text-center">브랜드/연도</th>
-                                    <th class="px-4 py-3.5">제품군 / 인치</th>
-                                    <th class="px-4 py-3.5">모델코드 / 제품명</th>
-                                    <th class="px-4 py-3.5 text-right">전주 판매가 ➔ 금주 판매가</th>
-                                    <th class="px-4 py-3.5 text-right">실구매가 (Net)</th>
-                                    <th class="px-4 py-3.5">프로모션 변동 내역 (전주 ➔ 금주)</th>
-                                    <th class="px-4 py-3.5 text-center">구분</th>
-                                </tr>
-                            </thead>
-                            <tbody id="weekly_table_body" class="divide-y divide-slate-100 text-xs">
-                                <!-- Filled dynamically -->
                             </tbody>
                         </table>
                     </div>
@@ -2077,7 +2117,7 @@
         }
 
         // ==========================================
-        // AI Executive Summary & Briefing Logic
+        // 가격/프로모션 추이 분석 (Trends & Promos) Logic
         // ==========================================
         function renderExecutiveView() {
             if (typeof executiveSummaryData === 'undefined' || !executiveSummaryData.kpis) {
@@ -2114,14 +2154,134 @@
                         <p class="text-xs text-slate-500 mt-2">삼성 번들/캐시백 공세 집중 모니터링</p>
                     </div>
                     <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">주간 가격 변동 모델</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">직전 조사 대비 변동 모델</span>
                         <div class="text-2xl font-bold text-primary font-headline">${data.movements?.total_changed_models || 0} <span class="text-xs font-normal text-slate-500 font-sans">Models</span></div>
                         <p class="text-xs text-slate-500 mt-2">인하: LG ${data.movements?.brand_drops?.LG || 0} / SEC ${data.movements?.brand_drops?.SAMSUNG || 0}</p>
                     </div>
                 `;
             }
 
-            // 2. Render Highlights
+            // 2. Render Positioning Adequacy Grid
+            const posContainer = document.getElementById('exec_positioning_container');
+            const posSummaryBadge = document.getElementById('exec_positioning_summary_badge');
+            if (data.positioning) {
+                if (posSummaryBadge && data.positioning.overall_summary) {
+                    posSummaryBadge.innerHTML = `<strong>💡 포지셔닝 총평:</strong> ${data.positioning.overall_summary}`;
+                }
+                if (posContainer && data.positioning.segments) {
+                    posContainer.innerHTML = data.positioning.segments.map(seg => {
+                        const diffSign = seg.diff_pct > 0 ? '+' : '';
+                        return `
+                            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-start justify-between gap-2 mb-3">
+                                        <h4 class="font-bold text-sm text-slate-800 font-headline leading-snug">${seg.segment_name}</h4>
+                                        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold border ${seg.badge_class} flex-shrink-0">
+                                            <span class="w-1.5 h-1.5 rounded-full ${seg.dot_color}"></span>
+                                            ${seg.status}
+                                        </span>
+                                    </div>
+                                    <div class="flex items-baseline justify-between bg-slate-50 p-3 rounded-lg border border-slate-100 mb-3">
+                                        <div>
+                                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">LG 평균 (EUR)</span>
+                                            <span class="text-base font-extrabold text-primary">€${(seg.lg_avg_eur || 0).toLocaleString()}</span>
+                                        </div>
+                                        <div class="text-slate-300 font-light text-sm">vs</div>
+                                        <div class="text-right">
+                                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">SEC 평균 (EUR)</span>
+                                            <span class="text-base font-extrabold text-slate-700">€${(seg.sam_avg_eur || 0).toLocaleString()}</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between text-xs mb-3 px-1">
+                                        <span class="text-slate-500 font-medium">가격 인덱스 (Price Index)</span>
+                                        <span class="font-extrabold ${seg.diff_pct > 0 ? 'text-blue-600' : (seg.diff_pct < 0 ? 'text-emerald-600' : 'text-slate-700')}">
+                                            ${seg.price_index} (${diffSign}${seg.diff_pct}%)
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-slate-600 leading-relaxed font-sans bg-slate-50/60 p-2.5 rounded border border-slate-100">
+                                        ${seg.comment}
+                                    </p>
+                                </div>
+                                <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+                                    <span>비교 샘플: <strong class="text-slate-600">${seg.sample_count}개 모델</strong></span>
+                                    <span class="font-semibold text-primary">11개국 실시간 매칭</span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+
+            // 3. Render Promo Warfare Deep-Dive Box
+            const promoDeepdiveContainer = document.getElementById('exec_promo_deepdive_container');
+            const tacticalAssessmentText = document.getElementById('exec_tactical_assessment_text');
+            if (data.promos && data.promos.deepdive) {
+                const dd = data.promos.deepdive;
+                if (tacticalAssessmentText && dd.tactical_assessment) {
+                    tacticalAssessmentText.innerText = dd.tactical_assessment;
+                }
+                if (promoDeepdiveContainer && dd.samsung_strategy && dd.lg_strategy) {
+                    const sam = dd.samsung_strategy;
+                    const lg = dd.lg_strategy;
+                    promoDeepdiveContainer.innerHTML = `
+                        <!-- Samsung Promo Tactics Card -->
+                        <div class="bg-gradient-to-br from-blue-50/60 to-slate-50 p-5 rounded-xl border border-blue-100">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-[#002060]"></span>
+                                    <h4 class="font-bold text-sm text-[#002060]">경쟁사(Samsung) 프로모션 전략</h4>
+                                </div>
+                                <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-blue-100 text-blue-800 border border-blue-200">
+                                    공세 강도 ${sam.intensity || '46.2%'}
+                                </span>
+                            </div>
+                            <div class="space-y-3 text-xs">
+                                <div class="p-3 bg-white rounded-lg border border-blue-100/60 shadow-2xs">
+                                    <div class="font-bold text-blue-900 mb-0.5">💰 환급형 캐시백 (Cashback) 공세</div>
+                                    <div class="text-slate-700 font-semibold">${sam.max_cashback || '-'}</div>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-blue-100/60 shadow-2xs">
+                                    <div class="font-bold text-blue-900 mb-0.5">🎁 사운드바 무상 번들 & 복합 패키지</div>
+                                    <div class="text-slate-700 font-medium">${sam.bundle_tactics || '-'}</div>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-blue-100/60 shadow-2xs">
+                                    <div class="font-bold text-blue-900 mb-0.5">🎯 핵심 타겟 라인업</div>
+                                    <div class="text-slate-600 text-[11px] leading-relaxed">${sam.core_focus || '-'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LG Promo Tactics Card -->
+                        <div class="bg-gradient-to-br from-rose-50/60 to-slate-50 p-5 rounded-xl border border-rose-100">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-[#a50034]"></span>
+                                    <h4 class="font-bold text-sm text-[#a50034]">자사(LG Electronics) 프로모션 전략</h4>
+                                </div>
+                                <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-rose-100 text-rose-800 border border-rose-200">
+                                    프로모션 비중 ${lg.intensity || '42.1%'}
+                                </span>
+                            </div>
+                            <div class="space-y-3 text-xs">
+                                <div class="p-3 bg-white rounded-lg border border-rose-100/60 shadow-2xs">
+                                    <div class="font-bold text-rose-900 mb-0.5">💰 맞춤형 캐시백 (Cashback) 지원</div>
+                                    <div class="text-slate-700 font-semibold">${lg.max_cashback || '-'}</div>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-rose-100/60 shadow-2xs">
+                                    <div class="font-bold text-rose-900 mb-0.5">🎁 무상 SoundSuite 사운드 솔루션 번들</div>
+                                    <div class="text-slate-700 font-medium">${lg.bundle_tactics || '-'}</div>
+                                </div>
+                                <div class="p-3 bg-white rounded-lg border border-rose-100/60 shadow-2xs">
+                                    <div class="font-bold text-rose-900 mb-0.5">🎯 프리미엄 가치 보존 전략</div>
+                                    <div class="text-slate-600 text-[11px] leading-relaxed">${lg.core_focus || '-'}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            // 4. Render Highlights
             const highlightsContainer = document.getElementById('exec_highlights_container');
             if (highlightsContainer && data.highlights) {
                 highlightsContainer.innerHTML = data.highlights.map(h => `
@@ -2132,10 +2292,10 @@
                 `).join('');
             }
 
-            // 3. Render 1:1 Gap Table
+            // 5. Render 1:1 Gap Table
             renderExecutiveGapTable();
 
-            // 4. Render Top Drops
+            // 6. Render Top Drops
             const dropsBody = document.getElementById('exec_top_drops_body');
             if (dropsBody && data.movements?.top_price_drops) {
                 dropsBody.innerHTML = data.movements.top_price_drops.slice(0, 6).map(d => `
@@ -2152,7 +2312,7 @@
                 `).join('');
             }
 
-            // 5. Render Promo Breakdown
+            // 7. Render Promo Breakdown
             const promoBox = document.getElementById('exec_promo_breakdown_box');
             if (promoBox && data.promos?.promo_keywords) {
                 const kw = data.promos.promo_keywords;
@@ -2184,6 +2344,9 @@
                     </div>
                 `;
             }
+
+            // 8. Render Integrated Weekly Changes Section
+            renderWeeklyChangeView();
         }
 
         function renderExecutiveGapTable() {
@@ -2250,22 +2413,16 @@
             document.querySelectorAll('.dashboard-view').forEach(view => view.classList.add('hidden'));
             
             const headerControls = document.getElementById('header_controls');
-            if (menu === 'executive') {
+            if (menu === 'executive' || menu === 'weekly_change') {
+                currentMenu = 'executive';
                 if (headerControls) headerControls.classList.add('hidden');
                 const btnExec = document.getElementById('menu_executive');
                 if (btnExec) btnExec.classList.add('active');
                 const viewExec = document.getElementById('view_executive');
                 if (viewExec) viewExec.classList.remove('hidden');
-                document.getElementById('current-menu-title').innerText = 'AI 경영 브리핑 (Executive Summary)';
-                document.getElementById('page-headline-title').innerText = '유럽 11개국 TV 시장 AI 전략 브리핑';
+                document.getElementById('current-menu-title').innerText = '가격/프로모션 추이 분석';
+                document.getElementById('page-headline-title').innerText = '유럽 11개국 TV 가격/프로모션 추이 분석';
                 renderExecutiveView();
-            } else if (menu === 'weekly_change') {
-                if (headerControls) headerControls.classList.add('hidden');
-                document.getElementById('menu_weekly_change').classList.add('active');
-                document.getElementById('view_weekly_change').classList.remove('hidden');
-                document.getElementById('current-menu-title').innerText = '주간 가격/프로모션 변동 사항';
-                document.getElementById('page-headline-title').innerText = '주간 가격 및 프로모션 변동 분석';
-                renderWeeklyChangeView();
             } else if (menu === 'methodology') {
                 if (headerControls) headerControls.classList.add('hidden');
                 const btnMethodology = document.getElementById('menu_methodology');
@@ -2357,8 +2514,8 @@
                 renderDisplayView();
             } else if (currentMenu === 'history') {
                 renderHistoryView();
-            } else if (currentMenu === 'weekly_change') {
-                renderWeeklyChangeView();
+            } else if (currentMenu === 'executive') {
+                renderExecutiveView();
             }
         }
 

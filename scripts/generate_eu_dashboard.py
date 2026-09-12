@@ -973,12 +973,19 @@ def compute_weekly_changes():
         w36_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0903*.xlsx")))
         if w36_cands: w36_path = w36_cands[-1]
 
-    w37_path = os.path.join(history_dir, "2026 0907", "price tracker_EU_2026 0907_v1.xlsx")
-    if not os.path.exists(w37_path):
-        w37_path = os.path.join(data_dir, "price tracker_EU_2026 0907_v1.xlsx")
-    if not os.path.exists(w37_path):
-        w37_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0907*.xlsx")))
-        if w37_cands: w37_path = w37_cands[-1]
+    w37_07_path = os.path.join(history_dir, "2026 0907", "price tracker_EU_2026 0907_v1.xlsx")
+    if not os.path.exists(w37_07_path):
+        w37_07_path = os.path.join(data_dir, "price tracker_EU_2026 0907_v1.xlsx")
+    if not os.path.exists(w37_07_path):
+        w37_07_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0907*.xlsx")))
+        if w37_07_cands: w37_07_path = w37_07_cands[-1]
+
+    w37_12_path = os.path.join(data_dir, "price tracker_EU_2026 0912_v1.xlsx")
+    if not os.path.exists(w37_12_path):
+        w37_12_path = os.path.join(history_dir, "2026 0912", "price tracker_EU_2026 0912_v1.xlsx")
+    if not os.path.exists(w37_12_path):
+        w37_12_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0912*.xlsx")))
+        if w37_12_cands: w37_12_path = w37_12_cands[-1]
     
     cat_w30 = load_workbook_catalog(w30_path)
     cat_w31 = load_workbook_catalog(w31_path)
@@ -987,10 +994,11 @@ def compute_weekly_changes():
     cat_w34 = load_workbook_catalog(w34_path)
     cat_w35 = load_workbook_catalog(w35_path)
     cat_w36 = load_workbook_catalog(w36_path)
-    cat_w37 = load_workbook_catalog(w37_path)
+    cat_w37_07 = load_workbook_catalog(w37_07_path)
+    cat_w37_12 = load_workbook_catalog(w37_12_path)
     
     transitions = [
-        ("W37", "W37(09.07) vs W36(09.03)", "2026.09.07", "2026.09.03", cat_w36, cat_w37),
+        ("W37", "W37(09.12) vs W37(09.07)", "2026.09.12", "2026.09.07", cat_w37_07, cat_w37_12),
         ("W36", "W36(09.03) vs W35(08.28)", "2026.09.03", "2026.08.28", cat_w35, cat_w36),
         ("W35", "W35(08.28) vs W34(08.17)", "2026.08.28", "2026.08.17", cat_w34, cat_w35),
         ("W34", "W34(08.17) vs W33(08.14)", "2026.08.17", "2026.08.14", cat_w33, cat_w34),
