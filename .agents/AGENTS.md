@@ -137,6 +137,10 @@
       - QNED/QLED: `QNED86B vs QN80H`, `QNED86B vs QN70H`, `QNED72B vs M70H`
       - UHD 4K: `NU85 vs U8000H`
     - **Screen Size Labeling Standard**: For 85"/86" pairs, render exact panel sizes on comparison labels: LG `86"` and Samsung `85"` (`86"MRGB88 vs. 85"R85H`).
+    - **100" & 115" 3-Digit Screen Size Extraction & Blind Fallback Prohibition (Critical)**:
+      Screen size regexes across all scrapers, parsers, and quality gates MUST include 3-digit sizes `115|100` (`r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)'`). Parsers must NEVER blindly default to 55; if title parsing fails, they must extract size from the model code (`QE100...` -> 100, `100QNED...` -> 100, `115QNED...` -> 115).
+    - **85" / 86" Pairing Single-Size Specification & Deduplication Standard (Critical)**:
+      In `PAIRS_CONFIG_*`, specify `"86"` (or `"85"`) only once in the `sizes` array for 85"/86" flagship pairs. Never include both `"86"` and `"85"` in the same `sizes` list, as `find_product()` cross-matches 85" and 86", which would cause identical duplicate bars on comparison charts. `build_paired_data()` MUST enforce a `seen_pair_labels` deduplication set as a fail-safe.
     - **Script Location**: Maintain primary logic in `scripts/scrape_currys_live.py`.
 
   * **Pan-European Master Product URL Registry (`data/master_product_urls.json`) Standard (Critical)**:

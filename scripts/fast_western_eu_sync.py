@@ -150,15 +150,22 @@ def extract_model_and_meta(card_text, brand):
     if any(x in upper for x in NON_TV_KEYWORDS):
         return None, 0, 0, ""
         
-    # Size
-    size_m = re.search(r'\b(98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"”\'-]*(?:ZOLL|INCH|POUCES|POLLICI|CM|\b)', upper)
-    size = int(size_m.group(1)) if size_m else 55
-    
     # Model code
     model_code = "Unknown"
-    code_m = re.search(r'\b([A-Z0-9]{2}\d{2}[A-Z0-9]{3,10}|\d{2}[A-Z]{3,6}\d{2}[A-Z0-9]{2,6}|OLED\d{2}[A-Z0-9]{2,6}|MRE\d{2}[A-Z0-9]{2,6})\b', upper)
+    code_m = re.search(r'\b([A-Z0-9]{2}\d{2,3}[A-Z0-9]{3,10}|\d{2,3}[A-Z]{3,6}\d{2}[A-Z0-9]{2,6}|OLED\d{2}[A-Z0-9]{2,6}|MRE\d{2,3}[A-Z0-9]{2,6})\b', upper)
     if code_m:
         model_code = code_m.group(1)
+
+    # Size
+    size_m = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"”\'-]*(?:ZOLL|INCH|POUCES|POLLICI|CM|\b)', upper)
+    if size_m:
+        size = int(size_m.group(1))
+    else:
+        c_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', model_code)
+        if c_sz and int(c_sz.group(1)) in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27, 24]:
+            size = int(c_sz.group(1))
+        else:
+            size = 55
         
     if brand.upper() == "SAMSUNG":
         if model_code == "Unknown" or len(model_code) < 5 or model_code.startswith("PUS"):

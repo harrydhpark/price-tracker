@@ -570,6 +570,13 @@ def main():
                         model_code = item["model_code"]
                         year = item["year"]
                         size = item["size"]
+                        # Cross-verify size from model code if model code explicitly contains standard screen size
+                        m_c_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', model_code.upper())
+                        if m_c_sz:
+                            parsed_sz = int(m_c_sz.group(1))
+                            if parsed_sz in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27]:
+                                if not (size in [85, 86] and parsed_sz in [85, 86]):
+                                    size = parsed_sz
                         display_type = item.get("display") or item.get("display_type") or "LED"
                         price = clean_numeric_price(item.get("price"))
                         promo = item.get("promo") or "None"

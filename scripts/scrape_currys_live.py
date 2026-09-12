@@ -62,14 +62,9 @@ def parse_currys_tile(tile, brand):
     if ("WALL MOUNT" in u_title or "STAND" in u_title) and not ("VERSION" in u_title or "SMART TV" in u_title or "OLED" in u_title or "QNED" in u_title or "QLED" in u_title):
         return None
         
-    size_m = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"\'\'-]*(?:INCH|\b)', u_title)
-    size = int(size_m.group(1)) if size_m else 55
-    if size < 22:
-        return None
-        
-    model_code = None
-    # 1. First look for full Samsung/LG model code patterns in title
-    m_cand = re.search(r'\b([A-Z0-9]{2}\d{2,3}[A-Z0-9]{3,12}|\d{2,3}[A-Z]{3,6}\d{2}[A-Z0-9]{1,6}|OLED\d{2}[A-Z0-9]{2,8}|MRE\d{2,3}[A-Z0-9]{2,6}|QE\d{2}[A-Z0-9]{2,8}|UE\d{2}[A-Z0-9]{2,12})\b', u_title)
+    # 1. Model Code Extraction
+    model_code = "Unknown"
+    m_cand = re.search(r'\b([A-Z0-9]{2}\d{2,3}[A-Z0-9]{3,12}|\d{2,3}[A-Z]{3,6}\d{2}[A-Z0-9]{1,6}|OLED\d{2}[A-Z0-9]{2,8}|MRE\d{2,3}[A-Z0-9]{2,6}|QE\d{2,3}[A-Z0-9]{2,8}|UE\d{2,3}[A-Z0-9]{2,12})\b', u_title)
     if m_cand and any(c.isdigit() for c in m_cand.group(1)):
         model_code = m_cand.group(1)
     else:
@@ -78,6 +73,19 @@ def parse_currys_tile(tile, brand):
             model_code = dash_m.group(1)
         else:
             model_code = "Unknown"
+
+    # 2. Size Extraction (Include 115, 100 and model code fallback)
+    size_m = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"\'\'-]*(?:INCH|\b)', u_title)
+    if size_m:
+        size = int(size_m.group(1))
+    else:
+        c_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', model_code)
+        if c_sz and int(c_sz.group(1)) in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27, 24]:
+            size = int(c_sz.group(1))
+        else:
+            size = 55
+    if size < 22:
+        return None
         
     if model_code.upper() in ["MONTH", "CLAIM", "TRADE", "STARS", "SAMSUNG", "LG", "UNKNOWN", "TELEVISION", "OFFER", "REVIEWS", "WHITE", "BLACK", "SILVER"]:
         return None

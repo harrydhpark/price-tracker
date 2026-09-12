@@ -56,10 +56,10 @@ PAIRS_CONFIG_2025 = {
         {"lg": "B5", "sam": "S85F", "sizes": ["83", "77", "65", "55", "48"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED86A", "sam": "QN80F", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED86A", "sam": "QN70F", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED80A", "sam": "Q8F", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED84A", "sam": "Q7F", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED86A", "sam": "QN80F", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED86A", "sam": "QN70F", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED80A", "sam": "Q8F", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED84A", "sam": "Q7F", "sizes": ["100", "86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
         {"lg": "UA75", "sam": "U8000F", "sizes": ["85", "75", "65", "55", "50", "43"]}
@@ -93,7 +93,7 @@ PAIRS_CONFIG_2026_IT = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
     "MRGB": PAIRS_CONFIG_2026["MRGB"],
     "QNED/QLED": [
-        {"lg": "QNED87B", "sam": "QN70H", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED87B", "sam": "QN70H", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
         {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
@@ -106,9 +106,9 @@ PAIRS_CONFIG_2026_UK = {
         {"lg": "MRGB88", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
+        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED72B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
@@ -149,11 +149,11 @@ PAIRS_CONFIG_2026_CZ = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
     "MRGB": PAIRS_CONFIG_2026["MRGB"],
     "QNED/QLED": [
-        {"lg": "QNED93B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED85B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED93B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
+        {"lg": "QNED85B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
@@ -297,14 +297,14 @@ PAIRS_CONFIG_2026_HU = {
         {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
     ],
     "MRGB": [
-        {"lg": "MRGB95B", "sam": "R95H", "sizes": ["86", "85", "75", "65", "55"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "85", "75", "65", "55"]}
+        {"lg": "MRGB95B", "sam": "R95H", "sizes": ["86", "75", "65", "55"]},
+        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED93B/92B", "sam": "QN80H", "sizes": ["86", "85", "75", "65", "55"]},
-        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M74H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED93B/92B", "sam": "QN80H", "sizes": ["86", "75", "65", "55"]},
+        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
+        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED70B", "sam": "M74H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
         {"lg": "NU8E", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
@@ -318,9 +318,9 @@ PAIRS_CONFIG_2025_HU = {
         {"lg": "B5", "sam": "S85F", "sizes": ["83", "77", "65", "55", "48"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED86A", "sam": "QN80F", "sizes": ["86", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED80A", "sam": "QN70F", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED7EA", "sam": "Q7F", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED86A", "sam": "QN80F", "sizes": ["86", "75", "65", "55", "50"]},
+        {"lg": "QNED80A", "sam": "QN70F", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED7EA", "sam": "Q7F", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
         {"lg": "UA75", "sam": "U8072F", "sizes": ["85", "75", "65", "55", "50", "43"]},
@@ -488,6 +488,17 @@ def find_product(products, brand, size, series, year):
             continue
         code = p["model_code"].upper()
         
+        # Cross-validation: Check if model code explicitly contains a conflicting screen size
+        # e.g. target_size=55 but code is QE100QN80H -> extracted code size is 100 != 55 -> reject
+        m_code_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', code)
+        if m_code_sz:
+            c_sz = int(m_code_sz.group(1))
+            if c_sz in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27, 24]:
+                if target_size in [85, 86] and c_sz in [85, 86]:
+                    pass # Valid flagship pair match
+                elif c_sz != target_size:
+                    continue # Reject conflicting model size
+        
         if "QNED" in series.upper() and "QNED" not in code:
             continue
         if "QNED" not in series.upper() and "QNED" in code:
@@ -570,15 +581,24 @@ def find_product(products, brand, size, series, year):
     # Priority sorting:
     # 1. Official European/Italian OLED sub-models (e.g. G56, G66, C55, C65, B65)
     # 2. True U8000 series (U8000, U8005, U8070) over U7000 fallback
+    # 3. Prefer model codes matching target size exactly
     def get_priority(item):
         code = item["model_code"].upper()
+        prio = 0
+        m_c_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', code)
+        if m_c_sz:
+            c_sz = int(m_c_sz.group(1))
+            if target_size in [85, 86] and c_sz in [85, 86]:
+                pass
+            elif c_sz != target_size:
+                prio += 10
         if any(x in code for x in ["G56", "G66", "C55", "C65", "B65", "B55"]):
-            return 0
+            return prio + 0
         if any(x in code for x in ["U8000", "U8005", "U8010", "U8070", "U8075", "U8090"]):
-            return 1
+            return prio + 1
         if "U7000" in code:
-            return 2
-        return 3
+            return prio + 2
+        return prio + 3
         
     matched_candidates.sort(key=get_priority)
     return matched_candidates[0]
@@ -605,6 +625,7 @@ def build_paired_data(wb, country, year, config):
         
     for cat, series_list in config.items():
         paired[cat] = []
+        seen_pair_labels = set()
         for pair in series_list:
             lg_series = pair["lg"]
             sam_series = pair["sam"]
@@ -649,6 +670,10 @@ def build_paired_data(wb, country, year, config):
                 elif "QNED86" in lg_series and "QN80" in sam_series and str(size) in ["100"]:
                     pair_label_str = '100"QNED87B vs. 100"QN80H'
                     
+                if pair_label_str in seen_pair_labels:
+                    continue
+                seen_pair_labels.add(pair_label_str)
+                
                 entry = {
                     "size": int(size),
                     "lg_series": f"{lg_sz_lbl}{lg_series}",

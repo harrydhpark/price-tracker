@@ -100,21 +100,29 @@ def parse_card_block(card_text, card_title, card_href, brand):
     if brand.upper() not in title_line.upper():
         title_line = card_title
         
-    size_m = re.search(r'\b(98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s\"”\'-]*(?:INCH|\b)', title_line.upper())
-    size = int(size_m.group(1)) if size_m else 55
-    if size < 22:
-        return None
-        
     # Model Code
-    model_code = None
+    model_code = "Unknown"
     dash_m = re.search(r'-\s*([A-Z0-9]{5,15})', title_line.upper())
     if dash_m:
         model_code = dash_m.group(1)
     else:
-        m_cand = re.search(r'\b([A-Z0-9]{2}\d{2}[A-Z0-9]{3,10}|\d{2}[A-Z]{3,6}\d{2}[A-Z0-9]{1,6}|OLED\d{2}[A-Z0-9]{2,8}|MRE\d{2}[A-Z0-9]{2,6}|QE\d{2}[A-Z0-9]{2,8}|UE\d{2}[A-Z0-9]{2,8})\b', title_line.upper())
+        m_cand = re.search(r'\b([A-Z0-9]{2}\d{2,3}[A-Z0-9]{3,10}|\d{2,3}[A-Z]{3,6}\d{2}[A-Z0-9]{1,6}|OLED\d{2}[A-Z0-9]{2,8}|MRE\d{2,3}[A-Z0-9]{2,6}|QE\d{2,3}[A-Z0-9]{2,8}|UE\d{2,3}[A-Z0-9]{2,8})\b', title_line.upper())
         model_code = m_cand.group(1) if m_cand else "Unknown"
         
     if model_code.upper() in ["MONTH", "CLAIM", "TRADE", "STARS", "SAMSUNG", "LG", "UNKNOWN", "TELEVISION", "OFFER", "REVIEWS"]:
+        return None
+
+    # Screen Size Extraction (Include 115, 100 and model code fallback)
+    size_m = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s\"”\'-]*(?:INCH|\b)', title_line.upper())
+    if size_m:
+        size = int(size_m.group(1))
+    else:
+        c_sz = re.search(r'(?:^|[A-Z]{1,3})(\d{2,3})(?:[A-Z]|$)', model_code)
+        if c_sz and int(c_sz.group(1)) in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27, 24]:
+            size = int(c_sz.group(1))
+        else:
+            size = 55
+    if size < 22:
         return None
         
     year = 2025

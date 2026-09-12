@@ -87,15 +87,15 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         price = float(r.get("selling_price") or 0.0)
         currency = str(r.get("currency", "EUR")).upper()
         # Authoritative screen size resolution
-        STANDARD_SIZES = {24, 27, 32, 40, 42, 43, 48, 50, 55, 65, 70, 75, 77, 83, 85, 86, 97, 98, 100}
+        STANDARD_SIZES = {24, 27, 32, 40, 42, 43, 48, 50, 55, 65, 70, 75, 77, 83, 85, 86, 97, 98, 100, 115}
         raw_size = int(r.get("display_size_inch") or 0)
         size = 0
         
-        # 1. Authoritative model code prefix check: e.g. TQ32..., QE55..., OLED65..., UE24..., 55QNED...
+        # 1. Authoritative model code prefix check: e.g. TQ32..., QE55..., QE100..., OLED65..., UE24..., 55QNED..., 100QNED...
         mc_up = model_code.upper()
-        m_mc = re.search(r'^(?:OLED|QE|UE|TQ|QA|GQ|TU|NU|UA|UT|MRE|TMR)(\d{2})[A-Z0-9]', mc_up)
+        m_mc = re.search(r'^(?:OLED|QE|UE|TQ|QA|GQ|TU|NU|UA|UT|MRE|TMR)(\d{2,3})[A-Z0-9]', mc_up)
         if not m_mc:
-            m_mc = re.search(r'^(\d{2})[A-Z]{2,}', mc_up)
+            m_mc = re.search(r'^(\d{2,3})[A-Z]{2,}', mc_up)
         if m_mc:
             s_cand = int(m_mc.group(1))
             if s_cand in STANDARD_SIZES:
@@ -105,7 +105,7 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         if size == 0 and raw_size in STANDARD_SIZES:
             size = raw_size
         elif size == 0:
-            size = raw_size if 20 <= raw_size <= 100 else 55
+            size = raw_size if 20 <= raw_size <= 120 else 55
         curr_promo = str(r.get("promo_text") or "")
         eur_price = to_eur(price, currency)
 
