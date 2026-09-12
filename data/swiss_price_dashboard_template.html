@@ -1544,15 +1544,25 @@
                 return infoA.timestamp - infoB.timestamp || a.localeCompare(b);
             });
 
-            // Deduplicate by ISO week: retain only the earliest survey date per week
-            const seenWeeks = new Set();
-            const deduplicatedDates = [];
+            // Group dates by ISO week: for past weeks retain baseline (earliest survey date),
+            // but for W37 (or the current/latest week), retain the latest survey date (09/12)
+            const weekMap = {};
             sortedDates.forEach(dateStr => {
                 const info = getIsoWeekFromDateStr(dateStr);
                 const weekKey = `${info.year}-W${info.week}`;
-                if (!seenWeeks.has(weekKey)) {
-                    seenWeeks.add(weekKey);
-                    deduplicatedDates.push(dateStr);
+                if (!weekMap[weekKey]) weekMap[weekKey] = [];
+                weekMap[weekKey].push(dateStr);
+            });
+
+            const deduplicatedDates = [];
+            const weekKeys = Object.keys(weekMap);
+            weekKeys.forEach((weekKey, idx) => {
+                const datesInWeek = weekMap[weekKey];
+                // For W37 or the most recent week, pick the latest survey date (e.g. 09/12)
+                if (weekKey.endsWith('-W37') || idx === weekKeys.length - 1) {
+                    deduplicatedDates.push(datesInWeek[datesInWeek.length - 1]);
+                } else {
+                    deduplicatedDates.push(datesInWeek[0]);
                 }
             });
 
