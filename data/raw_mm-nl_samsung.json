@@ -1,620 +1,422 @@
 [
   {
-    "name": "SAMSUNG UE43U8000H Crystal UHD - Ultra HD 4K - Led-tv - 43 inch - 2026",
-    "title": "SAMSUNG UE43U8000H Crystal UHD - Ultra HD 4K - Led-tv - 43 inch - 2026",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43U8000H",
     "price": 399.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG UE32F6000FUXXN - Full HD - Led-tv - 32 inch - 2025",
-    "title": "SAMSUNG UE32F6000FUXXN - Full HD - Led-tv - 32 inch - 2025",
-    "price": 288.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG UE24F6000FUXXN - Full HD - Led-tv - 24 inch - 2025",
-    "title": "SAMSUNG UE24F6000FUXXN - Full HD - Led-tv - 24 inch - 2025",
-    "price": 229.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG QE55S85FAUXXN - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-    "title": "SAMSUNG QE55S85FAUXXN - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-    "price": 849.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG F-QE43LS03FAUX - Ultra HD 4K - QLED-tv - 43 inch - 2025",
-    "price": "799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE50U8000FUXXN - Ultra HD 4K - Led-tv - 50 inch - 2025",
-    "price": "469",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG QE55QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 55 inch - 2025",
-    "title": "SAMSUNG QE55QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 55 inch - 2025",
-    "price": 599.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG UE40F6000FUXXN - Full HD - Led-tv - 40 inch - 2025",
-    "title": "SAMSUNG UE40F6000FUXXN - Full HD - Led-tv - 40 inch - 2025",
-    "price": 299.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG UE55U8000H Crystal UHD - Ultra HD 4K - Led-tv - 55 inch - 2026",
-    "price": "549",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE50U8000H Crystal UHD - Ultra HD 4K - Led-tv - 50 inch - 2026",
-    "price": "499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE43M70H - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
-    "price": "499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65U8000H Crystal UHD - Ultra HD 4K - Led-tv - 65 inch - 2026",
-    "price": "699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65M70H - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-    "price": "849",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S85FAEXXN - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-    "title": "SAMSUNG QE65S85FAEXXN - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-    "price": 1139.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG UE75U8000H Crystal UHD - Ultra HD 4K - Led-tv - 75 inch - 2026",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG F-QE65LS03FWUX - Ultra HD 4K - Mini-led-tv - 65 inch - 2025",
-    "price": "1449",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG F-QE50LS03FAUX - Ultra HD 4K - QLED-tv - 50 inch - 2025",
-    "price": "870",
-    "uvp": null,
-    "promo": "Korting van Essent"
-  },
-  {
-    "name": "SAMSUNG QE65QN90FATXXN - Ultra HD 4K - Neo QLED-tv - 65 inch - 2025",
-    "price": "1499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE100QN80FUXXN - Ultra HD 4K - Mini-led-tv - 100 inch - 2025",
-    "price": "2299",
-    "uvp": null,
-    "promo": "Korting van Essent"
-  },
-  {
-    "name": "SAMSUNG QE83S85FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S95FATXXN - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-    "price": "1999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55S95FATXXN - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-    "price": "1599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE85QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 85 inch - 2025",
-    "title": "SAMSUNG QE85QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 85 inch - 2025",
-    "price": 1499.0,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG QE48S90FAEXXN - Ultra HD 4K - OLED-tv - 48 inch - 2025",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55QN80H - QLED 4K - Neo QLED-tv - 55 inch - 2026",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame Pro F-QE65LS03H - QLED 4K - Neo QLED-tv - 65 inch - 2026",
-    "price": "2199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE85M70H - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
-    "price": "1499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S85FAEXXN - Ultra HD 4K - OLED-tv - 77 inch - 2025",
-    "price": "1899",
-    "uvp": null,
-    "promo": "Korting van Essent"
-  },
-  {
-    "name": "SAMSUNG QE55S90FAEXXN - Ultra HD 4K - OLED-tv - 55 inch - 2025",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE50QN90FATXXN - Ultra HD 4K - Neo QLED-tv - 50 inch - 2025",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S90FAEXXN - Ultra HD 4K - OLED-tv - 77 inch - 2025",
-    "price": "2199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE55M70H - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-    "price": "649",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame Pro F-QE55LS03H - QLED 4K - Neo QLED-tv - 55 inch - 2026",
-    "price": "1699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE43QN90FATXXN - Ultra HD 4K - Neo QLED-tv - 43 inch - 2025",
-    "price": "999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65M80H - Ultra HD 4K - Mini-led-tv - 65 inch - 2026",
-    "price": "999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE75QN80H - QLED 4K - Micro-led-tv - 75 inch - 2026",
-    "price": "1999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S90H - OLED 4K - OLED-tv - 65 inch - 2026",
-    "price": "2599",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG MRE55R85H - Ultra HD 4K - Micro-led-tv - 55 inch - 2026",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Q5F - Full HD - QLED-tv - 32 inch - 2026",
-    "price": "329",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE43U8000FUXXN - Ultra HD 4K - Led-tv - 43 inch - 2025",
-    "price": "399",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG QE65S90FATXXN - Ultra HD 4K - OLED-tv - 65 inch - 2025",
-    "price": "1799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE42S90FAEXXN - Ultra HD 4K - OLED-tv - 42 inch - 2025",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QN990F - Ultra HD 8K - Mini-led-tv - 98 inch - 2025",
-    "price": "19999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S95H - OLED 4K - OLED-tv - 65 inch - 2026",
-    "price": "3099",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG UE50M70H - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
-    "price": "599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG F-QE75LS03FWUX - Ultra HD 4K - Mini-led-tv - 75 inch - 2025",
-    "price": "1949",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE83S95FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-    "price": "3999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE85U8000H Crystal UHD - Ultra HD 4K - Led-tv - 85 inch - 2026",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE55M80H - Ultra HD 4K - Mini-led-tv - 55 inch - 2026",
-    "price": "799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG S90H - OLED 4K - OLED-tv - 55 inch - 2026",
-    "price": "1999",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG QE55S95H - OLED 4K - OLED-tv - 55 inch - 2026",
-    "price": "2499",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG UE75M70H - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S95H - OLED 4K - OLED-tv - 77 inch - 2026",
-    "price": "4599",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG MRE65R85H - Ultra HD 4K - Micro-led-tv - 65 inch - 2026",
-    "price": "1849",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG MRE65R95H - Ultra HD 4K - Micro-led-tv - 65 inch - 2026",
-    "price": "2999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE85QN80H - QLED 4K - Micro-led-tv - 85 inch - 2026",
-    "price": "2499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN80H - QLED 4K - Neo QLED-tv - 65 inch - 2026",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S99H - OLED 4K - OLED-tv - 65 inch - 2026",
-    "price": "3299",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG UE75M80H - Ultra HD 4K - Mini-led-tv - 75 inch - 2026",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG F-QE75LS03H The Frame Pro LS03HW - QLED 4K - Neo QLED-tv - 75 inch - 202",
-    "price": "3199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE83S90FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
-    "price": "3299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE85M80H - Ultra HD 4K - Mini-led-tv - 85 inch - 2026",
-    "price": "1799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE48S90H - OLED 4K - OLED-tv - 48 inch - 2026",
-    "price": "1549",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE115QN90FTXXN - Ultra HD 4K - Neo QLED-tv - 115 inch - 2025",
-    "price": "14999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG F-QE43LS03H The Frame LS03HE - QLED 4K - QLED-tv - 43 inch - 2026",
-    "price": "999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55S99H - OLED 4K - OLED-tv - 55 inch - 2026",
-    "price": "2599",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG QE42S90H - OLED 4K - OLED-tv - 42 inch - 2026",
-    "price": "1499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN900FTXXN - Ultra HD 8K - Mini-led-tv - 65 inch - 2025",
-    "price": "1999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55S85H - OLED 4K - OLED-tv - 55 inch - 2026",
-    "price": "1449",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S85H - OLED 4K - OLED-tv - 65 inch - 2026",
-    "price": "1899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S99H - OLED 4K - OLED-tv - 77 inch - 2026",
-    "price": "4699",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG QE83S90H - OLED 4K - OLED-tv - 83 inch - 2026",
-    "price": "4499",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG QE83S99H - OLED 4K - OLED-tv - 83 inch - 2026",
-    "price": "5799",
-    "uvp": null,
-    "promo": "TV Cadeau"
-  },
-  {
-    "name": "SAMSUNG The Frame Pro F-QE85LS03H - QLED 4K - Neo QLED-tv - 85 inch - 2026",
-    "price": "4199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S85H - OLED 4K - OLED-tv - 77 inch - 2026",
-    "price": "2699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG MRE85R95H - Ultra HD 4K - Micro-led-tv - 85 inch - 2026",
-    "price": "5899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55LST7DATXXN - Ultra HD 4K - Mini-led-tv - 55 inch - 2025",
-    "price": "3999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QN900F - Ultra HD 8K - Mini-led-tv - 85 inch - 2025",
-    "price": "4999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE48S85H - OLED 4K - OLED-tv - 48 inch - 2026",
-    "price": "1349",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG MRE85R85H - Ultra HD 4K - Micro-led-tv - 85 inch - 2026",
-    "price": "3599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE83S85H - OLED 4K - OLED-tv - 83 inch - 2026",
-    "price": "3699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE98Q7FAAUXXN - Ultra HD 4K - QLED-tv - 98 inch - 2025",
-    "price": "1999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55QN90FATXXN - Ultra HD 4K - Neo QLED-tv - 55 inch - 2025",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE75U8000FUXXN - Ultra HD 4K - Led-tv - 75 inch - 2025",
-    "price": "899",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG F-QE55LS03FAUX - Ultra HD 4K - QLED-tv - 55 inch - 2025",
-    "price": "1029",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S95FATXXN - Ultra HD 4K - OLED-tv - 77 inch - 2025",
-    "price": "2849",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55Q7F4AUXXN - Ultra HD 4K - QLED-tv - 55 inch - 2025",
-    "price": "579",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG QE50Q7F4AUXXN - Ultra HD 4K - QLED-tv - 50 inch - 2025",
-    "price": "519",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG Crystal UHD U8000H - Ultra HD 4K - Led-tv - 58 inch - 2026",
-    "price": "699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE50QN80H - QLED 4K - Neo QLED-tv - 50 inch - 2026",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE43Q7F4AUXXN - Ultra HD 4K - QLED-tv - 43 inch - 2025",
-    "price": "399",
-    "uvp": null,
-    "promo": "€170 Entertainment pakket"
-  },
-  {
-    "name": "SAMSUNG MRE75R85H - Ultra HD 4K - Micro-led-tv - 75 inch - 2026",
-    "price": "2599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55QN82FAUXXN - Ultra HD 4K - Mini-led-tv - 55 inch - 2025",
-    "price": "999",
-    "uvp": null,
-    "promo": "Korting van Essent"
-  },
-  {
-    "name": "SAMSUNG MRE75R95H - Ultra HD 4K - Micro-led-tv - 75 inch - 2026",
-    "price": "4599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG 65LST7DAT - Ultra HD 4K - Mini-led-tv - 65 inch - 2025",
-    "price": "4499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG 75\" 75LST7DAT - Ultra HD 4K - Mini-led-tv - 75 inch - 2025",
-    "price": "6499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LENOVO IdeaPad Slim 5 OLED 15ARP10 - 15.1 inch - Ryzen™ 7 7735HS - 32 GB - 512 G",
-    "price": "699",
-    "uvp": "999",
-    "promo": null
-  },
-  {
-    "name": "LENOVO IdeaPad Slim 3 OLED 14IRH10 - 14 inch - Core™ i5-13420H - 16 GB - 512 GB ",
-    "price": "569",
-    "uvp": "779",
-    "promo": null
-  },
-  {
-    "name": "HP Laptop 15-fc0872nd - 15.6 inch - Full HD - AMD Ryzen 7 7730U - 16 GB - 512 GB",
-    "price": "519",
-    "uvp": "679",
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65Q7F2AUXXN Q7F2 - QLED 4K - QLED-tv - 65 inch - 2025",
-    "title": "SAMSUNG QE65Q7F2AUXXN Q7F2 - QLED 4K - QLED-tv - 65 inch - 2025",
+    "orig_price": 399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE43U8000H Crystal UHD - Ultra HD 4K - Led-tv - 43 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-43-crystal-uhd-u8000h-2026-1903296.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65Q7F2AUXXN",
     "price": 649.0,
-    "promo": "None"
+    "orig_price": 649.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE65Q7F2AUXXN Q7F2 - QLED 4K - QLED-tv - 65 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-qe65q7f2auxxn-q7f2-qled-4k-qled-tv-65-inch-2025-1907600.html"
   },
   {
-    "name": "SAMSUNG QE65QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 65 inch - 2025",
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55U8000H",
+    "price": 549.0,
+    "orig_price": 549.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE55U8000H Crystal UHD - Ultra HD 4K - Led-tv - 55 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-crystal-uhd-u8000h-2026-1903294.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 50,
+    "model_code": "UE50U8072F",
+    "price": 335.0,
+    "orig_price": 335.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE50U8072F| Buitenlands Model - Ultra HD 4K - Led-tv - 50 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-ue50u8072for-buitenlands-model-2025-162268141.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43M70H",
+    "price": 469.0,
+    "orig_price": 499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE43M70H - Ultra HD 4K - Mini-led-tv - 43 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-43-mini-led-4k-m70h-2026-1903288.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65QN74FATXXN",
+    "price": 999.0,
+    "orig_price": 999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
     "title": "SAMSUNG QE65QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 65 inch - 2025",
-    "price": 849.0,
-    "promo": "None"
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-65-neo-qled-4k-qn74f-2025-1882866.html"
   },
   {
-    "name": "SAMSUNG UE55U8000FUXXN - Ultra HD 4K - Led-tv - 55 inch - 2025",
-    "title": "SAMSUNG UE55U8000FUXXN - Ultra HD 4K - Led-tv - 55 inch - 2025",
-    "price": 529.0,
-    "promo": "None"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 50,
+    "model_code": "UE50U8000H",
+    "price": 499.0,
+    "orig_price": 499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE50U8000H Crystal UHD - Ultra HD 4K - Led-tv - 50 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-50-crystal-uhd-u8000h-2026-1903295.html"
   },
   {
-    "name": "SAMSUNG UE55U8072F\\| Buitenlands Model - Ultra HD 4K - Led-tv - 55 inch - 2025",
-    "title": "SAMSUNG UE55U8072F\\| Buitenlands Model - Ultra HD 4K - Led-tv - 55 inch - 2025",
-    "price": 397.0,
-    "promo": "None"
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN74FATXXN",
+    "price": 749.0,
+    "orig_price": 749.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE55QN74FATXXN - Ultra HD 4K - Neo QLED-tv - 55 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-neo-qled-4k-qn74f-2025-1882865.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "UE32F6000FUXXN",
+    "price": 288.0,
+    "orig_price": 288.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE32F6000FUXXN - Full HD - Led-tv - 32 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-32-full-hd-f6000f-2025-1882854.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 50,
+    "model_code": "UE50M70H",
+    "price": 559.0,
+    "orig_price": 599.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE50M70H - Ultra HD 4K - Mini-led-tv - 50 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-50-mini-led-4k-m70h-2026-1903287.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "UHD 4K",
+    "size": 40,
+    "model_code": "UE40F6000FUXXN",
+    "price": 399.0,
+    "orig_price": 399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG UE40F6000FUXXN - Full HD - Led-tv - 40 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-40-full-hd-f6000f-2025-1882855.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55U8072F",
+    "price": 408.0,
+    "orig_price": 408.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE55U8072F| Buitenlands Model - Ultra HD 4K - Led-tv - 55 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-ue55u8092for-buitenlands-model-2025-165122209.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 50,
+    "model_code": "QE50QN70H",
+    "price": 666.0,
+    "orig_price": 666.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QE50QN70H - Ultra HD 4K - Neo QLED-tv - 50 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-qe50qn70h-ultra-hd-4k-neo-qled-tv-50-inch-2026-180751690.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "Micro RGB",
+    "size": 75,
+    "model_code": "MRE75R85H",
+    "price": 2599.0,
+    "orig_price": 2599.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Cashback €250",
+    "title": "SAMSUNG MRE75R85H - Ultra HD 4K - Micro RGB-tv - 75 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-75-micro-rgb-4k-r85h-2026-1903266.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN85F",
+    "price": 676.0,
+    "orig_price": 676.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QE55QN85F - QLED 4K - Neo QLED-tv - 55 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-qe55qn85f-2025-165576406.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 50,
+    "model_code": "QE50LS03F",
+    "price": 698.0,
+    "orig_price": 698.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QE50LS03F| Buitenlands Model - HDR 4K - QLED-tv - 50 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-qe50ls03for-buitenlands-model-2025-162651608.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S85FAEXXN",
+    "price": 2999.0,
+    "orig_price": 2999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE83S85FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-83-oled-4k-s85f-2025-1882879.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "QE48S90FAEXXN",
+    "price": 1099.0,
+    "orig_price": 1099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE48S90FAEXXN - Ultra HD 4K - OLED-tv - 48 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-48-oled-4k-s90f-2025-1884514.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S90FAEXXN",
+    "price": 2699.0,
+    "orig_price": 2699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE77S90FAEXXN - Ultra HD 4K - OLED-tv - 77 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-77-oled-4k-s90f-2025-1884524.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "UE32T4300AEXXN",
+    "price": 177.0,
+    "orig_price": 177.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE32T4300AEXXN - HD ready - Led-tv - 32 inch - 2023",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-32-ue32t4300aexxn-2023-1875619.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 77,
+    "model_code": "QE77S95H",
+    "price": 4499.0,
+    "orig_price": 4499.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE77S95H - OLED 4K - OLED-tv - 77 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-77-oled-4k-s95h-2026-1903248.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "Unknown",
+    "price": 1949.0,
+    "orig_price": 1949.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG S90H - OLED 4K - OLED-tv - 55 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-oled-4k-s90h-2026-1903254.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65LS03H",
+    "price": 2199.0,
+    "orig_price": 2199.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG The Frame Pro F-QE65LS03H - QLED 4K - Neo QLED-tv - 65 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-65-the-frame-ls03hw-2026-1903276.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "QE55S95H",
+    "price": 2199.0,
+    "orig_price": 2199.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE55S95H - OLED 4K - OLED-tv - 55 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-oled-4k-s95h-2026-1903250.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55QN80H",
+    "price": 1099.0,
+    "orig_price": 1099.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE55QN80H - QLED 4K - Neo QLED-tv - 55 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-neo-qled-4k-qn80h-mini-led-2026-1903272.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 65,
+    "model_code": "QE65QN80H",
+    "price": 1399.0,
+    "orig_price": 1399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE65QN80H - QLED 4K - Neo QLED-tv - 65 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-65-neo-qled-4k-qn80h-mini-led-2026-1903271.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S95FAEXXN",
+    "price": 3999.0,
+    "orig_price": 3999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE83S95FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-83-oled-4k-s95f-2025-1882883.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "OLED",
+    "size": 83,
+    "model_code": "QE83S90FAEXXN",
+    "price": 3799.0,
+    "orig_price": 3799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE83S90FAEXXN - Ultra HD 4K - OLED-tv - 83 inch - 2025",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-83-oled-4k-s90f-2025-1884525.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "QE65S99H",
+    "price": 2799.0,
+    "orig_price": 2799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE65S99H - OLED 4K - OLED-tv - 65 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-65-oled-4k-s99h-2026-1903246.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "QE48S90H",
+    "price": 1549.0,
+    "orig_price": 1549.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "Bundelvoordeel",
+    "title": "SAMSUNG QE48S90H - OLED 4K - OLED-tv - 48 inch - 2026",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-48-oled-4k-s90h-2026-1903255.html"
   }
 ]

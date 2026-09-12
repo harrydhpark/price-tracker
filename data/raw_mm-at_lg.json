@@ -1,307 +1,128 @@
 [
   {
-    "name": "LG ELECTRONICS 65NANO80A6B (2025) 65 Zoll 4K NanoCell Smart TV",
-    "title": "LG ELECTRONICS 65NANO80A6B (2025) 65 Zoll 4K NanoCell Smart TV",
-    "price": 627.0,
-    "promo": "None",
-    "original_price": 699.0
-  },
-  {
-    "name": "LG ELECTRONICS 55NANO80A6B (2025) 55 Zoll 4K NanoCell Smart TV",
-    "title": "LG ELECTRONICS 55NANO80A6B (2025) 55 Zoll 4K NanoCell Smart TV",
-    "price": 429.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS OLED65B6ELC (2026) 65 Zoll 4K OLED AI Smart TV",
-    "title": "LG ELECTRONICS OLED65B6ELC (2026) 65 Zoll 4K OLED AI Smart TV",
+    "brand": "LG",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "OLED65B6ELC",
     "price": 1499.0,
+    "orig_price": 1699.0,
+    "shipping": "Free",
+    "cashback": 0,
     "promo": "None",
-    "original_price": 1699.0
+    "title": "LG ELECTRONICS OLED65B6ELC (2026) 65 Zoll 4K OLED AI Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-oled65b6elc-2026-65-zoll-4k-oled-ai-smart-tv-2078649.html"
   },
   {
-    "name": "LG ELECTRONICS OLED65C57LA (2025) 65 Zoll LG OLED evo AI C5 4K Smart TV",
-    "title": "LG ELECTRONICS OLED65C57LA (2025) 65 Zoll LG OLED evo AI C5 4K Smart TV",
-    "price": 1249.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS 50NANO80A6B (2025) 50 Zoll 4K NanoCell Smart TV",
-    "title": "LG ELECTRONICS 50NANO80A6B (2025) 50 Zoll 4K NanoCell Smart TV",
-    "price": 447.0,
-    "promo": "None",
-    "original_price": 549.0
-  },
-  {
-    "name": "LG ELECTRONICS 43NANO80A6B (2025) 43 Zoll 4K NanoCell Smart TV",
-    "price": "407",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 65NU800B6LA (2026) 65 Zoll NANO 4K UHD TV",
-    "price": "589",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED48C57LA (2025) 48 Zoll LG OLED evo AI C5 4K Smart TV",
-    "price": "1007",
-    "uvp": "1199",
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 75NANO80A6B (2025) 75 Zoll 4K NanoCell Smart TV",
-    "title": "LG ELECTRONICS 75NANO80A6B (2025) 75 Zoll 4K NanoCell Smart TV",
-    "price": 849.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS OLED55G69LS (2026) 55 Zoll LG OLED evo AI G6 4K Smart TV",
-    "price": "2299",
-    "uvp": null,
-    "promo": "200€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED65C69LB (2026) 65 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "2499",
-    "uvp": null,
-    "promo": "200€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED55B59LA (2025) 55 Zoll 4K OLED TV",
-    "price": "749",
-    "uvp": "1199",
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 55NU800B6LA (2026) 55 Zoll NANO 4K UHD TV",
-    "title": "LG ELECTRONICS 55NU800B6LA (2026) 55 Zoll NANO 4K UHD TV",
-    "price": 469.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS OLED55G59LS (2025) 55 Zoll 4K OLED evo Smart TV",
-    "price": "1567",
-    "uvp": "1799",
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED55C69LB (2026) 55 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "1899",
-    "uvp": null,
-    "promo": "150€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED55G68LW (2026) 55 Zoll OLED evo AI G6 4K Smart TV mit integri",
-    "price": "2189",
-    "uvp": null,
-    "promo": "200€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 50NU800B6LC (2026) 50 Zoll NANO 4K UHD TV",
-    "price": "429",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED42C57LA (2025) 42 Zoll 4K OLED evo TV",
-    "price": "1037",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED48G59LS (2025) 48 Zoll 4K OLED evo Smart TV",
-    "price": "1377",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 86NANO81A6A (2025) 86 Zoll 4K NanoCell Smart TV",
-    "price": "1367",
-    "uvp": "1999",
-    "promo": "10% myMediaMarkt-Sofortrabatt in der APP"
-  },
-  {
-    "name": "LG ELECTRONICS 43NU800B6LC (2026) 43 Zoll NANO 4K UHD TV",
-    "price": "409",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED48C69LB (2026) 48 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "1599",
-    "uvp": null,
-    "promo": "125€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED55B6ELC (2026) 55 Zoll 4K OLED AI Smart TV",
-    "price": 1099.0,
-    "uvp": "1299",
-    "promo": null,
-    "original_price": 1299.0
-  },
-  {
-    "name": "LG ELECTRONICS OLED55C57LA (2025) 55 Zoll LG OLED evo AI C5 4K Smart TV",
-    "price": 1157.0,
-    "uvp": "1599",
-    "promo": null,
-    "original_price": 1599.0
-  },
-  {
-    "name": "LG ELECTRONICS OLED65G59LS (2025) 65 Zoll 4K OLED evo Smart TV",
-    "price": "2197",
-    "uvp": "2499",
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 85QNED72B6A (2026) 85 Zoll LG QNED AI QNED72 Mini LED 4K Smart TV",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED65G69LS (2026) 65 Zoll LG OLED evo AI G6 4K Smart TV",
-    "price": "3299",
-    "uvp": null,
-    "promo": "250€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED77C69LB (2026) 77 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "3399",
-    "uvp": null,
-    "promo": "400€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED77G68LW (2026) 77 Zoll OLED evo AI G6 4K Smart TV mit integri",
-    "price": "4299",
-    "uvp": null,
-    "promo": "500€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED65G68LW (2026) 65 Zoll OLED evo AI G6 4K Smart TV mit integri",
-    "price": "3179",
-    "uvp": null,
-    "promo": "250€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED83C69LB (2026) 83 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "4699",
-    "uvp": null,
-    "promo": "500€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 85NU800B6LA (2026) 85 Zoll NANO 4K UHD TV",
-    "price": "1199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED48G69LS (2026) 48 Zoll LG OLED evo AI G6 4K Smart TV",
-    "price": "1739",
-    "uvp": null,
-    "promo": "200€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 75QNED72B6A (2026) 75 Zoll LG QNED AI QNED72 Mini LED 4K Smart TV",
-    "price": "1019",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS OLED83G68LW (2026) 83 Zoll OLED evo AI G6 4K Smart TV mit integri",
-    "price": "5299",
-    "uvp": null,
-    "promo": "700€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 75NU800B6LA (2026) 75 Zoll NANO 4K UHD TV",
-    "price": "819",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 65MRGB87B9B (2026) 65 Zoll Mini RGB evo AI MRGB87 4K Smart TV",
-    "price": "1599",
-    "uvp": null,
-    "promo": "150€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 86MRGB87B9B (2026) 86 Zoll Mini RGB evo AI MRGB87 4K Smart TV",
-    "price": "2299",
-    "uvp": "2999",
-    "promo": "300€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED42C69LB (2026) 42 Zoll OLED evo AI C6 4K Smart TV",
-    "price": "1399",
-    "uvp": null,
-    "promo": "100€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 55MRGB87B9B (2026) 55 Zoll Mini RGB evo AI MRGB87 4K Smart TV",
-    "price": "1299",
-    "uvp": null,
-    "promo": "125€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 75MRGB87B9B (2026) 75 Zoll Mini RGB evo AI MRGB87 4K Smart TV",
-    "price": "2299",
-    "uvp": null,
-    "promo": "200€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 50MRGB87B9B (2026) 50 Zoll Mini RGB evo AI MRGB87 4K Smart TV",
-    "price": "999",
-    "uvp": null,
-    "promo": "100€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS 100QNED87B6 (2026) 100 Zoll 4K QNED evo Display mit MiniLED Hinte",
-    "price": "3839",
-    "uvp": null,
-    "promo": "500€ Cashback sichern"
-  },
-  {
-    "name": "LG ELECTRONICS OLED65B59LA (2025) 65 Zoll 4K OLED TV",
-    "price": "997",
-    "uvp": "1649",
-    "promo": null
-  },
-  {
-    "name": "DREAME L10s Ultra Gen 3 Set Saugroboter mit Wischfunktion (Weiß, Laufzeit: bis z",
-    "price": "379",
-    "uvp": "499",
-    "promo": null
-  },
-  {
-    "name": "LG ELECTRONICS 43UA75006LA (2025) 43 Zoll UHD Smart TV",
-    "title": "LG ELECTRONICS 43UA75006LA (2025) 43 Zoll UHD Smart TV",
-    "price": 337.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS 65UA75006LA (2025) 65 Zoll UHD Smart TV",
-    "title": "LG ELECTRONICS 65UA75006LA (2025) 65 Zoll UHD Smart TV",
-    "price": 499.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS 55UA75006LA (2025) 55 Zoll UHD Smart TV",
-    "title": "LG ELECTRONICS 55UA75006LA (2025) 55 Zoll UHD Smart TV",
-    "price": 399.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS 50UA75006LA (2025) 50 Zoll UHD Smart TV",
-    "title": "LG ELECTRONICS 50UA75006LA (2025) 50 Zoll UHD Smart TV",
-    "price": 379.0,
-    "promo": "None"
-  },
-  {
-    "name": "LG ELECTRONICS 32LQ63006LA 32 Zoll Full HD Smart TV",
-    "title": "LG ELECTRONICS 32LQ63006LA 32 Zoll Full HD Smart TV",
+    "brand": "LG",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "Unknown",
     "price": 297.0,
-    "promo": "None"
+    "orig_price": 297.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS 32LQ63006LA 32 Zoll Full HD Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-32lq63006la-2022-32-zoll-full-hd-smart-tv-1879368.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "OLED",
+    "size": 65,
+    "model_code": "OLED65G69LS",
+    "price": 2599.0,
+    "orig_price": 3399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS OLED65G69LS (2026) 65 Zoll LG OLED evo AI G6 4K Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-oled65g69ls-2026-65-zoll-lg-oled-evo-ai-g6-4k-smart-tv-2080562.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "OLED55C59LB",
+    "price": 1497.0,
+    "orig_price": 1497.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS OLED55C59LB (2025) 55 Zoll 4K OLED evo TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-oled55c59lb-2025-55-zoll-4k-oled-evo-tv-2027172.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "65NANO80A6B",
+    "price": 627.0,
+    "orig_price": 699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS 65NANO80A6B (2025) 65 Zoll 4K NanoCell Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-65nano80a6b-2025-65-zoll-4k-nanocell-smart-tv-2027430.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "OLED",
+    "size": 55,
+    "model_code": "OLED55B6ELC",
+    "price": 1099.0,
+    "orig_price": 1299.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS OLED55B6ELC (2026) 55 Zoll 4K OLED AI Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-oled55b6elc-2026-55-zoll-4k-oled-ai-smart-tv-2078650.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "QNED",
+    "size": 65,
+    "model_code": "65QNED71B6B",
+    "price": 629.99,
+    "orig_price": 629.99,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS 65QNED71B6B (2026) 65 Zoll 4K QNED Mini LED Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-65qned71b6b-2026-65-zoll-4k-qned-mini-led-smart-tv-2080639.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "QNED",
+    "size": 65,
+    "model_code": "65QNED80A6A",
+    "price": 707.0,
+    "orig_price": 799.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS 65QNED80A6A (2025) 65 Zoll 4K QNED TV mit Super Slim Design",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-65qned80a6a-2025-65-zoll-4k-qned-tv-mit-super-slim-design-2027190.html"
+  },
+  {
+    "brand": "LG",
+    "year": 2026,
+    "display": "QNED",
+    "size": 50,
+    "model_code": "50QNED71B6B",
+    "price": 469.99,
+    "orig_price": 469.99,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "LG ELECTRONICS 50QNED71B6B (2026) 50 Zoll 4K QNED Mini LED Smart TV",
+    "link": "https://www.mediamarkt.at/de/product/_lg-electronics-50qned71b6b-2026-50-zoll-4k-qned-mini-led-smart-tv-2080643.html"
   }
 ]

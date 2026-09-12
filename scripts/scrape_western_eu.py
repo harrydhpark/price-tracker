@@ -160,7 +160,7 @@ def scrape_mediamarkt_country(session, country_code, brand, max_pages=4):
             url = f"https://www.{domain}/{lang}/search.html?query={q}&page={page}"
             print(f"  ➔ [FETCH] {url}")
             try:
-                resp = session.fetch(url, solve_cloudflare=True, wait=3000)
+                resp = session.fetch(url, solve_cloudflare=True, wait=3000, timeout=20000)
                 if resp.status == 200:
                     page_items = parse_mediamarkt_page(resp.text, brand, lang)
                     print(f"    -> Extracted {len(page_items)} products on page {page}.")
@@ -172,7 +172,7 @@ def scrape_mediamarkt_country(session, country_code, brand, max_pages=4):
                 else:
                     print(f"    -> Non-200 status: {resp.status}")
             except Exception as e:
-                print(f"    -> Error fetching {url}: {e}")
+                print(f"    -> Error or timeout fetching {url}: {e}")
                 
     print(f"✅ [{country_code} - {brand}] Total unique scraped: {len(all_items)}")
     return all_items

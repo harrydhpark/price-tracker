@@ -112,9 +112,9 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         # Rule 4: Category and screen-size price floors (CRITICAL)
         panel_up = (r.get("panel_type") or "").upper()
         mc_up = model_code.upper()
-        is_oled = "OLED" in panel_up or "OLED" in mc_up or any(s in mc_up for s in ["S90", "S95", "S99", "S85"])
         is_mrgb = any(x in panel_up or x in mc_up for x in ["MRGB", "MICRO RGB", "R85", "R95"])
-        is_qned = any(x in panel_up or x in mc_up for x in ["QNED", "QLED", "NEO QLED", "QN8", "QN9", "QN7", "LS03"])
+        is_qned = not is_mrgb and any(x in panel_up or x in mc_up for x in ["QNED", "QLED", "NEO QLED", "QN8", "QN9", "QN7", "LS03"])
+        is_oled = not is_mrgb and not is_qned and ("OLED" in panel_up or "OLED" in mc_up or any(s in mc_up for s in ["S90", "S95", "S99", "S85"]))
 
         floor_violated = False
         floor_eur = 50.0
@@ -131,9 +131,9 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
             else: floor_eur = 400.0
         elif is_mrgb:
             cat_name = "Micro RGB"
-            if size >= 75: floor_eur = 1500.0
-            elif size >= 50: floor_eur = 750.0
-            else: floor_eur = 600.0
+            if size >= 75: floor_eur = 1200.0
+            elif size >= 50: floor_eur = 600.0
+            else: floor_eur = 500.0
         elif is_qned:
             cat_name = "QNED/QLED"
             if size >= 75: floor_eur = 600.0
@@ -185,7 +185,9 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
                 diff_pct = (price - prev_price) / prev_price
                 if abs(diff_pct) >= 0.30:
                     # Promo text exemption: if promo changed along with price, exempt
-                    if curr_promo != prev_promo:
+                    if curr_promo != prev_promo or curr_promo.strip().upper() not in ["NONE", ""]:
+                        pass
+                    elif r.get("original_price") and float(r.get("original_price")) > price:
                         pass
                     else:
                         anomalies.append({

@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import os, sys, json, glob, openpyxl
 from datetime import datetime
 
@@ -6,7 +6,10 @@ sys.stdout.reconfigure(encoding='utf-8')
 sys.path.insert(0, '.')
 
 DATA_DIR = os.path.abspath('data')
-target_wb = os.path.join(DATA_DIR, 'price tracker_EU_2026 0907_v1.xlsx')
+candidates = glob.glob(os.path.join(DATA_DIR, 'price tracker_EU_2026 0912*.xlsx'))
+if not candidates:
+    candidates = glob.glob(os.path.join(DATA_DIR, 'price tracker_EU_2026 *.xlsx'))
+target_wb = sorted(candidates)[-1]
 
 print(f"Target workbook: {target_wb}")
 
@@ -67,6 +70,16 @@ from scripts.scrape_and_sync_hungary import write_standard_sheet
 with open(os.path.join(DATA_DIR, 'raw_mediamarkt_hu_deep.json'), 'r', encoding='utf-8') as f:
     hu_raw = json.load(f)
 
+if isinstance(hu_raw, dict):
+    all_items = []
+    for b, lst in hu_raw.items():
+        if isinstance(lst, list):
+            for x in lst:
+                if isinstance(x, dict):
+                    x['brand'] = b.capitalize()
+                    all_items.append(x)
+    hu_raw = all_items
+
 clean_sec = []
 clean_lg = []
 for it in hu_raw:
@@ -108,8 +121,8 @@ wb.close()
 print(f"✅ MediaMarkt Hungary synced to Excel ({len(clean_sec)} Samsung, {len(clean_lg)} LG).")
 
 # Mirror to History_EU
-hist_dir = os.path.join('History_EU', '2026 0907')
+hist_dir = os.path.join('History_EU', '2026 0912')
 os.makedirs(hist_dir, exist_ok=True)
 import shutil
-shutil.copy2(target_wb, os.path.join(hist_dir, 'price tracker_EU_2026 0907_v1.xlsx'))
-print("✅ Mirrored complete 22-sheet workbook to History_EU/2026 0907/price tracker_EU_2026 0907_v1.xlsx.")
+shutil.copy2(target_wb, os.path.join(hist_dir, os.path.basename(target_wb)))
+print(f"✅ Mirrored complete 22-sheet workbook to {os.path.join(hist_dir, os.path.basename(target_wb))}.")

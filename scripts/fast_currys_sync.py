@@ -171,8 +171,12 @@ def process_currys_dump(output_path):
         content = content[:idx].strip()
         
     raw_data = json.loads(content)
-    samsungs_raw = raw_data.get("samsung", [])
-    lgs_raw = raw_data.get("lg", [])
+    if "data" in raw_data and isinstance(raw_data["data"], dict):
+        samsungs_raw = raw_data["data"].get("samsung", [])
+        lgs_raw = raw_data["data"].get("lg", [])
+    else:
+        samsungs_raw = raw_data.get("samsung", [])
+        lgs_raw = raw_data.get("lg", [])
     
     # Process Samsung
     s_seen = {}

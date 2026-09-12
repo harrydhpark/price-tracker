@@ -540,11 +540,12 @@ def main():
                     except Exception as e_s:
                         print(f"[WARN] Failed loading Swiss Excel for mm-ch: {e_s}")
             else:
-                if src_key == 'mm-at':
-                    pattern = os.path.join(data_dir, f"raw_mm-at_{brand}*.json")
+                direct_file = os.path.join(data_dir, f"raw_{src_key}_{brand}.json")
+                if os.path.exists(direct_file):
+                    json_files = [direct_file]
                 else:
                     pattern = os.path.join(data_dir, f"raw_{src_key}_{brand}*.json")
-                json_files = glob.glob(pattern)
+                    json_files = glob.glob(pattern)
                 
                 scraped_items = []
                 for jf in json_files:

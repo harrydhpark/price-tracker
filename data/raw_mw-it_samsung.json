@@ -1,691 +1,170 @@
 [
   {
-    "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 43'', Vision AI Smart, 4K, Processore Q4 AI, 4K",
-    "price": "599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur C",
-    "price": 179.49,
-    "uvp": null,
-    "promo": null,
-    "original_price": 249.0
-  },
-  {
-    "name": "SAMSUNG Q7F5AUXZT4, Smart TV QLED 55'', 4K, Processore Q4 AI, 4K Upscaling, Colo",
-    "price": "749",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE24F6000FUXZT, Smart TV FULL HD 24'', Hyper Real Processor, HDR & Pur C",
-    "price": 171.49,
-    "uvp": null,
-    "promo": null,
-    "original_price": 209.0
-  },
-  {
-    "name": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur C",
-    "price": 219.49,
-    "uvp": null,
-    "promo": null,
-    "original_price": 329.0
-  },
-  {
-    "name": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HD",
-    "price": 399.0,
-    "uvp": null,
-    "promo": null,
-    "original_price": 649.0
-  },
-  {
-    "name": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Cont",
-    "price": 299.99,
-    "uvp": null,
-    "promo": null,
-    "original_price": 329.0
-  },
-  {
-    "name": "SAMSUNG QE55S90FAEXZT, Smart TV OLED 55'',  Vision AI, 4K, Processore NQ4 AI Gen",
-    "price": "1899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65S85FAEXZT, Smart TV OLED 65'', Vision AI, 4K, Processore NQ4 AI Gen2",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65U8000FUXZT, Smart TV Crystal UHD 65'', 4K, Processore Crystal 4K, HD",
-    "price": "749",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN70FAUXZT, Smart TV Neo QLED 65'', Vision AI, 4K Mini LED, Processo",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE50U7000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HD",
-    "price": "449",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HD",
-    "price": 345.49,
-    "uvp": null,
-    "promo": null,
-    "original_price": 599.0
-  },
-  {
-    "name": "SAMSUNG UE43U7000FUXZT, Smart TV Crystal UHD 43'', 4K, Processore Crystal 4K, HD",
-    "price": 310.99,
-    "uvp": null,
-    "promo": null,
-    "original_price": 399.0
-  },
-  {
-    "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 85'', Vision AI Smart, 4K, Processore Q4 AI, 4K",
-    "price": "1999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55QN70FAUXZT, Smart TV Neo QLED 55'', Vision AI, 4K Mini LED, Processo",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 65\" UE65M80HAUXZT 4K, Processore NQ4 AI Gen2, 4K Upscalin",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE43QN70HAUXZT TV Mini LED, SMART TV, 43 \", Mini LED, Processore NQ4 AI ",
-    "price": "599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65U7000FUXZT, Smart TV Crystal UHD 65'', 4K, Processore Crystal 4K, HD",
-    "price": "699",
-    "uvp": null,
-    "promo": "OUTLET"
-  },
-  {
-    "name": "SAMSUNG The Frame QE32LS03CBUXZT TV QLED, SMART TV, 32 \", QLED, Full-HD, Process",
-    "price": "599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 43\" UE43U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 43\" QE43LS03HEUXZT 4K, Processore NQ4 AI Gen2, 4K AI Ups",
-    "price": "1099",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 55\" UE55M80HAUXZT 4K, Processore NQ4 AI Gen2, 4K Upscalin",
-    "price": "699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65Q6FAAUXZT TV QLED, SMART TV, 65 \", QLED, Processore Q4 Lite, Black, ",
-    "price": "849",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55Q8FAAUXZT, Smart TV QLED 55'', 4K, Processore Q4 AI, 4K Upscaling, C",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 43\" UE43M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "499,90",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE85U8000FUXZT, Smart TV Crystal UHD 85'', 4K, Processore Crystal 4K, HD",
-    "price": "1499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN70HAUXZT TV MINI LED, SMART TV, 65 \", Mini LED, Processore NQ4 AI ",
-    "price": "1199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame Pro AI TV 65\" QE65LS03HWUXZT 4K, Processore NQ4 AI Gen3, 4K AI",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 50\" UE50U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Q8FAAUXZT, Smart TV QLED 75'', 4K, Processore Q4 AI, 4K Upscaling, Color",
-    "price": "1699",
-    "uvp": null,
-    "promo": "Sconto MW CLUB disponibile"
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 50\" UE50M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "549",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 48\" QE48S90HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "1499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 48\" QE48S85HAEXZT 4K, Processore NQ4 AI Gen2, 4K AI Upscaling",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "CORNICE TV SAMSUNG VG-SCFA43WTBXC cornice magnetica decorativa per TV Samsung Th",
-    "price": "79",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE43CU7090UXZT TV LED, SMART TV, 43 \", LED, Processore Crystal 4K, Class",
-    "price": "499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S85DAEXZT TV OLED, SMART TV, 77 \", OLED, Processore NQ4 AI Gen2, Bla",
-    "price": "2575,58",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE50QN70HAUXZT TV MINI LED, SMART TV, 50 \", Mini LED, Processore NQ4 AI ",
-    "price": "799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE100QN80FUXZT, Smart TV Neo QLED 100'', Vision AI, 4K Mini LED, Process",
-    "price": "5999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE85U7000FUXZT, Smart TV Crystal UHD 85'', 4K, Processore Crystal 4K, HD",
-    "price": "1299",
-    "uvp": null,
-    "promo": "Sconto MW CLUB disponibile"
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 85\" UE85U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 55\" QE55S95HFTXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 42\" QE42S90HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "1299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 55\" UE55U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "549",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 55\" QE55S90HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "1899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 55\" MRE55R85HAUXZT, Micro RGB AI Engine, Micro RGB Color",
-    "price": "1699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 75\" UE75U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 48\" QE48S95HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "1799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame AI TV 65\" UE65U8000HUXZT 4K, Processore Crystal 4K, 4K Upscali",
-    "price": "699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 85\" UE85M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "1799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE55QN70HAUXZT TV MINI LED, SMART TV, 55 \", Mini LED, Processore NQ4 AI ",
-    "price": "899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Neo QLED AI TV 75\" QE75QN70HAUXZT 4K, Processore NQ4 AI, 4K Upscaling, A",
-    "price": "1699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 75\" UE75M80HAUXZT 4K, Processore NQ4 AI Gen2, 4K Upscalin",
-    "price": "1399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 65\" MRE65R95HATXZT, Micro RGB AI Engine Pro, 4K AI Upsca",
-    "price": "3699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 65\" UE65M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE27LSM7FAXXXE TV LED, 27’’, QHD, Full AI, Moving Style con Schermo Touc",
-    "price": "999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 75\" MRE75R95HATXZT, Micro RGB AI Engine Pro, 4K AI Upsca",
-    "price": "4999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE115QN90FTXZT TV OLED, SMART TV, 115 \", Neo QLED, Processore NQ8 AI Gen",
-    "price": "19999",
-    "uvp": null,
-    "promo": "OUTLET"
-  },
-  {
-    "name": "SAMSUNG Q8FAAUXZT, Smart TV QLED 85'', 4K, Processore Q4 AI, 4K Upscaling, Color",
-    "price": "2199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame Pro AI TV 55\" QE55LS03HWUXZT 4K, Processore NQ4 AI Gen3, 4K AI",
-    "price": "1799",
-    "uvp": null,
-    "promo": "Sconto MW CLUB disponibile"
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 65\" QE65S90HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "2599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 77\" QE77S95HFTXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "4499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 55\" UE55M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "619",
-    "uvp": null,
-    "promo": "Sconto MW CLUB disponibile"
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 65\" QE65S95HFTXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "3262,49",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 55\" QE55S85HAEXZT 4K, Processore NQ4 AI Gen2, 4K AI Upscaling",
-    "price": "1599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN900DTXZT Mini LED TV NEO QLED, SMART TV, 65 \", Neo QLED, Processor",
-    "price": "5499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 83\" QE83S85HAEXZT 4K, Processore NQ4 AI Gen2, 4K AI Upscaling",
-    "price": "4399",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 75\" MRE75R85HAUXZT, Micro RGB AI Engine, Micro RGB Color",
-    "price": "2899",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 65\" MRE65R85HAUXZT, Micro RGB AI Engine, Micro RGB Color",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE98QN90FATXZT, Smart TV Neo QLED 98'', Vision AI, 4K Mini LED, Processo",
-    "price": "9999",
-    "uvp": null,
-    "promo": "OUTLET"
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 65\" QE65S85HAEXZT 4K, Processore NQ4 AI Gen2, 4K AI Upscaling",
-    "price": "2299",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 55\" QE55S99HATXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "2499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 65\" QE65S99HATXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "3599",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Mini LED AI TV 75\" UE75M70HAUXZT 4K, Processore Mini LED 4K, 4K Upscalin",
-    "price": "1199",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 77\" QE77S90HATXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "3699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE65QN990FTXZT, Smart TV NEO QLED 65'', Vision AI, Mini LED, Processore ",
-    "price": "5499",
-    "uvp": null,
-    "promo": "Sconto MW CLUB disponibile"
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 77\" QE77S85HAEXZT 4K, Processore NQ4 AI Gen2, 4K AI Upscaling",
-    "price": "2999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE85QN900FTXZT, Smart TV NEO QLED 85'', Vision AI, Mini LED, Processore ",
-    "price": "6999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 83\" QE83S99HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "6499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 85\" MRE85R95HATXZT, Micro RGB AI Engine Pro, 4K AI Upsca",
-    "price": "5999",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Micro RGB AI TV 85\" MRE85R85HAUXZT, Micro RGB AI Engine, Micro RGB Color",
-    "price": "4499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE75QN990FTXZT, Smart TV NEO QLED 75'', Vision AI, Mini LED, Processore ",
-    "price": "4248,99",
-    "uvp": null,
-    "promo": "OUTLET"
-  },
-  {
-    "name": "SAMSUNG QE55S95FATXZT, Smart TV OLED 55'', Vision AI, 4K, Processore NQ4 AI Gen3",
-    "price": "2499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG UE65CU7170UXZT TV LED, SMART TV, 65 \", LED, Processore HDR 10+ / HLG, Cl",
-    "price": "949",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE77S95DATXZT TV OLED, SMART TV, 77 \", OLED, Processore Neural Quantum 4",
-    "price": "4799",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE83S90FAEXZT TV OLED, SMART TV, 83 \", OLED, Processore NQ4 AI Gen3, Gra",
-    "price": "4499",
-    "uvp": null,
-    "promo": "OUTLET"
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds3 FE Auricolari wireless, Black",
-    "price": "149",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds4 Pro AURICOLARI WIRELESS, Black",
-    "price": "249",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds3 FE Auricolari wireless, Gray",
-    "price": "89,99",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG OLED AI TV 83\" QE83S90HAEXZT 4K, Processore NQ4 AI Gen3, 4K AI Upscaling",
-    "price": "4599,49",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG QE85QN70HAUXZT TV MINI LED, SMART TV, 85 \", Mini LED, Processore NQ4 AI ",
-    "price": "1699",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG The Frame Pro AI TV 75\" QE75LS03HWUXZT 4K, Processore NQ4 AI Gen3, 4K AI",
-    "price": "3499",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds4 Pro AURICOLARI WIRELESS, White",
-    "price": "249",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds4 AURICOLARI WIRELESS, Black",
-    "price": "179",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Galaxy Buds4 AURICOLARI WIRELESS, White",
-    "price": "179",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "CORNICE TV SAMSUNG VG-SCFF65BWBXC",
-    "price": "89",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "APPLE iPhone 17 256GB Nero",
-    "price": "979",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "PEAQ 32GH-5025C TV LED, SMART TV, 32 \", LED, WXGA, Black, Classe E",
-    "price": "148,59",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "HOOVER HW 28AMC7/1-S LAVATRICE, Caricamento frontale, 8 kg, 16 programmi, Profon",
-    "price": "329",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "PEAQ 24GH-5025C  TV LED, SMART TV, 24 \", LED, WXGA, Classe D",
-    "price": "129,82",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "XIAOMI Redmi Note 15 Pro 5G 8+512, 512 GB, BLACK",
-    "price": "429,90",
-    "uvp": null,
-    "promo": null
-  },
-  {
-    "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 43'', Vision AI Smart, 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Slim Look Design",
-    "title": "SAMSUNG Q7FAAUXZT, Smart TV QLED 43'', Vision AI Smart, 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Slim Look Design",
-    "price": 408.0,
-    "promo": "Sale 15%; was EUR 599.00"
-  },
-  {
-    "name": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "title": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "price": 219.49,
-    "promo": "Sale 15%; was EUR 329.00",
-    "original_price": 329.0
-  },
-  {
-    "name": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "title": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "price": 179.49,
-    "promo": "Sale 15%; was EUR 249.00"
-  },
-  {
-    "name": "SAMSUNG UE24F6000FUXZT, Smart TV FULL HD 24'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "title": "SAMSUNG UE24F6000FUXZT, Smart TV FULL HD 24'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
-    "price": 171.49,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG Q7F5AUXZT4, Smart TV QLED 55'', 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Air Slim Design",
-    "title": "SAMSUNG Q7F5AUXZT4, Smart TV QLED 55'', 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Air Slim Design",
-    "price": 508.8,
-    "promo": "Sale 15%; was EUR 749.00"
-  },
-  {
-    "name": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Contrast Enhancer, OTS Lite, Q-Symphony, Slim Look Design,  2025",
-    "title": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Contrast Enhancer, OTS Lite, Q-Symphony, Slim Look Design,  2025",
-    "price": 299.99,
-    "promo": "Sale 15%; was EUR 329.00",
-    "original_price": 329.0
-  },
-  {
-    "name": "SAMSUNG QE65QN70FAUXZT, Smart TV Neo QLED 65'', Vision AI, 4K Mini LED, Processore NQ4 AI Gen2, 4K AI Upscaling, Motion Xcelerator 144Hz, Neo Quantum HDR, OTS Lite, AirSlim Design",
-    "title": "SAMSUNG QE65QN70FAUXZT, Smart TV Neo QLED 65'', Vision AI, 4K Mini LED, Processore NQ4 AI Gen2, 4K AI Upscaling, Motion Xcelerator 144Hz, Neo Quantum HDR, OTS Lite, AirSlim Design",
-    "price": 116.77,
-    "promo": "None"
-  },
-  {
-    "name": "SAMSUNG QE55S90FAEXZT, Smart TV OLED 55'', Vision AI, 4K, Processore NQ4 AI Gen3, 4K AI Upscaling Pro, Schermo antiriflesso, OLED HDR, Dolby Atmos & OTS Lite, Laser Slim Design",
-    "title": "SAMSUNG QE55S90FAEXZT, Smart TV OLED 55'', Vision AI, 4K, Processore NQ4 AI Gen3, 4K AI Upscaling Pro, Schermo antiriflesso, OLED HDR, Dolby Atmos & OTS Lite, Laser Slim Design",
-    "price": 1015.2,
-    "promo": "Sale 15%; was EUR 1899.00"
-  },
-  {
-    "name": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "title": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "price": 399.0,
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 55,
+    "model_code": "QE55Q7FAAU",
+    "price": 381.63,
+    "orig_price": 381.63,
+    "shipping": "Free",
+    "cashback": 0,
     "promo": "None",
-    "original_price": 649.0
+    "title": "SAMSUNG QE55Q7FAAU Vision AI TV QLED, SMART TV, 55 \", UHD 4K, Nero, Classe G",
+    "link": "https://www.mediaworld.it/it/product/_samsung-qe55q7faau-vision-ai-tv-qled-55-uhd-4k-158703096.html"
   },
   {
-    "name": "SAMSUNG QE65S85FAEXZT, Smart TV OLED 65'', Vision AI, 4K, Processore NQ4 AI Gen2, 4K AI Upscaling, Schermo antiriflesso, OLED HDR, Dolby Atmos & OTS Lite, Contour Design",
-    "title": "SAMSUNG QE65S85FAEXZT, Smart TV OLED 65'', Vision AI, 4K, Processore NQ4 AI Gen2, 4K AI Upscaling, Schermo antiriflesso, OLED HDR, Dolby Atmos & OTS Lite, Contour Design",
-    "price": 1243.2,
-    "promo": "Sale 15%; was EUR 2299.00"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 32,
+    "model_code": "UE32F6000FUXZT",
+    "price": 299.0,
+    "orig_price": 329.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE32F6000FUXZT, Smart TV FULL HD 32'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue32f6000fuxzt-435544.html"
   },
   {
-    "name": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "title": "SAMSUNG UE50U8000FUXZT, Smart TV Crystal UHD 50'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
-    "price": 345.49,
-    "promo": "Sale 15%; was EUR 599.00",
-    "original_price": 599.0
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 27,
+    "model_code": "UE27F6000FUXZT",
+    "price": 229.0,
+    "orig_price": 249.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE27F6000FUXZT, Smart TV FULL HD 27'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue27f6000fuxzt-435545.html"
   },
   {
-    "name": "SAMSUNG Q7FAAUXZT, Smart TV QLED 85'', Vision AI Smart, 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Slim Look Design",
-    "title": "SAMSUNG Q7FAAUXZT, Smart TV QLED 85'', Vision AI Smart, 4K, Processore Q4 AI, 4K Upscaling, Color Booster Pro, OTS Lite, Slim Look Design",
-    "price": 134.85,
-    "promo": "None"
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 50,
+    "model_code": "QE50Q7FAAUXXH",
+    "price": 351.64,
+    "orig_price": 351.64,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QE50Q7FAAUXXH TV QLED, SMART TV, 50 \", HDR 4K, Processore Q4 AI, Nero, Classe G",
+    "link": "https://www.mediaworld.it/it/product/_samsung-qe50q7f2-2025-tv-qled-piatto-50-uhd-4k-158211241.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "OLED",
+    "size": 48,
+    "model_code": "TQ48S95HAEXXC",
+    "price": 1488.26,
+    "orig_price": 1488.26,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG TQ48S95HAEXXC TV OLED, SMART TV, 48 \", OLED, UHD 4K, Processore NQ4 AI Gen3, Nero, Classe F",
+    "link": "https://www.mediaworld.it/it/product/_samsung-tq48s95haexxc-tv-oled-smart-tv-48-oled-uhd-4k-processore-nq4-ai-gen3-nero-classe-f-175526601.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 75,
+    "model_code": "TU75M73HAUXXC",
+    "price": 1686.62,
+    "orig_price": 1686.62,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG TU75M73HAUXXC TV Mini LED, SMART TV, 75 \", Mini LED, UHD 4K, Processore Mini LED Processor 4K, Nero, Classe F",
+    "link": "https://www.mediaworld.it/it/product/_samsung-tu75m73hauxxc-tv-mini-led-smart-tv-75-mini-led-uhd-4k-processore-mini-led-processor-4k-nero-classe-f-175527027.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 55,
+    "model_code": "UE55U8000FUXZT",
+    "price": 399.0,
+    "orig_price": 649.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE55U8000FUXZT, Smart TV Crystal UHD 55'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue55u8000fuxzt-435499.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 24,
+    "model_code": "UE24F6000FUXZT",
+    "price": 209.0,
+    "orig_price": 209.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE24F6000FUXZT, Smart TV FULL HD 24'', Hyper Real Processor, HDR & Pur Color, Smart Experience, OTS Lite & Adaptive Sound, Slim Look Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue24f6000fuxzt-435574.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 43,
+    "model_code": "QE43Q7F",
+    "price": 300.0,
+    "orig_price": 300.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QE43Q7F (2025) TV QLED, SMART TV, 43 \", HDR 4K, Processore Q4 AI, Nero, Classe G",
+    "link": "https://www.mediaworld.it/it/product/_samsung-qe43q7f2-2025-tv-qled-piatto-43-uhd-4k-158211251.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "QLED",
+    "size": 32,
+    "model_code": "QE32Q5FAAUXZT",
+    "price": 329.0,
+    "orig_price": 329.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG QLED Smart TV 4K 32\" QE32Q5FAAUXZT, Quantum HDR, Micro Dimming Pro, Contrast Enhancer, OTS Lite, Q-Symphony, Slim Look Design,  2025",
+    "link": "https://www.mediaworld.it/it/product/_samsung-qe32q5faauxzt-black-582593.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 65,
+    "model_code": "UE65U7000FUXZT",
+    "price": 492.99,
+    "orig_price": 699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE65U7000FUXZT, Smart TV Crystal UHD 65'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue65u7000fuxzt-65-uhd-4k-533491.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "UHD 4K",
+    "size": 43,
+    "model_code": "UE43U7000FUXZT",
+    "price": 349.0,
+    "orig_price": 399.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG UE43U7000FUXZT, Smart TV Crystal UHD 43'', 4K, Processore Crystal 4K, HDR, Smart Experience, OTS Lite & Adaptive Sound, Metal Stream Design",
+    "link": "https://www.mediaworld.it/it/product/_samsung-ue43u7000fuxzt-43-uhd-4k-533498.html"
   }
 ]
