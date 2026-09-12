@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-12 11:41:51",
+  "generated_at": "2026-09-12 12:09:00",
   "target_date": "2026-09-12",
   "kpis": {
     "target_date": "2026-09-12",
-    "total_records": 1851,
+    "total_records": 1895,
     "countries_count": 11,
     "country_breakdown": {
       "AT": {
@@ -47,17 +47,17 @@
         "unique_models": 165
       },
       "UK": {
-        "total": 129,
-        "unique_models": 129
+        "total": 173,
+        "unique_models": 173
       }
     },
     "brand_breakdown": {
-      "LG": 845,
-      "SAMSUNG": 1006
+      "LG": 872,
+      "SAMSUNG": 1023
     },
     "average_price_eur": {
-      "LG": 1692.35,
-      "SAMSUNG": 1618.94
+      "LG": 1695.15,
+      "SAMSUNG": 1610.58
     },
     "exchange_rates": {
       "EUR": 1.0,
@@ -359,16 +359,16 @@
       "size": 55,
       "lg_series": "G6",
       "sam_series": "S95H",
-      "lg_model": "OLED55G66LS",
+      "lg_model": "OLED55G64LW",
       "sam_model": "QE55S95H",
-      "lg_price_local": 2199.0,
+      "lg_price_local": 2099.0,
       "sam_price_local": 2099.0,
       "currency": "GBP",
-      "lg_price_eur": 2594.82,
+      "lg_price_eur": 2476.82,
       "sam_price_eur": 2476.82,
-      "diff_eur": 118.0,
-      "gap_pct": 4.8,
-      "verdict": "LG Premium (+4.8%)",
+      "diff_eur": 0.0,
+      "gap_pct": 0.0,
+      "verdict": "Parity (±2%)",
       "lg_retailer": "Currys",
       "sam_retailer": "Currys"
     },
@@ -378,16 +378,16 @@
       "size": 65,
       "lg_series": "G6",
       "sam_series": "S95H",
-      "lg_model": "OLED65G66LS",
+      "lg_model": "OLED65G64LW",
       "sam_model": "QE65S95H",
-      "lg_price_local": 2999.0,
+      "lg_price_local": 2799.0,
       "sam_price_local": 2699.0,
       "currency": "GBP",
-      "lg_price_eur": 3538.82,
+      "lg_price_eur": 3302.82,
       "sam_price_eur": 3184.82,
-      "diff_eur": 354.0,
-      "gap_pct": 11.1,
-      "verdict": "LG Premium (+11.1%)",
+      "diff_eur": 118.0,
+      "gap_pct": 3.7,
+      "verdict": "LG Premium (+3.7%)",
       "lg_retailer": "Currys",
       "sam_retailer": "Currys"
     },
@@ -492,16 +492,16 @@
       "size": 77,
       "lg_series": "C6",
       "sam_series": "S90H",
-      "lg_model": "OLED77C64LA",
+      "lg_model": "OLED77C66LB",
       "sam_model": "QE77S90H",
-      "lg_price_local": 2899.0,
+      "lg_price_local": 2999.0,
       "sam_price_local": 3099.0,
       "currency": "GBP",
-      "lg_price_eur": 3420.82,
+      "lg_price_eur": 3538.82,
       "sam_price_eur": 3656.82,
-      "diff_eur": -236.0,
-      "gap_pct": -6.5,
-      "verdict": "LG Advantage (-6.5%)",
+      "diff_eur": -118.0,
+      "gap_pct": -3.2,
+      "verdict": "LG Advantage (-3.2%)",
       "lg_retailer": "Currys",
       "sam_retailer": "Currys"
     },
@@ -675,6 +675,25 @@
       "verdict": "N/A",
       "lg_retailer": null,
       "sam_retailer": "Currys"
+    },
+    {
+      "country": "UK",
+      "segment": "Micro RGB 100",
+      "size": 100,
+      "lg_series": "MRGB96B",
+      "sam_series": "R95H",
+      "lg_model": "100MRGB96B6B",
+      "sam_model": null,
+      "lg_price_local": 12999.0,
+      "sam_price_local": null,
+      "currency": "GBP",
+      "lg_price_eur": 15338.82,
+      "sam_price_eur": null,
+      "diff_eur": null,
+      "gap_pct": null,
+      "verdict": "N/A",
+      "lg_retailer": "Currys",
+      "sam_retailer": null
     },
     {
       "country": "UK",
@@ -1173,6 +1192,25 @@
     {
       "country": "ES",
       "segment": "Mainstream OLED",
+      "size": 42,
+      "lg_series": "C6",
+      "sam_series": "S90H",
+      "lg_model": "OLED42C65LA",
+      "sam_model": null,
+      "lg_price_local": 869.0,
+      "sam_price_local": null,
+      "currency": "EUR",
+      "lg_price_eur": 869.0,
+      "sam_price_eur": null,
+      "diff_eur": null,
+      "gap_pct": null,
+      "verdict": "N/A",
+      "lg_retailer": "MediaMarkt",
+      "sam_retailer": null
+    },
+    {
+      "country": "ES",
+      "segment": "Mainstream OLED",
       "size": 55,
       "lg_series": "C6",
       "sam_series": "S90H",
@@ -1271,12 +1309,12 @@
       "size": 55,
       "lg_series": "B6",
       "sam_series": "S85H",
-      "lg_model": "OLED55B65LA",
+      "lg_model": "55MRGB87B6B",
       "sam_model": null,
-      "lg_price_local": 1001.33,
+      "lg_price_local": 799.0,
       "sam_price_local": null,
       "currency": "EUR",
-      "lg_price_eur": 1001.33,
+      "lg_price_eur": 799.0,
       "sam_price_eur": null,
       "diff_eur": null,
       "gap_pct": null,
@@ -1315,6 +1353,25 @@
       "sam_price_local": null,
       "currency": "EUR",
       "lg_price_eur": 1699.0,
+      "sam_price_eur": null,
+      "diff_eur": null,
+      "gap_pct": null,
+      "verdict": "N/A",
+      "lg_retailer": "MediaMarkt",
+      "sam_retailer": null
+    },
+    {
+      "country": "ES",
+      "segment": "Micro RGB",
+      "size": 55,
+      "lg_series": "MRGB87B",
+      "sam_series": "R85H",
+      "lg_model": "55MRGB87B6B",
+      "sam_model": null,
+      "lg_price_local": 799.0,
+      "sam_price_local": null,
+      "currency": "EUR",
+      "lg_price_eur": 799.0,
       "sam_price_eur": null,
       "diff_eur": null,
       "gap_pct": null,
@@ -4347,14 +4404,14 @@
   "movements": {
     "target_date": "2026-09-12",
     "compare_date": "2026-09-10",
-    "total_overlapping_models": 586,
-    "total_changed_models": 277,
+    "total_overlapping_models": 629,
+    "total_changed_models": 279,
     "brand_drops": {
-      "LG": 120,
+      "LG": 121,
       "SAMSUNG": 105
     },
     "brand_hikes": {
-      "LG": 13,
+      "LG": 14,
       "SAMSUNG": 39
     },
     "top_price_drops": [
@@ -4605,22 +4662,22 @@
   "promos": {
     "target_date": "2026-09-12",
     "total_by_brand": {
-      "LG": 845,
-      "SAMSUNG": 1006
+      "LG": 872,
+      "SAMSUNG": 1023
     },
     "promo_count_by_brand": {
-      "LG": 373,
-      "SAMSUNG": 477
+      "LG": 393,
+      "SAMSUNG": 494
     },
     "promo_rate_by_brand": {
-      "LG": 44.1,
-      "SAMSUNG": 47.4
+      "LG": 45.1,
+      "SAMSUNG": 48.3
     },
     "promo_keywords": {
       "Cashback": 11,
       "Direct Cut": 0,
       "Voucher": 0,
-      "Bundle": 126,
+      "Bundle": 130,
       "Member": 0,
       "Rabatt / Remise": 0
     },
@@ -4748,10 +4805,10 @@
     ]
   },
   "highlights": [
-    "유럽 11개국 총 1,851개 모델 실시간 가격 분석 완비",
+    "유럽 11개국 총 1,895개 모델 실시간 가격 분석 완비",
     "LG C6 vs Samsung S90H 메인스트림 OLED 가격 우위 (평균 -18% 경쟁력)",
     "삼성 주간 가격 조정: 105개 모델 인하 / 39개 모델 인상",
-    "LG 주간 가격 조정: 120개 모델 인하 / 13개 모델 인상",
-    "프로모션 적용률: LG 44.1% vs Samsung 47.4%"
+    "LG 주간 가격 조정: 121개 모델 인하 / 14개 모델 인상",
+    "프로모션 적용률: LG 45.1% vs Samsung 48.3%"
   ]
 }

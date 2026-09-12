@@ -4,10 +4,10 @@
 > **Date of Extraction**: 2026-09-12 | **Comparison Baseline**: 2026-09-10
 
 ## 1. 🌐 Executive Key Metrics Overview
-- **Total Active SKUs Tracked**: **1,851 models** across 11 European countries
-- **Brand Composition**: LG **845 SKUs** vs Samsung **1,006 SKUs**
-- **Overall ASP (EUR Normalized)**: LG **€1,692.35** vs Samsung **€1,618.94**
-- **Active Promotion Intensity**: LG **44.1%** vs Samsung **47.4%**
+- **Total Active SKUs Tracked**: **1,895 models** across 11 European countries
+- **Brand Composition**: LG **872 SKUs** vs Samsung **1,023 SKUs**
+- **Overall ASP (EUR Normalized)**: LG **€1,695.15** vs Samsung **€1,610.58**
+- **Active Promotion Intensity**: LG **45.1%** vs Samsung **48.3%**
 
 ### Country Sample Coverage
 | Country | Retailer | Total Models | Active Currencies |
@@ -22,7 +22,7 @@
 | **HU** | Major Retailer | 183 SKUs | Native Currency |
 | **IT** | Major Retailer | 144 SKUs | Native Currency |
 | **NL** | Major Retailer | 165 SKUs | Native Currency |
-| **UK** | Major Retailer | 129 SKUs | Native Currency |
+| **UK** | Major Retailer | 173 SKUs | Native Currency |
 
 ## 2. 🎯 1:1 Lineup Price Gap Matrix (Flagship OLED & QNED)
 Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR normalized):
@@ -35,14 +35,14 @@ Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR no
 | **DE** | Mainstream OLED | 42" | `OLED42C67LA` | `GQ42S90H` | €999 | €1,599 | -€600 | -37.5% | **LG Advantage (-37.5%)** |
 | **DE** | Mainstream OLED | 55" | `OLED55C67LA` | `GQ55S90H` | €1,299 | €1,799 | -€500 | -27.8% | **LG Advantage (-27.8%)** |
 | **DE** | Mainstream OLED | 65" | `OLED65C67LA` | `GQ65S90H` | €1,699 | €2,229 | -€530 | -23.8% | **LG Advantage (-23.8%)** |
-| **UK** | Flagship OLED | 55" | `OLED55G66LS` | `QE55S95H` | €2,595 | €2,477 | +€118 | +4.8% | **LG Premium (+4.8%)** |
-| **UK** | Flagship OLED | 65" | `OLED65G66LS` | `QE65S95H` | €3,539 | €3,185 | +€354 | +11.1% | **LG Premium (+11.1%)** |
+| **UK** | Flagship OLED | 55" | `OLED55G64LW` | `QE55S95H` | €2,477 | €2,477 | -€0 | 0.0% | **Parity (±2%)** |
+| **UK** | Flagship OLED | 65" | `OLED65G64LW` | `QE65S95H` | €3,303 | €3,185 | +€118 | +3.7% | **LG Premium (+3.7%)** |
 | **UK** | Flagship OLED | 77" | `OLED77G64LW` | `QE77S95H` | €4,601 | €4,365 | +€236 | +5.4% | **LG Premium (+5.4%)** |
 | **UK** | Mainstream OLED | 42" | `OLED42C64LA` | `QE42S90H` | €1,297 | €1,297 | -€0 | 0.0% | **Parity (±2%)** |
 | **UK** | Mainstream OLED | 48" | `OLED48C64L` | `QE48S90H` | €1,415 | €1,415 | -€0 | 0.0% | **Parity (±2%)** |
 | **UK** | Mainstream OLED | 55" | `OLED55C64LA` | `QE55S90H` | €1,887 | €1,769 | +€118 | +6.7% | **LG Premium (+6.7%)** |
 | **UK** | Mainstream OLED | 65" | `OLED65C64LA` | `QE65S90H` | €2,595 | €2,477 | +€118 | +4.8% | **LG Premium (+4.8%)** |
-| **UK** | Mainstream OLED | 77" | `OLED77C64LA` | `QE77S90H` | €3,421 | €3,657 | -€236 | -6.5% | **LG Advantage (-6.5%)** |
+| **UK** | Mainstream OLED | 77" | `OLED77C66LB` | `QE77S90H` | €3,539 | €3,657 | -€118 | -3.2% | **LG Advantage (-3.2%)** |
 | **UK** | Mainstream OLED | 83" | `OLED83C64LA` | `QE83S90H` | €4,719 | €5,309 | -€590 | -11.1% | **LG Advantage (-11.1%)** |
 | **UK** | Entry OLED | 48" | `OLED48B65LA` | `QE48S85H` | €1,179 | €1,297 | -€118 | -9.1% | **LG Advantage (-9.1%)** |
 | **UK** | Entry OLED | 55" | `55LX7B6LA` | `QE55S85H` | €1,179 | €1,533 | -€354 | -23.1% | **LG Advantage (-23.1%)** |
@@ -56,10 +56,10 @@ Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR no
 | **FR** | Flagship OLED | 65" | `OLED65G6` | `TQ65S95H` | €2,799 | €2,620 | +€179 | +6.8% | **LG Premium (+6.8%)** |
 
 ## 3. 📉 Price Movements & Trend Tracking (vs 2026-09-10)
-- **Overlapping Models Evaluated**: 586 SKUs
-- **Price Change Activity**: 277 models changed price
-  - **Price Cuts**: LG 120 models vs Samsung 105 models
-  - **Price Hikes**: LG 13 models vs Samsung 39 models
+- **Overlapping Models Evaluated**: 629 SKUs
+- **Price Change Activity**: 279 models changed price
+  - **Price Cuts**: LG 121 models vs Samsung 105 models
+  - **Price Hikes**: LG 14 models vs Samsung 39 models
 
 ### 🔻 Top Aggressive Price Drops
 | Country | Brand | Model Code | Size | Old Price | New Price | Reduction | Pct Diff |
@@ -73,14 +73,14 @@ Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR no
 | **IT** | LG | `65MRGB87B6B` | 65" | EUR 2,199 | EUR 1,099 | -EUR 1,100 | **-50.0%** |
 
 ## 4. 🎁 Promotional Warfare & Campaign Scanner
-- **Samsung Promo Intensity**: **47.4%** of lineup features explicit promotional tags
-- **LG Promo Intensity**: **44.1%** of lineup features promotional tags
+- **Samsung Promo Intensity**: **48.3%** of lineup features explicit promotional tags
+- **LG Promo Intensity**: **45.1%** of lineup features promotional tags
 
 **Key Promotion Tactic Breakdown**:
 - **Cashback**: 11 active offers across Europe
 - **Direct Cut**: 0 active offers across Europe
 - **Voucher**: 0 active offers across Europe
-- **Bundle**: 126 active offers across Europe
+- **Bundle**: 130 active offers across Europe
 - **Member**: 0 active offers across Europe
 - **Rabatt / Remise**: 0 active offers across Europe
 

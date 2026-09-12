@@ -650,11 +650,9 @@ def build_paired_data(wb, country, year, config):
                 elif "QNED70" in lg_series and ("M74" in sam_series or "M70" in sam_series) and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED70B vs. 85"M74H' if "M74" in sam_series else '86"QNED70B vs. 85"M70H'
                 elif "QNED72" in lg_series and ("M70" in sam_series or "M72" in sam_series) and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED72B vs. 85"M72H'
+                    pair_label_str = '86"QNED72B vs. 85"M70H' if "M70" in sam_series else '86"QNED72B vs. 85"M72H'
                 elif "QNED72" in lg_series and ("M80" in sam_series or "M82" in sam_series) and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED72B vs. 85"M82H'
-                elif "QNED72" in lg_series and "M70" in sam_series and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED72B vs. 85"M70H'
+                    pair_label_str = '86"QNED72B vs. 85"M80H' if "M80" in sam_series else '86"QNED72B vs. 85"M82H'
                 elif "QNED86" in lg_series and "QN70" in sam_series and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED86B vs. 85"QN70H'
                 elif "QNED86" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
