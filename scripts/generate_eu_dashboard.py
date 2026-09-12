@@ -150,31 +150,44 @@ PAIRS_CONFIG_2025_ES = {
 }
 
 PAIRS_CONFIG_2026_CZ = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "OLED": [
+        {"lg": "G6", "sam": "S99H", "sizes": ["65", "55"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
+        {"lg": "B6", "sam": "S85H", "sizes": ["83", "55", "48"]}
+    ],
+    "MRGB": [
+        {"lg": "MRGB85", "sam": "R85H", "sizes": ["75"]}
+    ],
     "QNED/QLED": [
-        {"lg": "QNED93B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65"]},
         {"lg": "QNED85B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65"]},
         {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
 
 PAIRS_CONFIG_2026_GR = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
+    "OLED": [
+        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55", "48"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
+        {"lg": "B6", "sam": "S85H", "sizes": ["77", "65", "55", "48"]}
+    ],
     "MRGB": [
-        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
+        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100"]},
+        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["75", "65", "55"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED81B", "sam": "M80H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["86", "75", "65", "55", "50"]},
+        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
+        {"lg": "QNED81B", "sam": "M80H", "sizes": ["65", "55"]},
         {"lg": "QNED72B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+    "UHD 4K": [
+        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    ]
 }
 
 PAIRS_CONFIG_2025_DE = {
@@ -217,37 +230,41 @@ PAIRS_CONFIG_2026_DE = {
 }
 
 PAIRS_CONFIG_2026_AT = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
+    "OLED": [
+        {"lg": "G6", "sam": "S95H", "sizes": ["65", "55", "48"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["77", "55"]}
+    ],
     "MRGB": [
-        {"lg": "MRGB95", "sam": "R95H", "sizes": ["86", "75", "65"]},
-        {"lg": "MRGB87B", "sam": "R86H", "sizes": ["86", "75", "65", "55", "50"]}
+        {"lg": "MRGB87B", "sam": "R86H", "sizes": ["55"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED93", "sam": "QN80H", "sizes": ["85", "75", "65", "55"]},
-        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M82H", "sizes": ["85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M72H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED71B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
+        {"lg": "QNED72B", "sam": "QN70H", "sizes": ["75"]},
+        {"lg": "QNED71B", "sam": "M72H", "sizes": ["65", "50", "43"]},
+        {"lg": "QNED71B", "sam": "M82H", "sizes": ["65", "55"]},
+        {"lg": "QNED72B", "sam": "M82H", "sizes": ["75"]},
+        {"lg": "QNED72B", "sam": "M80H", "sizes": ["85"]}
     ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+    "UHD 4K": [
+        {"lg": "NU800", "sam": "U8000H", "sizes": ["85", "75", "65", "43"]}
+    ]
 }
 
 PAIRS_CONFIG_2026_CH = {
     "OLED": [
-        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55", "48"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
-        {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
+        {"lg": "G6", "sam": "S99H", "sizes": ["77", "65", "55"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]}
     ],
     "MRGB": [
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
+        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
     ],
     "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["86", "75", "65", "55", "50"]},
         {"lg": "QNED71B", "sam": "M70H", "sizes": ["65", "55", "50", "43"]},
         {"lg": "QNED70B", "sam": "M70H", "sizes": ["85", "75"]}
     ],
     "UHD 4K": [
-        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "43"]}
     ]
 }
 
@@ -296,22 +313,18 @@ PAIRS_CONFIG_2025_FR = {
 PAIRS_CONFIG_2026_HU = {
     "OLED": [
         {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55", "48"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55"]},
         {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
-        {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
+        {"lg": "B6", "sam": "S85H", "sizes": ["77", "65", "55", "48"]}
     ],
-    "MRGB": [
-        {"lg": "MRGB95B", "sam": "R95H", "sizes": ["86", "75", "65", "55"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
-    ],
+    "MRGB": [],
     "QNED/QLED": [
-        {"lg": "QNED93B/92B", "sam": "QN80H", "sizes": ["86", "75", "65", "55"]},
         {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
         {"lg": "QNED70B", "sam": "M74H", "sizes": ["86", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
-        {"lg": "NU8E", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+        {"lg": "NU8E", "sam": "U8000H", "sizes": ["75", "65", "55", "50", "43"]}
     ]
 }
 
@@ -463,12 +476,22 @@ def extract_products_from_sheet(sheet):
         total_discount = cashback + direct_cut
         net = max(0, price - total_discount) if price > 0 else 0
         
+        clean_code = str(code).strip() if code else ""
+        if clean_code.startswith("ED") and len(clean_code) >= 5 and clean_code[2:4].isdigit():
+            clean_code = f"QN{clean_code}"
+        elif clean_code.startswith("GB") and len(clean_code) >= 5 and clean_code[2:4].isdigit():
+            clean_code = f"MR{clean_code}"
+        elif clean_code.startswith("NO") and len(clean_code) >= 5 and clean_code[2:4].isdigit():
+            clean_code = f"NA{clean_code}"
+        elif clean_code.startswith("00QNED"):
+            clean_code = f"1{clean_code}"
+        
         products.append({
             "brand": str(brand).strip(),
             "year": int(year) if year else 0,
             "display_type": str(disp).strip() if disp else "",
             "size": int(size) if size else 0,
-            "model_code": str(code).strip() if code else "",
+            "model_code": clean_code,
             "price": price,
             "cashback": cashback,
             "direct_cut": direct_cut,
@@ -558,7 +581,7 @@ def find_product(products, brand, size, series, year):
         elif series_upper in ["QNED7EB", "QNED7EA", "QNED7E"]:
             match = any(x in code for x in ["QNED7E", "QNED70", "QNED71", "QNED72"])
         elif series_upper in ["NU800", "NU800B", "NU80", "NU8E", "NU85"]:
-            match = any(x in code for x in ["NU800", "NU80", "NU8E", "NU85", "NU75", "UA77", "UT", "UR", "UQ"])
+            match = any(x in code for x in ["NU800", "NU80", "NU8E", "NU85", "NU75", "UA77", "UT", "UR", "UQ", "NANO80", "NANO81", "NANO8"])
         elif series_upper in ["UA75", "UA73"]:
             match = any(x in code for x in ["UA75", "UA73", "UA77", "UT", "UR", "UQ"])
         elif series_upper in ["U8072F", "U8072"]:

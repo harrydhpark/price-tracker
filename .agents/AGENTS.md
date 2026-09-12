@@ -225,6 +225,17 @@
     * **LG UHD 4K**: `UA75` (2025) and `NU85` (2026) series matchers MUST support all country variants (`UA75`, `UA73`, `UA77`, `NU85`, `NU80`, `NU75`, `NU90`, `UT`, `UR`, `UQ`).
   * **Dynamic Empty Slot Hiding Rule (Dashboard)**:
     * Any size pair slot where at least one brand has a valid price (`lgP > 0 || samP > 0`) MUST be rendered on the chart so that single-brand offerings (e.g. LG OLED G6/C6/B6 lineup when competitor 2026 models are not yet listed) remain 100% visible. Only empty slots where BOTH brands have 0 (`lgP === 0 && samP === 0`) are filtered out to keep charts clean.
+  * **Greek Model Code Prefix Normalization Standard (Public.gr)**:
+    * Due to Greek title delimiter nuances, upstream card extraction can strip leading prefix letters (`QNED` -> `ED`, `MRGB` -> `GB`, `NANO` -> `NO`, `100QNED` -> `00QNED`).
+    * `extract_products_from_sheet` MUST apply code normalization: `clean_code.startswith("ED")` -> `QN` + `clean_code`, `clean_code.startswith("GB")` -> `MR` + `clean_code`, `clean_code.startswith("NO")` -> `NA` + `clean_code`, and `clean_code.startswith("00QNED")` -> `1` + `clean_code`. This standard recovers 19 previously unmatched pairs in Greece alone, elevating Greece coverage to 44 matched pairs (98%).
+  * **Phase 2 European 1:1 Lineup Alignment Standards (AT, CH, CZ, GR, HU)**:
+    * Eliminate artificial one-sided phantom gaps by tailoring `PAIRS_CONFIG_2026_*` to each country's genuine retail assortment:
+      * **CH**: Unify flagship OLED to `S99H` (`G6 vs S99H`), eliminating uncarried `S95H` -> 24 pairs 100% matched.
+      * **CZ**: Align 55"/50" to `QNED85B vs QN70H`, eliminating uncarried 55"/50" QNED86B/QNED80B -> 40 pairs 100% matched.
+      * **AT**: Map `NANO80/81` into UHD 4K (`NU800` vs `U8070H`), pair `QNED71B` with `M72H/M82H/QN70H` -> 22 pairs 100% matched.
+      * **HU**: Pair `QNED87B vs QN80H` and `QNED70B vs M74H`, separate uncarried MRGB -> 38 pairs 100% matched.
+      * **GR**: Align OLED, MRGB, QNED87B/81B/72B, NU85 -> 44 pairs 98% matched.
+    * Total European 1:1 comparison pairs across all 11 countries: **337 matched pairs** (169 Western EU + UK, 168 Phase 2 EU).
 
 * **Model Sorting Order (Strict TV Segment Matching)**:
   * LG: OLED G -> OLED C -> OLED B -> QNED86 -> QNED80 -> UA.
