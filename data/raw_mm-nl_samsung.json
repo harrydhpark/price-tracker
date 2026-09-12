@@ -1608,5 +1608,50 @@
     "promo": "None",
     "title": "SAMSUNG TU55U8005FU - Ultra HD 4K - Led-tv - 55 inch",
     "link": "https://www.mediamarkt.nl/nl/product/_samsung-tu55u8005fu-ultra-hd-4k-led-tv-55-inch-162676986.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "LED",
+    "display_type": "LED",
+    "size": 55,
+    "model_code": "Unknown",
+    "price": 1699.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG The Frame Pro F-QE55LS03H - QLED 4K - Neo QLED-tv - 55 inch - 2026",
+    "url": "https://www.mediamarkt.nl/nl/product/_samsung-55-the-frame-ls03hw-2026-1903275.html",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-55-the-frame-ls03hw-2026-1903275.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2025,
+    "display": "Micro RGB",
+    "display_type": "Micro RGB",
+    "size": 55,
+    "model_code": "MRE115MR95F",
+    "price": 27999.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG MRE115MR95F - Ultra HD 4K - Led-tv - 115 inch",
+    "url": "https://www.mediamarkt.nl/nl/product/_samsung-115-micro-rgb-tv-mre115mr95f-2025-1892358.html",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-115-micro-rgb-tv-mre115mr95f-2025-1892358.html"
+  },
+  {
+    "brand": "Samsung",
+    "year": 2026,
+    "display": "LED",
+    "display_type": "LED",
+    "size": 32,
+    "model_code": "Unknown",
+    "price": 329.0,
+    "shipping": "Free",
+    "cashback": 0,
+    "promo": "None",
+    "title": "SAMSUNG Q5F - Full HD - QLED-tv - 32 inch - 2026",
+    "url": "https://www.mediamarkt.nl/nl/product/_samsung-q5f-full-hd-qled-tv-32-inch-2026-1906260.html",
+    "link": "https://www.mediamarkt.nl/nl/product/_samsung-q5f-full-hd-qled-tv-32-inch-2026-1906260.html"
   }
 ]

@@ -4,10 +4,10 @@
 > **Date of Extraction**: 2026-09-12 | **Comparison Baseline**: 2026-09-10
 
 ## 1. 🌐 Executive Key Metrics Overview
-- **Total Active SKUs Tracked**: **1,895 models** across 11 European countries
-- **Brand Composition**: LG **872 SKUs** vs Samsung **1,023 SKUs**
-- **Overall ASP (EUR Normalized)**: LG **€1,695.15** vs Samsung **€1,610.58**
-- **Active Promotion Intensity**: LG **45.1%** vs Samsung **48.3%**
+- **Total Active SKUs Tracked**: **2,037 models** across 11 European countries
+- **Brand Composition**: LG **949 SKUs** vs Samsung **1,088 SKUs**
+- **Overall ASP (EUR Normalized)**: LG **€1,783.06** vs Samsung **€1,684.52**
+- **Active Promotion Intensity**: LG **42.1%** vs Samsung **46.2%**
 
 ### Country Sample Coverage
 | Country | Retailer | Total Models | Active Currencies |
@@ -15,13 +15,13 @@
 | **AT** | Major Retailer | 125 SKUs | Native Currency |
 | **CH** | Major Retailer | 407 SKUs | Native Currency |
 | **CZ** | Major Retailer | 171 SKUs | Native Currency |
-| **DE** | Major Retailer | 151 SKUs | Native Currency |
-| **ES** | Major Retailer | 135 SKUs | Native Currency |
-| **FR** | Major Retailer | 105 SKUs | Native Currency |
+| **DE** | Major Retailer | 170 SKUs | Native Currency |
+| **ES** | Major Retailer | 151 SKUs | Native Currency |
+| **FR** | Major Retailer | 130 SKUs | Native Currency |
 | **GR** | Major Retailer | 136 SKUs | Native Currency |
 | **HU** | Major Retailer | 183 SKUs | Native Currency |
-| **IT** | Major Retailer | 144 SKUs | Native Currency |
-| **NL** | Major Retailer | 165 SKUs | Native Currency |
+| **IT** | Major Retailer | 201 SKUs | Native Currency |
+| **NL** | Major Retailer | 190 SKUs | Native Currency |
 | **UK** | Major Retailer | 173 SKUs | Native Currency |
 
 ## 2. 🎯 1:1 Lineup Price Gap Matrix (Flagship OLED & QNED)
@@ -56,10 +56,10 @@ Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR no
 | **FR** | Flagship OLED | 65" | `OLED65G6` | `TQ65S95H` | €2,799 | €2,620 | +€179 | +6.8% | **LG Premium (+6.8%)** |
 
 ## 3. 📉 Price Movements & Trend Tracking (vs 2026-09-10)
-- **Overlapping Models Evaluated**: 629 SKUs
-- **Price Change Activity**: 279 models changed price
-  - **Price Cuts**: LG 121 models vs Samsung 105 models
-  - **Price Hikes**: LG 14 models vs Samsung 39 models
+- **Overlapping Models Evaluated**: 727 SKUs
+- **Price Change Activity**: 335 models changed price
+  - **Price Cuts**: LG 127 models vs Samsung 121 models
+  - **Price Hikes**: LG 31 models vs Samsung 56 models
 
 ### 🔻 Top Aggressive Price Drops
 | Country | Brand | Model Code | Size | Old Price | New Price | Reduction | Pct Diff |
@@ -73,11 +73,11 @@ Analysis of core competitive pairs comparing LG vs Samsung selling price (EUR no
 | **IT** | LG | `65MRGB87B6B` | 65" | EUR 2,199 | EUR 1,099 | -EUR 1,100 | **-50.0%** |
 
 ## 4. 🎁 Promotional Warfare & Campaign Scanner
-- **Samsung Promo Intensity**: **48.3%** of lineup features explicit promotional tags
-- **LG Promo Intensity**: **45.1%** of lineup features promotional tags
+- **Samsung Promo Intensity**: **46.2%** of lineup features explicit promotional tags
+- **LG Promo Intensity**: **42.1%** of lineup features promotional tags
 
 **Key Promotion Tactic Breakdown**:
-- **Cashback**: 11 active offers across Europe
+- **Cashback**: 27 active offers across Europe
 - **Direct Cut**: 0 active offers across Europe
 - **Voucher**: 0 active offers across Europe
 - **Bundle**: 130 active offers across Europe
