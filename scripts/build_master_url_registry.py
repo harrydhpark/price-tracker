@@ -287,6 +287,38 @@ for fn in ["mediamarkt_hu_full.json", "raw_mediamarkt_hu_deep.json"]:
         except Exception as e:
             print(f"  [WARN] Error loading {fn}: {e}")
 
+print("[MASTER REGISTRY] 7. Scanning Western Europe (DE, ES, NL, IT, AT, UK)...")
+we_sources = [
+    ("raw_mm-de_samsung.json", "DE", "MediaMarkt", "SAMSUNG"),
+    ("raw_mm-de_lg.json", "DE", "MediaMarkt", "LG"),
+    ("raw_mm-es_samsung.json", "ES", "MediaMarkt", "SAMSUNG"),
+    ("raw_mm-es_lg.json", "ES", "MediaMarkt", "LG"),
+    ("raw_mm-nl_samsung.json", "NL", "MediaMarkt", "SAMSUNG"),
+    ("raw_mm-nl_lg.json", "NL", "MediaMarkt", "LG"),
+    ("raw_mw-it_samsung.json", "IT", "MediaWorld", "SAMSUNG"),
+    ("raw_mw-it_lg.json", "IT", "MediaWorld", "LG"),
+    ("raw_mm-at_samsung.json", "AT", "MediaMarkt", "SAMSUNG"),
+    ("raw_mm-at_lg.json", "AT", "MediaMarkt", "LG"),
+    ("raw_currys_samsung.json", "UK", "Currys", "SAMSUNG"),
+    ("raw_currys_lg.json", "UK", "Currys", "LG"),
+]
+for fn, country, ret, b in we_sources:
+    fp = os.path.join(data_dir, fn)
+    if os.path.exists(fp):
+        try:
+            with open(fp, "r", encoding="utf-8") as f:
+                items = json.load(f)
+            for it in items:
+                u = it.get("link") or it.get("url") or it.get("pdp_url")
+                mc = it.get("model_code") or it.get("code")
+                y = it.get("year", 2025)
+                sz = it.get("size", 0)
+                t = it.get("title") or it.get("name") or ""
+                if u and mc:
+                    add_to_registry(country, ret, b, mc, y, sz, t, u)
+        except Exception as e:
+            print(f"  [WARN] Error loading {fn}: {e}")
+
 # Save Master Registry
 with open(master_registry_path, "w", encoding="utf-8") as f:
     json.dump(master_urls, f, ensure_ascii=False, indent=2)

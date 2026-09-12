@@ -28,9 +28,40 @@ NON_TV_KEYWORDS = [
     "BEAMER", "PROJEKTOR", "WASCHMASCHINE", "HALTERUNG", "WANDHALTERUNG", 
     "SUBWOOFER", "AIRPODS", "KOPFHÖRER", "KOPFHORER", "HEADPHONES", 
     "EARPHONES", "CASE", "LADECASE", "FERNBEDIENUNG", "KABEL", "CABLE",
-    "PHILIPS", "SONY", "TCL", "HISENSE", "PANASONIC", "APPLE", "XIAOMI",
+    "STANDVOET", "STANDFUSS", "STANDFUß", "PEDESTAL", "BEVESTIGING", "ADAPTER",
+    "VOET", "SUPPORT", "ACCESSORY", "ACCESSOIRE", "BEUGEL", "WANDBEUGEL",
+    "MUURBEUGEL", "SUPPORT MURAL", "PIED", "STAFF", "STAFFA",
+    "PHILIPS", "SONY", "TCL", "HISENSE", "PANASONIC", "APPLE", "XIAOMI", "PUS",
     "GALAXY S2", "SMARTPHONE", "TABLET"
 ]
+
+def check_price_floor(price, size, disp):
+    if price < 50.0:
+        return False
+    if disp == "OLED":
+        if size >= 83 and price < 1800.0: return False
+        if size >= 77 and price < 1300.0: return False
+        if size >= 70 and price < 1100.0: return False
+        if size >= 65 and price < 850.0: return False
+        if size >= 55 and price < 650.0: return False
+        if size in [42, 48] and price < 500.0: return False
+        if price < 400.0: return False
+    elif disp == "Micro RGB":
+        if size >= 75 and price < 1200.0: return False
+        if size >= 50 and price < 600.0: return False
+        if price < 500.0: return False
+    elif disp in ["QNED", "QLED"]:
+        if size >= 75 and price < 600.0: return False
+        if size >= 65 and price < 450.0: return False
+        if size >= 50 and price < 280.0: return False
+        if size >= 43 and price < 200.0: return False
+        if price < 150.0: return False
+    else: # UHD 4K
+        if size >= 70 and price < 450.0: return False
+        if size >= 55 and price < 180.0: return False
+        if size >= 43 and price < 120.0: return False
+        if price < 80.0: return False
+    return True
 
 def parse_price_str(raw):
     c = raw.replace('–', '00').replace('-', '00').replace('\xa0', ' ').replace('\u202f', ' ').strip()
@@ -129,11 +160,41 @@ def extract_model_and_meta(card_text, brand):
     if code_m:
         model_code = code_m.group(1)
         
+    if brand.upper() == "SAMSUNG":
+        if model_code == "Unknown" or len(model_code) < 5 or model_code.startswith("PUS"):
+            m_series = re.search(r'\b(S9\d[FH]|QN\d{2,3}[FH]|M\d{2}[FH]|R\d{2}[FH]|U\d{4}[FH]|LS03[FH]|Q\d[FH])\b', upper)
+            if m_series:
+                series = m_series.group(1)
+                prefix = "QE" if series.startswith(("S", "QN", "Q")) else ("UE" if series.startswith(("M", "U")) else "MRE")
+                model_code = f"{prefix}{size}{series}"
+            else:
+                return None, 0, 0, ""
+    elif brand.upper() == "LG":
+        if model_code == "Unknown" or not any(x in model_code for x in ["QNED", "OLED", "MRGB", "NANO", "LX", "NU", "UA", "UT", "UR", "UQ", "LB", "STANBYME"]):
+            if "STANBYME" in upper or "27LX6" in upper:
+                model_code = "27LX6TDGA"
+                size = 27
+            elif "QNED86B" in upper: model_code = f"{size}QNED86B"
+            elif "QNED81B" in upper: model_code = f"{size}QNED81B"
+            elif "QNED80B" in upper: model_code = f"{size}QNED80B"
+            elif "QNED72B" in upper: model_code = f"{size}QNED72B"
+            elif "QNED71B" in upper: model_code = f"{size}QNED71B"
+            elif "QNED70B" in upper: model_code = f"{size}QNED70B"
+            elif "QNED86A" in upper: model_code = f"{size}QNED86A"
+            elif "QNED80A" in upper: model_code = f"{size}QNED80A"
+            elif "QNED72A" in upper: model_code = f"{size}QNED72A"
+            elif "QNED70A" in upper: model_code = f"{size}QNED70A"
+            elif "MRGB87B" in upper: model_code = f"{size}MRGB87B"
+            elif "MRGB96B" in upper: model_code = f"{size}MRGB96B"
+            elif "MRGB87A" in upper: model_code = f"{size}MRGB87A"
+            else:
+                return None, 0, 0, ""
+            
     # Year
     year = 2025
-    if any(x in upper for x in ["2026", "B6", "C6", "G6", "R85H", "R95H", "S90H", "S95H", "S99H", "QNED86B", "QNED81B", "QNED80B", "QNED72B", "QNED71B", "QNED70B", "27LX6", "STANBYME 2", "U8090H", "M70H"]):
+    if any(x in upper for x in ["2026", "B6", "C6", "G6", "R85H", "R95H", "S90H", "S92H", "S95H", "S99H", "QN82H", "M72H", "M82H", "R86H", "U8070H", "QNED86B", "QNED81B", "QNED80B", "QNED87B", "QNED72B", "QNED71B", "QNED70B", "27LX6", "STANBYME 2", "U8090H", "M70H"]):
         year = 2026
-    elif any(x in upper for x in ["2025", "B5", "C5", "G5", "S90F", "S95F", "QNED86A", "QNED80A", "QNED72A", "QNED70A"]):
+    elif any(x in upper for x in ["2025", "B5", "C5", "G5", "S90F", "S92F", "S95F", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED70A"]):
         year = 2025
     elif any(x in upper for x in ["2024", "B4", "C4", "G4", "S90D"]):
         year = 2024
@@ -187,7 +248,9 @@ def process_dump_content(content, default_country=None):
             if sp < 80.0:
                 continue
             m_code, size, year, disp = extract_model_and_meta(card_text, "Samsung")
-            if not m_code or size < 22 or year not in [2025, 2026]:
+            if not m_code or m_code == "Unknown" or size < 22 or year not in [2025, 2026]:
+                continue
+            if not check_price_floor(sp, size, disp):
                 continue
                 
             # Find best title line
@@ -227,7 +290,9 @@ def process_dump_content(content, default_country=None):
             if sp < 80.0:
                 continue
             m_code, size, year, disp = extract_model_and_meta(card_text, "LG")
-            if not m_code or size < 22 or year not in [2025, 2026]:
+            if not m_code or m_code == "Unknown" or size < 22 or year not in [2025, 2026]:
+                continue
+            if not check_price_floor(sp, size, disp):
                 continue
                 
             # Find best title line
@@ -274,12 +339,11 @@ def process_dump_content(content, default_country=None):
 
 def sync_all_western_dumps():
     dumps = [
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1120\output.txt", "mm-de"),
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1142\output.txt", "mm-at"),
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1176\output.txt", "mm-es"),
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1188\output.txt", "mm-es"),
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1210\output.txt", "mm-nl"),
-        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\1224\output.txt", "mw-it"),
+        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\2074\output.txt", "mm-de"),
+        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\2056\output.txt", "mm-at"),
+        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\2010\output.txt", "mm-es"),
+        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\scratch\nl_merged.json", "mm-nl"),
+        (r"C:\Users\harry.park\.gemini\antigravity\brain\1c8f1fcd-c6b2-4806-abbc-780188e26593\.system_generated\steps\2048\output.txt", "mw-it"),
     ]
     for p, c_name in dumps:
         if os.path.exists(p):

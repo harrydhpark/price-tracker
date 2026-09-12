@@ -234,7 +234,7 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
     try:
         wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
         for sname in wb.sheetnames:
-            if not sname.endswith("_Full"):
+            if not (sname.endswith("_Full") or sname.startswith(("Alza_", "Public_", "MediaMarkt_HU_"))):
                 continue
 
             # Infer country, retailer, brand, currency from sheet name
@@ -283,6 +283,8 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
                 country = "HU"; retailer = "MediaMarkt"; currency = "HUF"
             elif "_FR_" in sname:
                 country = "FR"; retailer = "Fnac Darty"; currency = "EUR"
+            elif "_CH_" in sname:
+                country = "CH"; retailer = "MediaMarkt"; currency = "CHF"
             # AU sheets
             elif sname.startswith("JBHIFI"):
                 country = "AU"; retailer = "JB Hi-Fi"; currency = "AUD"

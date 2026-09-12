@@ -66,44 +66,16 @@ wb.close()
 print("✅ Public Greece synced to Excel.")
 
 # 3. Hungary MediaMarkt
-from scripts.scrape_and_sync_hungary import write_standard_sheet
+from scripts.scrape_and_sync_hungary import clean_and_standardize, write_standard_sheet
 with open(os.path.join(DATA_DIR, 'raw_mediamarkt_hu_deep.json'), 'r', encoding='utf-8') as f:
     hu_raw = json.load(f)
 
-if isinstance(hu_raw, dict):
-    all_items = []
-    for b, lst in hu_raw.items():
-        if isinstance(lst, list):
-            for x in lst:
-                if isinstance(x, dict):
-                    x['brand'] = b.capitalize()
-                    all_items.append(x)
-    hu_raw = all_items
-
-clean_sec = []
-clean_lg = []
-for it in hu_raw:
-    p_huf = it.get('price', 0.0)
-    p_eur = round(p_huf / 398.0, 2)
-    rec = {
-        "Brand": it.get('brand', 'Samsung'),
-        "Model Year": it.get('year', 2025),
-        "Series": it.get('display', 'Standard'),
-        "Size (inch)": it.get('size', 55),
-        "Model Code": it.get('model_code', 'Unknown'),
-        "Selling Price (HUF)": p_huf,
-        "Selling Price (EUR)": p_eur,
-        "Was Price (HUF)": it.get('was_price', p_huf),
-        "Discount (%)": it.get('discount_pct', 0.0),
-        "Promotion": it.get('promo', 'Standard'),
-        "Cashback (HUF)": it.get('cashback', 0),
-        "Product Link": it.get('link', ''),
-        "Title": it.get('title', '')
-    }
-    if str(it.get('brand', '')).lower() == 'samsung':
-        clean_sec.append(rec)
-    else:
-        clean_lg.append(rec)
+if isinstance(hu_raw, dict) and 'samsung' in hu_raw and 'lg' in hu_raw:
+    clean_sec = clean_and_standardize(hu_raw['samsung'], 'Samsung')
+    clean_lg = clean_and_standardize(hu_raw['lg'], 'LG')
+else:
+    clean_sec = []
+    clean_lg = []
 
 wb = openpyxl.load_workbook(target_wb)
 for sname in ["MediaMarkt_HU_Samsung", "MediaMarkt_HU_LG"]:

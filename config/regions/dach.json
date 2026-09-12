@@ -1,0 +1,182 @@
+{
+  "region_id": "dach",
+  "region_name": "DACH (Germany, Austria, Switzerland)",
+  "cluster_agent": "dach_specialist",
+  "countries": [
+    {
+      "code": "DE",
+      "name": "Germany",
+      "retailers": [
+        {
+          "id": "mm-de",
+          "name": "MediaMarkt",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "MediaMarkt_DE_SAMSUNG_Full",
+          "sheet_name_lg": "MediaMarkt_DE_LG_Full",
+          "driver_script": "scripts/fast_western_eu_sync.py"
+        }
+      ]
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "retailers": [
+        {
+          "id": "mm-at",
+          "name": "MediaMarkt",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "MediaMarkt_AT_SAMSUNG_Full",
+          "sheet_name_lg": "MediaMarkt_AT_LG_Full",
+          "driver_script": "scripts/fast_western_eu_sync.py"
+        }
+      ]
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "retailers": [
+        {
+          "id": "mm-ch",
+          "name": "MediaMarkt",
+          "currency": "CHF",
+          "symbol": "CHF ",
+          "rate_to_eur": 1.05,
+          "sheet_name_samsung": "MediaMarkt_Samsung_Full",
+          "sheet_name_lg": "MediaMarkt_LG_Full",
+          "driver_script": "scripts/scrape_mediamarkt.py"
+        },
+        {
+          "id": "id-ch",
+          "name": "Interdiscount",
+          "currency": "CHF",
+          "symbol": "CHF ",
+          "rate_to_eur": 1.05,
+          "sheet_name_samsung": "Interdiscount_Samsung_Full",
+          "sheet_name_lg": "Interdiscount_LG_Full",
+          "driver_script": "scripts/scrape_interdiscount.py"
+        },
+        {
+          "id": "digitec-ch",
+          "name": "Digitec",
+          "currency": "CHF",
+          "symbol": "CHF ",
+          "rate_to_eur": 1.05,
+          "sheet_name_samsung": "Digitec_Samsung_Full",
+          "sheet_name_lg": "Digitec_LG_Full",
+          "driver_script": "scripts/scrape_digitec.py"
+        }
+      ]
+    }
+  ],
+  "pairs_config": {
+    "OLED": [
+      {
+        "lg": "G6",
+        "sam": "S95H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "C6",
+        "sam": "S90H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48",
+          "42"
+        ]
+      },
+      {
+        "lg": "B6",
+        "sam": "S85H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48"
+        ]
+      }
+    ],
+    "MRGB": [
+      {
+        "lg": "MRGB87B",
+        "sam": "R85H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "MRGB96B",
+        "sam": "R95H",
+        "sizes": [
+          "100"
+        ]
+      }
+    ],
+    "QNED_QLED": [
+      {
+        "lg": "QNED86B",
+        "sam": "QN80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50"
+        ]
+      },
+      {
+        "lg": "QNED81B",
+        "sam": "M80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      },
+      {
+        "lg": "QNED70B",
+        "sam": "M70H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ],
+    "UHD_4K": [
+      {
+        "lg": "NU85",
+        "sam": "U8070H",
+        "sizes": [
+          "85",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ]
+  }
+}

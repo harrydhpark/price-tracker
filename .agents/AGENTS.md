@@ -403,4 +403,21 @@
   - History directory: `History_AU/{YYYY MMDD}/price tracker_AU_{YYYY MMDD}_v1.xlsx`.
   - Dashboard & Hosting: `data/au_price_dashboard.html`, `public_au/index.html`, and Firebase Hosting URL: `https://au-price-tracker-lge.web.app`.
 
+## 13. 차세대 확장형 멀티 에이전트 아키텍처 & Data Intelligence Engine 표준
+* **설정 기반 플러그인 레지스트리 (`config/regions/`)**:
+  - 권역별 설정(`dach.json`, `western_eu.json`, `eastern_eu.json`) 및 신규 권역 템플릿(`region_template.json`) 구축.
+  - 신규 국가/유통 추가 시 소스코드 수정 없이 JSON 선언만으로 국가, 유통사, 환율, 1:1 라인업 매칭 규칙이 `scripts/core/region_manager.py`에 의해 동적 로드됨.
+* **데이터 관리·분석 전담 에이전트 (Data Intelligence Agent)**:
+  - 총괄 에이전트 산하에서 유럽 11개국 및 전 세계 수집 데이터를 전수 분석하는 두뇌 엔진 (`scripts/data_intelligence_engine.py`, 규약 명세: `.agents/subagents/data_intelligence_agent.md`).
+  - **1:1 핵심 라인업 가격 갭 매트릭스**: OLED (G6 vs S95H, C6 vs S90H, B6 vs S85H), Micro RGB (MRGB vs R85H/R95H), QNED/QLED 1:1 매칭, EUR 환산 가격차, Gap %, 경쟁 우위(`LG Advantage` / `Parity` / `LG Premium`) 자동 판정.
+  - **시계열 DoD / WoW 트렌드 추적**: 전주/전일 대비 Top 10 가격 인하/인상 모델 추출.
+  - **프로모션 공세 강도 스캐너**: 브랜드별 프로모션 적용률 및 전술별(캐시백, 번들, 즉시할인/바우처) 분포 분석.
+  - **산출물 자동 생성**: C-Level 경영 브리핑 마크다운 리포트 (`data/reports/Executive_Price_Briefing_{YYYYMMDD}.md`) 및 대시보드 주입용 구조화 데이터 (`data/executive_summary_data.json`).
+* **통합 마스터 오케스트레이터 (`scripts/orchestrator.py`)**:
+  - 단일 CLI 인터페이스로 권역별 수집 동기화(`--sync`), SQLite DB 적재(`--db-sync`), 인텔리전스 분석(`--analyze-only`), 웹 대시보드 컴파일(`--dashboard`), Firebase 호스팅 배포(`--deploy`), 전체 실행(`--full`) 지원.
+* **독립형 웹 대시보드 `📊 AI 경영 브리핑` 탑재**:
+  - `data/eu_price_dashboard_template.html` 및 `scripts/generate_eu_dashboard.py` 연동.
+  - 대시보드 기본 랜딩 화면으로 4대 핵심 KPI 카드, 전략 시사점 불릿, 1:1 라인업 가격 갭 필터 테이블, 주요 가격 인하 모델, 프로모션 공세 현황 시각화 및 리포트(MD) 다운로드 기능 제공.
+
+
 

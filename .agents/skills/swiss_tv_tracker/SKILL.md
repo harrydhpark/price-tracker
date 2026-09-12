@@ -423,6 +423,22 @@ Public.gr search queries cap results at 36 products per page. Scrapers MUST trav
 ### 3) European Thousand Separator (`.`) & Decimal (`,`) Parsing Standard
 - In European and Greek formats (`1.199,00 €`, `559 ,00€`), parsers must normalize thousand periods and decimal commas (`replace('.', '').replace(',', '.')`) before float conversion to avoid truncating thousands (e.g. `1.199,00 €` -> `1.19`).
 
+---
+
+## Part M: Master Orchestrator & Data Intelligence Engine Integration
+
+### 1) Master Orchestrator CLI (`scripts/orchestrator.py`)
+- The Swiss price collection and comparison workflow (`sync_all_retailers.py`, `generate_dashboard.py`) is fully integrated into the Master Orchestrator:
+  - Run complete survey: `python scripts/orchestrator.py --full`
+  - Run Swiss sync only: `python scripts/orchestrator.py --region dach`
+  - Compile Swiss & EU dashboards: `python scripts/orchestrator.py --dashboard`
+
+### 2) DACH Regional Configuration (`config/regions/dach.json`)
+- Switzerland (MediaMarkt CH, Interdiscount, Digitec) is registered under the `dach` region plugin with fixed exchange rate (1 CHF = 1.05 EUR).
+- Clean models from `MediaMarkt_Samsung_Full` and `MediaMarkt_LG_Full` are automatically synced into `price tracker_EU_{YYYY MMDD}_v1.xlsx` and `daily_prices` table in `price_history.db`.
+- The Data Intelligence Engine (`scripts/data_intelligence_engine.py`) performs real-time 1:1 segment price gap and WoW volatility analysis across Swiss retailers and reflects results in the Executive Price Briefing report.
+
+
 
 
 

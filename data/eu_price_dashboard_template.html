@@ -190,7 +190,16 @@
         </div>
         
         <nav class="flex-1 py-6 px-4 space-y-2 overflow-y-auto" id="sidebar-nav">
-            <button class="sidebar-item active w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_retailer" onclick="switchMenu('retailer')">
+            <button class="sidebar-item active w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_executive" onclick="switchMenu('executive')">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                <div class="flex items-center justify-between w-full">
+                    <span class="font-bold text-sm">AI 경영 브리핑</span>
+                    <span class="bg-secondary text-[9px] font-bold px-1.5 py-0.5 rounded text-white tracking-wider">AI INSIGHT</span>
+                </div>
+            </button>
+            <button class="sidebar-item w-full flex items-center gap-3.5 px-6 py-4 rounded transition-all hover:bg-white/5 text-left" id="menu_retailer" onclick="switchMenu('retailer')">
                 <svg class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-2 9H5L3 3zm0 9v7a2 2 0 002 2h14a2 2 0 002-2v-7M9 21V12m6 9V12"/>
                 </svg>
@@ -279,8 +288,146 @@
                 </div>
             </div>
 
+            <!-- View 0: AI Executive Summary & Briefing -->
+            <div id="view_executive" class="dashboard-view block space-y-8">
+                <!-- Top Strategic Banner -->
+                <div class="bg-gradient-to-r from-primary via-[#0a2c47] to-[#0f3456] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-semibold backdrop-blur-sm mb-3 border border-white/10">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>AI Autonomous Data Intelligence Engine</span>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold font-headline mb-2">유럽 11개국 TV 시장 경영 브리핑</h2>
+                            <p class="text-white/70 text-xs md:text-sm max-w-2xl leading-relaxed">
+                                11개국 주요 유통 채널(MediaMarkt, Currys, Fnac, Alza, Public 등)의 실시간 판매가 및 1:1 라인업 경쟁 구도를 심층 분석한 종합 인텔리전스 리포트입니다.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button onclick="downloadExecutiveReport()" class="px-5 py-2.5 bg-secondary hover:bg-secondary/90 text-white rounded-lg text-xs font-bold transition-all shadow-md flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                <span>브리핑 리포트 (MD) 다운로드</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Core KPI Stat Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="exec_kpi_cards">
+                    <!-- Dynamic KPI Cards -->
+                </div>
+
+                <!-- Strategic Highlights / AI Bulletins -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="text-base font-bold font-headline text-primary mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        핵심 시장 동향 및 전략 시사점 (Key Strategic Highlights)
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5" id="exec_highlights_container">
+                        <!-- Dynamic Highlights -->
+                    </div>
+                </div>
+
+                <!-- 1:1 Strategic Lineup Price Gap Matrix -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-6">
+                        <div>
+                            <h3 class="text-lg font-bold font-headline text-primary flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                1:1 핵심 라인업 가격 갭 매트릭스 (OLED / Micro RGB / QNED)
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-1">동일 세그먼트 대응 모델의 EUR 환산 실시간 판매가 및 가격 격차(Gap) 현황</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <select id="exec_gap_country_filter" class="text-xs font-bold border border-slate-200 rounded-lg px-3 py-1.5 bg-slate-50 text-slate-700 focus:ring-1 focus:ring-primary" onchange="renderExecutiveGapTable()">
+                                <option value="ALL">전체 국가 (11 Countries)</option>
+                                <option value="DE">Germany (DE)</option>
+                                <option value="UK">United Kingdom (UK)</option>
+                                <option value="FR">France (FR)</option>
+                                <option value="ES">Spain (ES)</option>
+                                <option value="IT">Italy (IT)</option>
+                                <option value="NL">Netherlands (NL)</option>
+                                <option value="AT">Austria (AT)</option>
+                                <option value="CH">Switzerland (CH)</option>
+                                <option value="CZ">Czech Republic (CZ)</option>
+                                <option value="GR">Greece (GR)</option>
+                                <option value="HU">Hungary (HU)</option>
+                            </select>
+                            <select id="exec_gap_segment_filter" class="text-xs font-bold border border-slate-200 rounded-lg px-3 py-1.5 bg-slate-50 text-slate-700 focus:ring-1 focus:ring-primary" onchange="renderExecutiveGapTable()">
+                                <option value="ALL">전체 세그먼트 (All Segments)</option>
+                                <option value="Flagship OLED">플래그십 OLED (G6 vs S95H)</option>
+                                <option value="Mainstream OLED">메인스트림 OLED (C6 vs S90H)</option>
+                                <option value="Entry OLED">엔트리 OLED (B6 vs S85H)</option>
+                                <option value="Micro RGB">Micro RGB (MRGB vs R85H/R95H)</option>
+                                <option value="Premium QNED/QLED">프리미엄 QNED/QLED</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto border border-slate-100 rounded-lg">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-600 border-b border-slate-200">
+                                    <th class="py-3 px-4 font-bold text-center">국가</th>
+                                    <th class="py-3 px-4 font-bold">세그먼트</th>
+                                    <th class="py-3 px-4 font-bold text-center">인치</th>
+                                    <th class="py-3 px-4 font-bold">LG 모델</th>
+                                    <th class="py-3 px-4 font-bold">Samsung 모델</th>
+                                    <th class="py-3 px-4 font-bold text-right">LG 판매가(EUR)</th>
+                                    <th class="py-3 px-4 font-bold text-right">SEC 판매가(EUR)</th>
+                                    <th class="py-3 px-4 font-bold text-right">가격 갭(EUR)</th>
+                                    <th class="py-3 px-4 font-bold text-right">Gap(%)</th>
+                                    <th class="py-3 px-4 font-bold text-center">경쟁 우위 판정</th>
+                                </tr>
+                            </thead>
+                            <tbody id="exec_gap_table_body" class="divide-y divide-slate-100">
+                                <!-- Injected via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Top Price Movers & Weekly Volatility -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            주요 가격 인하 모델 (Top Price Drops)
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-4">전주 대비 유통사 가격 인하 폭이 가장 큰 상위 모델</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="text-slate-400 border-b border-slate-100">
+                                        <th class="pb-2 font-semibold">국가/브랜드</th>
+                                        <th class="pb-2 font-semibold">모델명</th>
+                                        <th class="pb-2 font-semibold text-right">기존가</th>
+                                        <th class="pb-2 font-semibold text-right">신규가</th>
+                                        <th class="pb-2 font-semibold text-right">변동률</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="exec_top_drops_body" class="divide-y divide-slate-50">
+                                    <!-- Injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                        <h3 class="text-base font-bold font-headline text-primary mb-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            브랜드별 프로모션 공세 강도 (Promo Warfare)
+                        </h3>
+                        <p class="text-xs text-slate-400 mb-4">캐시백, 번들, 회원 쿠폰 등 프로모션 적용 비중</p>
+                        <div id="exec_promo_breakdown_box">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- View 1: Retailer Analysis -->
-            <div id="view_retailer" class="dashboard-view block">
+            <div id="view_retailer" class="dashboard-view hidden">
                 <!-- Retailer Slices -->
                 <div class="bg-white p-4 border border-slate-200 rounded-xl flex items-center justify-between mb-8 shadow-sm">
                     <div class="flex flex-wrap items-center gap-2" id="retailer-buttons-container">
@@ -1929,13 +2076,190 @@
             renderRetailerView();
         }
 
+        // ==========================================
+        // AI Executive Summary & Briefing Logic
+        // ==========================================
+        function renderExecutiveView() {
+            if (typeof executiveSummaryData === 'undefined' || !executiveSummaryData.kpis) {
+                console.warn("No executiveSummaryData available");
+                return;
+            }
+            const data = executiveSummaryData;
+            const kpis = data.kpis;
+
+            // 1. Render 4 KPI Cards
+            const kpiCardsContainer = document.getElementById('exec_kpi_cards');
+            if (kpiCardsContainer) {
+                const totalSkus = kpis.total_records || 0;
+                const lgAsp = kpis.average_price_eur?.LG || 0;
+                const samAsp = kpis.average_price_eur?.SAMSUNG || 0;
+                const aspGapPct = samAsp > 0 ? (((lgAsp - samAsp) / samAsp) * 100).toFixed(1) : 0;
+                const lgPromoRate = data.promos?.promo_rate_by_brand?.LG || 0;
+                const samPromoRate = data.promos?.promo_rate_by_brand?.SAMSUNG || 0;
+
+                kpiCardsContainer.innerHTML = `
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">총 수집 라인업 모니터링</span>
+                        <div class="text-2xl font-bold text-primary font-headline">${totalSkus.toLocaleString()} <span class="text-xs font-normal text-slate-500 font-sans">SKUs</span></div>
+                        <p class="text-xs text-slate-500 mt-2">유럽 11개국 실시간 전수 조사 (LG ${kpis.brand_breakdown?.LG || 0} / SEC ${kpis.brand_breakdown?.SAMSUNG || 0})</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">평균 판가 (EUR 기준)</span>
+                        <div class="text-2xl font-bold text-primary font-headline">€${Math.round(lgAsp).toLocaleString()} <span class="text-xs font-normal text-slate-500 font-sans">/ €${Math.round(samAsp).toLocaleString()}</span></div>
+                        <p class="text-xs ${aspGapPct >= 0 ? 'text-blue-600' : 'text-emerald-600'} mt-2 font-semibold">LG vs Samsung Index: ${aspGapPct >= 0 ? '+' : ''}${aspGapPct}%</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">프로모션 공세 강도</span>
+                        <div class="text-2xl font-bold text-primary font-headline">${samPromoRate}% <span class="text-xs font-normal text-slate-500 font-sans">(SEC) / ${lgPromoRate}% (LG)</span></div>
+                        <p class="text-xs text-slate-500 mt-2">삼성 번들/캐시백 공세 집중 모니터링</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">주간 가격 변동 모델</span>
+                        <div class="text-2xl font-bold text-primary font-headline">${data.movements?.total_changed_models || 0} <span class="text-xs font-normal text-slate-500 font-sans">Models</span></div>
+                        <p class="text-xs text-slate-500 mt-2">인하: LG ${data.movements?.brand_drops?.LG || 0} / SEC ${data.movements?.brand_drops?.SAMSUNG || 0}</p>
+                    </div>
+                `;
+            }
+
+            // 2. Render Highlights
+            const highlightsContainer = document.getElementById('exec_highlights_container');
+            if (highlightsContainer && data.highlights) {
+                highlightsContainer.innerHTML = data.highlights.map(h => `
+                    <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-100 flex items-start gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+                        <p class="text-xs text-slate-700 leading-relaxed font-medium">${h}</p>
+                    </div>
+                `).join('');
+            }
+
+            // 3. Render 1:1 Gap Table
+            renderExecutiveGapTable();
+
+            // 4. Render Top Drops
+            const dropsBody = document.getElementById('exec_top_drops_body');
+            if (dropsBody && data.movements?.top_price_drops) {
+                dropsBody.innerHTML = data.movements.top_price_drops.slice(0, 6).map(d => `
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-2.5">
+                            <span class="font-bold text-slate-700">${d.country}</span>
+                            <span class="text-[10px] px-1.5 py-0.5 rounded ${d.brand === 'LG' ? 'bg-rose-50 text-rose-700' : 'bg-blue-50 text-blue-700'} font-bold ml-1">${d.brand}</span>
+                        </td>
+                        <td class="py-2.5 font-mono text-[11px] text-slate-800">${d.model_code} (${d.size}")</td>
+                        <td class="py-2.5 text-right text-slate-400 line-through">${d.currency} ${Math.round(d.old_price).toLocaleString()}</td>
+                        <td class="py-2.5 text-right font-bold text-slate-800">${d.currency} ${Math.round(d.new_price).toLocaleString()}</td>
+                        <td class="py-2.5 text-right font-bold text-emerald-600">${d.pct_diff}%</td>
+                    </tr>
+                `).join('');
+            }
+
+            // 5. Render Promo Breakdown
+            const promoBox = document.getElementById('exec_promo_breakdown_box');
+            if (promoBox && data.promos?.promo_keywords) {
+                const kw = data.promos.promo_keywords;
+                promoBox.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="font-bold text-slate-700">번들 패키지 (Soundbar/Accessory)</span>
+                            <span class="font-bold text-primary">${kw.Bundle || 0}건</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                            <div class="bg-secondary h-full" style="width: ${Math.min((kw.Bundle || 0) * 1.5, 100)}%"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-xs pt-1">
+                            <span class="font-bold text-slate-700">캐시백 (Cashback 환급)</span>
+                            <span class="font-bold text-primary">${kw.Cashback || 0}건</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                            <div class="bg-amber-500 h-full" style="width: ${Math.min((kw.Cashback || 0) * 8, 100)}%"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-xs pt-1">
+                            <span class="font-bold text-slate-700">즉시 할인 / 바우처 쿠폰</span>
+                            <span class="font-bold text-primary">${(kw["Direct Cut"] || 0) + (kw.Voucher || 0)}건</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue-600 h-full" style="width: ${Math.min(((kw["Direct Cut"] || 0) + (kw.Voucher || 0)) * 5, 100)}%"></div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function renderExecutiveGapTable() {
+            if (typeof executiveSummaryData === 'undefined' || !executiveSummaryData.segment_gaps) return;
+            const cFilter = document.getElementById('exec_gap_country_filter')?.value || 'ALL';
+            const sFilter = document.getElementById('exec_gap_segment_filter')?.value || 'ALL';
+
+            let items = executiveSummaryData.segment_gaps.filter(g => g.lg_price_eur && g.sam_price_eur);
+            if (cFilter !== 'ALL') items = items.filter(g => g.country === cFilter);
+            if (sFilter !== 'ALL') items = items.filter(g => g.segment === sFilter);
+
+            const tbody = document.getElementById('exec_gap_table_body');
+            if (!tbody) return;
+
+            if (items.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" class="text-center py-6 text-slate-400">조건에 일치하는 1:1 매칭 데이터가 없습니다.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = items.map(g => {
+                const isAdvantage = g.diff_eur < 0;
+                const isParity = Math.abs(g.gap_pct || 0) <= 2.0;
+                const badgeClass = isParity 
+                    ? 'bg-amber-50 text-amber-700 border-amber-200' 
+                    : (isAdvantage ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-blue-50 text-blue-700 border-blue-200');
+
+                const diffSign = g.diff_eur > 0 ? '+' : '';
+                return `
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-3 px-4 text-center font-bold text-slate-700">${g.country}</td>
+                        <td class="py-3 px-4 font-semibold text-slate-600">${g.segment}</td>
+                        <td class="py-3 px-4 text-center font-bold text-slate-800">${g.size}"</td>
+                        <td class="py-3 px-4 font-mono text-[11px] text-primary font-bold">${g.lg_model || '-'}</td>
+                        <td class="py-3 px-4 font-mono text-[11px] text-slate-600">${g.sam_model || '-'}</td>
+                        <td class="py-3 px-4 text-right font-bold text-primary">€${Math.round(g.lg_price_eur).toLocaleString()}</td>
+                        <td class="py-3 px-4 text-right text-slate-600">€${Math.round(g.sam_price_eur).toLocaleString()}</td>
+                        <td class="py-3 px-4 text-right font-bold ${isAdvantage ? 'text-emerald-600' : 'text-blue-600'}">${diffSign}€${Math.round(g.diff_eur).toLocaleString()}</td>
+                        <td class="py-3 px-4 text-right font-bold ${isAdvantage ? 'text-emerald-600' : 'text-blue-600'}">${diffSign}${g.gap_pct}%</td>
+                        <td class="py-3 px-4 text-center">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold border ${badgeClass}">${g.verdict}</span>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function downloadExecutiveReport() {
+            if (typeof executiveSummaryData === 'undefined') return;
+            const targetDate = executiveSummaryData.target_date || '2026-09-12';
+            const cleanDate = targetDate.replace(/-/g, '');
+            const reportUrl = `reports/Executive_Price_Briefing_${cleanDate}.md`;
+            
+            const a = document.createElement('a');
+            a.href = reportUrl;
+            a.download = `Executive_Price_Briefing_${cleanDate}.md`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
         function switchMenu(menu) {
             currentMenu = menu;
             document.querySelectorAll('.sidebar-item').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.dashboard-view').forEach(view => view.classList.add('hidden'));
             
             const headerControls = document.getElementById('header_controls');
-            if (menu === 'weekly_change') {
+            if (menu === 'executive') {
+                if (headerControls) headerControls.classList.add('hidden');
+                const btnExec = document.getElementById('menu_executive');
+                if (btnExec) btnExec.classList.add('active');
+                const viewExec = document.getElementById('view_executive');
+                if (viewExec) viewExec.classList.remove('hidden');
+                document.getElementById('current-menu-title').innerText = 'AI 경영 브리핑 (Executive Summary)';
+                document.getElementById('page-headline-title').innerText = '유럽 11개국 TV 시장 AI 전략 브리핑';
+                renderExecutiveView();
+            } else if (menu === 'weekly_change') {
                 if (headerControls) headerControls.classList.add('hidden');
                 document.getElementById('menu_weekly_change').classList.add('active');
                 document.getElementById('view_weekly_change').classList.remove('hidden');
@@ -3010,7 +3334,7 @@
         // Auto-initialize on page load
         window.addEventListener('DOMContentLoaded', () => {
             switchCountry('UK');
-            switchMenu('retailer');
+            switchMenu('executive');
         });
 
         function openPriceHistoryModal(lgSeries, samSeries, country, retailer) {

@@ -5,6 +5,7 @@ import os
 import re
 import sys
 import glob
+import shutil
 from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -13,6 +14,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 # Paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.abspath(os.path.join(script_dir, ".."))
+sys.path.insert(0, root_dir)
 data_dir = os.path.join(root_dir, "data")
 history_dir = os.path.join(root_dir, "History_EU")
 template_path = os.path.join(data_dir, "eu_price_dashboard_template.html")
@@ -1212,12 +1214,31 @@ def main():
         print(f"[ERROR] HTML base template not found: {template_path}")
         return
         
+    print(f"[COMPILING DASHBOARD] Running DataIntelligenceEngine and preparing executive data...")
+    exec_summary_json = "{}"
+    try:
+        from scripts.data_intelligence_engine import DataIntelligenceEngine
+        now_dt = datetime.now()
+        intel_engine = DataIntelligenceEngine(target_date=now_dt.strftime("%Y-%m-%d"))
+        md_report_path = intel_engine.generate_executive_briefing_report()
+        exec_json_path = intel_engine.export_dashboard_summary_json()
+        with open(exec_json_path, "r", encoding="utf-8") as f_ex:
+            exec_summary_json = f_ex.read()
+        print(f"  ➔ [INTEL] Executive briefing report and structured JSON generated.")
+        
+        # Mirror report to public_eu/reports/
+        public_reports_dir = os.path.join(root_dir, "public_eu", "reports")
+        os.makedirs(public_reports_dir, exist_ok=True)
+        shutil.copy2(md_report_path, os.path.join(public_reports_dir, os.path.basename(md_report_path)))
+    except Exception as e_intel:
+        print(f"  ➔ [WARN] Could not run DataIntelligenceEngine: {e_intel}")
+
     print(f"[COMPILING DASHBOARD] Injecting JSON data and survey dates into template...")
     with open(template_path, "r", encoding="utf-8") as f:
         html_content = f.read()
         
     json_str = json.dumps(price_data, separators=(',', ':'), ensure_ascii=False)
-    injection_block = f"const priceData = {json_str};"
+    injection_block = f"const priceData = {json_str};\n        const executiveSummaryData = {exec_summary_json};"
     
     now_dt = datetime.now()
     week_no = now_dt.isocalendar()[1]

@@ -1,0 +1,163 @@
+{
+  "region_id": "eastern_eu",
+  "region_name": "Eastern & Southern Europe (Czech Republic, Greece, Hungary)",
+  "cluster_agent": "eastern_eu_specialist",
+  "countries": [
+    {
+      "code": "CZ",
+      "name": "Czech Republic",
+      "retailers": [
+        {
+          "id": "alza-cz",
+          "name": "Alza",
+          "currency": "CZK",
+          "symbol": "Kč ",
+          "rate_to_eur": 0.04,
+          "sheet_name_samsung": "Alza_CZ_Samsung",
+          "sheet_name_lg": "Alza_CZ_LG",
+          "driver_script": "scripts/scrape_alza.py"
+        }
+      ]
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "retailers": [
+        {
+          "id": "public-gr",
+          "name": "Public",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "Public_GR_Samsung",
+          "sheet_name_lg": "Public_GR_LG",
+          "driver_script": "scripts/scrape_public_gr.py"
+        }
+      ]
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "retailers": [
+        {
+          "id": "mm-hu",
+          "name": "MediaMarkt",
+          "currency": "HUF",
+          "symbol": "Ft ",
+          "rate_to_eur": 0.00251,
+          "sheet_name_samsung": "MediaMarkt_HU_Samsung",
+          "sheet_name_lg": "MediaMarkt_HU_LG",
+          "driver_script": "scripts/scrape_and_sync_hungary.py"
+        }
+      ]
+    }
+  ],
+  "pairs_config": {
+    "OLED": [
+      {
+        "lg": "G6",
+        "sam": "S95H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "C6",
+        "sam": "S90H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48",
+          "42"
+        ]
+      },
+      {
+        "lg": "B6",
+        "sam": "S85H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48"
+        ]
+      }
+    ],
+    "MRGB": [
+      {
+        "lg": "MRGB87B",
+        "sam": "R85H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "MRGB95B",
+        "sam": "R95H",
+        "sizes": [
+          "86",
+          "75"
+        ]
+      }
+    ],
+    "QNED_QLED": [
+      {
+        "lg": "QNED87B",
+        "sam": "QN80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50"
+        ]
+      },
+      {
+        "lg": "QNED80B",
+        "sam": "M80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      },
+      {
+        "lg": "QNED70B",
+        "sam": "M74H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ],
+    "UHD_4K": [
+      {
+        "lg": "NU8E",
+        "sam": "U8072H",
+        "sizes": [
+          "85",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ]
+  }
+}

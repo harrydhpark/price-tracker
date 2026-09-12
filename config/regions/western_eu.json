@@ -1,0 +1,196 @@
+{
+  "region_id": "western_eu",
+  "region_name": "Western Europe (France, UK, Spain, Italy, Netherlands)",
+  "cluster_agent": "western_eu_specialist",
+  "countries": [
+    {
+      "code": "FR",
+      "name": "France",
+      "retailers": [
+        {
+          "id": "fnac-fr",
+          "name": "Fnac Darty",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "Fnac_FR_SAMSUNG_Full",
+          "sheet_name_lg": "Fnac_FR_LG_Full",
+          "driver_script": "scripts/fast_france_sync.py"
+        }
+      ]
+    },
+    {
+      "code": "UK",
+      "name": "United Kingdom",
+      "retailers": [
+        {
+          "id": "currys-uk",
+          "name": "Currys",
+          "currency": "GBP",
+          "symbol": "£",
+          "rate_to_eur": 1.18,
+          "sheet_name_samsung": "Currys_UK_SAMSUNG_Full",
+          "sheet_name_lg": "Currys_UK_LG_Full",
+          "driver_script": "scripts/scrape_currys_live.py"
+        }
+      ]
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "retailers": [
+        {
+          "id": "mm-es",
+          "name": "MediaMarkt",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "MediaMarkt_ES_SAMSUNG_Full",
+          "sheet_name_lg": "MediaMarkt_ES_LG_Full",
+          "driver_script": "scripts/fast_western_eu_sync.py"
+        }
+      ]
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "retailers": [
+        {
+          "id": "mw-it",
+          "name": "MediaWorld",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "MediaWorld_IT_SAMSUNG_Full",
+          "sheet_name_lg": "MediaWorld_IT_LG_Full",
+          "driver_script": "scripts/fast_western_eu_sync.py"
+        }
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "retailers": [
+        {
+          "id": "mm-nl",
+          "name": "MediaMarkt",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "MediaMarkt_NL_SAMSUNG_Full",
+          "sheet_name_lg": "MediaMarkt_NL_LG_Full",
+          "driver_script": "scripts/fast_western_eu_sync.py"
+        }
+      ]
+    }
+  ],
+  "pairs_config": {
+    "OLED": [
+      {
+        "lg": "G6",
+        "sam": "S95H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "C6",
+        "sam": "S90H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48",
+          "42"
+        ]
+      },
+      {
+        "lg": "B6",
+        "sam": "S85H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48"
+        ]
+      }
+    ],
+    "MRGB": [
+      {
+        "lg": "MRGB88",
+        "sam": "R85H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50"
+        ]
+      },
+      {
+        "lg": "MRGB96",
+        "sam": "R95H",
+        "sizes": [
+          "100",
+          "86"
+        ]
+      }
+    ],
+    "QNED_QLED": [
+      {
+        "lg": "QNED86B",
+        "sam": "QN80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50"
+        ]
+      },
+      {
+        "lg": "QNED81B",
+        "sam": "M80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      },
+      {
+        "lg": "QNED70B",
+        "sam": "M70H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ],
+    "UHD_4K": [
+      {
+        "lg": "NU85",
+        "sam": "U8070H",
+        "sizes": [
+          "85",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ]
+  }
+}
