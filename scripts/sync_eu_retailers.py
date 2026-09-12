@@ -630,7 +630,56 @@ def main():
                 "Samsung" if brand.lower() == "samsung" else "LG",
                 products_list, cfg["currency"]
             )
+
+    # Auto-synchronize master_product_urls.json with all active EU models
+    try:
+        from datetime import datetime
+        master_registry_path = os.path.join(data_dir, "master_product_urls.json")
+        if os.path.exists(master_registry_path):
+            with open(master_registry_path, "r", encoding="utf-8") as f_m:
+                master_urls = json.load(f_m)
+            today_str = datetime.now().strftime("%Y-%m-%d")
+            reg_added = 0
             
+            for src_key, cfg in EU_SOURCES.items():
+                for brand in ["samsung", "lg"]:
+                    raw_file = os.path.join(data_dir, f"raw_{src_key}_{brand}.json")
+                    if os.path.exists(raw_file):
+                        try:
+                            with open(raw_file, "r", encoding="utf-8") as f_r:
+                                raw_items = json.load(f_r)
+                            if isinstance(raw_items, dict) and "items" in raw_items:
+                                raw_items = raw_items["items"]
+                            for it in raw_items:
+                                mc = it.get("model_code")
+                                url = it.get("link") or it.get("url") or ""
+                                if mc and mc != "Unknown" and url.startswith("http"):
+                                    key = f"{cfg['cc']}_{cfg['retailer'].upper()}_{mc}"
+                                    if key not in master_urls:
+                                        master_urls[key] = {
+                                            "country": cfg["cc"],
+                                            "retailer": cfg["retailer"],
+                                            "brand": brand.upper(),
+                                            "model_code": mc,
+                                            "year": it.get("year", 2026),
+                                            "size": it.get("size", 55),
+                                            "title": it.get("title", ""),
+                                            "url": url,
+                                            "last_updated": today_str
+                                        }
+                                        reg_added += 1
+                                    else:
+                                        master_urls[key]["url"] = url
+                                        master_urls[key]["last_updated"] = today_str
+                        except Exception:
+                            pass
+            with open(master_registry_path, "w", encoding="utf-8") as f_m:
+                json.dump(master_urls, f_m, ensure_ascii=False, indent=2)
+            if reg_added > 0:
+                print(f"  ➔ [MASTER REGISTRY AUTO-SYNC] Auto-registered {reg_added} new EU models into master_product_urls.json")
+    except Exception as e_reg:
+        print(f"[WARN] Failed auto-syncing master_product_urls.json: {e_reg}")
+
     print(f"\n[EU SYNC DONE] Saved successfully to {excel_filename}")
     
     # Auto-mirror updated Excel workbook to History_EU folder
