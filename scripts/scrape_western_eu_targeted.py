@@ -33,12 +33,12 @@ def _load_env_file():
     env_path = os.path.join(ROOT_DIR, ".env")
     if os.path.isfile(env_path):
         try:
-            with open(env_path, "r", encoding="utf-8") as f:
+            with open(env_path, "r", encoding="utf-8-sig") as f:
                 for line in f:
                     line = line.strip()
                     if line and not line.startswith("#") and "=" in line:
                         k, v = line.split("=", 1)
-                        k = k.strip()
+                        k = k.strip().lstrip("\ufeff")
                         v = v.strip().strip("'\"")
                         if k and k not in os.environ:
                             os.environ[k] = v
