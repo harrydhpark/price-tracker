@@ -1,8 +1,15 @@
-# Environments
+# Environments & Secrets
 python_env/
 venv/
 .venv/
 env/
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+secrets/
 
 # Chrome profiles & scrapers cache
 .chrome_profile*/
