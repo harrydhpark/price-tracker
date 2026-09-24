@@ -25,28 +25,32 @@ firebase_public_path = os.path.join(root_dir, "public_eu", "index.html")
 artifact_dir = os.environ.get("ANTIGRAVITY_ARTIFACT_DIR")
 artifact_dashboard_path = os.path.join(artifact_dir, "eu_price_dashboard.html") if artifact_dir else None
 
-EU_COUNTRIES = ["UK", "DE", "FR", "ES", "IT", "NL", "AT", "CH", "CZ", "GR", "HU"]
+EU_COUNTRIES = ["UK", "DE", "FR", "ES", "PT", "IT", "NL", "AT", "CH", "SE", "PL", "CZ", "HU", "RO", "GR"]
 
 COUNTRY_RETAILERS = {
     "UK": ["Currys"],
     "DE": ["MediaMarkt"],
     "FR": ["Fnac"],
     "ES": ["MediaMarkt"],
+    "PT": ["Worten"],
     "IT": ["MediaWorld"],
     "NL": ["MediaMarkt"],
     "AT": ["MediaMarkt"],
     "CH": ["MediaMarkt"],
+    "SE": ["Elgiganten"],
+    "PL": ["MediaExpert"],
     "CZ": ["Alza"],
-    "GR": ["Public"],
-    "HU": ["MediaMarkt"]
+    "HU": ["MediaMarkt"],
+    "RO": ["Altex"],
+    "GR": ["Public"]
 }
 
 COUNTRY_CURRENCIES = {
-    "UK": "GBP", "DE": "EUR", "FR": "EUR", "ES": "EUR", "IT": "EUR", "NL": "EUR", "AT": "EUR", "CH": "CHF", "CZ": "CZK", "GR": "EUR", "HU": "HUF"
+    "UK": "GBP", "DE": "EUR", "FR": "EUR", "ES": "EUR", "PT": "EUR", "IT": "EUR", "NL": "EUR", "AT": "EUR", "CH": "CHF", "SE": "SEK", "PL": "PLN", "CZ": "CZK", "HU": "HUF", "RO": "RON", "GR": "EUR"
 }
 
 CURRENCY_SYMBOLS = {
-    "EUR": "€", "GBP": "£", "CHF": "CHF ", "CZK": "Kč ", "HUF": "Ft "
+    "EUR": "€", "GBP": "£", "CHF": "CHF ", "CZK": "Kč ", "HUF": "Ft ", "PLN": "zł ", "RON": "lei ", "SEK": "kr "
 }
 
 PAIRS_CONFIG_2025 = {
@@ -66,6 +70,12 @@ PAIRS_CONFIG_2025 = {
     ]
 }
 
+STANDARD_MRGB_PAIRS_2026 = [
+    {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "85", "75", "65"]},
+    {"lg": "MRGB96B", "sam": "R85H", "sizes": ["100"]},
+    {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "85", "75", "65", "55", "50"]}
+]
+
 PAIRS_CONFIG_2026 = {
     "OLED": [
         {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
@@ -73,16 +83,14 @@ PAIRS_CONFIG_2026 = {
         {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
         {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
     ],
-    "MRGB": [
-        {"lg": "MRGB95", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB85", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
-    ],
+    "MRGB": STANDARD_MRGB_PAIRS_2026,
     "QNED/QLED": [
-        {"lg": "QNED93", "sam": "QN80H", "sizes": ["85", "75", "65", "55"]},
-        {"lg": "QNED85", "sam": "QN70H", "sizes": ["85", "75", "65", "55"]},
-        {"lg": "QNED80", "sam": "Q8H", "sizes": ["85", "75", "65", "55", "50"]},
-        {"lg": "QNED70", "sam": "Q7H", "sizes": ["85", "75", "65", "55"]},
-        {"lg": "QNED81B", "sam": "M80H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+        {"lg": "QNED93B", "sam": "QN90H", "sizes": ["85", "75", "65", "55"]},
+        {"lg": "QNED86B", "sam": "M90H", "sizes": ["100"]},
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
+        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
         {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
@@ -91,29 +99,15 @@ PAIRS_CONFIG_2026 = {
 
 PAIRS_CONFIG_2026_IT = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": [
-        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["86", "65", "50"]},
-        {"lg": "QNED87B", "sam": "QN70H", "sizes": ["100", "86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
-    ],
+    "MRGB": STANDARD_MRGB_PAIRS_2026,
+    "QNED/QLED": PAIRS_CONFIG_2026["QNED/QLED"],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
 
 PAIRS_CONFIG_2026_UK = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": [
-        {"lg": "MRGB96", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB88", "sam": "R85H", "sizes": ["86", "75", "65", "55", "50"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
-        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
-    ],
+    "MRGB": STANDARD_MRGB_PAIRS_2026,
+    "QNED/QLED": PAIRS_CONFIG_2026["QNED/QLED"],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
 
@@ -129,11 +123,7 @@ PAIRS_CONFIG_2025_NL = {
 PAIRS_CONFIG_2026_NL = {
     "OLED": PAIRS_CONFIG_2026["OLED"],
     "MRGB": PAIRS_CONFIG_2026["MRGB"],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "85", "75", "65", "55", "50"]},
-        {"lg": "QNED82B", "sam": "M80H", "sizes": ["85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["85", "75", "65", "55", "50", "43"]}
-    ],
+    "QNED/QLED": PAIRS_CONFIG_2026["QNED/QLED"],
     "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
 }
 
@@ -149,46 +139,8 @@ PAIRS_CONFIG_2025_ES = {
     ]
 }
 
-PAIRS_CONFIG_2026_CZ = {
-    "OLED": [
-        {"lg": "G6", "sam": "S99H", "sizes": ["65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
-        {"lg": "B6", "sam": "S85H", "sizes": ["83", "55", "48"]}
-    ],
-    "MRGB": [
-        {"lg": "MRGB85", "sam": "R85H", "sizes": ["75"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "QNED85B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "75", "65"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
-    ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
-}
-
-PAIRS_CONFIG_2026_GR = {
-    "OLED": [
-        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55", "48"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
-        {"lg": "B6", "sam": "S85H", "sizes": ["77", "65", "55", "48"]}
-    ],
-    "MRGB": [
-        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["75", "65", "55"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["86", "75", "65", "55", "50"]},
-        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
-        {"lg": "QNED81B", "sam": "M80H", "sizes": ["65", "55"]},
-        {"lg": "QNED72B", "sam": "M70H", "sizes": ["86", "75", "65", "55", "50", "43"]}
-    ],
-    "UHD 4K": [
-        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
-    ]
-}
+PAIRS_CONFIG_2026_CZ = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_GR = PAIRS_CONFIG_2026
 
 PAIRS_CONFIG_2025_DE = {
     "OLED": PAIRS_CONFIG_2025["OLED"],
@@ -200,73 +152,10 @@ PAIRS_CONFIG_2025_DE = {
     "UHD 4K": PAIRS_CONFIG_2025["UHD 4K"]
 }
 
-PAIRS_CONFIG_2026_ES = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": PAIRS_CONFIG_2026["MRGB"],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100"]},
-        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "75", "65", "55", "50"]},
-        {"lg": "QNED81B", "sam": "M80H", "sizes": ["85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M70H", "sizes": ["85"]}
-    ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
-}
-
-PAIRS_CONFIG_2026_DE = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": [
-        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB86B", "sam": "R85H", "sizes": ["100", "86", "75", "65", "55", "50"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED93", "sam": "QN80H", "sizes": ["85", "75", "65", "55"]},
-        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "M80H", "sizes": ["75", "55"]},
-        {"lg": "QNED72B", "sam": "M70H", "sizes": ["65", "55", "50", "43"]}
-    ],
-    "UHD 4K": [
-        {"lg": "NU800", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "50", "43"]}
-    ]
-}
-
-PAIRS_CONFIG_2026_AT = {
-    "OLED": [
-        {"lg": "G6", "sam": "S95H", "sizes": ["65", "55", "48"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["77", "55"]}
-    ],
-    "MRGB": [
-        {"lg": "MRGB87B", "sam": "R86H", "sizes": ["55"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED71B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
-        {"lg": "QNED72B", "sam": "QN70H", "sizes": ["75"]},
-        {"lg": "QNED71B", "sam": "M72H", "sizes": ["65", "50", "43"]},
-        {"lg": "QNED71B", "sam": "M82H", "sizes": ["65", "55"]},
-        {"lg": "QNED72B", "sam": "M82H", "sizes": ["75"]},
-        {"lg": "QNED72B", "sam": "M80H", "sizes": ["85"]}
-    ],
-    "UHD 4K": [
-        {"lg": "NU800", "sam": "U8000H", "sizes": ["85", "75", "65", "43"]}
-    ]
-}
-
-PAIRS_CONFIG_2026_CH = {
-    "OLED": [
-        {"lg": "G6", "sam": "S99H", "sizes": ["77", "65", "55"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]}
-    ],
-    "MRGB": [
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["86", "75", "65", "55", "50"]},
-        {"lg": "QNED71B", "sam": "M70H", "sizes": ["65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M70H", "sizes": ["85", "75"]}
-    ],
-    "UHD 4K": [
-        {"lg": "NU85", "sam": "U8000H", "sizes": ["85", "75", "65", "55", "43"]}
-    ]
-}
+PAIRS_CONFIG_2026_ES = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_DE = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_AT = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_CH = PAIRS_CONFIG_2026
 
 PAIRS_CONFIG_2025_CH = {
     "OLED": [
@@ -286,19 +175,7 @@ PAIRS_CONFIG_2025_CH = {
 }
 
 
-PAIRS_CONFIG_2026_FR = {
-    "OLED": PAIRS_CONFIG_2026["OLED"],
-    "MRGB": [
-        {"lg": "MRGB96B", "sam": "R95H", "sizes": ["100", "86", "75", "65"]},
-        {"lg": "MRGB87B", "sam": "R85H", "sizes": ["86", "75", "65", "55"]}
-    ],
-    "QNED/QLED": [
-        {"lg": "QNED87", "sam": "QN80H", "sizes": ["86"]},
-        {"lg": "QNED81B", "sam": "QN80H", "sizes": ["75", "65", "55", "50"]},
-        {"lg": "QNED81B", "sam": "M70H", "sizes": ["50", "43"]}
-    ],
-    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
-}
+PAIRS_CONFIG_2026_FR = PAIRS_CONFIG_2026
 
 PAIRS_CONFIG_2025_FR = {
     "OLED": PAIRS_CONFIG_2025["OLED"],
@@ -310,23 +187,7 @@ PAIRS_CONFIG_2025_FR = {
     "UHD 4K": PAIRS_CONFIG_2025["UHD 4K"]
 }
 
-PAIRS_CONFIG_2026_HU = {
-    "OLED": [
-        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["77", "65", "55"]},
-        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
-        {"lg": "B6", "sam": "S85H", "sizes": ["77", "65", "55", "48"]}
-    ],
-    "MRGB": [],
-    "QNED/QLED": [
-        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "75", "65", "55", "50"]},
-        {"lg": "QNED81B", "sam": "QN70H", "sizes": ["65", "55", "50", "43"]},
-        {"lg": "QNED70B", "sam": "M74H", "sizes": ["86", "75", "65", "55", "50", "43"]}
-    ],
-    "UHD 4K": [
-        {"lg": "NU8E", "sam": "U8000H", "sizes": ["75", "65", "55", "50", "43"]}
-    ]
-}
+PAIRS_CONFIG_2026_HU = PAIRS_CONFIG_2026
 
 PAIRS_CONFIG_2025_HU = {
     "OLED": [
@@ -354,7 +215,7 @@ def clean_price(val):
             fval = fval * 1000.0
         return int(round(fval)) if fval >= 50.0 else 0
         
-    s = str(val).replace("€", "").replace("£", "").replace("kr", "").replace("SEK", "").replace("EUR", "").replace("GBP", "").replace("CHF", "").strip()
+    s = str(val).replace("€", "").replace("£", "").replace("kr", "").replace("SEK", "").replace("EUR", "").replace("GBP", "").replace("CHF", "").replace("zł", "").replace("PLN", "").replace("lei", "").replace("RON", "").replace("Ft", "").replace("HUF", "").replace("Kč", "").replace("CZK", "").replace(".-", "").strip()
     if re.match(r'^\d{1,3}\.\d{3}$', s):
         s = s.replace(".", "")
     elif re.match(r'^\d{1,3},\d{3}$', s):
@@ -383,10 +244,22 @@ def clean_price(val):
 def parse_direct_cut(promo, price):
     if not promo or price <= 0:
         return 0
-    # 1. Percentage check first: 'Direct Cut 10%' or 'Get 10% off'
-    m_pct = re.search(r'Direct Cut\s+(\d+(?:\.\d+)?)\s*%', promo, re.I)
+    # 0. Exclude Trade-in discount (conditional benefit requiring old TV return per user rule)
+    promo_clean = re.sub(r'Trade-in(?:\s*Discount)?:\s*(?:GBP|£|EUR|€|CHF)?\s*[\d,]+(?:\.\d+)?\s*(?:Off)?', '', promo, flags=re.I)
+    promo_clean = re.sub(r'Trade-in\s*(?:GBP|£|EUR|€|CHF)?\s*[\d,]+(?:\.\d+)?\s*off', '', promo_clean, flags=re.I)
+    
+    # 0.1 Exclude Instant Rebate tag if it was already reflected in selling price (e.g. MediaMarkt ES)
+    promo_clean = re.sub(r'Instant Rebate:\s*-\d+%.*?', '', promo_clean, flags=re.I)
+    
+    # 0.2 Exclude Cashback mentions to prevent double-counting when cashback is already recorded in Cashback column
+    promo_clean = re.sub(r'Cashback:\s*(?:GBP|CHF|EUR|€|£)?\s*[\d,]+(?:\.\d+)?', '', promo_clean, flags=re.I)
+
+    # 1. Percentage check: 'Direct Cut 10%', 'Get 10% off', '10% de remise'
+    m_pct = re.search(r'Direct Cut\s+(\d+(?:\.\d+)?)\s*%', promo_clean, re.I)
     if not m_pct:
-        m_pct = re.search(r'(?:Get|Save)\s+(\d+(?:\.\d+)?)\s*%\s*off.*?(?:code|voucher)', promo, re.I)
+        m_pct = re.search(r'(?:Get|Save)\s+(\d+(?:\.\d+)?)\s*%\s*off', promo_clean, re.I)
+    if not m_pct:
+        m_pct = re.search(r'(\d+(?:\.\d+)?)\s*%\s*(?:de\s*)?remise', promo_clean, re.I)
     if m_pct:
         try:
             pct = float(m_pct.group(1))
@@ -394,15 +267,23 @@ def parse_direct_cut(promo, price):
         except ValueError:
             pass
 
-    # 2. Fixed amount check: 'Direct Cut GBP 200' or 'Get £200 off'
-    m_fixed = re.search(r'Direct Cut\s+(?:GBP|CHF|EUR|€|£)\s*([\d,]+(?:\.\d+)?)', promo, re.I)
-    if not m_fixed:
-        m_fixed = re.search(r'Direct Cut\s+([\d,]+(?:\.\d+)?)\s*(?:GBP|CHF|EUR|€|£)', promo, re.I)
-    if not m_fixed:
-        m_fixed = re.search(r'(?:Get|Save)\s+(?:GBP|CHF|EUR|€|£)?\s*([\d,]+(?:\.\d+)?)\s*off.*?(?:code|voucher)', promo, re.I)
-    if m_fixed:
+    # 2. Fixed amount check: Direct Cut, Save GBP 50.00, 100€ de remise, Sofortrabatt, Descuento directo
+    m_save = re.search(r'\bSave\s+(?:GBP|CHF|EUR|€|£)\s*([\d,]+(?:\.\d+)?)', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'\bSave\s+(?:GBP|CHF|EUR|€|£)?\s*([\d,]+(?:\.\d+)?)\s*off', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'Direct Cut\s+(?:GBP|CHF|EUR|€|£)?\s*([\d,]+(?:\.\d+)?)', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'Direct Cut\s+([\d,]+(?:\.\d+)?)\s*(?:GBP|CHF|EUR|€|£)', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'(\d+(?:\.\d+)?)\s*(?:€|EUR)\s*(?:de\s*)?remise', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'(?:Sofortrabatt|Descuento\s*directo|Sconto\s*immediato)\s*(?:von\s*|di\s*|de\s*)?(?:€|EUR)?\s*([\d,]+(?:\.\d+)?)', promo_clean, re.I)
+    if not m_save:
+        m_save = re.search(r'(?:Get|Save)\s+(?:GBP|CHF|EUR|€|£)?\s*([\d,]+(?:\.\d+)?)\s*off.*?(?:code|voucher)', promo_clean, re.I)
+    if m_save:
         try:
-            return int(round(float(m_fixed.group(1).replace(',', ''))))
+            return int(round(float(m_save.group(1).replace(',', ''))))
         except ValueError:
             pass
             
@@ -486,6 +367,9 @@ def extract_products_from_sheet(sheet):
         elif clean_code.startswith("00QNED"):
             clean_code = f"1{clean_code}"
         
+        if "W6" in clean_code or "OLED83W6" in clean_code or "OLED77W6" in clean_code or "W6" in str(disp):
+            continue
+
         products.append({
             "brand": str(brand).strip(),
             "year": int(year) if year else 0,
@@ -534,54 +418,42 @@ def find_product(products, brand, size, series, year):
         match = False
         series_upper = series.upper()
         
-        if series_upper in ["G6", "G5", "C6", "C5", "B6", "B5"]:
-            is_oled = p.get("display_type", "").upper() in ["OLED", "OLED EVO"] or "OLED" in code or code.startswith("OLED")
-            if is_oled or re.match(r'^\d{2}(G6|G5|C6|C5|B6|B5)', code):
-                match = bool(re.search(r'(?:^|\d{2})' + series_upper, code))
+        if series_upper in ["W6", "G6", "G5", "C6", "C5", "B6", "B5"]:
+            is_oled = (p.get("display_type", "").upper() in ["OLED", "OLED EVO"] or 
+                       "OLED" in code or code.startswith("OLED") or 
+                       any(code.startswith(x) for x in ["G6", "G5", "C6", "C5", "B6", "B5", "W6"]))
+            if is_oled or re.match(r'^\d{2}(W6|G6|G5|C6|C5|B6|B5)', code):
+                if series_upper == "W6":
+                    match = any(x in code for x in ["W6", "OLED83W6", "OLED77W6", "W69"])
+                else:
+                    match = bool(re.search(r'(?:^|\d{2})' + series_upper, code))
         elif series_upper in ["QNED93B/92B", "QNED93B", "QNED92B", "QNED93A", "QNED93", "QNED92"]:
             match = any(x in code for x in ["QNED93", "QNED92", "QNED91", "QNED90"])
-        elif series_upper in ["QNED72B", "QNED72"]:
-            match = "QNED72" in code
-        elif series_upper in ["QNED86B"]:
-            match = "QNED86" in code or (p_size in [98, 99, 100] and "QNED87" in code)
-        elif series_upper in ["QNED87B", "QNED87"]:
-            match = any(x in code for x in ["QNED87", "QNED86"])
-        elif series_upper in ["QNED71B", "QNED71"]:
-            match = "QNED71" in code
-        elif series_upper in ["QNED70A", "QNED70B", "QNED70"]:
-            match = any(x in code for x in ["QNED70", "QNED72", "QNED7E"])
-        elif series_upper in ["QNED86A", "QNED86", "QNED85B", "QNED85A", "QNED85"]:
-            match = "QNED86" in code or "QNED85" in code or "QNED87" in code
-        elif series_upper in ["QNED84A", "QNED84"]:
-            match = "QNED84" in code or "QNED80" in code or "QNED82" in code
+        elif series_upper in ["QNED86B", "QNED86", "QNED85B", "QNED85", "QNED87B", "QNED87"]:
+            match = any(x in code for x in ["QNED86", "QNED85", "QNED87"])
+        elif series_upper in ["QNED81B", "QNED81", "QNED82B", "QNED82"]:
+            match = any(x in code for x in ["QNED81", "QNED82", "QNED83", "QNED84", "QNED80"])
         elif series_upper in ["QNED80B", "QNED80A", "QNED80"]:
-            match = any(x in code for x in ["QNED80", "QNED81", "QNED82", "QNED84"])
-        elif series_upper in ["M74H", "M74"]:
-            match = any(x in code for x in ["M74", "M70", "M72", "M73", "M75"])
-        elif series_upper in ["M70H", "M70", "M72H", "M72"]:
-            match = any(x in code for x in ["M70", "M72", "M73", "M74", "M75"])
-        elif series_upper in ["QNED82B", "QNED82", "QNED81B", "QNED81"]:
-            match = "QNED81" in code or "QNED80B" in code or "QNED80" in code or "QNED82" in code or "QNED84" in code
-        elif series_upper in ["M80H", "M80", "M82H", "M82"]:
-            match = any(x in code for x in ["M80", "M82", "M83", "M85"])
-        elif series_upper in ["QNED70"]:
-            match = "QNED70" in code or "QNED72" in code or "QNED7E" in code
+            match = any(x in code for x in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED84"])
+        elif series_upper in ["QNED70A", "QNED70B", "QNED70", "QNED71B", "QNED72B", "QNED7EB"]:
+            match = any(x in code for x in ["QNED70", "QNED71", "QNED72", "QNED7E"])
+        elif series_upper in ["QN90H", "QN90F", "QN90"]:
+            if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME"]):
+                match = any(x in code for x in ["QN90", "QN91", "QN92", "QN93", "QN94", "QN95"])
         elif series_upper in ["QN80F", "QN80", "QN80H"]:
             if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME", "QN90", "QN95", "QN900"]):
-                match = any(x in code for x in ["QN80", "QN81", "QN82", "QN83", "QN84", "QN85", "QN88"])
-        elif series_upper in ["QN74F", "QN74", "QN70F", "QN70", "QN70H"]:
+                match = any(x in code for x in ["QN80", "QN81", "QN82", "QN83", "QN84", "QN85", "QN86", "QN88"])
+        elif series_upper in ["QN74F", "QN74", "QN70F", "QN70", "QN70H", "QN72H", "QN72"]:
             if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME"]):
-                match = any(x in code for x in ["QN70", "QN71", "QN72", "QN73", "QN74", "QN75"])
-        elif series_upper in ["Q8F", "Q8", "Q8H"]:
-            if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME"]):
-                match = bool(re.search(r'(?:^|[A-Z]{2}\d{2})(Q80|Q85|Q81|Q82|Q83|Q84|Q8F|Q8A|Q8D|Q8)(?:[^0-9]|$)', code))
-        elif series_upper in ["Q7F", "Q7", "Q7H"]:
-            if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME"]):
-                match = bool(re.search(r'(?:^|[A-Z]{2}\d{2})(Q70|Q71|Q72|Q73|Q74|Q75|Q7F|Q7A|Q7D|Q7)(?:[^0-9]|$)', code))
-        elif series_upper in ["QNED7EB", "QNED7EA", "QNED7E"]:
-            match = any(x in code for x in ["QNED7E", "QNED70", "QNED71", "QNED72"])
-        elif series_upper in ["NU800", "NU800B", "NU80", "NU8E", "NU85"]:
-            match = any(x in code for x in ["NU800", "NU80", "NU8E", "NU85", "NU75", "UA77", "UT", "UR", "UQ", "NANO80", "NANO81", "NANO8"])
+                match = any(x in code for x in ["QN70", "QN71", "QN72", "QN73", "QN74", "QN75", "QN76"])
+        elif series_upper in ["M90H", "M90", "M95H", "M95"]:
+            match = any(x in code for x in ["M90", "M92", "M95"])
+        elif series_upper in ["M80H", "M80", "M82H", "M82", "M84H", "M84", "M86H", "M86"]:
+            match = any(x in code for x in ["M80", "M82", "M83", "M84", "M85", "M86"])
+        elif series_upper in ["M70H", "M70", "M72H", "M72", "M74H", "M74"]:
+            match = any(x in code for x in ["M70", "M72", "M73", "M74", "M75", "M76"])
+        elif series_upper in ["NU800", "NU800B", "NU80", "NU8E", "NU85", "NU850"]:
+            match = any(x in code for x in ["NU850", "NU85", "NU800", "NU80", "NU8E", "NU75", "UA77", "UT", "UR", "UQ", "NANO80", "NANO81", "NANO8"])
         elif series_upper in ["UA75", "UA73"]:
             match = any(x in code for x in ["UA75", "UA73", "UA77", "UT", "UR", "UQ"])
         elif series_upper in ["U8072F", "U8072"]:
@@ -595,20 +467,24 @@ def find_product(products, brand, size, series, year):
         elif series_upper in ["S90H", "S90F", "S90"]: match = any(x in code for x in ["S90", "S91", "S92", "S93", "S94"])
         elif series_upper in ["S85H", "S85F", "S85"]: match = any(x in code for x in ["S85", "S84", "S86", "S83", "S82", "S81", "S80"])
         elif series_upper in ["MRGB95B", "MRGB96B", "MRGB96", "MRGB95", "MRGB9"]: match = any(x in code for x in ["MRGB96", "MRGB95", "MRGB9", "MR95", "MR96"])
-        elif series_upper in ["MRGB87B", "MRGB87", "MRGB88B", "MRGB88", "MRGB86B", "MRGB86", "MRGB85", "MRGB8"]: match = any(x in code for x in ["MRGB88", "MRGB87", "MRGB86", "MRGB85", "MRGB8", "MR85"])
-        elif series_upper in ["R95H", "R95"]: match = bool(re.search(r'(?:R95|MR95)', code))
-        elif series_upper in ["R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R86|R85)', code)) and not bool(re.search(r'(?:R95|MR95)', code))
-        
+        elif series_upper in ["MRGB87B", "MRGB87", "MRGB88B", "MRGB88", "MRGB86B", "MRGB86", "MRGB85B", "MRGB85", "MRGB8"]: match = any(x in code for x in ["MRGB88", "MRGB87", "MRGB86", "MRGB85", "MRGB8", "MR85"])
+        elif series_upper in ["R95H", "R95", "R96H", "R96"]: match = bool(re.search(r'(?:R95|MR95|R96|MR96)', code))
+        elif series_upper in ["R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R86|R85)', code)) and not bool(re.search(r'(?:R95|MR95|R96|MR96)', code))
+        elif series_upper in ["LR60", "32LR60", "LB65", "32LB65", "LQ63", "32LQ63", "LB70", "32LB70"]:
+            match = any(x in code for x in ["LR60", "LB65", "LQ63", "LQ60", "LM63", "LQ57", "LB70", "LB700", "LB7000"])
+        elif series_upper in ["F6000", "32F6000", "H5002", "32H5002", "H5005", "32H5005", "T5302", "T4302"]:
+            match = any(x in code for x in ["F6000", "F6002", "F6005", "H5002", "H5005", "T5302", "T4302", "T5300", "T4300", "F5000"])
+        elif series_upper in ["NANO81", "NANO80", "NANO75"]:
+            match = any(x in code for x in ["NANO81", "NANO80", "NANO75", "NANO76", "NANO79"])
+        elif series_upper in ["Q50", "Q5", "Q5F", "Q60"]:
+            match = any(x in code for x in ["Q50", "Q5F", "Q60", "Q5A", "LS03"])
+            
         if match:
             matched_candidates.append(p)
             
     if not matched_candidates:
         return None
         
-    # Priority sorting:
-    # 1. Official European/Italian OLED sub-models (e.g. G56, G66, C55, C65, B65)
-    # 2. True U8000 series (U8000, U8005, U8070) over U7000 fallback
-    # 3. Prefer model codes matching target size exactly
     def get_priority(item):
         code = item["model_code"].upper()
         prio = 0
@@ -618,9 +494,59 @@ def find_product(products, brand, size, series, year):
             if target_size in [85, 86] and c_sz in [85, 86]:
                 pass
             elif c_sz != target_size:
-                prio += 10
+                prio += 20
         if any(x in code for x in ["G56", "G66", "C55", "C65", "B65", "B55"]):
             return prio + 0
+        if series_upper in ["NU85", "NU850"]:
+            if "NU85" in code:
+                return prio + 0
+            elif any(x in code for x in ["NU800", "NU80", "NU8E"]):
+                return prio + 1
+            elif any(x in code for x in ["UA77", "NU75"]):
+                return prio + 2
+            return prio + 5
+        if series_upper in ["NU800", "NU800B", "NU80", "NU8E"]:
+            if any(x in code for x in ["NU800", "NU80", "NU8E"]):
+                return prio + 0
+            elif "NU85" in code:
+                return prio + 1
+            elif any(x in code for x in ["UA77", "NU75"]):
+                return prio + 2
+            return prio + 5
+        if series_upper == "QNED86B":
+            if "QNED86" in code:
+                return prio + 0
+            elif "QNED85" in code:
+                return prio + 1
+            elif "QNED87" in code:
+                return prio + 2
+            return prio + 3
+        if series_upper == "QNED81B":
+            if "QNED81" in code:
+                return prio + 0
+            elif "QNED82" in code:
+                return prio + 1
+            elif "QNED83" in code:
+                return prio + 2
+            elif "QNED84" in code:
+                return prio + 3
+            elif "QNED80" in code:
+                return prio + 4
+            return prio + 5
+        if series_upper in ["QNED80B", "QNED80"]:
+            if any(x in code for x in ["QNED80B", "QNED80"]):
+                return prio + 0
+            elif any(x in code for x in ["QNED81B", "QNED81", "QNED83B", "QNED83"]):
+                return prio + 1
+            elif any(x in code for x in ["QNED82B", "QNED82"]):
+                return prio + 2
+            return prio + 3
+        if series_upper in ["M80H", "M80"]:
+            if "M80" in code:
+                return prio + 0
+            elif "M82" in code:
+                return prio + 1
+            return prio + 2
         if any(x in code for x in ["U8000", "U8005", "U8010", "U8070", "U8075", "U8090"]):
             return prio + 1
         if "U7000" in code:
@@ -680,8 +606,6 @@ def build_paired_data(wb, country, year, config):
                     pair_label_str = '86"QNED72B vs. 85"M70H' if "M70" in sam_series else '86"QNED72B vs. 85"M72H'
                 elif "QNED72" in lg_series and ("M80" in sam_series or "M82" in sam_series) and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED72B vs. 85"M80H' if "M80" in sam_series else '86"QNED72B vs. 85"M82H'
-                elif "QNED86" in lg_series and "QN70" in sam_series and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED86B vs. 85"QN70H'
                 elif "QNED86" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED86B vs. 85"QN80H'
                 elif "QNED82" in lg_series and "M80" in sam_series and str(size) in ["86", "85"]:
@@ -872,6 +796,10 @@ def load_workbook_catalog(wb_path):
         elif 'UK' in sheet_name: country = 'UK'; retailer = 'Currys'
         elif 'FR' in sheet_name: country = 'FR'; retailer = 'Fnac'
         elif 'IT' in sheet_name: country = 'IT'; retailer = 'MediaWorld'
+        elif 'PL' in sheet_name: country = 'PL'; retailer = 'MediaExpert'
+        elif 'PT' in sheet_name: country = 'PT'; retailer = 'Worten'
+        elif 'RO' in sheet_name: country = 'RO'; retailer = 'Altex'
+        elif 'SE' in sheet_name: country = 'SE'; retailer = 'Elgiganten'
         
         if country not in EU_COUNTRIES:
             continue
@@ -986,6 +914,13 @@ def compute_weekly_changes():
     if not os.path.exists(w37_12_path):
         w37_12_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0912*.xlsx")))
         if w37_12_cands: w37_12_path = w37_12_cands[-1]
+
+    w38_path = os.path.join(data_dir, "price tracker_EU_2026 0915_v1.xlsx")
+    if not os.path.exists(w38_path):
+        w38_path = os.path.join(history_dir, "2026 0915", "price tracker_EU_2026 0915_v1.xlsx")
+    if not os.path.exists(w38_path):
+        w38_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_EU_2026 0915*.xlsx")))
+        if w38_cands: w38_path = w38_cands[-1]
     
     cat_w30 = load_workbook_catalog(w30_path)
     cat_w31 = load_workbook_catalog(w31_path)
@@ -996,8 +931,12 @@ def compute_weekly_changes():
     cat_w36 = load_workbook_catalog(w36_path)
     cat_w37_07 = load_workbook_catalog(w37_07_path)
     cat_w37_12 = load_workbook_catalog(w37_12_path)
+    cat_w38 = load_workbook_catalog(w38_path) if os.path.exists(w38_path) else {}
     
-    transitions = [
+    transitions = []
+    if cat_w38:
+        transitions.append(("W38", "W38(09.15) vs W37(09.12)", "2026.09.15", "2026.09.12", cat_w37_12, cat_w38))
+    transitions.extend([
         ("W37", "W37(09.12) vs W36(09.03)", "2026.09.12", "2026.09.03", cat_w36, cat_w37_12),
         ("W36", "W36(09.03) vs W35(08.28)", "2026.09.03", "2026.08.28", cat_w35, cat_w36),
         ("W35", "W35(08.28) vs W34(08.17)", "2026.08.28", "2026.08.17", cat_w34, cat_w35),
@@ -1005,7 +944,7 @@ def compute_weekly_changes():
         ("W33", "W33(08.14) vs W32(08.06)", "2026.08.14", "2026.08.06", cat_w32, cat_w33),
         ("W32", "W32(08.06) vs W31(07.28)", "2026.08.06", "2026.07.28", cat_w31, cat_w32),
         ("W31", "W31(07.28) vs W30(07.26)", "2026.07.28", "2026.07.26", cat_w30, cat_w31)
-    ]
+    ])
     
     weekly_changes_data = {}
     
@@ -1023,7 +962,8 @@ def compute_weekly_changes():
         country_stats = {c: {"drops": 0, "hikes": 0, "promos": 0, "news": 0, "delisted": 0} for c in EU_COUNTRIES}
         
         for key, curr_item in curr_cat.items():
-            if curr_item.get("year") != 2026:
+            if (curr_item.get("year") != 2026 or int(curr_item.get("size", 0)) == 32 
+                or "W6" in curr_item.get("model_code", "") or "W6" in str(curr_item.get("display", ""))):
                 continue
                 
             country = curr_item["country"]
@@ -1143,7 +1083,7 @@ def compute_weekly_changes():
                 })
                 
         for key, prev_item in prev_cat.items():
-            if prev_item.get("year") != 2026:
+            if prev_item.get("year") != 2026 or int(prev_item.get("size", 0)) == 32:
                 continue
             if key not in curr_cat:
                 country = prev_item["country"]
@@ -1277,7 +1217,7 @@ def main():
     try:
         from scripts.data_intelligence_engine import DataIntelligenceEngine
         now_dt = datetime.now()
-        intel_engine = DataIntelligenceEngine(target_date=now_dt.strftime("%Y-%m-%d"))
+        intel_engine = DataIntelligenceEngine()
         md_report_path = intel_engine.generate_executive_briefing_report()
         exec_json_path = intel_engine.export_dashboard_summary_json()
         with open(exec_json_path, "r", encoding="utf-8") as f_ex:

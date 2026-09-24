@@ -123,21 +123,48 @@ def parse_card_prices(card_text):
                 
     return selling_price, orig_price or selling_price
 
-def extract_promo(card_text):
+def extract_cashback_and_promo(card_text, country_key=""):
     upper = card_text.upper()
+    
+    # 1. Cashback extraction
+    cashback_val = 0
+    m1 = re.search(r'(\d{2,4})\s*(?:€|EUR)?\s*(?:cashback|retour|terug|reembolso|rimborso)', card_text, re.I)
+    m2 = re.search(r'(?:cashback|retour|terug|reembolso|rimborso)[:\s-]*(?:de|sichern|von|bis\s*zu)?\s*(?:€|EUR)?\s*(\d{2,4})', card_text, re.I)
+    m3 = re.search(r'(?:€|EUR)\s*(\d{2,4})\s*(?:cashback|retour|terug|reembolso|rimborso)', card_text, re.I)
+    
+    for m in [m1, m2, m3]:
+        if m:
+            val = int(m.group(1))
+            if 10 <= val <= 3000 and val not in [2024, 2025, 2026]:
+                cashback_val = val
+                break
+                
+    # 2. Promo badges
+    promos = []
+    if cashback_val > 0:
+        if 'REEMBOLSO' in upper:
+            promos.append(f"Reembolso €{cashback_val}")
+        else:
+            promos.append(f"Cashback: €{cashback_val}")
+            
     m_pct = re.search(r'(-\d+%)', card_text)
     pct_str = m_pct.group(1) if m_pct else ""
     
+    if "STREAMING CONTENT" in upper or "STREAMING" in upper:
+        promos.append("Inkl. Streaming Content")
+    if "SOUND DEVICE GESCHENKT" in upper or "ZUSATZPRODUKT" in upper:
+        promos.append("Free Sound Device")
     if "VUELTA AL COLE" in upper:
-        return f"Vuelta al cole ({pct_str})" if pct_str else "Vuelta al cole"
-    elif "BUNDELVOORDEEL" in upper:
-        return "Bundelvoordeel"
-    elif "RETOUR" in upper:
-        m_cb = re.search(r'(?:€|£)?\s*(\d+)\s*retour', card_text, re.IGNORECASE)
-        return f"Cashback €{m_cb.group(1)}" if m_cb else "Cashback"
-    elif pct_str:
-        return f"Discount {pct_str}"
-    return "None"
+        promos.append(f"Vuelta al cole ({pct_str})" if pct_str else "Vuelta al cole")
+    if "BUNDELVOORDEEL" in upper:
+        promos.append("Bundelvoordeel")
+        
+    if not promos:
+        if pct_str:
+            return 0, f"Discount {pct_str}"
+        return 0, "None"
+        
+    return cashback_val, "; ".join(promos)
 
 def extract_model_and_meta(card_text, brand):
     upper = card_text.upper()
@@ -270,6 +297,7 @@ def process_dump_content(content, default_country=None):
             if not title:
                 title = lines[0][:80]
                 
+            cb_val, promo_str = extract_cashback_and_promo(card_text, country_key)
             rec = {
                 "brand": "Samsung",
                 "year": year,
@@ -279,13 +307,16 @@ def process_dump_content(content, default_country=None):
                 "price": sp,
                 "orig_price": op,
                 "shipping": "Free",
-                "cashback": 0,
-                "promo": extract_promo(card_text),
+                "cashback": cb_val,
+                "promo": promo_str,
                 "title": title,
                 "link": href
             }
             if m_code not in seen_s or sp < seen_s[m_code]["price"]:
                 seen_s[m_code] = rec
+            elif seen_s[m_code]["cashback"] == 0 and cb_val > 0:
+                seen_s[m_code]["cashback"] = cb_val
+                seen_s[m_code]["promo"] = promo_str
         samsungs = list(seen_s.values())
         
         lgs = []
@@ -312,6 +343,7 @@ def process_dump_content(content, default_country=None):
             if not title:
                 title = lines[0][:80]
                 
+            cb_val, promo_str = extract_cashback_and_promo(card_text, country_key)
             rec = {
                 "brand": "LG",
                 "year": year,
@@ -321,13 +353,16 @@ def process_dump_content(content, default_country=None):
                 "price": sp,
                 "orig_price": op,
                 "shipping": "Free",
-                "cashback": 0,
-                "promo": extract_promo(card_text),
+                "cashback": cb_val,
+                "promo": promo_str,
                 "title": title,
                 "link": href
             }
             if m_code not in seen_l or sp < seen_l[m_code]["price"]:
                 seen_l[m_code] = rec
+            elif seen_l[m_code]["cashback"] == 0 and cb_val > 0:
+                seen_l[m_code]["cashback"] = cb_val
+                seen_l[m_code]["promo"] = promo_str
         lgs = list(seen_l.values())
         
         print(f"[{country_key}] Parsed {len(samsungs)} Samsung and {len(lgs)} LG live products.")

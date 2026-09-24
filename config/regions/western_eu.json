@@ -82,6 +82,22 @@
           "driver_script": "scripts/fast_western_eu_sync.py"
         }
       ]
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "retailers": [
+        {
+          "id": "worten-pt",
+          "name": "Worten",
+          "currency": "EUR",
+          "symbol": "€",
+          "rate_to_eur": 1.0,
+          "sheet_name_samsung": "Worten_PT_Samsung",
+          "sheet_name_lg": "Worten_PT_LG",
+          "driver_script": "scripts/scrape_worten_pt.py"
+        }
+      ]
     }
   ],
   "pairs_config": {

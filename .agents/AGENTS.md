@@ -64,6 +64,7 @@
 * **Scrapling StealthySession for MediaMarkt (Critical)**: For MediaMarkt Switzerland, utilize Scrapling's `StealthySession` context manager (`with StealthySession(headless=True) as session:`) to solve the Cloudflare Turnstile captcha automatically and reuse cookies across page requests, preventing pagination timeouts and blockages.
   * **Omit `network_idle=True`**: Do **not** use the `network_idle=True` parameter in `StealthySession.fetch()`. Because commercial sites continuously run background analytics, ads, and websocket connections, the network never becomes fully idle, causing requests to hang until the maximum 60-second timeout. Rely instead on default DOM load events combined with a render sleep (`wait=3000 * TIMEOUT_MULTIPLIER`).
   * **Accurate Block Detection**: When validating whether a fetch was blocked by Cloudflare, do **not** check for the generic word `"blocked"` inside the HTML body, as legitimate product listings often contain this string. Check only for `"Verification Required" in html` or non-200 HTTP statuses.
+  * **Turnstile Interactive Hang & Firecrawl Stealth Failover Standard (Critical)**: When MediaMarkt DACH/Western EU (DE, AT, ES, NL, IT) triggers interactive Turnstile captchas causing Scrapling `Locator.bounding_box: Timeout 60000ms exceeded` loops, scrapers must NOT spend hours retrying. Enforce a strict 300-second timeout on local Scrapling, and immediately failover to Firecrawl Stealth scraper (`scripts/scrape_western_eu_targeted.py`) and Master URL Direct Live PDP Probe (`scripts/live_pdp_probe.py`) via `--stealth-fast` to guarantee high-speed, non-blocking execution.
 * **Usercentrics CMP Cookie Banner Piercing (Critical)**: MediaMarkt/MediaWorld privacy banners (`Wir respektieren Ihre Privatsphäre`, `Aceptar todo`, `Accetta tutto`) are encapsulated inside `#usercentrics-root.shadowRoot`. Scrapers must query `shadowRoot.querySelector('#uc-btn-accept-banner')` or `button[data-testid="uc-accept-all"]` to click the accept button and prevent page blockages.
 * **MediaWorld IT & MediaMarkt DE Multi-Page Pagination & Attribute Matching**:
   * **Attribute Matching**: MediaWorld IT product cards format product type as `Tipo di dispositivo` (instead of `Tipo di producto`). Parsers must include `Tipo di dispositivo` along with `OLED`, `QNED`, `Hz`, `pollici`, `Classe` in `PRODUCT_MARKER`.
@@ -107,7 +108,7 @@
     - **DOM Element Precision Price Extraction (Critical)**: NEVER use broad regex matching (`re.findall`) on full container text for Alza product cards. Promotional descriptions (e.g. `<span class="coupon-block__label--description">` containing `"cashbackem až 100 000 Kč"`) appear before the price tags in DOM order and cause `100,000` to overwrite the real TV selling price. Selling prices MUST be extracted strictly from DOM elements `.js-price-box__primary-price__value`, `.ads-pb__price-value`, or `.price-box__primary-price`. Cashback net prices MUST be extracted strictly from `.coupon-block--cashback .coupon-block__price`, and cashback amount calculated as `selling_price - cashback_net_price`.
     - **Script Location**: Maintain primary scraper logic in `scripts/scrape_alza.py`.
   * **Hungary (MediaMarkt HU) Deep Scraping & Master Pair Pipeline**:
-    - **Apollo State Serialization & Cloudflare Bypass**: `mediamarkt.hu` protects listing pages with Cloudflare Turnstile. Scrapers MUST use `scrapling.fetchers.StealthyFetcher` (with `wait=2500` and `timeout=35000`) to solve Turnstile and extract the serialized GraphQL state from `window.__PRELOADED_STATE__` (`apolloState`, `GraphqlProduct`, `CofrPriceFeature`). This extracts 100% of marketplace/direct items, selling prices, and strike-through prices across 240+ models.
+    - **Apollo State Serialization & Cloudflare Bypass (STEALTH-FAST Standard)**: `mediamarkt.hu` protects listing pages with Cloudflare Turnstile. In production and automated pipelines, scrapers MUST default to **STEALTH-FAST** (Firecrawl Stealth proxy API & Master Product URL Registry Live Probing) with a hard 180s timeout, strictly forbidding local Scrapling Turnstile hangs (`Locator.bounding_box: Timeout 60000ms exceeded`). If local Scrapling is run, a strict 2-strike circuit breaker (max 60s total) MUST immediately abort category crawling to prevent multi-hour pipeline hangs. Serialized GraphQL state and live product detail probes extract 100% of marketplace/direct items, selling prices, and strike-through prices across 240+ models.
     - **Samsung Country Suffix `XXH` Guard & Year Classification**: Samsung Hungarian/Eastern European model codes end in country suffix `XXH` (e.g. `QE85QN80FAUXXH`, `QE98Q7FAAUXXH`, `UE85U8072FUXXH`). Parsers MUST strip `XXH`/`XXC` before testing year letters, and match series-adjacent letters: `H` $\rightarrow$ `2026`, `F` $\rightarrow$ `2025`, `D`/`E` $\rightarrow$ `2024` to prevent 2025 models from being falsely classified as 2026.
     - **Samsung Micro RGB (`MRE`) & LG `MRGB` Parsing**:
       - Samsung Micro RGB series use `MRE` model prefixes (e.g. `MRE85R95HATXXH`, `MRE85R85HAUXXH`, `MRE75...`, `MRE65...`, `MRE55...`). Parsers must map `MRE` to brand `SAMSUNG`, series `Micro RGB {R95H/R85H/R86H}`, category `MRGB`, and year `2026`.
@@ -434,5 +435,85 @@
   - `data/eu_price_dashboard_template.html` 및 `scripts/generate_eu_dashboard.py` 연동.
   - 대시보드 기본 랜딩 화면으로 4대 핵심 KPI 카드, 전략 시사점 불릿, 1:1 라인업 가격 갭 필터 테이블, 주요 가격 인하 모델, 프로모션 공세 현황 시각화 및 리포트(MD) 다운로드 기능 제공.
 
+## 14. Playwright MCP Browser Sandbox & Zero-Skip Real-time Survey Protocol
+* **Strict Zero-Skip / Zero-Cache Prohibition**: When local scraping scripts face Cloudflare 403 Forbidden (Alza CZ), Turnstile hangs (Interdiscount CH, MediaMarkt), or dynamic pagination delays (Digitec CH), NEVER skip live collection, NEVER generate 0-row sheets, and NEVER reuse unverified stale caches.
+* **Playwright MCP Sandbox Execution**:
+  - Always execute in the clean, unblocked Playwright MCP Server environment via `call_mcp_tool` (`browser_run_code_unsafe`).
+  - **Alza CZ**: Cards `.browsingitem`, prices with `,-` suffix (e.g. `9 990,-`), coupon price in `.coupon-block__price` (`Koupit s kódem`), title in `a.browsinglink`. Feed dump to `fast_alza_sync.py` to directly populate `Alza_CZ_Samsung` and `Alza_CZ_LG` sheets.
+  - **Interdiscount CH**: Cards `article`, title in `article a[aria-label]`, save card inner text into `full_text` key. Feed dump to `fast_interdiscount_sync.py` to populate `raw_interdiscount_*.json`.
+  - **Digitec CH**: Apply `&take=150` query, cards `article`, direct seller filter (`offertype=direct`). Feed dump to `fast_digitec_sync.py` to populate `raw_digitec_*.json`.
+* **Zero-Count Pre-Flight Assertion Gate**: All sync scripts MUST assert `len(items) > 0` before updating workbooks and databases.
 
+## 15. 2026 Model Year Mandatory 1:1 Live PDP Verification & Zero-Drop Standard
+* **Mandatory 1:1 Live PDP Probe Gate**:
+  - Immediately following Stage 1 category and search crawling, sync engines MUST identify all 2026 model year SKUs in `data/master_product_urls.json` (Samsung S95H/S90H/QN80H/M70H/R85H, LG G6/C6/B6/QNED86B/MRGB87B) that were not captured due to pagination boundaries, ranking changes, or search indexing delays.
+  - The pipeline MUST automatically execute a 1:1 live PDP probe (`scripts/live_pdp_probe.py`) across all missing 2026 URLs as a mandatory pipeline gate before workbook finalization.
+  - Any model verified active with live stock and valid price MUST be injected into today's workbooks (`price tracker_EU_2026 {MMDD}_v1.xlsx` and Swiss workbooks).
+* **Strict Discontinued / Out-of-Stock Exclusion**:
+  - Models confirmed discontinued or out of stock through live probing must be excluded from price workbooks to prevent database bloat and preserve real-time transactional pricing integrity.
+  - Official retailer out-of-stock signatures:
+    - **CZ Alza**: `Prodej skončil`, `Nedostupné`, `Těmto produktům již odzvonilo`, category redirects
+    - **GR Public**: `Εξαντλήθηκε`, `Μη διαθέσιμο`, HTTP 404
+    - **CH Digitec**: `Nicht mehr lieferbar`, `Aktuell nicht lieferbar`, `Ausverkauft`
+    - **CH Interdiscount**: `Nicht mehr im Sortiment`, `Momentan nicht verfügbar`
+    - **DACH/IT/ES/NL MediaMarkt/MediaWorld**: `Nicht mehr verfügbar`, `Dieser Artikel ist aktuell leider nicht verfügbar`, `Ausverkauft`, `Esaurito`, `Agotado`, `Niet leverbaar`
+    - **FR Fnac/Darty**: `Épuisé`, `Indisponible`, `Cet article n'est plus disponible`
+    - **UK Currys**: `Delivery unavailable`, `Out of stock`, `Sorry, this item is no longer available`, HTTP 404
+* **Direct Seller Exclusivity (Marketplace Purging)**: On marketplace platforms (Digitec, Fnac), listings from 3rd-party merchants must be excluded to prevent distorted pricing.
+* **Mandatory Missing Audit Log (`data/master_urls_missing_analysis_{YYYYMMDD}.json`)**:
+  - Every survey run MUST generate a structured JSON audit log and markdown summary categorizing all unmatched Master Registry URLs across the 4 root causes: (1) 2025 clearance sold out, (2) 2026 inactive/preorder OOS, (3) superseded URLs already surveyed under new active SKUs, (4) recovered live models, and (5) filtered bundles.
 
+## 16. Multi-Tier Failover Protocol (Fast HTTP ➔ Playwright MCP ➔ Firecrawl Stealth)
+* **Tier 1 (Local Fast HTTP / curl_cffi)**:
+  - Attempt high-speed multithreaded (10 workers) fetching with `impersonate="chrome124"` for static DOM, Schema.org LD+JSON, and Apollo state extraction.
+* **Tier 2 (Playwright MCP Browser Sandbox Execution)**:
+  - If Tier 1 encounters HTTP 403, Cloudflare bot challenges, Turnstile timeouts, or dynamic JavaScript rendering delays, IMMEDIATELY failover to the Playwright MCP server session (`browser_run_code_unsafe`).
+  - Evaluates live cards, coupon codes (`.coupon-block__price`), and add-to-cart buttons within an unblocked browser environment.
+* **Tier 3 (Firecrawl Stealth API Scraper & Rate-Limiting Architecture)**:
+  - For sites with aggressive IP reputation blocking (DataDome on Fnac/Darty France) or persistent interactive Turnstile captcha loops (MediaWorld IT, MediaMarkt DACH), IMMEDIATELY invoke Firecrawl Stealth Scraper (`firecrawl_scrape` or `scripts/scrape_western_eu_targeted.py --stealth-fast`) to ensure 100% data acquisition without hanging.
+  - **429 Rate-Limiting Backoff & Sequential Reprobe**: When probing dozens of PDP URLs via Firecrawl API, concurrent requests can trigger HTTP 429 rate limits. Probing scripts MUST implement exponential backoff on 429, followed by an automatic sequential retry queue with 1.5~2.0s sleep for any failed candidate URLs to guarantee a 100% successful probe completion rate (zero drops).
+* **Hard Prohibitions**:
+  - NEVER skip survey execution or leave 0-row sheets.
+  - NEVER backfill or inject stale historical prices from previous survey workbooks without an active live HTTP response.
+  - NEVER inject fabricated or hardcoded benchmark prices.
+
+## 17. 2026 Lineup 1:1 Live Verification & MediaWorld IT / Pan-EU Expansion Standard
+* **Retailer Targeted Series Query Expansion (MediaWorld IT & Pan-EU)**:
+  - Because retailer search engines (especially MediaWorld IT `mediaworld.it`, MediaMarkt, Fnac) limit pagination results and experience backend indexing lag on newly released flagship models (omitting S95H, S90H, S85H, S99H, QN80H, M70H, R85H, C6, G6, B6, QNED86B, MRGB87B from broad queries like `Samsung TV` or `Samsung OLED`), scrapers MUST NOT rely on single generic query URLs.
+  - Scrapers MUST traverse dedicated targeted queries per series:
+    - `Samsung S95`, `Samsung S90`, `Samsung S85`, `Samsung S99`, `Samsung S95H`, `Samsung S90H`, `Samsung S85H`, `Samsung OLED 55`, `Samsung OLED 65`, `Samsung OLED 77`, `Samsung OLED 83`.
+* **Model Year Disambiguation Standards (`F` = 2025 vs `H` = 2026 Strict Rule)**:
+  - For Samsung TV model codes, the letter following the series index determines the generation: `D` = 2024, `F` = 2025, and `H` = 2026.
+  - Suffixes like `FAEXZT`, `FATXZT`, `FAU` MUST strictly be classified as 2025 (e.g. `QE55S90FAEXZT`, `QE55S95FATXZT`, `QE65S85FAEXZT` are 2025 models, NEVER 2026).
+  - Only series containing letter `H` (e.g. `QE55S95HFTXZT`, `QE65S90HAEXZT`, `QE77S83H`, `QE83S99HAEXZT`, `TQ55S95HFTXXC`) must be tagged as 2026.
+* **Accurate Price Extraction & Installment / Credit Stripping Pattern**:
+  - On MediaWorld IT and MediaMarkt Western EU PDPs:
+    - Original price (Consigliato): captured from `Consigliato <num>,– €` or `Consigliato <num>,00€`.
+    - Real selling price: captured from the line immediately preceding `CONSEGNA GRATIS` / `IVA inclusa` or adjacent to `Aggiungi al carrello`.
+    - Installment / credit text stripping: strictly ignore installment text (`Puoi finanziarlo a ... € al mese`), credit charges (`Taeg ...%`), credit total due (`Totale dovuto: ... €`), and discount voucher badges (`100€ de remise`, `350€ έκπτωση` discount amount). The real selling price is strictly $\le$ original price.
+* **Continuous Master Product URL Registry Sync (`data/master_product_urls.json`)**:
+  - Every verified 2026 and 2025 model code, size, display type, price, and PDP URL must be continuously registered and reconciled with `data/master_product_urls.json`.
+  - On every survey execution, the pipeline reconciles live search results with the Master Registry to prevent sample loss, auto-registers newly discovered models, and maintains 100% continuity.
+
+## 18. Greece (Public.gr) Category Hierarchy Traversal & Promo Badge Collision Prevention Standard
+* **Category Hierarchy URL Navigation**:
+  - Because Public.gr search queries (`/search?q=...`) frequently return empty CSR shells or redirect to the home page, scrapers MUST traverse the static category hierarchy filtered by brand and size range:
+    `https://www.public.gr/cat/tileoraseis/tileoraseis/f/kataskeyasths:{brand}/f/megethos-othonhs:{sizeRange}`
+  - Standard size ranges: `98-+`, `83---86`, `75---77`, `65---74`, `55---64`, `45---54`, `40---44`.
+* **Samsung Pay Promotion Brand Collision Prevention**:
+  - Public.gr displays a universal partnership rebate badge (`10€ Public επιστροφή με Samsung Pay`) on almost all TVs (including LG).
+  - Scrapers and parsers must NEVER use simple `'SAMSUNG' in text` substring matching to determine brand.
+  - The URL slug (`/lg-` vs `/samsung-`) MUST serve as the primary brand determinant, and text must be pre-stripped of `SAMSUNG PAY` before fallback matching.
+* **Slug Model Code Extraction (`tileorasi-([a-z0-9]+)`)**:
+  - The model code is embedded directly after the Greek keyword `tileorasi-` in the URL slug. Scrapers must match `tileorasi-([a-z0-9]+)` rather than loose word boundaries to prevent multiple models from collapsing into the keyword `TILEORASI`.
+
+## 19. Dashboard Lineup Exclusion Standard (32" UHD and LG W Series Excluded from Dashboards)
+* **Dashboard View Exclusions**:
+  - Both 32-inch UHD and the LG W series (Wallpaper OLED: `W6 vs S99H/S95H`) must be completely excluded from European and Swiss dashboard views:
+    - Excluded from 1:1 comparison pairing configurations (`PAIRS_CONFIG_2026`).
+    - Excluded from executive KPI summary tables and charts.
+    - Excluded from week-over-week changes analysis (`compute_weekly_changes`).
+    - Excluded from the dashboard's embedded raw product lists.
+* **100% Data Collection & Database Preservation**:
+  - The exclusion applies STRICTLY to the dashboard presentation layer.
+  - Raw scrapers, Excel workbooks (e.g. `price tracker_EU_2026 {MMDD}_v1.xlsx` and Swiss workbooks), `raw_*.json` datasets, and SQLite database `data/price_history.db` MUST continue collecting and preserving all 32" UHD and LG W-series models without data loss.

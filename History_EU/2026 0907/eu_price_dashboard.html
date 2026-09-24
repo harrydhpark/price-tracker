@@ -250,8 +250,8 @@
                 <div class="flex items-center gap-3">
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Price Type</span>
                     <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
-                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all active" id="price_type_raw" onclick="switchPriceType('raw')">판매가</button>
-                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all" id="price_type_net" onclick="switchPriceType('net')">실질가 (캐시백/Direct Cut 반영)</button>
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all" id="price_type_raw" onclick="switchPriceType('raw')">판매가</button>
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all active" id="price_type_net" onclick="switchPriceType('net')">실질가 (캐시백/Direct Cut 반영)</button>
                     </div>
                 </div>
                 <!-- Year Slicer -->
@@ -1771,7 +1771,7 @@
                                     let extra = [];
                                     if (model) extra.push('Model: ' + model);
                                     if (promo) extra.push('Promo: ' + promo);
-                                    if (price && promo) {
+                                    if (currentPriceType === 'raw' && price && promo) {
                                         const cur = countryCurrencies[currentCountry] || 'EUR';
                                         const sym = currencySymbols[cur] || '€';
                                         let estPrice = price;
@@ -1822,7 +1822,7 @@
         let currentCountry = 'UK';
         let currentMenu = 'retailer'; // 'retailer', 'display' or 'history'
         let currentYear = 2026;
-        let currentPriceType = 'raw'; // 'raw' or 'net'
+        let currentPriceType = 'net'; // 'raw' or 'net'
         let selectedRetailer = 'Currys';
         let selectedDisplayType = 'OLED';
         

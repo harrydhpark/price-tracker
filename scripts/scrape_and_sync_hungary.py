@@ -353,22 +353,29 @@ def run_deep_scrape_for_brand(session, brand):
         ]
         
     collected_dict = {}
+    consecutive_errors = 0
     
     for label, base_url, max_p in search_targets:
+        if consecutive_errors >= 2:
+            print(f"  ⚠️ [CIRCUIT BREAKER] Aborting Scrapling loop for {brand} due to repeated Cloudflare Turnstile blocks!")
+            break
         print(f"\n  ➔ [TARGET] {label} (Max {max_p} pages): {base_url}")
         for page in range(1, max_p + 1):
             sep = "&" if "?" in base_url else "?"
             url = f"{base_url}{sep}page={page}"
             
             try:
-                res = session.fetch(url, solve_cloudflare=True, wait=2500, timeout=35000)
+                res = session.fetch(url, solve_cloudflare=True, wait=2500, timeout=15000)
                 if res.status != 200:
+                    consecutive_errors += 1
                     break
                     
                 items = parse_apollo_state(str(res.html_content))
                 if not items:
+                    consecutive_errors += 1
                     break
                     
+                consecutive_errors = 0
                 added = 0
                 for it in items:
                     item_b = it["brand"].upper()
@@ -388,6 +395,7 @@ def run_deep_scrape_for_brand(session, brand):
                     
             except Exception as e:
                 print(f"    ⚠️ Fetch error on {url}: {e}")
+                consecutive_errors += 1
                 break
                 
     print(f"\n✅ Finished Deep Scraping for {brand}. Total Unique Models: {len(collected_dict)}")
@@ -547,16 +555,42 @@ def write_standard_sheet(ws, products, sheet_title):
 
 def main():
     import time
+    import argparse
     start_time = time.time()
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
     raw_cache_file = os.path.join(data_dir, "raw_mediamarkt_hu_deep.json")
     
-    print("🌐 [LIVE SCRAPE] Starting live scrape for MediaMarkt Hungary...")
-    with StealthySession(headless=True) as session:
-        raw_sec = run_deep_scrape_for_brand(session, "Samsung")
-        raw_lg = run_deep_scrape_for_brand(session, "LG")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Skip heavy Scrapling category traversal; use cached/probed models")
+    args, _ = parser.parse_known_args()
+    
+    is_stealth_fast = args.fast or os.environ.get("STEALTH_FAST") == "1" or os.environ.get("FAST") == "1"
+    
+    raw_sec = []
+    raw_lg = []
+    
+    if not is_stealth_fast:
+        print("🌐 [LIVE SCRAPE] Starting live scrape for MediaMarkt Hungary...")
+        try:
+            with StealthySession(headless=True) as session:
+                raw_sec = run_deep_scrape_for_brand(session, "Samsung")
+                raw_lg = run_deep_scrape_for_brand(session, "LG")
+        except Exception as e:
+            print(f"⚠️ [SCRAPLING ERROR] {e}. Falling back to cached/probed data.")
+    else:
+        print("⚡ [--stealth-fast] Skipping slow Scrapling category loop on mediamarkt.hu. Using verified live PDP probe & cache.")
         
+    if not raw_sec and not raw_lg and os.path.exists(raw_cache_file):
+        print(f"  -> Loading and refreshing verified models from {raw_cache_file}...")
+        try:
+            with open(raw_cache_file, "r", encoding="utf-8") as f:
+                cached = json.load(f)
+            raw_sec = cached.get("samsung", [])
+            raw_lg = cached.get("lg", [])
+        except Exception:
+            pass
+            
     with open(raw_cache_file, "w", encoding="utf-8") as f:
         json.dump({"samsung": raw_sec, "lg": raw_lg}, f, ensure_ascii=False, indent=2)
             

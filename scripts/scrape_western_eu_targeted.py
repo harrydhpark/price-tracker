@@ -48,6 +48,36 @@ def _load_env_file():
 _load_env_file()
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "").strip()
 FIRECRAWL_ENDPOINT = "https://api.firecrawl.dev/v1/scrape"
+MASTER_REGISTRY_PATH = os.path.join(DATA_DIR, "master_product_urls.json")
+
+def update_master_registry(items, cc, retailer):
+    if not os.path.exists(MASTER_REGISTRY_PATH):
+        return
+    with open(MASTER_REGISTRY_PATH, "r", encoding="utf-8") as f:
+        master = json.load(f)
+    added = 0
+    for it in items:
+        mc = it.get("model_code")
+        url = it.get("url")
+        if mc and url and mc != "Unknown":
+            clean_code = re.sub(r'[^A-Za-z0-9_-]', '', mc).upper()
+            key = f"{cc}_{retailer.upper()}_{clean_code}"
+            master[key] = {
+                "country": cc,
+                "retailer": retailer,
+                "brand": it.get("brand", "").upper(),
+                "model_code": mc,
+                "year": it.get("year", 2026),
+                "size": it.get("size", 55),
+                "title": it.get("title", ""),
+                "url": url,
+                "last_updated": "2026-09-15"
+            }
+            added += 1
+    if added > 0:
+        with open(MASTER_REGISTRY_PATH, "w", encoding="utf-8") as f:
+            json.dump(master, f, ensure_ascii=False, indent=2)
+        print(f"  [MASTER REGISTRY] Registered/Updated {added} models for {cc} {retailer} into Master Registry!")
 
 # ==============================================================================
 # Non-TV & Purge Filters
@@ -164,10 +194,10 @@ def parse_mediamarkt_markdown(md_text, brand):
             
         # 3. Price extraction
         price = 0.0
-        # MediaMarkt formats: € 1899,–€1899,00 or € 1.899,- or 1.899,00 € or € 999.00
-        p_matches = re.findall(r'(?:€|EUR)\s*([\d\.\s]+(?:,\d{2}|,–|-)?)|([\d\.\s]+(?:,\d{2}|,–|-)?)\s*(?:€|EUR)', chunk)
+        # MediaMarkt formats: € 1899,– or € 1.899,- or 78 899 Ft or 2’299.95 CHF
+        p_matches = re.findall(r'(?:€|EUR|CHF|Ft)\s*([\d\.\s\xa0\u202f’\']+(?:,\d{2}|,–|-)?)|([\d\.\s\xa0\u202f’\']+(?:,\d{2}|,–|-)?)\s*(?:€|EUR|CHF|Ft)', chunk)
         for pm in p_matches:
-            raw_p = (pm[0] or pm[1]).strip().replace(' ', '').replace('–', '').replace('-', '')
+            raw_p = (pm[0] or pm[1]).strip().replace(' ', '').replace('\xa0', '').replace('\u202f', '').replace('’', '').replace("'", '').replace('–', '').replace('-', '')
             if ',' in raw_p and '.' in raw_p:
                 raw_p = raw_p.replace('.', '').replace(',', '.')
             elif '.' in raw_p and len(raw_p.split('.')[-1]) == 3:
@@ -187,13 +217,27 @@ def parse_mediamarkt_markdown(md_text, brand):
             
         # 4. Cashback extraction
         cashback = 0
-        cb_m = re.search(r'(?:€|EUR)\s*(\d+)[\s,-]*(?:cashback|terug|reembolso|rimborso|rabatt)', chunk, re.I)
+        cb_m = re.search(r'(\d{2,4})\s*(?:€|EUR)?\s*(?:cashback|retour|terug|reembolso|rimborso)', chunk, re.I)
         if not cb_m:
-            cb_m = re.search(r'(\d+)[\s,-]*(?:€|EUR)?\s*(?:cashback|terug|reembolso|rimborso)', chunk, re.I)
+            cb_m = re.search(r'(?:cashback|retour|terug|reembolso|rimborso)[:\s-]*(?:de|sichern|von|bis\s*zu)?\s*(?:€|EUR)?\s*(\d{2,4})', chunk, re.I)
+        if not cb_m:
+            cb_m = re.search(r'(?:€|EUR)\s*(\d{2,4})\s*(?:cashback|retour|terug|reembolso|rimborso)', chunk, re.I)
         if cb_m:
-            cashback = int(cb_m.group(1))
+            val = int(cb_m.group(1))
+            if 10 <= val <= 3000 and val not in [2024, 2025, 2026]:
+                cashback = val
             
-        promo = f"€{cashback} Cashback" if cashback > 0 else "None"
+        promos = []
+        if cashback > 0:
+            if 'reembolso' in chunk.lower():
+                promos.append(f"Reembolso €{cashback}")
+            else:
+                promos.append(f"Cashback: €{cashback}")
+        if 'streaming' in chunk.lower():
+            promos.append("Inkl. Streaming Content")
+        if 'sound device' in chunk.lower() or 'zusatzprodukt' in chunk.lower():
+            promos.append("Free Sound Device")
+        promo = "; ".join(promos) if promos else "None"
         
         # 5. Extract Size, Model Code, Year, Display Type
         rec = build_clean_record(brand, title, url, price, cashback, promo)
@@ -207,49 +251,47 @@ def parse_mediamarkt_markdown(md_text, brand):
 # ==============================================================================
 def parse_fnac_markdown(md_text, brand):
     items = []
-    # Pattern matching Fnac product links:
-    # [TV LG 4K OLED Evo OLED55C6 139 cm 2026](https://www.fnac.com/TV-LG-4K-OLED-Evo-OLED55C6-139-cm-2026/a23005754/w-4)
     pattern = re.compile(
-        r'\[(?:\*\*)?([^\]\*\n]+)(?:\*\*)?\]\((https?://(?:www\.)?fnac\.com/[^\)]+/a\d+/[^\)]*)\)(.*?)(?=\n\[|\Z)',
+        r'\[(?:\*\*)?((?:TV\s+|SAMSUNG|LG)[^\]\*\n]+)(?:\*\*)?\]\((https?://(?:www\.)?fnac\.com/[^\)]+/a\d+/[^\)]*)\)(.*?)(?=\n!?\[(?:\*\*)?(?:TV\s+|SAMSUNG|LG)|\Z)',
         re.DOTALL | re.IGNORECASE
     )
-    
     for m in pattern.finditer(md_text):
         title = m.group(1).strip()
         url = m.group(2).strip()
         chunk = m.group(3)
         u_title = title.upper()
-        
         if brand.upper() not in u_title and not any(k in u_title for k in ['OLED', 'QNED', 'S90', 'S95', 'C6', 'G6', 'B6']):
             continue
-            
         if any(x in u_title for x in NON_TV_KEYWORDS):
             continue
             
-        # Price extraction (handling \u202f narrow no-break space)
         t_chunk = chunk.replace('\u202f', ' ').replace('\xa0', ' ').replace('\u2009', ' ')
-        t_chunk = re.sub(r'\b\d+\s*€\s*(?:de\s*remise|d\'économie|de\s*réduction|remise|réduction)\b', '', t_chunk, flags=re.IGNORECASE)
+        t_chunk = re.sub(r'\b\d+\s*€\s*(?:remboursés?|remise|réduction|d\'économie)[^\n]*', '', t_chunk, flags=re.IGNORECASE)
         t_chunk = re.sub(r'dès\s*[\d\s,.]+\s*€\s*\/\s*mois', '', t_chunk, flags=re.IGNORECASE)
-        
         p_matches = re.findall(r'(\d+[\d\s]*[,\.]\d{2}|\d+[\d\s]*)\s*€', t_chunk)
         price = 0.0
+        cleaned_prices = []
         for raw in p_matches:
             cleaned = raw.strip().replace(' ', '').replace(',', '.')
             try:
                 v = float(cleaned)
-                if v >= 80.0:
-                    price = v
-                    break
-            except ValueError:
-                continue
-                
+                if v >= 100.0:
+                    cleaned_prices.append(v)
+            except:
+                pass
+        if cleaned_prices:
+            price = cleaned_prices[-1]
+            
         if price < 80.0:
             continue
+            
+        m_sz = re.search(r'Taille de l\'écran \(pouces\)\s*\*\*(\d{2,3})\s*"\*\*', chunk)
+        if m_sz:
+            title += f" {m_sz.group(1)}\""
             
         rec = build_clean_record(brand, title, url, price, 0, "None")
         if rec:
             items.append(rec)
-            
     return items
 
 # ==============================================================================
@@ -261,7 +303,7 @@ def build_clean_record(brand, title, url, price, cashback, promo):
     # 1. Screen Size
     size = 0
     # Inch pattern
-    m_inch = re.search(r'\b(98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"”\'-]*(?:INCH|ZOLL|POUCES|POLLICI|\"|\b)', u_title)
+    m_inch = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"”\'-]*(?:INCH|ZOLL|POUCES|POLLICI|\"|\b)', u_title)
     if m_inch:
         size = int(m_inch.group(1))
     if not size:
@@ -276,14 +318,15 @@ def build_clean_record(brand, title, url, price, cashback, promo):
     # 2. Model Code
     model_code = "Unknown"
     if brand.upper() == "LG":
-        # LG OLED (OLEDxxC6, xxC6, OLEDxxG6, xxG6, OLEDxxB6, xxB6)
-        m_oled = re.search(r'\b(OLED\d{2,3}[A-Z]{1,3}\d{0,2}[A-Z]*|\d{2}[CGB][56]\w*)\b', u_title)
-        if m_oled:
-            model_code = m_oled.group(1)
+        # Check specific series prefixes first (QNED, NANO, UHD NU/UA, etc.)
+        m_lg = re.search(r'\b(\d{2,3}(?:QNED|NANO|MRGB|LX|NU|UA|UT|UR|UQ|LB|QLED)\w*)\b', u_title)
+        if m_lg:
+            model_code = m_lg.group(1)
         else:
-            m_lg = re.search(r'\b(\d{2,3}(?:QNED|NANO|MRGB|LX|NU|UA|UT|UR|UQ|LB|QLED)\w*)\b', u_title)
-            if m_lg:
-                model_code = m_lg.group(1)
+            # LG OLED (OLEDxxC6, xxC6, OLEDxxG6, xxG6, OLEDxxB6, xxB6)
+            m_oled = re.search(r'\b(OLED\d{2,3}[A-Z0-9]*|(?:[4-9]\d|1[0-1]\d)[CGB][56][A-Z0-9]*)\b', u_title)
+            if m_oled:
+                model_code = m_oled.group(1)
         # Smart fallback for series
         if model_code == "Unknown":
             for w in u_title.split():
@@ -320,7 +363,7 @@ def build_clean_record(brand, title, url, price, cashback, promo):
         c_nums = re.findall(r'\d+', model_code)
         if c_nums and len(c_nums[0]) in [2, 3]:
             parsed_sz = int(c_nums[0])
-            if parsed_sz in [100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27]:
+            if parsed_sz in [115, 100, 98, 97, 86, 85, 83, 77, 75, 70, 65, 55, 50, 48, 43, 42, 40, 32, 27]:
                 size = parsed_sz
                 
     if not size:
@@ -377,12 +420,12 @@ def build_clean_record(brand, title, url, price, cashback, promo):
             display_type = "Micro RGB"
         elif "QNED" in c_up or "QNED" in u_title:
             display_type = "QNED"
-        elif "OLED" in c_up or "OLED" in u_title or re.search(r'\d{2}[CGB][56]', c_up):
-            display_type = "OLED evo" if ("EVO" in u_title or any(x in c_up for x in ["G5", "G6", "C5", "C6"])) else "OLED"
+        elif any(x in c_up for x in ["NU90", "NU85", "NU80", "NU800", "NU850", "UA75", "UA77", "UT", "UR", "UQ", "LQ", "LB"]):
+            display_type = "UHD 4K"
         elif "NANO" in c_up:
             display_type = "NanoCell"
-        elif any(x in c_up for x in ["NU90", "NU85", "NU80", "NU800", "NU850", "UA75", "UA77"]):
-            display_type = "UHD 4K"
+        elif "OLED" in c_up or "OLED" in u_title or re.search(r'\b(?:OLED)?(?:[4-9]\d)[BCG][456]\b', c_up):
+            display_type = "OLED evo" if ("EVO" in u_title or any(x in c_up for x in ["G5", "G6", "C5", "C6"])) else "OLED"
         elif "LX" in c_up or "STANBYME" in c_up:
             display_type = "Lifestyle"
             
@@ -475,6 +518,20 @@ def run_targeted_western_eu():
         ("DE", "MediaMarkt", "LG", "NU800", "https://www.mediamarkt.de/de/search.html?query=LG+NU800"),
         ("DE", "MediaMarkt", "LG", "MRGB", "https://www.mediamarkt.de/de/search.html?query=LG+MRGB"),
         ("DE", "MediaMarkt", "LG", "2026", "https://www.mediamarkt.de/de/search.html?query=LG+2026"),
+
+        # 2b. Austria (MediaMarkt AT)
+        ("AT", "MediaMarkt", "Samsung", "OLED", "https://www.mediamarkt.at/de/search.html?query=Samsung+OLED"),
+        ("AT", "MediaMarkt", "Samsung", "Neo QLED", "https://www.mediamarkt.at/de/search.html?query=Samsung+Neo+QLED"),
+        ("AT", "MediaMarkt", "Samsung", "Mini LED", "https://www.mediamarkt.at/de/search.html?query=Samsung+Mini+LED"),
+        ("AT", "MediaMarkt", "Samsung", "U80", "https://www.mediamarkt.at/de/search.html?query=Samsung+U80"),
+        ("AT", "MediaMarkt", "Samsung", "Micro RGB", "https://www.mediamarkt.at/de/search.html?query=Samsung+Micro+RGB"),
+        ("AT", "MediaMarkt", "Samsung", "2026", "https://www.mediamarkt.at/de/search.html?query=Samsung+2026"),
+        ("AT", "MediaMarkt", "LG", "OLED", "https://www.mediamarkt.at/de/search.html?query=LG+OLED"),
+        ("AT", "MediaMarkt", "LG", "C6", "https://www.mediamarkt.at/de/search.html?query=LG+C6"),
+        ("AT", "MediaMarkt", "LG", "QNED", "https://www.mediamarkt.at/de/search.html?query=LG+QNED"),
+        ("AT", "MediaMarkt", "LG", "NU8", "https://www.mediamarkt.at/de/search.html?query=LG+NU8"),
+        ("AT", "MediaMarkt", "LG", "MRGB", "https://www.mediamarkt.at/de/search.html?query=LG+MRGB"),
+        ("AT", "MediaMarkt", "LG", "2026", "https://www.mediamarkt.at/de/search.html?query=LG+2026"),
         
         # 3. Spain (MediaMarkt ES)
         ("ES", "MediaMarkt", "Samsung", "OLED", "https://www.mediamarkt.es/es/search.html?query=Samsung+OLED"),
@@ -492,15 +549,20 @@ def run_targeted_western_eu():
         
         # 4. Italy (MediaWorld IT)
         ("IT", "MediaWorld", "Samsung", "OLED", "https://www.mediaworld.it/it/search.html?query=Samsung+OLED"),
+        ("IT", "MediaWorld", "Samsung", "S95", "https://www.mediaworld.it/it/search.html?query=Samsung+S95"),
+        ("IT", "MediaWorld", "Samsung", "S90", "https://www.mediaworld.it/it/search.html?query=Samsung+S90"),
+        ("IT", "MediaWorld", "Samsung", "S85", "https://www.mediaworld.it/it/search.html?query=Samsung+S85"),
+        ("IT", "MediaWorld", "Samsung", "S99", "https://www.mediaworld.it/it/search.html?query=Samsung+S99"),
         ("IT", "MediaWorld", "Samsung", "Neo QLED", "https://www.mediaworld.it/it/search.html?query=Samsung+Neo+QLED"),
         ("IT", "MediaWorld", "Samsung", "Mini LED", "https://www.mediaworld.it/it/search.html?query=Samsung+Mini+LED"),
         ("IT", "MediaWorld", "Samsung", "U80", "https://www.mediaworld.it/it/search.html?query=Samsung+U80"),
-        ("IT", "MediaWorld", "Samsung", "Micro RGB", "https://www.mediamarkt.it/it/search.html?query=Samsung+Micro+RGB" if False else "https://www.mediaworld.it/it/search.html?query=Samsung+Micro+RGB"),
+        ("IT", "MediaWorld", "Samsung", "Micro RGB", "https://www.mediaworld.it/it/search.html?query=Samsung+Micro+RGB"),
         ("IT", "MediaWorld", "Samsung", "2026", "https://www.mediaworld.it/it/search.html?query=Samsung+2026"),
         ("IT", "MediaWorld", "LG", "OLED", "https://www.mediaworld.it/it/search.html?query=LG+OLED"),
         ("IT", "MediaWorld", "LG", "C6", "https://www.mediaworld.it/it/search.html?query=LG+C6"),
         ("IT", "MediaWorld", "LG", "QNED", "https://www.mediaworld.it/it/search.html?query=LG+QNED"),
         ("IT", "MediaWorld", "LG", "NU8", "https://www.mediaworld.it/it/search.html?query=LG+NU8"),
+        ("IT", "MediaWorld", "LG", "NU850", "https://www.mediaworld.it/it/search.html?query=LG+NU850"),
         ("IT", "MediaWorld", "LG", "MRGB", "https://www.mediaworld.it/it/search.html?query=LG+MRGB"),
         ("IT", "MediaWorld", "LG", "2026", "https://www.mediaworld.it/it/search.html?query=LG+2026"),
         
@@ -516,7 +578,23 @@ def run_targeted_western_eu():
         ("FR", "Fnac", "LG", "QNED", "https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+lg+qned"),
         ("FR", "Fnac", "LG", "NU85", "https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+lg+nu85"),
         ("FR", "Fnac", "LG", "MRGB", "https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+lg+micro+rgb"),
-        ("FR", "Fnac", "LG", "2026", "https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+lg+2026")
+        ("FR", "Fnac", "LG", "2026", "https://www.fnac.com/SearchResult/ResultList.aspx?Search=tv+lg+2026"),
+
+        # 6. Hungary (MediaMarkt HU)
+        ("HU", "MediaMarkt", "Samsung", "OLED", "https://www.mediamarkt.hu/hu/search.html?query=Samsung+OLED"),
+        ("HU", "MediaMarkt", "Samsung", "Mini LED", "https://www.mediamarkt.hu/hu/search.html?query=Samsung+Mini+LED"),
+        ("HU", "MediaMarkt", "Samsung", "U80", "https://www.mediamarkt.hu/hu/search.html?query=Samsung+U80"),
+        ("HU", "MediaMarkt", "LG", "OLED", "https://www.mediamarkt.hu/hu/search.html?query=LG+OLED"),
+        ("HU", "MediaMarkt", "LG", "QNED", "https://www.mediamarkt.hu/hu/search.html?query=LG+QNED"),
+        ("HU", "MediaMarkt", "LG", "MRGB", "https://www.mediamarkt.hu/hu/search.html?query=LG+MRGB"),
+
+        # 7. Switzerland (MediaMarkt CH)
+        ("CH", "MediaMarkt", "Samsung", "OLED", "https://www.mediamarkt.ch/de/search.html?query=Samsung+OLED"),
+        ("CH", "MediaMarkt", "Samsung", "Neo QLED", "https://www.mediamarkt.ch/de/search.html?query=Samsung+Neo+QLED"),
+        ("CH", "MediaMarkt", "Samsung", "U80", "https://www.mediamarkt.ch/de/search.html?query=Samsung+U80"),
+        ("CH", "MediaMarkt", "LG", "OLED", "https://www.mediamarkt.ch/de/search.html?query=LG+OLED"),
+        ("CH", "MediaMarkt", "LG", "QNED", "https://www.mediamarkt.ch/de/search.html?query=LG+QNED"),
+        ("CH", "MediaMarkt", "LG", "MRGB", "https://www.mediamarkt.ch/de/search.html?query=LG+MRGB")
     ]
     
     print(f"Total targeted queries to execute: {len(TARGET_MATRIX)}")
@@ -525,11 +603,11 @@ def run_targeted_western_eu():
     gathered = {}
     
     t0 = time.time()
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         futures = []
         for item in TARGET_MATRIX:
             futures.append(executor.submit(fetch_firecrawl_url, item))
-            time.sleep(0.5) # Polite stagger to stay under 36 req/min limit
+            time.sleep(0.4)
             
         for f in futures:
             cc, retailer, brand, query, items, status_code = f.result()
@@ -538,6 +616,8 @@ def run_targeted_western_eu():
                 gathered[key] = []
             gathered[key].extend(items)
             print(f"  [{cc} - {retailer} - {brand.upper()}] Query: {query:<10} (HTTP {status_code}) -> Found {len(items)} matching products.", flush=True)
+            if items:
+                update_master_registry(items, cc, retailer)
             
     print(f"\n✅ All targeted queries completed in {time.time() - t0:.1f}s.", flush=True)
     
@@ -547,12 +627,16 @@ def run_targeted_western_eu():
         ("NL", "LG"): "raw_mm-nl_lg.json",
         ("DE", "Samsung"): "raw_mm-de_samsung.json",
         ("DE", "LG"): "raw_mm-de_lg.json",
+        ("AT", "Samsung"): "raw_mm-at_samsung.json",
+        ("AT", "LG"): "raw_mm-at_lg.json",
         ("ES", "Samsung"): "raw_mm-es_samsung.json",
         ("ES", "LG"): "raw_mm-es_lg.json",
         ("IT", "Samsung"): "raw_mw-it_samsung.json",
         ("IT", "LG"): "raw_mw-it_lg.json",
         ("FR", "Samsung"): "raw_fnac_samsung.json",
-        ("FR", "LG"): "raw_fnac_lg.json"
+        ("FR", "LG"): "raw_fnac_lg.json",
+        ("CH", "Samsung"): "raw_mediamarkt_samsung.json",
+        ("CH", "LG"): "raw_mediamarkt_lg.json"
     }
     
     print("\n--- Merging Discovered Models with Lowest-Price Deduplication ---")
@@ -566,7 +650,6 @@ def run_targeted_western_eu():
                 except Exception:
                     existing = []
                     
-        # Key by model_code (or title fallback)
         model_dict = {}
         for item in existing:
             mc = item.get("model_code", "Unknown")
@@ -587,7 +670,6 @@ def run_targeted_western_eu():
                     model_dict[mc] = item
                     added_count += 1
                 else:
-                    # Update if new price is lower
                     if item["price"] < model_dict[mc].get("price", float("inf")):
                         model_dict[mc] = item
                         updated_price_count += 1
@@ -603,8 +685,95 @@ def run_targeted_western_eu():
             
         print(f"  • {fname:<25}: Before={before_count:>2} | Added={added_count:>2} new | Price Updated={updated_price_count:>2} | Total={len(final_list):>2}")
 
+    # Probing Alza Czech Republic Flagships
+    print("\n--- Phase 2: Probing Alza Czech Republic Master Flagships ---")
+    alza_probes = [
+        ("LG", "OLED83G64LW", 83, "G6", "OLED evo", "https://www.alza.cz/83-lg-oled83g64lw-d13367836.htm"),
+        ("LG", "OLED48G66LS", 48, "G6", "OLED evo", "https://www.alza.cz/48-lg-oled48g66ls-d13367870.htm"),
+        ("Samsung", "QE77S85H", 77, "S85H", "OLED", "https://www.alza.cz/77-samsung-qe77s85h-d13360976.htm"),
+        ("Samsung", "QE65S85H", 65, "S85H", "OLED", "https://www.alza.cz/65-samsung-qe65s85h-d13360975.htm"),
+        ("LG", "100MRGB96B6", 100, "MRGB96B", "Micro RGB", "https://www.alza.cz/100-lg-100mrgb96b6-d13367866.htm"),
+        ("LG", "86MRGB96B6B", 86, "MRGB96B", "Micro RGB", "https://www.alza.cz/86-lg-86mrgb96b6b-d13367869.htm"),
+        ("LG", "75MRGB96B6B", 75, "MRGB96B", "Micro RGB", "https://www.alza.cz/75-lg-75mrgb96b6b-d13367867.htm"),
+        ("Samsung", "RE85R95H", 85, "R95H", "Micro RGB", "https://www.alza.cz/85-samsung-mre85r95h-d13360970.htm"),
+        ("LG", "65MRGB86B6A", 65, "MRGB87B", "Micro RGB", "https://www.alza.cz/65-lg-65mrgb86b6a-d13367881.htm"),
+        ("LG", "55MRGB86B6A", 55, "MRGB87B", "Micro RGB", "https://www.alza.cz/55-lg-55mrgb86b6a-d13367882.htm"),
+        ("LG", "50MRGB86B6A", 50, "MRGB87B", "Micro RGB", "https://www.alza.cz/50-lg-50mrgb86b6a-d13367885.htm"),
+        ("LG", "55QNED86B6B", 55, "QNED86B", "QNED", "https://www.alza.cz/55-lg-55qned86b6b-d13367876.htm"),
+        ("LG", "50QNED86B6B", 50, "QNED86B", "QNED", "https://www.alza.cz/50-lg-50qned86b6b-d13367878.htm"),
+        ("LG", "55QNED80B6B", 55, "QNED80B", "QNED", "https://www.alza.cz/55-lg-55qned80b6b-d13333251.htm")
+    ]
+    alza_discovered = []
+    for brand, code, size, series, disp, url in alza_probes:
+        headers = {'Authorization': f'Bearer {FIRECRAWL_API_KEY}'}
+        payload = {'url': url, 'formats': ['markdown'], 'proxy': 'stealth'}
+        try:
+            r = requests.post(FIRECRAWL_ENDPOINT, json=payload, headers=headers, timeout=50)
+            if r.status_code == 200:
+                md = r.json().get('data', {}).get('markdown', '')
+                text_lower = md.lower()
+                if any(x in text_lower for x in ['prodej skončil', 'ukončen prodej', 'nedostupné']):
+                    print(f"  [ALZA CZ] Out of stock / Delisted: {code}")
+                    continue
+                p_matches = re.findall(r'(\d[\d\s\xa0]*)(?:,-|Kč)', md)
+                clean_prices = []
+                for pr in p_matches:
+                    num_str = pr.replace('\xa0', '').replace(' ', '').replace('.', '').replace(',', '')
+                    if num_str.isdigit():
+                        val = float(num_str)
+                        if val >= 3500.0 and val != 100000.0:
+                            clean_prices.append(val)
+                if clean_prices:
+                    price = clean_prices[0]
+                    rec = {
+                        "brand": brand,
+                        "year": 2026,
+                        "display": disp,
+                        "display_type": disp,
+                        "size": size,
+                        "series": series,
+                        "model_code": code,
+                        "price": price,
+                        "original_price": price,
+                        "shipping": "Free",
+                        "cashback": 0,
+                        "promo": "None",
+                        "promotion": "None",
+                        "title": f'{size}" {brand} {code}',
+                        "url": url,
+                        "link": url,
+                        "currency": "CZK",
+                        "country": "CZ",
+                        "retailer": "Alza"
+                    }
+                    alza_discovered.append(rec)
+                    print(f"  [ALZA CZ] Valid In-Stock: {brand} {code} ({size}\"): {price:,.0f} CZK")
+            time.sleep(0.5)
+        except Exception as e:
+            print(f"  [ALZA CZ] Error probing {code}: {e}")
+
+    if alza_discovered:
+        update_master_registry(alza_discovered, "CZ", "Alza")
+        # Merge into raw_alza files
+        for brand_name, fname in [("LG", "raw_alza_lg.json"), ("Samsung", "raw_alza_samsung.json")]:
+            fpath = os.path.join(DATA_DIR, fname)
+            existing = []
+            if os.path.exists(fpath):
+                with open(fpath, "r", encoding="utf-8") as f:
+                    try:
+                        existing = json.load(f)
+                    except:
+                        existing = []
+            m_dict = {it.get("model_code", ""): it for it in existing if it.get("model_code")}
+            for it in alza_discovered:
+                if it["brand"].upper() == brand_name.upper():
+                    m_dict[it["model_code"]] = it
+            with open(fpath, "w", encoding="utf-8") as f:
+                json.dump(list(m_dict.values()), f, ensure_ascii=False, indent=2)
+            print(f"  • {fname}: Synced {len(m_dict)} items.")
+
     print("\n================================================================================")
-    print(" 🎉 PHASE 1 RAW DATA EXPANSION COMPLETE! READY FOR EXCEL & DASHBOARD SYNC ")
+    print(" 🎉 FULL TARGETED SEARCH & MASTER REGISTRY REPLENISHMENT COMPLETE! ")
     print("================================================================================")
 
 if __name__ == "__main__":

@@ -438,6 +438,36 @@ Public.gr search queries cap results at 36 products per page. Scrapers MUST trav
 - Clean models from `MediaMarkt_Samsung_Full` and `MediaMarkt_LG_Full` are automatically synced into `price tracker_EU_{YYYY MMDD}_v1.xlsx` and `daily_prices` table in `price_history.db`.
 - The Data Intelligence Engine (`scripts/data_intelligence_engine.py`) performs real-time 1:1 segment price gap and WoW volatility analysis across Swiss retailers and reflects results in the Executive Price Briefing report.
 
+---
+
+## Part N: Net Price Default Standard & ATA Calculation Consistency
+
+### 1) Default to Net Value Display
+- The Swiss dashboard (`data/swiss_price_dashboard_template.html`) must default to **'실질가 (캐시백반영)'** (`let currentPriceType = 'net'`).
+- Chart heights, data labels, and tooltips display Net prices (`msh_net`, `id_net`, `digi_net`) reflecting exact direct cashbacks.
+- ATA is calculated as `(LG Net / Samsung Net) * 100` in 실질가 mode, matching the Excel comparison formula `=D{r}/D{denom_row}`.
+- Conditional benefits (Trade-in requiring used TV return) and non-price gifts are excluded from price deduction.
+
+---
+
+## Part O: 2026 Model Year 1:1 Live PDP Deep Verification & Multi-Tier Failover Protocol
+
+### 1) 2026 Model Mandatory Verification Gate
+* After standard category scraping of MediaMarkt CH, Interdiscount, and Digitec, the pipeline MUST cross-check all Swiss 2026 models in `data/master_product_urls.json` (Samsung S95H, S90H, QN80H, M70H, R85H, U8090H; LG G6, C6, B6, QNED86B, QNED71B, MRGB87B).
+* Any missing 2026 model MUST undergo an automated 1:1 live PDP probe (`scripts/live_pdp_probe.py`) to verify in-stock availability and live transaction price.
+* All surviving active models are immediately injected into `price tracker_swiss_2026 {MMDD}_v1.xlsx` and `price tracker_EU_2026 {MMDD}_v1.xlsx`.
+
+### 2) 3-Tier Multi-Tool Failover Protocol
+* **Tier 1 (Fast HTTP / curl_cffi)**: Attempt multithreaded (10 workers) probe with Chrome impersonation.
+* **Tier 2 (Playwright MCP Browser Sandbox Execution)**: If Cloudflare 403 or Turnstile challenge is encountered, immediately invoke the agent's Playwright MCP session (`browser_run_code_unsafe`) to solve captchas and extract live product cards and coupon prices.
+* **Tier 3 (Firecrawl Stealth API)**: If interactive bot challenges cause browser hangs or timeouts, failover to Firecrawl Stealth Scraper (`firecrawl_scrape`) to guarantee 100% data completion.
+
+### 3) Discontinued & Marketplace Purging Standards
+* **Discontinued / Out of Stock**: Models showing `Nicht mehr lieferbar`, `Aktuell nicht lieferbar`, `Ausverkauft` (Digitec), `Nicht mehr im Sortiment` (Interdiscount), or `Nicht mehr verfügbar` (MediaMarkt) must be excluded from price comparison sheets and logged in `data/master_urls_missing_analysis_{YYYYMMDD}.json`.
+* **Direct Seller Exclusivity**: 3rd-party marketplace merchant offers on Digitec and Interdiscount must be strictly excluded.
+
+
+
 
 
 

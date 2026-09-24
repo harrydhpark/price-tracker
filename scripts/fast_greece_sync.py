@@ -236,6 +236,20 @@ def sync_greece_dump(dump_path=None):
                 if m_pr:
                     promo = m_pr.group(1).strip()
 
+            from promo_classifier import classify_promotions
+            orig_p_calc, cb_val, price_promo, non_price_promo = classify_promotions(
+                promo_raw=promo,
+                title_raw=title,
+                brand=brand,
+                year=info["year"],
+                model_code=info["model_code"],
+                price=selling_price,
+                currency="EUR",
+                existing_original_price=orig_price
+            )
+            if orig_p_calc > orig_price:
+                orig_price = orig_p_calc
+
             clean_item = {
                 "brand": brand,
                 "title": title,
@@ -246,9 +260,11 @@ def sync_greece_dump(dump_path=None):
                 "display_type": info["display_type"],
                 "original_price": orig_price,
                 "price": selling_price,
-                "cashback": 0.0,
-                "net_price": selling_price,
-                "promotion": promo,
+                "cashback": cb_val,
+                "net_price": selling_price - cb_val,
+                "price_promotion": price_promo,
+                "non_price_promotion": non_price_promo,
+                "promotion": f"{price_promo}; {non_price_promo}".replace("None; ", "").replace("; None", ""),
                 "url": url,
                 "image_url": ""
             }
@@ -263,14 +279,16 @@ def sync_greece_dump(dump_path=None):
     # Now update Excel workbook
     candidates = glob.glob(os.path.join(DATA_DIR, "price tracker_EU_2026 0912*.xlsx"))
     if not candidates:
-        candidates = glob.glob(os.path.join(DATA_DIR, "price tracker_EU_2026 *.xlsx"))
-    target_wb_path = sorted(candidates)[-1]
-    print(f"  ➔ Updating Excel workbook: {target_wb_path}")
+        print("  [WARN] No target workbook found.")
+        return
 
+    target_wb_path = candidates[0]
+    print(f"\n[EXCEL] Updating {target_wb_path}...")
     wb = openpyxl.load_workbook(target_wb_path)
+
     sheets_config = [
-        ("Public_GR_Samsung", results["Samsung"]),
-        ("Public_GR_LG", results["LG"])
+        ("Public_GR_Samsung", results.get("Samsung", [])),
+        ("Public_GR_LG", results.get("LG", []))
     ]
 
     for sheet_name, items in sheets_config:
@@ -279,8 +297,8 @@ def sync_greece_dump(dump_path=None):
         ws = wb.create_sheet(title=sheet_name)
         headers = [
             "Brand", "Model Year", "Display Type", "Size (Inch)", "Model Code",
-            "Price (EUR)", "Original Price (EUR)", "Series", "Cashback", "General Promotions",
-            "URL", "Title"
+            "Price (EUR)", "Original Price (EUR)", "Series", "Cashback",
+            "Price Promotion", "Non-Price Promotion", "URL", "Title"
         ]
         ws.append(headers)
         for it in items:
@@ -294,7 +312,8 @@ def sync_greece_dump(dump_path=None):
                 it.get("original_price"),
                 it.get("series"),
                 it.get("cashback", 0),
-                it.get("promotion", "None"),
+                it.get("price_promotion", "None"),
+                it.get("non_price_promotion", "None"),
                 it.get("url"),
                 it.get("title")
             ])

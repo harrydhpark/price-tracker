@@ -37,12 +37,20 @@ def extract_model_code_and_info(title_upper, brand, href):
     model_code = "Unknown"
     size_val = 0
 
-    m_size = re.search(r'(\d{2,3})[\"\”\s]*(?:4K|Smart|OLED|QLED|LED|QNED|Nano|Mini|Micro|\b)', title_upper)
-    if m_size:
-        try:
-            size_val = int(m_size.group(1))
-        except ValueError:
-            size_val = 0
+    # 1. Try from URL slug: e.g. .../samsung-mini-led-55-4k-...
+    url_str = str(href or '').lower()
+    m_url = re.search(r'-(24|27|32|40|42|43|48|50|55|65|70|75|77|83|85|86|98|100|115)-(?:4k|oled|qled|smart|full-hd|led|qned)', url_str)
+    if m_url:
+        size_val = int(m_url.group(1))
+
+    # 2. Try from title: explicit inch mark or screen category suffix (do NOT use loose \b)
+    if not size_val:
+        m_size = re.search(r'\b(24|27|32|40|42|43|48|50|55|65|70|75|77|83|85|86|98|100|115)[\"\”\s]*(?:4K|Smart|OLED|QLED|LED|QNED|Nano|Mini|Micro|Inch|\'\'|\")', title_upper)
+        if m_size:
+            try:
+                size_val = int(m_size.group(1))
+            except ValueError:
+                size_val = 0
             
     if size_val < 22:
         return None  # Exclude small screens, monitors and accessories
@@ -312,22 +320,39 @@ def scrape_public_gr(brand):
                             
                     card_text = card.get_text(' ', strip=True)
                     
-                    # Extract prices
-                    prices = re.findall(r'(\d[\d\.\s]*[,\.]\d{2})\s*€', card_text)
+                    # Extract prices (strip discount/benefit badges first)
+                    clean_card_text = re.sub(r'(?:Κέρδος|Έκπτωση|όφελος|Δωροεπιταγή|Δώρο|από|-\s*)\s*\d[\d\.\s]*[,\.]\d{2}\s*€', '', card_text, flags=re.IGNORECASE)
+                    prices = re.findall(r'(\d[\d\.\s]*[,\.]\d{2})\s*€', clean_card_text)
+                    if not prices:
+                        prices = re.findall(r'(\d[\d\.\s]*[,\.]\d{2})\s*€', card_text)
                     selling_price = 0.0
                     orig_price = 0.0
                     
                     if prices:
                         parsed_prices = []
+                        disp = info.get("display_type", "")
                         for p in prices:
                             val = parse_price(p)
-                            # Screen size threshold guard
-                            if size_val >= 70 and val < 700.0:
-                                continue
-                            if size_val >= 55 and val < 350.0:
-                                continue
-                            if size_val >= 48 and val < 250.0:
-                                continue
+                            # Category & Screen Size price floor guard
+                            if disp == "OLED":
+                                if size_val >= 83 and val < 1400.0: continue
+                                elif size_val >= 77 and val < 1100.0: continue
+                                elif size_val >= 65 and val < 850.0: continue
+                                elif size_val >= 55 and val < 600.0: continue
+                                elif size_val in [42, 48] and val < 450.0: continue
+                                elif val < 350.0: continue
+                            elif disp == "MRGB":
+                                if size_val >= 75 and val < 1200.0: continue
+                                elif val < 600.0: continue
+                            elif disp == "QNED/QLED":
+                                if size_val >= 75 and val < 600.0: continue
+                                elif size_val >= 65 and val < 450.0: continue
+                                elif size_val >= 50 and val < 280.0: continue
+                                elif size_val >= 43 and val < 200.0: continue
+                            else: # UHD 4K
+                                if size_val >= 70 and val < 450.0: continue
+                                elif size_val >= 55 and val < 180.0: continue
+                                elif size_val >= 43 and val < 120.0: continue
                             if val >= 100.0:
                                 parsed_prices.append(val)
                                 

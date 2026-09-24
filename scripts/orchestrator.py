@@ -40,7 +40,8 @@ def run_cmd(cmd_list: List[str], desc: str) -> bool:
             check=True,
             text=True,
             encoding="utf-8",
-            capture_output=False
+            capture_output=False,
+            shell=(os.name == 'nt')
         )
         elapsed = round(time.time() - start, 1)
         print(f"✔ [SUCCESS] {desc} completed in {elapsed}s.")
@@ -70,6 +71,26 @@ def sync_regional_data(region_id: Optional[str] = None):
     if not region_id or region_id in ["dach", "ch"]:
         run_cmd([PYTHON_EXE, "scripts/sync_all_retailers.py"], "Sync Swiss Multi-Retailer Workbook")
 
+    # 4. Australia Survey (JB Hi-Fi, The Good Guys, Harvey Norman)
+    if not region_id or region_id in ["au", "australia"]:
+        run_cmd([PYTHON_EXE, "scripts/sync_au_retailers.py"], "Sync Australia Retailers to Excel")
+
+    # 5. New EU Retailers (PL MediaExpert, PT Worten, RO Altex, SE Elgiganten)
+    if not region_id or region_id in ["nordics", "eastern_eu", "western_eu", "new_eu"]:
+        run_cmd([PYTHON_EXE, "scripts/sync_new_eu_retailers.py"], "Sync New EU Retailers (PL, PT, RO, SE) to Excel")
+
+def sync_master_registry():
+    print("\n=======================================================")
+    print("🗄️ [ORCHESTRATOR] Synchronizing Master Product URL Registry")
+    print("=======================================================")
+    run_cmd([PYTHON_EXE, "scripts/build_master_url_registry.py"], "Merge New URLs into master_product_urls.json")
+
+def run_quality_gates():
+    print("\n=======================================================")
+    print("🛡️ [ORCHESTRATOR] Running Data Quality Gates & Anomaly Audits")
+    print("=======================================================")
+    run_cmd([PYTHON_EXE, "scripts/quality_gates.py"], "Audit Quality Gates (R1-R4)")
+
 def update_price_history():
     print("\n=======================================================")
     print("📊 [ORCHESTRATOR] Updating SQLite Price History Database")
@@ -77,6 +98,7 @@ def update_price_history():
     today_str = datetime.now().strftime("%m%d")
     eu_target = os.path.join(ROOT_DIR, "data", f"price tracker_EU_2026 {today_str}_v1.xlsx")
     swiss_target = os.path.join(ROOT_DIR, "data", f"price tracker_swiss_2026 {today_str}_v1.xlsx")
+    au_target = os.path.join(ROOT_DIR, "data", f"price tracker_AU_2026 {today_str}_v1.xlsx")
 
     # If exact date not found, pick latest
     import glob
@@ -86,11 +108,14 @@ def update_price_history():
     if not os.path.exists(swiss_target):
         cand = glob.glob(os.path.join(ROOT_DIR, "data", "price tracker_swiss_2026 *.xlsx"))
         if cand: swiss_target = sorted(cand)[-1]
+    if not os.path.exists(au_target):
+        cand = glob.glob(os.path.join(ROOT_DIR, "data", "price tracker_AU_2026 *.xlsx"))
+        if cand: au_target = sorted(cand)[-1]
 
     cmd = [
         PYTHON_EXE, "-c",
         f"import sys; sys.path.insert(0, '.'); from scripts.price_history import record_survey_from_excel; "
-        f"record_survey_from_excel(r'{eu_target}'); record_survey_from_excel(r'{swiss_target}')"
+        f"record_survey_from_excel(r'{eu_target}'); record_survey_from_excel(r'{swiss_target}'); record_survey_from_excel(r'{au_target}')"
     ]
     run_cmd(cmd, "Record Workbooks into price_history.db")
 
@@ -111,24 +136,28 @@ def compile_dashboards():
     print("=======================================================")
     run_cmd([PYTHON_EXE, "scripts/generate_eu_dashboard.py"], "Compile Pan-European Price Dashboard")
     run_cmd([PYTHON_EXE, "scripts/generate_dashboard.py"], "Compile Swiss Price Dashboard")
+    run_cmd([PYTHON_EXE, "scripts/generate_au_dashboard.py"], "Compile Australia Price Dashboard")
 
 def deploy_firebase():
     print("\n=======================================================")
     print("🚀 [ORCHESTRATOR] Deploying Dashboards to Firebase Hosting")
     print("=======================================================")
-    run_cmd(["firebase", "deploy", "--only", "hosting:eu-price-tracker,hosting:swiss-price-tracker"], "Deploy to Firebase Hosting")
+    npx_cmd = "npx.cmd" if os.name == 'nt' else "npx"
+    run_cmd([npx_cmd, "firebase", "deploy", "--only", "hosting:eu-price-tracker,hosting:swiss-price-tracker,hosting:au-price-tracker"], "Deploy to Firebase Hosting")
 
 def main():
     parser = argparse.ArgumentParser(description="Master Multi-Agent TV Price Tracker Orchestrator")
     parser.add_argument("--all", action="store_true", help="Execute across all configured regions")
-    parser.add_argument("--region", type=str, default=None, help="Target region ID (dach, western_eu, eastern_eu)")
-    parser.add_argument("--country", type=str, default=None, help="Target country code (DE, UK, FR, ES, IT, NL, AT, CH, CZ, GR, HU)")
+    parser.add_argument("--region", type=str, default=None, help="Target region ID (dach, western_eu, eastern_eu, au)")
+    parser.add_argument("--country", type=str, default=None, help="Target country code (DE, UK, FR, ES, IT, NL, AT, CH, CZ, GR, HU, AU)")
     parser.add_argument("--sync", action="store_true", help="Run regional Excel synchronization")
+    parser.add_argument("--registry", action="store_true", help="Synchronize Master Product URL Registry")
+    parser.add_argument("--gates", action="store_true", help="Run Quality Gates and Anomaly Audits")
     parser.add_argument("--db-sync", action="store_true", help="Record Excel workbooks into price_history.db")
     parser.add_argument("--analyze-only", action="store_true", help="Run only Data Intelligence Engine and generate reports")
     parser.add_argument("--dashboard", action="store_true", help="Compile standalone web dashboards")
     parser.add_argument("--deploy", action="store_true", help="Deploy web dashboards to Firebase Hosting")
-    parser.add_argument("--full", action="store_true", help="Run full pipeline: Sync -> DB -> Analyze -> Dashboard -> Deploy")
+    parser.add_argument("--full", action="store_true", help="Run full pipeline: Sync -> Registry -> Gates -> DB -> Analyze -> Dashboard -> Deploy")
     args = parser.parse_args()
 
     total_start = time.time()
@@ -149,6 +178,8 @@ def main():
 
     if args.full:
         sync_regional_data(args.region)
+        sync_master_registry()
+        run_quality_gates()
         update_price_history()
         run_data_intelligence(country=args.country)
         compile_dashboards()
@@ -160,6 +191,12 @@ def main():
     ran_anything = False
     if args.sync:
         sync_regional_data(args.region)
+        ran_anything = True
+    if args.registry:
+        sync_master_registry()
+        ran_anything = True
+    if args.gates:
+        run_quality_gates()
         ran_anything = True
     if args.db_sync:
         update_price_history()

@@ -109,6 +109,10 @@ for excel_path in excel_files:
             elif "UK" in sheet_name: country = "UK"; retailer = "Currys"
             elif "FR" in sheet_name: country = "FR"; retailer = "Fnac"
             elif "IT" in sheet_name: country = "IT"; retailer = "MediaWorld"
+            elif "PL" in sheet_name: country = "PL"; retailer = "MediaExpert"
+            elif "PT" in sheet_name: country = "PT"; retailer = "Worten"
+            elif "RO" in sheet_name: country = "RO"; retailer = "Altex"
+            elif "SE" in sheet_name: country = "SE"; retailer = "Elgiganten"
             
             headers = [str(ws.cell(row=1, column=c).value or "").lower() for c in range(1, ws.max_column + 1)]
             
@@ -301,6 +305,14 @@ we_sources = [
     ("raw_mm-at_lg.json", "AT", "MediaMarkt", "LG"),
     ("raw_currys_samsung.json", "UK", "Currys", "SAMSUNG"),
     ("raw_currys_lg.json", "UK", "Currys", "LG"),
+    ("raw_worten_pt_samsung.json", "PT", "Worten", "SAMSUNG"),
+    ("raw_worten_pt_lg.json", "PT", "Worten", "LG"),
+    ("raw_elgiganten_se_samsung.json", "SE", "Elgiganten", "SAMSUNG"),
+    ("raw_elgiganten_se_lg.json", "SE", "Elgiganten", "LG"),
+    ("raw_mediaexpert_pl_samsung.json", "PL", "MediaExpert", "SAMSUNG"),
+    ("raw_mediaexpert_pl_lg.json", "PL", "MediaExpert", "LG"),
+    ("raw_altex_ro_samsung.json", "RO", "Altex", "SAMSUNG"),
+    ("raw_altex_ro_lg.json", "RO", "Altex", "LG"),
 ]
 for fn, country, ret, b in we_sources:
     fp = os.path.join(data_dir, fn)

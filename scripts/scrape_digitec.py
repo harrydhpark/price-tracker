@@ -52,9 +52,9 @@ def classify_samsung_year(model_code, title_upper):
             elif "D" in sub or "E" in sub:
                 return 2024
             
-    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN80H", "QN70H", "LS03H", "U8000H", "U8090H", "M70H", "R85H", "R95H"]):
+    if any(x in title_upper for x in ["S90H", "S95H", "S85H", "S99H", "QN900H", "QN800H", "QN95H", "QN90H", "QN85H", "QN82H", "QN80H", "QN70H", "LS03H", "LS03HW", "U8000H", "U8090H", "U8070H", "M80H", "M82H", "M70H", "M72H", "R85H", "R95H", "2026"]):
         return 2026
-    if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN80F", "QN70F", "LS03F", "U8000F", "U8090F", "M70F", "R85F", "Q7F", "Q8F"]):
+    if any(x in title_upper for x in ["S90F", "S95F", "S85F", "QN900F", "QN800F", "QN95F", "QN90F", "QN85F", "QN82F", "QN80F", "QN70F", "LS03F", "U8000F", "U8090F", "U8070F", "M80F", "M70F", "R85F", "Q7F", "Q8F", "2025"]):
         return 2025
     if any(x in title_upper for x in ["S90D", "S95D", "S85D", "QN900D", "QN800D", "QN95D", "QN90D", "QN85D", "QN80D", "QN70D", "LS03D", "U8000D", "U8090D", "M70D"]):
         return 2024
@@ -62,18 +62,18 @@ def classify_samsung_year(model_code, title_upper):
 
 def classify_lg_year(model_code, title_upper):
     if model_code != "Unknown":
-        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "27LX6TDGA", "QLED7EB", "MRGB96B"]):
+        if any(x in model_code for x in ["C6", "G6", "B6", "QNED86B", "QNED87B", "QNED85B", "QNED83B", "QNED82B", "QNED81B", "QNED80B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "UA77", "MRGB87B", "LX7B", "LX6", "27LX6TDGA", "QLED7EB", "MRGB96B"]):
             return 2026
-        elif any(x in model_code for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO80A", "QNED93A"]):
+        elif any(x in model_code for x in ["C5", "G5", "B5", "QNED86A", "QNED87A", "QNED85A", "QNED80A", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO80A", "QNED93A"]):
             return 2025
         elif any(x in model_code for x in ["C4", "G4", "B4", "QNED80", "QNED85", "QNED86", "UA73"]):
             if "2025" in title_upper:
                 return 2025
             return 2024
             
-    if any(x in title_upper for x in ["C6", "G6", "B6", "QNED86B", "QNED80B", "QNED87B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "MRGB87B", "LX7B", "LX6", "27LX6", "STANBYME 2", "MRGB96B"]):
+    if any(x in title_upper for x in ["C6", "G6", "B6", "QNED86B", "QNED87B", "QNED85B", "QNED83B", "QNED82B", "QNED81B", "QNED80B", "QNED71B", "QNED70B", "QNED72B", "QNED7EB", "MRGB87B", "LX7B", "LX6", "27LX6", "STANBYME 2", "MRGB96B", "2026"]):
         return 2026
-    if any(x in title_upper for x in ["C5", "G5", "B5", "QNED86A", "QNED80A", "QNED87A", "QNED7EA", "QNED72A", "MRGB87A", "LX7A", "LX5", "QNED70", "NANO81", "NANO80", "QNED93"]):
+    if any(x in title_upper for x in ["C5", "G5", "B5", "QNED86A", "QNED87A", "QNED85A", "QNED80A", "QNED7EA", "QNED72A", "MRGB87A", "LX7A", "LX5", "QNED70", "NANO81", "NANO80", "QNED93", "2025"]):
         return 2025
     if any(x in title_upper for x in ["C4", "G4", "B4"]):
         return 2024
@@ -328,16 +328,47 @@ async def scrape_digitec_brand(brand):
 
 async def main():
     import time
+    import argparse
     start_time = time.time()
-    samsungs = await scrape_digitec_brand("Samsung")
-    lgs = await scrape_digitec_brand("LG")
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
+    args, _ = parser.parse_known_args()
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
+    s_path = os.path.join(data_dir, "raw_digitec_samsung.json")
+    l_path = os.path.join(data_dir, "raw_digitec_lg.json")
     
-    with open(os.path.join(data_dir, "raw_digitec_samsung.json"), "w", encoding="utf-8") as f:
+    is_fast = args.fast or os.environ.get("STEALTH_FAST") == "1"
+    samsungs = []
+    lgs = []
+    
+    if not is_fast:
+        try:
+            samsungs = await scrape_digitec_brand("Samsung")
+            lgs = await scrape_digitec_brand("LG")
+        except Exception as e:
+            print(f"⚠️ [DIGITEC ERROR] {e}. Using cached records.")
+    else:
+        print("⚡ [--stealth-fast] Skipping local Playwright for Digitec.")
+        
+    if not samsungs and os.path.exists(s_path):
+        print(f"  -> Refreshing verified Samsung models from {s_path}...")
+        try:
+            with open(s_path, "r", encoding="utf-8") as f:
+                samsungs = json.load(f)
+        except Exception: pass
+    if not lgs and os.path.exists(l_path):
+        print(f"  -> Refreshing verified LG models from {l_path}...")
+        try:
+            with open(l_path, "r", encoding="utf-8") as f:
+                lgs = json.load(f)
+        except Exception: pass
+        
+    with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(data_dir, "raw_digitec_lg.json"), "w", encoding="utf-8") as f:
+    with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
     print(f"\n[DIGITEC DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")

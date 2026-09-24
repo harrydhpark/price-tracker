@@ -50,7 +50,7 @@ pairs_config_2025 = {
 pairs_config_2026 = {
     "OLED": [
         {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
-        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55", "48"]},
         {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
         {"lg": "B6", "sam": "S85H", "sizes": ["83", "77", "65", "55", "48"]}
     ],
@@ -62,7 +62,7 @@ pairs_config_2026 = {
         {"lg_series": "50MRGB87B", "sam_series": "50R85H", "lg_lookup": "50MRGB85", "sam_lookup": "50R85H"}
     ],
     "QNED/QLED": [
-        # 1. QNED86B vs QN80H (프리미엄 라인업)
+        # 1. QNED86B vs QN80H (프리미엄 라인업: QNED85B/86B/87B vs QN80H/82H)
         {"lg_series": "100QNED86B", "sam_series": "100QN80H", "lg_lookup": "100QNED85", "sam_lookup": "100QN80H"},
         {"lg_series": "86QNED86B", "sam_series": "85QN80H", "lg_lookup": "86QNED85", "sam_lookup": "85QN80H"},
         {"lg_series": "75QNED86B", "sam_series": "75QN80H", "lg_lookup": "75QNED85", "sam_lookup": "75QN80H"},
@@ -70,12 +70,21 @@ pairs_config_2026 = {
         {"lg_series": "55QNED86B", "sam_series": "55QN80H", "lg_lookup": "55QNED85", "sam_lookup": "55QN80H"},
         {"lg_series": "50QNED86B", "sam_series": "50QN80H", "lg_lookup": "50QNED85", "sam_lookup": "50QN80H"},
         {"lg_series": "43QNED86B", "sam_series": "43QN80H", "lg_lookup": "43QNED85", "sam_lookup": "43QN80H"},
-        # 2. QNED71B vs M70H (표준/볼륨 라인업)
-        {"lg_series": "65QNED71B", "sam_series": "65M70H", "lg_lookup": "65QNED80", "sam_lookup": "65M70H"},
-        {"lg_series": "55QNED71B", "sam_series": "55M70H", "lg_lookup": "55QNED80", "sam_lookup": "55M70H"},
-        {"lg_series": "50QNED71B", "sam_series": "50M70H", "lg_lookup": "50QNED80", "sam_lookup": "50M70H"},
-        {"lg_series": "43QNED71B", "sam_series": "43M70H", "lg_lookup": "43QNED80", "sam_lookup": "43M70H"},
-        # 3. QNED70B vs M70H (대형 보급 라인업)
+        # 2. QNED81B vs QN70H (메인스트림 라인업: QNED81B/82B vs QN70H/74H)
+        {"lg_series": "86QNED81B", "sam_series": "85QN70H", "lg_lookup": "86QNED80", "sam_lookup": "85QN70H"},
+        {"lg_series": "75QNED81B", "sam_series": "75QN70H", "lg_lookup": "75QNED80", "sam_lookup": "75QN70H"},
+        {"lg_series": "65QNED81B", "sam_series": "65QN70H", "lg_lookup": "65QNED80", "sam_lookup": "65QN70H"},
+        {"lg_series": "55QNED81B", "sam_series": "55QN70H", "lg_lookup": "55QNED80", "sam_lookup": "55QN70H"},
+        {"lg_series": "50QNED81B", "sam_series": "50QN70H", "lg_lookup": "50QNED80", "sam_lookup": "50QN70H"},
+        {"lg_series": "43QNED81B", "sam_series": "43QN70H", "lg_lookup": "43QNED80", "sam_lookup": "43QN70H"},
+        # 3. QNED80B vs M80H (메인스트림 라인업: QNED80B/81B/82B/83B vs M80H/82H/M70H)
+        {"lg_series": "86QNED80B", "sam_series": "85M80H", "lg_lookup": "86QNED80", "sam_lookup": "85M80H"},
+        {"lg_series": "75QNED80B", "sam_series": "75M80H", "lg_lookup": "75QNED80", "sam_lookup": "75M80H"},
+        {"lg_series": "65QNED80B", "sam_series": "65M80H", "lg_lookup": "65QNED80", "sam_lookup": "65M80H"},
+        {"lg_series": "55QNED80B", "sam_series": "55M80H", "lg_lookup": "55QNED80", "sam_lookup": "55M80H"},
+        {"lg_series": "50QNED80B", "sam_series": "50M80H", "lg_lookup": "50QNED80", "sam_lookup": "50M80H"},
+        {"lg_series": "43QNED80B", "sam_series": "43M80H", "lg_lookup": "43QNED80", "sam_lookup": "43M80H"},
+        # 4. QNED70B vs M70H (대형/보급 라인업)
         {"lg_series": "86QNED70B", "sam_series": "85M70H", "lg_lookup": "86QNED70", "sam_lookup": "85M70H"},
         {"lg_series": "75QNED70B", "sam_series": "75M70H", "lg_lookup": "75QNED70", "sam_lookup": "75M70H"}
     ],
@@ -396,6 +405,13 @@ def check_is_benchmark_swiss(brand, year, size, model_code, title):
     mc_up = str(model_code).upper()
     t_up = str(title).upper()
     
+    if b_up == 'LG':
+        if any(x in mc_up for x in ['C69', 'C68', 'C66', 'C65', 'C64', 'G69', 'G67', 'G66', 'G64', 'B68', 'B65', 'W69', 'W6']):
+            return True
+    elif b_up == 'SAMSUNG':
+        if any(x in mc_up for x in ['S92H', 'S90H', 'S95H', 'S99H', 'S85H', 'QN80H', 'QN82H', 'QN70H', 'QN74H', 'M80H', 'M82H', 'M70H', 'U8090H', 'U8000H', 'R85H', 'R95H']):
+            return True
+            
     for cat, pair_list in pairs_config_2026.items():
         for pair in pair_list:
             if 'sizes' in pair and str(size) in [str(s) for s in pair.get('sizes', [])]:
@@ -528,6 +544,13 @@ def compute_weekly_changes_swiss():
         w37_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 0912*.xlsx")))
         if w37_cands: w37_path = w37_cands[-1]
 
+    w38_path = os.path.join(data_dir, "price tracker_swiss_2026 0915_v1.xlsx")
+    if not os.path.exists(w38_path):
+        w38_path = os.path.join(history_dir, "2026 0915", "price tracker_swiss_2026 0915_v1.xlsx")
+    if not os.path.exists(w38_path):
+        w38_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 0915*.xlsx")))
+        if w38_cands: w38_path = w38_cands[-1]
+
     cat_w30 = load_swiss_catalog(w30_path)
     cat_w31 = load_swiss_catalog(w31_path)
     cat_w32 = load_swiss_catalog(w32_path)
@@ -536,8 +559,12 @@ def compute_weekly_changes_swiss():
     cat_w35 = load_swiss_catalog(w35_path)
     cat_w36 = load_swiss_catalog(w36_path)
     cat_w37 = load_swiss_catalog(w37_path)
+    cat_w38 = load_swiss_catalog(w38_path) if os.path.exists(w38_path) else {}
 
-    transitions = [
+    transitions = []
+    if cat_w38:
+        transitions.append(("W38", "W38(09.15) vs W37(09.12)", "2026.09.15", "2026.09.12", cat_w37, cat_w38))
+    transitions.extend([
         ("W37", "W37(09.12) vs W36(09.03)", "2026.09.12", "2026.09.03", cat_w36, cat_w37),
         ("W36", "W36(09.03) vs W35(08.28)", "2026.09.03", "2026.08.28", cat_w35, cat_w36),
         ("W35", "W35(08.28) vs W34(08.17)", "2026.08.28", "2026.08.17", cat_w34, cat_w35),
@@ -545,7 +572,7 @@ def compute_weekly_changes_swiss():
         ("W33", "W33(08.14) vs W32(08.06)", "2026.08.14", "2026.08.06", cat_w32, cat_w33),
         ("W32", "W32(08.06) vs W31(07.28)", "2026.08.06", "2026.07.28", cat_w31, cat_w32),
         ("W31", "W31(07.28) vs W30(07.25)", "2026.07.28", "2026.07.25", cat_w30, cat_w31)
-    ]
+    ])
 
     weekly_changes_data = {}
 
@@ -563,7 +590,7 @@ def compute_weekly_changes_swiss():
         ret_stats = {r: {"drops": 0, "hikes": 0, "promos": 0, "news": 0, "delisted": 0} for r in SWISS_RETAILERS}
         
         for key, curr_item in curr_cat.items():
-            if curr_item.get("year") != 2026:
+            if curr_item.get("year") != 2026 or int(curr_item.get("size", 0)) == 32:
                 continue
             ret = curr_item["retailer"]
             brand = curr_item["brand"]
@@ -668,7 +695,7 @@ def compute_weekly_changes_swiss():
                 })
                 
         for key, prev_item in prev_cat.items():
-            if prev_item.get("year") != 2026:
+            if prev_item.get("year") != 2026 or int(prev_item.get("size", 0)) == 32:
                 continue
             if key not in curr_cat:
                 ret = prev_item["retailer"]
@@ -754,6 +781,11 @@ def main():
     pt_path = os.path.join(data_dir, f"price tracker_swiss_2026 {today_mmdd}_v1.xlsx")
     if not os.path.exists(pt_path):
         pt_path = os.path.join(data_dir, f"price tracker_swiss_2026 {today_mmdd}.xlsx")
+    if not os.path.exists(pt_path):
+        import glob
+        candidates = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 *.xlsx")))
+        if candidates:
+            pt_path = candidates[-1]
         
     if os.path.exists(pt_path):
         print(f"[PARSING RAW EXCEL] Loading raw tracker: {pt_path} for promotions...")

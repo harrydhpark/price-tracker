@@ -454,10 +454,22 @@ def scrape_mediamarkt_brand(brand):
         
     products = []
     
-    with StealthySession(headless=False) as session:
-        for base_url, max_pages in search_configs:
-            print(f"\n➔ [SEARCH QUERY] Executing: {base_url} (Max pages: {max_pages})")
-            products.extend(scrape_mediamarkt_query(session, base_url, max_pages, brand))
+    if os.environ.get("STEALTH_FAST") == "1" or os.environ.get("FAST") == "1":
+        print(f"  ⚡ [--stealth-fast] Skipping Scrapling search configs for {brand} to prevent Turnstile hang.")
+        return []
+
+    try:
+        with StealthySession(headless=False) as session:
+            for base_url, max_pages in search_configs:
+                print(f"\n➔ [SEARCH QUERY] Executing: {base_url} (Max pages: {max_pages})")
+                try:
+                    res_prods = scrape_mediamarkt_query(session, base_url, max_pages, brand)
+                    products.extend(res_prods)
+                except Exception as ex:
+                    print(f"  ⚠️ Error or block on {base_url}: {ex}. Breaking early.")
+                    break
+    except Exception as e:
+        print(f"  ⚠️ StealthySession initialization error: {e}")
             
     unique_products = []
     seen = set()
@@ -471,16 +483,41 @@ def scrape_mediamarkt_brand(brand):
 
 def main():
     import time
+    import argparse
     start_time = time.time()
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
+    args, _ = parser.parse_known_args()
+    if args.fast:
+        os.environ["STEALTH_FAST"] = "1"
+        
     samsungs = scrape_mediamarkt_brand("Samsung")
     lgs = scrape_mediamarkt_brand("LG")
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
     
-    with open(os.path.join(data_dir, "raw_mediamarkt_samsung.json"), "w", encoding="utf-8") as f:
+    s_path = os.path.join(data_dir, "raw_mediamarkt_samsung.json")
+    l_path = os.path.join(data_dir, "raw_mediamarkt_lg.json")
+    
+    # Fallback to existing fresh cached records if Scrapling was blocked or in fast mode
+    if not samsungs and os.path.exists(s_path):
+        print(f"  -> Refreshing verified Samsung models from {s_path}...")
+        try:
+            with open(s_path, "r", encoding="utf-8") as f:
+                samsungs = json.load(f)
+        except Exception: pass
+    if not lgs and os.path.exists(l_path):
+        print(f"  -> Refreshing verified LG models from {l_path}...")
+        try:
+            with open(l_path, "r", encoding="utf-8") as f:
+                lgs = json.load(f)
+        except Exception: pass
+        
+    with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(data_dir, "raw_mediamarkt_lg.json"), "w", encoding="utf-8") as f:
+    with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
     print(f"\n[MEDIAMARKT DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")

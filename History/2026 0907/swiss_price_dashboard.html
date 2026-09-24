@@ -244,8 +244,8 @@
                 <div class="flex items-center gap-3">
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Price Type</span>
                     <div class="flex rounded-md shadow-sm bg-slate-100 p-0.5" role="group">
-                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all active" id="price_type_raw" onclick="switchPriceType('raw')">판매가</button>
-                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all" id="price_type_net" onclick="switchPriceType('net')">실질가 (캐시백반영)</button>
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all" id="price_type_raw" onclick="switchPriceType('raw')">판매가</button>
+                        <button type="button" class="price-type-btn px-3 py-1.5 text-xs font-bold rounded transition-all active" id="price_type_net" onclick="switchPriceType('net')">실질가 (캐시백반영)</button>
                     </div>
                 </div>
                 <!-- Year Slicer -->
@@ -60001,7 +60001,7 @@
         // Active selections
         let currentMenu = 'retailer'; // 'retailer', 'display' or 'history'
         let currentYear = 2026;
-        let currentPriceType = 'raw'; // 'raw' or 'net'
+        let currentPriceType = 'net'; // 'raw' or 'net'
         let selectedRetailer = 'MediaMarkt';
         let selectedDisplayType = 'OLED';
         let activeHistoryBrand = 'all'; // 'all', 'lg', or 'sam'

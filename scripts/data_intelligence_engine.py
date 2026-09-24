@@ -25,6 +25,7 @@ from scripts.core.region_manager import (
     get_rates_to_eur,
     get_pairs_config_for_country
 )
+from scripts.sync_eu_retailers import classify_year
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA_DIR = os.path.join(ROOT_DIR, "data")
@@ -38,7 +39,10 @@ DEFAULT_RATES = {
     "CHF": 1.05,
     "GBP": 1.18,
     "CZK": 0.040,
-    "HUF": 0.00251256  # 1 EUR = 398 HUF
+    "HUF": 0.00251256,  # 1 EUR = 398 HUF
+    "PLN": 0.235,
+    "RON": 0.201,
+    "SEK": 0.088
 }
 
 class DataIntelligenceEngine:
@@ -57,12 +61,18 @@ class DataIntelligenceEngine:
                 self.rates[k] = v
 
         # Determine target date
+        cur = self.con.cursor()
+        max_row = cur.execute("SELECT MAX(date) FROM daily_prices").fetchone()
+        latest_db_date = max_row[0] if max_row and max_row[0] else datetime.now().strftime("%Y-%m-%d")
+
         if target_date:
-            self.target_date = target_date
+            cnt_row = cur.execute("SELECT COUNT(*) FROM daily_prices WHERE date = ?", (target_date,)).fetchone()
+            if cnt_row and cnt_row[0] > 0:
+                self.target_date = target_date
+            else:
+                self.target_date = latest_db_date
         else:
-            cur = self.con.cursor()
-            row = cur.execute("SELECT MAX(date) FROM daily_prices").fetchone()
-            self.target_date = row[0] if row and row[0] else datetime.now().strftime("%Y-%m-%d")
+            self.target_date = latest_db_date
 
     def to_eur(self, price: float, currency: str) -> float:
         curr = currency.upper()
@@ -114,19 +124,51 @@ class DataIntelligenceEngine:
             else:
                 avg_prices[b] = 0
 
+        # Category breakdown for Executive Card 1
+        cat_counts = {
+            "OLED": {"total": 0, "LG": 0, "SAMSUNG": 0, "label": "OLED"},
+            "QNED_QLED": {"total": 0, "LG": 0, "SAMSUNG": 0, "label": "QNED/QLED"},
+            "MICRO_RGB": {"total": 0, "LG": 0, "SAMSUNG": 0, "label": "Micro RGB"},
+            "UHD_4K": {"total": 0, "LG": 0, "SAMSUNG": 0, "label": "UHD 4K"},
+            "OTHER": {"total": 0, "LG": 0, "SAMSUNG": 0, "label": "기타"}
+        }
+        all_skus = cur.execute(
+            "SELECT manufacturer, model_code, panel_type FROM daily_prices WHERE date = ?",
+            (self.target_date,)
+        ).fetchall()
+        for r in all_skus:
+            b = (r[0] or "").upper()
+            mc_up = str(r[1] or "").upper()
+            pt_up = str(r[2] or "").upper()
+            is_mrgb = any(x in pt_up or x in mc_up for x in ["MRGB", "MICRO RGB", "R85", "R95"])
+            is_oled = not is_mrgb and ("OLED" in pt_up or "OLED" in mc_up or any(s in mc_up for s in ["S90", "S95", "S99", "S85", "G6", "C6", "B6", "G5", "C5", "B5"]))
+            is_qned = not is_mrgb and not is_oled and any(x in pt_up or x in mc_up for x in ["QNED", "QLED", "NEO QLED", "QN8", "QN9", "QN7", "Q8", "Q7", "LS03", "M70", "M80"])
+            is_uhd = not is_mrgb and not is_oled and not is_qned and any(x in pt_up or x in mc_up for x in ["NU8", "NU9", "UA7", "UT8", "UR8", "UQ8", "UHD", "CRYSTAL", "U80", "LED", "NANO"])
+            
+            if is_oled: key = "OLED"
+            elif is_qned: key = "QNED_QLED"
+            elif is_mrgb: key = "MICRO_RGB"
+            elif is_uhd: key = "UHD_4K"
+            else: key = "OTHER"
+
+            cat_counts[key]["total"] += 1
+            if b in ["LG", "SAMSUNG"]:
+                cat_counts[key][b] += 1
+
         return {
             "target_date": self.target_date,
             "total_records": total_models,
             "countries_count": len(country_counts),
             "country_breakdown": country_counts,
             "brand_breakdown": brand_counts,
+            "category_breakdown": cat_counts,
             "average_price_eur": avg_prices,
             "exchange_rates": self.rates
         }
 
     def analyze_1to1_lineup_gaps(self, country: Optional[str] = None) -> List[Dict[str, Any]]:
         countries_to_check = [country.upper()] if country else [
-            "DE", "UK", "FR", "ES", "IT", "NL", "AT", "CH", "CZ", "GR", "HU"
+            "UK", "DE", "FR", "ES", "PT", "IT", "NL", "AT", "CH", "SE", "PL", "CZ", "HU", "RO", "GR"
         ]
         
         cur = self.con.cursor()
@@ -136,10 +178,10 @@ class DataIntelligenceEngine:
             {"segment": "Flagship OLED", "lg_series": "G6", "sam_series": "S95H", "sizes": [55, 65, 77, 83]},
             {"segment": "Mainstream OLED", "lg_series": "C6", "sam_series": "S90H", "sizes": [42, 48, 55, 65, 77, 83]},
             {"segment": "Entry OLED", "lg_series": "B6", "sam_series": "S85H", "sizes": [48, 55, 65, 77, 83]},
-            {"segment": "Micro RGB", "lg_series": "MRGB87B", "sam_series": "R85H", "sizes": [55, 65, 75, 86]},
-            {"segment": "Micro RGB 100", "lg_series": "MRGB96B", "sam_series": "R95H", "sizes": [100]},
+            {"segment": "Micro RGB", "lg_series": "MRGB96B", "sam_series": "R95H", "sizes": [65, 75, 85, 86, 100]},
+            {"segment": "Micro RGB", "lg_series": "MRGB87B", "sam_series": "R85H", "sizes": [50, 55, 65, 75, 85, 86]},
             {"segment": "Premium QNED/QLED", "lg_series": "QNED86B", "sam_series": "QN80H", "sizes": [55, 65, 75, 86]},
-            {"segment": "Mainstream QNED/QLED", "lg_series": "QNED81B", "sam_series": "QN70H", "sizes": [55, 65, 75, 86]}
+            {"segment": "Mainstream QNED/QLED", "lg_series": "QNED80B", "sam_series": "M80H", "sizes": [43, 50, 55, 65, 75, 86]}
         ]
 
         for c_code in countries_to_check:
@@ -157,22 +199,67 @@ class DataIntelligenceEngine:
 
             def find_best_model(items, series_kw, size):
                 candidates = []
+                target_size = size
                 for it in items:
                     mc = str(it["model_code"]).upper()
                     sz = it["display_size_inch"]
-                    if sz == size:
-                        if series_kw in ["B6", "C6", "G6"]:
-                            if "OLED" in mc and series_kw in mc:
-                                candidates.append(it)
-                            elif series_kw in mc and not any(x in mc for x in ["QNED", "NU", "UA"]):
-                                candidates.append(it)
-                        elif series_kw in ["S90H", "S95H", "S85H", "S99H"]:
-                            if series_kw in mc:
-                                candidates.append(it)
-                        elif series_kw in mc:
+                    if target_size in [85, 86] and sz in [85, 86]:
+                        size_match = True
+                    else:
+                        size_match = (sz == target_size)
+                    if not size_match:
+                        continue
+
+                    if series_kw in ["B6", "C6", "G6"]:
+                        if "OLED" in mc and series_kw in mc:
                             candidates.append(it)
+                        elif series_kw in mc and not any(x in mc for x in ["QNED", "NU", "UA"]):
+                            candidates.append(it)
+                    elif series_kw in ["S90H", "S95H", "S85H", "S99H"]:
+                        if series_kw in mc:
+                            candidates.append(it)
+                    elif series_kw == "MRGB96B":
+                        if any(x in mc for x in ["MRGB96", "MRGB95", "MRGB9", "MR96", "MR95"]):
+                            candidates.append(it)
+                    elif series_kw == "R95H":
+                        if any(x in mc for x in ["R95", "MR95", "R96", "MR96"]):
+                            candidates.append(it)
+                        elif target_size == 100 and any(x in mc for x in ["R85", "MR85"]):
+                            candidates.append(it)
+                    elif series_kw == "MRGB87B":
+                        if any(x in mc for x in ["MRGB88", "MRGB87", "MRGB86", "MRGB85", "MRGB8", "MR85"]):
+                            candidates.append(it)
+                    elif series_kw == "R85H":
+                        if any(x in mc for x in ["R85", "R86", "MR85"]) and not any(x in mc for x in ["R95", "MR95", "R96", "MR96"]):
+                            candidates.append(it)
+                    elif series_kw in ["QNED80B", "QNED80"]:
+                        if any(x in mc for x in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED84"]):
+                            candidates.append(it)
+                    elif series_kw in ["M80H", "M80"]:
+                        if any(x in mc for x in ["M80", "M82", "M83", "M85"]):
+                            candidates.append(it)
+                    elif series_kw in ["QNED86B", "QNED86"]:
+                        if any(x in mc for x in ["QNED86", "QNED87"]):
+                            candidates.append(it)
+                    elif series_kw in mc:
+                        candidates.append(it)
                 if not candidates:
                     return None
+                if series_kw in ["QNED80B", "QNED80"]:
+                    def qned_prio(it):
+                        c = str(it["model_code"]).upper()
+                        if "QNED80" in c: return (0, it["selling_price"])
+                        if "QNED81" in c or "QNED83" in c: return (1, it["selling_price"])
+                        if "QNED82" in c: return (2, it["selling_price"])
+                        return (3, it["selling_price"])
+                    return min(candidates, key=qned_prio)
+                if series_kw in ["M80H", "M80"]:
+                    def m80_prio(it):
+                        c = str(it["model_code"]).upper()
+                        if "M80" in c: return (0, it["selling_price"])
+                        if "M82" in c: return (1, it["selling_price"])
+                        return (2, it["selling_price"])
+                    return min(candidates, key=m80_prio)
                 return min(candidates, key=lambda x: x["selling_price"])
 
             for m in core_matchups:
@@ -266,11 +353,15 @@ class DataIntelligenceEngine:
                 old_eur = self.to_eur(r["old_price"], r["currency"])
                 new_eur = self.to_eur(r["new_price"], r["currency"])
                 diff_eur = round(new_eur - old_eur, 2)
+                brand = r["manufacturer"].upper()
+                mcode = r["model_code"]
+                yr = classify_year(brand, mcode, mcode)
                 changes.append({
                     "country": r["country"],
-                    "brand": r["manufacturer"].upper(),
-                    "model_code": r["model_code"],
+                    "brand": brand,
+                    "model_code": mcode,
                     "size": r["display_size_inch"],
+                    "year": yr,
                     "currency": r["currency"],
                     "old_price": r["old_price"],
                     "new_price": r["new_price"],
@@ -282,8 +373,13 @@ class DataIntelligenceEngine:
         drops = sorted([c for c in changes if c["pct_diff"] < 0], key=lambda x: x["pct_diff"])
         hikes = sorted([c for c in changes if c["pct_diff"] > 0], key=lambda x: -x["pct_diff"])
 
+        # Strict 2026 Model Year filter for Top Price Drops & Hikes table
+        drops_2026 = [c for c in drops if c.get("year") == 2026]
+        hikes_2026 = [c for c in hikes if c.get("year") == 2026]
+
         brand_drops = {"LG": 0, "SAMSUNG": 0}
         brand_hikes = {"LG": 0, "SAMSUNG": 0}
+        brand_unchanged = {"LG": 0, "SAMSUNG": 0}
         for c in changes:
             b = c["brand"]
             if b in brand_drops:
@@ -292,15 +388,28 @@ class DataIntelligenceEngine:
                 elif c["pct_diff"] > 0:
                     brand_hikes[b] += 1
 
+        for r in rows:
+            b = (r["manufacturer"] or "").upper()
+            if b in brand_unchanged and abs(r["diff"]) < 1.0:
+                brand_unchanged[b] += 1
+
+        total_changed = len(changes)
+        total_overlapping = len(rows)
+        total_unchanged = total_overlapping - total_changed
+
         return {
             "target_date": self.target_date,
             "compare_date": prior_date,
-            "total_overlapping_models": len(rows),
-            "total_changed_models": len(changes),
+            "total_overlapping_models": total_overlapping,
+            "total_changed_models": total_changed,
+            "total_unchanged_models": total_unchanged,
+            "total_drops": sum(brand_drops.values()),
+            "total_hikes": sum(brand_hikes.values()),
             "brand_drops": brand_drops,
             "brand_hikes": brand_hikes,
-            "top_price_drops": drops[:10],
-            "top_price_hikes": hikes[:10]
+            "brand_unchanged": brand_unchanged,
+            "top_price_drops": drops_2026[:10],
+            "top_price_hikes": hikes_2026[:10]
         }
 
     def analyze_promotional_campaigns(self) -> Dict[str, Any]:
@@ -321,6 +430,12 @@ class DataIntelligenceEngine:
             "Member": 0,
             "Rabatt / Remise": 0
         }
+        promo_type_counts = {
+            "cashback": {"LG": 0, "SAMSUNG": 0},
+            "bundle": {"LG": 0, "SAMSUNG": 0},
+            "direct_cut": {"LG": 0, "SAMSUNG": 0},
+            "voucher": {"LG": 0, "SAMSUNG": 0},
+        }
 
         notable_promos = []
 
@@ -338,16 +453,16 @@ class DataIntelligenceEngine:
                 p_lower = promo.lower()
                 if "cashback" in p_lower:
                     promo_keywords["Cashback"] += 1
-                if "direct cut" in p_lower or "direktrabatt" in p_lower:
-                    promo_keywords["Direct Cut"] += 1
-                if "voucher" in p_lower or "coupon" in p_lower or "code" in p_lower:
-                    promo_keywords["Voucher"] += 1
-                if "bundle" in p_lower or "soundbar" in p_lower:
+                    promo_type_counts["cashback"][b] += 1
+                if any(x in p_lower for x in ["bundle", "soundbar", "sound suite", "soundsuite", "free gift", "free content", "package"]):
                     promo_keywords["Bundle"] += 1
-                if "member" in p_lower or "club" in p_lower:
-                    promo_keywords["Member"] += 1
-                if "rabatt" in p_lower or "remise" in p_lower or "sconto" in p_lower or "descuento" in p_lower:
-                    promo_keywords["Rabatt / Remise"] += 1
+                    promo_type_counts["bundle"][b] += 1
+                if any(x in p_lower for x in ["discount", "rebate", "direct cut", "direktrabatt", "remise", "sconto", "descuento", "rabatt", "off", "trade-in"]):
+                    promo_keywords["Direct Cut"] += 1
+                    promo_type_counts["direct_cut"][b] += 1
+                if any(x in p_lower for x in ["voucher", "coupon", "code", "member", "club", "delivery"]):
+                    promo_keywords["Voucher"] += 1
+                    promo_type_counts["voucher"][b] += 1
 
                 if any(x in promo.lower() for x in ["cashback", "direct cut", "€", "£", "%"]):
                     notable_promos.append({
@@ -362,6 +477,53 @@ class DataIntelligenceEngine:
         promo_rate = {
             b: round((promo_by_brand[b] / total_by_brand[b] * 100), 1) if total_by_brand[b] > 0 else 0
             for b in total_by_brand
+        }
+
+        type_breakdown = {
+            "cashback": {
+                "label": "캐시백",
+                "LG": {
+                    "count": promo_type_counts["cashback"]["LG"],
+                    "rate": round(promo_type_counts["cashback"]["LG"] / total_by_brand["LG"] * 100, 1) if total_by_brand["LG"] else 0
+                },
+                "SAMSUNG": {
+                    "count": promo_type_counts["cashback"]["SAMSUNG"],
+                    "rate": round(promo_type_counts["cashback"]["SAMSUNG"] / total_by_brand["SAMSUNG"] * 100, 1) if total_by_brand["SAMSUNG"] else 0
+                }
+            },
+            "bundle": {
+                "label": "번들/사은품",
+                "LG": {
+                    "count": promo_type_counts["bundle"]["LG"],
+                    "rate": round(promo_type_counts["bundle"]["LG"] / total_by_brand["LG"] * 100, 1) if total_by_brand["LG"] else 0
+                },
+                "SAMSUNG": {
+                    "count": promo_type_counts["bundle"]["SAMSUNG"],
+                    "rate": round(promo_type_counts["bundle"]["SAMSUNG"] / total_by_brand["SAMSUNG"] * 100, 1) if total_by_brand["SAMSUNG"] else 0
+                }
+            },
+            "direct_cut": {
+                "label": "즉시할인",
+                "LG": {
+                    "count": promo_type_counts["direct_cut"]["LG"],
+                    "rate": round(promo_type_counts["direct_cut"]["LG"] / total_by_brand["LG"] * 100, 1) if total_by_brand["LG"] else 0
+                },
+                "SAMSUNG": {
+                    "count": promo_type_counts["direct_cut"]["SAMSUNG"],
+                    "rate": round(promo_type_counts["direct_cut"]["SAMSUNG"] / total_by_brand["SAMSUNG"] * 100, 1) if total_by_brand["SAMSUNG"] else 0
+                }
+            },
+            "voucher": {
+                "label": "쿠폰/바우처",
+                "LG": {
+                    "count": promo_type_counts["voucher"]["LG"],
+                    "rate": round(promo_type_counts["voucher"]["LG"] / total_by_brand["LG"] * 100, 1) if total_by_brand["LG"] else 0
+                },
+                "SAMSUNG": {
+                    "count": promo_type_counts["voucher"]["SAMSUNG"],
+                    "rate": round(promo_type_counts["voucher"]["SAMSUNG"] / total_by_brand["SAMSUNG"] * 100, 1) if total_by_brand["SAMSUNG"] else 0
+                }
+            }
         }
 
         # Detailed cashback & bundle warfare intelligence
@@ -390,6 +552,7 @@ class DataIntelligenceEngine:
             "promo_count_by_brand": promo_by_brand,
             "promo_rate_by_brand": promo_rate,
             "promo_keywords": promo_keywords,
+            "type_breakdown": type_breakdown,
             "deepdive": deepdive,
             "notable_promos": notable_promos[:15]
         }
@@ -403,8 +566,8 @@ class DataIntelligenceEngine:
             ("Mainstream OLED", "메인스트림 OLED (C6 vs S90H)"),
             ("Entry OLED", "엔트리 OLED (B6 vs S85H)"),
             ("Micro RGB", "Micro RGB (MRGB vs R85H/R95H)"),
-            ("Premium QNED/QLED", "프리미엄 QNED/QLED (QNED87/86 vs QN80H)"),
-            ("Mainstream QNED/QLED", "메인스트림 QNED/QLED (QNED81 vs QN70H)")
+            ("Premium QNED/QLED", "프리미엄 QNED/QLED (QNED86B/87B vs QN80H)"),
+            ("Mainstream QNED/QLED", "메인스트림 QNED/QLED (QNED80B/81B/82B vs M80H)")
         ]
 
         segment_results = []
@@ -438,6 +601,12 @@ class DataIntelligenceEngine:
                 dot_color = "bg-blue-500"
                 comment = f"삼성 동급 모델 대비 {diff_pct:+.1f}%의 대등한 판가 균형을 유지하며, 제품 성능 및 유통 현장 프로모션 중심으로 직접 경쟁하고 있습니다."
 
+            # Compute ATA tiers for this segment (LG / SEC * 100)
+            ge100 = sum(1 for g in matched if (g["lg_price_eur"] / g["sam_price_eur"] * 100) >= 100.0)
+            b95100 = sum(1 for g in matched if 95.0 <= (g["lg_price_eur"] / g["sam_price_eur"] * 100) < 100.0)
+            b9095 = sum(1 for g in matched if 90.0 <= (g["lg_price_eur"] / g["sam_price_eur"] * 100) < 95.0)
+            lt90 = sum(1 for g in matched if (g["lg_price_eur"] / g["sam_price_eur"] * 100) < 90.0)
+
             segment_results.append({
                 "segment_id": seg_id,
                 "segment_name": seg_name,
@@ -451,7 +620,13 @@ class DataIntelligenceEngine:
                 "status_en": status_en,
                 "badge_class": badge_class,
                 "dot_color": dot_color,
-                "comment": comment
+                "comment": comment,
+                "ata_tiers": {
+                    "ge100": ge100,
+                    "b95100": b95100,
+                    "b9095": b9095,
+                    "lt90": lt90
+                }
             })
 
         overall_summary = (
@@ -481,11 +656,39 @@ class DataIntelligenceEngine:
         md_lines.append(f"> **분석 기준일**: {date_str} | **비교 기준일(직전 조사)**: {comp_date}\n")
 
         # 1. Executive Summary & KPIs
+        cb = kpis.get("category_breakdown", {})
         md_lines.append("## 1. 🌐 경영 총괄 지표 (Executive Key Metrics)")
         md_lines.append(f"- **총 수집 라인업 모니터링**: 유럽 11개국 실시간 전수 조사 **{kpis['total_records']:,}개 모델** (LG {kpis['brand_breakdown'].get('LG', 0):,}개 / 삼성 {kpis['brand_breakdown'].get('SAMSUNG', 0):,}개)")
+        if cb:
+            md_lines.append(
+                f"  - **제품군별 수집 현황**: "
+                f"OLED **{cb.get('OLED', {}).get('total', 0):,}개** (LG {cb.get('OLED', {}).get('LG', 0)} / SEC {cb.get('OLED', {}).get('SAMSUNG', 0)}) | "
+                f"QNED/QLED **{cb.get('QNED_QLED', {}).get('total', 0):,}개** (LG {cb.get('QNED_QLED', {}).get('LG', 0)} / SEC {cb.get('QNED_QLED', {}).get('SAMSUNG', 0)}) | "
+                f"Micro RGB **{cb.get('MICRO_RGB', {}).get('total', 0):,}개** (LG {cb.get('MICRO_RGB', {}).get('LG', 0)} / SEC {cb.get('MICRO_RGB', {}).get('SAMSUNG', 0)}) | "
+                f"UHD 4K **{cb.get('UHD_4K', {}).get('total', 0):,}개** (LG {cb.get('UHD_4K', {}).get('LG', 0)} / SEC {cb.get('UHD_4K', {}).get('SAMSUNG', 0)})"
+            )
         md_lines.append(f"- **유럽 평균 판매가(EUR 환산)**: LG **€{kpis['average_price_eur'].get('LG', 0):,.2f}** vs 삼성 **€{kpis['average_price_eur'].get('SAMSUNG', 0):,.2f}** (가격 인덱스: +5.8% 프리미엄)")
-        md_lines.append(f"- **프로모션 공세 강도**: 삼성 **{promos['promo_rate_by_brand'].get('SAMSUNG', 0)}%** vs LG **{promos['promo_rate_by_brand'].get('LG', 0)}%** (삼성의 번들/캐시백 공세 집중)")
-        md_lines.append(f"- **직전 조사 대비 가격 변동 모델**: 총 **{movements.get('total_changed_models', 0)}개 모델** (LG 인하 {movements['brand_drops'].get('LG', 0)}개 / 삼성 인하 {movements['brand_drops'].get('SAMSUNG', 0)}개)\n")
+        
+        tb = promos.get("type_breakdown", {})
+        md_lines.append(f"- **프로모션 공세 강도**: 삼성 **{promos['promo_rate_by_brand'].get('SAMSUNG', 0)}%** vs LG **{promos['promo_rate_by_brand'].get('LG', 0)}%**")
+        if tb:
+            md_lines.append(
+                f"  - **유형별 적용률 상세**: "
+                f"캐시백(SEC {tb.get('cashback', {}).get('SAMSUNG', {}).get('rate', 0)}% vs LG {tb.get('cashback', {}).get('LG', {}).get('rate', 0)}%) | "
+                f"번들/사은품(SEC {tb.get('bundle', {}).get('SAMSUNG', {}).get('rate', 0)}% vs LG {tb.get('bundle', {}).get('LG', {}).get('rate', 0)}%) | "
+                f"즉시할인(SEC {tb.get('direct_cut', {}).get('SAMSUNG', {}).get('rate', 0)}% vs LG {tb.get('direct_cut', {}).get('LG', {}).get('rate', 0)}%) | "
+                f"쿠폰/바우처(SEC {tb.get('voucher', {}).get('SAMSUNG', {}).get('rate', 0)}% vs LG {tb.get('voucher', {}).get('LG', {}).get('rate', 0)}%)"
+            )
+
+        unchanged_cnt = movements.get('total_unchanged_models', 0)
+        drops_cnt = movements.get('total_drops', 0)
+        hikes_cnt = movements.get('total_hikes', 0)
+        md_lines.append(
+            f"- **직전 조사 대비 가격 변동 모델**: 총 **{movements.get('total_changed_models', 0)}개 모델** "
+            f"(인하: {drops_cnt}개 [LG {movements['brand_drops'].get('LG', 0)} / SEC {movements['brand_drops'].get('SAMSUNG', 0)}], "
+            f"인상: {hikes_cnt}개 [LG {movements['brand_hikes'].get('LG', 0)} / SEC {movements['brand_hikes'].get('SAMSUNG', 0)}], "
+            f"동등/유지: **{unchanged_cnt:,}개** [LG {movements.get('brand_unchanged', {}).get('LG', 0)} / SEC {movements.get('brand_unchanged', {}).get('SAMSUNG', 0)}])\n"
+        )
 
         # 2. Positioning Adequacy Analysis
         md_lines.append("## 2. ⚖️ 경쟁사 대비 자사 가격 포지셔닝 적정성 정성 분석")
@@ -517,7 +720,7 @@ class DataIntelligenceEngine:
         md_lines.append(f"## 4. 📉 지난 가격 조사({comp_date}) 대비 변동 내역")
         md_lines.append(f"- **가격 조정 발생 모델**: 총 **{movements.get('total_changed_models', 0)}개** (인하: LG {movements['brand_drops'].get('LG', 0)} / SEC {movements['brand_drops'].get('SAMSUNG', 0)})")
         if movements.get("top_price_drops"):
-            md_lines.append("\n### 🔻 주요 가격 인하 상위 모델 (Top Price Drops)")
+            md_lines.append("\n### 🔻 주요 가격 인하 상위 모델 (Top Price Drops - 2026년형)")
             md_lines.append("| 국가 | 브랜드 | 모델 코드 | 인치 | 기존 판가 | 신규 판가 | 변동폭 | 변동률 |")
             md_lines.append("| :---: | :---: | :--- | :---: | :---: | :---: | :---: | :---: |")
             for d in movements["top_price_drops"][:7]:
@@ -570,8 +773,9 @@ class DataIntelligenceEngine:
             "movements": movements,
             "promos": promos,
             "highlights": [
-                f"유럽 11개국 총 {kpis['total_records']:,}개 모델 실시간 가격 분석 완비",
-                f"LG C6 vs Samsung S90H 메인스트림 OLED 가격 우위 (평균 -18% 경쟁력)",
+                f"유럽 15개국 총 {kpis['total_records']:,}개 모델 실시간 가격 분석 완비",
+                f"LG C6 vs Samsung S90H 메인스트림 OLED 가격 우위 (유럽 평균 -18% 경쟁력)",
+                f"폴란드 MediaExpert: LG 'PREMIERA' 런칭 특가(C6 55\" 5,999 zł)로 삼성 정가(8,399 zł) 대비 20~40% 가격 우위 (삼성 2026 정가 판매 vs 2025 재고 덤핑 집중)",
                 f"플래그십 OLED G6: 삼성 S95H 대비 약 +6%의 안정적 프리미엄 가치 수취",
                 f"삼성 주간 가격 조정: {movements['brand_drops'].get('SAMSUNG', 0)}개 모델 인하 / {movements['brand_hikes'].get('SAMSUNG', 0)}개 모델 인상",
                 f"프로모션 공세 강도: 삼성 {promos['promo_rate_by_brand'].get('SAMSUNG', 0)}% (최대 €1,000 캐시백) vs LG {promos['promo_rate_by_brand'].get('LG', 0)}% (SoundSuite 번들)"

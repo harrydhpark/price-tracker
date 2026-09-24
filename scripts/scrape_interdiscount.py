@@ -369,16 +369,48 @@ async def scrape_brand_tv(brand):
 
 async def main():
     import time
+    import argparse
     start_time = time.time()
     sys.stdout.reconfigure(encoding='utf-8')
-    samsungs = await scrape_brand_tv("Samsung")
-    lgs = await scrape_brand_tv("LG")
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
+    args, _ = parser.parse_known_args()
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
-    with open(os.path.join(data_dir, "raw_interdiscount_samsung.json"), "w", encoding="utf-8") as f:
+    s_path = os.path.join(data_dir, "raw_interdiscount_samsung.json")
+    l_path = os.path.join(data_dir, "raw_interdiscount_lg.json")
+    
+    is_fast = args.fast or os.environ.get("STEALTH_FAST") == "1"
+    samsungs = []
+    lgs = []
+    
+    if not is_fast:
+        try:
+            samsungs = await scrape_brand_tv("Samsung")
+            lgs = await scrape_brand_tv("LG")
+        except Exception as e:
+            print(f"⚠️ [INTERDISCOUNT ERROR] {e}. Using cached records.")
+    else:
+        print("⚡ [--stealth-fast] Skipping local Playwright for Interdiscount.")
+        
+    if not samsungs and os.path.exists(s_path):
+        print(f"  -> Refreshing verified Samsung models from {s_path}...")
+        try:
+            with open(s_path, "r", encoding="utf-8") as f:
+                samsungs = json.load(f)
+        except Exception: pass
+    if not lgs and os.path.exists(l_path):
+        print(f"  -> Refreshing verified LG models from {l_path}...")
+        try:
+            with open(l_path, "r", encoding="utf-8") as f:
+                lgs = json.load(f)
+        except Exception: pass
+        
+    with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(data_dir, "raw_interdiscount_lg.json"), "w", encoding="utf-8") as f:
+    with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
     print(f"\n[INTERDISCOUNT DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")

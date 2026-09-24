@@ -20,7 +20,7 @@ def get_all_regions(include_templates: bool = False) -> Dict[str, Dict[str, Any]
         if not include_templates and "template" in fn.lower():
             continue
         try:
-            with open(fp, "r", encoding="utf-8") as f:
+            with open(fp, "r", encoding="utf-8-sig") as f:
                 data = json.load(f)
                 r_id = data.get("region_id")
                 if r_id:

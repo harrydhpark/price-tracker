@@ -243,70 +243,24 @@ def parse_product_name(title, brand):
 
     return model_code, size_val, year_val, display_type
 
+from promo_classifier import classify_promotions
+
 def clean_promotion_text(promo, brand, year, model_code, currency):
-    if not promo or promo == "None":
+    if not promo or str(promo).strip() in ["", "None", "0"]:
         return "None"
-    
-    promo_upper = promo.upper()
-    
-    # 1. Cashback und oder 26% Rabatt auf Soundbar QS700F
-    if "CASHBACK UND ODER 26%" in promo_upper or "CASHBACK AND/OR 26% OFF" in promo_upper:
-        return "Samsung Cashback and/or 26% Off Soundbar QS700F"
-        
-    # 2. Gratis Music Studio 5
-    if "MUSIC STUDIO 5" in promo_upper:
-        return "Free Music Studio 5 Soundbar (HW-LS50H/EN)"
-        
-    # 3. mit kostenlosem Zusatzprodukt
-    if "ZUSATZPRODUKT" in promo_upper or "WITH FREE PROMOTIONAL PRODUCT" in promo_upper:
-        return "Free Promotional Product (Sound Device)"
-        
-    # 4. Restposten / Outlet
-    if "RESTPOSTEN" in promo_upper:
-        return "Clearance (Restposten)"
-    if "OUTLET" in promo_upper:
-        return "Outlet (Clearance)"
-        
-    # 5. SoundSuite / Soundbar (LG 2026)
-    if "SOUNDSUITE" in promo_upper or "SOUNDBAR DAZU" in promo_upper:
-        if brand.upper() == "LG" and year == 2026:
-            return "Free SoundSuite/Soundbar with LG OLED TV 2026 Purchase"
-            
-    # 6. Sound Device geschenkt
-    if "SOUND DEVICE GESCHENKT" in promo_upper:
-        if year == 2026:
-            return "Free Sound Device with 2026 TV Purchase"
-            
-    # 7. Aus unserer Werbung
-    if "WERBUNG" in promo_upper or "WEEKLY AD" in promo_upper:
-        return "Featured in Weekly Ad (Aus unserer Werbung)"
-        
-    # 8. Online Only
-    if "ONLINE ONLY" in promo_upper or "ONLINE-ONLY" in promo_upper:
-        return "Online Only"
-        
-    # 9. Direct Cut & Voucher Codes (Currys / UK & EU)
-    if "DIRECT CUT" in promo_upper:
-        return promo
-        
-    # 10. Sale / statt (Discount badges)
-    if any(x in promo_upper for x in ["STATT", "WAS", "SPARA", "SAVE", "RABATT", "DISCOUNT"]):
-        pct_match = re.search(r'(\d+)\s*%', promo)
-        was_match = re.search(r'(?:was|statt|spara|save)\s*(?:chf|eur|gbp|sek|€|£)?\s*([\d’\x27\x60,.]+)', promo, re.IGNORECASE)
-        
-        pct = pct_match.group(1) if pct_match else None
-        was_val = was_match.group(1).replace("’", "").replace("'", "").replace("`", "").strip() if was_match else None
-        if was_val and (was_val.endswith(".") or was_val.endswith(",")):
-            was_val = was_val[:-1]
-            
-        if pct and was_val:
-            return f"Sale {pct}%; was {currency} {was_val}"
-        elif was_val:
-            return f"was {currency} {was_val}"
-        elif pct:
-            return f"Sale {pct}%"
-            
-    return promo
+    orig, cb, price_p, non_price_p = classify_promotions(
+        promo_raw=promo,
+        brand=brand,
+        year=year,
+        model_code=model_code,
+        currency=currency
+    )
+    parts = []
+    if price_p != "None":
+        parts.append(price_p)
+    if non_price_p != "None":
+        parts.append(non_price_p)
+    return "; ".join(parts) if parts else "None"
 
 def clean_numeric_price(price_str):
     if price_str is None or price_str == "":
@@ -362,13 +316,15 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
     else:
         sheet = wb.create_sheet(sheetname)
         
-    # Set headers if sheet is empty
+    # Set or update headers (12-column standard)
     headers = [
         "Brand", "Model Year", "Display Type", "Size (Inch)", "Model Code",
-        f"Price ({currency})", "Shipping", "Installment", "Cashback", "General Promotions"
+        f"Price ({currency})", f"Original Price ({currency})", "Shipping", "Installment",
+        "Cashback", "Price Promotion", "Non-Price Promotion"
     ]
-    if sheet.max_row <= 1:
-        sheet.append(headers)
+    if sheet.max_row <= 1 or sheet.cell(row=1, column=7).value == "Shipping":
+        for col_idx, h in enumerate(headers, 1):
+            sheet.cell(row=1, column=col_idx, value=h)
         
     # Delete old rows for this brand
     removed_count = 0
@@ -383,31 +339,29 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
     # Append new rows
     added_count = 0
     for p in products:
-        # Determine cashback amount if explicitly provided or parse from promo
-        cashback_val = 0
-        if p.get("cashback") and isinstance(p["cashback"], (int, float)) and p["cashback"] > 0:
-            cashback_val = int(round(p["cashback"]))
-            
-        promo_text = p.get("promo", "None") or "None"
-        
-        # Standardize promo text
-        promo_text = clean_promotion_text(promo_text, brand, p["year"], p["model_code"], currency)
-        
-        if cashback_val == 0 and any(x in promo_text.upper() for x in ["CASHBACK", "캐시백", "REEMBOLSO", "RIMBORSO", "RÜCKVERGÜTUNG", "RUCKVERGUTUNG", "REMISE", "ODR"]):
-            # Match amount before keyword: e.g. "€100,- cashback", "100€ cashback", "150 EUR cashback"
-            cb_match_before = re.search(r'(?:chf|eur|gbp|sek|€|£)?\s*(\d+)\s*(?:chf|eur|gbp|sek|€|£|[,-]+)?\s*(?:cashback|캐시백|reembolso|rimborso|rückvergütung|ruckvergutung|remise|odr)', promo_text, re.IGNORECASE)
-            if cb_match_before:
-                cashback_val = int(cb_match_before.group(1))
-            else:
-                # Match amount after keyword: e.g. "Cashback 100 €", "Cashback CHF 200", "Cashback sichern 150€"
-                cb_match_after = re.search(r'(?:cashback|캐시백|reembolso|rimborso|rückvergütung|ruckvergutung|remise|odr)\s*(?:von|bis\s*zu|sichern|immédiate|différée)?\s*(?:chf|eur|gbp|sek|€|£)?\s*(\d+)', promo_text, re.IGNORECASE)
-                if cb_match_after:
-                    cashback_val = int(cb_match_after.group(1))
-            if cashback_val < 10: # Ignore single-digit false positives
-                cashback_val = 0
-                    
         final_price = clean_numeric_price(p["price"])
+        raw_orig_p = clean_numeric_price(p.get("original_price") or p.get("orig_price") or p.get("was_price") or p.get("uvp", 0.0))
         
+        orig_price, cb_val, price_promo, non_price_promo = classify_promotions(
+            promo_raw=p.get("promo", "None"),
+            title_raw=p.get("title", ""),
+            brand=p["brand"],
+            year=p["year"],
+            model_code=p["model_code"],
+            price=final_price,
+            currency=currency,
+            existing_original_price=raw_orig_p
+        )
+        
+        # Determine cashback amount if explicitly provided and not found by classifier
+        if cb_val == 0 and p.get("cashback") and isinstance(p["cashback"], (int, float)) and p["cashback"] > 0:
+            cb_val = int(round(p["cashback"]))
+            curr_sym = "£" if currency == "GBP" else ("CHF " if currency == "CHF" else "€")
+            if price_promo == "None":
+                price_promo = f"Cashback: {curr_sym}{cb_val}"
+            elif f"{cb_val}" not in price_promo:
+                price_promo = f"Cashback: {curr_sym}{cb_val}; {price_promo}"
+                
         sheet.append([
             p["brand"],
             p["year"],
@@ -415,10 +369,12 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
             p["size"],
             p["model_code"],
             final_price,
+            orig_price if orig_price > 0 else None,
             "Free",  # Shipping
             None,    # Installment
-            cashback_val,
-            promo_text
+            cb_val,
+            price_promo,
+            non_price_promo
         ])
         added_count += 1
         
@@ -578,6 +534,21 @@ def main():
                                 if not (size in [85, 86] and parsed_sz in [85, 86]):
                                     size = parsed_sz
                         display_type = item.get("display") or item.get("display_type") or "LED"
+                        mc_up = model_code.upper()
+                        if brand.lower() == "lg":
+                            if any(k in mc_up for k in ["NU800", "NU850", "NU80", "NU85", "UA75", "UA77", "UT", "UR", "UQ", "LQ", "LB"]):
+                                display_type = "UHD 4K"
+                            elif "QNED" in mc_up:
+                                display_type = "QNED"
+                            elif "MRGB" in mc_up:
+                                display_type = "Micro RGB"
+                            elif "NANO" in mc_up:
+                                display_type = "NanoCell"
+                        elif brand.lower() == "samsung":
+                            if any(k in mc_up for k in ["U80", "U85", "U8", "UA", "UT", "UR", "UQ"]):
+                                display_type = "UHD 4K"
+                            elif "MRGB" in mc_up or "MRE" in mc_up:
+                                display_type = "Micro RGB"
                         price = clean_numeric_price(item.get("price"))
                         promo = item.get("promo") or "None"
                     else:
@@ -599,6 +570,7 @@ def main():
                     if price <= 0.0:
                         continue
                     cashback = clean_numeric_price(item.get("cashback", 0))
+                    orig_p = clean_numeric_price(item.get("original_price") or item.get("orig_price") or item.get("was_price") or item.get("uvp", 0.0))
                     p_rec = {
                         "brand": brand.upper() if brand.lower() == "samsung" else "LG",
                         "year": year,
@@ -606,8 +578,10 @@ def main():
                         "size": size,
                         "model_code": model_code,
                         "price": price,
+                        "original_price": orig_p,
                         "promo": promo,
-                        "cashback": cashback
+                        "cashback": cashback,
+                        "title": item.get("title") or item.get("name", "")
                     }
                     if model_code in seen_codes:
                         if price < seen_codes[model_code]["price"]:
@@ -616,6 +590,8 @@ def main():
                             seen_codes[model_code]["cashback"] = cashback
                             if seen_codes[model_code].get("promo") in ["None", ""]:
                                 seen_codes[model_code]["promo"] = promo
+                            if not seen_codes[model_code].get("original_price") and orig_p > 0:
+                                seen_codes[model_code]["original_price"] = orig_p
                     else:
                         seen_codes[model_code] = p_rec
                 products_list = list(seen_codes.values())

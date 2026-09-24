@@ -1,0 +1,131 @@
+{
+  "region_id": "nordics",
+  "region_name": "Nordics (Sweden)",
+  "cluster_agent": "nordics_specialist",
+  "countries": [
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "retailers": [
+        {
+          "id": "elgiganten-se",
+          "name": "Elgiganten",
+          "currency": "SEK",
+          "symbol": "kr ",
+          "rate_to_eur": 0.088,
+          "sheet_name_samsung": "Elgiganten_SE_Samsung",
+          "sheet_name_lg": "Elgiganten_SE_LG",
+          "driver_script": "scripts/scrape_elgiganten_se.py"
+        }
+      ]
+    }
+  ],
+  "pairs_config": {
+    "OLED": [
+      {
+        "lg": "G6",
+        "sam": "S95H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "C6",
+        "sam": "S90H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48",
+          "42"
+        ]
+      },
+      {
+        "lg": "B6",
+        "sam": "S85H",
+        "sizes": [
+          "83",
+          "77",
+          "65",
+          "55",
+          "48"
+        ]
+      }
+    ],
+    "MRGB": [
+      {
+        "lg": "MRGB87B",
+        "sam": "R85H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55"
+        ]
+      },
+      {
+        "lg": "MRGB96B",
+        "sam": "R95H",
+        "sizes": [
+          "100",
+          "86"
+        ]
+      }
+    ],
+    "QNED_QLED": [
+      {
+        "lg": "QNED86B",
+        "sam": "QN80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50"
+        ]
+      },
+      {
+        "lg": "QNED81B",
+        "sam": "M80H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      },
+      {
+        "lg": "QNED70B",
+        "sam": "M70H",
+        "sizes": [
+          "86",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ],
+    "UHD_4K": [
+      {
+        "lg": "NU85",
+        "sam": "U8070H",
+        "sizes": [
+          "85",
+          "75",
+          "65",
+          "55",
+          "50",
+          "43"
+        ]
+      }
+    ]
+  }
+}

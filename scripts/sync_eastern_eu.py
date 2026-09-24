@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
-import os, sys, json, glob, openpyxl
+import os, sys, json, glob, openpyxl, re
 from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.path.insert(0, '.')
 
 DATA_DIR = os.path.abspath('data')
-candidates = glob.glob(os.path.join(DATA_DIR, 'price tracker_EU_2026 0912*.xlsx'))
-if not candidates:
+today_mmdd = datetime.now().strftime("%m%d")
+target_name = f"price tracker_EU_2026 {today_mmdd}_v1.xlsx"
+target_wb = os.path.join(DATA_DIR, target_name)
+if not os.path.exists(target_wb):
     candidates = glob.glob(os.path.join(DATA_DIR, 'price tracker_EU_2026 *.xlsx'))
-target_wb = sorted(candidates)[-1]
+    candidates = [f for f in candidates if not os.path.basename(f).startswith("~$")]
+    if candidates:
+        target_wb = sorted(candidates)[-1]
 
 print(f"Target workbook: {target_wb}")
 
@@ -93,7 +97,9 @@ wb.close()
 print(f"✅ MediaMarkt Hungary synced to Excel ({len(clean_sec)} Samsung, {len(clean_lg)} LG).")
 
 # Mirror to History_EU
-hist_dir = os.path.join('History_EU', '2026 0912')
+date_match = re.search(r'price tracker_EU_2026 (\d{4})', os.path.basename(target_wb))
+mmdd_str = date_match.group(1) if date_match else today_mmdd
+hist_dir = os.path.join('History_EU', f'2026 {mmdd_str}')
 os.makedirs(hist_dir, exist_ok=True)
 import shutil
 shutil.copy2(target_wb, os.path.join(hist_dir, os.path.basename(target_wb)))

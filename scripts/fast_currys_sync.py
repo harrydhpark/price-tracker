@@ -132,8 +132,6 @@ def parse_currys_card_accurate(card_text, card_title, card_href, brand):
         
     promo_str = 'None'
     clean_promos = []
-    if save_amount:
-        clean_promos.append(f'Save GBP {save_amount:.2f}')
     for pl in promo_lines:
         if '+more offers' in pl or pl.startswith('+'): continue
         ti_m = re.search(r'Get £(\d+)\s*off.*?trade-in.*?(?:Use\s*([A-Z0-9]+))?', pl, re.I)

@@ -121,11 +121,35 @@ def parse_mediamarkt_page(html, brand, domain_suffix="de"):
             price_val = clean_numeric_price(price_m[0])
             if price_val >= 80.0:
                 seen_titles.add(title)
+                cashback_val = 0
+                cb_m = re.search(r'(\d{2,4})\s*(?:€|EUR)?\s*(?:cashback|retour|terug|reembolso|rimborso)', text, re.I)
+                if not cb_m:
+                    cb_m = re.search(r'(?:cashback|retour|terug|reembolso|rimborso)[:\s-]*(?:de|sichern|von|bis\s*zu)?\s*(?:€|EUR)?\s*(\d{2,4})', text, re.I)
+                if not cb_m:
+                    cb_m = re.search(r'(?:€|EUR)\s*(\d{2,4})\s*(?:cashback|retour|terug|reembolso|rimborso)', text, re.I)
+                if cb_m:
+                    val = int(cb_m.group(1))
+                    if 10 <= val <= 3000 and val not in [2024, 2025, 2026]:
+                        cashback_val = val
+                
+                promos = []
+                if cashback_val > 0:
+                    if 'reembolso' in text.lower():
+                        promos.append(f"Reembolso €{cashback_val}")
+                    else:
+                        promos.append(f"Cashback: €{cashback_val}")
+                if 'streaming' in text.lower():
+                    promos.append("Inkl. Streaming Content")
+                if 'sound device' in text.lower() or 'zusatzprodukt' in text.lower():
+                    promos.append("Free Sound Device")
+                promo_str = "; ".join(promos) if promos else "None"
+                
                 items.append({
                     'name': title,
                     'title': title,
                     'price': price_val,
-                    'promo': 'None'
+                    'cashback': cashback_val,
+                    'promo': promo_str
                 })
     return items
 
@@ -149,7 +173,8 @@ def scrape_mediamarkt_country(session, country_code, brand, max_pages=4):
         f"{brand}+2026",
         f"{brand}+MRGB",
         f"{brand}+MICRO+RGB" if brand.upper() == "SAMSUNG" else f"{brand}+QNED",
-        f"{brand}+NU8" if brand.upper() == "LG" else f"{brand}+U80"
+        f"{brand}+NU8" if brand.upper() == "LG" else f"{brand}+U80",
+        f"{brand}+NU850" if brand.upper() == "LG" else f"{brand}+U8000"
     ]
     
     all_items = []

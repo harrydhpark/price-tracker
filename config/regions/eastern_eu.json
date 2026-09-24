@@ -50,6 +50,38 @@
           "driver_script": "scripts/scrape_and_sync_hungary.py"
         }
       ]
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "retailers": [
+        {
+          "id": "mediaexpert-pl",
+          "name": "MediaExpert",
+          "currency": "PLN",
+          "symbol": "zł ",
+          "rate_to_eur": 0.235,
+          "sheet_name_samsung": "MediaExpert_PL_Samsung",
+          "sheet_name_lg": "MediaExpert_PL_LG",
+          "driver_script": "scripts/scrape_mediaexpert_pl.py"
+        }
+      ]
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "retailers": [
+        {
+          "id": "altex-ro",
+          "name": "Altex",
+          "currency": "RON",
+          "symbol": "lei ",
+          "rate_to_eur": 0.201,
+          "sheet_name_samsung": "Altex_RO_Samsung",
+          "sheet_name_lg": "Altex_RO_LG",
+          "driver_script": "scripts/scrape_altex_ro.py"
+        }
+      ]
     }
   ],
   "pairs_config": {

@@ -223,7 +223,7 @@ def clean_and_parse(items, brand):
     for item in items:
         title = item.get("title") or item.get("name") or ""
         href = item.get("href") or ""
-        text_raw = item.get("text") or item.get("cardText") or ""
+        text_raw = item.get("text") or item.get("cardText") or item.get("full_text") or ""
         promo_desc = item.get("promo") or "None"
         
         if not title or len(title) < 5:

@@ -33,8 +33,8 @@ def load_digitec_live():
         print(f"[WARN] Failed to load Digitec live JSONs: {e}")
         samsungs, lgs = [], []
         
-    s_filtered = [p for p in samsungs if p.get("size", 0) >= 22]
-    l_filtered = [p for p in lgs if p.get("size", 0) >= 22]
+    s_filtered = [p for p in samsungs if p.get("size", 0) >= 22 and "offertype=marketplace" not in p.get("link", "")]
+    l_filtered = [p for p in lgs if p.get("size", 0) >= 22 and "offertype=marketplace" not in p.get("link", "")]
     return s_filtered, l_filtered
 
 def load_interdiscount_live():
@@ -425,23 +425,12 @@ def find_matching_product(series_key, year, brand, products):
             is_match = "B6" in code
         elif family == "QNED90":
             is_match = "QNED90" in code
-        elif family == "QNED85":
-            is_match = "QNED85" in code or "QNED86" in code
-        elif family in ["QNED80", "QNED71"]:
-            if size <= 65:
-                is_match = any(k in code for k in ["QNED80", "QNED71", "QNED72", "QNED70", "QNED7E"])
-            else:
-                is_match = "QNED80" in code or "QNED71" in code
+        elif family in ["QNED85", "QNED86", "QNED87", "QNED86A", "QNED86B"]:
+            is_match = any(k in code for k in ["QNED85", "QNED86", "QNED87", "QNED83"])
+        elif family in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED71", "QNED80A", "QNED80B"]:
+            is_match = any(k in code for k in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED71", "QNED72", "QNED7E", "QNED70"])
         elif family == "QNED70":
-            is_match = "QNED70" in code or "QNED72" in code or "QNED7E" in code
-        elif family == "QNED86A":
-            is_match = "QNED86" in code or "QNED85" in code
-        elif family == "QNED86B":
-            is_match = "QNED86" in code
-        elif family == "QNED80A":
-            is_match = "QNED80" in code
-        elif family == "QNED80B":
-            is_match = "QNED80" in code or "QNED7E" in code or "QNED72" in code
+            is_match = any(k in code for k in ["QNED70", "QNED72", "QNED7E", "QNED71"])
         elif family == "UA75":
             is_match = "UA75" in code or "UA73" in code
         elif family == "UA77" or family == "NU85":
@@ -472,16 +461,16 @@ def find_matching_product(series_key, year, brand, products):
             is_match = "QNED93" in code
         elif family == "QN80F":
             is_match = "QN80F" in code or ("QN80" in code and "D" not in code and "H" not in code)
-        elif family == "QN80H":
-            is_match = "QN80" in code
+        elif family in ["QN80H", "QN80", "QN82H", "QN82"]:
+            is_match = "QN80" in code or "QN82" in code
         elif family == "QN70F":
             is_match = "QN70F" in code or ("QN70" in code and "D" not in code and "H" not in code)
-        elif family == "QN70H":
+        elif family in ["QN70H", "QN70"]:
             is_match = "QN70" in code
-        elif family == "M80H":
-            is_match = "M80" in code
-        elif family == "M70H":
-            is_match = "M70" in code
+        elif family in ["M80H", "M80", "M82H", "M82"]:
+            is_match = "M80" in code or "M82" in code or "M70" in code or "M72" in code
+        elif family in ["M70H", "M70", "M72H", "M72"]:
+            is_match = "M70" in code or "M72" in code
         elif family in ["Q8", "Q8F", "Q8H"]:
             is_match = "Q8" in code
         elif family in ["Q7", "Q7F", "Q7H"]:
@@ -497,24 +486,48 @@ def find_matching_product(series_key, year, brand, products):
     if len(matched) == 1:
         return matched[0]
 
-    if family in ["QNED80", "QNED71"]:
+    if family in ["QNED85", "QNED86", "QNED87", "QNED86A", "QNED86B"]:
+        def qned85_priority(p):
+            c = p["model_code"].upper()
+            if "QNED86" in c: return 1
+            if "QNED87" in c: return 2
+            if "QNED85" in c: return 3
+            if "QNED83" in c: return 4
+            return 5
+        matched.sort(key=lambda p: (qned85_priority(p), p.get("price", 999999)))
+    elif family in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED71", "QNED80A", "QNED80B"]:
         def qned_priority(p):
             c = p["model_code"].upper()
-            if "QNED71" in c: return 1
-            if "QNED72" in c: return 2
-            if "QNED80" in c: return 3
-            if "QNED70" in c: return 4
-            if "QNED7E" in c: return 5
-            return 6
-        matched.sort(key=qned_priority)
+            if "QNED80" in c: return 1
+            if "QNED81" in c: return 2
+            if "QNED82" in c: return 3
+            if "QNED83" in c: return 4
+            if "QNED71" in c: return 5
+            if "QNED72" in c: return 6
+            if "QNED7E" in c: return 7
+            if "QNED70" in c: return 8
+            return 9
+        matched.sort(key=lambda p: (qned_priority(p), p.get("price", 999999)))
     elif family == "QNED70":
         def qned70_priority(p):
             c = p["model_code"].upper()
             if "QNED70" in c: return 1
             if "QNED72" in c: return 2
             if "QNED7E" in c: return 3
-            return 4
-        matched.sort(key=qned70_priority)
+            if "QNED71" in c: return 4
+            return 5
+        matched.sort(key=lambda p: (qned70_priority(p), p.get("price", 999999)))
+    elif family in ["M80H", "M80", "M82H", "M82"]:
+        def m80_priority(p):
+            c = p["model_code"].upper()
+            if "M80" in c: return 1
+            if "M82" in c: return 2
+            if "M70" in c: return 3
+            if "M72" in c: return 4
+            return 5
+        matched.sort(key=lambda p: (m80_priority(p), p.get("price", 999999)))
+    else:
+        matched.sort(key=lambda p: p.get("price", 999999))
 
     return matched[0]
 

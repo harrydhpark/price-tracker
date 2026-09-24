@@ -222,12 +222,19 @@ def parse_alza_page(html_body, brand):
                 num_str = pr.replace('\xa0', '').replace(' ', '').replace('.', '').replace(',', '')
                 if num_str.isdigit():
                     val = float(num_str)
-                    if val >= 500.0 and val != 100000.0: # Purge 100,000 promo text false positive
+                    if val >= 3500.0 and val != 100000.0: # Purge 100,000 promo text false positive
                         clean_prices.append(val)
             if clean_prices:
                 selling_price = clean_prices[0]
 
-        if selling_price < 500.0:
+        # Screen-size minimum price floor in CZK to eliminate monthly installment false positives
+        if size_val >= 70 and selling_price < 12000.0:
+            continue
+        elif size_val >= 50 and selling_price < 6000.0:
+            continue
+        elif size_val >= 40 and selling_price < 4000.0:
+            continue
+        elif selling_price < 3000.0:
             continue
 
         # 2. Was Price (Original Price)

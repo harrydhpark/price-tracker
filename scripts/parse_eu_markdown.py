@@ -49,24 +49,21 @@ def parse_currys_markdown(md_text, brand):
         elif code_pct_m:
             direct_cut_str = f"Direct Cut {code_pct_m.group(1)}% (Code: {code_pct_m.group(2)})"
             
-        save_amt = re.search(r'Save £([\d,]+(?:\.\d{2})?)', t_no_sb)
-        was_amt = re.search(r'Was £([\d,]+(?:\.\d{2})?)', t_no_sb)
-        price_drop_str = None
-        if was_amt and save_amt and not direct_cut_str:
-            price_drop_str = f"Save GBP {save_amt.group(1)}; was GBP {was_amt.group(1)}"
-        elif was_amt and not direct_cut_str:
-            price_drop_str = f"was GBP {was_amt.group(1)}"
+        orig_price = 0.0
+        if was_amt:
+            orig_price = float(was_amt.group(1).replace(',', ''))
             
         cb_m = re.search(r'(?:Claim|Get|Up to)?\s*£(\d+)\s*cashback', t_no_sb, re.I)
         cb_str = f"GBP {cb_m.group(1)} Cashback" if (cb_m and int(cb_m.group(1)) >= 10) else None
         
-        promo_parts = [direct_cut_str, cb_str, price_drop_str, sb_offer]
+        promo_parts = [direct_cut_str, cb_str, sb_offer]
         promo = '; '.join(filter(None, promo_parts)) or "None"
         
         items.append({
             "name": title,
             "title": title,
             "price": price_val,
+            "original_price": orig_price,
             "promo": promo
         })
     return items
@@ -129,14 +126,14 @@ def parse_fnac_markdown(md_text, brand):
         selling_price = clean_prices[0]
         
         was_m = re.search(r'~~([\d\s]+(?:,\d{2})?)\s*€~~', clean_chunk)
+        orig_price = 0.0
         promo = 'None'
         if was_m:
             was_val = was_m.group(1).replace(' ', '').replace(',', '.')
             try:
                 was_num = float(was_val)
                 if was_num > selling_price:
-                    pct = int(round((was_num - selling_price) / was_num * 100))
-                    promo = f'Sale {pct}%; was EUR {was_num:.2f}'
+                    orig_price = was_num
             except ValueError:
                 pass
                 
@@ -145,6 +142,7 @@ def parse_fnac_markdown(md_text, brand):
             'title': title,
             'url': url,
             'price': selling_price,
+            'original_price': orig_price,
             'promo': promo
         })
     return items
@@ -160,17 +158,17 @@ def parse_mediamarkt_eu_markdown(md_text, brand, cc):
         if not title_m:
             continue
         title = title_m.group(1).strip()
-        if len(title) < 8 or any(x in title.upper() for x in ["SOUNDBAR", "HIFI", "BEAMER", "ZUBEHÖR"]):
-            continue
-            
-        # Price: 549,– € or 1099,00€ or 1.399,– €
-        prices = re.findall(r'(\d[\d\s’\x27\x60,.]*)\s*(?:,–\s*€|,\d{2}\s*€|€)', card)
+        url_m = re.search(r'\(((?:https://www\.mediamarkt\.[a-z]+/|https://www\.mediaworld\.it/)[^\)]+)\)', card)
+        url = url_m.group(1) if url_m else ""
+        
+        # Price extraction: e.g. "1.199,–", "1.799,00 €", "559 ,00€"
         clean_prices = []
-        for p in prices:
-            clean_p = p.replace('.', '').replace(' ', '').replace('\xa0', '').replace(',', '.')
+        raw_prices = re.findall(r'(\d{1,3}(?:\.\d{3})*(?:,\d{2}|,–)?)', card)
+        for rp in raw_prices:
+            p_val = rp.replace('.', '').replace(',–', '').replace(',', '.').strip()
             try:
-                val = float(clean_p)
-                if val >= 100.0:
+                val = float(p_val)
+                if 100 <= val <= 25000:
                     clean_prices.append(val)
             except ValueError:
                 pass
@@ -178,22 +176,24 @@ def parse_mediamarkt_eu_markdown(md_text, brand, cc):
         if not clean_prices:
             continue
             
-        selling_price = clean_prices[-1]
+        selling_price = min(clean_prices)
         
+        # Promo tags
         promo_parts = []
-        cb_m = re.search(r'(\d+)\s*€\s*Cashback', card, re.I)
+        cb_m = re.search(r'Cashback\s*(?:€|CHF)?\s*(\d+)', card, re.I)
         if cb_m:
-            promo_parts.append(f"{cb_m.group(1)}€ Cashback")
+            promo_parts.append(f"Cashback €{cb_m.group(1)}")
             
-        club_m = re.search(r'-([\d,]+)\s*€\s*Rabatt freischalten', card, re.I)
+        club_m = re.search(r'Club\s*(?:Coupons?|Rabatt)?\s*-?(\d+)\s*€', card, re.I)
         if club_m:
             promo_parts.append(f"Club Coupon -{club_m.group(1)}€")
             
         pct_m = re.search(r'-(\d+)%', card)
+        orig_price = 0.0
         if pct_m and len(clean_prices) > 1:
             was_p = clean_prices[0]
             if was_p > selling_price:
-                promo_parts.append(f"Sale {pct_m.group(1)}%; was EUR {was_p:.2f}")
+                orig_price = was_p
                 
         promo = '; '.join(promo_parts) if promo_parts else "None"
         
@@ -201,6 +201,7 @@ def parse_mediamarkt_eu_markdown(md_text, brand, cc):
             "name": title,
             "title": title,
             "price": selling_price,
+            "original_price": orig_price,
             "promo": promo
         })
     return items

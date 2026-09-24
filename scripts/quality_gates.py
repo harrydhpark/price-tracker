@@ -25,7 +25,9 @@ RATES_TO_EUR = {
     "CZK": 0.040,
     "HUF": 0.0025,
     "AUD": 0.60,
-    "SEK": 0.088
+    "SEK": 0.088,
+    "PLN": 0.235,
+    "RON": 0.201
 }
 
 def to_eur(price: float, currency: str) -> float:
@@ -112,9 +114,10 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
         # Rule 4: Category and screen-size price floors (CRITICAL)
         panel_up = (r.get("panel_type") or "").upper()
         mc_up = model_code.upper()
+        is_uhd = any(x in panel_up or x in mc_up for x in ["NU8", "NU9", "UA7", "UT8", "UR8", "UQ8", "UHD 4K", "CRYSTAL UHD", "U80"])
         is_mrgb = any(x in panel_up or x in mc_up for x in ["MRGB", "MICRO RGB", "R85", "R95"])
-        is_qned = not is_mrgb and any(x in panel_up or x in mc_up for x in ["QNED", "QLED", "NEO QLED", "QN8", "QN9", "QN7", "LS03"])
-        is_oled = not is_mrgb and not is_qned and ("OLED" in panel_up or "OLED" in mc_up or any(s in mc_up for s in ["S90", "S95", "S99", "S85"]))
+        is_qned = not is_mrgb and not is_uhd and any(x in panel_up or x in mc_up for x in ["QNED", "QLED", "NEO QLED", "QN8", "QN9", "QN7", "LS03"])
+        is_oled = not is_mrgb and not is_qned and not is_uhd and ("OLED" in panel_up or "OLED" in mc_up or any(s in mc_up for s in ["S90", "S95", "S99", "S85"]))
 
         floor_violated = False
         floor_eur = 50.0
@@ -122,13 +125,14 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
 
         if is_oled:
             cat_name = "OLED"
-            if size >= 83: floor_eur = 1800.0
-            elif size >= 77: floor_eur = 1300.0
-            elif size >= 70: floor_eur = 1100.0
-            elif size >= 65: floor_eur = 850.0
-            elif size >= 55: floor_eur = 650.0
-            elif size in [42, 48]: floor_eur = 500.0
-            else: floor_eur = 400.0
+            is_entry_oled = any(x in mc_up for x in ["B5", "B6", "S85"])
+            if size >= 83: floor_eur = 1400.0 if is_entry_oled else 1800.0
+            elif size >= 77: floor_eur = 1100.0 if is_entry_oled else 1300.0
+            elif size >= 70: floor_eur = 950.0 if is_entry_oled else 1100.0
+            elif size >= 65: floor_eur = 800.0 if is_entry_oled else 850.0
+            elif size >= 55: floor_eur = 600.0 if is_entry_oled else 650.0
+            elif size in [42, 48]: floor_eur = 450.0 if is_entry_oled else 500.0
+            else: floor_eur = 350.0
         elif is_mrgb:
             cat_name = "Micro RGB"
             if size >= 75: floor_eur = 1200.0
@@ -136,10 +140,11 @@ def run_quality_gates(records: List[Dict[str, Any]], survey_date: str = None) ->
             else: floor_eur = 500.0
         elif is_qned:
             cat_name = "QNED/QLED"
-            if size >= 75: floor_eur = 600.0
-            elif size >= 65: floor_eur = 450.0
-            elif size >= 50: floor_eur = 280.0
-            elif size >= 43: floor_eur = 200.0
+            is_entry_qled = any(x in mc_up for x in ["Q5F", "Q6", "QNED70", "QNED71", "QNED72", "Q7"])
+            if size >= 75: floor_eur = 500.0 if is_entry_qled else 600.0
+            elif size >= 65: floor_eur = 400.0 if is_entry_qled else 450.0
+            elif size >= 50: floor_eur = 250.0 if is_entry_qled else 280.0
+            elif size >= 43: floor_eur = 180.0 if is_entry_qled else 200.0
             else: floor_eur = 150.0
         else: # UHD 4K / Entry LED
             cat_name = "UHD 4K"
