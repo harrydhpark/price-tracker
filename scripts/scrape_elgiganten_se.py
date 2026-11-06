@@ -91,7 +91,7 @@ def parse_elgiganten_product(raw_item, brand):
                 if ser.startswith('S') or ser.startswith('QN') or ser.startswith('LS') or ser.startswith('Q'):
                     model_code = f"QE{size}{ser}"
                 elif ser.startswith('U') or ser.startswith('M') or ser.startswith('H'):
-                    model_code = f"UE{size}{ser}"
+                    model_code = f"TQ{size}{ser}" if ser.startswith('U7025') else f"UE{size}{ser}"
                 elif ser.startswith('R'):
                     model_code = f"MRE{size}{ser}"
                 break
@@ -130,6 +130,10 @@ def parse_elgiganten_product(raw_item, brand):
                                     elif "STANBYME" in u_title or "27LX6" in u_title:
                                         model_code = "27LX6TDGA"
 
+    # Exclude 58-inch U7025H per user rule
+    if size == 58 and "U7025" in model_code.upper():
+        return None
+
     # 5. Model Year Classification (Strict 2025/2026)
     year = None
     if brand.upper() == "SAMSUNG":
@@ -138,7 +142,7 @@ def parse_elgiganten_product(raw_item, brand):
         elif "2025" in u_title or any(x in model_code for x in ["F", "2025"]):
             year = 2025
     else: # LG
-        if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED87B", "QNED86B", "QNED83B", "QNED81B", "QNED72B", "NU850", "NU800", "MRGB88B", "MRGB96B", "MRGB86", "27LX6"]) or "2026" in u_title:
+        if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED87B", "QNED86B", "QNED83B", "QNED81B", "QNED72B", "QNED8EB", "NU850", "NU800", "MRGB", "27LX6"]) or "2026" in u_title:
             year = 2026
         elif any(x in model_code for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED85", "QNED80", "QNED93A", "QNED92A", "NANO82", "UA75"]) or "2025" in u_title:
             year = 2025
@@ -146,12 +150,14 @@ def parse_elgiganten_product(raw_item, brand):
     if year not in [2025, 2026]:
         return None
 
-    # 6. Display Type Classification
+    # 6. Display Type Classification (Strict B6 Guard)
     display_type = "LED"
     c_up = model_code.upper()
     if brand.upper() == "SAMSUNG":
         if "OLED" in u_title or any(x in c_up for x in ["S90", "S95", "S85", "S91"]):
             display_type = "OLED"
+        elif "MICRO RGB" in u_title or any(x in c_up for x in ["R95", "R85", "R86", "R87"]):
+            display_type = "Micro RGB"
         elif "NEO QLED" in u_title or "QN" in c_up:
             display_type = "Neo QLED"
         elif "MINI LED" in u_title or "MINILED" in u_title or any(x in c_up for x in ["M72", "M84", "M70", "M80"]):
@@ -161,18 +167,18 @@ def parse_elgiganten_product(raw_item, brand):
         elif "CRYSTAL UHD" in u_title or "U7025" in c_up or "U8095" in c_up or "4K" in u_title:
             display_type = "UHD 4K"
     else: # LG
-        if "OLED" in u_title or "OLED" in c_up or any(x in c_up for x in ["C6", "G6", "B6", "C5", "G5", "B5"]):
-            display_type = "OLED evo" if ("EVO" in u_title or any(x in c_up for x in ["G6", "G5", "C6", "C5"])) else "OLED"
+        if "MRGB" in u_title or "MRGB" in c_up or "MICRO RGB" in u_title or "MINI RGB" in u_title:
+            display_type = "Micro RGB"
         elif "QNED" in u_title or "QNED" in c_up:
             display_type = "QNED"
-        elif "MRGB" in u_title or "MRGB" in c_up:
-            display_type = "Micro RGB"
-        elif "NU850" in c_up or "NU800" in c_up or "NANOUHD" in u_title:
+        elif "NU850" in c_up or "NU800" in c_up or "NANOUHD" in u_title or "UA75" in c_up:
             display_type = "UHD 4K"
         elif "NANO" in u_title or "NANOCELL" in u_title:
             display_type = "NanoCell"
         elif "27LX6" in c_up or "STANBYME" in u_title:
             display_type = "Lifestyle"
+        elif "OLED" in u_title or "OLED" in c_up or re.search(r"\bOLED\w*[BCGWM][456]\b", c_up):
+            display_type = "OLED evo" if ("EVO" in u_title or any(x in c_up for x in ["G6", "G5", "C6", "C5"])) else "OLED"
 
     # 7. SEK Price Guards
     if "OLED" in display_type.upper():

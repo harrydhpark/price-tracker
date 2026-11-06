@@ -368,11 +368,23 @@ def scan_history_data():
         
         try:
             wb = openpyxl.load_workbook(best_filepath, data_only=True)
-            for year, last_row in [("2025", 85), ("2026", 131)]:
+            for year in ["2025", "2026"]:
                 sheetname = f"Swiss_{year}"
                 if sheetname not in wb.sheetnames:
                     continue
                 sheet = wb[sheetname]
+                summary_start = None
+                for r in range(4, 300):
+                    val_b = sheet.cell(row=r, column=2).value
+                    if val_b == "Series" and r > 10:
+                        summary_start = r
+                        break
+                last_row = (summary_start - 1) if summary_start else (85 if year == "2025" else 132)
+                while last_row > 4:
+                    val_b = sheet.cell(row=last_row, column=2).value
+                    if val_b and str(val_b).strip():
+                        break
+                    last_row -= 1
                 sheet_data = extract_sheet_data(sheet, last_row)
                 
                 for series, records in sheet_data.items():
@@ -551,6 +563,27 @@ def compute_weekly_changes_swiss():
         w38_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 0915*.xlsx")))
         if w38_cands: w38_path = w38_cands[-1]
 
+    w39_path = os.path.join(data_dir, "price tracker_swiss_2026 0924_v1.xlsx")
+    if not os.path.exists(w39_path):
+        w39_path = os.path.join(history_dir, "2026 0924", "price tracker_swiss_2026 0924_v1.xlsx")
+    if not os.path.exists(w39_path):
+        w39_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 0924*.xlsx")))
+        if w39_cands: w39_path = w39_cands[-1]
+
+    w40_path = os.path.join(data_dir, "price tracker_swiss_2026 0929_v1.xlsx")
+    if not os.path.exists(w40_path):
+        w40_path = os.path.join(history_dir, "2026 0929", "price tracker_swiss_2026 0929_v1.xlsx")
+    if not os.path.exists(w40_path):
+        w40_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 0929*.xlsx")))
+        if w40_cands: w40_path = w40_cands[-1]
+
+    w41_path = os.path.join(data_dir, "price tracker_swiss_2026 1006_v1.xlsx")
+    if not os.path.exists(w41_path):
+        w41_path = os.path.join(history_dir, "2026 1006", "price tracker_swiss_2026 1006_v1.xlsx")
+    if not os.path.exists(w41_path):
+        w41_cands = sorted(glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 1006*.xlsx")))
+        if w41_cands: w41_path = w41_cands[-1]
+
     cat_w30 = load_swiss_catalog(w30_path)
     cat_w31 = load_swiss_catalog(w31_path)
     cat_w32 = load_swiss_catalog(w32_path)
@@ -560,8 +593,17 @@ def compute_weekly_changes_swiss():
     cat_w36 = load_swiss_catalog(w36_path)
     cat_w37 = load_swiss_catalog(w37_path)
     cat_w38 = load_swiss_catalog(w38_path) if os.path.exists(w38_path) else {}
+    cat_w39 = load_swiss_catalog(w39_path) if os.path.exists(w39_path) else {}
+    cat_w40 = load_swiss_catalog(w40_path) if os.path.exists(w40_path) else {}
+    cat_w41 = load_swiss_catalog(w41_path) if os.path.exists(w41_path) else {}
 
     transitions = []
+    if cat_w41 and cat_w40:
+        transitions.append(("W41", "W41(10.06) vs W40(09.29)", "2026.10.06", "2026.09.29", cat_w40, cat_w41))
+    if cat_w40 and cat_w39:
+        transitions.append(("W40", "W40(09.29) vs W39(09.24)", "2026.09.29", "2026.09.24", cat_w39, cat_w40))
+    if cat_w39 and cat_w38:
+        transitions.append(("W39", "W39(09.24) vs W38(09.15)", "2026.09.24", "2026.09.15", cat_w38, cat_w39))
     if cat_w38:
         transitions.append(("W38", "W38(09.15) vs W37(09.12)", "2026.09.15", "2026.09.12", cat_w37, cat_w38))
     transitions.extend([
@@ -765,7 +807,7 @@ def compute_weekly_changes_swiss():
         }
         print(f"  ➔ [SWISS WEEKLY CHANGES] {week_key}: {len(items)} change items (Drops: {price_drops}, Hikes: {price_hikes}, Promos: {promo_changes}, New: {new_models})")
         
-    return weekly_changes_data
+    return weekly_changes_data, transitions
 
 def main():
     if not os.path.exists(excel_path):
@@ -871,7 +913,7 @@ def main():
     print("[PARSING HISTORY] Scanning all historical survey folders...")
     history_data = scan_history_data()
     
-    weekly_changes_data = compute_weekly_changes_swiss()
+    weekly_changes_data, transitions = compute_weekly_changes_swiss()
     
     price_data = {
         "2025": pairs_2025,
@@ -902,6 +944,20 @@ def main():
     compiled_html = html_content.replace("// {{INSERT_PRICE_DATA}}", injection_block)
     compiled_html = compiled_html.replace("{{SURVEY_DATE}}", survey_date)
     compiled_html = compiled_html.replace("{{SURVEY_DATE_DOT}}", survey_date_dot)
+    
+    # Inject dynamic week buttons
+    week_buttons_html = []
+    latest_week_key = transitions[0][0] if transitions else "W41"
+    for i, (wk, p_lbl, c_d, p_d, _, _) in enumerate(transitions):
+        short_lbl = p_lbl.split(" vs ")[0]
+        if i == 0:
+            week_buttons_html.append(f'<button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all active bg-primary text-white" id="btn_week_{wk.lower()}" onclick="switchWeeklyChangeWeek(\'{wk}\')">{short_lbl}</button>')
+        else:
+            week_buttons_html.append(f'<button type="button" class="weekly-week-tab px-3.5 py-1.5 text-xs font-bold rounded-md transition-all text-slate-600 hover:bg-slate-200/60" id="btn_week_{wk.lower()}" onclick="switchWeeklyChangeWeek(\'{wk}\')">{short_lbl}</button>')
+    tabs_container_html = '<div class="inline-flex rounded-lg shadow-sm bg-slate-100 p-1" role="group" id="weekly_change_week_tabs">\n                            ' + '\n                            '.join(week_buttons_html) + '\n                        </div>'
+    
+    compiled_html = re.sub(r'<div class="inline-flex rounded-lg shadow-sm bg-slate-100 p-1" role="group" id="weekly_change_week_tabs">.*?</div>', tabs_container_html, compiled_html, flags=re.DOTALL)
+    compiled_html = re.sub(r"let currentWeeklyChangeWeek = '[^']+';", f"let currentWeeklyChangeWeek = '{latest_week_key}';", compiled_html)
     
     # 5. Save to target files
     with open(workspace_dashboard_path, "w", encoding="utf-8") as f:

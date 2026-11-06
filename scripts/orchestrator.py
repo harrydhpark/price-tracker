@@ -30,7 +30,24 @@ PYTHON_EXE = os.path.join(ROOT_DIR, "python_env", "python.exe")
 if not os.path.exists(PYTHON_EXE):
     PYTHON_EXE = sys.executable
 
-def run_cmd(cmd_list: List[str], desc: str) -> bool:
+FAILED_STEPS: List[str] = []
+
+
+class StepFailed(RuntimeError):
+    pass
+
+
+def run_cmd(cmd_list: List[str], desc: str, must_succeed: bool = True) -> bool:
+    """Hard Halt: a failed mandatory step raises StepFailed so later steps (DB, dashboard, deploy) never run."""
+    ok = _run_cmd_impl(cmd_list, desc)
+    if not ok:
+        FAILED_STEPS.append(desc)
+        if must_succeed:
+            raise StepFailed(desc)
+    return ok
+
+
+def _run_cmd_impl(cmd_list: List[str], desc: str) -> bool:
     print(f"\n▶ [STEP] {desc}...")
     start = time.time()
     try:
@@ -76,8 +93,9 @@ def sync_regional_data(region_id: Optional[str] = None):
         run_cmd([PYTHON_EXE, "scripts/sync_au_retailers.py"], "Sync Australia Retailers to Excel")
 
     # 5. New EU Retailers (PL MediaExpert, PT Worten, RO Altex, SE Elgiganten)
-    if not region_id or region_id in ["nordics", "eastern_eu", "western_eu", "new_eu"]:
-        run_cmd([PYTHON_EXE, "scripts/sync_new_eu_retailers.py"], "Sync New EU Retailers (PL, PT, RO, SE) to Excel")
+    # [SUSPENDED 2026-10-08] no live scraper; see scripts/_suspended/README.md
+    if region_id in ["nordics", "new_eu"]:
+        print("⏸️ [SUSPENDED] PL/PT/RO/SE survey is suspended until Phase 2 live scrapers exist.")
 
 def sync_master_registry():
     print("\n=======================================================")
@@ -100,17 +118,15 @@ def update_price_history():
     swiss_target = os.path.join(ROOT_DIR, "data", f"price tracker_swiss_2026 {today_str}_v1.xlsx")
     au_target = os.path.join(ROOT_DIR, "data", f"price tracker_AU_2026 {today_str}_v1.xlsx")
 
-    # If exact date not found, pick latest
-    import glob
-    if not os.path.exists(eu_target):
-        cand = glob.glob(os.path.join(ROOT_DIR, "data", "price tracker_EU_2026 *.xlsx"))
-        if cand: eu_target = sorted(cand)[-1]
-    if not os.path.exists(swiss_target):
-        cand = glob.glob(os.path.join(ROOT_DIR, "data", "price tracker_swiss_2026 *.xlsx"))
-        if cand: swiss_target = sorted(cand)[-1]
-    if not os.path.exists(au_target):
-        cand = glob.glob(os.path.join(ROOT_DIR, "data", "price tracker_AU_2026 *.xlsx"))
-        if cand: au_target = sorted(cand)[-1]
+    # [2026-10-08] No "pick latest" fallback: ingesting an older workbook as today's survey
+    # silently re-records stale prices. Today's workbooks must exist or the step fails.
+    missing = [t for t in (eu_target, swiss_target, au_target) if not os.path.exists(t)]
+    if missing:
+        print("❌ [DB SYNC] Today's workbook(s) missing - refusing to ingest older workbooks:")
+        for t in missing:
+            print(f"   - {t}")
+        FAILED_STEPS.append("Record Workbooks into price_history.db")
+        raise StepFailed("today's workbooks missing")
 
     cmd = [
         PYTHON_EXE, "-c",
@@ -217,4 +233,11 @@ def main():
     print(f"\n🎉 [ORCHESTRATOR FINISHED] Total elapsed time: {round(time.time() - total_start, 1)}s.")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except StepFailed as e:
+        print(f"\n⛔ [HARD HALT] Step failed: {e}. Remaining steps (DB / dashboard / deploy) were NOT executed.")
+        sys.exit(2)
+    if FAILED_STEPS:
+        print(f"\n❌ Failed steps: {FAILED_STEPS}")
+        sys.exit(1)

@@ -19,19 +19,20 @@ os.makedirs(DATA_DIR, exist_ok=True)
 NON_TV_KEYWORDS = [
     "SOUNDBAR", "SOUND BAR", "BUNDLE", "MONITOR", "ODYSSEY", "ULTRAGEAR",
     "MYVIEW", "REMOTE", "TELECOMANDO", "PROJECTOR", "BEAMER", "CABLE",
-    "SUPORTE", "STAND", "WALL BRACKET", "OUTLET GRADE B", "OUTLET GRADE C",
-    "REFURBISHED", "REEMBALADO"
+    "SUPORTE", "STAND", "WALL BRACKET", "OUTLET", "OUTLET GRADE A", "OUTLET GRADE B", "OUTLET GRADE C",
+    "GRADE A", "GRADE B", "GRADE C", "REFURBISHED", "REEMBALADO", "RECONDICIONADO", "SEGUNDA MAO", "USADO"
 ]
 
 def parse_worten_product(raw_item, brand):
     title = raw_item.get("title", "").strip()
     u_title = title.upper()
     url = raw_item.get("url", "").strip()
+    u_url = url.upper()
     price = float(raw_item.get("price", 0.0))
     orig_price = float(raw_item.get("original_price", price))
     promo = raw_item.get("promo", "None")
     
-    if any(k in u_title for k in NON_TV_KEYWORDS):
+    if any(k in u_title for k in NON_TV_KEYWORDS) or any(k in u_url for k in ["OUTLET", "RECONDICIONADO", "REEMBALADO", "GRADE-A", "GRADE-B", "GRADE-C", "USADO"]):
         return None
     if price < 120.0:
         return None

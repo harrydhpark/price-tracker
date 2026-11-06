@@ -19,8 +19,15 @@ EU_SOURCES = {
     'mm-es': {'retailer': 'MediaMarkt', 'cc': 'ES', 'currency': 'EUR'},
     'mm-nl': {'retailer': 'MediaMarkt', 'cc': 'NL', 'currency': 'EUR'},
     'currys': {'retailer': 'Currys', 'cc': 'UK', 'currency': 'GBP'},
-    'fnac': {'retailer': 'Fnac', 'cc': 'FR', 'currency': 'EUR'},
+    'boulanger': {'retailer': 'Boulanger', 'cc': 'FR', 'currency': 'EUR'},
     'mw-it': {'retailer': 'MediaWorld', 'cc': 'IT', 'currency': 'EUR'},
+    'alza': {'retailer': 'Alza', 'cc': 'CZ', 'currency': 'CZK'},
+    'mm-hu': {'retailer': 'MediaMarkt', 'cc': 'HU', 'currency': 'HUF'},
+    'worten_pt': {'retailer': 'Worten', 'cc': 'PT', 'currency': 'EUR'},
+    'elgiganten_se': {'retailer': 'Elgiganten', 'cc': 'SE', 'currency': 'SEK'},
+    'mediaexpert_pl': {'retailer': 'MediaExpert', 'cc': 'PL', 'currency': 'PLN'},
+    'emag_ro': {'retailer': 'eMAG', 'cc': 'RO', 'currency': 'RON'},
+    'kotsovolos_gr': {'retailer': 'Kotsovolos', 'cc': 'GR', 'currency': 'EUR'},
 }
 
 def save_workbook_with_retry(wb, filename):
@@ -56,7 +63,9 @@ def classify_year(brand, model_code, title_upper):
     if brand.upper() == "SAMSUNG":
         if model_code != "Unknown" and len(model_code) > 3:
             sub = model_code[2:]
-            if "H" in sub:
+            if "FUXX" in sub:
+                year_val = 2025
+            elif "H" in sub:
                 year_val = 2026
             elif "F" in sub:
                 year_val = 2025
@@ -77,10 +86,10 @@ def classify_year(brand, model_code, title_upper):
         # Check model code first
         if model_code != "Unknown":
             # 2026 Codes
-            if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED80B", "QNED87B", "QNED81B", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "UA77", "MRGB87B", "MRGB87", "MRGB86B", "MRGB86", "LX7B", "LX6", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "QLED7EB", "MRGB96B", "NU850", "NU800", "NU80", "NU8", "LB700"]):
+            if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED85B", "QNED84B", "QNED83B", "QNED82B", "QNED81B", "QNED80B", "QNED87B", "QNED8EB", "QNED8MB", "QNED93B", "QNED91B", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "NANO82B", "NANO81B", "NANO80B", "UA77", "MRGB87B", "MRGB87", "MRGB86B", "MRGB86", "MRGB96B", "MRGB96", "LX7B", "LX6", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "QLED7EB", "NU850", "NU800", "NU8E0", "NU80", "NU8", "LB700", "LB70", "LB650", "LB65"]):
                 year_val = 2026
             # 2025 Codes
-            elif any(x in model_code for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED87A", "QNED87", "QNED72A", "QNED7EA", "UA75", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO81A", "NANO81", "NANO80A", "QNED93A"]):
+            elif any(x in model_code for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED86", "QNED85A", "QNED85", "QNED84A", "QNED84", "QNED83A", "QNED83", "QNED82A", "QNED82", "QNED81A", "QNED81", "QNED80A", "QNED80", "QNED87A", "QNED87", "QNED75A", "QNED75", "QNED72A", "QNED7EA", "UA75", "UA74", "MRGB87A", "LX7A", "LX5", "QNED70A", "NANO82A", "NANO81A", "NANO81", "NANO80A", "NANO80", "QNED93A", "QNED93", "QNED91A", "QNED91", "QNED99"]):
                 year_val = 2025
             # 2024 Codes
             elif any(x in model_code for x in ["C4", "G4", "B4", "M4", "UA73", "LX4"]):
@@ -88,9 +97,9 @@ def classify_year(brand, model_code, title_upper):
         
         # Fallback to title keywords
         if year_val is None:
-            if any(x in title_upper for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED81B", "QNED80B", "QNED87B", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "UA77", "MRGB87B", "MRGB86B", "MRGB96B", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "NU800", "NU80", "2026"]):
+            if any(x in title_upper for x in ["C6", "G6", "B6", "W6", "M6", "QNED86B", "QNED85B", "QNED84B", "QNED83B", "QNED82B", "QNED81B", "QNED80B", "QNED87B", "QNED8EB", "QNED8MB", "QNED72B", "QNED71B", "QNED70B", "QNED7EB", "UA77", "MRGB87B", "MRGB86B", "MRGB96B", "MRGB96", "27LX6TDGA", "27LX6", "STANBYME 2", "STANBYME", "NU800", "NU850", "NU8E0", "NU80", "LB700", "LB70", "LB650", "LB65", "2026"]):
                 year_val = 2026
-            elif any(x in title_upper for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED87A", "QNED72A", "QNED70A", "QNED7EA", "UA75", "NANO81A", "NANO80A", "QNED93A", "2025"]):
+            elif any(x in title_upper for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED86", "QNED85A", "QNED85", "QNED84A", "QNED84", "QNED83A", "QNED83", "QNED82A", "QNED82", "QNED81A", "QNED81", "QNED80A", "QNED80", "QNED87A", "QNED75A", "QNED75", "QNED72A", "QNED70A", "QNED7EA", "UA75", "UA74", "NANO82A", "NANO81A", "NANO80A", "NANO80", "QNED93A", "QNED93", "QNED91A", "QNED91", "QNED99", "2025"]):
                 year_val = 2025
             elif any(x in title_upper for x in ["C4", "G4", "B4", "M4", "2024"]):
                 year_val = 2024
@@ -130,18 +139,22 @@ def parse_product_name(title, brand):
         if oled_match:
             model_code = oled_match.group(1)
         else:
-            lg_code_match = re.search(r'\b(\d{2,3}(?:QNED|NANO|MRGB|LX|NU|UA|UT|UR|UQ|LB|QLED)\w*)\b', title_upper)
-            if lg_code_match:
-                model_code = lg_code_match.group(1)
+            oled_short = re.search(r'\b(\d{2,3})([BCGMW][456]\d?[A-Z]{2,3})\b', title_upper)
+            if oled_short and "OLED" in title_upper:
+                model_code = f"OLED{oled_short.group(1)}{oled_short.group(2)}"
             else:
-                words = title_upper.split()
-                for w in words:
-                    clean_w = re.sub(r'[^\w-]', '', w)
-                    if any(junk in clean_w for junk in ["LEDLG", "OLEDLG", "TV", "CINEMA"]):
-                        continue
-                    if any(char.isdigit() for char in clean_w) and len(clean_w) >= 5:
-                        model_code = clean_w
-                        break
+                lg_code_match = re.search(r'\b(\d{2,3}(?:QNED|NANO|MRGB|LX|NU|UA|UT|UR|UQ|LB|QLED)\w*)\b', title_upper)
+                if lg_code_match:
+                    model_code = lg_code_match.group(1)
+                else:
+                    words = title_upper.split()
+                    for w in words:
+                        clean_w = re.sub(r'[^\w-]', '', w)
+                        if any(junk in clean_w for junk in ["LEDLG", "OLEDLG", "TV", "CINEMA"]):
+                            continue
+                        if any(char.isdigit() for char in clean_w) and len(clean_w) >= 5:
+                            model_code = clean_w
+                            break
         # Smart fallback for LG series when model_code is Unknown or generic
         if model_code == "Unknown" or not any(x in model_code for x in ["QNED", "OLED", "MRGB", "NANO", "LX", "NU", "UA", "UT", "UR", "UQ", "LB", "QLED"]):
             if "27LX6" in title_upper or "STANBYME 2" in title_upper or "STANBYME" in title_upper:
@@ -205,7 +218,7 @@ def parse_product_name(title, brand):
         code_nums = re.findall(r'\d+', model_code)
         if code_nums and len(code_nums[0]) in [2, 3]:
             parsed_code_size = int(code_nums[0])
-            if parsed_code_size in [42, 43, 48, 50, 55, 65, 75, 77, 83, 85, 86, 98, 100]:
+            if parsed_code_size in [24, 27, 32, 40, 42, 43, 48, 50, 55, 65, 70, 75, 77, 83, 85, 86, 97, 98, 100, 115]:
                 size_val = parsed_code_size
             
     # 3. Year
@@ -271,7 +284,7 @@ def clean_numeric_price(price_str):
             val = val * 1000.0
         return val if val >= 50.0 else 0.0
         
-    clean_p = str(price_str).replace("€", "").replace("£", "").replace("kr", "").replace("SEK", "").replace("EUR", "").replace("GBP", "").replace("CHF", "").strip()
+    clean_p = str(price_str).replace("€", "").replace("£", "").replace("kr", "").replace("SEK", "").replace("EUR", "").replace("GBP", "").replace("CHF", "").replace("CZK", "").replace("Kč", "").replace("HUF", "").replace("Ft", "").replace("PLN", "").replace("zł", "").strip()
     
     # European format check: "1.799", "2.499", "1.499"
     if re.match(r'^\d{1,3}\.\d{3}$', clean_p):
@@ -322,9 +335,9 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
         f"Price ({currency})", f"Original Price ({currency})", "Shipping", "Installment",
         "Cashback", "Price Promotion", "Non-Price Promotion"
     ]
-    if sheet.max_row <= 1 or sheet.cell(row=1, column=7).value == "Shipping":
-        for col_idx, h in enumerate(headers, 1):
-            sheet.cell(row=1, column=col_idx, value=h)
+    # Unconditionally enforce standard 12-column headers on every sync
+    for col_idx, h in enumerate(headers, 1):
+        sheet.cell(row=1, column=col_idx, value=h)
         
     # Delete old rows for this brand
     removed_count = 0
@@ -383,6 +396,43 @@ def sync_retailer_sheet(filename, sheetname, brand, products, currency):
     wb.close()
     return final_filename
 
+def purge_unrefreshed_sheets(filename, keep_sheets):
+    """Remove every sheet that was not rewritten in this run. Returns list of removed sheet names."""
+    if not os.path.exists(filename):
+        return []
+    wb = openpyxl.load_workbook(filename)
+    removed = [n for n in wb.sheetnames if n not in keep_sheets]
+    if len(removed) == len(wb.sheetnames):
+        wb.close()
+        raise RuntimeError("Refusing to purge: no sheet was refreshed in this run.")
+    for n in removed:
+        wb.remove(wb[n])
+    if removed:
+        wb.save(filename)
+        print(f"  🧹 [STALE-SHEET ISOLATION] Removed {len(removed)} carried-over sheets: {removed}")
+    wb.close()
+    return removed
+
+
+def write_sync_manifest(data_dir, excel_filename, refreshed_sheets, purged):
+    from datetime import datetime as _dt
+    m_d = re.search(r'(\d{4})\s+(\d{4})', os.path.basename(excel_filename))
+    tag = f"{m_d.group(1)}{m_d.group(2)}" if m_d else _dt.now().strftime('%Y%m%d')
+    run_dir = os.path.join(data_dir, "runs", f"eu_{tag}")
+    os.makedirs(run_dir, exist_ok=True)
+    countries = sorted({s.split("_")[1] for s in refreshed_sheets if s.count("_") >= 2})
+    manifest = {
+        "workbook": os.path.basename(excel_filename),
+        "generated_at": _dt.now().isoformat(timespec="seconds"),
+        "refreshed_sheets": sorted(refreshed_sheets),
+        "refreshed_countries": countries,
+        "purged_sheets": purged,
+    }
+    with open(os.path.join(run_dir, "sync_manifest.json"), "w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+    return manifest
+
+
 def main():
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     if not os.path.exists(data_dir):
@@ -423,6 +473,8 @@ def main():
     print(f" 🛡️ MANDATORY PRE-FLIGHT LIVE ASSERTION GATE (Survey Date: {today_mmdd})")
     print("=" * 65)
     today_date_str = datetime.now().strftime("%Y-%m-%d")
+    # Raw files must have been written ON the survey date (target date if given, else today).
+    expected_date_str = f"{datetime.now().year}-{today_mmdd[:2]}-{today_mmdd[2:]}"
     stale_files = []
     checked_count = 0
     for s_key in EU_SOURCES:
@@ -438,11 +490,10 @@ def main():
                 mtime = datetime.fromtimestamp(os.path.getmtime(r_path)).strftime("%Y-%m-%d")
                 fsize = os.path.getsize(r_path)
                 checked_count += 1
-                if target_date:
-                    if fsize < 100:
-                        stale_files.append((os.path.basename(r_path), "EMPTY FILE (<100B)"))
-                elif mtime != today_date_str:
-                    stale_files.append((os.path.basename(r_path), mtime))
+                if fsize < 100:
+                    stale_files.append((os.path.basename(r_path), "EMPTY FILE (<100B)"))
+                elif mtime not in (expected_date_str, today_date_str):
+                    stale_files.append((os.path.basename(r_path), f"{mtime} (expected {expected_date_str} or {today_date_str})"))
             else:
                 stale_files.append((f"raw_{s_key}_{b}.json", "MISSING"))
                 
@@ -454,18 +505,16 @@ def main():
     print(f"✅ All {checked_count} raw EU datasets verified fresh for today ({today_date_str})!\n")
 
     # Iterate over all EU sources and brands
+    refreshed_sheets = set()
     for src_key, cfg in EU_SOURCES.items():
         for brand in ["samsung", "lg"]:
             products_list = []
             
             if src_key == 'mm-ch':
                 swiss_file = os.path.join(data_dir, f"price tracker_swiss_2026 {today_mmdd}_v1.xlsx")
+                # [2026-10-08] No fallback to an older Swiss workbook (that injected stale CH prices).
                 if not os.path.exists(swiss_file):
-                    swiss_files = glob.glob(os.path.join(data_dir, "price tracker_swiss_2026 *.xlsx"))
-                    swiss_files = [f for f in swiss_files if not os.path.basename(f).startswith("~$")]
-                    if swiss_files:
-                        swiss_files.sort()
-                        swiss_file = swiss_files[-1]
+                    print(f"  ⏸️ [CH] No Swiss workbook for {today_mmdd}; CH sheets not refreshed (kept on last release).")
                 if os.path.exists(swiss_file):
                     try:
                         wb_s = openpyxl.load_workbook(swiss_file, data_only=True)
@@ -536,7 +585,7 @@ def main():
                         display_type = item.get("display") or item.get("display_type") or "LED"
                         mc_up = model_code.upper()
                         if brand.lower() == "lg":
-                            if any(k in mc_up for k in ["NU800", "NU850", "NU80", "NU85", "UA75", "UA77", "UT", "UR", "UQ", "LQ", "LB"]):
+                            if any(k in mc_up for k in ["NU800", "NU850", "NU8E0", "NU80", "NU85", "UA75", "UA77", "UT", "UR", "UQ", "LQ", "LB"]):
                                 display_type = "UHD 4K"
                             elif "QNED" in mc_up:
                                 display_type = "QNED"
@@ -545,12 +594,12 @@ def main():
                             elif "NANO" in mc_up:
                                 display_type = "NanoCell"
                         elif brand.lower() == "samsung":
-                            if any(k in mc_up for k in ["U80", "U85", "U8", "UA", "UT", "UR", "UQ"]):
+                            if any(k in mc_up for k in ["U80", "U85", "U8", "U900", "UA", "UT", "UR", "UQ"]):
                                 display_type = "UHD 4K"
-                            elif "MRGB" in mc_up or "MRE" in mc_up:
+                            elif any(k in mc_up for k in ["MRGB", "MRE", "TMR", "R85H", "R95H", "MR95"]):
                                 display_type = "Micro RGB"
                         price = clean_numeric_price(item.get("price"))
-                        promo = item.get("promo") or "None"
+                        promo = item.get("promo") or item.get("promotions") or "None"
                     else:
                         name = item.get("name") or item.get("title") or ""
                         raw_price = item.get("price")
@@ -606,6 +655,14 @@ def main():
                 "Samsung" if brand.lower() == "samsung" else "LG",
                 products_list, cfg["currency"]
             )
+            refreshed_sheets.add(sheetname)
+
+    # [2026-10-08] Stale-sheet isolation: the workbook is cloned from the previous survey, so every
+    # sheet NOT rewritten in this run (GR/HU/PL/PT/RO/SE/CZ, or a source whose raw file was empty)
+    # used to be carried over and recorded into price_history.db AS TODAY'S PRICES.
+    # Those sheets are now removed; their countries keep their last released survey (release manifest).
+    purged = purge_unrefreshed_sheets(excel_filename, refreshed_sheets)
+    write_sync_manifest(data_dir, excel_filename, refreshed_sheets, purged)
 
     # Auto-synchronize master_product_urls.json with all active EU models
     try:
@@ -630,6 +687,18 @@ def main():
                                 mc = it.get("model_code")
                                 url = it.get("link") or it.get("url") or ""
                                 if mc and mc != "Unknown" and url.startswith("http"):
+                                    # Pan-European Blacklisted 3rd-Party Marketplace Guard
+                                    u_lower = url.lower()
+                                    if "mediamarkt" in u_lower or "mediaworld" in u_lower:
+                                        m_pid = re.search(r'-(\d{8,10})\.html', url)
+                                        if m_pid and (len(m_pid.group(1)) >= 9 or m_pid.group(1).startswith(('14', '15', '16', '17', '18'))):
+                                            continue
+                                    if "offertype=marketplace" in u_lower:
+                                        continue
+                                    if "worten.pt" in u_lower and "seller=" in u_lower and "worten" not in u_lower.split("seller=")[1].split("&")[0]:
+                                        continue
+                                    if "emag.ro" in u_lower and ("/partener-" in u_lower or "seller_id=" in u_lower):
+                                        continue
                                     key = f"{cfg['cc']}_{cfg['retailer'].upper()}_{mc}"
                                     if key not in master_urls:
                                         master_urls[key] = {
@@ -658,25 +727,11 @@ def main():
 
     print(f"\n[EU SYNC DONE] Saved successfully to {excel_filename}")
     
-    # Auto-mirror updated Excel workbook to History_EU folder
-    try:
-        from datetime import datetime
-        today_folder = datetime.now().strftime("%Y %m%d")
-        hist_dir = os.path.abspath(os.path.join(data_dir, "..", "History_EU", today_folder))
-        if not os.path.exists(hist_dir):
-            os.makedirs(hist_dir)
-        hist_file = os.path.join(hist_dir, os.path.basename(excel_filename))
-        shutil.copy2(excel_filename, hist_file)
-        print(f"  ➔ [MIRRORED TO HISTORY_EU] {hist_file}")
-    except Exception as e_h:
-        print(f"[WARN] Failed mirroring to History_EU: {e_h}")
-
-    # Record daily prices to price_history.db and emit structured log
-    try:
-        from price_history import record_survey_from_excel
-        record_survey_from_excel(excel_filename)
-    except Exception as e_db:
-        print(f"[WARN] Failed recording EU survey to price_history.db: {e_db}")
+    # [2026-10-08] DB recording and History_EU mirroring were done here BEFORE any quality gate ran,
+    # so failed/partial surveys became "history". Both now happen only in
+    # scripts/release_by_country.py, per country, after the gates pass.
+    print("  ⏭️ DB write / History_EU mirror deferred -> run: "
+          f"python scripts/release_by_country.py --excel \"{excel_filename}\" --apply")
 
     try:
         from scrape_logger import emit_summary

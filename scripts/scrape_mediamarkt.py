@@ -4,9 +4,28 @@ import json
 import re
 import os
 import sys
+import time
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
+
+def _load_env_file():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
+    if os.path.isfile(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8-sig") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip().lstrip("\ufeff")
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env_file()
 
 # Get TIMEOUT_MULTIPLIER
 TIMEOUT_MULTIPLIER = float(os.environ.get("TIMEOUT_MULTIPLIER", "1.0"))
@@ -417,59 +436,219 @@ def scrape_mediamarkt_query(session, base_url, max_pages, brand):
         
     return products
 
-def scrape_mediamarkt_brand(brand):
-    print(f"\n[MEDIAMARKT] Starting scrape for brand: {brand}")
+def scrape_mediamarkt_firecrawl_deprecated(brand):
+    return []
+def _legacy_mediamarkt_firecrawl(brand):
+    api_key = os.environ.get("FIRECRAWL_API_KEY", "").strip()
+    if not api_key:
+        print(f"  [FIRECRAWL] No API key found, skipping Firecrawl.")
+        return []
+    
+    print(f"\n⚡ [FIRECRAWL LIVE] Executing real-time queries for {brand} on mediamarkt.ch...")
+    try:
+        from curl_cffi import requests as cffi_requests
+    except ImportError:
+        import requests as cffi_requests
+    
     if brand.upper() == "SAMSUNG":
-        search_configs = [
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20TV&brand=SAMSUNG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt", 5),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt", 3),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt", 2)
-        ]
-    elif brand.upper() == "LG":
-        search_configs = [
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt", 5),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt", 3),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt", 3),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt", 2),
-            ("https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt", 2)
+        queries = [
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20oled%20s95h",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt"
         ]
     else:
-        search_configs = [
-            (f"https://www.mediamarkt.ch/de/search.html?query={brand}+TV", 10)
+        queries = [
+            "https://www.mediamarkt.ch/de/search.html?query=65C67",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt",
+            "https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt"
         ]
-        
-    products = []
-    
-    if os.environ.get("STEALTH_FAST") == "1" or os.environ.get("FAST") == "1":
-        print(f"  ⚡ [--stealth-fast] Skipping Scrapling search configs for {brand} to prevent Turnstile hang.")
-        return []
 
-    try:
-        with StealthySession(headless=False) as session:
-            for base_url, max_pages in search_configs:
-                print(f"\n➔ [SEARCH QUERY] Executing: {base_url} (Max pages: {max_pages})")
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    all_products = []
+    
+    for url in queries:
+        payload = {"url": url, "formats": ["markdown"], "waitFor": 3000}
+        try:
+            r = cffi_requests.post("https://api.firecrawl.dev/v1/scrape", json=payload, headers=headers, timeout=60)
+            if r.status_code != 200:
+                print(f"  ⚠️ [FIRECRAWL] HTTP {r.status_code} on {url}")
+                continue
+            md = r.json().get("data", {}).get("markdown", "")
+            card_chunks = re.split(r'(?:In den Warenkorb|In den Einkaufswagen){1,2}', md)
+            for card in card_chunks:
+                m_link = re.search(r'\[\*\*([^\*\]]+)\*\*\]\((https?://www\.mediamarkt\.ch/[^\)]+/product/[^\)]+)\)', card)
+                if not m_link:
+                    continue
+                title = m_link.group(1).strip()
+                p_url = m_link.group(2).strip()
+                u_title = title.upper()
+                
+                # Check non-TV
+                if any(x in u_title for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HALTERUNG", "AIRPODS", "IPHONE", "GALAXY S", "SMARTPHONE", "PLAYSTATION", "BEAMER", "PROJEKTOR"]):
+                    continue
+                if any(x in u_title for x in ["RETURNED", "REFURBISHED", "USED", "GEBRAUCHT"]):
+                    continue
+                
+                # Parse price (robust matching for CHF)
+                matches = re.findall(r'CHF[\s\xa0]*(\d[\d\s\xa0\u202f’\'`.,]*(?:\.\u2013|,\u2013|,\d{2}|\.\d{2}|\b))', card)
+                price_val = 0.0
+                for m in matches:
+                    clean_p = re.sub(r'[\s\xa0\u202f’\'`\u2013-]', '', m).strip()
+                    if not clean_p: continue
+                    if ',' in clean_p and '.' in clean_p: clean_p = clean_p.replace('.', '').replace(',', '.')
+                    elif ',' in clean_p: clean_p = clean_p.replace(',', '.')
+                    elif '.' in clean_p and len(clean_p.split('.')[-1]) == 3: clean_p = clean_p.replace('.', '')
+                    try:
+                        v = float(clean_p)
+                        if 100.0 <= v <= 35000.0 and v not in [2024, 2025, 2026]:
+                            price_val = v
+                            break
+                    except ValueError:
+                        continue
+                if price_val == 0.0:
+                    continue
+                
+                # Promo
+                promo_desc = "None"
+                if "Aus unserer Werbung" in card:
+                    promo_desc = "Aus unserer Werbung"
+                if "Sound Suite" in card:
+                    promo_desc = (promo_desc + " | 25% LG Sound Suite") if promo_desc != "None" else "25% LG Sound Suite"
+                
+                # Size
+                size_val = 55
+                m_sz = re.search(r'\b(115|100|98|97|86|85|83|77|75|70|65|55|50|48|43|42|40|32|27|24)[\s"”\'-]*(?:inch|zoll|cm|\b)', u_title)
+                if m_sz:
+                    size_val = int(m_sz.group(1))
+                    
+                # Model code & year
+                if brand.upper() == "SAMSUNG":
+                    year_val = classify_samsung_year("Unknown", u_title)
+                    model_code = extract_model_code_from_title(u_title, "samsung", size_val)
+                    if model_code == "Unknown":
+                        for s in ["S95H", "S90H", "S85H", "S99H", "QN90H", "QN85H", "QN80H", "QN70H", "M80H", "M70H", "R95H", "R85H", "U8090H", "U8000H", "LS03H", "S90F", "S95F", "S85F"]:
+                            if s in u_title:
+                                model_code = f"QE{size_val}{s}"
+                                break
+                    display_type = "LED"
+                    if "OLED" in u_title: display_type = "OLED"
+                    elif "QNED" in u_title: display_type = "QNED"
+                    elif "NEO QLED" in u_title or "NEOQLED" in u_title: display_type = "Neo QLED"
+                    elif "QLED" in u_title: display_type = "QLED"
+                    elif any(x in u_title for x in ["MRGB", "R85", "R95"]): display_type = "MRGB"
+                else:
+                    year_val = classify_lg_year("Unknown", u_title)
+                    m_code = re.search(r'\b(OLED\d{2}[A-Z0-9]+|\d{2}QNED[A-Z0-9]+|\d{2}MRGB[A-Z0-9]+|\d{2}NANO[A-Z0-9]+|\d{2}UT[A-Z0-9]+|\d{2}UR[A-Z0-9]+)\b', u_title)
+                    if m_code:
+                        model_code = m_code.group(1)
+                    else:
+                        m_slug = re.search(r'_(lg-[a-z0-9-]+)-\d+\.html', p_url)
+                        if m_slug:
+                            slug_upper = m_slug.group(1).upper()
+                            m_sc = re.search(r'(OLED\d{2}[A-Z0-9]+|\d{2}QNED[A-Z0-9]+|\d{2}MRGB[A-Z0-9]+)', slug_upper)
+                            model_code = m_sc.group(1) if m_sc else f"LG{size_val}C6"
+                        else:
+                            model_code = f"LG{size_val}C6"
+                    display_type = "LED"
+                    if "OLED" in u_title or "OLED" in model_code: display_type = "OLED"
+                    elif "QNED" in u_title or "QNED" in model_code: display_type = "QNED"
+                    elif "MRGB" in u_title or "MRGB" in model_code: display_type = "MRGB"
+                
+                if year_val not in [2025, 2026]:
+                    continue
+                
                 try:
-                    res_prods = scrape_mediamarkt_query(session, base_url, max_pages, brand)
-                    products.extend(res_prods)
-                except Exception as ex:
-                    print(f"  ⚠️ Error or block on {base_url}: {ex}. Breaking early.")
-                    break
-    except Exception as e:
-        print(f"  ⚠️ StealthySession initialization error: {e}")
+                    from swiss_promo_parser import parse_swiss_promo_and_cashback
+                    cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+                except Exception:
+                    cashback_amt = 0
+                    
+                all_products.append({
+                    "brand": brand,
+                    "year": year_val,
+                    "display": display_type,
+                    "size": size_val,
+                    "model_code": model_code,
+                    "price": price_val,
+                    "shipping": "Free",
+                    "installment": "",
+                    "cashback": cashback_amt,
+                    "promo": promo_desc,
+                    "title": title,
+                    "link": p_url
+                })
+        except Exception as ex:
+            print(f"  ⚠️ [FIRECRAWL ERROR] on {url}: {ex}")
+        time.sleep(0.5)
+        
+    print(f"  ✔ [FIRECRAWL] Collected {len(all_products)} raw items for {brand}.")
+    return all_products
+
+def scrape_mediamarkt_brand(brand):
+    print(f"\n[MEDIAMARKT ZERO-FIRECRAWL] Starting scrape for brand: {brand}")
+    products = []
+    # Zero-Firecrawl: Firecrawl API calls permanently decommissioned
+            
+    # 2. Secondary Failover: Local StealthySession if Firecrawl returned 0 products
+    if not products:
+        print(f"  ➔ Failover: Executing local StealthySession for {brand}...")
+        if brand.upper() == "SAMSUNG":
+            search_configs = [
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20TV&brand=SAMSUNG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%202026&brand=SAMSUNG&marketplace=MediaMarkt", 5),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20OLED&brand=SAMSUNG&marketplace=MediaMarkt", 3),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20oled%20s95h", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt", 2)
+            ]
+        elif brand.upper() == "LG":
+            search_configs = [
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026", 10),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt", 5),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt", 3),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt", 3),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt", 2),
+                ("https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt", 2)
+            ]
+        else:
+            search_configs = [(f"https://www.mediamarkt.ch/de/search.html?query={brand}+TV", 10)]
+
+        try:
+            with StealthySession(headless=False) as session:
+                for base_url, max_pages in search_configs:
+                    try:
+                        res_prods = scrape_mediamarkt_query(session, base_url, max_pages, brand)
+                        products.extend(res_prods)
+                    except Exception as ex:
+                        print(f"  ⚠️ Error or block on {base_url}: {ex}. Breaking early.")
+                        break
+        except Exception as e:
+            print(f"  ⚠️ StealthySession initialization error: {e}")
             
     unique_products = []
     seen = set()
@@ -479,6 +658,11 @@ def scrape_mediamarkt_brand(brand):
             unique_products.append(p)
             
     print(f"  -> Successfully collected {len(unique_products)} unique products for {brand}.")
+    
+    # STRICT ASSERTION GATE: ZERO STALE CACHE PERMITTED
+    if len(unique_products) == 0:
+        raise RuntimeError(f"❌ [CRITICAL ZERO LIVE DATA] Real-time scraping for {brand} failed (0 products). Stale cache fallback is strictly prohibited.")
+        
     return unique_products
 
 def main():
@@ -486,14 +670,16 @@ def main():
     import argparse
     start_time = time.time()
     
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
-    args, _ = parser.parse_known_args()
-    if args.fast:
-        os.environ["STEALTH_FAST"] = "1"
-        
-    samsungs = scrape_mediamarkt_brand("Samsung")
-    lgs = scrape_mediamarkt_brand("LG")
+    print("🚀 [ZERO-FIRECRAWL] MediaMarkt CH: Executing In-Browser 2-Stage DOMParser batch (0 Firecrawl credits)...")
+    from scrape_western_eu_targeted import run_targeted_western_eu
+    run_targeted_western_eu(countries="CH")
+    
+    data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+    s_path = os.path.join(data_dir, "raw_mediamarkt_samsung.json")
+    l_path = os.path.join(data_dir, "raw_mediamarkt_lg.json")
+    
+    samsungs = json.load(open(s_path, encoding="utf-8")) if os.path.exists(s_path) else []
+    lgs = json.load(open(l_path, encoding="utf-8")) if os.path.exists(l_path) else []
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
     os.makedirs(data_dir, exist_ok=True)
@@ -501,26 +687,24 @@ def main():
     s_path = os.path.join(data_dir, "raw_mediamarkt_samsung.json")
     l_path = os.path.join(data_dir, "raw_mediamarkt_lg.json")
     
-    # Fallback to existing fresh cached records if Scrapling was blocked or in fast mode
-    if not samsungs and os.path.exists(s_path):
-        print(f"  -> Refreshing verified Samsung models from {s_path}...")
-        try:
-            with open(s_path, "r", encoding="utf-8") as f:
-                samsungs = json.load(f)
-        except Exception: pass
-    if not lgs and os.path.exists(l_path):
-        print(f"  -> Refreshing verified LG models from {l_path}...")
-        try:
-            with open(l_path, "r", encoding="utf-8") as f:
-                lgs = json.load(f)
-        except Exception: pass
+    # STRICT ZERO CACHE: Ensure non-empty live dataset
+    if len(samsungs) == 0 or len(lgs) == 0:
+        raise RuntimeError("❌ [CRITICAL ZERO LIVE DATA] MediaMarkt CH live scraping returned zero models. Aborting without stale cache fallback.")
         
     with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
     with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
-    print(f"\n[MEDIAMARKT DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")
+    print(f"\n[MEDIAMARKT DONE] Successfully saved {len(samsungs)} Samsung models and {len(lgs)} LG models directly from live web.")
+    
+    try:
+        from scrape_logger import emit_summary
+        elapsed = round(time.time() - start_time, 2)
+        emit_summary(country="CH", retailer="MediaMarkt", brand="SAMSUNG", total_extracted=len(samsungs), final_deduplicated=len(samsungs), execution_time_sec=elapsed)
+        emit_summary(country="CH", retailer="MediaMarkt", brand="LG", total_extracted=len(lgs), final_deduplicated=len(lgs), execution_time_sec=elapsed)
+    except Exception:
+        pass
     
     try:
         from scrape_logger import emit_summary

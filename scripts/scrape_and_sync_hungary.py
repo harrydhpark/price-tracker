@@ -20,6 +20,24 @@ from openpyxl.utils import get_column_letter
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
+def _load_env_file():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
+    if os.path.isfile(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8-sig") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip().lstrip("\ufeff")
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env_file()
+
 # Exchange Rate: 1 EUR = 398 HUF
 HUF_TO_EUR_RATE = 398.0
 
@@ -553,6 +571,95 @@ def write_standard_sheet(ws, products, sheet_title):
         
     ws.auto_filter.ref = ws.dimensions
 
+def run_deep_scrape_firecrawl(brand):
+    api_key = os.environ.get("FIRECRAWL_API_KEY")
+    if not api_key:
+        print("  ⚠️ [FIRECRAWL] FIRECRAWL_API_KEY missing in environment.")
+        return []
+    import requests
+    import time
+    
+    brand_upper = brand.upper()
+    print(f"\n[HUNGARY FIRECRAWL] Starting live scrape for {brand}...")
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    
+    if brand_upper == "LG":
+        urls = [
+            "https://www.mediamarkt.hu/hu/search.html?query=LG+OLED",
+            "https://www.mediamarkt.hu/hu/search.html?query=LG+QNED",
+            "https://www.mediamarkt.hu/hu/search.html?query=LG+TV",
+            "https://www.mediamarkt.hu/hu/search.html?query=LG+2026",
+            "https://www.mediamarkt.hu/hu/search.html?query=LG+NanoCell"
+        ]
+    else:
+        urls = [
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+OLED",
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+Neo+QLED",
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+QLED",
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+The+Frame",
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+TV",
+            "https://www.mediamarkt.hu/hu/search.html?query=Samsung+2026"
+        ]
+        
+    collected_dict = {}
+    for u in urls:
+        payload = {"url": u, "formats": ["html"], "waitFor": 2500}
+        try:
+            r = requests.post("https://api.firecrawl.dev/v1/scrape", json=payload, headers=headers, timeout=60)
+            if r.status_code != 200:
+                print(f"  ⚠️ Status {r.status_code} for {u}")
+                continue
+            html = r.json().get("data", {}).get("html", "")
+            if not html:
+                continue
+            soup = BeautifulSoup(html, "html.parser")
+            cards = soup.find_all(attrs={"data-test": "mms-product-card"})
+            q_name = u.split("query=")[-1]
+            print(f"  -> {q_name}: Found {len(cards)} cards.")
+            for c in cards:
+                h3 = c.find("h3") or c.find("h2") or c.find("a")
+                title = h3.get_text(strip=True) if h3 else ""
+                a_tag = c.find("a", href=True)
+                href = a_tag["href"] if a_tag else ""
+                if not title or not href:
+                    continue
+                p_match = re.search(r'([\d\s\xa0\u202f.,]+)\s*Ft', c.get_text())
+                if not p_match:
+                    continue
+                clean_p = re.sub(r'[\s\xa0\u202f.,]', '', p_match.group(1)).strip()
+                if not clean_p.isdigit():
+                    continue
+                price_huf = int(clean_p)
+                if price_huf < 10000:
+                    continue
+                
+                strike_price_huf = None
+                m_strike = re.search(r'Eredeti ár:\s*([\d\s\xa0\u202f.,]+)\s*Ft', c.get_text(), re.IGNORECASE)
+                if m_strike:
+                    clean_s = re.sub(r'[\s\xa0\u202f.,]', '', m_strike.group(1)).strip()
+                    if clean_s.isdigit():
+                        strike_price_huf = int(clean_s)
+                        
+                pid = href
+                if pid not in collected_dict:
+                    collected_dict[pid] = {
+                        "product_id": pid,
+                        "title": title,
+                        "brand": brand,
+                        "pdp_url": f"https://www.mediamarkt.hu{href}" if href.startswith("/") else href,
+                        "price_huf": price_huf,
+                        "promo_price_huf": None,
+                        "strike_price_huf": strike_price_huf,
+                        "is_marketplace": "Marketplace" in c.get_text(),
+                        "seller": "MediaMarkt"
+                    }
+        except Exception as e:
+            print(f"  ⚠️ Error scraping {u}: {e}")
+        time.sleep(0.5)
+        
+    print(f"  ✔ [HUNGARY FIRECRAWL] Extracted {len(collected_dict)} unique raw items for {brand}.")
+    return list(collected_dict.values())
+
 def main():
     import time
     import argparse
@@ -562,7 +669,7 @@ def main():
     raw_cache_file = os.path.join(data_dir, "raw_mediamarkt_hu_deep.json")
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Skip heavy Scrapling category traversal; use cached/probed models")
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use real-time Firecrawl scraping")
     args, _ = parser.parse_known_args()
     
     is_stealth_fast = args.fast or os.environ.get("STEALTH_FAST") == "1" or os.environ.get("FAST") == "1"
@@ -570,29 +677,36 @@ def main():
     raw_sec = []
     raw_lg = []
     
-    if not is_stealth_fast:
+    if is_stealth_fast:
+        print("⚡ [--stealth-fast] Executing high-speed live Firecrawl scraping for MediaMarkt Hungary...")
+        raw_sec = run_deep_scrape_firecrawl("Samsung")
+        raw_lg = run_deep_scrape_firecrawl("LG")
+        if not raw_sec or not raw_lg:
+            print("⚠️ Firecrawl returned partial data. Trying Scrapling live...")
+            try:
+                with StealthySession(headless=True) as session:
+                    if not raw_sec: raw_sec = run_deep_scrape_for_brand(session, "Samsung")
+                    if not raw_lg: raw_lg = run_deep_scrape_for_brand(session, "LG")
+            except Exception as ex:
+                print(f"⚠️ Scrapling error: {ex}")
+    else:
         print("🌐 [LIVE SCRAPE] Starting live scrape for MediaMarkt Hungary...")
         try:
             with StealthySession(headless=True) as session:
                 raw_sec = run_deep_scrape_for_brand(session, "Samsung")
                 raw_lg = run_deep_scrape_for_brand(session, "LG")
         except Exception as e:
-            print(f"⚠️ [SCRAPLING ERROR] {e}. Falling back to cached/probed data.")
-    else:
-        print("⚡ [--stealth-fast] Skipping slow Scrapling category loop on mediamarkt.hu. Using verified live PDP probe & cache.")
-        
-    if not raw_sec and not raw_lg and os.path.exists(raw_cache_file):
-        print(f"  -> Loading and refreshing verified models from {raw_cache_file}...")
-        try:
-            with open(raw_cache_file, "r", encoding="utf-8") as f:
-                cached = json.load(f)
-            raw_sec = cached.get("samsung", [])
-            raw_lg = cached.get("lg", [])
-        except Exception:
-            pass
+            print(f"⚠️ [SCRAPLING ERROR] {e}. Falling back to live Firecrawl...")
+            raw_sec = run_deep_scrape_firecrawl("Samsung")
+            raw_lg = run_deep_scrape_firecrawl("LG")
             
+    # STRICT ASSERTION GATE: ZERO STALE CACHE PERMITTED
+    if len(raw_sec) == 0 or len(raw_lg) == 0:
+        raise RuntimeError("❌ [CRITICAL ZERO LIVE DATA] MediaMarkt Hungary live scraping returned 0 models. Stale cache fallback is strictly prohibited.")
+        
     with open(raw_cache_file, "w", encoding="utf-8") as f:
         json.dump({"samsung": raw_sec, "lg": raw_lg}, f, ensure_ascii=False, indent=2)
+
             
     clean_sec = clean_and_standardize(raw_sec, "Samsung")
     clean_lg = clean_and_standardize(raw_lg, "LG")

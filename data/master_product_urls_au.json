@@ -6,18 +6,18 @@
     "category": "OLED",
     "size": 55,
     "model_code": "QA55S90H",
-    "url": "https://www.jbhifi.com.au/products/samsung-55-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-55-s90h-oled-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA40Q5F": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 40,
     "model_code": "QA40Q5F",
     "url": "https://www.jbhifi.com.au/products/samsung-40-q5f-qled-full-hd-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA65QN80H": {
     "retailer": "JB Hi-Fi",
@@ -26,8 +26,8 @@
     "category": "QLED",
     "size": 65,
     "model_code": "QA65QN80H",
-    "url": "https://www.jbhifi.com.au/products/samsung-65-the-frame-qled-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-65-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA55QN80H": {
     "retailer": "JB Hi-Fi",
@@ -37,7 +37,7 @@
     "size": 55,
     "model_code": "QA55QN80H",
     "url": "https://www.jbhifi.com.au/products/samsung-55-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA65S90H": {
     "retailer": "JB Hi-Fi",
@@ -47,27 +47,27 @@
     "size": 65,
     "model_code": "QA65S90H",
     "url": "https://www.jbhifi.com.au/products/samsung-65-s90h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA55M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 55,
     "model_code": "QA55M70H",
-    "url": "https://www.jbhifi.com.au/products/tcl-55-p7ls-qled-4k-uhd-google-tv-with-gemini-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-55-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA65M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 65,
     "model_code": "QA65M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-65-m70h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA75QN80H": {
     "retailer": "JB Hi-Fi",
@@ -76,18 +76,18 @@
     "category": "QLED",
     "size": 75,
     "model_code": "QA75QN80H",
-    "url": "https://www.jbhifi.com.au/products/samsung-75-the-frame-qled-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-75-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA75M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 75,
     "model_code": "QA75M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-75-m70h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA85QN80H": {
     "retailer": "JB Hi-Fi",
@@ -96,8 +96,8 @@
     "category": "QLED",
     "size": 85,
     "model_code": "QA85QN80H",
-    "url": "https://www.jbhifi.com.au/products/samsung-85-the-frame-qled-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-85-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA83S90F": {
     "retailer": "JB Hi-Fi",
@@ -107,7 +107,7 @@
     "size": 83,
     "model_code": "QA83S90F",
     "url": "https://www.jbhifi.com.au/products/samsung-83-s90f-oled-4k-smart-ai-tv-2025",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA75S90H": {
     "retailer": "JB Hi-Fi",
@@ -127,7 +127,7 @@
     "size": 77,
     "model_code": "QA77S90H",
     "url": "https://www.jbhifi.com.au/products/samsung-77-s90h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA50QN80H": {
     "retailer": "JB Hi-Fi",
@@ -137,7 +137,7 @@
     "size": 50,
     "model_code": "QA50QN80H",
     "url": "https://www.jbhifi.com.au/products/samsung-50-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA77S85H": {
     "retailer": "JB Hi-Fi",
@@ -147,7 +147,7 @@
     "size": 77,
     "model_code": "QA77S85H",
     "url": "https://www.jbhifi.com.au/products/samsung-77-s85h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA75R85H": {
     "retailer": "JB Hi-Fi",
@@ -157,7 +157,7 @@
     "size": 75,
     "model_code": "QA75R85H",
     "url": "https://www.jbhifi.com.au/products/samsung-75-r85h-micro-rgb-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA65R85H": {
     "retailer": "JB Hi-Fi",
@@ -166,18 +166,18 @@
     "category": "MRGB",
     "size": 65,
     "model_code": "QA65R85H",
-    "url": "https://www.jbhifi.com.au/products/sony-65-bravia-3-ii-4k-led-ai-google-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/samsung-65-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA50M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 50,
     "model_code": "QA50M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-50-m70h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA50S85H": {
     "retailer": "JB Hi-Fi",
@@ -197,7 +197,7 @@
     "size": 65,
     "model_code": "QA65S85H",
     "url": "https://www.jbhifi.com.au/products/samsung-65-s85h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA32F6000": {
     "retailer": "JB Hi-Fi",
@@ -207,7 +207,7 @@
     "size": 32,
     "model_code": "QA32F6000",
     "url": "https://www.jbhifi.com.au/products/samsung-32-f6000-full-hd-smart-led-tv-2025",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA32S90H": {
     "retailer": "JB Hi-Fi",
@@ -227,7 +227,7 @@
     "size": 48,
     "model_code": "QA48S90H",
     "url": "https://www.jbhifi.com.au/products/samsung-48-s90h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA42S90H": {
     "retailer": "JB Hi-Fi",
@@ -237,7 +237,7 @@
     "size": 42,
     "model_code": "QA42S90H",
     "url": "https://www.jbhifi.com.au/products/samsung-42-s90h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA85R85H": {
     "retailer": "JB Hi-Fi",
@@ -247,37 +247,37 @@
     "size": 85,
     "model_code": "QA85R85H",
     "url": "https://www.jbhifi.com.au/products/samsung-85-r85h-micro-rgb-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA43M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 43,
     "model_code": "QA43M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-43-m70h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA32M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 32,
     "model_code": "QA32M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-32-the-frame-qled-full-hd-smart-tv-2023",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA85M70H": {
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 85,
     "model_code": "QA85M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-85-m70h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA65S95H": {
     "retailer": "JB Hi-Fi",
@@ -287,7 +287,7 @@
     "size": 65,
     "model_code": "QA65S95H",
     "url": "https://www.jbhifi.com.au/products/samsung-65-s95h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_55QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -297,7 +297,7 @@
     "size": 55,
     "model_code": "55QNED70B",
     "url": "https://www.jbhifi.com.au/products/lg-55-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED55C6": {
     "retailer": "JB Hi-Fi",
@@ -306,8 +306,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "OLED55C6",
-    "url": "https://www.jbhifi.com.au/products/lg-55-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-55-oled-evo-ai-c6-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_65QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -317,7 +317,7 @@
     "size": 65,
     "model_code": "65QNED70B",
     "url": "https://www.jbhifi.com.au/products/lg-65-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED77G6": {
     "retailer": "JB Hi-Fi",
@@ -327,7 +327,7 @@
     "size": 77,
     "model_code": "OLED77G6",
     "url": "https://www.jbhifi.com.au/products/lg-77-oled-evo-ai-g6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED77C6": {
     "retailer": "JB Hi-Fi",
@@ -337,7 +337,7 @@
     "size": 77,
     "model_code": "OLED77C6",
     "url": "https://www.jbhifi.com.au/products/lg-77-oled-evo-ai-c6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED65C6": {
     "retailer": "JB Hi-Fi",
@@ -347,7 +347,7 @@
     "size": 65,
     "model_code": "OLED65C6",
     "url": "https://www.jbhifi.com.au/products/lg-65-oled-evo-ai-c6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED65G6": {
     "retailer": "JB Hi-Fi",
@@ -357,7 +357,7 @@
     "size": 65,
     "model_code": "OLED65G6",
     "url": "https://www.jbhifi.com.au/products/lg-65-oled-evo-ai-g6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED42C6": {
     "retailer": "JB Hi-Fi",
@@ -367,7 +367,7 @@
     "size": 42,
     "model_code": "OLED42C6",
     "url": "https://www.jbhifi.com.au/products/lg-42-oled-evo-ai-c6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_75QNED80B": {
     "retailer": "JB Hi-Fi",
@@ -386,8 +386,8 @@
     "category": "QNED",
     "size": 75,
     "model_code": "75QNED86B",
-    "url": "https://www.jbhifi.com.au/products/lg-75-qned80b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-75-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_65QNED86B": {
     "retailer": "JB Hi-Fi",
@@ -397,7 +397,7 @@
     "size": 65,
     "model_code": "65QNED86B",
     "url": "https://www.jbhifi.com.au/products/lg-65-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED65B6": {
     "retailer": "JB Hi-Fi",
@@ -406,18 +406,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65B6",
-    "url": "https://www.jbhifi.com.au/products/lg-65-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
-  },
-  "JB Hi-Fi_OLED32B6": {
-    "retailer": "JB Hi-Fi",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 32,
-    "model_code": "OLED32B6",
-    "url": "https://cdn.shopify.com/s/files/1/0024/9803/5810/files/892010-Product-0-I-639171540006394068_32x32.jpg?v=1786411387",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-65-oled-ai-b6-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED48C6": {
     "retailer": "JB Hi-Fi",
@@ -427,7 +417,7 @@
     "size": 48,
     "model_code": "OLED48C6",
     "url": "https://www.jbhifi.com.au/products/lg-48-oled-evo-ai-c6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_43QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -436,8 +426,8 @@
     "category": "QNED",
     "size": 43,
     "model_code": "43QNED70B",
-    "url": "https://www.jbhifi.com.au/products/hisense-43-q6sau-4k-hi-qled-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-43-qned70b-ai-mini-led-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_75QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -447,7 +437,7 @@
     "size": 75,
     "model_code": "75QNED70B",
     "url": "https://www.jbhifi.com.au/products/lg-75-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED75C6": {
     "retailer": "JB Hi-Fi",
@@ -467,7 +457,7 @@
     "size": 83,
     "model_code": "OLED83C6",
     "url": "https://www.jbhifi.com.au/products/lg-83-oled-evo-ai-c6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_85QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -477,7 +467,7 @@
     "size": 85,
     "model_code": "85QNED70B",
     "url": "https://www.jbhifi.com.au/products/lg-85-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_55QNED86B": {
     "retailer": "JB Hi-Fi",
@@ -487,7 +477,7 @@
     "size": 55,
     "model_code": "55QNED86B",
     "url": "https://www.jbhifi.com.au/products/lg-55-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED55G6": {
     "retailer": "JB Hi-Fi",
@@ -497,7 +487,7 @@
     "size": 55,
     "model_code": "OLED55G6",
     "url": "https://www.jbhifi.com.au/products/lg-55-oled-evo-ai-g6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_50QNED80B": {
     "retailer": "JB Hi-Fi",
@@ -507,7 +497,7 @@
     "size": 50,
     "model_code": "50QNED80B",
     "url": "https://www.jbhifi.com.au/products/lg-50-qned80b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED50G6": {
     "retailer": "JB Hi-Fi",
@@ -527,7 +517,7 @@
     "size": 83,
     "model_code": "OLED83G6",
     "url": "https://www.jbhifi.com.au/products/lg-83-oled-evo-ai-g6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED97G6": {
     "retailer": "JB Hi-Fi",
@@ -537,7 +527,7 @@
     "size": 97,
     "model_code": "OLED97G6",
     "url": "https://www.jbhifi.com.au/products/lg-97-oled-evo-ai-g6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_50QNED70B": {
     "retailer": "JB Hi-Fi",
@@ -547,17 +537,7 @@
     "size": 50,
     "model_code": "50QNED70B",
     "url": "https://www.jbhifi.com.au/products/lg-50-qned70b-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
-  },
-  "JB Hi-Fi_55MRGB96B": {
-    "retailer": "JB Hi-Fi",
-    "brand": "LG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 55,
-    "model_code": "55MRGB96B",
-    "url": "https://cdn.shopify.com/s/files/1/0024/9803/5810/files/892009-Product-0-I-639136288805201773_32x32.jpg?v=1786411387",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_43QNED80B": {
     "retailer": "JB Hi-Fi",
@@ -567,7 +547,7 @@
     "size": 43,
     "model_code": "43QNED80B",
     "url": "https://www.jbhifi.com.au/products/lg-43-qned80b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_43QNED86B": {
     "retailer": "JB Hi-Fi",
@@ -587,7 +567,7 @@
     "size": 86,
     "model_code": "86QNED86B",
     "url": "https://www.jbhifi.com.au/products/lg-86-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED83W6": {
     "retailer": "JB Hi-Fi",
@@ -596,8 +576,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "OLED83W6",
-    "url": "https://cdn.shopify.com/s/files/1/0024/9803/5810/files/892015-Product-0-I-639221369403185120_32x32.jpg?v=1786540986",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-83-oled-evo-ai-w6-wallpaper-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED83B6": {
     "retailer": "JB Hi-Fi",
@@ -617,7 +597,7 @@
     "size": 55,
     "model_code": "OLED55B6",
     "url": "https://www.jbhifi.com.au/products/lg-55-oled-ai-b6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED97G5": {
     "retailer": "JB Hi-Fi",
@@ -627,7 +607,7 @@
     "size": 97,
     "model_code": "OLED97G5",
     "url": "https://www.jbhifi.com.au/products/lg-97-oled-evo-g5-ai-4k-uhd-smart-tv-2025",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED97B6": {
     "retailer": "JB Hi-Fi",
@@ -647,17 +627,7 @@
     "size": 48,
     "model_code": "OLED48B6",
     "url": "https://www.jbhifi.com.au/products/lg-48-oled-ai-b6-4k-smart-tv-2026",
-    "last_verified": "2026-09-07"
-  },
-  "JB Hi-Fi_75MRGB96B": {
-    "retailer": "JB Hi-Fi",
-    "brand": "LG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 75,
-    "model_code": "75MRGB96B",
-    "url": "https://cdn.shopify.com/s/files/1/0024/9803/5810/files/892012-Product-0-I-639221374804316769_32x32.jpg?v=1786540866",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED77W6": {
     "retailer": "JB Hi-Fi",
@@ -666,8 +636,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "OLED77W6",
-    "url": "https://cdn.shopify.com/s/files/1/0024/9803/5810/files/892014-Product-0-I-639221370002335240_32x32.jpg?v=1786540385",
-    "last_verified": "2026-09-07"
+    "url": "https://www.jbhifi.com.au/products/lg-77-oled-evo-ai-w6-wallpaper-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED77B6": {
     "retailer": "JB Hi-Fi",
@@ -699,16 +669,6 @@
     "url": "https://www.jbhifi.com.au/products/ffalcon-40-s55-full-hd-led-smart-tv-2025",
     "last_verified": "2026-09-07"
   },
-  "The Good Guys_UA65M70HAWXXY": {
-    "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "UHD",
-    "size": 65,
-    "model_code": "UA65M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098510_1088634.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
   "The Good Guys_UA75M70HAWXXY": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
@@ -716,8 +676,8 @@
     "category": "UHD",
     "size": 75,
     "model_code": "UA75M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098509_1055491.png?v=1776586005&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-m70h-mini-led-4k-smart-tv-2026-ua75m70hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA85M70HAWXXY": {
     "retailer": "The Good Guys",
@@ -726,8 +686,8 @@
     "category": "UHD",
     "size": 85,
     "model_code": "UA85M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098508_1088634.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-m70h-mini-led-4k-smart-tv-2026-ua85m70hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA55M70HAWXXY": {
     "retailer": "The Good Guys",
@@ -736,8 +696,8 @@
     "category": "UHD",
     "size": 55,
     "model_code": "UA55M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098511_1088634.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-m70h-mini-led-4k-smart-tv-2026-ua55m70hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA43M70HAWXXY": {
     "retailer": "The Good Guys",
@@ -746,8 +706,8 @@
     "category": "UHD",
     "size": 43,
     "model_code": "UA43M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098513_1088634.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-43-inches-m70h-mini-led-4k-smart-tv-2026-ua43m70hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA50M70HAWXXY": {
     "retailer": "The Good Guys",
@@ -756,48 +716,8 @@
     "category": "UHD",
     "size": 50,
     "model_code": "UA50M70HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098512_1088634.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_QA65R85H": {
-    "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 65,
-    "model_code": "QA65R85H",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098489_1088631.png?v=1787276519&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_QA75R85H": {
-    "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 75,
-    "model_code": "QA75R85H",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098488_1088631.png?v=1787276518&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_QA85R85H": {
-    "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 85,
-    "model_code": "QA85R85H",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098487_1088631.png?v=1787276519&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_QA55R85H": {
-    "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 55,
-    "model_code": "QA55R85H",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098490_1088631.png?v=1787276518&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-50-inches-m70h-mini-led-4k-smart-tv-2026-ua50m70hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA65LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -806,8 +726,8 @@
     "category": "QLED",
     "size": 65,
     "model_code": "QA65LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098504_1063897.png?v=1779149149&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa65ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA55LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -816,8 +736,8 @@
     "category": "QLED",
     "size": 55,
     "model_code": "QA55LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098505_1063897.png?v=1778801427&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa55ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA85LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -826,8 +746,8 @@
     "category": "QLED",
     "size": 85,
     "model_code": "QA85LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098502_1063897.png?v=1778479742&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa85ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA32F6000FWXXY": {
     "retailer": "The Good Guys",
@@ -836,8 +756,8 @@
     "category": "UHD",
     "size": 32,
     "model_code": "UA32F6000FWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094463_955695.png?v=1776586015&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-32-inches-f6000-fhd-smart-tv-2025-ua32f6000fwxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA43LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -846,8 +766,8 @@
     "category": "QLED",
     "size": 43,
     "model_code": "QA43LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098506_1063897.png?v=1779692338&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-43-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa43ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA75LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -856,8 +776,8 @@
     "category": "QLED",
     "size": 75,
     "model_code": "QA75LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098503_1063897.png?v=1778643404&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa75ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA65S85HAEXXY": {
     "retailer": "The Good Guys",
@@ -866,8 +786,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "QA65S85HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098484_1088633.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s85h-4k-smart-ai-tv-2026-qa65s85haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA77S85HAEXXY": {
     "retailer": "The Good Guys",
@@ -876,8 +796,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "QA77S85HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098483_1088633.png?v=1787276532&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s85h-4k-smart-ai-tv-2026-qa77s85haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA77S95HAEXXY": {
     "retailer": "The Good Guys",
@@ -886,8 +806,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "QA77S95HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098474_1088672.png?v=1787286803&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s95h-4k-smart-ai-tv-2026-qa77s95haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA83S95HAEXXY": {
     "retailer": "The Good Guys",
@@ -896,8 +816,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "QA83S95HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098473_1088672.png?v=1787286804&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s95h-4k-smart-ai-tv-2026-qa83s95haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA65S95HAWXXY": {
     "retailer": "The Good Guys",
@@ -906,8 +826,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "QA65S95HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098475_1088672.png?v=1787286804&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s95h-4k-smart-ai-tv-2026-qa65s95hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA83S85HAEXXY": {
     "retailer": "The Good Guys",
@@ -916,28 +836,28 @@
     "category": "OLED",
     "size": 83,
     "model_code": "QA83S85HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098482_1055094.png?v=1776647732&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s85h-4k-smart-ai-tv-2026-qa83s85haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_UA100M90HWXXY": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
     "category": "UHD",
-    "size": 55,
+    "size": 100,
     "model_code": "UA100M90HWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098507_1079813.png?v=1783045494&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-100-inches-m90h-mini-led-4k-smart-tv-2026-ua100m90hwxxy",
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA100QN80HWXXY": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
     "category": "QLED",
-    "size": 55,
+    "size": 100,
     "model_code": "QA100QN80HWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098491_1088670.png?v=1787286806&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-100-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa100qn80hwxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA98LS03HEWXXY": {
     "retailer": "The Good Guys",
@@ -946,8 +866,8 @@
     "category": "QLED",
     "size": 98,
     "model_code": "QA98LS03HEWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098501_1063897.png?v=1778479957&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-98-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa98ls03hewxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA98QN90FAWXXY": {
     "retailer": "The Good Guys",
@@ -956,8 +876,8 @@
     "category": "QLED",
     "size": 98,
     "model_code": "QA98QN90FAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094414_952047.png?v=1776586015&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-98-inches-qn90f-neo-qled-4k-mini-led-smart-ai-tv-2025-qa98qn90fawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA75LS03FWWXXY": {
     "retailer": "The Good Guys",
@@ -966,8 +886,8 @@
     "category": "QLED",
     "size": 75,
     "model_code": "QA75LS03FWWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094437_952132.png?v=1776585790&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-ls03f-the-frame-pro-neo-qled-4k-mini-led-smart-ai-tv-2025-qa75ls03fwwxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA75Q7FAAWXXY": {
     "retailer": "The Good Guys",
@@ -976,8 +896,8 @@
     "category": "QLED",
     "size": 75,
     "model_code": "QA75Q7FAAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094453_952385.png?v=1776585798&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-q7f-qled-4k-smart-tv-2025-qa75q7faawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA65LS03FWWXXY": {
     "retailer": "The Good Guys",
@@ -986,8 +906,8 @@
     "category": "QLED",
     "size": 65,
     "model_code": "QA65LS03FWWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094438_952132.png?v=1776585678&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-ls03f-the-frame-pro-neo-qled-4k-mini-led-smart-ai-tv-2025-qa65ls03fwwxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED55C6PSA": {
     "retailer": "The Good Guys",
@@ -996,8 +916,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "OLED55C6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098175_1052525.png?v=1776645417&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled55c6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_65QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1006,8 +926,8 @@
     "category": "QNED",
     "size": 65,
     "model_code": "65QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098238_1052467.png?v=1776645416&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned70b-ai-mini-led-4k-smart-tv-2026-65qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_50QNED80BSA": {
     "retailer": "The Good Guys",
@@ -1016,8 +936,8 @@
     "category": "QNED",
     "size": 50,
     "model_code": "50QNED80BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098218_1052516.png?v=1776644457&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-50-inches-qned80b-evo-ai-mini-led-4k-smart-tv-2026-50qned80bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_43QNED80BSA": {
     "retailer": "The Good Guys",
@@ -1026,8 +946,8 @@
     "category": "QNED",
     "size": 43,
     "model_code": "43QNED80BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098225_1052476.png?v=1776644457&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-43-inches-qned80b-evo-ai-mini-led-4k-smart-tv-2026-43qned80bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED42C6PSA": {
     "retailer": "The Good Guys",
@@ -1036,18 +956,8 @@
     "category": "OLED",
     "size": 42,
     "model_code": "OLED42C6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098178_1052513.png?v=1776645395&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_55QNED86B": {
-    "retailer": "The Good Guys",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 55,
-    "model_code": "55QNED86B",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50099258_1063771.png?v=1780614906&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-42-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled42c6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED55G6PSB": {
     "retailer": "The Good Guys",
@@ -1056,8 +966,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "OLED55G6PSB",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098318_1052470.png?v=1776645365&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled55g6psb",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED65G6PSB": {
     "retailer": "The Good Guys",
@@ -1066,8 +976,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65G6PSB",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098155_1052491.png?v=1776645379&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled65g6psb",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED77G6PSB": {
     "retailer": "The Good Guys",
@@ -1076,28 +986,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "OLED77G6PSB",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098154_1052471.png?v=1776645372&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_55MRGB96B": {
-    "retailer": "The Good Guys",
-    "brand": "LG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 55,
-    "model_code": "55MRGB96B",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50099259_1063111.png?v=1779257701&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_86NANO80ASA": {
-    "retailer": "The Good Guys",
-    "brand": "LG",
-    "year": 2025,
-    "category": "UHD",
-    "size": 86,
-    "model_code": "86NANO80ASA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50094011_949806.png?v=1776645411&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-77-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled77g6psb",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_85QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1106,8 +996,8 @@
     "category": "QNED",
     "size": 85,
     "model_code": "85QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098227_1052522.png?v=1776744696&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-85-inches-qned70b-ai-mini-led-4k-smart-tv-2026-85qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_55QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1116,8 +1006,8 @@
     "category": "QNED",
     "size": 55,
     "model_code": "55QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098247_1052489.png?v=1776645381&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-qned70b-ai-mini-led-4k-smart-tv-2026-55qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_50QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1126,8 +1016,8 @@
     "category": "QNED",
     "size": 50,
     "model_code": "50QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098249_1052506.png?v=1776644457&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-50-inches-qned70b-ai-mini-led-4k-smart-tv-2026-50qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_75QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1136,8 +1026,8 @@
     "category": "QNED",
     "size": 75,
     "model_code": "75QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098233_1052469.png?v=1776743035&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-75-inches-qned70b-ai-mini-led-4k-smart-tv-2026-75qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_43QNED70BSA": {
     "retailer": "The Good Guys",
@@ -1146,8 +1036,8 @@
     "category": "QNED",
     "size": 43,
     "model_code": "43QNED70BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098251_1052506.png?v=1776644394&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-43-inches-qned70b-ai-mini-led-4k-smart-tv-2026-43qned70bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED65B6PSA": {
     "retailer": "The Good Guys",
@@ -1156,8 +1046,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65B6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098181_1052483.png?v=1776645365&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-ai-b6-4k-smart-tv-2026-oled65b6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED55B6PSA": {
     "retailer": "The Good Guys",
@@ -1166,8 +1056,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "OLED55B6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098183_1052468.png?v=1776645366&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-ai-b6-4k-smart-tv-2026-oled55b6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_65QNED86BSA": {
     "retailer": "The Good Guys",
@@ -1176,8 +1066,8 @@
     "category": "QNED",
     "size": 65,
     "model_code": "65QNED86BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098192_1052465.png?v=1776645395&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-65qned86bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED65C6PSA": {
     "retailer": "The Good Guys",
@@ -1186,8 +1076,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65C6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098171_1052497.png?v=1776743066&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled65c6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_75QNED86BSA": {
     "retailer": "The Good Guys",
@@ -1196,8 +1086,8 @@
     "category": "QNED",
     "size": 75,
     "model_code": "75QNED86BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098190_1052505.png?v=1776645400&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-75-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-75qned86bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED48B6PSA": {
     "retailer": "The Good Guys",
@@ -1206,18 +1096,8 @@
     "category": "OLED",
     "size": 48,
     "model_code": "OLED48B6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098186_1052490.png?v=1776645395&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "The Good Guys_55QNED86BSA": {
-    "retailer": "The Good Guys",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 55,
-    "model_code": "55QNED86BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098195_1052534.png?v=1776645381&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-48-inches-oled-ai-b6-4k-smart-tv-2026-oled48b6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED77C6PSA": {
     "retailer": "The Good Guys",
@@ -1226,8 +1106,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "OLED77C6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098170_1052532.png?v=1776742865&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-77-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled77c6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_86QNED86BSA": {
     "retailer": "The Good Guys",
@@ -1236,8 +1116,8 @@
     "category": "QNED",
     "size": 86,
     "model_code": "86QNED86BSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098189_1052472.png?v=1776645385&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-86-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-86qned86bsa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED83C6PSA": {
     "retailer": "The Good Guys",
@@ -1246,8 +1126,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "OLED83C6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098169_1052533.png?v=1776645372&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled83c6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED83G6PSB": {
     "retailer": "The Good Guys",
@@ -1256,8 +1136,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "OLED83G6PSB",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098153_1052498.png?v=1776645379&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled83g6psb",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED83W6PSA": {
     "retailer": "The Good Guys",
@@ -1266,8 +1146,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "OLED83W6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50100188_1085054.png?v=1787206208&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-w6-wallpaper-4k-smart-tv-2026-oled83w6psa",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA55S90HAWXXY": {
     "retailer": "The Good Guys",
@@ -1276,8 +1156,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "QA55S90HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50089856_910407.png?v=1776228681&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-oled-s90h-4k-smart-ai-tv-2026-qa55s90hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA65S90HAWXXY": {
     "retailer": "The Good Guys",
@@ -1286,8 +1166,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "QA65S90HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098478_1091132.png?v=1788411915&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s90h-4k-smart-ai-tv-2026-qa65s90hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA77S90HAWXXY": {
     "retailer": "The Good Guys",
@@ -1296,8 +1176,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "QA77S90HAWXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098477_1091132.png?v=1788411915&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s90h-4k-smart-ai-tv-2026-qa77s90hawxxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA83S90HAEXXY": {
     "retailer": "The Good Guys",
@@ -1306,8 +1186,8 @@
     "category": "OLED",
     "size": 83,
     "model_code": "QA83S90HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098476_1070590.png?v=1781231103&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s90h-4k-smart-ai-tv-2026-qa83s90haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA42S90HAEXXY": {
     "retailer": "The Good Guys",
@@ -1316,8 +1196,8 @@
     "category": "OLED",
     "size": 42,
     "model_code": "QA42S90HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098481_1088632.png?v=1787276520&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-42-inches-oled-s90h-4k-smart-ai-tv-2026-qa42s90haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_QA48S90HAEXXY": {
     "retailer": "The Good Guys",
@@ -1326,8 +1206,8 @@
     "category": "OLED",
     "size": 48,
     "model_code": "QA48S90HAEXXY",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098480_1088632.png?v=1787276519&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/samsung-48-inches-oled-s90h-4k-smart-ai-tv-2026-qa48s90haexxy",
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED97G6PSA": {
     "retailer": "The Good Guys",
@@ -1336,18 +1216,8 @@
     "category": "OLED",
     "size": 97,
     "model_code": "OLED97G6PSA",
-    "url": "https://cdn.shopify.com/s/files/1/0641/9388/8321/files/50098152_1052508.png?v=1776645416&width=284&height=284&quality=88",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA40S90H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 40,
-    "model_code": "QA40S90H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s90h_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.thegoodguys.com.au/lg-97-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled97g6psa",
+    "last_verified": "2026-09-29"
   },
   "Harvey Norman_QA77S90H": {
     "retailer": "Harvey Norman",
@@ -1356,18 +1226,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "QA77S90H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s90h_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65S90H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 65,
-    "model_code": "QA65S90H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s90h_01_product_vac_hn_1600x900_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-77-inch-s90h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA83S90H": {
     "retailer": "Harvey Norman",
@@ -1377,7 +1237,7 @@
     "size": 83,
     "model_code": "QA83S90H",
     "url": "https://www.harveynorman.com.au/samsung-83-inch-s90h-ai-4k-oled-smart-tv.html",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA43LS03H": {
     "retailer": "Harvey Norman",
@@ -1386,8 +1246,8 @@
     "category": "QLED",
     "size": 43,
     "model_code": "QA43LS03H",
-    "url": "https://hnau.imgix.net/media/catalog/product/l/s/ls03he_01_product_vac_hn_1600x900_1__1_2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-43-inch-the-frame-ai-4k-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA43R85H": {
     "retailer": "Harvey Norman",
@@ -1399,36 +1259,6 @@
     "url": "https://www.harveynorman.com.au/samsung-43-inch-the-frame-ai-4k-qled-smart-tv.html",
     "last_verified": "2026-09-07"
   },
-  "Harvey Norman_QA55R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 55,
-    "model_code": "QA55R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/8/r85h_01_product_vac_hn_1600x900-1_1__3.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 65,
-    "model_code": "QA65R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/8/r85h_01_product_vac_hn_1600x900-1_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA75R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 75,
-    "model_code": "QA75R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/8/r85h_01_product_vac_hn_1600x900-1_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
   "Harvey Norman_QA85R85H": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
@@ -1437,47 +1267,17 @@
     "size": 85,
     "model_code": "QA85R85H",
     "url": "https://www.harveynorman.com.au/samsung-85-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA55LS03H": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 55,
     "model_code": "QA55LS03H",
-    "url": "https://www.harveynorman.com.au/hisense-55-inch-ur8sau-4k-rgb-mini-led-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65LS03H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "QLED",
-    "size": 65,
-    "model_code": "QA65LS03H",
-    "url": "https://hnau.imgix.net/media/catalog/product/l/s/ls03he_01_product_vac_hn_1600x900_1__3.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA75LS03H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "QLED",
-    "size": 75,
-    "model_code": "QA75LS03H",
-    "url": "https://hnau.imgix.net/media/catalog/product/l/s/ls03he_01_product_vac_hn_1600x900_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA85LS03H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "QLED",
-    "size": 85,
-    "model_code": "QA85LS03H",
-    "url": "https://hnau.imgix.net/media/catalog/product/l/s/ls03he_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-the-frame-ai-4k-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA85F6000": {
     "retailer": "Harvey Norman",
@@ -1489,16 +1289,6 @@
     "url": "https://www.harveynorman.com.au/samsung-85-inch-the-frame-ai-4k-qled-smart-tv.html",
     "last_verified": "2026-09-07"
   },
-  "Harvey Norman_QA32F6000": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2025,
-    "category": "UHD",
-    "size": 32,
-    "model_code": "QA32F6000",
-    "url": "https://hnau.imgix.net/media/catalog/product/0/1/01_ua32f6000fwxxy_deep.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
   "Harvey Norman_QA32LS03F": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
@@ -1507,16 +1297,6 @@
     "size": 32,
     "model_code": "QA32LS03F",
     "url": "https://www.harveynorman.com.au/samsung-32-inch-full-hd-f6000-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65LS03F": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2025,
-    "category": "QLED",
-    "size": 65,
-    "model_code": "QA65LS03F",
-    "url": "https://hnau.imgix.net/media/catalog/product/0/1/01_ls03fwwxxy_deep_2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
     "last_verified": "2026-09-07"
   },
   "Harvey Norman_QA65S90F": {
@@ -1556,88 +1336,18 @@
     "category": "OLED",
     "size": 65,
     "model_code": "QA65S95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s95h_01_product_vac_hn_1600x900_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA77S95H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 77,
-    "model_code": "QA77S95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s95h_01_product_vac_hn_1600x900_1_.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA83S95H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 83,
-    "model_code": "QA83S95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s95h_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA70R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 70,
-    "model_code": "QA70R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/8/r85_01_product_hn_1600x900.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA55M70H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "UHD",
-    "size": 55,
-    "model_code": "QA55M70H",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/7/m70_01_product_vac_hn_1600x900_2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-s95h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA50M70H": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 50,
     "model_code": "QA50M70H",
-    "url": "https://www.harveynorman.com.au/samsung-55-inch-m70h-ai-4k-mini-led-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65M70H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "UHD",
-    "size": 65,
-    "model_code": "QA65M70H",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/7/m70_01_product_vac_hn_1600x900_1_1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA75M70H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "UHD",
-    "size": 75,
-    "model_code": "QA75M70H",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/7/m70_01_product_vac_hn_1600x900_1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA85M70H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "UHD",
-    "size": 85,
-    "model_code": "QA85M70H",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/7/m70_01_product_vac_hn_1600x900.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-50-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA85S85H": {
     "retailer": "Harvey Norman",
@@ -1656,58 +1366,18 @@
     "category": "OLED",
     "size": 55,
     "model_code": "QA55S85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/8/s85h_01_product_vac_hn_1600x900_1__3.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65S85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 65,
-    "model_code": "QA65S85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/8/s85h_01_product_vac_hn_1600x900_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA77S85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 77,
-    "model_code": "QA77S85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/8/s85h_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA83S85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 83,
-    "model_code": "QA83S85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/8/s85h_01_product_vac_hn_1600x900_1_.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-s85h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA43Q5F": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
     "year": 2025,
-    "category": "UHD",
-    "size": 43,
-    "model_code": "QA43Q5F",
-    "url": "https://www.harveynorman.com.au/samsung-115-inch-micro-rgb-4k-ai-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA115QN90FWXXY": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2025,
     "category": "QLED",
     "size": 43,
-    "model_code": "QA115QN90FWXXY",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/5/q5f_01_product_vac_1600x900_1_.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "model_code": "QA43Q5F",
+    "url": "https://www.harveynorman.com.au/samsung-43-inch-q5f-fhd-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA98QN90F": {
     "retailer": "Harvey Norman",
@@ -1717,47 +1387,7 @@
     "size": 98,
     "model_code": "QA98QN90F",
     "url": "https://www.harveynorman.com.au/samsung-98-inch-qn90f-neo-qled-4k-mini-led-ai-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA48S90H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 48,
-    "model_code": "QA48S90H",
-    "url": "https://hnau.imgix.net/media/catalog/product/s/9/s90h_01_product_42-48_vac_hn_1600x900_1_.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA65R95H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 65,
-    "model_code": "QA65R95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/9/r95h_01_product_vac_hn_1600x900_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA75R95H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 75,
-    "model_code": "QA75R95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/9/r95h_01_product_vac_hn_1600x900_1__1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA85R95H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 85,
-    "model_code": "QA85R95H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/9/r95h_01_product_vac_hn_1600x900_1_.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED77C6": {
     "retailer": "Harvey Norman",
@@ -1766,8 +1396,8 @@
     "category": "OLED",
     "size": 77,
     "model_code": "OLED77C6",
-    "url": "https://hnau.imgix.net/media/catalog/product/c/6/c6_77__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-77-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED65C6": {
     "retailer": "Harvey Norman",
@@ -1776,8 +1406,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65C6",
-    "url": "https://www.harveynorman.com.au/lg-65-inch-b6-ai-4k-oled-smart-tv-2026.html",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-65-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED55C6": {
     "retailer": "Harvey Norman",
@@ -1787,7 +1417,7 @@
     "size": 55,
     "model_code": "OLED55C6",
     "url": "https://www.harveynorman.com.au/lg-55-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED83C6": {
     "retailer": "Harvey Norman",
@@ -1797,47 +1427,7 @@
     "size": 83,
     "model_code": "OLED83C6",
     "url": "https://www.harveynorman.com.au/lg-83-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_70QNED86B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 70,
-    "model_code": "70QNED86B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned86_100__front_1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_55QNED86B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 55,
-    "model_code": "55QNED86B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned86_55__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_43QNED80B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 43,
-    "model_code": "43QNED80B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned80_43__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_50QNED80B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 50,
-    "model_code": "50QNED80B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned80_50__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_85QNED80B": {
     "retailer": "Harvey Norman",
@@ -1846,8 +1436,8 @@
     "category": "QNED",
     "size": 85,
     "model_code": "85QNED80B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned80_86__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-85-inch-qned80b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED85B6": {
     "retailer": "Harvey Norman",
@@ -1866,38 +1456,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65B6",
-    "url": "https://hnau.imgix.net/media/catalog/product/b/6/b6_65__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED42C6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 42,
-    "model_code": "OLED42C6",
-    "url": "https://hnau.imgix.net/media/catalog/product/c/6/c6_42__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED48C6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 48,
-    "model_code": "OLED48C6",
-    "url": "https://hnau.imgix.net/media/catalog/product/c/6/c6_48__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED55G6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 55,
-    "model_code": "OLED55G6",
-    "url": "https://hnau.imgix.net/media/catalog/product/b/6/b6_55__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-65-inch-b6-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED65G6": {
     "retailer": "Harvey Norman",
@@ -1906,48 +1466,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65G6",
-    "url": "https://hnau.imgix.net/media/catalog/product/g/6/g6_65__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED77G6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 77,
-    "model_code": "OLED77G6",
-    "url": "https://hnau.imgix.net/media/catalog/product/g/6/g6_77__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED83G6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 83,
-    "model_code": "OLED83G6",
-    "url": "https://hnau.imgix.net/media/catalog/product/g/6/g6_83__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_70MRGB96B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 70,
-    "model_code": "70MRGB96B",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/r/mrgb96_100__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_70QNED70B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 70,
-    "model_code": "70QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/m/r/mrgb96_100__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-65-inch-g6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_43QNED70B": {
     "retailer": "Harvey Norman",
@@ -1956,8 +1476,8 @@
     "category": "QNED",
     "size": 43,
     "model_code": "43QNED70B",
-    "url": "https://www.harveynorman.com.au/lg-100-inch-mrgb96b-evo-ai-4k-micro-rgb-smart-tv.html",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-43-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_50QNED70B": {
     "retailer": "Harvey Norman",
@@ -1966,8 +1486,8 @@
     "category": "QNED",
     "size": 50,
     "model_code": "50QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned70_50__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-50-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_55QNED70B": {
     "retailer": "Harvey Norman",
@@ -1976,8 +1496,8 @@
     "category": "QNED",
     "size": 55,
     "model_code": "55QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned70_55__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-55-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_65QNED70B": {
     "retailer": "Harvey Norman",
@@ -1986,8 +1506,8 @@
     "category": "QNED",
     "size": 65,
     "model_code": "65QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned70_65__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-65-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_75QNED70B": {
     "retailer": "Harvey Norman",
@@ -1996,8 +1516,8 @@
     "category": "QNED",
     "size": 75,
     "model_code": "75QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned70_75__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-75-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_85QNED70B": {
     "retailer": "Harvey Norman",
@@ -2006,38 +1526,8 @@
     "category": "QNED",
     "size": 85,
     "model_code": "85QNED70B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned70_85__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_65QNED86B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 65,
-    "model_code": "65QNED86B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned86_65__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_75QNED86B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 75,
-    "model_code": "75QNED86B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned86_75__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_86QNED86B": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "QNED",
-    "size": 86,
-    "model_code": "86QNED86B",
-    "url": "https://hnau.imgix.net/media/catalog/product/q/n/qned86_86__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-85-inch-qned70b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED86B6": {
     "retailer": "Harvey Norman",
@@ -2056,8 +1546,8 @@
     "category": "OLED",
     "size": 48,
     "model_code": "OLED48B6",
-    "url": "https://hnau.imgix.net/media/catalog/product/b/6/b6_48__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-48-inch-b6-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED55B6": {
     "retailer": "Harvey Norman",
@@ -2066,28 +1556,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "OLED55B6",
-    "url": "https://hnau.imgix.net/media/catalog/product/b/6/b6_55__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED97G6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 97,
-    "model_code": "OLED97G6",
-    "url": "https://hnau.imgix.net/media/catalog/product/g/6/g6_97__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_OLED77W6": {
-    "retailer": "Harvey Norman",
-    "brand": "LG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 77,
-    "model_code": "OLED77W6",
-    "url": "https://hnau.imgix.net/media/catalog/product/w/6/w6_77__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/lg-55-inch-b6-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED83W6": {
     "retailer": "Harvey Norman",
@@ -2097,17 +1567,7 @@
     "size": 83,
     "model_code": "OLED83W6",
     "url": "https://www.harveynorman.com.au/lg-83-inch-w6-evo-ai-4k-wallpaper-oled-smart-tv.html",
-    "last_verified": "2026-09-07"
-  },
-  "Harvey Norman_QA40R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "MRGB",
-    "size": 40,
-    "model_code": "QA40R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/r/8/r85h_01_product_vac_hn_1600x900-1_1__2.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED75C6": {
     "retailer": "Harvey Norman",
@@ -2119,16 +1579,6 @@
     "url": "https://www.harveynorman.com.au/samsung-75-inch-the-frame-ai-4k-qled-smart-tv.html",
     "last_verified": "2026-09-07"
   },
-  "Harvey Norman_QA77R85H": {
-    "retailer": "Harvey Norman",
-    "brand": "SAMSUNG",
-    "year": 2026,
-    "category": "OLED",
-    "size": 77,
-    "model_code": "QA77R85H",
-    "url": "https://hnau.imgix.net/media/catalog/product/c/6/c6_77__front.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
-  },
   "Harvey Norman_QA55S90H": {
     "retailer": "Harvey Norman",
     "brand": "SAMSUNG",
@@ -2136,8 +1586,8 @@
     "category": "OLED",
     "size": 55,
     "model_code": "QA55S90H",
-    "url": "https://hnau.imgix.net/media/catalog/product/5/5/55c6l_65c6l_75c6l_85c6l_1.jpg?auto=compress%2Cformat&ar=1%3A1&trim=color&trimtol=10&fit=fill&fill=solid&fill-color=ffffff&q=70&dpr=1.1&w=285&h=285",
-    "last_verified": "2026-09-07"
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-s90h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA55LS03F": {
     "retailer": "Harvey Norman",
@@ -2167,7 +1617,7 @@
     "size": 55,
     "model_code": "QA55S85H",
     "url": "https://www.jbhifi.com.au/products/samsung-55-s85h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA83S95H": {
     "retailer": "JB Hi-Fi",
@@ -2177,7 +1627,7 @@
     "size": 83,
     "model_code": "QA83S95H",
     "url": "https://www.jbhifi.com.au/products/samsung-83-s95h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA77S95F": {
     "retailer": "JB Hi-Fi",
@@ -2187,7 +1637,7 @@
     "size": 77,
     "model_code": "QA77S95F",
     "url": "https://www.jbhifi.com.au/products/samsung-77-s95f-oled-4k-smart-ai-tv-2025",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA77S95H": {
     "retailer": "JB Hi-Fi",
@@ -2197,7 +1647,7 @@
     "size": 77,
     "model_code": "QA77S95H",
     "url": "https://www.jbhifi.com.au/products/samsung-77-s95h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA83S90H": {
     "retailer": "JB Hi-Fi",
@@ -2207,7 +1657,7 @@
     "size": 83,
     "model_code": "QA83S90H",
     "url": "https://www.jbhifi.com.au/products/samsung-83-s90h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA83S85H": {
     "retailer": "JB Hi-Fi",
@@ -2217,7 +1667,7 @@
     "size": 83,
     "model_code": "QA83S85H",
     "url": "https://www.jbhifi.com.au/products/samsung-83-s85h-oled-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-07"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED48G6": {
     "retailer": "Harvey Norman",
@@ -2276,8 +1726,8 @@
     "category": "OLED",
     "size": 65,
     "model_code": "OLED65W6",
-    "url": "https://www.jbhifi.com.au/products/lg-65-oled-ai-b6-4k-smart-tv-2026",
-    "last_verified": "2026-09-15"
+    "url": "https://www.jbhifi.com.au/products/lg-65-objet-collection-easel-4k-oled-evo-smart-tv-2022",
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_OLED55W6": {
     "retailer": "JB Hi-Fi",
@@ -2293,11 +1743,11 @@
     "retailer": "JB Hi-Fi",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 100,
     "model_code": "QA100M70H",
     "url": "https://www.jbhifi.com.au/products/samsung-100-m90h-mini-led-4k-smart-ai-tv-2026",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_QA32R85H": {
     "retailer": "JB Hi-Fi",
@@ -2387,7 +1837,7 @@
     "size": 100,
     "model_code": "100QNED86BS",
     "url": "https://www.thegoodguys.com.au/lg-100-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-100qned86bs",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_100MRGB96BS": {
     "retailer": "The Good Guys",
@@ -2397,17 +1847,17 @@
     "size": 100,
     "model_code": "100MRGB96BS",
     "url": "https://www.thegoodguys.com.au/lg-100-inches-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026-100mrgb96bs",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-09-29"
   },
   "The Good Guys_OLED77G6": {
     "retailer": "The Good Guys",
-    "brand": "SAMSUNG",
+    "brand": "LG",
     "year": 2026,
     "category": "OLED",
     "size": 77,
     "model_code": "OLED77G6",
-    "url": "https://www.thegoodguys.com.au/loewe-pf-bild-i77-inches-4k-uhd-oled-tv-bildi77",
-    "last_verified": "2026-09-15"
+    "url": "https://www.thegoodguys.com.au/lg-77-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled77g6psb",
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA100R85H": {
     "retailer": "Harvey Norman",
@@ -2417,7 +1867,7 @@
     "size": 100,
     "model_code": "QA100R85H",
     "url": "https://www.harveynorman.com.au/samsung-100-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA85S95H": {
     "retailer": "Harvey Norman",
@@ -2437,7 +1887,7 @@
     "size": 100,
     "model_code": "100QNED86B",
     "url": "https://www.harveynorman.com.au/lg-100-inch-qned86b-evo-ai-4k-uhd-mini-led-smart-tv.html",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_100MRGB96B": {
     "retailer": "Harvey Norman",
@@ -2447,7 +1897,7 @@
     "size": 100,
     "model_code": "100MRGB96B",
     "url": "https://www.harveynorman.com.au/lg-100-inch-mrgb96b-evo-ai-4k-micro-rgb-smart-tv.html",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_OLED98G6": {
     "retailer": "Harvey Norman",
@@ -2477,77 +1927,77 @@
     "size": 100,
     "model_code": "QA100QN80H",
     "url": "https://www.jbhifi.com.au/products/samsung-100-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "JB Hi-Fi_100QNED86B": {
     "retailer": "JB Hi-Fi",
     "brand": "LG",
     "year": 2026,
-    "category": "OLED",
+    "category": "QNED",
     "size": 100,
     "model_code": "100QNED86B",
     "url": "https://www.jbhifi.com.au/products/lg-100-qned86b-evo-ai-mini-led-4k-smart-tv-2026",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA65M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 65,
     "model_code": "QA65M70H",
     "url": "https://www.thegoodguys.com.au/samsung-65-inches-m70h-mini-led-4k-smart-tv-2026-ua65m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA75M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 75,
     "model_code": "QA75M70H",
     "url": "https://www.thegoodguys.com.au/samsung-75-inches-m70h-mini-led-4k-smart-tv-2026-ua75m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA85M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 85,
     "model_code": "QA85M70H",
     "url": "https://www.thegoodguys.com.au/samsung-85-inches-m70h-mini-led-4k-smart-tv-2026-ua85m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA55M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 55,
     "model_code": "QA55M70H",
     "url": "https://www.thegoodguys.com.au/samsung-55-inches-m70h-mini-led-4k-smart-tv-2026-ua55m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA43M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 43,
     "model_code": "QA43M70H",
     "url": "https://www.thegoodguys.com.au/samsung-43-inches-m70h-mini-led-4k-smart-tv-2026-ua43m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA50M70H": {
     "retailer": "The Good Guys",
     "brand": "SAMSUNG",
     "year": 2026,
-    "category": "UHD",
+    "category": "QLED",
     "size": 50,
     "model_code": "QA50M70H",
     "url": "https://www.thegoodguys.com.au/samsung-50-inches-m70h-mini-led-4k-smart-tv-2026-ua50m70hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA65LS03H": {
     "retailer": "The Good Guys",
@@ -2557,7 +2007,7 @@
     "size": 65,
     "model_code": "QA65LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-65-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa65ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA55LS03H": {
     "retailer": "The Good Guys",
@@ -2567,7 +2017,7 @@
     "size": 55,
     "model_code": "QA55LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-55-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa55ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA85LS03H": {
     "retailer": "The Good Guys",
@@ -2577,7 +2027,7 @@
     "size": 85,
     "model_code": "QA85LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-85-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa85ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA32F6000": {
     "retailer": "The Good Guys",
@@ -2587,7 +2037,7 @@
     "size": 32,
     "model_code": "QA32F6000",
     "url": "https://www.thegoodguys.com.au/samsung-32-inches-f6000-fhd-smart-tv-2025-ua32f6000fwxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA43LS03H": {
     "retailer": "The Good Guys",
@@ -2597,7 +2047,7 @@
     "size": 43,
     "model_code": "QA43LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-43-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa43ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA75LS03H": {
     "retailer": "The Good Guys",
@@ -2607,7 +2057,7 @@
     "size": 75,
     "model_code": "QA75LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-75-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa75ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA65S85H": {
     "retailer": "The Good Guys",
@@ -2617,7 +2067,7 @@
     "size": 65,
     "model_code": "QA65S85H",
     "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s85h-4k-smart-ai-tv-2026-qa65s85haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA77S85H": {
     "retailer": "The Good Guys",
@@ -2627,7 +2077,7 @@
     "size": 77,
     "model_code": "QA77S85H",
     "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s85h-4k-smart-ai-tv-2026-qa77s85haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA77S95H": {
     "retailer": "The Good Guys",
@@ -2637,7 +2087,7 @@
     "size": 77,
     "model_code": "QA77S95H",
     "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s95h-4k-smart-ai-tv-2026-qa77s95haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA83S95H": {
     "retailer": "The Good Guys",
@@ -2647,7 +2097,7 @@
     "size": 83,
     "model_code": "QA83S95H",
     "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s95h-4k-smart-ai-tv-2026-qa83s95haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA65S95H": {
     "retailer": "The Good Guys",
@@ -2657,7 +2107,7 @@
     "size": 65,
     "model_code": "QA65S95H",
     "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s95h-4k-smart-ai-tv-2026-qa65s95hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA83S85H": {
     "retailer": "The Good Guys",
@@ -2667,7 +2117,7 @@
     "size": 83,
     "model_code": "QA83S85H",
     "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s85h-4k-smart-ai-tv-2026-qa83s85haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA100QN80H": {
     "retailer": "The Good Guys",
@@ -2677,7 +2127,7 @@
     "size": 100,
     "model_code": "QA100QN80H",
     "url": "https://www.thegoodguys.com.au/samsung-100-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa100qn80hwxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA98LS03H": {
     "retailer": "The Good Guys",
@@ -2687,7 +2137,7 @@
     "size": 98,
     "model_code": "QA98LS03H",
     "url": "https://www.thegoodguys.com.au/samsung-98-inches-ls03h-the-frame-qled-4k-smart-tv-2026-qa98ls03hewxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA98QN90F": {
     "retailer": "The Good Guys",
@@ -2697,7 +2147,7 @@
     "size": 98,
     "model_code": "QA98QN90F",
     "url": "https://www.thegoodguys.com.au/samsung-98-inches-qn90f-neo-qled-4k-mini-led-smart-ai-tv-2025-qa98qn90fawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA75LS03F": {
     "retailer": "The Good Guys",
@@ -2737,7 +2187,7 @@
     "size": 55,
     "model_code": "OLED55C6",
     "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled55c6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_65QNED70B": {
     "retailer": "The Good Guys",
@@ -2747,7 +2197,7 @@
     "size": 65,
     "model_code": "65QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-65-inches-qned70b-ai-mini-led-4k-smart-tv-2026-65qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_50QNED80B": {
     "retailer": "The Good Guys",
@@ -2757,7 +2207,7 @@
     "size": 50,
     "model_code": "50QNED80B",
     "url": "https://www.thegoodguys.com.au/lg-50-inches-qned80b-evo-ai-mini-led-4k-smart-tv-2026-50qned80bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_43QNED80B": {
     "retailer": "The Good Guys",
@@ -2767,7 +2217,7 @@
     "size": 43,
     "model_code": "43QNED80B",
     "url": "https://www.thegoodguys.com.au/lg-43-inches-qned80b-evo-ai-mini-led-4k-smart-tv-2026-43qned80bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED42C6": {
     "retailer": "The Good Guys",
@@ -2777,7 +2227,7 @@
     "size": 42,
     "model_code": "OLED42C6",
     "url": "https://www.thegoodguys.com.au/lg-42-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled42c6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_100QNED86B": {
     "retailer": "The Good Guys",
@@ -2787,7 +2237,7 @@
     "size": 100,
     "model_code": "100QNED86B",
     "url": "https://www.thegoodguys.com.au/lg-100-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-100qned86bs",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED55G6": {
     "retailer": "The Good Guys",
@@ -2797,7 +2247,7 @@
     "size": 55,
     "model_code": "OLED55G6",
     "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled55g6psb",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED65G6": {
     "retailer": "The Good Guys",
@@ -2807,7 +2257,7 @@
     "size": 65,
     "model_code": "OLED65G6",
     "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled65g6psb",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_85QNED70B": {
     "retailer": "The Good Guys",
@@ -2817,7 +2267,7 @@
     "size": 85,
     "model_code": "85QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-85-inches-qned70b-ai-mini-led-4k-smart-tv-2026-85qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_55QNED70B": {
     "retailer": "The Good Guys",
@@ -2827,7 +2277,7 @@
     "size": 55,
     "model_code": "55QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-55-inches-qned70b-ai-mini-led-4k-smart-tv-2026-55qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_50QNED70B": {
     "retailer": "The Good Guys",
@@ -2837,7 +2287,7 @@
     "size": 50,
     "model_code": "50QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-50-inches-qned70b-ai-mini-led-4k-smart-tv-2026-50qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_75QNED70B": {
     "retailer": "The Good Guys",
@@ -2847,7 +2297,7 @@
     "size": 75,
     "model_code": "75QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-75-inches-qned70b-ai-mini-led-4k-smart-tv-2026-75qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_43QNED70B": {
     "retailer": "The Good Guys",
@@ -2857,7 +2307,7 @@
     "size": 43,
     "model_code": "43QNED70B",
     "url": "https://www.thegoodguys.com.au/lg-43-inches-qned70b-ai-mini-led-4k-smart-tv-2026-43qned70bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED65B6": {
     "retailer": "The Good Guys",
@@ -2887,7 +2337,7 @@
     "size": 65,
     "model_code": "65QNED86B",
     "url": "https://www.thegoodguys.com.au/lg-65-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-65qned86bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED65C6": {
     "retailer": "The Good Guys",
@@ -2897,7 +2347,7 @@
     "size": 65,
     "model_code": "OLED65C6",
     "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled65c6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_75QNED86B": {
     "retailer": "The Good Guys",
@@ -2907,7 +2357,7 @@
     "size": 75,
     "model_code": "75QNED86B",
     "url": "https://www.thegoodguys.com.au/lg-75-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-75qned86bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED48B6": {
     "retailer": "The Good Guys",
@@ -2927,7 +2377,7 @@
     "size": 77,
     "model_code": "OLED77C6",
     "url": "https://www.thegoodguys.com.au/lg-77-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled77c6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_86QNED86B": {
     "retailer": "The Good Guys",
@@ -2937,7 +2387,7 @@
     "size": 86,
     "model_code": "86QNED86B",
     "url": "https://www.thegoodguys.com.au/lg-86-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-86qned86bsa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED83C6": {
     "retailer": "The Good Guys",
@@ -2947,7 +2397,7 @@
     "size": 83,
     "model_code": "OLED83C6",
     "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-c6-4k-smart-tv-2026-oled83c6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED83G6": {
     "retailer": "The Good Guys",
@@ -2957,7 +2407,7 @@
     "size": 83,
     "model_code": "OLED83G6",
     "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled83g6psb",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED83W6": {
     "retailer": "The Good Guys",
@@ -2967,7 +2417,7 @@
     "size": 83,
     "model_code": "OLED83W6",
     "url": "https://www.thegoodguys.com.au/lg-83-inches-oled-evo-ai-w6-wallpaper-4k-smart-tv-2026-oled83w6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA55S90H": {
     "retailer": "The Good Guys",
@@ -2977,7 +2427,7 @@
     "size": 55,
     "model_code": "QA55S90H",
     "url": "https://www.thegoodguys.com.au/samsung-55-inches-oled-s90h-4k-smart-ai-tv-2026-qa55s90hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA65S90H": {
     "retailer": "The Good Guys",
@@ -2987,7 +2437,7 @@
     "size": 65,
     "model_code": "QA65S90H",
     "url": "https://www.thegoodguys.com.au/samsung-65-inches-oled-s90h-4k-smart-ai-tv-2026-qa65s90hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA77S90H": {
     "retailer": "The Good Guys",
@@ -2997,7 +2447,7 @@
     "size": 77,
     "model_code": "QA77S90H",
     "url": "https://www.thegoodguys.com.au/samsung-77-inches-oled-s90h-4k-smart-ai-tv-2026-qa77s90hawxxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA83S90H": {
     "retailer": "The Good Guys",
@@ -3007,7 +2457,7 @@
     "size": 83,
     "model_code": "QA83S90H",
     "url": "https://www.thegoodguys.com.au/samsung-83-inches-oled-s90h-4k-smart-ai-tv-2026-qa83s90haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA42S90H": {
     "retailer": "The Good Guys",
@@ -3017,7 +2467,7 @@
     "size": 42,
     "model_code": "QA42S90H",
     "url": "https://www.thegoodguys.com.au/samsung-42-inches-oled-s90h-4k-smart-ai-tv-2026-qa42s90haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_QA48S90H": {
     "retailer": "The Good Guys",
@@ -3027,7 +2477,7 @@
     "size": 48,
     "model_code": "QA48S90H",
     "url": "https://www.thegoodguys.com.au/samsung-48-inches-oled-s90h-4k-smart-ai-tv-2026-qa48s90haexxy",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_OLED97G6": {
     "retailer": "The Good Guys",
@@ -3037,7 +2487,7 @@
     "size": 97,
     "model_code": "OLED97G6",
     "url": "https://www.thegoodguys.com.au/lg-97-inches-oled-evo-ai-g6-4k-smart-tv-2026-oled97g6psa",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "Harvey Norman_QA115QN90F": {
     "retailer": "Harvey Norman",
@@ -3047,7 +2497,7 @@
     "size": 115,
     "model_code": "QA115QN90F",
     "url": "https://www.harveynorman.com.au/samsung-115-inch-qn90f-neo-qled-4k-mini-led-ai-smart-tv.html",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
   },
   "The Good Guys_98NU85": {
     "retailer": "The Good Guys",
@@ -3057,6 +2507,1486 @@
     "size": 98,
     "model_code": "98NU85",
     "url": "https://www.thegoodguys.com.au/lg-98-inches-nu855b-nano-4k-uhd-ai-smart-tv-2026-98nu855bpsb",
-    "last_verified": "2026-09-15"
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_MRA85R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "MRA85R85H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA85R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "MRA85R95H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA75R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R85H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA75R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R95H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA65R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R85H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA65R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R95H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_MRA55R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "MRA55R85H",
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_QA75QN80H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75QN80H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-qn80h-ai-4k-neo-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA50QN80H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 50,
+    "model_code": "QA50QN80H",
+    "url": "https://www.harveynorman.com.au/samsung-50-inch-qn80h-ai-4k-neo-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_UA100M90H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 100,
+    "model_code": "UA100M90H",
+    "url": "https://www.harveynorman.com.au/samsung-100-inch-m90h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_UA85M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 85,
+    "model_code": "UA85M70H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA75M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 75,
+    "model_code": "UA75M70H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA65M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 65,
+    "model_code": "UA65M70H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA55M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 55,
+    "model_code": "UA55M70H",
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA50M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 50,
+    "model_code": "UA50M70H",
+    "url": "https://www.harveynorman.com.au/samsung-50-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA43M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 43,
+    "model_code": "UA43M70H",
+    "url": "https://www.harveynorman.com.au/samsung-43-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_UA32F6000": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 32,
+    "model_code": "UA32F6000",
+    "url": "https://www.harveynorman.com.au/samsung-32-inch-full-hd-f6000-smart-tv.html",
+    "last_verified": "2026-09-29"
+  },
+  "Harvey Norman_86MRGB96B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 86,
+    "model_code": "86MRGB96B",
+    "url": "https://www.harveynorman.com.au/lg-86-inch-mrgb96b-evo-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_75MRGB96B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "75MRGB96B",
+    "url": "https://www.harveynorman.com.au/lg-75-inch-mrgb96b-evo-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_85QNED90B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 85,
+    "model_code": "85QNED90B",
+    "url": "https://www.harveynorman.com.au/lg-85-inch-qned90b-evo-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_75QNED90B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 75,
+    "model_code": "75QNED90B",
+    "url": "https://www.harveynorman.com.au/lg-75-inch-qned90b-evo-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-10-29"
+  },
+  "Harvey Norman_65QNED90B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED90B",
+    "url": "https://www.harveynorman.com.au/lg-65-inch-qned90b-evo-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-10-29"
+  },
+  "Harvey Norman_98NU85": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 98,
+    "model_code": "98NU85",
+    "url": "https://www.harveynorman.com.au/lg-98-inch-nu85-nano-ai-4k-uhd-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_27LX6TDGA": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 27,
+    "model_code": "27LX6TDGA",
+    "url": "https://www.harveynorman.com.au/lg-27-inch-stanby-me-2-portable-smart-touch-screen.html",
+    "last_verified": "2026-10-29"
+  },
+  "JB Hi-Fi_MRA100R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 100,
+    "model_code": "MRA100R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-100-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA85R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "MRA85R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-85-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA75R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-75-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA75R95H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R95H",
+    "url": "https://www.jbhifi.com.au/products/samsung-75-r95h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA65R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA65R95H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R95H",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-r95h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_MRA55R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "MRA55R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-55-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_QA65S85F": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 65,
+    "model_code": "QA65S85F",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-s85f-oled-4k-smart-ai-tv-2025",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_UA85M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 85,
+    "model_code": "UA85M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-85-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA75M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 75,
+    "model_code": "UA75M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-75-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA65M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 65,
+    "model_code": "UA65M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA55M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 55,
+    "model_code": "UA55M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-55-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA50M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 50,
+    "model_code": "UA50M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-50-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA43M70H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 43,
+    "model_code": "UA43M70H",
+    "url": "https://www.jbhifi.com.au/products/samsung-43-m70h-mini-led-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_UA32F6000": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 32,
+    "model_code": "UA32F6000",
+    "url": "https://www.jbhifi.com.au/products/samsung-32-f6000-full-hd-smart-led-tv-2025",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_100MRGB96B": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 100,
+    "model_code": "100MRGB96B",
+    "url": "https://www.jbhifi.com.au/products/lg-100-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_85QNED90B": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 85,
+    "model_code": "85QNED90B",
+    "url": "https://www.jbhifi.com.au/products/lg-85-qned90b-evo-ai-mini-led-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_75QNED90B": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 75,
+    "model_code": "75QNED90B",
+    "url": "https://www.jbhifi.com.au/products/lg-75-qned90b-evo-ai-mini-led-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_65QNED90B": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED90B",
+    "url": "https://www.jbhifi.com.au/products/lg-65-qned90b-evo-ai-mini-led-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_98NU85": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 98,
+    "model_code": "98NU85",
+    "url": "https://www.jbhifi.com.au/products/lg-98-nu855b-nano-4k-uhd-led-ai-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_27LX6TDGA": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 27,
+    "model_code": "27LX6TDGA",
+    "url": "https://www.jbhifi.com.au/products/lg-27-stanbyme-2-portable-smart-touch-screen",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_MRA115MR95FXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 115,
+    "model_code": "MRA115MR95FXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-115-inches-micro-rgb-mr95f-4k-smart-ai-tv-2026-mra115mr95fxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA85R85HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "MRA85R85HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra85r85hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA85R95HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "MRA85R95HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra85r95hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA75R85HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R85HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra75r85hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA75R95HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "MRA75R95HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra75r95hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA65R85HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R85HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra65r85hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA65R95HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "MRA65R95HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra65r95hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_MRA55R85HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "MRA55R85HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra55r85hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA55S85FAEXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 55,
+    "model_code": "QA55S85FAEXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-oled-s85f-4k-vision-ai-smart-tv-2025-qa55s85faexxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA85QN80HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85QN80HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa85qn80hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA85QN990FWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85QN990FWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-qn990f-8k-neo-qled-vision-ai-smart-tv-2025-qa85qn990fwxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA75QN85FAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75QN85FAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-qn85f-neo-qled-4k-mini-led-smart-ai-tv-2025-qa75qn85fawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA75QN80HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75QN80HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa75qn80hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA65Q7FAAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65Q7FAAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-q7f-qled-4k-smart-tv-2025-qa65q7faawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA65QN80HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65QN80HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa65qn80hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_QA55QN70FAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 55,
+    "model_code": "QA55QN70FAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-qn70f-neo-qled-4k-mini-led-smart-ai-tv-2025-qa55qn70fawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA55QN80HAWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 55,
+    "model_code": "QA55QN80HAWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa55qn80hawxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_UA85U8500FWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 85,
+    "model_code": "UA85U8500FWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-u8500f-crystal-uhd-4k-smart-tv-2025-ua85u8500fwxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_UA75U8500FWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 75,
+    "model_code": "UA75U8500FWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-u8500f-crystal-uhd-4k-smart-tv-2025-ua75u8500fwxxy",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_UA55U8500FWXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 55,
+    "model_code": "UA55U8500FWXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-u8500f-crystal-uhd-4k-smart-tv-2025-ua55u8500fwxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_SP-LPF5DSAXXXY": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 55,
+    "model_code": "SP-LPF5DSAXXXY",
+    "url": "https://www.thegoodguys.com.au/samsung-the-premiere-triple-laser-fhd-ultra-short-throw-projector-2025-sp-lpf5dsaxxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_86MRGB96BSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 86,
+    "model_code": "86MRGB96BSA",
+    "url": "https://www.thegoodguys.com.au/lg-86-inches-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026-86mrgb96bsa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_OLED77G5PSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 77,
+    "model_code": "OLED77G5PSA",
+    "url": "https://www.thegoodguys.com.au/lg-77-inches-oled-evo-g5-ai-uhd-4k-smart-tv-2025-oled77g5psa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_OLED65C5PSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 65,
+    "model_code": "OLED65C5PSA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-oled-evo-c5-ai-uhd-4k-smart-tv-2025-oled65c5psa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_OLED55B5PSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 55,
+    "model_code": "OLED55B5PSA",
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-oled-b5-ai-uhd-4k-smart-tv-2025-oled55b5psa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_OLED42C5PSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "OLED",
+    "size": 42,
+    "model_code": "OLED42C5PSA",
+    "url": "https://www.thegoodguys.com.au/lg-42-inches-oled-evo-c5-ai-uhd-4k-smart-tv-2025-oled42c5psa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_75QNED93ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "QNED",
+    "size": 75,
+    "model_code": "75QNED93ASA",
+    "url": "https://www.thegoodguys.com.au/lg-75-inches-qned93a-evo-mini-led-ai-uhd4k-smart-tv-2025-75qned93asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_75QNED90BSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 75,
+    "model_code": "75QNED90BSA",
+    "url": "https://www.thegoodguys.com.au/lg-75-inches-qned90b-evo-ai-mini-led-4k-smart-tv-2026-75qned90bsa",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_65QNED86ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED86ASA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned86a-evo-ai-mini-led-uhd-4k-smart-tv-2025-65qned86asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_65QNED80BSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED80BSA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned80b-evo-ai-mini-led-4k-smart-tv-2026-65qned80bsa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_65QNED93ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED93ASA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned93a-evomini-led-ai-uhd4k-smart-tv-2025-65qned93asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_65QNED90BSA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED90BSA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-qned90b-evo-ai-mini-led-4k-smart-tv-2026-65qned90bsa",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_50QNED81ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "QNED",
+    "size": 50,
+    "model_code": "50QNED81ASA",
+    "url": "https://www.thegoodguys.com.au/lg-50-inches-qned81a-ai-led-uhd-4k-smart-tv-2025-50qned81asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_98NU855BPSB": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 98,
+    "model_code": "98NU855BPSB",
+    "url": "https://www.thegoodguys.com.au/lg-98-inches-nu855b-nano-4k-uhd-ai-smart-tv-2026-98nu855bpsb",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_65NANO80ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 65,
+    "model_code": "65NANO80ASA",
+    "url": "https://www.thegoodguys.com.au/lg-65-inches-nano80a-ai-led-uhd-4k-smart-tv-2025-65nano80asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_55NANO80ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 55,
+    "model_code": "55NANO80ASA",
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-nano80a-ai-led-uhd-4k-smart-tv-2025-55nano80asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_43NANO80ASA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 43,
+    "model_code": "43NANO80ASA",
+    "url": "https://www.thegoodguys.com.au/lg-43-inches-nano80a-ai-led-uhd-4k-smart-tv-2025-43nano80asa",
+    "last_verified": "2026-09-29"
+  },
+  "The Good Guys_27LX6TDGA": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 27,
+    "model_code": "27LX6TDGA",
+    "url": "https://www.thegoodguys.com.au/lg-27-inches-stanbyme-2-portable-smart-touch-screen-tv-27lx6tdga",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_32LX7TDGA": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "UHD",
+    "size": 32,
+    "model_code": "32LX7TDGA",
+    "url": "https://www.harveynorman.com.au/lg-32-inch-stanby-me-2-max-portable-smart-touch-screen.html",
+    "last_verified": "2026-10-29"
+  },
+  "JB Hi-Fi_MRA115R95F": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 115,
+    "model_code": "MRA115R95F",
+    "url": "https://www.jbhifi.com.au/products/samsung-115-r95f-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-09-29"
+  },
+  "JB Hi-Fi_QA85LS03H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85LS03H",
+    "url": "https://www.jbhifi.com.au/products/samsung-85-the-frame-qled-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA75LS03H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75LS03H",
+    "url": "https://www.jbhifi.com.au/products/samsung-75-the-frame-qled-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA55LS03H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 55,
+    "model_code": "QA55LS03H",
+    "url": "https://www.jbhifi.com.au/products/samsung-55-the-frame-qled-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA65LS03H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65LS03H",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-the-frame-qled-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA43LS03H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 43,
+    "model_code": "QA43LS03H",
+    "url": "https://www.jbhifi.com.au/products/samsung-43-the-frame-qled-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA115R95F": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 115,
+    "model_code": "QA115R95F",
+    "url": "https://www.jbhifi.com.au/products/samsung-115-r95f-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA100R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 100,
+    "model_code": "QA100R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-100-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA75R95H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "QA75R95H",
+    "url": "https://www.jbhifi.com.au/products/samsung-75-r95h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_75MRGB96B": {
+    "retailer": "JB Hi-Fi",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "75MRGB96B",
+    "url": "https://www.jbhifi.com.au/products/lg-75-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA65R95H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "QA65R95H",
+    "url": "https://www.jbhifi.com.au/products/samsung-65-r95h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "JB Hi-Fi_QA55R85H": {
+    "retailer": "JB Hi-Fi",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "QA55R85H",
+    "url": "https://www.jbhifi.com.au/products/samsung-55-r85h-micro-rgb-4k-smart-ai-tv-2026",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA115R95F": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 115,
+    "model_code": "QA115R95F",
+    "url": "https://www.thegoodguys.com.au/samsung-115-inches-micro-rgb-mr95f-4k-smart-ai-tv-2026-mra115mr95fxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_100MRGB96B": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 100,
+    "model_code": "100MRGB96B",
+    "url": "https://www.thegoodguys.com.au/lg-100-inches-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026-100mrgb96bs",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_86MRGB96B": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 86,
+    "model_code": "86MRGB96B",
+    "url": "https://www.thegoodguys.com.au/lg-86-inches-mrgb96b-micro-rgb-evo-ai-4k-smart-tv-2026-86mrgb96bsa",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA85QN80H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85QN80H",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa85qn80hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA85R85H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "QA85R85H",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra85r85hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA85R95H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "QA85R95H",
+    "url": "https://www.thegoodguys.com.au/samsung-85-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra85r95hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA75QN80H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75QN80H",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa75qn80hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA75R85H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "QA75R85H",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra75r85hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA75R95H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "QA75R95H",
+    "url": "https://www.thegoodguys.com.au/samsung-75-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra75r95hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA65QN80H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65QN80H",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa65qn80hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA65R85H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "QA65R85H",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra65r85hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA65R95H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "QA65R95H",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-micro-rgb-r95h-4k-smart-ai-tv-2026-mra65r95hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_55QNED86B": {
+    "retailer": "The Good Guys",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 55,
+    "model_code": "55QNED86B",
+    "url": "https://www.thegoodguys.com.au/lg-55-inches-qned86b-evo-ai-mini-led-4k-smart-tv-2026-55qned86bsa",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA55QN80H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 55,
+    "model_code": "QA55QN80H",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-qn80h-neo-qled-4k-mini-led-smart-ai-tv-2026-qa55qn80hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA55R85H": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "QA55R85H",
+    "url": "https://www.thegoodguys.com.au/samsung-55-inches-micro-rgb-r85h-4k-smart-ai-tv-2026-mra55r85hawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "The Good Guys_QA65Q7F": {
+    "retailer": "The Good Guys",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65Q7F",
+    "url": "https://www.thegoodguys.com.au/samsung-65-inches-q7f-qled-4k-smart-tv-2025-qa65q7faawxxy",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_OLED97G6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 97,
+    "model_code": "OLED97G6",
+    "url": "https://www.harveynorman.com.au/lg-97-inch-g6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_86QNED86B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 86,
+    "model_code": "86QNED86B",
+    "url": "https://www.harveynorman.com.au/lg-86-inch-qned86b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA85M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85M70H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA85LS03H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 85,
+    "model_code": "QA85LS03H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-the-frame-ai-4k-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA85R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 85,
+    "model_code": "QA85R95H",
+    "url": "https://www.harveynorman.com.au/samsung-85-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA83S85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 83,
+    "model_code": "QA83S85H",
+    "url": "https://www.harveynorman.com.au/samsung-83-inch-s85h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_OLED83G6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 83,
+    "model_code": "OLED83G6",
+    "url": "https://www.harveynorman.com.au/lg-83-inch-g6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA83S95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 83,
+    "model_code": "QA83S95H",
+    "url": "https://www.harveynorman.com.au/samsung-83-inch-s95h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA77S85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 77,
+    "model_code": "QA77S85H",
+    "url": "https://www.harveynorman.com.au/samsung-77-inch-s85h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_OLED77G6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 77,
+    "model_code": "OLED77G6",
+    "url": "https://www.harveynorman.com.au/lg-77-inch-g6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA77S95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 77,
+    "model_code": "QA77S95H",
+    "url": "https://www.harveynorman.com.au/samsung-77-inch-s95h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_OLED77W6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 77,
+    "model_code": "OLED77W6",
+    "url": "https://www.harveynorman.com.au/lg-77-inch-w6-evo-ai-4k-wallpaper-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA75M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75M70H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_75QNED86B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 75,
+    "model_code": "75QNED86B",
+    "url": "https://www.harveynorman.com.au/lg-75-inch-qned86b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA75R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "QA75R85H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA75LS03H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 75,
+    "model_code": "QA75LS03H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-the-frame-ai-4k-qled-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA75R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 75,
+    "model_code": "QA75R95H",
+    "url": "https://www.harveynorman.com.au/samsung-75-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA65M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65M70H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_65QNED86B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 65,
+    "model_code": "65QNED86B",
+    "url": "https://www.harveynorman.com.au/lg-65-inch-qned86b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA65LS03H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65LS03H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-the-frame-ai-4k-qled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA65R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "QA65R85H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA65S85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 65,
+    "model_code": "QA65S85H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-s85h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA65S90H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 65,
+    "model_code": "QA65S90H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-s90h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA65R95H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 65,
+    "model_code": "QA65R95H",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-r95h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA55M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 55,
+    "model_code": "QA55M70H",
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_55QNED86B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 55,
+    "model_code": "55QNED86B",
+    "url": "https://www.harveynorman.com.au/lg-55-inch-qned86b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA55R85H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "MRGB",
+    "size": 55,
+    "model_code": "QA55R85H",
+    "url": "https://www.harveynorman.com.au/samsung-55-inch-r85h-ai-4k-micro-rgb-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_OLED55G6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 55,
+    "model_code": "OLED55G6",
+    "url": "https://www.harveynorman.com.au/lg-55-inch-g6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_50QNED80B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 50,
+    "model_code": "50QNED80B",
+    "url": "https://www.harveynorman.com.au/lg-50-inch-qned80b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_OLED48C6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 48,
+    "model_code": "OLED48C6",
+    "url": "https://www.harveynorman.com.au/lg-48-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA48S90H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 48,
+    "model_code": "QA48S90H",
+    "url": "https://www.harveynorman.com.au/samsung-48-inch-s90h-ai-4k-oled-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA43M70H": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2026,
+    "category": "QLED",
+    "size": 43,
+    "model_code": "QA43M70H",
+    "url": "https://www.harveynorman.com.au/samsung-43-inch-m70h-ai-4k-mini-led-smart-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_43QNED80B": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "QNED",
+    "size": 43,
+    "model_code": "43QNED80B",
+    "url": "https://www.harveynorman.com.au/lg-43-inch-qned80b-evo-ai-4k-uhd-mini-led-smart-tv.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_OLED42C6": {
+    "retailer": "Harvey Norman",
+    "brand": "LG",
+    "year": 2026,
+    "category": "OLED",
+    "size": 42,
+    "model_code": "OLED42C6",
+    "url": "https://www.harveynorman.com.au/lg-42-inch-c6-evo-ai-4k-oled-smart-tv-2026.html",
+    "last_verified": "2026-10-22"
+  },
+  "Harvey Norman_QA65LS03F": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "QLED",
+    "size": 65,
+    "model_code": "QA65LS03F",
+    "url": "https://www.harveynorman.com.au/samsung-65-inch-frame-pro-neo-qled-4k-mini-led-tv.html",
+    "last_verified": "2026-11-06"
+  },
+  "Harvey Norman_QA32F6000": {
+    "retailer": "Harvey Norman",
+    "brand": "SAMSUNG",
+    "year": 2025,
+    "category": "UHD",
+    "size": 32,
+    "model_code": "QA32F6000",
+    "url": "https://www.harveynorman.com.au/samsung-32-inch-full-hd-f6000-smart-tv.html",
+    "last_verified": "2026-11-06"
   }
 }

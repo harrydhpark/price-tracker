@@ -181,7 +181,8 @@ class DataIntelligenceEngine:
             {"segment": "Micro RGB", "lg_series": "MRGB96B", "sam_series": "R95H", "sizes": [65, 75, 85, 86, 100]},
             {"segment": "Micro RGB", "lg_series": "MRGB87B", "sam_series": "R85H", "sizes": [50, 55, 65, 75, 85, 86]},
             {"segment": "Premium QNED/QLED", "lg_series": "QNED86B", "sam_series": "QN80H", "sizes": [55, 65, 75, 86]},
-            {"segment": "Mainstream QNED/QLED", "lg_series": "QNED80B", "sam_series": "M80H", "sizes": [43, 50, 55, 65, 75, 86]}
+            {"segment": "Mainstream QNED/QLED", "lg_series": "QNED82B", "sam_series": "M80H", "sizes": [43, 50, 55, 65, 75, 86]},
+            {"segment": "Entry UHD 4K", "lg_series": "NU800B", "sam_series": "U8079H", "sizes": [43, 50, 55, 65, 75, 85]}
         ]
 
         for c_code in countries_to_check:
@@ -232,26 +233,38 @@ class DataIntelligenceEngine:
                     elif series_kw == "R85H":
                         if any(x in mc for x in ["R85", "R86", "MR85"]) and not any(x in mc for x in ["R95", "MR95", "R96", "MR96"]):
                             candidates.append(it)
-                    elif series_kw in ["QNED80B", "QNED80"]:
-                        if any(x in mc for x in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED84"]):
+                    elif series_kw in ["QNED82B", "QNED82", "QNED80B", "QNED80"]:
+                        if any(x in mc for x in ["QNED82", "QNED83", "QNED8MB", "QNED80", "QNED81"]):
                             candidates.append(it)
                     elif series_kw in ["M80H", "M80"]:
                         if any(x in mc for x in ["M80", "M82", "M83", "M85"]):
                             candidates.append(it)
                     elif series_kw in ["QNED86B", "QNED86"]:
-                        if any(x in mc for x in ["QNED86", "QNED87"]):
+                        if any(x in mc for x in ["QNED86", "QNED87", "QNED85", "QNED93B"]):
+                            candidates.append(it)
+                    elif series_kw in ["NU800B", "NU800", "NU85"]:
+                        if any(x in mc for x in ["NU800", "NU80", "NU8E", "NU850", "NU85", "UA77"]):
+                            candidates.append(it)
+                    elif series_kw in ["U8079H", "U8070H", "U8000H", "U7025H"]:
+                        if any(x in mc for x in ["U8079", "U8070", "U8000", "U8005", "U8010", "U8072", "U8075", "U8090", "U7025"]):
                             candidates.append(it)
                     elif series_kw in mc:
                         candidates.append(it)
                 if not candidates:
                     return None
-                if series_kw in ["QNED80B", "QNED80"]:
+                if series_kw in ["QNED82B", "QNED82", "QNED80B", "QNED80"]:
                     def qned_prio(it):
                         c = str(it["model_code"]).upper()
-                        if "QNED80" in c: return (0, it["selling_price"])
-                        if "QNED81" in c or "QNED83" in c: return (1, it["selling_price"])
-                        if "QNED82" in c: return (2, it["selling_price"])
-                        return (3, it["selling_price"])
+                        # Strict priority hierarchy: QNED82 > QNED83 > QNED8MB. Reject 80B, 81B, 8EB.
+                        if any(x in c for x in ["QNED82B", "QNED82"]): return (0, it["selling_price"])
+                        if any(x in c for x in ["QNED83B", "QNED83"]): return (1, it["selling_price"])
+                        if any(x in c for x in ["QNED8MB", "QNED8M"]): return (2, it["selling_price"])
+                        if "QNED81" in c: return (10, it["selling_price"])
+                        if "QNED80" in c: return (20, it["selling_price"])
+                        return (30, it["selling_price"])
+                    valid_cands = [it for it in candidates if not any(x in str(it["model_code"]).upper() for x in ["QNED80", "QNED81", "QNED8EB"])]
+                    if valid_cands:
+                        return min(valid_cands, key=qned_prio)
                     return min(candidates, key=qned_prio)
                 if series_kw in ["M80H", "M80"]:
                     def m80_prio(it):

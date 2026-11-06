@@ -163,12 +163,20 @@ def replenish_workbook(target_wb_path, master_registry):
         'MediaMarkt_NL_LG_Full': ('NL', 'MediaMarkt', 'LG'),
         'MediaWorld_IT_SAMSUNG_Full': ('IT', 'MediaWorld', 'SAMSUNG'),
         'MediaWorld_IT_LG_Full': ('IT', 'MediaWorld', 'LG'),
-        'Fnac_FR_SAMSUNG_Full': ('FR', 'Fnac', 'SAMSUNG'),
-        'Fnac_FR_LG_Full': ('FR', 'Fnac', 'LG'),
+        'Boulanger_FR_SAMSUNG_Full': ('FR', 'Boulanger', 'SAMSUNG'),
+        'Boulanger_FR_LG_Full': ('FR', 'Boulanger', 'LG'),
+        'Worten_PT_Samsung': ('PT', 'Worten', 'SAMSUNG'),
+        'Worten_PT_LG': ('PT', 'Worten', 'LG'),
+        'Elgiganten_SE_Samsung': ('SE', 'Elgiganten', 'SAMSUNG'),
+        'Elgiganten_SE_LG': ('SE', 'Elgiganten', 'LG'),
+        'MediaExpert_PL_Samsung': ('PL', 'MediaExpert', 'SAMSUNG'),
+        'MediaExpert_PL_LG': ('PL', 'MediaExpert', 'LG'),
         'Alza_CZ_Samsung': ('CZ', 'Alza', 'SAMSUNG'),
         'Alza_CZ_LG': ('CZ', 'Alza', 'LG'),
-        'Public_GR_Samsung': ('GR', 'Public', 'SAMSUNG'),
-        'Public_GR_LG': ('GR', 'Public', 'LG'),
+        'Kotsovolos_GR_Samsung': ('GR', 'Kotsovolos', 'SAMSUNG'),
+        'Kotsovolos_GR_LG': ('GR', 'Kotsovolos', 'LG'),
+        'eMAG_RO_Samsung': ('RO', 'eMAG', 'SAMSUNG'),
+        'eMAG_RO_LG': ('RO', 'eMAG', 'LG'),
         'MediaMarkt_HU_Samsung': ('HU', 'MediaMarkt', 'SAMSUNG'),
         'MediaMarkt_HU_LG': ('HU', 'MediaMarkt', 'LG'),
         'MediaMarkt_Samsung_Full': ('CH', 'MediaMarkt', 'SAMSUNG'),
@@ -210,6 +218,18 @@ def replenish_workbook(target_wb_path, master_registry):
                 str(entry.get('retailer', '')).lower() == r_name.lower() and
                 str(entry.get('brand', '')).lower() == b_name.lower()):
                 m_code = str(entry.get('model_code', '')).strip().upper()
+                url_str = str(entry.get('url', '')).lower()
+                # Pan-European Blacklisted 3rd-Party Marketplace Guard
+                if 'mediamarkt' in url_str or 'mediaworld' in url_str:
+                    m_pid = re.search(r'-(\d{8,10})\.html', url_str)
+                    if m_pid and (len(m_pid.group(1)) >= 9 or m_pid.group(1).startswith(('14', '15', '16', '17', '18'))):
+                        continue
+                if 'offertype=marketplace' in url_str:
+                    continue
+                if 'worten.pt' in url_str and 'seller=' in url_str and 'worten' not in url_str.split('seller=')[1].split('&')[0]:
+                    continue
+                if 'emag.ro' in url_str and ('/partener-' in url_str or 'seller_id=' in url_str):
+                    continue
                 if m_code and m_code not in existing_codes and entry.get('url'):
                     candidates.append(entry)
 

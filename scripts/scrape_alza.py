@@ -86,14 +86,17 @@ def extract_model_code_and_info(title_upper, brand, size_val):
             (r'QNED70B', 'QNED70B', 2026),
             (r'QNED7EB', 'QNED7EB', 2026),
             (r'MRGB96B', 'MRGB96B', 2026),
+            (r'MRGB96', 'MRGB96B', 2026),
+            (r'MRGB88B', 'MRGB88B', 2026),
             (r'MRGB87B', 'MRGB87B', 2026),
             (r'MRGB86B', 'MRGB85B', 2026),
+            (r'MRGB8[5678]', 'MRGB87B', 2026),
             (r'LX7B', 'LX7B', 2026), (r'27LX6', '27LX6', 2026), (r'STANBYME', 'STANBYME', 2026),
             (r'OLED\d{2}G6', 'OLED G6', 2026), (r'OLED.*G6', 'OLED G6', 2026),
             (r'OLED\d{2}C6', 'OLED C6', 2026), (r'OLED.*C6', 'OLED C6', 2026),
             (r'OLED\d{2}B6', 'OLED B6', 2026), (r'OLED.*B6', 'OLED B6', 2026),
             (r'\bG6\b', 'OLED G6', 2026), (r'\bC6\b', 'OLED C6', 2026), (r'\bB6\b', 'OLED B6', 2026),
-            (r'NU85', 'NU85', 2026), (r'NU8E', 'NU85', 2026), (r'UA77', 'UA77', 2026)
+            (r'NU85', 'NU85', 2026), (r'NU80', 'NU80', 2026), (r'NU8E', 'NU85', 2026), (r'UA77', 'UA77', 2026)
         ]
         lg_2025 = [
             (r'QNED93A', 'QNED93A', 2025),
@@ -109,7 +112,7 @@ def extract_model_code_and_info(title_upper, brand, size_val):
             (r'UA75', 'UA75', 2025), (r'UA73', 'UA75', 2025)
         ]
 
-        m_code = re.search(r'(OLED\d{2}[A-Z0-9]+|\d{2}QNED[A-Z0-9]+|\d{2}UA[A-Z0-9]+|\d{2}NU[A-Z0-9]+)', title_upper)
+        m_code = re.search(r'(OLED\d{2}[A-Z0-9]+|\d{2,3}QNED[A-Z0-9]+|\d{2,3}MRGB[A-Z0-9]+|\d{2}UA[A-Z0-9]+|\d{2}NU[A-Z0-9]+)', title_upper)
         if m_code:
             model_code = m_code.group(1)
         else:

@@ -93,6 +93,8 @@ for excel_path in excel_files:
     try:
         wb = openpyxl.load_workbook(excel_path, data_only=True)
         for sheet_name in wb.sheetnames:
+            if "ALTEX" in sheet_name.upper() or "PUBLIC" in sheet_name.upper():
+                continue
             ws = wb[sheet_name]
             country = "EU"
             retailer = "MediaMarkt"
@@ -100,18 +102,18 @@ for excel_path in excel_files:
             
             if "HU" in sheet_name: country = "HU"; retailer = "MediaMarkt"
             elif "CZ" in sheet_name: country = "CZ"; retailer = "Alza"
-            elif "GR" in sheet_name: country = "GR"; retailer = "Public"
+            elif "GR" in sheet_name: country = "GR"; retailer = "Kotsovolos"
             elif "DE" in sheet_name: country = "DE"; retailer = "MediaMarkt"
             elif "AT" in sheet_name: country = "AT"; retailer = "MediaMarkt"
             elif "CH" in sheet_name: country = "CH"; retailer = "MediaMarkt"
             elif "ES" in sheet_name: country = "ES"; retailer = "MediaMarkt"
             elif "NL" in sheet_name: country = "NL"; retailer = "MediaMarkt"
             elif "UK" in sheet_name: country = "UK"; retailer = "Currys"
-            elif "FR" in sheet_name: country = "FR"; retailer = "Fnac"
+            elif "FR" in sheet_name: country = "FR"; retailer = "Boulanger" if "BOULANGER" in sheet_name.upper() else "Fnac"
             elif "IT" in sheet_name: country = "IT"; retailer = "MediaWorld"
             elif "PL" in sheet_name: country = "PL"; retailer = "MediaExpert"
             elif "PT" in sheet_name: country = "PT"; retailer = "Worten"
-            elif "RO" in sheet_name: country = "RO"; retailer = "Altex"
+            elif "RO" in sheet_name: country = "RO"; retailer = "eMAG"
             elif "SE" in sheet_name: country = "SE"; retailer = "Elgiganten"
             
             headers = [str(ws.cell(row=1, column=c).value or "").lower() for c in range(1, ws.max_column + 1)]
@@ -261,15 +263,15 @@ for fn in ["raw_alza_samsung.json", "raw_alza_lg.json"]:
         except Exception as e:
             print(f"  [WARN] Error loading {fn}: {e}")
 
-print("[MASTER REGISTRY] 5. Scanning Greece (Public.gr)...")
-for fn in ["raw_public_gr_samsung.json", "raw_public_gr_lg.json"]:
+print("[MASTER REGISTRY] 5. Scanning Greece (Kotsovolos.gr)...")
+for fn in ["raw_kotsovolos_gr_samsung.json", "raw_kotsovolos_gr_lg.json"]:
     fp = os.path.join(data_dir, fn)
     if os.path.exists(fp):
         try:
             with open(fp, "r", encoding="utf-8") as f:
                 items = json.load(f)
             for it in items:
-                add_to_registry("GR", "Public", it.get("brand", ""), it.get("model_code", ""), it.get("year", 2025), it.get("size", 0), it.get("title", ""), it.get("url", ""))
+                add_to_registry("GR", "Kotsovolos", it.get("brand", ""), it.get("model_code", ""), it.get("year", 2025), it.get("size", 0), it.get("title", ""), it.get("url", ""))
         except Exception as e:
             print(f"  [WARN] Error loading {fn}: {e}")
 
@@ -291,7 +293,7 @@ for fn in ["mediamarkt_hu_full.json", "raw_mediamarkt_hu_deep.json"]:
         except Exception as e:
             print(f"  [WARN] Error loading {fn}: {e}")
 
-print("[MASTER REGISTRY] 7. Scanning Western Europe (DE, ES, NL, IT, AT, UK)...")
+print("[MASTER REGISTRY] 7. Scanning Pan-Europe (DE, ES, NL, IT, AT, UK, PT, SE, PL, RO)...")
 we_sources = [
     ("raw_mm-de_samsung.json", "DE", "MediaMarkt", "SAMSUNG"),
     ("raw_mm-de_lg.json", "DE", "MediaMarkt", "LG"),
@@ -311,8 +313,8 @@ we_sources = [
     ("raw_elgiganten_se_lg.json", "SE", "Elgiganten", "LG"),
     ("raw_mediaexpert_pl_samsung.json", "PL", "MediaExpert", "SAMSUNG"),
     ("raw_mediaexpert_pl_lg.json", "PL", "MediaExpert", "LG"),
-    ("raw_altex_ro_samsung.json", "RO", "Altex", "SAMSUNG"),
-    ("raw_altex_ro_lg.json", "RO", "Altex", "LG"),
+    ("raw_emag_ro_samsung.json", "RO", "eMAG", "SAMSUNG"),
+    ("raw_emag_ro_lg.json", "RO", "eMAG", "LG"),
 ]
 for fn, country, ret, b in we_sources:
     fp = os.path.join(data_dir, fn)

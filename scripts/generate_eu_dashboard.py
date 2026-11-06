@@ -25,12 +25,15 @@ firebase_public_path = os.path.join(root_dir, "public_eu", "index.html")
 artifact_dir = os.environ.get("ANTIGRAVITY_ARTIFACT_DIR")
 artifact_dashboard_path = os.path.join(artifact_dir, "eu_price_dashboard.html") if artifact_dir else None
 
-EU_COUNTRIES = ["UK", "DE", "FR", "ES", "PT", "IT", "NL", "AT", "CH", "SE", "PL", "CZ", "HU", "RO", "GR"]
+ALL_EU_COUNTRIES = ["UK", "DE", "FR", "ES", "PT", "IT", "NL", "AT", "CH", "SE", "PL", "CZ", "HU", "RO", "GR"]
+# [2026-10-17 / Full 15-Country Rollout] RO (eMAG) and GR (Kotsovolos) activated via live curl_cffi scrapers.
+SUSPENDED_COUNTRIES = {}
+EU_COUNTRIES = [c for c in ALL_EU_COUNTRIES if c not in SUSPENDED_COUNTRIES]
 
 COUNTRY_RETAILERS = {
     "UK": ["Currys"],
     "DE": ["MediaMarkt"],
-    "FR": ["Fnac"],
+    "FR": ["Boulanger"],
     "ES": ["MediaMarkt"],
     "PT": ["Worten"],
     "IT": ["MediaWorld"],
@@ -41,8 +44,8 @@ COUNTRY_RETAILERS = {
     "PL": ["MediaExpert"],
     "CZ": ["Alza"],
     "HU": ["MediaMarkt"],
-    "RO": ["Altex"],
-    "GR": ["Public"]
+    "RO": ["eMAG"],
+    "GR": ["Kotsovolos"]
 }
 
 COUNTRY_CURRENCIES = {
@@ -85,11 +88,10 @@ PAIRS_CONFIG_2026 = {
     ],
     "MRGB": STANDARD_MRGB_PAIRS_2026,
     "QNED/QLED": [
-        {"lg": "QNED93B", "sam": "QN90H", "sizes": ["85", "75", "65", "55"]},
         {"lg": "QNED86B", "sam": "M90H", "sizes": ["100"]},
         {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
         {"lg": "QNED81B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
-        {"lg": "QNED80B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED82B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
         {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
     ],
     "UHD 4K": [
@@ -152,8 +154,36 @@ PAIRS_CONFIG_2025_DE = {
     "UHD 4K": PAIRS_CONFIG_2025["UHD 4K"]
 }
 
-PAIRS_CONFIG_2026_ES = PAIRS_CONFIG_2026
-PAIRS_CONFIG_2026_DE = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_ES = {
+    "OLED": [
+        {"lg": "G6", "sam": "S99H", "sizes": ["83", "77", "65", "55"]},
+        {"lg": "G6", "sam": "S95H", "sizes": ["83", "77", "65", "55", "48"]},
+        {"lg": "C6", "sam": "S90H", "sizes": ["83", "77", "65", "55", "48", "42"]},
+        {"lg": "B6", "sam": "S83H", "sizes": ["83", "77", "65", "55", "48"]}
+    ],
+    "MRGB": STANDARD_MRGB_PAIRS_2026,
+    "QNED/QLED": [
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED81B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED72B", "sam": "M73H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+    ],
+    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+}
+PAIRS_CONFIG_2026_DE = {
+    "OLED": PAIRS_CONFIG_2026["OLED"],
+    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "QNED/QLED": [
+        {"lg": "QNED86B", "sam": "M90H", "sizes": ["100"]},
+        {"lg": "QNED86B", "sam": "QN80H", "sizes": ["100"]},
+        {"lg": "QNED93B", "sam": "QN80H", "sizes": ["86", "85", "75", "65", "55", "50"]},
+        {"lg": "QNED83B", "sam": "M80H", "sizes": ["86", "85"]},
+        {"lg": "QNED82B", "sam": "M80H", "sizes": ["75", "65", "55", "50", "43"]},
+        {"lg": "QNED70B", "sam": "M70H", "sizes": ["75", "65", "55", "50", "43"]}
+    ],
+    "UHD 4K": [
+        {"lg": "NU800B", "sam": "U8079H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    ]
+}
 PAIRS_CONFIG_2026_AT = PAIRS_CONFIG_2026
 PAIRS_CONFIG_2026_CH = PAIRS_CONFIG_2026
 
@@ -175,7 +205,18 @@ PAIRS_CONFIG_2025_CH = {
 }
 
 
-PAIRS_CONFIG_2026_FR = PAIRS_CONFIG_2026
+PAIRS_CONFIG_2026_FR = {
+    "OLED": PAIRS_CONFIG_2026["OLED"],
+    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "QNED/QLED": [
+        {"lg": "QNED93B", "sam": "QN80H", "sizes": ["86", "85", "75", "65", "55"]},
+        {"lg": "QNED87B", "sam": "QN80H", "sizes": ["100", "86", "85", "75", "65", "55", "50"]},
+        {"lg": "QNED86B", "sam": "QN70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]},
+        {"lg": "QNED86B", "sam": "M80H", "sizes": ["86", "85", "75", "65", "55"]},
+        {"lg": "QNED70B", "sam": "M70H", "sizes": ["86", "85", "75", "65", "55", "50", "43"]}
+    ],
+    "UHD 4K": PAIRS_CONFIG_2026["UHD 4K"]
+}
 
 PAIRS_CONFIG_2025_FR = {
     "OLED": PAIRS_CONFIG_2025["OLED"],
@@ -188,6 +229,15 @@ PAIRS_CONFIG_2025_FR = {
 }
 
 PAIRS_CONFIG_2026_HU = PAIRS_CONFIG_2026
+
+PAIRS_CONFIG_2026_SE = {
+    "OLED": PAIRS_CONFIG_2026["OLED"],
+    "MRGB": PAIRS_CONFIG_2026["MRGB"],
+    "QNED/QLED": PAIRS_CONFIG_2026["QNED/QLED"],
+    "UHD 4K": [
+        {"lg": "NU85", "sam": "U7025H", "sizes": ["85", "75", "65", "55", "50", "43"]}
+    ]
+}
 
 PAIRS_CONFIG_2025_HU = {
     "OLED": [
@@ -429,13 +479,51 @@ def find_product(products, brand, size, series, year):
                     match = bool(re.search(r'(?:^|\d{2})' + series_upper, code))
         elif series_upper in ["QNED93B/92B", "QNED93B", "QNED92B", "QNED93A", "QNED93", "QNED92"]:
             match = any(x in code for x in ["QNED93", "QNED92", "QNED91", "QNED90"])
-        elif series_upper in ["QNED86B", "QNED86", "QNED85B", "QNED85", "QNED87B", "QNED87"]:
-            match = any(x in code for x in ["QNED86", "QNED85", "QNED87"])
-        elif series_upper in ["QNED81B", "QNED81", "QNED82B", "QNED82"]:
-            match = any(x in code for x in ["QNED81", "QNED82", "QNED83", "QNED84", "QNED80"])
-        elif series_upper in ["QNED80B", "QNED80A", "QNED80"]:
+        elif series_upper in ["QNED85B", "QNED85"]:
+            if any(x in code for x in ["QNED86A", "QNED87A", "QNED85A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED85", "QNED86", "QNED87"])
+        elif series_upper in ["QNED86B", "QNED86", "QNED87B", "QNED87"]:
+            if any(x in code for x in ["QNED86A", "86A", "86A6", "QNED87A", "87A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED86", "QNED85", "QNED87", "QNED93B", "QNED8EB"])
+        elif series_upper in ["QNED86A", "QNED87A", "QNED85A"]:
+            match = any(x in code for x in ["QNED86A", "QNED87A", "QNED85A", "86A", "87A", "85A"])
+        elif series_upper in ["QNED82B", "QNED82"]:
+            if any(x in code for x in ["QNED80", "QNED81", "QNED8E", "QNED82A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED82", "82B"])
+        elif series_upper in ["QNED83B", "QNED83"]:
+            if any(x in code for x in ["QNED80", "QNED81", "QNED8E"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED83", "83B"])
+        elif series_upper in ["QNED8MB", "QNED8M"]:
+            if any(x in code for x in ["QNED80", "QNED81", "QNED8E"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED8MB", "QNED8M", "8MB", "8M"])
+        elif series_upper in ["QNED81B", "QNED81"]:
+            if any(x in code for x in ["QNED80A", "QNED81A", "QNED82A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED81", "QNED84", "QNED80", "QNED8EB", "QNED8MB"])
+        elif series_upper in ["QNED80B", "QNED80"]:
+            if any(x in code for x in ["QNED80A", "QNED81A", "QNED82A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED84", "QNED8EB", "QNED8MB"])
+        elif series_upper == "QNED80A":
             match = any(x in code for x in ["QNED80", "QNED81", "QNED82", "QNED83", "QNED84"])
-        elif series_upper in ["QNED70A", "QNED70B", "QNED70", "QNED71B", "QNED72B", "QNED7EB"]:
+        elif series_upper in ["QNED70B", "QNED71B", "QNED72B", "QNED7EB"]:
+            if any(x in code for x in ["QNED70A", "QNED71A", "QNED72A"]):
+                match = False
+            else:
+                match = any(x in code for x in ["QNED70", "QNED71", "QNED72", "QNED7E"])
+        elif series_upper == "QNED70A":
             match = any(x in code for x in ["QNED70", "QNED71", "QNED72", "QNED7E"])
         elif series_upper in ["QN90H", "QN90F", "QN90"]:
             if not any(x in code for x in ["LS03", "LS01", "LS05", "FRAME"]):
@@ -450,26 +538,27 @@ def find_product(products, brand, size, series, year):
             match = any(x in code for x in ["M90", "M92", "M95"])
         elif series_upper in ["M80H", "M80", "M82H", "M82", "M84H", "M84", "M86H", "M86"]:
             match = any(x in code for x in ["M80", "M82", "M83", "M84", "M85", "M86"])
-        elif series_upper in ["M70H", "M70", "M72H", "M72", "M74H", "M74"]:
+        elif series_upper in ["M70H", "M70", "M72H", "M72", "M73H", "M73", "M74H", "M74"]:
             match = any(x in code for x in ["M70", "M72", "M73", "M74", "M75", "M76"])
         elif series_upper in ["NU800", "NU800B", "NU80", "NU8E", "NU85", "NU850"]:
             match = any(x in code for x in ["NU850", "NU85", "NU800", "NU80", "NU8E", "NU75", "UA77", "UT", "UR", "UQ", "NANO80", "NANO81", "NANO8"])
         elif series_upper in ["UA75", "UA73"]:
-            match = any(x in code for x in ["UA75", "UA73", "UA77", "UT", "UR", "UQ"])
+            match = any(x in code for x in ["UA75", "UA74", "UA73", "UA77", "UT", "UR", "UQ"])
         elif series_upper in ["U8072F", "U8072"]:
             match = any(x in code for x in ["U8072", "U8070", "8072", "U8000", "U8005", "DU8000", "CU8000"])
-        elif series_upper in ["U7025F", "U7025"]:
+        elif series_upper in ["U7025F", "U7025", "U7025H"]:
             match = any(x in code for x in ["U7025", "7025", "TU7025"])
-        elif series_upper in ["U8000F", "U8000H", "U8000"]:
+        elif series_upper in ["U8000F", "U8000H", "U8000", "U8079H", "U8079", "U8070H", "U8070"]:
             match = any(x in code for x in ["U8000", "U8005", "U8010", "U8070", "U8072", "U8075", "U8079", "U8080", "U8090", "U8092", "8072", "8092", "DU8000", "CU8000"])
         elif series_upper in ["S99H", "S99"]: match = "S99" in code
         elif series_upper in ["S95H", "S95F", "S95"]: match = "S95" in code
         elif series_upper in ["S90H", "S90F", "S90"]: match = any(x in code for x in ["S90", "S91", "S92", "S93", "S94"])
         elif series_upper in ["S85H", "S85F", "S85"]: match = any(x in code for x in ["S85", "S84", "S86", "S83", "S82", "S81", "S80"])
+        elif series_upper in ["S83H", "S83"]: match = any(x in code for x in ["S83", "S85", "S84", "S86", "S82", "S81", "S80"])
         elif series_upper in ["MRGB95B", "MRGB96B", "MRGB96", "MRGB95", "MRGB9"]: match = any(x in code for x in ["MRGB96", "MRGB95", "MRGB9", "MR95", "MR96"])
         elif series_upper in ["MRGB87B", "MRGB87", "MRGB88B", "MRGB88", "MRGB86B", "MRGB86", "MRGB85B", "MRGB85", "MRGB8"]: match = any(x in code for x in ["MRGB88", "MRGB87", "MRGB86", "MRGB85", "MRGB8", "MR85"])
         elif series_upper in ["R95H", "R95", "R96H", "R96"]: match = bool(re.search(r'(?:R95|MR95|R96|MR96)', code))
-        elif series_upper in ["R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R86|R85)', code)) and not bool(re.search(r'(?:R95|MR95|R96|MR96)', code))
+        elif series_upper in ["R87H", "R87", "R86H", "R86", "R85H", "R85"]: match = bool(re.search(r'(?:R87|R86|R85)', code)) and not bool(re.search(r'(?:R95|MR95|R96|MR96)', code))
         elif series_upper in ["LR60", "32LR60", "LB65", "32LB65", "LQ63", "32LQ63", "LB70", "32LB70"]:
             match = any(x in code for x in ["LR60", "LB65", "LQ63", "LQ60", "LM63", "LQ57", "LB70", "LB700", "LB7000"])
         elif series_upper in ["F6000", "32F6000", "H5002", "32H5002", "H5005", "32H5005", "T5302", "T4302"]:
@@ -495,6 +584,18 @@ def find_product(products, brand, size, series, year):
                 pass
             elif c_sz != target_size:
                 prio += 20
+        if series_upper == "C6":
+            # User rule for C6 matching:
+            # 1. Main C6 (e.g. OLEDxxC6, C6 Pro, C66LB, C67, C68, C69, C6E, C61, C62) -> prio + 0
+            # 2. Fallback to C64 -> prio + 1
+            # 3. Fallback to C65 / others -> prio + 2
+            if "C64" in code:
+                return prio + 1
+            elif "C65" in code:
+                return prio + 2
+            elif "C6" in code:
+                return prio + 0
+            return prio + 3
         if any(x in code for x in ["G56", "G66", "C55", "C65", "B65", "B55"]):
             return prio + 0
         if series_upper in ["NU85", "NU850"]:
@@ -513,20 +614,54 @@ def find_product(products, brand, size, series, year):
             elif any(x in code for x in ["UA77", "NU75"]):
                 return prio + 2
             return prio + 5
-        if series_upper == "QNED86B":
-            if "QNED86" in code:
+        if series_upper in ["QNED93B", "QNED93"]:
+            if "QNED93" in code:
                 return prio + 0
-            elif "QNED85" in code:
+            elif "QNED92" in code:
                 return prio + 1
-            elif "QNED87" in code:
+            elif "QNED91" in code:
                 return prio + 2
             return prio + 3
+        if series_upper in ["QNED85B", "QNED85"]:
+            if "QNED85" in code:
+                return prio + 0
+            elif any(x in code for x in ["QNED86", "QNED87"]):
+                return prio + 1
+            return prio + 2
+        if series_upper in ["QNED86B", "QNED86", "QNED87B", "QNED87"]:
+            if any(x in code for x in ["QNED86", "QNED87"]):
+                return prio + 0
+            elif "QNED93B" in code:
+                return prio + 1
+            elif "QNED8EB" in code:
+                return prio + 2
+            elif "QNED85" in code:
+                return prio + 5
+            return prio + 3
+        if series_upper in ["QNED82B", "QNED82"]:
+            if any(x in code for x in ["QNED82B", "QNED82"]):
+                return prio + 0
+            elif any(x in code for x in ["QNED81B", "QNED81", "QNED83B", "QNED83", "QNED8EB", "QNED8MB"]):
+                return prio + 1
+            elif any(x in code for x in ["QNED80B", "QNED80"]):
+                return prio + 2
+            return prio + 3
+        if series_upper in ["QNED83B", "QNED83"]:
+            if "QNED83" in code:
+                return prio + 0
+            return prio + 2
+        if series_upper in ["QNED8MB", "QNED8M"]:
+            if any(x in code for x in ["QNED8MB", "8MB", "8M"]):
+                return prio + 0
+            return prio + 2
         if series_upper == "QNED81B":
             if "QNED81" in code:
                 return prio + 0
             elif "QNED82" in code:
                 return prio + 1
             elif "QNED83" in code:
+                return prio + 2
+            elif "QNED8EB" in code:
                 return prio + 2
             elif "QNED84" in code:
                 return prio + 3
@@ -536,7 +671,7 @@ def find_product(products, brand, size, series, year):
         if series_upper in ["QNED80B", "QNED80"]:
             if any(x in code for x in ["QNED80B", "QNED80"]):
                 return prio + 0
-            elif any(x in code for x in ["QNED81B", "QNED81", "QNED83B", "QNED83"]):
+            elif any(x in code for x in ["QNED81B", "QNED81", "QNED83B", "QNED83", "QNED8EB", "QNED8MB"]):
                 return prio + 1
             elif any(x in code for x in ["QNED82B", "QNED82"]):
                 return prio + 2
@@ -547,10 +682,36 @@ def find_product(products, brand, size, series, year):
             elif "M82" in code:
                 return prio + 1
             return prio + 2
-        if any(x in code for x in ["U8000", "U8005", "U8010", "U8070", "U8075", "U8090"]):
+        if series_upper in ["M70H", "M70", "M72H", "M72", "M73H", "M73", "M74H", "M74"]:
+            if code.endswith("HAU") and len(matched_candidates) > 1:
+                prio += 50000
+            return prio + int(item.get("net") or item.get("price") or 999999)
+        if series_upper in ["R87H", "R87", "R86H", "R86", "R85H", "R85", "R95H", "R95", "R96H", "R96"]:
+            if "AUXZT" in code and len(matched_candidates) > 1:
+                prio += 50000
+            return prio + int(item.get("net") or item.get("price") or 999999)
+        if series_upper in ["QN80H", "QN80"]:
+            if "QN80H" in code:
+                return prio + 0
+            elif "QN80F" in code:
+                return prio + 2
+            return prio + 3
+        if series_upper in ["U7025H", "U7025F", "U7025"]:
+            if "U7025H" in code:
+                return prio + 0
+            elif "U7025" in code:
+                return prio + 1
+        if series_upper in ["U8079H", "U8079"]:
+            if "U8079H" in code:
+                return prio + 0
+            elif "U8079" in code:
+                return prio + 1
+        if any(x in code for x in ["U8000", "U8005", "U8010", "U8070", "U8075", "U8079", "U8090"]):
             return prio + 1
-        if "U7000" in code:
-            return prio + 2
+        if series_upper in ["S83H", "S83"]:
+            if "S83" in code:
+                return prio + 0
+            return prio + 1
         return prio + 3
         
     matched_candidates.sort(key=get_priority)
@@ -562,14 +723,28 @@ def find_sheet(wb, possible_names):
             return wb[name]
     return None
 
+def has_country_sheets(wb, country):
+    """True if the workbook contains at least one sheet for this country's active retailers."""
+    rets = list(COUNTRY_RETAILERS.get(country, []))
+    if country == "FR" and "Fnac" not in rets:
+        rets.append("Fnac")
+    return any(any(n.startswith(f"{r}_{country}_") for r in rets) for n in wb.sheetnames)
+
 def build_paired_data(wb, country, year, config):
     paired = {}
     sheet_data = {}
     
     for ret in COUNTRY_RETAILERS[country]:
         ret_key = ret.lower().replace('mediamarkt', 'mm').replace('mediaworld', 'mw').replace('unieuro', 'uni')
-        samsung_sheet = find_sheet(wb, [f"{ret}_{country}_SAMSUNG_Full", f"{ret}_{country}_SAMSUNG_Full (EUR)", f"{ret}_{country}_SAMSUNG_Full (GBP)", f"{ret}_{country}_Samsung", f"{ret}_{country}_SAMSUNG", f"Alza_CZ_Samsung", "Public_GR_Samsung", "MediaMarkt_HU_Samsung"])
-        lg_sheet = find_sheet(wb, [f"{ret}_{country}_LG_Full", f"{ret}_{country}_LG_Full (EUR)", f"{ret}_{country}_LG_Full (GBP)", f"{ret}_{country}_LG", f"{ret}_{country}_LG", f"Alza_CZ_LG", "Public_GR_LG", "MediaMarkt_HU_LG"])
+        # [2026-10-08] Removed hardcoded fallbacks "Alza_CZ_*", "Public_GR_*", "MediaMarkt_HU_*": when a
+        # country's own sheet was missing, another country's sheet was silently used instead.
+        sam_candidates = [f"{ret}_{country}_SAMSUNG_Full", f"{ret}_{country}_SAMSUNG_Full (EUR)", f"{ret}_{country}_SAMSUNG_Full (GBP)", f"{ret}_{country}_Samsung", f"{ret}_{country}_SAMSUNG"]
+        lg_candidates = [f"{ret}_{country}_LG_Full", f"{ret}_{country}_LG_Full (EUR)", f"{ret}_{country}_LG_Full (GBP)", f"{ret}_{country}_LG"]
+        if country == "FR" and ret == "Boulanger":
+            sam_candidates.extend(["Fnac_FR_SAMSUNG_Full", "Fnac_FR_SAMSUNG_Full (EUR)", "Fnac_FR_Samsung", "Fnac_FR_SAMSUNG"])
+            lg_candidates.extend(["Fnac_FR_LG_Full", "Fnac_FR_LG_Full (EUR)", "Fnac_FR_LG"])
+        samsung_sheet = find_sheet(wb, sam_candidates)
+        lg_sheet = find_sheet(wb, lg_candidates)
         
         sheet_data[ret_key] = {
             "SAMSUNG": extract_products_from_sheet(samsung_sheet),
@@ -584,7 +759,7 @@ def build_paired_data(wb, country, year, config):
             sam_series = pair["sam"]
             
             for size in pair["sizes"]:
-                sam_sz_lbl = "85" if str(size) in ["86", "85"] and any(x in sam_series for x in ["R85", "R86", "R95", "QN", "Q", "M7", "M8", "U8"]) else str(size)
+                sam_sz_lbl = "85" if str(size) in ["86", "85"] and any(x in sam_series for x in ["R85", "R86", "R95", "QN", "Q", "M7", "M8", "U8", "U7"]) else str(size)
                 lg_sz_lbl = "86" if str(size) in ["86", "85"] and ("MRGB" in lg_series or "QNED" in lg_series) else str(size)
 
                 pair_label_str = f"{lg_sz_lbl}\"{lg_series} vs. {sam_sz_lbl}\"{sam_series}"
@@ -595,17 +770,21 @@ def build_paired_data(wb, country, year, config):
                 elif ("MRGB88" in lg_series or "MRGB87" in lg_series or "MRGB86" in lg_series or "MRGB85" in lg_series) and str(size) in ["86", "85"]:
                     pair_label_str = f'86"{lg_series} vs. 85"{sam_series}'
                 elif "QNED93" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED93B/92B vs. 85"QN80H'
+                    pair_label_str = '86"QNED93B vs. 85"QN80H' if lg_series == 'QNED93B' else '86"QNED93B/92B vs. 85"QN80H'
                 elif "QNED87" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED87B vs. 85"QN80H'
-                elif "QNED80" in lg_series and "M80" in sam_series and str(size) in ["86", "85"]:
-                    pair_label_str = '86"QNED80B vs. 85"M80H'
+                elif ("QNED83" in lg_series or "QNED80" in lg_series) and "M80" in sam_series and str(size) in ["86", "85"]:
+                    pair_label_str = '86"QNED83B vs. 85"M80H' if "QNED83" in lg_series else '86"QNED80B vs. 85"M80H'
                 elif "QNED70" in lg_series and ("M74" in sam_series or "M70" in sam_series) and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED70B vs. 85"M74H' if "M74" in sam_series else '86"QNED70B vs. 85"M70H'
                 elif "QNED72" in lg_series and ("M70" in sam_series or "M72" in sam_series) and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED72B vs. 85"M70H' if "M70" in sam_series else '86"QNED72B vs. 85"M72H'
                 elif "QNED72" in lg_series and ("M80" in sam_series or "M82" in sam_series) and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED72B vs. 85"M80H' if "M80" in sam_series else '86"QNED72B vs. 85"M82H'
+                elif "QNED85" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
+                    pair_label_str = '86"QNED85B vs. 85"QN80H'
+                elif "QNED85" in lg_series and "M80" in sam_series and str(size) in ["86", "85"]:
+                    pair_label_str = '86"QNED85B vs. 85"M80H'
                 elif "QNED86" in lg_series and "QN80" in sam_series and str(size) in ["86", "85"]:
                     pair_label_str = '86"QNED86B vs. 85"QN80H'
                 elif "QNED82" in lg_series and "M80" in sam_series and str(size) in ["86", "85"]:
@@ -662,6 +841,7 @@ def get_country_pair_configs(country):
     elif country == "GR": cfg_2026 = PAIRS_CONFIG_2026_GR
     elif country == "FR": cfg_2026 = PAIRS_CONFIG_2026_FR
     elif country == "HU": cfg_2026 = PAIRS_CONFIG_2026_HU
+    elif country == "SE": cfg_2026 = PAIRS_CONFIG_2026_SE
     else: cfg_2026 = PAIRS_CONFIG_2026
 
     if country == "NL": cfg_2025 = PAIRS_CONFIG_2025_NL
@@ -708,6 +888,8 @@ def scan_history_data():
             for country in EU_COUNTRIES:
                 if country not in historical_data:
                     historical_data[country] = {"2025": {}, "2026": {}}
+                if not has_country_sheets(wb, country):
+                    continue  # country not surveyed/released on this date -> no (zero) data point
                 
                 cfg_2025, cfg_2026 = get_country_pair_configs(country)
                 for year, config in [("2025", cfg_2025), ("2026", cfg_2026)]:
@@ -779,6 +961,8 @@ def load_workbook_catalog(wb_path):
     wb = openpyxl.load_workbook(wb_path, data_only=True)
     catalog = {}
     for sheet_name in wb.sheetnames:
+        if sheet_name.startswith(('Altex_', 'Public_')):
+            continue
         ws = wb[sheet_name]
         
         country = 'DE'
@@ -787,18 +971,18 @@ def load_workbook_catalog(wb_path):
         
         if 'HU' in sheet_name: country = 'HU'; retailer = 'MediaMarkt'
         elif 'CZ' in sheet_name: country = 'CZ'; retailer = 'Alza'
-        elif 'GR' in sheet_name: country = 'GR'; retailer = 'Public'
+        elif 'GR' in sheet_name: country = 'GR'; retailer = 'Kotsovolos'
         elif 'DE' in sheet_name: country = 'DE'; retailer = 'MediaMarkt'
         elif 'AT' in sheet_name: country = 'AT'; retailer = 'MediaMarkt'
         elif 'CH' in sheet_name: country = 'CH'; retailer = 'MediaMarkt'
         elif 'ES' in sheet_name: country = 'ES'; retailer = 'MediaMarkt'
         elif 'NL' in sheet_name: country = 'NL'; retailer = 'MediaMarkt'
         elif 'UK' in sheet_name: country = 'UK'; retailer = 'Currys'
-        elif 'FR' in sheet_name: country = 'FR'; retailer = 'Fnac'
+        elif 'FR' in sheet_name: country = 'FR'; retailer = 'Boulanger'
         elif 'IT' in sheet_name: country = 'IT'; retailer = 'MediaWorld'
         elif 'PL' in sheet_name: country = 'PL'; retailer = 'MediaExpert'
         elif 'PT' in sheet_name: country = 'PT'; retailer = 'Worten'
-        elif 'RO' in sheet_name: country = 'RO'; retailer = 'Altex'
+        elif 'RO' in sheet_name: country = 'RO'; retailer = 'eMAG'
         elif 'SE' in sheet_name: country = 'SE'; retailer = 'Elgiganten'
         
         if country not in EU_COUNTRIES:
@@ -1163,43 +1347,85 @@ def compute_weekly_changes():
         
     return weekly_changes_data
 
-def main():
-    excel_files = glob.glob(os.path.join(data_dir, "price tracker_EU_*.xlsx"))
-    excel_files = [f for f in excel_files if not os.path.basename(f).startswith("~$")]
-    if not excel_files:
-        print("[ERROR] No EU Price Tracker Excel workbook found.")
-        return
-        
-    excel_files.sort()
-    
-    # Auto pre-archive Excel files to History_EU directory if not archived yet
-    os.makedirs(history_dir, exist_ok=True)
-    import shutil
-    for fpath in excel_files:
-        fname = os.path.basename(fpath)
-        match = re.search(r'(\d{4}\s+\d{4})', fname)
-        if match:
-            folder_name = match.group(1)
-            target_folder = os.path.join(history_dir, folder_name)
-            os.makedirs(target_folder, exist_ok=True)
-            target_dest = os.path.join(target_folder, fname)
-            if not os.path.exists(target_dest):
-                shutil.copy2(fpath, target_dest)
-                print(f"  ➔ [PRE-ARCHIVE] Copied {fname} to {target_folder}")
+def resolve_country_sources():
+    """Per-country source workbook (2026-10-08 country-level isolation).
 
-    latest_excel = excel_files[-1]
-    print(f"[PARSING EXCEL] Loading latest report: {latest_excel}...")
-    
-    wb = openpyxl.load_workbook(latest_excel, data_only=True)
+    1) data/release_manifest.json (written by scripts/release_by_country.py after gates pass)
+    2) legacy fallback: newest History_EU/<date>/ workbook that actually contains the country's sheets
+    Returns {country: {"path", "date", "status"}}.
+    """
+    manifest_path = os.path.join(data_dir, "release_manifest.json")
+    manifest = {}
+    if os.path.exists(manifest_path):
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f).get("countries", {})
+    hist = []
+    if os.path.exists(history_dir):
+        for d in sorted(os.listdir(history_dir), reverse=True):
+            if re.match(r'^\d{4}\s+\d{4}$', d):
+                fs = sorted(f for f in glob.glob(os.path.join(history_dir, d, "price tracker_EU_*.xlsx"))
+                            if not os.path.basename(f).startswith("~$"))
+                if fs:
+                    hist.append((d, fs[-1]))
+    sheet_cache = {}
+    def sheets_of(p):
+        if p not in sheet_cache:
+            try:
+                wb_ = openpyxl.load_workbook(p, read_only=True)
+                sheet_cache[p] = list(wb_.sheetnames)
+                wb_.close()
+            except Exception:
+                sheet_cache[p] = []
+        return sheet_cache[p]
+    out = {}
+    for c in EU_COUNTRIES:
+        m = manifest.get(c)
+        if m and os.path.exists(os.path.join(root_dir, m["workbook"])):
+            out[c] = {"path": os.path.join(root_dir, m["workbook"]), "date": m["survey_date"],
+                      "status": "RELEASED_UNVERIFIED" if m.get("unverified") else "RELEASED"}
+            continue
+        for d, p in hist:
+            if any(f"_{c}_" in n for n in sheets_of(p)):
+                y, md = d.split()
+                out[c] = {"path": p, "date": f"{y}-{md[:2]}-{md[2:]}", "status": "LEGACY_PRE_GATE"}
+                break
+    return out
+
+
+def main():
+    # [2026-10-08] Removed the "auto pre-archive every data/ workbook into History_EU" step: it turned
+    # unreleased / failed workbooks into history. Only scripts/release_by_country.py mirrors to History_EU.
+    sources = resolve_country_sources()
+    if not sources:
+        print("[ERROR] No released or legacy EU workbook found.")
+        return
+
     price_data = {}
-    
+    wb_cache = {}
+    country_dates = {}
+    empty_wb = openpyxl.Workbook()
     for country in EU_COUNTRIES:
+        src = sources.get(country)
+        if not src:
+            print(f"  ➔ [SKIP] {country}: no released survey")
+            wb = empty_wb
+        else:
+            if src["path"] not in wb_cache:
+                print(f"[PARSING EXCEL] {os.path.relpath(src['path'], root_dir)}")
+                wb_cache[src["path"]] = openpyxl.load_workbook(src["path"], data_only=True)
+            wb = wb_cache[src["path"]]
+            country_dates[country] = src
+            print(f"  ➔ {country}: {src['date']} [{src['status']}]")
         cfg_2025, cfg_2026 = get_country_pair_configs(country)
         price_data[country] = {
             "2025": build_paired_data(wb, country, 2025, cfg_2025),
-            "2026": build_paired_data(wb, country, 2026, cfg_2026)
+            "2026": build_paired_data(wb, country, 2026, cfg_2026),
         }
-    wb.close()
+    for wb in wb_cache.values():
+        wb.close()
+    country_survey_dates = {c: {"date": s["date"], "status": s["status"]} for c, s in country_dates.items()}
+    latest_date = max(s["date"] for s in country_dates.values())
+    latest_excel = f"price tracker_EU_{latest_date[:4]} {latest_date[5:7]}{latest_date[8:10]}"
     
     print("[PARSING HISTORY] Scanning all historical survey folders...")
     history_data = scan_history_data()
@@ -1207,6 +1433,38 @@ def main():
     
     weekly_changes_data = compute_weekly_changes()
     price_data["weekly_changes"] = weekly_changes_data
+    try:
+        from scripts.generate_eu_ata_matrix import main as build_ata_matrix_main
+        build_ata_matrix_main()
+        ata_json_path = os.path.join(data_dir, "eu_ata_matrix_2026.json")
+        if os.path.exists(ata_json_path):
+            with open(ata_json_path, "r", encoding="utf-8") as f_ata:
+                price_data["ata_matrix_2026"] = json.load(f_ata)
+            print("  ➔ [ATA MATRIX] Embedded 2026 Subsidiary × Product Weekly ATA Matrix into priceData.")
+
+        # Embed November Daily ATA Matrix
+        try:
+            from scripts.generate_eu_daily_ata_matrix import main as build_daily_ata_matrix_main
+            build_daily_ata_matrix_main()
+        except Exception as e_daily_gen:
+            print(f"  ➔ [WARN] Could not run generate_eu_daily_ata_matrix: {e_daily_gen}")
+
+        daily_ata_json_path = os.path.join(data_dir, "eu_daily_ata_matrix_2026_11.json")
+        if os.path.exists(daily_ata_json_path):
+            with open(daily_ata_json_path, "r", encoding="utf-8") as f_d_ata:
+                price_data["daily_ata_matrix_2026_11"] = json.load(f_d_ata)
+            print("  ➔ [DAILY ATA] Embedded November Daily ATA Matrix into priceData.")
+
+        # Weekly matrix last column (W45) = latest survey day's ATA (e.g. 11/03)
+        try:
+            from scripts.generate_eu_ata_matrix import refresh_latest_week_from_daily
+            refreshed = refresh_latest_week_from_daily()
+            if refreshed:
+                price_data["ata_matrix_2026"] = refreshed
+        except Exception as e_refresh:
+            print(f"  ➔ [WARN] Could not apply latest daily survey to last week column: {e_refresh}")
+    except Exception as e_ata:
+        print(f"  ➔ [WARN] Could not build ata_matrix_2026: {e_ata}")
     
     if not os.path.exists(template_path):
         print(f"[ERROR] HTML base template not found: {template_path}")
@@ -1235,10 +1493,46 @@ def main():
     with open(template_path, "r", encoding="utf-8") as f:
         html_content = f.read()
         
+    import base64
+    ata_b64_str = ""
+    ata_dl_filename = "EU_Weekly_ATA_Matrix_2026.xlsx"
+    ata_latest_xlsx = os.path.join(root_dir, "public_eu", "reports", "EU_Weekly_ATA_Matrix_Latest.xlsx")
+    if os.path.exists(ata_latest_xlsx):
+        with open(ata_latest_xlsx, "rb") as f_xl:
+            ata_b64_str = base64.b64encode(f_xl.read()).decode("ascii")
+        ata_wks = (price_data.get("ata_matrix_2026") or {}).get("weeks") or []
+        if ata_wks:
+            ld = ata_wks[-1]["date"]
+            ata_dl_filename = f"EU_Weekly_ATA_Matrix_{ld[:4]}_{ld[5:7]}{ld[8:10]}.xlsx"
+
+    # Base64 for Daily ATA Excel
+    daily_ata_b64_str = ""
+    daily_ata_dl_filename = "EU_Daily_ATA_Matrix_2026_11.xlsx"
+    daily_ata_xlsx_path = os.path.join(data_dir, "EU_Daily_ATA_Matrix_2026_11.xlsx")
+    if os.path.exists(daily_ata_xlsx_path):
+        with open(daily_ata_xlsx_path, "rb") as f_dxl:
+            daily_ata_b64_str = base64.b64encode(f_dxl.read()).decode("ascii")
+
     json_str = json.dumps(price_data, separators=(',', ':'), ensure_ascii=False)
-    injection_block = f"const priceData = {json_str};\n        const executiveSummaryData = {exec_summary_json};"
+    injection_block = (
+        f"const priceData = {json_str};\n"
+        f"        const executiveSummaryData = {exec_summary_json};\n"
+        f"        const ataMatrixExcelBase64 = \"{ata_b64_str}\";\n"
+        f"        const ataMatrixExcelFilename = \"{ata_dl_filename}\";\n"
+        f"        const dailyAtaMatrixExcelBase64 = \"{daily_ata_b64_str}\";\n"
+        f"        const dailyAtaMatrixExcelFilename = \"{daily_ata_dl_filename}\";"
+    )
     
-    now_dt = datetime.now()
+    # [2026-10-08] Label = survey date of the workbook actually used (was: compile time,
+    # which stamped stale workbooks with today's date).
+    m_date = re.search(r'(\d{4})\s+(\d{2})(\d{2})', os.path.basename(latest_excel))
+    now_dt = datetime(int(m_date.group(1)), int(m_date.group(2)), int(m_date.group(3))) if m_date else datetime.now()
+    _latest_daily = ((price_data.get("daily_ata_matrix_2026_11") or {}).get("active_days") or [None])[-1]
+    if _latest_daily:
+        _mm, _dd = _latest_daily.split("/")
+        _cand = datetime(now_dt.year, int(_mm), int(_dd))
+        if _cand > now_dt:
+            now_dt = _cand
     week_no = now_dt.isocalendar()[1]
     survey_date = now_dt.strftime(f"%Y년 %m월 %d일 (W{week_no})")
     survey_date_dot = now_dt.strftime(f"%Y.%m.%d(W{week_no})")
@@ -1246,6 +1540,22 @@ def main():
     compiled_html = html_content.replace("// {{INSERT_PRICE_DATA}}", injection_block)
     compiled_html = compiled_html.replace("{{SURVEY_DATE}}", survey_date)
     compiled_html = compiled_html.replace("{{SURVEY_DATE_DOT}}", survey_date_dot)
+    status_ko = {"RELEASED": "확정", "RELEASED_UNVERIFIED": "확정·교차검증없음", "LEGACY_PRE_GATE": "이전조사·게이트前"}
+    per_cc = " · ".join(
+        f"<b>{c}</b> {d['date'][5:].replace('-', '/')}" + ("" if d["status"] == "RELEASED" else f"({status_ko.get(d['status'], d['status'])})")
+        for c, d in sorted(country_survey_dates.items()))
+    if SUSPENDED_COUNTRIES:
+        suspended_txt = ", ".join(f"{c} ({r})" for c, r in SUSPENDED_COUNTRIES.items())
+        banner = ('<div id="suspended-banner" style="background:#FFF4E5;color:#8A4B00;border-bottom:1px solid #F5C77E;'
+                  'padding:8px 48px;font-size:12px;line-height:1.6;">⏸️ 조사 중단 국가: ' + suspended_txt +
+                  ' - 라이브 수집기 재구축 전까지 비교에서 제외됩니다.<br>📅 국가별 최종 확정 조사일: ' + per_cc +
+                  ' <span style="opacity:.75">(품질 게이트 미통과 국가는 직전 확정 조사를 표시)</span></div>')
+    else:
+        banner = ('<div id="suspended-banner" style="background:#F0FDF4;color:#166534;border-bottom:1px solid #BBF7D0;'
+                  'padding:8px 48px;font-size:12px;line-height:1.6;">✅ 유럽 15개국 전수 라이브 조사 가동 중 · '
+                  '📅 국가별 최종 확정 조사일: ' + per_cc + '</div>')
+    compiled_html = compiled_html.replace("const priceData = ", f"const countrySurveyDates = {json.dumps(country_survey_dates, ensure_ascii=False)};\n        const priceData = ", 1)
+    # (banner injection removed 2026-11-03 per user request)
     
     with open(workspace_dashboard_path, "w", encoding="utf-8") as f:
         f.write(compiled_html)

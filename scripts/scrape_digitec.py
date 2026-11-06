@@ -8,7 +8,24 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
-# --- TIMEOUT MONKEY PATCH ---
+def _load_env_file():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
+    if os.path.isfile(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8-sig") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip().lstrip("\ufeff")
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env_file()
+
 from playwright.async_api import Page
 TIMEOUT_MULTIPLIER = float(os.environ.get("TIMEOUT_MULTIPLIER", "1.0"))
 if TIMEOUT_MULTIPLIER != 1.0:
@@ -199,122 +216,119 @@ async def scrape_digitec_brand(brand):
         """)
         
         print(f"  -> Extracted {len(raw_items)} raw items. Filtering...")
-        
-        print(f"  -> Raw items count: {len(raw_items)}")
-        for item in raw_items:
-            title = item["title"]
-            price_str = item["price"]
-            promo_desc = item["promo"]
-            seller = item["seller"]
-            href = item["href"]
-            
-            title_upper = title.upper()
-            
-            print(f"DEBUG item: {title[:40]} | Price: {price_str} | Seller: {seller}")
-            
-            if any(x in title_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "ZUBEHÖR", "HALTERUNG"]):
-                print("    -> Skipped: Monitor/Acc")
-                continue
-            if any(x in title_upper for x in ["RETURNED", "REFURBISHED", "USED", "GEBRAUCHT"]):
-                print("    -> Skipped: Used/Refurbished")
-                continue
-                
-            seller_upper = seller.upper()
-            if "DIGITEC" not in seller_upper and "GALAXUS" not in seller_upper:
-                print(f"    -> Skipped: Non-direct seller ({seller})")
-                continue
-                
-            price_val = 0.0
-            if price_str != "N/A":
-                clean_p = price_str.replace("CHF", "").strip()
-                # Match digit sequences ignoring quotes and spaces, allowing dot/comma
-                price_match = re.search(r'([\d\s’\x27\x60,.]+)', clean_p)
-                if price_match:
-                    p_str = price_match.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
-                    if p_str.endswith(".") or p_str.endswith(","):
-                        p_str = p_str[:-1]
-                    try:
-                        price_val = float(p_str)
-                    except ValueError:
-                        price_val = 0.0
-                        
-            if price_val == 0.0:
-                print(f"    -> Skipped: Price is 0 or parsing failed ({price_str})")
-                continue
-                
-            words = title_upper.split()
-            model_code = "Unknown"
-            for w in words:
-                clean_w = w.replace("(", "").replace(")", "").replace(",", "").replace("\"", "")
-                if any(char.isdigit() for char in clean_w) and len(clean_w) >= 6:
-                    model_code = clean_w
-                    break
-                    
-            size_match = re.search(r'(\d+)\s*"', title)
-            if not size_match:
-                size_match = re.search(r'(\d+)\s*Zoll', title, re.IGNORECASE)
-            if not size_match and model_code != "Unknown":
-                code_nums = re.findall(r'\d+', model_code)
-                if code_nums and len(code_nums[0]) in [2, 3]:
-                    size_val = int(code_nums[0])
-                else:
-                    size_val = 55
-            else:
-                size_val = int(size_match.group(1)) if size_match else 55
-                
-            if size_val < 22:
-                print(f"    -> Skipped: Size < 22 ({size_val})")
-                continue
-                
-            if brand.lower() == "samsung":
-                year_val = classify_samsung_year(model_code, title_upper)
-            else:
-                year_val = classify_lg_year(model_code, title_upper)
-                
-            if year_val not in [2025, 2026]:
-                print(f"    -> Skipped: Year mismatch ({year_val}) for model {model_code}")
-                continue
-                
-            if model_code == "Unknown" and brand.lower() == "lg":
-                if "C6" in title_upper:
-                    model_code = f"OLED{size_val}C6"
-                elif "G6" in title_upper:
-                    model_code = f"OLED{size_val}G6"
-                elif "B6" in title_upper:
-                    model_code = f"OLED{size_val}B6"
-                    
-            display_type = "LED"
-            if "OLED" in title_upper:
-                display_type = "OLED"
-            elif "QNED" in title_upper:
-                display_type = "QNED"
-            elif "NEO QLED" in title_upper or "NEOQLED" in title_upper:
-                display_type = "Neo QLED"
-            elif "QLED" in title_upper:
-                display_type = "QLED"
-                
-            try:
-                from swiss_promo_parser import parse_swiss_promo_and_cashback
-                cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
-            except Exception:
-                cashback_amt = 0
-                
-            products.append({
-                "brand": brand,
-                "year": year_val,
-                "display": display_type,
-                "size": size_val,
-                "model_code": model_code,
-                "price": price_val,
-                "shipping": "Free",
-                "installment": "",
-                "cashback": cashback_amt,
-                "promo": promo_desc,
-                "title": title,
-                "link": "https://www.digitec.ch" + href if href.startswith("/") else href
-            })
-            
         await context.close()
+        return process_digitec_raw_items(raw_items, brand)
+
+def process_digitec_raw_items(raw_items, brand):
+    products = []
+    brand_lower = brand.lower()
+    for item in raw_items:
+        title = item["title"]
+        price_str = item["price"]
+        promo_desc = item["promo"]
+        seller = item["seller"]
+        href = item["href"]
+        
+        title_upper = title.upper()
+        
+        if any(x in title_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "ZUBEHÖR", "HALTERUNG", "WANDHALTERUNG"]):
+            continue
+        if any(x in title_upper for x in ["RETURNED", "REFURBISHED", "USED", "GEBRAUCHT"]):
+            continue
+            
+        seller_upper = seller.upper()
+        if "DIGITEC" not in seller_upper and "GALAXUS" not in seller_upper and "MEDIA" not in seller_upper and seller != "Digitec":
+            continue
+            
+        price_val = 0.0
+        if price_str != "N/A":
+            clean_p = price_str.replace("CHF", "").strip()
+            price_match = re.search(r'([\d\s’\x27\x60,.]+)', clean_p)
+            if price_match:
+                p_str = price_match.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
+                if p_str.endswith(".") or p_str.endswith(","):
+                    p_str = p_str[:-1]
+                try:
+                    price_val = float(p_str)
+                except ValueError:
+                    price_val = 0.0
+                    
+        if price_val == 0.0:
+            continue
+            
+        words = title_upper.split()
+        model_code = "Unknown"
+        for w in words:
+            clean_w = w.replace("(", "").replace(")", "").replace(",", "").replace("\"", "")
+            if any(char.isdigit() for char in clean_w) and len(clean_w) >= 6:
+                model_code = clean_w
+                break
+                
+        size_match = re.search(r'(\d+)\s*"', title)
+        if not size_match:
+            size_match = re.search(r'(\d+)\s*Zoll', title, re.IGNORECASE)
+        if not size_match and model_code != "Unknown":
+            code_nums = re.findall(r'\d+', model_code)
+            if code_nums and len(code_nums[0]) in [2, 3]:
+                size_val = int(code_nums[0])
+            else:
+                size_val = 55
+        else:
+            size_val = int(size_match.group(1)) if size_match else 55
+            
+        if size_val < 22:
+            continue
+            
+        if brand_lower == "samsung":
+            year_val = classify_samsung_year(model_code, title_upper)
+        else:
+            year_val = classify_lg_year(model_code, title_upper)
+            
+        if year_val not in [2025, 2026]:
+            continue
+            
+        if model_code == "Unknown" and brand_lower == "lg":
+            if "C6" in title_upper: model_code = f"OLED{size_val}C6"
+            elif "G6" in title_upper: model_code = f"OLED{size_val}G6"
+            elif "B6" in title_upper: model_code = f"OLED{size_val}B6"
+            elif "C5" in title_upper: model_code = f"OLED{size_val}C5"
+            elif "G5" in title_upper: model_code = f"OLED{size_val}G5"
+            elif "B5" in title_upper: model_code = f"OLED{size_val}B5"
+            elif "QNED86" in title_upper: model_code = f"{size_val}QNED86A"
+            elif "QNED80" in title_upper: model_code = f"{size_val}QNED80A"
+        elif model_code == "Unknown" and brand_lower == "samsung":
+            if "S95H" in title_upper: model_code = f"QE{size_val}S95H"
+            elif "S90H" in title_upper: model_code = f"QE{size_val}S90H"
+            elif "S90F" in title_upper: model_code = f"QE{size_val}S90F"
+            elif "QN90F" in title_upper: model_code = f"QE{size_val}QN90F"
+            elif "Q8F" in title_upper: model_code = f"QE{size_val}Q8F"
+                
+        display_type = "LED"
+        if "OLED" in title_upper: display_type = "OLED"
+        elif "QNED" in title_upper: display_type = "QNED"
+        elif "NEO QLED" in title_upper or "NEOQLED" in title_upper: display_type = "Neo QLED"
+        elif "QLED" in title_upper: display_type = "QLED"
+            
+        try:
+            from swiss_promo_parser import parse_swiss_promo_and_cashback
+            cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+        except Exception:
+            cashback_amt = 0
+            
+        products.append({
+            "brand": brand,
+            "year": year_val,
+            "display": display_type,
+            "size": size_val,
+            "model_code": model_code,
+            "price": price_val,
+            "shipping": "Free",
+            "installment": "",
+            "cashback": cashback_amt,
+            "promo": promo_desc,
+            "title": title,
+            "link": "https://www.digitec.ch" + href if href.startswith("/") else href
+        })
         
     unique_products = []
     seen = set()
@@ -326,13 +340,70 @@ async def scrape_digitec_brand(brand):
     print(f"  -> Successfully collected {len(unique_products)} unique products for {brand}.")
     return unique_products
 
+def scrape_digitec_firecrawl_deprecated(brand):
+    return []
+def _legacy_digitec_firecrawl(brand):
+    api_key = os.environ.get("FIRECRAWL_API_KEY")
+    if not api_key:
+        print("  ⚠️ [DIGITEC FIRECRAWL] FIRECRAWL_API_KEY missing in environment.")
+        return []
+    import requests
+    from bs4 import BeautifulSoup
+    
+    brand_lower = brand.lower()
+    print(f"\n[DIGITEC FIRECRAWL] Starting live scrape for brand: {brand}")
+    bra_id = "422" if brand_lower == "samsung" else "284"
+    url = f"https://www.digitec.ch/de/s1/producttype/tv-4?filter=bra%3D{bra_id}%2C5778%3D2025%7C2026%2Coff%3DInStock&take=150"
+    payload = {"url": url, "formats": ["html"], "waitFor": 3000}
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    
+    try:
+        r = requests.post("https://api.firecrawl.dev/v1/scrape", json=payload, headers=headers, timeout=60)
+        if r.status_code != 200:
+            print(f"  ⚠️ Digitec Firecrawl status {r.status_code}")
+            return []
+        html = r.json().get("data", {}).get("html", "")
+        if not html:
+            return []
+        soup = BeautifulSoup(html, "html.parser")
+        links = soup.find_all("a", href=lambda h: h and "/product/" in h)
+        raw_items = []
+        seen_hrefs = set()
+        for l in links:
+            title = l.get("aria-label") or ""
+            href = l.get("href") or ""
+            if not title or len(title) < 10 or href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            parent = l.find_parent("article") or l.find_parent("div")
+            price_str = "N/A"
+            promo = "None"
+            seller = "Digitec"
+            if parent:
+                txt = parent.get_text()
+                p_m = re.search(r'CHF\s*([\d\s’\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}|\b))', txt) or re.search(r'([\d\s’\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}|\b))\s*CHF', txt)
+                if p_m:
+                    price_str = p_m.group(0).strip()
+                if any(k in txt for k in ["Aktion", "Cashback", "Rabatt", "Neu"]):
+                    promo = "Promo"
+                s_m = re.search(r'(?:Offer by|Angebot von|Verkauf und Versand durch)\s+([^\n\r]+)', txt, re.IGNORECASE)
+                if s_m:
+                    seller = s_m.group(1).strip()
+            raw_items.append({"title": title, "href": href, "price": price_str, "promo": promo, "seller": seller})
+            
+        print(f"  ✔ [DIGITEC FIRECRAWL] Extracted {len(raw_items)} raw link items.")
+        return process_digitec_raw_items(raw_items, brand)
+    except Exception as e:
+        print(f"  ⚠️ [DIGITEC FIRECRAWL ERROR] {e}")
+        return []
+
 async def main():
     import time
     import argparse
     start_time = time.time()
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use real-time Firecrawl scraping")
     args, _ = parser.parse_known_args()
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
@@ -344,34 +415,24 @@ async def main():
     samsungs = []
     lgs = []
     
-    if not is_fast:
-        try:
-            samsungs = await scrape_digitec_brand("Samsung")
-            lgs = await scrape_digitec_brand("LG")
-        except Exception as e:
-            print(f"⚠️ [DIGITEC ERROR] {e}. Using cached records.")
-    else:
-        print("⚡ [--stealth-fast] Skipping local Playwright for Digitec.")
-        
-    if not samsungs and os.path.exists(s_path):
-        print(f"  -> Refreshing verified Samsung models from {s_path}...")
-        try:
-            with open(s_path, "r", encoding="utf-8") as f:
-                samsungs = json.load(f)
-        except Exception: pass
-    if not lgs and os.path.exists(l_path):
-        print(f"  -> Refreshing verified LG models from {l_path}...")
-        try:
-            with open(l_path, "r", encoding="utf-8") as f:
-                lgs = json.load(f)
-        except Exception: pass
+    print("🚀 [ZERO-FIRECRAWL] Executing 100% local persistent Playwright scraper for Digitec CH...")
+    try:
+        samsungs = await scrape_digitec_brand("Samsung")
+        lgs = await scrape_digitec_brand("LG")
+    except Exception as e:
+        print(f"❌ [PLAYWRIGHT ERROR] {e}")
+        samsungs, lgs = [], []
+            
+    # STRICT ASSERTION GATE: ZERO STALE CACHE PERMITTED
+    if len(samsungs) == 0 or len(lgs) == 0:
+        raise RuntimeError("❌ [CRITICAL ZERO LIVE DATA] Digitec live scraping returned 0 models. Stale cache fallback is strictly prohibited.")
         
     with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
     with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
-    print(f"\n[DIGITEC DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")
+    print(f"\n[DIGITEC DONE] Successfully saved {len(samsungs)} Samsung models and {len(lgs)} LG models directly from live web.")
     
     try:
         from scrape_logger import emit_summary
@@ -383,3 +444,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+

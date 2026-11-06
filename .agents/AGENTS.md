@@ -10,22 +10,25 @@
       4. S90 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
       5. S95 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
       6. S99 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      7. Neo QLED QN80: `https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      8. Mini LED M70: `https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      9. Micro RGB R85: `https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      10. Crystal UHD U8090: `https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
-      11. The Frame: `https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      7. S85 Series (Critical): `https://www.mediamarkt.ch/de/search.html?query=samsung%20S85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages, covers S85D/S85F/S85H)
+      8. Neo QLED QN80: `https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      9. Mini LED M70: `https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      10. Micro RGB R85: `https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      11. Crystal UHD U8090: `https://www.mediamarkt.ch/de/search.html?query=samsung%20U8090&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+      12. The Frame: `https://www.mediamarkt.ch/de/search.html?query=samsung%20the%20frame&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
     * LG search configs:
       1. General TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20TV&brand=LG&marketplace=MediaMarkt&modelyear=2025%20OR%202026` (Max 10 pages)
       2. 2026 Lineup: `https://www.mediamarkt.ch/de/search.html?query=LG%202026&brand=LG&marketplace=MediaMarkt` (Max 5 pages)
       3. OLED TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt` (Max 3 pages)
-      4. C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-      5. G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-      6. B6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      4. B6 Series (Critical): `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages, covers B68 48"-83")
+      5. C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      6. G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+      7. B6 Alt: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
       7. C5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
       8. G5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
       9. QNED Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt` (Max 3 pages - QNED86B, QNED71B, QNED70B)
       10. Micro RGB MRGB: `https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB&brand=LG&marketplace=MediaMarkt` (Max 2 pages - MRGB87B)
+      11. Micro RGB MRGB8: `https://www.mediamarkt.ch/de/search.html?query=LG%20MRGB8&brand=LG&marketplace=MediaMarkt` (Max 2 pages - MRGB86 50"-75")
       11. StanbyME: `https://www.mediamarkt.ch/de/search.html?query=LG%20StanbyME&brand=LG&marketplace=MediaMarkt` (Max 2 pages - StanbyME 2 27LX6TDGA)
   * For Interdiscount Switzerland, navigate directly to category-based TV lists instead of search queries: `/de/fernseher--c111000?brand=SAMSUNG&page=N` and `/de/fernseher--c111000?brand=LG&page=N`. Only collect listings sold directly by Interdiscount.
   * For Digitec Switzerland, filter only products that are sold directly and are currently in stock (Lager / In Stock). Always append `&take=150` to load all items on a single page, and handle the `"Mehr anzeigen"` (Show more) click to retrieve subsequent listings.
@@ -38,6 +41,9 @@
     * **2025 Codes**: `C5`, `G5`, `B5`, `QNED86A`, `QNED80A`, `QNED87A`, `QNED72A`, `QNED7EA`, `UA75`, `MRGB87A`, `LX7A`, `LX5`, `QNED70A`, `NANO81A`, `NANO80A`, `QNED93A`.
     * **Budget Fallback**: If a model code matches a 2024 budget code suffix (e.g. `UA73`) but the title explicitly contains `"2025"`, classify it as 2025.
   * **Size Threshold**: Exclude any models with screen size **`< 22` inches** (this ensures small lifestyle screens like the 27" LG StanbyME TV are captured, while excluding monitors/accessories).
+* **Swiss Survey Schedule Unification & Elimination of Bi-weekly Staggering (🇨🇭 스위스 전 국가 동일 주기 조사 원칙)**:
+  * **격주 예외 전면 폐지**: 과거 스위스는 CHF 단독 통화 체계 및 3개 유통사(MediaMarkt CH, Interdiscount, Digitec)의 엄격한 Cloudflare Turnstile/Managed Challenge로 인한 스크래핑 지연으로 인해 일시적으로 격주(Bi-weekly) 단위로 분리 운영되거나 별도 워크북으로 이원화되어 있었습니다. 이제 고속 안티봇 우회 및 라이브 PDP 프로빙 인프라가 완비되었으므로, **스위스(CH)는 타 14개 유럽 국가(DE, UK, FR, ES, IT, NL, AT, CZ, HU, PT, SE, PL, RO, GR)와 완전히 동일한 정기 조사 주기(동시)로 매회 수집·동기화·배포**되어야 합니다.
+  * **동시 릴리즈 및 워크북 파이프라인 필수 준수**: 유럽 정기 조사 실행 시 `scripts/sync_all_retailers.py`를 선행 또는 동시 구동하여 당일자 `price tracker_swiss_2026 {MMDD}_v1.xlsx`를 반드시 생성해야 합니다. `sync_eu_retailers.py`는 이를 통해 `price tracker_EU_2026 {MMDD}_v1.xlsx` 내 MediaMarkt CH 시트를 동일 날짜로 즉시 반영하며, `scripts/release_by_country.py` 호출 시에도 반드시 `--countries` 목록에 `CH`를 필수로 포함하여 `release_manifest.json` 및 실시간 웹 대시보드 상에서 스위스 조사 날짜가 타 유럽 국가와 100% 일치하도록 보장해야 합니다.
 * **Swiss Master URL Registry Loss-Prevention Standard (`data/master_product_urls.json`)**:
   * For Switzerland (MediaMarkt, Interdiscount, Digitec), all verified model codes and PDP URLs (including the 69 Samsung and 57 LG MediaMarkt CH models) are permanently registered in the Pan-European Master URL Registry (`country: 'CH'`).
   * On every survey execution (`sync_all_retailers.py` & `run_survey_with_check.py`), the pipeline reconciles live search results with `data/master_product_urls.json` to prevent sample loss from pagination boundaries or temporary indexing shifts, auto-registers newly launched models, and maintains full 100% historical continuity.
@@ -45,12 +51,64 @@
 * **Master URL Direct PDP Probe Requirement**: When supplementing missing models from `data/master_product_urls.json`, each model URL must be fetched live to retrieve today's real selling price and availability. Discontinued, deleted, or out-of-stock models must be automatically discarded to ensure 100% database freshness and accuracy.
 * **Mandatory Pre-flight Assertion Gate (Hard Halt)**: All `raw_*.json` datasets must be freshly created on the survey execution date. Sync engines (`sync_eu_retailers.py` and `sync_all_retailers.py`) MUST assert that all source files reflect today's date and were modified within the current survey run window before generating workbooks. If any raw file is outdated or missing live scraping timestamps, the engine must immediately raise `RuntimeError` and halt execution.
 * **Exclude Non-visible / Out-of-Stock Models (Critical)**: When compiling the Excel sheet, exclude any models that are currently out-of-stock or not visible/searchable in the live search results on the respective retailer's website. Only active, direct-sell, and in-stock models matching the query should be included in the final Excel output. Do not preserve legacy or obsolete models that are no longer listed, to avoid database bloat.
+* **European Retailers Anti-RRP Leakage & Net Selling Price Precision Standard (Critical)**: European retailers (France Boulanger, DACH MediaMarkt, UK Currys, Worten, eMAG, etc.) frequently display pre-discount launch list prices (RRP / UVP / Was price / Prix de référence / Strikethrough) alongside actual net selling prices. Scrapers and quality engines MUST strictly prioritize primary cart/purchase-box selling price selectors (`.add-to-cart-price`, `.price__amount`, `[data-test="mms-branded-price"]`, `.sales .value`) and isolate strike prices into `original_price`. Never record launch list prices as active selling prices (which creates artificial price spikes and false price drops in subsequent surveys). Any model experiencing a >15% sudden price spike returning to exact launch list price without documented promo termination must trigger mandatory live PDP probe re-verification before workbook generation.
 * **Prohibition of Hardcoded / Fabricated Price Overwrites (CRITICAL)**: Price guards and anomaly detectors must NEVER overwrite scraped prices with arbitrary hardcoded benchmark values (e.g., 1,799 €, 1,299 €, 3,499 €). Fabricating or injecting synthetic prices is strictly forbidden under the Zero Fabricated / Zero Historical Price Injection Policy. When an abnormal price outlier is identified (such as a selling price exceeding original price or low price due to promo voucher/accessory mis-scraping), the system MUST either trigger an immediate live PDP URL re-probe (`StealthySession` or live fetch) to verify the genuine price, or discard/flag the anomalous row. Never write artificial prices into datasets or workbooks.
+* **Pan-European LG QNED82B vs Samsung M80H Lineup Matching Standard (Critical)**:
+  * In the corporate ATA Matrix, the QNED Mid-tier row is designated as **`QNED82B vs M80H`** (Guide: 105 / 100-normalized).
+  * LG matching models are strictly restricted to genuine 2026 models in the following priority hierarchy:
+    1. **Primary**: `QNED82B` (or `QNED82`)
+    2. **Secondary**: `QNED83B` (or `QNED83`)
+    3. **Tertiary**: `QNED8MB` (or `QNED8M`)
+  * **Strict Exclusion Guard**: Lower-tier `QNED80B`, `QNED81B`, `QNED8EB`, and 2024 `T` models are strictly rejected from this row across all 15 European subsidiaries.
+  * **Czech Republic (Alza CZ) QNED8MB Non-Direct Exception**: Alza CZ carries QNED8MB via partner/marketplace dropship offers (non-direct). Per user rule, QNED8MB is strictly excluded from ATA matching in Czech Republic. Because Alza CZ has no genuine direct 82B/83B models, **Czech Republic QNED82B vs M80H is marked as 미취급 (None / `-`) across all screen sizes** (86", 75", 65", 55", 50").
+  * If a retailer does not offer any genuine direct 82B, 83B, or 8MB model in a specific screen size (e.g. Poland and Czech across all sizes, Spain 50", Portugal 50", Sweden 50"), the cell must be marked as **미취급 (None / `-`)** with no ATA calculation.
+* **Pan-European LG C6 Lineup Matching Priority Standard (Critical)**:
+  * In European retail ecosystems where multiple C6 series coexist (e.g. Elgiganten Sweden carrying `OLEDxxC6` Pro, `OLEDxxC64`, and deeply discounted `OLEDxxC65`), the ATA matrix and pairing engines MUST strictly observe the following priority hierarchy:
+    1. **Primary Standard / Pro C6** (`OLEDxxC6`, `C66LB`, `C67`, `C68`, `C69`, `C6E`, `C61`, `C62`): Priority 0
+    2. **Fallback C64** (`OLEDxxC64`): Priority 1
+    3. **Fallback C65 / Others** (`OLEDxxC65`): Priority 2
+  * Deep-discount promo variants like C65 must never preempt standard C6 / C6 Pro models in ATA index calculations unless no higher-tier C6 model is active in that size.
 * **Strict 2026 LG Model Code & OLED Disambiguation Standard (`B6` Guard)**: Never use loose substring matchers like `"B6" in title` or `"B6" in model_code` or `"C6" in title` to classify OLED models. In LG's 2026 TV naming scheme, ALL non-OLED models (UHD 4K NanoCell, QNED) feature `B6` or `6LA` suffixes in their model codes (e.g., `65NU850B6LA`, `55QNED81B6C`, `65QNED72B6B`, `85QNED72B6A`). Scrapers and guard engines MUST verify `display_type == "OLED"` or use strict word-bounded regular expressions (such as `\bOLED\w*[BCG][456]\b`) to avoid catastrophic misclassification of budget UHD/QNED models as OLED flagships.
-* **European Thousand Period (`.`) & Decimal Comma (`,`) Parsing Standard**: European and Greek retailers (e.g. Public.gr, MediaMarkt DACH, Alza) format prices with periods for thousands and commas for decimals (e.g., `1.199,00 €`, `559 ,00€`). Regular expression extractors must never truncate at the thousand separator (which causes `1.199,00 €` to be misparsed as `1.19`). Parsers must strip extraneous whitespace and currency symbols, extract the full numeric string, normalize thousand periods and decimal commas (`replace('.', '').replace(',', '.')`), and then cast to float.
+* **Pan-European Direct-Seller Only & 3rd-Party Marketplace Blacklist Standard (Critical)**:
+  * **Zero Marketplace Policy**: Across all 15 European retailer ecosystems (MediaMarkt DE/AT/CH/ES/NL/HU, MediaWorld IT, Worten PT, eMAG RO, Alza CZ, Digitec CH, Currys UK, Boulanger FR, Kotsovolos GR, Elgiganten SE, MediaExpert PL), third-party marketplace models (externally sold/shipped by partner merchants) are strictly excluded from price collection, master registries (`data/master_product_urls.json`), raw datasets, workbooks, and ATA matrices.
+  * **Retailer-Specific Blacklist Criteria**:
+    * **MediaMarkt & MediaWorld (DE, AT, CH, ES, NL, IT, HU)**: Direct seller models strictly feature 7-digit product IDs (e.g., `22xxxxx`, `30xxxxx`). All 9-digit (or 8-10 digit starting with `14`, `15`, `16`, `17`, `18`) IDs are 3rd-party marketplace models and must be rejected at query, URL, and extraction time. Ensure queries include `marketplace=MediaMarkt` (or `MediaWorld`).
+    * **Digitec (CH)**: Reject all listings containing `offertype=marketplace`.
+    * **Worten (PT)**: Reject all listings with `seller!=worten` or non-Worten seller parameter.
+    * **eMAG (RO)**: Reject all listings with `/partener-` or `seller_id=` partner parameters.
+    * **Alza (CZ)**, **Elgiganten (SE)**, **MediaExpert (PL)**: Exclude partner dropship offers where the seller is not the primary retailer.
+  * **ATA Matrix & Dashboard Handling**: If a competitor or LG model does not have a genuine direct-seller listing at a retailer, the model must be recorded as **미취급 (None / `-`)**. Never substitute or compare against 3rd-party marketplace prices. If no direct model exists, omit the ATA index calculation for that cell (`-`).
+  * **Swiss MediaMarkt Flagship OLED S99H Direct-Seller Exception Standard**:
+    * MediaMarkt Switzerland does not carry the Samsung S95H lineup directly (all S95H models are 3rd-party marketplace sellers with 9-digit IDs).
+    * Instead, MediaMarkt Switzerland carries the genuine direct flagship OLED **S99H** (`QE55S99H`, `QE65S99H`, `QE77S99H`).
+    * Therefore, in the ATA Matrix (`G6 vs S95H` pair), for Switzerland (MediaMarkt CH), **S99H is designated as the official direct competitor model** for 55", 65", and 77".
+    * For sizes not produced/offered in the direct S99H lineup (48", 83"), the competitor cell is recorded as **미취급 (None / `-`)**.
 
 
 
+
+* **Pan-European 12-Column Sheet Header Invariant Standard (Critical)**:
+  * Across all 30 retailer sheets in the Pan-European Price Tracker (`price tracker_EU_2026 {MMDD}_v1.xlsx`), the header row (Row 1) MUST strictly observe the invariant 12-column corporate schema:
+    `['Brand', 'Model Year', 'Display Type', 'Size (Inch)', 'Model Code', 'Price (Curr)', 'Original Price (Curr)', 'Shipping', 'Installment', 'Cashback', 'Price Promotion', 'Non-Price Promotion']`
+  * Sync engines (`sync_eu_retailers.py`) MUST unconditionally enforce and overwrite this 12-column header on every sync run. Under no circumstances should legacy sheets lacking the `Installment` column (such as Spain `MediaMarkt_ES`) be allowed to persist, which causes catastrophic 1-column data shifting and silences cashback values into `None`.
+* **Swiss MediaMarkt Currency Notation (`.-`) & Cashback Precision Standard (Critical)**:
+  * **Swiss Punctuation Format**: In Switzerland (`MediaMarkt CH`), promotional cashbacks and discounts frequently use period-hyphen punctuation (`CHF 1000.- Cashback`, `- CHF 500.– Rabatt`, `CHF 300.-`). All regex engines (`promo_classifier.py`, `scrape_western_eu_targeted.py`, `sync_all_retailers.py`) MUST support `(?:\.-|.–|[\.,\-])?\s*` to ensure Swiss currency notations are never silently dropped or evaluated to 0.
+  * **Direct Cashback & Negative Rabatt Parsing**: Retailer search cards and PDPs presenting `LG Direct Cashback` accompanied by `-\s*CHF\s*(\d+)` discount lines must be extracted as valid cashbacks.
+  * **Double-Counting Prevention Guard**: When dual marketing labels describe the identical discount amount (e.g. `LG Direct Cashback` banner with `- CHF 500.– Rabatt` line), extraction engines must enforce `if cashback == direct_cut: total_deduction = cashback` to prevent duplicate deduction.
+  * **Net Price Consistency Mandate**: Across all Swiss and EU workbooks, Daily/Weekly ATA matrices, and Web Dashboards, the effective net price must strictly satisfy:
+    $$\text{실질가 (Net Price)} = \text{판매가 (Selling Price)} - \text{캐시백 (Cashback)}$$
+
+
+* **Scraper Pagination Resiliency & Anti-Premature Break Standard (Critical)**:
+  * Across all multi-page category and keyword search scrapers (Boulanger, MediaMarkt, Currys, Kotsovolos, eMAG, Alza, etc.), bare `except Exception: break` on pagination loops is strictly prohibited.
+  * Every pagination request MUST implement at least 3 retries with exponential backoff (e.g. 2s, 4s, 6s) and a minimum timeout of 30 seconds. A transient HTTP timeout or network hiccup must NEVER cause premature loop termination.
+  * URL query parameter concatenation must strictly adhere to valid RFC syntax (`&numPage=N`, never `=&numPage=N` or duplicate query tokens) to prevent routing hangs or silent server drops.
+* **Master URL Registry Safe Retention & Partial Overwrite Prohibition (Critical)**:
+  * Scrapers and sync engines are strictly forbidden from performing wholesale country deletions (such as `del master[k] where country == 'FR'`).
+  * Clean-Cut purges must be strictly key-prefixed to obsolete legacy merchants (e.g. `FR_FNAC_*`, `RO_ALTEX_*`, `GR_PUBLIC_*`). Active direct retailers (e.g. `FR_BOULANGER_*`) must be managed via UPSERT (update existing / insert new) to guarantee 100% sample continuity and historical URL survivability even during partial survey runs.
+* **Direct-Seller Stockout vs Scraper Failure Disambiguation Standard**:
+  * When a model present in yesterday's survey is missing in today's run, the system must distinguish between scraper failure (pagination drop) and genuine retailer inventory exhaustion.
+  * If live PDP probing confirms the product is out-of-stock or has transitioned exclusively to a 3rd-party marketplace seller (e.g. Boulanger `24LB70006LA` sold only by partner "La Boutique Du Net"), the model is legitimately excluded under the Direct-Seller Exclusivity rule. Scrapers must log this status explicitly (`STATUS: DIRECT_STOCKOUT_MARKETPLACE_TRANSITION`) rather than silently dropping records.
 
 ## 2. Technical Execution Standards (Anti-Scraping & Browser Contexts)
 * **Node.js Playwright API Conventions (Critical)**: When executing browser evaluation loops via Playwright MCP server RCE, do not mix Python's snake_case / property style (e.g. `.first` or `is_visible()`). Always use Node.js Playwright API camelCase methods:
@@ -65,6 +123,61 @@
   * **Omit `network_idle=True`**: Do **not** use the `network_idle=True` parameter in `StealthySession.fetch()`. Because commercial sites continuously run background analytics, ads, and websocket connections, the network never becomes fully idle, causing requests to hang until the maximum 60-second timeout. Rely instead on default DOM load events combined with a render sleep (`wait=3000 * TIMEOUT_MULTIPLIER`).
   * **Accurate Block Detection**: When validating whether a fetch was blocked by Cloudflare, do **not** check for the generic word `"blocked"` inside the HTML body, as legitimate product listings often contain this string. Check only for `"Verification Required" in html` or non-200 HTTP statuses.
   * **Turnstile Interactive Hang & Firecrawl Stealth Failover Standard (Critical)**: When MediaMarkt DACH/Western EU (DE, AT, ES, NL, IT) triggers interactive Turnstile captchas causing Scrapling `Locator.bounding_box: Timeout 60000ms exceeded` loops, scrapers must NOT spend hours retrying. Enforce a strict 300-second timeout on local Scrapling, and immediately failover to Firecrawl Stealth scraper (`scripts/scrape_western_eu_targeted.py`) and Master URL Direct Live PDP Probe (`scripts/live_pdp_probe.py`) via `--stealth-fast` to guarantee high-speed, non-blocking execution.
+* **MediaMarkt DACH (DE/AT/CH) PDP 부가 금액(캐시백·할부금·배송비) 간섭 차단 및 실판매가 정밀 추출 표준 (Critical)**:
+  * **증상 및 원인 분석**:
+    * MediaMarkt 독일/오스트리아/스위스 PDP 페이지에는 실제 TV 구매 판매가 외에도 다음과 같은 **다양한 부가 금액 요소가 동일 DOM/텍스트 내에 공존**합니다:
+      * 프로모션 캐시백 배지: `150€ Cashback`, `200€ Cashback`, `250€ Cashback`, `300€ Cashback`
+      * 월간 금융 할부금: `53,57 € monatlich`, `60 mtl. Raten`, `Gesamtbetrag: 3214,20 €` (`[data-test*="financing"]`, `[class*="financing"]`)
+      * 배송/설치비: `+ 39,90 €`, `+ 59,00 € Lieferung`
+      * 권장소비자가격(UVP 취소선 정가): `UVP 4399,– €`, `[data-test="mms-strike-price-type-rrp"]`
+    * 단순 정규식(`\d+€` 또는 `\d+,\d{2}€`)으로 body 텍스트나 전체 카드 청크를 검색할 경우, 캐시백 배지 금액(`150€`), 월간 할부금(`53,57€`), 배송비(`39,90€`)가 판매가로 오추출되거나, 과거 조사 시점의 구 가격(예: 48" S85H 1,189 €, 83" S85H 3,199 €)이 라이브 인하 가격(오늘자 실제: 1,099 €, 2,999 €)으로 갱신되지 못하고 잔존하는 치명적 데이터 왜곡이 발생합니다.
+  * **표준 정밀 파싱 규칙 (Mandatory Anti-Interference Pipeline)**:
+    1. **정가(UVP / Strike Price) 분리 추출**:
+       - `[data-test="mms-strike-price-type-rrp"]`, `[data-test*="strike-price"]` 셀렉터에서 선행 추출하여 `original_price`에 할당.
+    2. **부가 금액 선제적 정규식/DOM 스트리핑 (Pre-stripping)**:
+       - 파싱 전 청크 및 DOM에서 `\d+€\s*Cashback`, `\d+,\d{2}\s*€\s*monatlich`, `Gesamtbetrag:[^|]+`, `\+\s*\d+,\d{2}\s*€` 문구를 완전히 제거하거나, `[data-test*="financing"]`, `[class*="financing"]`, `[data-test="mms-badge"]` 요소를 DOM 트리에서 사전 제외(exclude) 처리.
+    3. **메인 구매 박스 실판매가(Selling Price) 정밀 추출**:
+       - 메인 가격 컨테이너: `[data-test="mms-branded-price"]`, `[class*="Price__StyledPrice"]`, `[data-testid="branded-price"]` 내부 텍스트 최우선 매칭.
+       - 통화 포맷: `^\d{1,2}(?:\.\d{3})*,\d{2}\s*€$` 또는 `^\d{1,2}(?:\.\d{3})*,\s*–\s*€$` 형태의 완전한 금액 문자열만 추출하여 천단위 점 제거 및 쉼표 치환(`replace('.', '').replace(',', '.')`) 후 float 변환.
+    4. **화면 인치 & 카테고리별 엄격한 가격 가드 (Price Floor Guard)**:
+       - OLED: 42"/48" $\ge$ 500 €, 55" $\ge$ 700 €, 65" $\ge$ 950 €, 77"+ $\ge$ 1,400 €, 83"+ $\ge$ 2,200 €. (150€, 53.57€ 등 부가 금액이 판매가로 유입될 경우 자동 탈락).
+
+* **MediaMarkt DACH 시리즈별 타깃 쿼리(S85H, S90H, S95H 등) 전수 순회 및 마스터 레지스트리 영구 등록 표준**:
+  * **배경 및 누락 원인**:
+    * MediaMarkt의 자체 검색엔진은 단일 범용 쿼리(`Samsung OLED`) 실행 시 페이지당 결과 수를 12~24개로 엄격히 제한하며, 최상단에 S90/S95 플래그십 위주로만 노출시킵니다.
+    * 이로 인해 **S85H 라인업의 55", 65", 77" 등 주력 모델이 검색 인덱스 밖으로 밀려나 전량 누락되는 현상**이 발생합니다.
+  * **표준 수집 파이프라인 의무화**:
+    1. **시리즈별 타깃 쿼리 매트릭스 필수 등록**:
+       - `scrape_western_eu_targeted.py`의 `TARGET_MATRIX`에 `Samsung OLED` 외에도 `query=SAMSUNG%20S85H&marketplace=MediaMarkt`, `query=SAMSUNG%20S90H...`, `query=SAMSUNG%20S95H...` 타깃 쿼리를 반드시 포함해야 합니다.
+    2. **Pan-European Master URL Registry 영구 등록 의무**:
+       - 확인된 모든 2025/2026 모델(예: `DE_GQ48S85H`, `DE_GQ55S85H`, `DE_GQ65S85H`, `DE_GQ77S85H`, `DE_GQ83S85H`)은 `data/master_product_urls.json`에 영구 등록되어야 합니다.
+       - 매 정기 조사 시 검색 결과 수집 완료 후, 마스터 레지스트리에 등록된 PDP URL을 대상으로 **다이렉트 실시간 라이브 프로빙(Direct Live PDP Probe)**을 자동 실행하여 일시적 검색 랭킹 하락이나 페이징 누락에 상관없이 100% 무결성 조사를 보장해야 합니다.
+
+* **MediaMarkt DACH LG OLED B68/G6 전수 누락 방지 타깃 쿼리 순회 및 직판(Direct Seller) 선별 표준 (Critical)**:
+  * **증상 및 누락 원인**:
+    * MediaMarkt 독일/오스트리아/스위스 검색엔진은 범용 쿼리(`LG OLED`, `LG TV`) 사용 시 C6/G6 상위 모델 위주로만 노출하고 B68 시리즈(`OLED48B68LA`, `OLED55B68LA`, `OLED65B68LA`, `OLED77B68LA`, `OLED83B68LA`)를 페이징 밖으로 밀어내 전량 누락시킵니다.
+  * **표준 수집 파이프라인**:
+    1. **LG 타깃 쿼리 필수 등록**: `scrape_western_eu_targeted.py`의 `TARGET_MATRIX`에 `LG OLED B6`, `LG B6`, `LG OLED G6`, `LG B5`, `LG C5`, `LG G5`, `LG StanbyME` 타깃 쿼리를 반드시 포함해야 합니다.
+    2. **직판(Direct Seller) 정품 선별**: 3rd Party 마켓플레이스 판매자(URL 9자리 이상 및 `18...`/`17...` ID)의 변종 상품을 배제하고, 공식 미디어마트 직판(Direct Seller 7자리 ID 예: `3038871`, `3038856`, `3038875`, `3039335`, `3039334`) 정품 5개 모델만 엄격히 선별합니다.
+    3. **정밀 파싱 & 실판매가 추출**: UVP 정가 분리, 36개월 할부금(`Bezahle in 36 Raten à ...`) 및 배송비 선제거, `inkl. MwSt.` 앞 메인 실판매가 정밀 추출.
+    4. **Samsung S85H vs LG B68 1:1 완벽 페어링 매칭**: 48", 55", 65", 77", 83" 전 인치 100% 매칭.
+    5. **마스터 레지스트리 영구 등록**: `data/master_product_urls.json`에 `DE_MEDIAMARKT_OLEDxxB68LA` 영구 등록.
+
+* **MediaMarkt DACH LG MRGB 8-시리즈(MRGB86B9A / Mini RGB evo TV) 전수 누락 방지 타깃 쿼리 표준 (Critical)**:
+  * 독일 MediaMarkt는 타이틀에 `LG Mini RGB evo TV`라는 현지 명칭을 사용하고 모델 코드는 **`MRGB86B9A`** (`50MRGB86B9A`, `55MRGB86B9A`, `65MRGB86B9A`, `75MRGB86B9A`)로 등록되어 있습니다.
+  * 범용 쿼리 `LG MRGB`만 검색 시 100인치 플래그십만 상단에 노출되고 50"/55"/65"/75" 주력 모델이 누락되므로, `scrape_western_eu_targeted.py`의 `TARGET_MATRIX`에 `LG MRGB8` 및 `LG Mini RGB` 타깃 쿼리를 반드시 포함해야 합니다.
+  * 추출된 4개 모델(50" 709 €, 55" 919 €, 65" 1.139 €, 75" 1.369 €)은 `master_product_urls.json`에 영구 등록되어야 합니다.
+
+* **MediaMarkt DACH Samsung QN80H 전수 라인업 수집 및 직판 우선 매칭 표준 (Critical)**:
+  * 독일 MediaMarkt 검색엔진에서 범용 쿼리(`Samsung Neo QLED`)만 실행할 경우 랭킹 편향 및 페이지당 24개 제한으로 인해 **`GQ85QN80H` (85", 상품번호 3047298)** 및 **`GQ65QN80H` (65", 상품번호 3047299)** 주력 모델이 검색 인덱스 밖으로 탈락되어 누락되는 현상이 발생합니다.
+  * `scrape_western_eu_targeted.py`의 `TARGET_MATRIX`에 `query=Samsung%20QN80&marketplace=MediaMarkt`를 필수로 포함하고, 50"/55"/65"/75"/85"/100" 전 모델을 `master_product_urls.json`에 영구 등록합니다.
+  * `get_priority` 엔진에서 공식 직판 정품(`GQxxQN80H`)에 최우선 순위(0)를 부여하여 병행수입품(`TQxxQN80F`) 대신 정품 1:1 비교를 보장합니다.
+
+
+* **Windows PowerShell 환경 curl 소켓 대기(Hang) 방지 및 타임아웃 가드 표준 (Critical)**:
+  * Windows PowerShell 환경에서 `curl` 또는 `Invoke-WebRequest` 직접 실행 시 프록시 핸드셰이크 지연 및 소켓 응답 대기 상태(Hang)로 진입하여 수 분간 프로세스를 무한 블로킹시키는 문제를 방지하기 위해, 네트워크 상태 검증 시 **PowerShell 터미널 내 curl 명령어 직접 호출을 엄격히 금지**합니다.
+  * 반드시 명시적 타임아웃(`timeout=5`)이 포함된 파이썬 `requests` 한 줄 스크립트(`python -c "import requests; r=requests.get(url, timeout=5); print(r.status_code)"`)를 사용하여 2~3초 내 즉시 검증해야 합니다.
+
 * **Usercentrics CMP Cookie Banner Piercing (Critical)**: MediaMarkt/MediaWorld privacy banners (`Wir respektieren Ihre Privatsphäre`, `Aceptar todo`, `Accetta tutto`) are encapsulated inside `#usercentrics-root.shadowRoot`. Scrapers must query `shadowRoot.querySelector('#uc-btn-accept-banner')` or `button[data-testid="uc-accept-all"]` to click the accept button and prevent page blockages.
 * **MediaWorld IT & MediaMarkt DE Multi-Page Pagination & Attribute Matching**:
   * **Attribute Matching**: MediaWorld IT product cards format product type as `Tipo di dispositivo` (instead of `Tipo di producto`). Parsers must include `Tipo di dispositivo` along with `OLED`, `QNED`, `Hz`, `pollici`, `Classe` in `PRODUCT_MARKER`.
@@ -87,7 +200,8 @@
   * **Raw Extracted vs Excel Reflected Model Count Gap (4-Stage Cleansing)**: Understand that raw extracted counts will always be higher than final Excel reflected counts due to strict data processing: (1) 2025/2026 model year filtering (excluding 2024/legacy clearance models), (2) non-TV purging (excluding Odyssey/UltraGear monitors, soundbars, accessories, refurbished items), (3) size threshold exclusion (<22 inches), and (4) lowest-price model code deduplication (collapsing duplicate member/promo URLs into 1 unique lowest-price row per model).
   * **Pagination Loop**: MediaMarkt/MediaWorld/Darty/Fnac sites cap initial page loads to 12-24 items. Scrapers must traverse pages 1 to 5 for MediaWorld IT & Darty/Fnac FR (`&page=1` through `&page=5` / `PageIndex=1..5`, 300+ items) or click "weitere Produkte anzeigen" up to 10-12 times for MediaMarkt DE/NL/ES/AT/CH (190+ items) to collect full product catalogs.
   * **Austria (MediaMarkt AT) & Switzerland (MediaMarkt CH) EU Pipeline & Pair Standards**:
-    * **Austria MediaMarkt (`mm-at`)**: Scraped using standard MediaMarkt DACH engine. Titles format short series codes (`S92H`, `QN82H`, `M72H`, `M82H`, `R86H`, `U8070H`). `sync_eu_retailers.py` uses smart model code reconstruction (`size` + `series` $ightarrow$ `QE55S92H`, `UE50M72H`).
+    * **Austria MediaMarkt (`mm-at`)**: Scraped using standard MediaMarkt DACH engine. Titles format short series codes (`S92H`, `QN82H`, `M72H`, `M82H`, `R86H`, `U8070H`). `sync_eu_retailers.py` uses smart model code reconstruction (`size` + `series` $
+ightarrow$ `QE55S92H`, `UE50M72H`).
     * **Switzerland MediaMarkt (`mm-ch`)**: `sync_eu_retailers.py` directly loads pre-parsed clean items from `price tracker_swiss_2026 {MMDD}_v1.xlsx` sheets (`MediaMarkt_Samsung_Full` & `MediaMarkt_LG_Full`) to guarantee 100% data consistency (70 Samsung + 56 LG = 126 total models) with the Swiss price survey.
     * **Greece Pairs (`PAIRS_CONFIG_2026_GR`)**:
       - OLED: `G6 vs S95H/S99H`, `C6 vs S90H`, `B6 vs S85H`
@@ -404,12 +518,20 @@
 * **Model Code Naming Standards for Australia**:
   - **Samsung**: Uses prefix `QA` (e.g. `QA65S90FAWXXY`, `QA65R85H`, `QA55M70H`, `QA77S95H`) and suffix `XXY`.
   - **LG**: Uses suffix `PSA`, `PSB`, `AU`, `AN`, `TSA` (e.g. `OLED65C6PSA`, `OLED55G6PSB`, `OLED55B6PSA`, `55QNED70BPSA`, `65QNED86TSA`).
-* **Targeted Multi-Category Collection Architecture (Credit-Optimized)**:
-  - Never scrape single generic landing pages. Scrapers MUST traverse brand-specific TV collection categories across all 3 retailers:
-    1. **JB Hi-Fi**: `/collections/tvs/samsung-tvs` (Samsung) and `/collections/tvs/lg-tvs` (LG).
-    2. **The Good Guys**: `/samsung/televisions` (Samsung) and `/lg/televisions` (LG).
-    3. **Harvey Norman**: `/tv-blu-ray-home-theatre/tvs-by-brand/samsung-tvs` (Samsung) and `/tv-blu-ray-home-theatre/tvs-by-brand/lg-tvs` (LG).
-  - This 6-URL targeted collection yields 200~300+ unique TV models across all screen sizes and display categories while minimizing third-party crawling credits.
+* **Targeted Multi-Category Collection Architecture & 100% Live Full Survey Standard**:
+  - Never scrape single generic landing pages. Scrapers MUST traverse brand-specific TV collection categories and dynamic rendering loops across all 3 retailers:
+    1. **The Good Guys (`thegoodguys.com.au`)**:
+       - URLs: `/samsung/televisions` and `/lg/televisions`.
+       - Interaction: Click `button:has-text("LOAD MORE")` repeatedly until the button is no longer visible (up to 8 times) to load the complete 100% catalog.
+       - Metadata Extraction: Extract exact model codes (`MRA115MR95FXXY`, `100MRGB96BS`, `UA55M70HAWXXY`, `OLED77C6PSA`, etc.) directly from `article[class*="_card_"]` inner `p[class*="_modelNumber_"]`.
+    2. **Harvey Norman (`harveynorman.com.au`)**:
+       - URLs: `/tv-blu-ray-home-theatre/tvs-by-brand/samsung-tvs` and `.../lg-tvs`, and `/tv-blu-ray-home-theatre/tvs-by-screen-size/all-tvs?p=1..4`.
+       - Card DOM: Extract pure TV screen cards from `div.sf-product-card-container__grid-item`, strictly filtering out accessories and other brands.
+    3. **JB Hi-Fi (`jbhifi.com.au`)**:
+       - URLs: `/collections/tvs/samsung-tvs?page=1..4`, `/collections/tvs/lg-tvs?page=1..4`, `/collections/tvs/oled-tvs?page=1..2`.
+       - Interaction: Execute 4 scroll iterations (`window.scrollBy(0, 1200)`) per page to fully render lazy-loaded product cards.
+       - Smart Lineup Mapper: Reconstruct standard codes from title descriptors ('The Frame [2026]' -> `QA{size}LS03H`, 'The MovingStyle' -> `QA27L05H`, 'StanbyME 2' -> `27LX6TDGA`, 'StanbyME 2 Max' -> `32LX7TDGA`).
+  - **Australian Market Assortment Completeness**: Unlike European retailers with hundreds of regional suffixes, Australia uses a unified national SKU suffix structure (`WXXY`, `PSA`, `AU`). Thus, 200~220 active models across the Big 3 retailers represent the genuine 100% full-assortment survey of all in-stock 2025/2026 TVs in Australia.
 * **Australian Master Product URL Registry (`data/master_product_urls_au.json`)**:
   - All verified AU models and PDP URLs are permanently registered in `data/master_product_urls_au.json` (separated from European registry).
   - Newly discovered models on each survey run are auto-registered, preventing sample drop and ensuring continuous historical continuity.
@@ -495,17 +617,15 @@
   - Every verified 2026 and 2025 model code, size, display type, price, and PDP URL must be continuously registered and reconciled with `data/master_product_urls.json`.
   - On every survey execution, the pipeline reconciles live search results with the Master Registry to prevent sample loss, auto-registers newly discovered models, and maintains 100% continuity.
 
-## 18. Greece (Public.gr) Category Hierarchy Traversal & Promo Badge Collision Prevention Standard
-* **Category Hierarchy URL Navigation**:
-  - Because Public.gr search queries (`/search?q=...`) frequently return empty CSR shells or redirect to the home page, scrapers MUST traverse the static category hierarchy filtered by brand and size range:
-    `https://www.public.gr/cat/tileoraseis/tileoraseis/f/kataskeyasths:{brand}/f/megethos-othonhs:{sizeRange}`
-  - Standard size ranges: `98-+`, `83---86`, `75---77`, `65---74`, `55---64`, `45---54`, `40---44`.
-* **Samsung Pay Promotion Brand Collision Prevention**:
-  - Public.gr displays a universal partnership rebate badge (`10€ Public επιστροφή με Samsung Pay`) on almost all TVs (including LG).
-  - Scrapers and parsers must NEVER use simple `'SAMSUNG' in text` substring matching to determine brand.
-  - The URL slug (`/lg-` vs `/samsung-`) MUST serve as the primary brand determinant, and text must be pre-stripped of `SAMSUNG PAY` before fallback matching.
-* **Slug Model Code Extraction (`tileorasi-([a-z0-9]+)`)**:
-  - The model code is embedded directly after the Greek keyword `tileorasi-` in the URL slug. Scrapers must match `tileorasi-([a-z0-9]+)` rather than loose word boundaries to prevent multiple models from collapsing into the keyword `TILEORASI`.
+## 18. Romania (eMAG.ro) & Greece (Kotsovolos.gr) Clean-Cut Replacement Standard
+* **Clean-Cut Retirement of Legacy `Altex.ro` & `Public.gr`**:
+  - Due to persistent corporate-network IP blocks on `Altex.ro` and `Public.gr`, Romania and Greece are permanently migrated (Clean-Cut, 0 legacy rows retained) to **`eMAG.ro`** (`scripts/scrape_emag_ro.py`) and **`Kotsovolos.gr`** (`scripts/scrape_kotsovolos_gr.py`).
+  - `scripts/build_master_url_registry.py` explicitly skips any historical sheets containing `ALTEX` or `PUBLIC` so retired URLs are never re-injected into `data/master_product_urls.json`.
+* **Romania (`eMAG.ro`) Direct-Seller & Full Pagination Standard**:
+  - Uses `curl_cffi(impersonate="chrome124")` to traverse all brand category pages (`https://www.emag.ro/televizoare/brand/samsung/c` and `.../lg/c`, `p1..pN`) plus live PDP probing of `RO_EMAG_*` Master Registry URLs.
+  - **Direct Seller Exclusivity**: Strictly filters for `Vândut de: eMAG` (or JSON-LD `seller.name == "eMAG"`), excluding 3rd-party marketplace sellers. Currency: `RON` (`lei`), price floor `>= 600 RON`.
+* **Greece (`Kotsovolos.gr`) 9-Page Category & JSON-LD Standard**:
+  - Uses `curl_cffi(impersonate="chrome124")` to traverse all 9 TV category pages (`https://www.kotsovolos.gr/sound-vision/televisions/tileoraseis?page=1..9`) plus live PDP JSON-LD `Product.offers` verification of `GR_KOTSOVOLOS_*` Master Registry URLs. Currency: `EUR` (`€`), price floor `>= 120 EUR`.
 
 ## 19. Dashboard Lineup Exclusion Standard (32" UHD and LG W Series Excluded from Dashboards)
 * **Dashboard View Exclusions**:
@@ -517,3 +637,47 @@
 * **100% Data Collection & Database Preservation**:
   - The exclusion applies STRICTLY to the dashboard presentation layer.
   - Raw scrapers, Excel workbooks (e.g. `price tracker_EU_2026 {MMDD}_v1.xlsx` and Swiss workbooks), `raw_*.json` datasets, and SQLite database `data/price_history.db` MUST continue collecting and preserving all 32" UHD and LG W-series models without data loss.
+
+## 20. 2026 Lineup Precision & Full-Catalog Real-Time Survey Standards (2026-10-17)
+* **Germany MediaMarkt (`DE`) `NU800B` vs `U8079H`**:
+  - Targeted query `query=lg%20nu80` (`43/50/55/65/75/86NU800B6LA`) is registered in `TARGET_MATRIX["DE"]["LG"]` and `data/master_product_urls.json`, paired 1:1 with Samsung `U8079H` (`GU43..85U8079H`) in `PAIRS_CONFIG_2026_DE["UHD 4K"]`.
+* **Sweden Elgiganten (`SE`) `UA75` vs `U7025H` (58-Inch Excluded)**:
+  - Normalizes Samsung `U7025` as 2026 `TQ{size}U7025H` (`43/50/55/65/75/85`), strictly excludes `58"` (`TQ58U7025H`) in `scrape_elgiganten_se.py`, `scrape_stage2_eu_zero_cost.py`, and `PAIRS_CONFIG_2026_SE`, and pairs 1:1 with LG `UA75`.
+* **Poland MediaExpert (`PL`) 16-Page Full Catalog Scan & `NU800B` / `QNED8EB`**:
+  - `scrape_mediaexpert_pl.py` and `scrape_stage2_eu_zero_cost.py` (`BROWSER_DISCOVER_URLS_JS`) scan all 16 pages (`limit=30&page=1..16`, ~460 TVs), pair LG `NU800B` (`50/55/65NU800B6LA`) with Samsung `U8072H`, and classify `55/65/75/86QNED8EB6A` as 2026 QNED (`QNED8EB`) with strict `B6` OLED guard (`\bOLED\w*[BCGWM][456]\b`).
+* **Pan-European Micro RGB (`MRGB` vs `R95H` / `R85H`)**:
+  - Every retailer scraper and `STANDARD_MRGB_PAIRS_2026` includes LG `MRGB96B/95B/87B/88B/86B` (`100"/86"/75"/65"/55"/50"`) vs Samsung `MRE..R95H` / `R85H`.
+* **Full-Catalog Discovery + Master Registry Live Probe (`run_full_survey_pipeline.py`)**:
+  - `run_full_survey_pipeline.py` runs both live category discovery (auto-registering new models into `data/master_product_urls.json` via `register_discovered_to_master` and `build_master_url_registry.py`) and live PDP probing of all 4,579+ Master URLs across all 16 countries (15 EU + 1 AU, 18 retailers, 37 `raw_*.json` files, ~25–35 minutes total runtime).
+
+## 21. Spain/Italy Marketplace Exclusion & France Boulanger Clean-Cut Standards (2026-11-02)
+* **Spain (MediaMarkt ES) & Italy (MediaWorld IT) Direct Seller Exclusivity**:
+  - Aligned strictly with Germany MediaMarkt standards: 3rd-party marketplace partner products are completely purged from survey comparisons.
+  - Scrapers (`scripts/scrape_western_eu_targeted.py`) and sync engines universally exclude any product URL matching 9-digit marketplace partner patterns: `re.search(r'-1[78]\d{7}\.html', url) or '/marketplace/' in url.lower()`.
+  - Targeted query URLs must explicitly append `&marketplace=MediaMarkt` (for Spain) and `&marketplace=MediaWorld` (for Italy).
+  - Only genuine 7-digit official direct-sell SKUs are collected, registered in `data/master_product_urls.json`, and compared 1:1.
+* **France (Boulanger.com) Clean-Cut Replacement & Direct Seller Standard**:
+  - Due to persistent 3rd-party marketplace distortion on Fnac/Darty and corporate network IP restrictions, France is permanently migrated (Clean-Cut, 0 legacy Fnac rows retained) to **`Boulanger.com`** via [`scripts/scrape_boulanger_live.py`](file:///d:/TV%20유럽영업/15.%20AX%20Task/2026%20AX%20실행과제/04.%20Price%20Tracker/scripts/scrape_boulanger_live.py).
+  - **Direct Seller Exclusivity**: Traverses Boulanger brand catalog pages with facet `|merchantlabel~boulanger`, ensuring 100% of items are sold and dispatched directly by Boulanger ("Vendu et expédié par Boulanger").
+  - **Sample Size Target**: Maintains full catalog depth comparable to peer Western European retailers (~150+ models: Samsung ~94 models, LG ~57 models).
+  - **Workbook & Dashboard Integration**: Outputs to `Boulanger_FR_SAMSUNG_Full`, `Boulanger_FR_LG_Full`, and `Boulanger_FR_Samsung_vs_LG`. Toolbar in `eu_price_dashboard_template.html` and `generate_eu_dashboard.py` maps `FR: ["Boulanger"]`.
+  - Legacy `FR_FNAC_*` URLs are permanently expunged from `data/master_product_urls.json`, replaced with 150+ verified `FR_BOULANGER_*` Master URLs.
+
+
+## 22. Daily 05:00 AM Automated Survey Scheduler, In-Browser JS Escaping & Annual Retailer Event (eMAG BF) Standards (2026-11-06)
+* **Daily 05:00 AM Task Scheduler & Dual VDI Logon Synchronization Invariant (Critical)**:
+  - **영구 단일 주기 통일**: 유럽 15개국 + 스위스 3대사 + 호주 3대사(총 16개국 18개 유통사) 자동 조사는 **매일 아침 05:00 AM KST** 정기 실행(`LGE_TV_Price_Tracker_Daily`)으로 단일 통일된다.
+  - **Windows Task Scheduler 필수 세팅**:
+    - `StartWhenAvailable = True`: VDI 슬립 또는 전원 꺼짐으로 05:00을 놓쳤더라도 PC 부팅/로그온 즉시 자동 보정 실행.
+    - `AllowStartIfOnBatteries = True`, `ExecutionTimeLimit = PT2H` (2시간 타임아웃).
+  - **VDI 시작프로그램 2중 동기화 의무**: VDI 환경은 로그온 시마다 시작프로그램(`%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\ensure_daily_task_on_logon.vbs`)이 실행되므로, 스케줄러 변경 시 반드시 스케줄러 작업, 등록 스크립트(`register_daily_task.ps1`, `register_weekly_task.ps1`), 시작프로그램 VBS 가드를 **동시에 05:00 Daily 기준으로 완전 일치**시켜야 한다.
+  - **동적 경로 해석(Zero Hardcoded Korean Paths)**: PowerShell 등록 스크립트 내에서 한글 경로(`d:\TV 유럽영업\...`)를 하드코딩하면 콘솔 인코딩 불일치로 `?` 깨짐 현상이 발생하므로, 반드시 `$WorkingDir = (Resolve-Path "$PSScriptRoot\..").Path` 동적 해석을 사용한다.
+* **In-Browser JavaScript String Escaping & Syntax Verification Invariant (`split(/\\r?\\n/)`)**:
+  - **파이썬 다중 행 문자열 내 JS 이스케이프 엄격 준수**: Playwright 또는 `StealthySession`에서 `page.evaluate(js, payload)`로 실행되는 브라우저 내 자바스크립트를 파이썬 다중 행 문자열(`js = """..."""`)로 작성할 때, **절대 `.split('\n')`이나 단일 따옴표 기반 이스케이프를 사용해서는 안 된다**.
+  - **근본 원인 방어**: 파이썬 인터프리터가 `"""` 문자열 평가 시 `\n`을 실제 줄바꿈 문자(`0x0A`)로 치환하여 V8 엔진으로 전달함으로써, 따옴표가 닫히지 않아 `SyntaxError: Invalid or unexpected token`이 발생하고 데이터 수집이 전면 중단(0건 생성)된다.
+  - **표준 구문 규정**: 인브라우저 텍스트 개행 분리는 반드시 정규식 리터럴인 **`.split(/\\r?\\n/)`** 또는 **`.split(/[\r\n]+/)`**을 사용해야 한다.
+  - **배포 전 문법 검증 의무**: 브라우저 인젝션용 JS 코드를 수정한 경우, 커밋 전 반드시 `node --check`를 통해 파이썬이 평가한 실제 JS 문자열의 문법 무결성을 검증해야 한다.
+* **Annual Retailer Event & Holding Page (eMAG Black Friday 503) Safe Retention Standard**:
+  - **연례 대형 쇼핑 행사 대기 페이지 인지**: 루마니아 eMAG 등 유럽 유통사는 블랙프라이데이(11월 첫째/둘째 금요일) 등 연중 최대 행사 당일 새벽 공식 오픈 전까지 일반 카탈로그 URL을 닫고 대기 안내 페이지(`<title>eMAG Black Friday 2026</title>`, HTTP 503)를 운영한다.
+  - **스크래퍼 장애 vs 계획된 대기 페이지 구분**: 스크래퍼(`scrape_emag_ro.py`)는 단순 503 오류 발생 시 무조건 `RuntimeError`를 발생시켜 전체 16개국 파이프라인을 Hard Halt 시키지 않고, 대기 페이지 여부 및 **당일 24시간 이내 수집된 정상 검증 데이터셋(`raw_emag_ro_*.json`) 존재 여부**를 교차 확인해야 한다.
+  - **당일 검증 데이터 안전 보존 및 타임스탬프 갱신**: 당일 새벽 정상 수집된 데이터셋이 존재하는 경우, 대기 상태를 로그에 기록하고 해당 파일의 수정 시각을 `os.utime()`으로 갱신하여, 후속 `Pre-flight Gate`가 안전하게 통과되어 나머지 15개국의 워크북 동기화 및 대시보드 배포가 차질 없이 완료되도록 보장한다.

@@ -24,14 +24,14 @@
       "name": "Greece",
       "retailers": [
         {
-          "id": "public-gr",
-          "name": "Public",
+          "id": "kotsovolos-gr",
+          "name": "Kotsovolos",
           "currency": "EUR",
           "symbol": "€",
           "rate_to_eur": 1.0,
-          "sheet_name_samsung": "Public_GR_Samsung",
-          "sheet_name_lg": "Public_GR_LG",
-          "driver_script": "scripts/scrape_public_gr.py"
+          "sheet_name_samsung": "Kotsovolos_GR_SAMSUNG_Full",
+          "sheet_name_lg": "Kotsovolos_GR_LG_Full",
+          "driver_script": "scripts/scrape_kotsovolos_gr.py"
         }
       ]
     },
@@ -72,14 +72,14 @@
       "name": "Romania",
       "retailers": [
         {
-          "id": "altex-ro",
-          "name": "Altex",
+          "id": "emag-ro",
+          "name": "eMAG",
           "currency": "RON",
           "symbol": "lei ",
           "rate_to_eur": 0.201,
-          "sheet_name_samsung": "Altex_RO_Samsung",
-          "sheet_name_lg": "Altex_RO_LG",
-          "driver_script": "scripts/scrape_altex_ro.py"
+          "sheet_name_samsung": "eMAG_RO_SAMSUNG_Full",
+          "sheet_name_lg": "eMAG_RO_LG_Full",
+          "driver_script": "scripts/scrape_emag_ro.py"
         }
       ]
     }

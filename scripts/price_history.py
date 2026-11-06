@@ -277,12 +277,20 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
                 country = "AT"; retailer = "MediaMarkt"; currency = "EUR"
             elif "_CZ_" in sname or sname.startswith("Alza"):
                 country = "CZ"; retailer = "Alza"; currency = "CZK"
-            elif "_GR_" in sname or sname.startswith("Public"):
-                country = "GR"; retailer = "Public"; currency = "EUR"
+            elif "_GR_" in sname or sname.startswith("Kotsovolos") or sname.startswith("Public"):
+                country = "GR"; retailer = "Kotsovolos" if "Kotsovolos" in sname else "Public"; currency = "EUR"
+            elif "_RO_" in sname or sname.startswith("eMAG") or sname.startswith("Altex"):
+                country = "RO"; retailer = "eMAG" if "eMAG" in sname else "Altex"; currency = "RON"
             elif "_HU_" in sname:
                 country = "HU"; retailer = "MediaMarkt"; currency = "HUF"
             elif "_FR_" in sname:
-                country = "FR"; retailer = "Fnac Darty"; currency = "EUR"
+                country = "FR"; retailer = "Boulanger" if "Boulanger" in sname else "Fnac Darty"; currency = "EUR"
+            elif "_PT_" in sname or sname.startswith("Worten"):
+                country = "PT"; retailer = "Worten"; currency = "EUR"
+            elif "_SE_" in sname or sname.startswith("Elgiganten"):
+                country = "SE"; retailer = "Elgiganten"; currency = "SEK"
+            elif "_PL_" in sname or sname.startswith("MediaExpert"):
+                country = "PL"; retailer = "MediaExpert"; currency = "PLN"
             elif "_CH_" in sname:
                 country = "CH"; retailer = "MediaMarkt"; currency = "CHF"
             # AU sheets
@@ -331,7 +339,7 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
                 if raw_price is None:
                     continue
                 try:
-                    price_val = float(str(raw_price).replace("CHF", "").replace("EUR", "").replace("GBP", "").replace("AUD", "").replace("Ft", "").replace(",", ".").replace("'", "").replace(" ", "").strip())
+                    price_val = float(str(raw_price).replace("CHF", "").replace("EUR", "").replace("GBP", "").replace("AUD", "").replace("CZK", "").replace("Kč", "").replace("HUF", "").replace("Ft", "").replace("PLN", "").replace("zł", "").replace("SEK", "").replace("kr", "").replace("RON", "").replace("lei", "").replace(",", ".").replace("'", "").replace(" ", "").strip())
                 except (ValueError, TypeError):
                     continue
 
@@ -342,7 +350,7 @@ def parse_survey_workbook(excel_path: str, default_country: str = None) -> List[
                 orig_val = price_val
                 if raw_orig is not None:
                     try:
-                        parsed_orig = float(str(raw_orig).replace("CHF", "").replace("EUR", "").replace("GBP", "").replace("AUD", "").replace("Ft", "").replace(",", ".").replace("'", "").replace(" ", "").strip())
+                        parsed_orig = float(str(raw_orig).replace("CHF", "").replace("EUR", "").replace("GBP", "").replace("AUD", "").replace("CZK", "").replace("Kč", "").replace("HUF", "").replace("Ft", "").replace("PLN", "").replace("zł", "").replace("SEK", "").replace("kr", "").replace("RON", "").replace("lei", "").replace(",", ".").replace("'", "").replace(" ", "").strip())
                         if parsed_orig >= price_val:
                             orig_val = parsed_orig
                     except (ValueError, TypeError):
@@ -468,11 +476,18 @@ def backfill_from_history(db_path: str = DB_PATH) -> Dict[str, Any]:
 
     return summary
 
-def record_survey_from_excel(excel_path: str, country: str = None, db_path: str = DB_PATH) -> int:
-    """Convenience function called by sync scripts to record today's survey into DB."""
+def record_survey_from_excel(excel_path: str, country: str = None, db_path: str = DB_PATH, countries=None) -> int:
+    """Convenience function called by sync scripts to record today's survey into DB.
+
+    countries: optional iterable of country codes. When given, ONLY those countries are recorded
+    (country-level isolation: countries that failed quality gates must not be written).
+    """
     try:
         migrate_db(db_path)
         records = parse_survey_workbook(excel_path, default_country=country)
+        if countries is not None:
+            allow = {str(c).upper() for c in countries}
+            records = [r for r in records if str(r.get("country", "")).upper() in allow]
         if records:
             inserted = upsert_records(records, db_path)
             print(f"📊 [PRICE HISTORY] Recorded {inserted} survey records from {os.path.basename(excel_path)} into price_history.db")
@@ -480,6 +495,24 @@ def record_survey_from_excel(excel_path: str, country: str = None, db_path: str 
     except Exception as e:
         print(f"[WARN] Failed to record survey to price_history.db: {e}")
     return 0
+
+
+def delete_survey_rows(date: str, countries, db_path: str = DB_PATH, retailers=None) -> int:
+    """Remove rows of a survey date for given countries (used to purge unreleased / stale rows)."""
+    con = get_connection(db_path)
+    cur = con.cursor()
+    total = 0
+    for c in countries:
+        if retailers:
+            for ret in retailers:
+                cur.execute("DELETE FROM daily_prices WHERE date=? AND country=? AND retailer=?", (date, c, ret))
+                total += cur.rowcount
+        else:
+            cur.execute("DELETE FROM daily_prices WHERE date=? AND country=?", (date, c))
+            total += cur.rowcount
+    con.commit()
+    con.close()
+    return total
 
 if __name__ == "__main__":
     backfill_from_history()

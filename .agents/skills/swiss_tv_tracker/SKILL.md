@@ -9,6 +9,19 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
 
 ---
 
+## 📅 Survey Cadence Synchronization Standard (Elimination of Bi-weekly Staggering)
+* **Unified Pan-European Survey Schedule**: Switzerland (CH) must **NEVER** be operated on an isolated bi-weekly (격주) schedule or staggered survey rhythm.
+* **Simultaneous Execution Mandate**: In every routine price tracking run (전체 유통 가격 조사 / Master Pipeline), Switzerland must be scraped, validated, and synchronized simultaneously alongside all 14 EU countries.
+* **100% Zero-Firecrawl Open-Source Mandate**:
+  - All 3 Swiss retailers (MediaMarkt CH, Interdiscount, Digitec) operate strictly on 100% local open-source scraping stacks (`StealthySession` 2-Stage In-Browser `DOMParser` and persistent Playwright).
+  - Paid Firecrawl API calls (`api.firecrawl.dev`) are permanently decommissioned and isolated to legacy stubs (0 paid credits).
+* **Dual-Workbook Pipeline Integration**:
+  1. scripts/sync_all_retailers.py or scripts/run_survey_with_check.py must run to produce price tracker_swiss_2026 {MMDD}_v1.xlsx (3 Swiss retailers: MediaMarkt CH, Interdiscount, Digitec).
+  2. scripts/sync_eu_retailers.py automatically injects MediaMarkt CH into the Pan-European workbook (price tracker_EU_2026 {MMDD}_v1.xlsx).
+  3. scripts/release_by_country.py must include CH in --countries to release today's date (YYYY-MM-DD) uniformly on https://eu-price-tracker-lge.web.app without falling back to older releases.
+
+---
+
 ## Part A: MediaMarkt Switzerland Collection
 
 ### Step A1: Navigating with Multiple Targeted Query Configurations and Scrapling StealthySession
@@ -21,6 +34,7 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
      - S90 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S90&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - S95 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S95&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - S99 Series: `https://www.mediamarkt.ch/de/search.html?query=samsung%20S99&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
+     - S85 Series (Critical): `https://www.mediamarkt.ch/de/search.html?query=samsung%20S85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages, covers S85D/S85F/S85H)
      - Neo QLED QN80: `https://www.mediamarkt.ch/de/search.html?query=samsung%20QN80&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - Mini LED M70: `https://www.mediamarkt.ch/de/search.html?query=samsung%20M70&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
      - Micro RGB R85: `https://www.mediamarkt.ch/de/search.html?query=samsung%20R85&brand=SAMSUNG&marketplace=MediaMarkt` (Max 2 pages)
@@ -32,7 +46,8 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
      - OLED TV: `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED&brand=LG&marketplace=MediaMarkt` (Max 3 pages)
      - C6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - G6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
-     - B6 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
+     - B6 Series (Critical): `https://www.mediamarkt.ch/de/search.html?query=LG%20OLED%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages, covers B68 48"-83")
+     - B6 Alt: `https://www.mediamarkt.ch/de/search.html?query=LG%20B6&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - C5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20C5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - G5 Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20G5&brand=LG&marketplace=MediaMarkt` (Max 2 pages)
      - QNED Series: `https://www.mediamarkt.ch/de/search.html?query=LG%20QNED&brand=LG&marketplace=MediaMarkt` (Max 3 pages - QNED86B, QNED71B, QNED70B)
@@ -51,9 +66,16 @@ This skill details the exact procedures for a sub-agent to navigate, filter, pag
 1. Parse the page's HTML content in Python using `BeautifulSoup(html, 'html.parser')`.
 2. Locate all anchors (`a`) containing `href` with `/product/`. Deduplicate titles to prevent processing multiple links referencing the same product card.
 3. For each anchor, climb up to **8 parent levels** (`parent = link.parent` in a loop):
-   * **Price Extraction**: Use regex `re.search(r'CHF\s*([\d\s’\'\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}))', text)` to match prices. Replace symbols (`.–`, spaces, apostrophes) to parse numeric floats.
+   * **UVP / Strike Price Separation**: First extract strike-through original price from `[data-test="mms-strike-price-type-rrp"]` or `[data-test*="strike-price"]` and assign to `original_price`.
+   * **Pre-stripping Ancillary Amounts (Critical)**: Pre-strip Cashback badges (`\d+\s*(?:CHF|€)\s*Cashback`), monthly installment fees (`\d+[.,]\d{2}\s*(?:CHF|€)\s*monatlich`), total credit due (`Gesamtbetrag:[^|]+`), and delivery fees (`\+\s*\d+[.,]\d{2}\s*(?:CHF|€)`) or exclude `[data-test*="financing"]`, `[data-test="mms-badge"]` DOM elements before price extraction to prevent ancillary fees from overwriting real selling prices or retaining stale historical prices.
+   * **Real Selling Price Extraction**: Extract selling price strictly from `[data-test="mms-branded-price"]`, `[class*="Price__StyledPrice"]`, or `[data-testid="branded-price"]` using regex `re.search(r'CHF\s*([\d\s’\'\x27\x60,.]*(?:[.–]|,\d{2}|\.\d{2}))', text)`. Normalize apostrophes/spaces/dots to parse numeric floats.
    * **Direct Seller Verification**: Match `Verkauft durch` or `Sold by`. If the seller name contains `Partner` or is not `MediaMarkt`, discard the product card.
-   * **Promotion Extraction**: Look for promotional keywords ("Cashback", "Rabatt", "Geschenk", "Aktion") and extract corresponding badge element text if present.
+   * **Promotion & Cashback Extraction (Swiss Punctuation Protocol)**:
+     - MediaMarkt CH uses Swiss period-hyphen punctuation (`CHF 1000.- Cashback`, `- CHF 500.– Rabatt`, `CHF 300.-`).
+     - Regex engines MUST use `(?:\.-|.–|[\.,\-])?\s*` before/after cashback keywords (`cashback`, `rabatt`, `sofortabzug`) to avoid dropping cashbacks.
+     - Extract `LG Direct Cashback` and negative lines (`-\s*CHF\s*(\d+)`).
+     - Enforce `if cashback == direct_cut: total_deduction = cashback` to prevent double-counting when banner and text coexist.
+     - Ensure `Swiss_ATA_Comparison` Column D formula strictly evaluates `=IF(E{r}="","",E{r}-F{r})` (Net Price = Selling Price - Cashback).
 
 ### Step A4: Parsing & Card Filtering
 * Locate product card anchors matching `a[href*="/de/product/"]`.
@@ -465,6 +487,23 @@ Public.gr search queries cap results at 36 products per page. Scrapers MUST trav
 ### 3) Discontinued & Marketplace Purging Standards
 * **Discontinued / Out of Stock**: Models showing `Nicht mehr lieferbar`, `Aktuell nicht lieferbar`, `Ausverkauft` (Digitec), `Nicht mehr im Sortiment` (Interdiscount), or `Nicht mehr verfügbar` (MediaMarkt) must be excluded from price comparison sheets and logged in `data/master_urls_missing_analysis_{YYYYMMDD}.json`.
 * **Direct Seller Exclusivity**: 3rd-party marketplace merchant offers on Digitec and Interdiscount must be strictly excluded.
+
+---
+
+## Part P: Pan-European 15-Country Lineup & Retailer Clean-Cut Standards (2026-10-17)
+
+1. **Germany MediaMarkt (`DE`) `NU800B` vs `U8079H`**:
+   - Targeted query `query=lg%20nu80` collects `43/50/55/65/75/86NU800B6LA`, registered in `data/master_product_urls.json` (`DE_MEDIAMARKT_xxNU800B6LA`) and paired 1:1 with Samsung `GU43..85U8079H` under `PAIRS_CONFIG_2026_DE["UHD 4K"]`.
+2. **Sweden Elgiganten (`SE`) `UA75` vs `U7025H` (58" Excluded)**:
+   - Normalizes 2026 Crystal UHD `U7025` as `TQ{size}U7025H` (`43/50/55/65/75/85`), strictly excludes `58"` (`TQ58U7025H`) in both scraper and dashboard, and pairs 1:1 with LG `UA75` (`43..75UA75006LA`).
+3. **Poland MediaExpert (`PL`) 16-Page Full Pagination & `NU800B` / `QNED8EB`**:
+   - Traverses all 16 TV catalog pages (`limit=30&page=1..16`, ~460 TVs), pairs LG `NU800B` (`50/55/65NU800B6LA`) vs Samsung `U8072H`, and captures 2026 `QNED8EB` (`55/65/75/86QNED8EB6A`) with strict `B6` OLED disambiguation (`\bOLED\w*[BCGWM][456]\b`).
+4. **Pan-European Micro RGB (`MRGB` vs `R95H` / `R85H`)**:
+   - Full coverage across all retailers for LG `MRGB96B/95B/87B/88B/86B` (`100"/86"/75"/65"/55"/50"`) vs Samsung `MRE..R95H` / `R85H` under `STANDARD_MRGB_PAIRS_2026`.
+5. **Romania (`eMAG.ro`) & Greece (`Kotsovolos.gr`) Clean-Cut Replacement**:
+   - Permanently replaces IP-blocked `Altex.ro` and `Public.gr` (0 legacy rows retained; blocked in `build_master_url_registry.py`) with `eMAG.ro` (`scripts/scrape_emag_ro.py`, `RON`, direct seller `Vândut de: eMAG` only, 162 Master URLs) and `Kotsovolos.gr` (`scripts/scrape_kotsovolos_gr.py`, `EUR`, 9-page full catalog + JSON-LD, 104 Master URLs).
+6. **Master Full-Survey Pipeline (`scripts/run_full_survey_pipeline.py`)**:
+   - Executes live full-catalog discovery + 4,579+ Master URL PDP probing across all 16 countries (15 EU + 1 AU, 18 retailers, 37 `raw_*.json` datasets) in ~25–35 minutes with mandatory same-day freshness gate (`verify_live_datasets`).
 
 
 

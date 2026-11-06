@@ -98,7 +98,7 @@ def parse_mediaexpert_product(raw_item, brand):
     else: # LG
         if any(x in model_code for x in ["C4", "G4", "B4", "M4"]):
             return None
-        if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED87B", "QNED86B", "QNED83B", "QNED81B", "QNED72B", "QNED7EB", "NU850", "NU800", "MRGB86B", "MRGB88B", "MRGB96B", "MRGB87B", "27LX6"]):
+        if any(x in model_code for x in ["C6", "G6", "B6", "W6", "M6", "QNED87B", "QNED86B", "QNED83B", "QNED81B", "QNED72B", "QNED7EB", "QNED8EB", "NU850", "NU800", "MRGB", "27LX6"]):
             year = 2026
         elif any(x in model_code for x in ["C5", "G5", "B5", "W5", "M5", "QNED86A", "QNED80A", "QNED93A", "QNED92A", "UA75", "UA77", "NANO81A", "NANO80A"]):
             year = 2025
@@ -124,7 +124,7 @@ def parse_mediaexpert_product(raw_item, brand):
             display_type = "Mini LED"
         elif "QLED" in u_title or "Q7" in c_up or "Q8" in c_up or "Q6" in c_up or "LS03" in c_up:
             display_type = "QLED"
-        elif "U8092" in c_up or "LED 4K" in u_title:
+        elif "U8092" in c_up or "U8072" in c_up or "LED 4K" in u_title or "CRYSTAL UHD" in u_title:
             display_type = "UHD 4K"
     else: # LG
         if "QNED" in c_up or "QNED" in u_title:
@@ -137,7 +137,7 @@ def parse_mediaexpert_product(raw_item, brand):
             display_type = "NanoCell"
         elif "27LX6" in c_up or "STANBYME" in u_title:
             display_type = "Lifestyle"
-        elif "OLED" in u_title or "OLED" in c_up or any(x in c_up for x in ["C6", "G6", "B6", "C5", "G5", "B5"]):
+        elif "OLED" in u_title or "OLED" in c_up or re.search(r"\bOLED\w*[BCGWM][456]\b", c_up):
             display_type = "OLED evo" if ("EVO" in u_title or any(x in c_up for x in ["G6", "G5", "C6", "C5"])) else "OLED"
 
     # 5. Price Guard Thresholds in PLN
@@ -147,8 +147,9 @@ def parse_mediaexpert_product(raw_item, brand):
         if size == 65 and price < 4200.0: return None
         if size >= 77 and price < 6000.0: return None
     elif "MICRO RGB" in display_type.upper():
+        if size <= 50 and price < 2500.0: return None
         if size in [55, 65] and price < 3500.0: return None
-        if size >= 75 and price < 7000.0: return None
+        if size >= 75 and price < 5000.0: return None
     elif any(x in display_type.upper() for x in ["QNED", "QLED", "NEO QLED", "MINI LED"]):
         if size <= 43 and price < 1000.0: return None
         if size in [50, 55] and price < 1400.0: return None

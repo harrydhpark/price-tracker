@@ -49,3 +49,7 @@ scripts/*_preloaded*.json
 data/anomaly_report_*.json
 scratch/
 
+
+data/*_profile*/
+*.crx
+

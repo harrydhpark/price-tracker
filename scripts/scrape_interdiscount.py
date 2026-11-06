@@ -10,7 +10,24 @@ import math
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 
-# --- TIMEOUT MONKEY PATCH ---
+def _load_env_file():
+    env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
+    if os.path.isfile(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8-sig") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip().lstrip("\ufeff")
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env_file()
+
 from playwright.async_api import Page
 TIMEOUT_MULTIPLIER = float(os.environ.get("TIMEOUT_MULTIPLIER", "1.0"))
 if TIMEOUT_MULTIPLIER != 1.0:
@@ -138,9 +155,209 @@ async def check_and_wait_for_captcha(page):
     print("!" * 70 + "\n")
     return False
 
-async def scrape_brand_tv(brand):
-    print(f"\n[INTERDISCOUNT] Starting scrape for brand: {brand}")
+def parse_single_article(art, brand):
+    title = art.get("name") or ""
+    href = art.get("href") or ""
+    price_str = art.get("price") or ""
+    promo_desc = art.get("promo") or "None"
+    
+    if not title or not href or not price_str:
+        return None
+        
+    title_upper = title.upper()
     brand_upper = brand.upper()
+    
+    # 모니터/세탁기 등 제외
+    if any(x in title_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "WASCHMASCHINE", "TROCKNER", "ZUBEHÖR", "HALTERUNG", "WANDHALTERUNG"]):
+        return None
+    # 중고 제외
+    if any(x in title_upper for x in ["GEBRAUCHT", "REFURBISHED", "DEMO", "OCCASION"]):
+        return None
+        
+    # 가격
+    price_match = price_regex.search(price_str)
+    price_val = 0.0
+    if price_match:
+        p_str = price_match.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
+        try:
+            price_val = float(p_str)
+        except ValueError:
+            price_val = 0.0
+    else:
+        price_match_alt = price_regex.search(price_str.replace("CHF", "").strip())
+        if price_match_alt:
+            p_str = price_match_alt.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
+            try:
+                price_val = float(p_str)
+            except ValueError:
+                price_val = 0.0
+                
+    if price_val == 0.0:
+        return None
+        
+    # 모델 코드 분석
+    words = title_upper.split()
+    model_code = "Unknown"
+    for w in words:
+        clean_w = w.replace("(", "").replace(")", "").replace(",", "").replace("\"", "")
+        if any(char.isdigit() for char in clean_w) and len(clean_w) >= 6:
+            model_code = clean_w
+            break
+            
+    # 사이즈 추출
+    size_match = re.search(r'(\d+)\s*"', title)
+    if not size_match:
+        size_match = re.search(r'(\d+)\s*Zoll', title, re.IGNORECASE)
+    if not size_match:
+        size_match = re.search(r'(\d+)-Zoll', title, re.IGNORECASE)
+    if not size_match and model_code != "Unknown":
+        code_nums = re.findall(r'\d+', model_code)
+        if code_nums and len(code_nums[0]) in [2, 3]:
+            size_val = int(code_nums[0])
+        else:
+            size_val = 55
+    else:
+        size_val = int(size_match.group(1)) if size_match else 55
+        
+    # 모델 연도 판별
+    if brand_upper == "SAMSUNG":
+        year_val = classify_samsung_year(model_code, title_upper)
+    else:
+        year_val = classify_lg_year(model_code, title_upper)
+        
+    if year_val not in [2025, 2026]:
+        return None
+        
+    # 특수 모델코드 처리 (모델명 누락 시 복원)
+    if model_code == "Unknown":
+        if brand_upper == "LG":
+            if "C6" in title_upper:
+                model_code = f"OLED{size_val}C6"
+            elif "G6" in title_upper:
+                model_code = f"OLED{size_val}G6"
+            elif "B6" in title_upper:
+                model_code = f"OLED{size_val}B6"
+            elif "QNED72B" in title_upper or "QNED72" in title_upper:
+                model_code = f"{size_val}QNED72B"
+            elif "QNED71B" in title_upper or "QNED71" in title_upper:
+                model_code = f"{size_val}QNED71B"
+            elif "QNED70B" in title_upper or "QNED70" in title_upper:
+                model_code = f"{size_val}QNED70B"
+            elif "QNED80B" in title_upper or "QNED80" in title_upper:
+                model_code = f"{size_val}QNED80B"
+        elif brand_upper == "SAMSUNG":
+            if "U8090H" in title_upper or "U8090" in title_upper:
+                model_code = f"UE{size_val}U8090H"
+            elif "U8000H" in title_upper or "U8000" in title_upper:
+                model_code = f"UE{size_val}U8000H"
+            elif "M70H" in title_upper or "M70" in title_upper:
+                model_code = f"UE{size_val}M70H"
+            elif "R85H" in title_upper or "R85" in title_upper:
+                model_code = f"MRE{size_val}R85H"
+            elif "QN80H" in title_upper:
+                model_code = f"QE{size_val}QN80H"
+            elif "S90H" in title_upper:
+                model_code = f"QE{size_val}S90H"
+        
+    # Display Type 분석
+    display_type = "LED"
+    if "OLED" in title_upper:
+        display_type = "OLED"
+    elif "QNED" in title_upper:
+        display_type = "QNED"
+    elif "NEO QLED" in title_upper:
+        display_type = "Neo QLED"
+    elif "QLED" in title_upper:
+        display_type = "QLED"
+    elif "CRYSTAL" in title_upper:
+        display_type = "Crystal UHD"
+        
+    try:
+        from swiss_promo_parser import parse_swiss_promo_and_cashback
+        cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
+    except Exception:
+        cashback_amt = 0
+        
+    return {
+        "brand": brand,
+        "year": year_val,
+        "display": display_type,
+        "size": size_val,
+        "model_code": model_code,
+        "price": price_val,
+        "shipping": "Free",
+        "installment": "",
+        "cashback": cashback_amt,
+        "promo": promo_desc,
+        "title": title,
+        "link": "https://www.interdiscount.ch" + href if href.startswith("/") else href
+    }
+
+def scrape_interdiscount_firecrawl_deprecated(brand):
+    return []
+def _legacy_firecrawl(brand):
+    api_key = os.environ.get("FIRECRAWL_API_KEY")
+    if not api_key:
+        print("  ⚠️ [FIRECRAWL] FIRECRAWL_API_KEY missing in environment.")
+        return []
+    import requests
+    from bs4 import BeautifulSoup
+    import time
+    
+    brand_upper = brand.upper()
+    print(f"\n[INTERDISCOUNT FIRECRAWL] Starting live scrape for {brand}...")
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    all_articles = []
+    
+    for page_idx in range(1, 6):
+        url = f"https://www.interdiscount.ch/de/fernseher--c111000?brand={brand_upper}&page={page_idx}"
+        payload = {"url": url, "formats": ["html"], "waitFor": 2500}
+        try:
+            r = requests.post("https://api.firecrawl.dev/v1/scrape", json=payload, headers=headers, timeout=60)
+            if r.status_code != 200:
+                print(f"  ⚠️ Page {page_idx} status {r.status_code}")
+                continue
+            html = r.json().get("data", {}).get("html", "")
+            if not html:
+                continue
+            soup = BeautifulSoup(html, "html.parser")
+            arts = soup.find_all("article")
+            print(f"  -> Page {page_idx}: Found {len(arts)} articles.")
+            if not arts:
+                break
+            for a in arts:
+                link_tag = a.find("a", href=lambda h: h and "/product/" in h)
+                if not link_tag:
+                    continue
+                name = link_tag.get("aria-label") or link_tag.get_text(strip=True)
+                href = link_tag.get("href") or ""
+                price_tag = a.find(class_=lambda c: c and "sr-only" in c)
+                price_txt = price_tag.get_text(strip=True) if price_tag else ""
+                if not price_txt:
+                    m = re.search(r'(\d[\d\s’\x27\x60,.]*)\s*CHF', a.get_text())
+                    if m: price_txt = m.group(1) + " CHF"
+                promo_el = a.find(class_=lambda c: c and "font-semibold" in c and "line-clamp-1" in c)
+                promo = promo_el.get_text(strip=True) if promo_el else "None"
+                
+                parsed = parse_single_article({"name": name, "href": href, "price": price_txt, "promo": promo}, brand)
+                if parsed:
+                    all_articles.append(parsed)
+        except Exception as e:
+            print(f"  ⚠️ Error scraping page {page_idx}: {e}")
+        time.sleep(0.5)
+        
+    unique_products = []
+    seen_codes = set()
+    for p in all_articles:
+        if p["model_code"] not in seen_codes:
+            seen_codes.add(p["model_code"])
+            unique_products.append(p)
+            
+    print(f"  ✔ [INTERDISCOUNT FIRECRAWL] Extracted {len(unique_products)} unique products for {brand}.")
+    return unique_products
+
+async def scrape_brand_tv(brand):
+    print(f"\n[INTERDISCOUNT PLAYWRIGHT] Starting scrape for brand: {brand}")
     products = []
     
     profile_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".chrome_profile"))
@@ -148,7 +365,6 @@ async def scrape_brand_tv(brand):
         os.makedirs(profile_dir)
         
     async with async_playwright() as p:
-        # persistent_context + chrome channel + slow_mo 사용
         context = await p.chromium.launch_persistent_context(
             user_data_dir=profile_dir,
             headless=False,
@@ -168,8 +384,6 @@ async def scrape_brand_tv(brand):
             await page.goto("https://www.interdiscount.ch/de", timeout=50000)
             await check_and_wait_for_captcha(page)
             await page.wait_for_timeout(3000)
-            
-            # 쿠키 승인
             cookie_btn = await page.wait_for_selector("button#uc-btn-accept-banner, #uc-accept-all-button", timeout=5000)
             if cookie_btn:
                 await cookie_btn.click()
@@ -178,12 +392,8 @@ async def scrape_brand_tv(brand):
         except Exception as e:
             print(f"  -> Homepage navigation / cookie accept warning: {e}")
             
-        # 페이지 1~5 순회하며 수집 (SKILL.md 카테고리 URL 및 5페이지 제한 루프)
         for page_idx in range(1, 6):
-            if brand_upper == "SAMSUNG":
-                url = f"https://www.interdiscount.ch/de/fernseher--c111000?brand=SAMSUNG&page={page_idx}"
-            else:
-                url = f"https://www.interdiscount.ch/de/fernseher--c111000?brand=LG&page={page_idx}"
+            url = f"https://www.interdiscount.ch/de/fernseher--c111000?brand={brand.upper()}&page={page_idx}"
             print(f"  -> Navigating to page {page_idx}: {url}")
             try:
                 await page.goto(url, timeout=50000)
@@ -194,10 +404,9 @@ async def scrape_brand_tv(brand):
                 print(f"  -> [WARN] Failed to load page {page_idx}: {e}")
                 continue
                     
-            # SKILL.md 목록 추출 스크립트 실행
             html_articles = await page.evaluate("""
                 async () => {
-                    await new Promise(r => setTimeout(r, 2500)); // 렌더링 대기 필수
+                    await new Promise(r => setTimeout(r, 2500));
                     const recent = Array.from(document.querySelectorAll('h2'))
                         .find(h => /Zuletzt angesehene/.test(h.textContent));
                     const arts = Array.from(document.querySelectorAll('main article'));
@@ -219,142 +428,9 @@ async def scrape_brand_tv(brand):
             print(f"  -> Page {page_idx}: Extracted {len(html_articles)} articles.")
             
             for art in html_articles:
-                title = art["name"]
-                href = art["href"]
-                price_str = art["price"]
-                promo_desc = art["promo"] or "None"
-                
-                if not title or not href or not price_str:
-                    continue
-                    
-                title_upper = title.upper()
-                
-                # 모니터/세탁기 등 제외
-                if any(x in title_upper for x in ["MONITOR", "ODYSSEY", "ULTRAGEAR", "MYVIEW", "SOUNDBAR", "HIFI", "BEAMER", "PROJEKTOR", "WASCHMASCHINE", "TROCKNER", "ZUBEHÖR", "HALTERUNG", "WANDHALTERUNG"]):
-                    continue
-                # 중고 제외
-                if any(x in title_upper for x in ["GEBRAUCHT", "REFURBISHED", "DEMO", "OCCASION"]):
-                    continue
-                    
-                # 가격
-                price_match = price_regex.search(price_str)
-                price_val = 0.0
-                if price_match:
-                    p_str = price_match.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
-                    try:
-                        price_val = float(p_str)
-                    except ValueError:
-                        price_val = 0.0
-                else:
-                    # 다른 형식의 가격 매칭 시도
-                    price_match_alt = price_regex.search(price_str.replace("CHF", "").strip())
-                    if price_match_alt:
-                        p_str = price_match_alt.group(1).replace("\u2019", "").replace("'", "").replace("`", "").replace(" ", "").replace(",", ".").strip()
-                        try:
-                            price_val = float(p_str)
-                        except ValueError:
-                            price_val = 0.0
-                            
-                if price_val == 0.0:
-                    continue
-                    
-                # 모델 코드 분석
-                words = title_upper.split()
-                model_code = "Unknown"
-                for w in words:
-                    clean_w = w.replace("(", "").replace(")", "").replace(",", "").replace("\"", "")
-                    if any(char.isdigit() for char in clean_w) and len(clean_w) >= 6:
-                        model_code = clean_w
-                        break
-                        
-                # 사이즈 추출
-                size_match = re.search(r'(\d+)\s*"', title)
-                if not size_match:
-                    size_match = re.search(r'(\d+)\s*Zoll', title, re.IGNORECASE)
-                if not size_match:
-                    size_match = re.search(r'(\d+)-Zoll', title, re.IGNORECASE)
-                if not size_match and model_code != "Unknown":
-                    code_nums = re.findall(r'\d+', model_code)
-                    if code_nums and len(code_nums[0]) in [2, 3]:
-                        size_val = int(code_nums[0])
-                    else:
-                        size_val = 55
-                else:
-                    size_val = int(size_match.group(1)) if size_match else 55
-                    
-                # 모델 연도 판별
-                if brand_upper == "SAMSUNG":
-                    year_val = classify_samsung_year(model_code, title_upper)
-                else:
-                    year_val = classify_lg_year(model_code, title_upper)
-                    
-                if year_val not in [2025, 2026]:
-                    continue
-                    
-                # 특수 모델코드 처리 (모델명 누락 시 복원)
-                if model_code == "Unknown":
-                    if brand_upper == "LG":
-                        if "C6" in title_upper:
-                            model_code = f"OLED{size_val}C6"
-                        elif "G6" in title_upper:
-                            model_code = f"OLED{size_val}G6"
-                        elif "B6" in title_upper:
-                            model_code = f"OLED{size_val}B6"
-                        elif "QNED72B" in title_upper or "QNED72" in title_upper:
-                            model_code = f"{size_val}QNED72B"
-                        elif "QNED71B" in title_upper or "QNED71" in title_upper:
-                            model_code = f"{size_val}QNED71B"
-                        elif "QNED70B" in title_upper or "QNED70" in title_upper:
-                            model_code = f"{size_val}QNED70B"
-                        elif "QNED80B" in title_upper or "QNED80" in title_upper:
-                            model_code = f"{size_val}QNED80B"
-                    elif brand_upper == "SAMSUNG":
-                        if "U8090H" in title_upper or "U8090" in title_upper:
-                            model_code = f"UE{size_val}U8090H"
-                        elif "U8000H" in title_upper or "U8000" in title_upper:
-                            model_code = f"UE{size_val}U8000H"
-                        elif "M70H" in title_upper or "M70" in title_upper:
-                            model_code = f"UE{size_val}M70H"
-                        elif "R85H" in title_upper or "R85" in title_upper:
-                            model_code = f"MRE{size_val}R85H"
-                        elif "QN80H" in title_upper:
-                            model_code = f"QE{size_val}QN80H"
-                        elif "S90H" in title_upper:
-                            model_code = f"QE{size_val}S90H"
-                    
-                # Display Type 분석
-                display_type = "LED"
-                if "OLED" in title_upper:
-                    display_type = "OLED"
-                elif "QNED" in title_upper:
-                    display_type = "QNED"
-                elif "NEO QLED" in title_upper:
-                    display_type = "Neo QLED"
-                elif "QLED" in title_upper:
-                    display_type = "QLED"
-                elif "CRYSTAL" in title_upper:
-                    display_type = "Crystal UHD"
-                    
-                try:
-                    from swiss_promo_parser import parse_swiss_promo_and_cashback
-                    cashback_amt, promo_desc = parse_swiss_promo_and_cashback(promo_desc, title, brand, year_val, model_code, size_val, price_val)
-                except Exception:
-                    cashback_amt = 0
-                    
-                products.append({
-                    "brand": brand,
-                    "year": year_val,
-                    "display": display_type,
-                    "size": size_val,
-                    "model_code": model_code,
-                    "price": price_val,
-                    "shipping": "Free",
-                    "installment": "",
-                    "cashback": cashback_amt,
-                    "promo": promo_desc,
-                    "title": title,
-                    "link": "https://www.interdiscount.ch" + href if href.startswith("/") else href
-                })
+                parsed = parse_single_article(art, brand)
+                if parsed:
+                    products.append(parsed)
                 
         await context.close()
         
@@ -374,7 +450,7 @@ async def main():
     sys.stdout.reconfigure(encoding='utf-8')
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use cached/probed models")
+    parser.add_argument("--fast", "--stealth-fast", action="store_true", dest="fast", help="Use real-time Firecrawl scraping")
     args, _ = parser.parse_known_args()
     
     data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
@@ -386,34 +462,24 @@ async def main():
     samsungs = []
     lgs = []
     
-    if not is_fast:
-        try:
-            samsungs = await scrape_brand_tv("Samsung")
-            lgs = await scrape_brand_tv("LG")
-        except Exception as e:
-            print(f"⚠️ [INTERDISCOUNT ERROR] {e}. Using cached records.")
-    else:
-        print("⚡ [--stealth-fast] Skipping local Playwright for Interdiscount.")
-        
-    if not samsungs and os.path.exists(s_path):
-        print(f"  -> Refreshing verified Samsung models from {s_path}...")
-        try:
-            with open(s_path, "r", encoding="utf-8") as f:
-                samsungs = json.load(f)
-        except Exception: pass
-    if not lgs and os.path.exists(l_path):
-        print(f"  -> Refreshing verified LG models from {l_path}...")
-        try:
-            with open(l_path, "r", encoding="utf-8") as f:
-                lgs = json.load(f)
-        except Exception: pass
+    print("🚀 [ZERO-FIRECRAWL] Executing 100% local persistent Playwright scraper for Interdiscount CH...")
+    try:
+        samsungs = await scrape_brand_tv("Samsung")
+        lgs = await scrape_brand_tv("LG")
+    except Exception as e:
+        print(f"❌ [PLAYWRIGHT ERROR] {e}")
+        samsungs, lgs = [], []
+            
+    # STRICT ASSERTION GATE: ZERO STALE CACHE PERMITTED
+    if len(samsungs) == 0 or len(lgs) == 0:
+        raise RuntimeError("❌ [CRITICAL ZERO LIVE DATA] Interdiscount live scraping returned 0 models. Stale cache fallback is strictly prohibited.")
         
     with open(s_path, "w", encoding="utf-8") as f:
         json.dump(samsungs, f, ensure_ascii=False, indent=2)
     with open(l_path, "w", encoding="utf-8") as f:
         json.dump(lgs, f, ensure_ascii=False, indent=2)
         
-    print(f"\n[INTERDISCOUNT DONE] Saved {len(samsungs)} Samsung models and {len(lgs)} LG models.")
+    print(f"\n[INTERDISCOUNT DONE] Successfully saved {len(samsungs)} Samsung models and {len(lgs)} LG models directly from live web.")
     
     try:
         from scrape_logger import emit_summary
@@ -425,3 +491,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
